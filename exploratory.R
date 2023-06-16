@@ -6,13 +6,12 @@
 #--------------------------------------------------------------#
 
 # Load data
-getwd()
-setwd(...)
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
 require("foreign")
 require("tidyverse")
 
-background <- read.dta("...") # background data
-ambiguity <- read.dta("...")  # ambiguity data
+background <- read.dta("LISS data/bm10a_EN_1.0p/bm10a_EN_1.0p.dta") # background data
+ambiguity <- read.dta("LISS data/avars_201001_EN_2.0p/avars_201001_EN_2.0p.dta")  # ambiguity data
 
 background_short <- select(background, -c(lftdcat, woonvorm, brutocat, nettocat, doetmee))
