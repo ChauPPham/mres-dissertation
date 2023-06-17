@@ -20,19 +20,60 @@ pool <- right_join(background_short, ambiguity, by = c("nomem_encr" = "nomem_enc
 
 
 ##===== Calculate ambiguity indexes
-# AA(0.5)
+# Updating functions
+prob_update <- function(choice, ceil, floor, prob){
+    # This function updates the probability of risky gain after each iterations
+    if(choice == "Box B"){
+        floor = prob
+        prob = 1/2*(ceil + prob)
+    }
+    else {
+        ceil = prob
+        prob = 1/2*(floor + prob)
+    }
+}
+
+get_m <- function(range, number_of_colours, dataset){
+    col_range <- sprintf("bm10a%0.3d", range)
+    dataset <- dataset %>% rowwise()
+    prob <- 1/number_of_colours
+    iter <- sym(col_range[length(col_range)])
+    ceil <- 100
+    floor <- 0
+    
+    dataset <- dataset %>% mutate("m_{prob}" := ifelse(!!iter == 1, prob, 0))
+    
+}
+
+
+# Calculate m(0.5)
+
+
+
+# Calculate m(0.1)
+
+
+
+
+# Calculate m(0.9)
 
 
 
 
 
-# AA(0.1)
+# AA(0.1) = 0.1 - m(0.1)
 
 
 
 
 
-# AA(0.9)
+# AA(0.5) = 0.5 - m(0.5)
+
+
+
+
+
+# AA(0.9) = 0.9 - m(0.9)
 
 
 
