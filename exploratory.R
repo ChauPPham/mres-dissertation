@@ -21,72 +21,25 @@ pool <- right_join(background_short, ambiguity, by = c("nomem_encr" = "nomem_enc
 
 
 ##===== Calculate ambiguity indices
-# Updating functions
-prob_update <- function(choice, ceil, floor, prob){
-    # This function updates the probability of risky gain after each iterations
-    if(choice == "Box B"){
-        floor = prob
-        prob = 1/2*(ceil + prob)
-        assign("floor", floor, envir = parent.frame())
-        assign("prob", prob, envir = parent.frame())
-        return(prob)
-    }
-    else {
-        ceil = prob
-        prob = 1/2*(floor + prob)
-        assign("ceil", ceil, envir = parent.frame())
-        assign("prob", prob, envir = parent.frame())
-        return(prob)
-    }
-}
+# NOTE: THE FINAL NUMBER OF WINNING BALLS IN THE RISKY BOX IS CALCULATED IN bm10a043 (for m_0.5)
+# bm10a065 (for m_0.1) and bm10a087 (for m_0.9)
 
-prob_update_v <- Vectorize(prob_update, vectorize.args = "choice")
+# m(0.5), AA(0.5) = 0.5 - m(0.5)
+pool <- pool %>% mutate(m_0.5 = bm10a043/100, AA_0.5 = 0.5 - m_0.5)
 
-get_m <- function(range, number_of_colours, dataset){
-    col_range <- sprintf("bm10a%0.3d", range)
-    dataset <- dataset %>% rowwise()
-    prob <- 1/number_of_colours
-    iter <- sym(col_range[length(col_range)])
-    ceil <- 1
-    floor <- 0
-    
-    dataset <- dataset %>% mutate("m_{prob}" := case_when(
-        !!iter == 1 ~ prob,
-        !!iter == 2 ~ prob_update_v(!!sym(col_range[2]), ceil, floor, prob), 
-        !!iter == 3 ~ 
-    ))
-    unique(dataset[,dim(dataset)[2]])
-}
+# m(0.1), AA(0.1) = 0.1 - m(0.1) 
+pool <- pool %>% mutate(m_0.1 = bm10a065/100, AA_0.1 = 0.1 - m_0.1)
+
+# m(0.9), AA(0.9) = 0.9 - m(0.9)
+pool <- pool %>% mutate(m_0.9 = bm10a087/100, AA_0.9 = 0.9 - m_0.9)
 
 
-# Calculate m(0.5)
-
-
-
-# Calculate m(0.1)
-
-
-
-
-# Calculate m(0.9)
+##===== Calculate risk-aversion indices
 
 
 
 
 
-# AA(0.1) = 0.1 - m(0.1)
-
-
-
-
-
-# AA(0.5) = 0.5 - m(0.5)
-
-
-
-
-
-# AA(0.9) = 0.9 - m(0.9)
 
 
 
