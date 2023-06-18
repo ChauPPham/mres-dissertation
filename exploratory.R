@@ -26,10 +26,16 @@ prob_update <- function(choice, ceil, floor, prob){
     if(choice == "Box B"){
         floor = prob
         prob = 1/2*(ceil + prob)
+        assign(floor, floor, envir = parent.env(env))
+        assign(prob, prob, envir = parent.env(env))
+        return(prob)
     }
     else {
         ceil = prob
         prob = 1/2*(floor + prob)
+        assign(ceil, ceil, envir = parent.env(env))
+        assign(prob, prob, envir = parent.env(env))
+        return(prob)
     }
 }
 
@@ -42,7 +48,9 @@ get_m <- function(range, number_of_colours, dataset){
     floor <- 0
     
     dataset <- dataset %>% mutate("m_{prob}" := ifelse(!!iter == 1, prob, 0))
-    
+    dataset <- dataset %>% mutate("m_{prob}" := case_when(
+        iter == 2 ~ prob_update()
+    ))
 }
 
 
