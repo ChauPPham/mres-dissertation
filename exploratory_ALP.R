@@ -16,3 +16,6 @@ background <- read_dta("ALP data/ms90002_public.dta")  # background data
 wave1 <- read_dta("ALP data/ms315_weighted.dta") # wave 1 of the survey on decision quality
 wave2 <- read_dta("ALP data/ms352_weighted.dta") # wave 2 of the survey on decision quality
 merge <- right_join(wave1, wave2, by = "prim_key")
+
+education <- read_dta("ALP data/ms504_weighted.dta")
+pool <- right_join(merge, education, by = "prim_key") %>% filter(!is.na(borninus.x))
