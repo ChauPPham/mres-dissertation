@@ -1,6 +1,6 @@
 # Date created: 06/15/2023
 # Author: Chau Pham
-# Purpose: Exploratory coding for MRES dissertation
+# Purpose: Exploratory coding with LISS data for MRES dissertation
 
 # Last changes: 06/18/2023
 #--------------------------------------------------------------#
