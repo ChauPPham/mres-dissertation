@@ -11,6 +11,7 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 require("haven")
 require("tidyverse")
 require("base")
+require("nleqslv")
 
 background <- read_dta("LISS data/avars_201001_EN_2.0p.dta")  # background data
 family <- read_dta("LISS data/cf10c_EN_1.0p.dta")             # family data
@@ -66,52 +67,33 @@ summary(test)
 # while the risky box is fixed (get 0 prob 0.5 and get 1000 prob 0.5)
 # bm10a128 records the prize of the sure gain box at last iteration -> derive certainty equivalence for 10000 risky box
 # while the risky box is fixed (get 0 prob 0.5 and get 18000 prob 0.5)
-# Assume CRRA utility function: U(x) = x^(1-sigma)/(1-sigma)
 
-pool <- pool %>% mutate(sigma_1000  = 1 - log(2)/log(1000/bm10a107),
-                        sigma_18000 = 1 - log(2)/log(18000/bm10a128))
-# the above code is wrong
-
-
-alpha <- seq(0, 1.5, 1000)
+alpha_grid <- seq(0, 1.5, 1000)
 pool$sigma <- 0
+fn <- function(x, alpha, value) {
+  risky_sure <- (18000^x)/(exp(log(2)^alpha)) - value^x
+  risky_sure
+}
 
 for (j in 1:nrow(pool)){
-  store <- data.frame(func_val = numeric(length(alpha)), sigma = 0)
+  store <- data.frame(func_val = numeric(length(alpha_grid)), sigma = 0)
   for (i in 1:length(alpha)){
-    alpha <- alpha(i)
+    alpha <- alpha_grid[i]
     value <- pool$bm10a107[j]
     
-    fn <- function(x) {
-      risky_sure <- 18000^x/exp(log(2)^alpha) - value^x
-      risky_sure
-    }
+    fn1 <- function(x) fn(x, alpha, value)
     
-    store[i,1] <- nleqslv(0, fn)$fvec
-    store[i,2] <- nleqslv(0, fn)$x
+    # Non-linear solver to solve for the sigma that solves fn1 for a given alpha
+    store[i,1] <- nleqslv(0, fn1)$fvec
+    store[i,2] <- nleqslv(0, fn1)$x
   }
+  
+  # Chooses pair of alpha, sigma that gives the smallest error (squared distance from 0)
   pool$sigma[j] <- store[which.min(store$func_val), 2]
 }
 
-
-#matlab code
-# fx3 = @(sigma, alpha) (18000/7081).^sigma./exp(log(2).^alpha)-1;
-#fx4 = @(sigma, alpha) (1000/396).^sigma./exp(log(2).^alpha)-1;
-
-#grid_alpha = linspace(0, 1.5, 1000);
-#grid_sigma = linspace(0, 1.5, 1000);
-#store  = zeros(length(grid_alpha), 2);
-
-#for i = 1:length(grid_alpha)
-#[alpha, fval] = fsolve(@(sigma) fx3(sigma, grid_alpha(i)), 0);
-#store(i,1) = fval;
-#store(i,2) = alpha;
-#end
-
-#[min_val, min_pos] = min(store(:,1));
-#sigma_min = store(min_pos, 2);
-
-
+# So far the code works but the sigma is unbounded hence
+# -> need to introduce bounded optimization (solver)
 
 
 
