@@ -55,6 +55,62 @@ summary(test)
 
 
 ##===== Calculate risk-aversion indices
+# Coefficients of risk aversion (more specifically CRRA) is derived using method of 
+# Tanaka et al. (2010) using Prelec (1998) value function to evaluate prospects
+# Value of prospect: v(y) + pi(p)(v(x) - v(y))
+# where v(x) = x^sigma, sigma is the coefficient of risk aversion
+# pi(p) = 1/exp(log(1/p)^alpha), pi(p) is the probability weighting function; p is probability of outcome x
+# when involving sure gain, p = 1 -> Value of prospect reduces to v(x) = x^sigma
+
+# bm10a107 records the prize of the sure gain box at last iteration -> derive certainty equivalence for 1000 risky box
+# while the risky box is fixed (get 0 prob 0.5 and get 1000 prob 0.5)
+# bm10a128 records the prize of the sure gain box at last iteration -> derive certainty equivalence for 10000 risky box
+# while the risky box is fixed (get 0 prob 0.5 and get 18000 prob 0.5)
+# Assume CRRA utility function: U(x) = x^(1-sigma)/(1-sigma)
+
+pool <- pool %>% mutate(sigma_1000  = 1 - log(2)/log(1000/bm10a107),
+                        sigma_18000 = 1 - log(2)/log(18000/bm10a128))
+# the above code is wrong
+
+
+alpha <- seq(0, 1.5, 1000)
+pool$sigma <- 0
+
+for (j in 1:nrow(pool)){
+  store <- data.frame(func_val = numeric(length(alpha)), sigma = 0)
+  for (i in 1:length(alpha)){
+    alpha <- alpha(i)
+    value <- pool$bm10a107[j]
+    
+    fn <- function(x) {
+      risky_sure <- 18000^x/exp(log(2)^alpha) - value^x
+      risky_sure
+    }
+    
+    store[i,1] <- nleqslv(0, fn)$fvec
+    store[i,2] <- nleqslv(0, fn)$x
+  }
+  pool$sigma[j] <- store[which.min(store$func_val), 2]
+}
+
+
+#matlab code
+# fx3 = @(sigma, alpha) (18000/7081).^sigma./exp(log(2).^alpha)-1;
+#fx4 = @(sigma, alpha) (1000/396).^sigma./exp(log(2).^alpha)-1;
+
+#grid_alpha = linspace(0, 1.5, 1000);
+#grid_sigma = linspace(0, 1.5, 1000);
+#store  = zeros(length(grid_alpha), 2);
+
+#for i = 1:length(grid_alpha)
+#[alpha, fval] = fsolve(@(sigma) fx3(sigma, grid_alpha(i)), 0);
+#store(i,1) = fval;
+#store(i,2) = alpha;
+#end
+
+#[min_val, min_pos] = min(store(:,1));
+#sigma_min = store(min_pos, 2);
+
 
 
 
