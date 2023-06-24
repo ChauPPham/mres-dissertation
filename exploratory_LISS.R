@@ -23,7 +23,7 @@ pool <- right_join(background_short, ambiguity, by = c("nomem_encr" = "nomem_enc
 
 
 
-##===== Calculate ambiguity indices
+##========== Calculate ambiguity indices
 # NOTE: THE FINAL NUMBER OF WINNING BALLS IN THE RISKY BOX IS CALCULATED IN bm10a043 (for m_0.5)
 # bm10a065 (for m_0.1) and bm10a087 (for m_0.9)
 
@@ -36,26 +36,9 @@ pool <- pool %>% mutate(m_0.1 = bm10a065/100, AA_0.1 = 0.1 - m_0.1)
 # m(0.9), AA(0.9) = 0.9 - m(0.9)
 pool <- pool %>% mutate(m_0.9 = bm10a087/100, AA_0.9 = 0.9 - m_0.9)
 
- 
-useful_variables <- c(1:10, 17:28, 31, 175:180, 182:183, 226) # If merge before calculating 
-# the ambiguity indices, need to alter this slightly, potentially from 175
-
-# To get the usable data, I choose households that have at least one children living 
-# in household in time-use survey (2019), and filter out households that already have
-# children leaving the household. To account for educational expenditures, I also filter out
-# NAs values of variable tp19a045 which records monthly schooling fees that households pay
-
-usable <- inner_join(pool, timeuse) %>% mutate(child_dif = tp19a003 - aantalki
-) %>% filter(child_dif >= 0, (aantalki+tp19a003 != 0), !is.na(tp19a045)
-) %>% select(all_of(useful_variables), "child_dif") 
-usable$oplcat <- factor(usable$oplcat, levels = c("1", "2", "3", "4", "5", "6"),
-                        labels = c("primary", "vmbo", "havo/vwo", "mbo", "hbo", "wo"))
-
-test <- lm(tp19a045 ~ AA_0.1 + AA_0.5 + AA_0.9 + bm10a004 + oplcat + nettohh_f, data = usable)
-summary(test)
 
 
-##===== Calculate risk-aversion indices
+##========== Calculate risk-aversion indices
 # Coefficients of risk aversion (more specifically CRRA) is derived using method of 
 # Tanaka et al. (2010) using Prelec (1998) value function to evaluate prospects
 # Value of prospect: v(y) + pi(p)(v(x) - v(y))
@@ -69,8 +52,7 @@ summary(test)
 # while the risky box is fixed (get 0 prob 0.5 and get 18000 prob 0.5)
 
 alpha_grid <- seq(0, 1.5, by = 0.05)
-pool$sigma <- 0
-pool$alpha <- 0
+pool <- pool %>% mutate(sigma1 = 0, alpha1 = 0, sigma2 = 0, alpha2 = 0)
 
 fn <- function(sigma, alpha, value, stake) {
   risky_sure <- (stake^sigma)/(exp(log(2)^alpha)) - value^sigma
@@ -81,11 +63,13 @@ fn <- function(sigma, alpha, value, stake) {
 
 for (j in 1:nrow(pool)){
   store <- data.frame(fn1_val = numeric(length(alpha_grid)), sigma1 = 0, alpha1 = 0, fn2_val = numeric(length(alpha_grid)), sigma2 = 0, alpha2 = 0)
+  
   for (i in 1:length(alpha_grid)){
     alpha <- alpha_grid[i]
-    value <- pool$bm10a128[j]
+    value1 <- pool$bm10a107[j]
+    value2 <- pool$bm10a128[j]
     
-    fn1 <- function(x) fn(x, alpha, value, 1000)  # Question 5 with 1000 stake
+    fn1 <- function(x) fn(x, alpha, value1, 1000)  # Question 5 with 1000 stake
     
     store[i,3] <- alpha
     
@@ -103,7 +87,7 @@ for (j in 1:nrow(pool)){
     store[i,1] <- fn1(store[i, 2])
     
     
-    fn2 <- function(x) fn(x, alpha, value, 18000)   # Question 6 with 18000 stake
+    fn2 <- function(x) fn(x, alpha, value2, 18000)   # Question 6 with 18000 stake
     store[i, 6] <- alpha
     if (fn2(0)*fn2(1.5) <= 0){
       store[i,5] <- uniroot(fn2, interval = c(0, 1.5), tol = 1e-8)$root
@@ -118,19 +102,39 @@ for (j in 1:nrow(pool)){
     }
     store[i,4] <- fn2(store[i, 5])
     
+    # calculate the euclidean distance between the pairs -> choose minimum
+    store <- store %>% mutate(dif = sqrt((sigma1 - sigma2)^2+(alpha1-alpha2)^2))
   }
   
 # Chooses pair of alpha, sigma that gives the smallest error 
 #(squared distance from 0) -> NOT IDEAL
 # IDEAL IS TO FIND THE PAIR OF SIGMA ALPHA THAT CAN SOLVE BOTH fn1, fn2
-#  pool$sigma[j] <- store[which.min(store$func_val), 2]
-#  pool$alpha[j] <- store[which.min(store$func_val), 3]
-  
-  
-  
+  pool$sigma1[j] <- store[which.min(store$dif), 2]
+  pool$alpha1[j] <- store[which.min(store$dif), 3]
+  pool$sigma2[j] <- store[which.min(store$dif), 5]
+  pool$alpha2[j] <- store[which.min(store$dif), 6]
+
 }
 
+pool <- pool %>% mutate(coef_risk_low = 1 - sigma1, coef_risk_high = 1 - sigma2)
 
+#========== Linear regression
+useful_variables <- c(1:10, 17:28, 31, 175:180, 182:183) # If merge before calculating 
+# the ambiguity indices, need to alter this slightly, potentially from 175
+
+# To get the usable data, I choose households that have at least one children living 
+# in household in time-use survey (2019), and filter out households that already have
+# children leaving the household. To account for educational expenditures, I also filter out
+# NAs values of variable tp19a045 which records monthly schooling fees that households pay
+
+usable <- inner_join(pool, timeuse) %>% mutate(child_dif = tp19a003 - aantalki
+) %>% filter(child_dif >= 0, (aantalki+tp19a003 != 0), !is.na(tp19a045)
+) %>% select(all_of(useful_variables), child_dif, coef_risk_low, coef_risk_high, tp19a045) 
+usable$oplcat <- factor(usable$oplcat, levels = c("1", "2", "3", "4", "5", "6"),
+                        labels = c("primary", "vmbo", "havo/vwo", "mbo", "hbo", "wo"))
+
+test <- lm(tp19a045 ~ AA_0.1 + AA_0.5 + AA_0.9 + coef_risk_low + coef_risk_high + bm10a004 + oplcat + nettohh_f, data = usable)
+summary(test)
 
 
 
