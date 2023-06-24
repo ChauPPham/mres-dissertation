@@ -2,7 +2,7 @@
 # Author: Chau Pham
 # Purpose: Exploratory coding with LISS data for MRES dissertation
 
-# Last changes: 06/21/2023
+# Last changes: 06/23/2023
 #--------------------------------------------------------------#
 
 ##===== Load & clean data
@@ -68,32 +68,68 @@ summary(test)
 # bm10a128 records the prize of the sure gain box at last iteration -> derive certainty equivalence for 10000 risky box
 # while the risky box is fixed (get 0 prob 0.5 and get 18000 prob 0.5)
 
-alpha_grid <- seq(0, 1.5, 1000)
+alpha_grid <- seq(0, 1.5, by = 0.05)
 pool$sigma <- 0
-fn <- function(x, alpha, value) {
-  risky_sure <- (18000^x)/(exp(log(2)^alpha)) - value^x
+pool$alpha <- 0
+
+fn <- function(sigma, alpha, value, stake) {
+  risky_sure <- (stake^sigma)/(exp(log(2)^alpha)) - value^sigma
   risky_sure
 }
 
+
+
 for (j in 1:nrow(pool)){
-  store <- data.frame(func_val = numeric(length(alpha_grid)), sigma = 0)
-  for (i in 1:length(alpha)){
+  store <- data.frame(fn1_val = numeric(length(alpha_grid)), sigma1 = 0, alpha1 = 0, fn2_val = numeric(length(alpha_grid)), sigma2 = 0, alpha2 = 0)
+  for (i in 1:length(alpha_grid)){
     alpha <- alpha_grid[i]
-    value <- pool$bm10a107[j]
+    value <- pool$bm10a128[j]
     
-    fn1 <- function(x) fn(x, alpha, value)
+    fn1 <- function(x) fn(x, alpha, value, 1000)  # Question 5 with 1000 stake
     
-    # Non-linear solver to solve for the sigma that solves fn1 for a given alpha
-    store[i,1] <- nleqslv(0, fn1)$fvec
-    store[i,2] <- nleqslv(0, fn1)$x
+    store[i,3] <- alpha
+    
+    if (fn1(0)*fn1(1.5) <= 0){
+      store[i,2] <- uniroot(fn1, interval = c(0, 1.5), tol = 1e-8)$root
+    }
+    else if (fn1(0) > 0){
+      # if positive, find minimum
+      store[i,2] <- optim(0, fn1, lower = 0, upper = 1.5)$par
+    }
+    else {
+      # if negative, find maximum
+      store[i,2] <- optim(0, fn1, lower = 0, upper = 1.5, control = list(fnscale = -1))$par
+    }
+    store[i,1] <- fn1(store[i, 2])
+    
+    
+    fn2 <- function(x) fn(x, alpha, value, 18000)   # Question 6 with 18000 stake
+    store[i, 6] <- alpha
+    if (fn2(0)*fn2(1.5) <= 0){
+      store[i,5] <- uniroot(fn2, interval = c(0, 1.5), tol = 1e-8)$root
+    }
+    else if (fn1(0) > 0){
+      # if positive, find minimum
+      store[i,5] <- optim(0, fn2, lower = 0, upper = 1.5)$par
+    }
+    else {
+      # if negative, find maximum
+      store[i,5] <- optim(0, fn2, lower = 0, upper = 1.5, control = list(fnscale = -1))$par
+    }
+    store[i,4] <- fn2(store[i, 5])
+    
   }
   
-  # Chooses pair of alpha, sigma that gives the smallest error (squared distance from 0)
-  pool$sigma[j] <- store[which.min(store$func_val), 2]
+# Chooses pair of alpha, sigma that gives the smallest error 
+#(squared distance from 0) -> NOT IDEAL
+# IDEAL IS TO FIND THE PAIR OF SIGMA ALPHA THAT CAN SOLVE BOTH fn1, fn2
+#  pool$sigma[j] <- store[which.min(store$func_val), 2]
+#  pool$alpha[j] <- store[which.min(store$func_val), 3]
+  
+  
+  
 }
 
-# So far the code works but the sigma is unbounded hence
-# -> need to introduce bounded optimization (solver)
 
 
 
