@@ -42,3 +42,4 @@ pool2 <- inner_join(merge, education_short, by = "prim_key")
 usable1 <- pool1 %>% filter(max_ed >= 0)
 usable2 <- pool2 %>% filter(max_ed >= 0)
 
+#========== With detailed ambiguity data

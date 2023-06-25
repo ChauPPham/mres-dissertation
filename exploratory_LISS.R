@@ -62,7 +62,8 @@ fn <- function(sigma, alpha, value, stake) {
 
 
 for (j in 1:nrow(pool)){
-  store <- data.frame(fn1_val = numeric(length(alpha_grid)), sigma1 = 0, alpha1 = 0, fn2_val = numeric(length(alpha_grid)), sigma2 = 0, alpha2 = 0)
+  store <- data.frame(fn1_val = numeric(length(alpha_grid)), 
+                      sigma1 = 0, alpha1 = 0, fn2_val = 0, sigma2 = 0, alpha2 = 0)
   
   for (i in 1:length(alpha_grid)){
     alpha <- alpha_grid[i]
@@ -92,7 +93,7 @@ for (j in 1:nrow(pool)){
     if (fn2(0)*fn2(1.5) <= 0){
       store[i,5] <- uniroot(fn2, interval = c(0, 1.5), tol = 1e-8)$root
     }
-    else if (fn1(0) > 0){
+    else if (fn2(0) > 0){
       # if positive, find minimum
       store[i,5] <- optim(0, fn2, lower = 0, upper = 1.5)$par
     }
@@ -103,16 +104,21 @@ for (j in 1:nrow(pool)){
     store[i,4] <- fn2(store[i, 5])
     
     # calculate the euclidean distance between the pairs -> choose minimum
-    store <- store %>% mutate(dif = sqrt((sigma1 - sigma2)^2+(alpha1-alpha2)^2))
+    for (i in 1:nrow(store)){
+      dif <- store %>% select(sigma2, alpha2)
+      dif <- dif %>% mutate(pair_dif = sqrt((sigma2 - store[i,2])^2 + (alpha2 - store[i,3])^2))
+      store$dif[i] <- dif[which.min(dif$pair_dif), 3]
+    }
   }
   
 # Chooses pair of alpha, sigma that gives the smallest error 
 #(squared distance from 0) -> NOT IDEAL
 # IDEAL IS TO FIND THE PAIR OF SIGMA ALPHA THAT CAN SOLVE BOTH fn1, fn2
-  pool$sigma1[j] <- store[which.min(store$dif), 2]
-  pool$alpha1[j] <- store[which.min(store$dif), 3]
-  pool$sigma2[j] <- store[which.min(store$dif), 5]
-  pool$alpha2[j] <- store[which.min(store$dif), 6]
+  pos <- which.min(store$dif) 
+  pool$sigma1[j] <- store[pos, 2]
+  pool$alpha1[j] <- store[pos, 3]
+  pool$sigma2[j] <- store[pos, 5]
+  pool$alpha2[j] <- store[pos, 6]
 
 }
 
@@ -129,11 +135,11 @@ useful_variables <- c(1:10, 17:28, 31, 175:180, 182:183) # If merge before calcu
 
 usable <- inner_join(pool, timeuse) %>% mutate(child_dif = tp19a003 - aantalki
 ) %>% filter(child_dif >= 0, (aantalki+tp19a003 != 0), !is.na(tp19a045)
-) %>% select(all_of(useful_variables), child_dif, coef_risk_low, coef_risk_high, tp19a045) 
+) %>% select(all_of(useful_variables), child_dif, coef_risk_low, coef_risk_high, tp19a045, simpc) 
 usable$oplcat <- factor(usable$oplcat, levels = c("1", "2", "3", "4", "5", "6"),
                         labels = c("primary", "vmbo", "havo/vwo", "mbo", "hbo", "wo"))
 
-test <- lm(tp19a045 ~ AA_0.1 + AA_0.5 + AA_0.9 + coef_risk_low + coef_risk_high + bm10a004 + oplcat + nettohh_f, data = usable)
+test <- lm(tp19a045 ~ AA_0.1 + AA_0.5 + AA_0.9 + coef_risk_low + coef_risk_high + bm10a004 + oplcat + nettohh_f + simpc, data = usable)
 summary(test)
 
 
