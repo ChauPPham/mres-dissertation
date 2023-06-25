@@ -142,8 +142,9 @@ usable$oplcat <- factor(usable$oplcat, levels = c("1", "2", "3", "4", "5", "6"),
 test <- lm(tp19a045 ~ AA_0.1 + AA_0.5 + AA_0.9 + coef_risk_low + coef_risk_high + bm10a004 + oplcat + nettohh_f + simpc, data = usable)
 summary(test)
 
-
-
+# write.csv(pool, "LISS data/pool.csv")
+# write.csv(usable, "LISS data/usable.csv")
+# pool %>% select(bm10a107, sigma1, alpha1, bm10a128, sigma2, alpha2, coef_risk_low, coef_risk_high)
 
 
 

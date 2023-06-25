@@ -32,7 +32,7 @@
 
 %\setlist[enumerate]{label=(\roman*)}
 
-%\setlength{\parindent}{0pt}
+
 
 \captionsetup[figure]{labelfont=bf}
 
@@ -55,9 +55,9 @@ To elicit ambiguity aversion, \citet{DIMMOCK2016559, dimmock2016ambiguity} desig
 	\label{fig:1}
 \end{figure}
 
-The question will be asked repeatedly until the respondent chooses "Indifferent" or until the 6th iteration whichever occurs first. \Cref{fig:1} shows the first question in the sequence. If the respondent chooses "Choice U" in this question, she is then presented with a similar question wherein Choice U stays the same while the number of the winning balls in Choice K increases using a bisection method.\footnote{After each question that the respondent chooses either "Choice K" or "Choice U", the proportion of the winning balls in the risky choice is adjusted as follows. In the first question, if "Choice K" is chosen, the proportion of winning ball in the next question is then $(0\% + 50\%)/2 = 25\%$ and $50\%$ becomes the new ceiling instead of $100\%$. If "Choice U" is chosen, the proportion of winning ball in the next question is $(50\% + 100\%)/2 = 75\%$ and $50\%$ becomes the new floor. The new floor and ceiling are carried to the next question and get updated again depending on the subsequent choices of the respondent.} If, on the other hand, "Choice K" is chosen in the first question, in the following question, the number of winning balls in Choice K is reduced. If "Indifferent" is chosen at any stage of the sequence, the sequence stops and the proportion of winning balls in the last stage indicates probability of winning a risky `lottery' that makes the risky choice and ambiguous choice equally attractive. Finally, if "Indifferent" is never chosen, the sequence stops after the 6th iteration of the question and the final probability of winning a risky `lottery' is adjusted via the bisection method. 
+The question will be asked repeatedly until the respondent chooses "Indifferent" or until the 6th iteration whichever occurs first. \Cref{fig:1} shows the first question in the sequence. If the respondent chooses "Choice U" in this question, she is then presented with a similar question wherein Choice U stays the same while the number of the winning balls in Choice K increases using a bisection method.\footnote{After each question that the respondent chooses either "Choice K" or "Choice U", the proportion of the winning balls in the risky choice is adjusted as follows. In the first question, if "Choice K" is chosen, the proportion of winning ball in the next question is then $(0\% + 50\%)/2 = 25\%$ and $50\%$ becomes the new ceiling instead of $100\%$. If "Choice U" is chosen, the proportion of winning ball in the next question is $(50\% + 100\%)/2 = 75\%$ and $50\%$ becomes the new floor. The new floor and ceiling are carried to the next question and get updated again depending on the subsequent choices of the respondent.} If, on the other hand, "Choice K" is chosen in the first question, in the following question, the number of winning balls in Choice K is reduced. If "Indifferent" is chosen at any stage of the sequence, the sequence stops and the proportion of winning balls in the last stage indicates probability of winning a risky `lottery' that makes the risky choice and ambiguous choice equally attractive. Finally, if "Indifferent" is never chosen, the sequence stops after the 6th iteration of the question and the final probability of winning a risky `lottery' is adjusted via the bisection method. In total, three sequences of questions on ambiguity with varying initial degree of risk are asked in both the LISS panel and ALP.
 
-In a similar manner, to elicit risk attitudes, a sequence of questions about two choices involving sure gain on one side and a risky lottery on the other are presented to respondents. \Cref{fig:2} shows the first question in this sequence of questions on risk for the ALP. Depending on the choices of the respondent, the amount of sure gain Box A is updated via a bisection method while the risky Box B remains the same. The question is repeated until "Indifferent" is chosen or until the 4th iteration is reached.
+In a similar manner, to elicit risk attitudes, a sequence of questions about two choices involving sure gain on one side and a risky lottery on the other are presented to respondents. \Cref{fig:2} shows the first question in this sequence of questions on risk for the ALP. Depending on the choices of the respondent, the prize of the sure-gain Box A is updated via a bisection method while the risky Box B remains the same. The question is repeated until "Indifferent" is chosen or until the 4th iteration is reached.
 
 \begin{figure}[!ht]
 	\setlength{\fboxrule}{1.5pt}
@@ -68,10 +68,22 @@ In a similar manner, to elicit risk attitudes, a sequence of questions about two
 \end{figure} 
 
 
+\subsection{Elicitation of attitudes towards ambiguity}
+The elicitation procedure in both panels follow the source method of \citet{abdellaoui2011} which subsume a variety of models of ambiguity, including prospect theory \citep{tversky1992advances}, Choquet expected utility \citep{schmeidler1989subjective}, and multiple priors \citep{gilboa1989maxmin}. The source method measures ambiguity attitudes via \textit{matching probabilities}, that is, in the context of ALP and LISS ambiguity sequence, the proportion of winning balls in the final iteration. Matching probability can be denoted as follows,
+\[m(p)=X/100,\]
+where $p$ is the proportion of winning balls when the number of balls of any one colour is the same, $X$ the number of winning balls after the final iteration is reached, and $m(p)$ the \textit{matching probability} of the ambiguity-neutral probability of $p$. If $m(p)<p$, the respondent is ambiguity-averse as she underweigh the ambiguity-neutral probability of the risky choice due to the ambiguous box. By contrast, under ambiguity-seeking, $m(p)>p$. For instsance, in an urn with $100$ balls of 2 colours, $m(0.5)=0.45$ means that the respondent is indifferent between gambling on one colour from the known urn with $45$ of the 100 balls in the known urn of that colour versus an unknown urn containing 100 balls of 2 colours in unknown proportions.   
 
-\subsection{Elicitation of attitudes towards risk and ambiguity}
-
-
+As shown in \citet{dimmock2016ambiguity}, with the matching probabilities $m(p)$ and $p$, the global ambiguity attitude indices of \citet{abdellaoui2011} can be measured. First, perform a recoding to find the best fitting line between $m(p)$ and $p$, say
+\[p\mapsto c+sp \]
+with $c$ the intercept and $s$ the slope. The ambiguity indices are defined
+\begin{equation}
+	a= 1-s\quad\text{(index of ambiguity-generated likelihood insensitivity)}
+\end{equation}
+and
+\begin{equation}
+	b = 1-s-2c\quad\text{(index of ambiguity aversion or pessimism).}
+\end{equation}
+Index $a$ captures \textit{likelihood insensitivity}, defined as the lack of influence of the updating of probabilities following the arrival of new information. Index $b$ 
 
 
 
@@ -81,6 +93,7 @@ In a similar manner, to elicit risk attitudes, a sequence of questions about two
 
 
 \pagebreak
+
 \bibliographystyle{apalike}
 \bibliography{bibliography.bib}
 

@@ -1,5 +1,11 @@
 \begin{thebibliography}{}
 
+\bibitem[Abdellaoui et~al., 2011]{abdellaoui2011}
+Abdellaoui, M., Baillon, A., Placido, L., and Wakker, P.~P. (2011).
+\newblock The rich domain of uncertainty: Source functions and their
+  experimental implementation.
+\newblock {\em American Economic Review}, 101(2):695--723.
+
 \bibitem[Dimmock et~al., 2016a]{DIMMOCK2016559}
 Dimmock, S.~G., Kouwenberg, R., Mitchell, O.~S., and Peijnenburg, K. (2016a).
 \newblock Ambiguity aversion and household portfolio choice puzzles: Empirical
@@ -10,5 +16,22 @@ Dimmock, S.~G., Kouwenberg, R., Mitchell, O.~S., and Peijnenburg, K. (2016a).
 Dimmock, S.~G., Kouwenberg, R., and Wakker, P.~P. (2016b).
 \newblock Ambiguity attitudes in a large representative sample.
 \newblock {\em Management Science}, 62(5):1363--1380.
+
+\bibitem[Gilboa and Schmeidler, 1989]{gilboa1989maxmin}
+Gilboa, I. and Schmeidler, D. (1989).
+\newblock Maxmin expected utility with non-unique prior.
+\newblock {\em Journal of mathematical economics}, 18(2):141--153.
+
+\bibitem[Schmeidler, 1989]{schmeidler1989subjective}
+Schmeidler, D. (1989).
+\newblock Subjective probability and expected utility without additivity.
+\newblock {\em Econometrica: Journal of the Econometric Society}, pages
+  571--587.
+
+\bibitem[Tversky and Kahneman, 1992]{tversky1992advances}
+Tversky, A. and Kahneman, D. (1992).
+\newblock Advances in prospect theory: Cumulative representation of
+  uncertainty.
+\newblock {\em Journal of Risk and uncertainty}, 5:297--323.
 
 \end{thebibliography}
