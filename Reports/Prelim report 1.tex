@@ -15,6 +15,7 @@
 \usepackage{threeparttable, makecell, cellspace, multirow, booktabs}
 \usepackage{verbatim}
 \usepackage{natbib}
+\usepackage[bottom]{footmisc}
 
 %---- Simple table template
 \begin{comment} 
@@ -35,6 +36,7 @@
 %\setlength{\parindent}{0pt}
 
 \captionsetup[figure]{labelfont=bf}
+\captionsetup[table]{labelfont=bf}
 
 \begin{document}
 
@@ -96,8 +98,14 @@ and $\rho=1-\sigma$ is the estimated CRRA coefficient.
 \section{Preliminary results}
 \subsection{LISS panel}
 \input{Table/tab1.tex}
+\input{Table/tab2.tex}
 
+LISS panel has a total of more than 13,000 participants. Of which, 1,935 completed the surveys on ambiguity and risk. To match data on attitudes and educational investment, I merge the survey on ambiguity with another on time use. Data for time use and consumption surveys  are collected in many waves but it was not until Wave 6 that a question on the specific amount of monthly schooling expense was asked. As the ambiguity survey was conducted in January, 2010 while data of Wave 6 of the Time use and consumption survey was collected in November, 2019, the time discrepancy calls for great caution when interpreting the results of any inference made. An assumption that will be made here is the invariability of attitudes towards risk and ambiguity over time. Summary statistics of the sample of LISS panel are reported in \Cref{tab:1}. 
 
+The results of two simple regression models are reported in \Cref{tab:2}. 
+
+\subsection{American Life Panel}
+I haven't been able to progress much with ALP due to some difficulties when extracting data and calculating parameters of ambiguity and risk aversion. 
 
 \pagebreak
 

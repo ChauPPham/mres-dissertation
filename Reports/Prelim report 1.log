@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.23)  26 JUN 2023 16:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.23)  26 JUN 2023 23:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -475,8 +475,22 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count301
 )
-LaTeX Font Info:    Trying to load font information for OT1+qpl on input line 3
-9.
+(C:\Program Files\MiKTeX\tex/latex/footmisc\footmisc.sty
+Package: footmisc 2022/03/08 v6.0d a miscellany of footnote facilities
+\FN@temptoken=\toks41
+\footnotemargin=\dimen261
+\@outputbox@depth=\dimen262
+Package footmisc Info: Declaring symbol style bringhurst on input line 695.
+Package footmisc Info: Declaring symbol style chicago on input line 703.
+Package footmisc Info: Declaring symbol style wiley on input line 712.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 723.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 743.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 764
+.
+)
+LaTeX Font Info:    Trying to load font information for OT1+qpl on input line 4
+1.
 
 (C:\Program Files\MiKTeX\tex/latex/tex-gyre\ot1qpl.fd
 File: ot1qpl.fd 2009/09/25 v1.2 font definition file for OT1/qpl
@@ -489,24 +503,24 @@ File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
 (Prelim report 1.aux)
 \openout1 = `"Prelim report 1.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
  (C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -527,16 +541,16 @@ File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count303
-\scratchdimen=\dimen261
+\scratchdimen=\dimen263
 \scratchbox=\box59
 \nofMPsegments=\count304
 \nofMParguments=\count305
-\everyMPshowfont=\toks41
+\everyMPshowfont=\toks42
 \MPscratchCnt=\count306
-\MPscratchDim=\dimen262
+\MPscratchDim=\dimen264
 \MPnumerator=\count307
 \makeMPintoPDFobject=\count308
-\everyMPtoPDFconversion=\toks42
+\everyMPtoPDFconversion=\toks43
 ))) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -545,8 +559,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 (C:\Program Files\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\Gin@req@height=\dimen263
-\Gin@req@width=\dimen264
+\Gin@req@height=\dimen265
+\Gin@req@width=\dimen266
 )
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -591,7 +605,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 149.
 
 (C:\Program Files\MiKTeX\tex/latex/graphics\mathcolor.ltx))
-Package hyperref Info: Link coloring ON on input line 39.
+Package hyperref Info: Link coloring ON on input line 41.
 
 (Prelim report 1.out) (Prelim report 1.out)
 \@outlinefile=\write3
@@ -600,41 +614,41 @@ Package hyperref Info: Link coloring ON on input line 39.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 42.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
 
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 42.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
 
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 42
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 44
 .
 
 (C:\Program Files\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-<Figure/figure-1.png, id=32, 729.927pt x 518.53725pt>
+<Figure/figure-1.png, id=36, 729.927pt x 518.53725pt>
 File: Figure/figure-1.png Graphic file (type png)
 <use Figure/figure-1.png>
-Package pdftex.def Info: Figure/figure-1.png  used on input line 53.
+Package pdftex.def Info: Figure/figure-1.png  used on input line 55.
 (pdftex.def)             Requested size: 469.75502pt x 333.71417pt.
 
-Overfull \hbox (3.0pt too wide) in paragraph at lines 53--54
+Overfull \hbox (3.0pt too wide) in paragraph at lines 55--56
 [][] 
  []
 
-<Figure/figure-2.png, id=37, 660.66824pt x 537.207pt>
+<Figure/figure-2.png, id=41, 660.66824pt x 537.207pt>
 File: Figure/figure-2.png Graphic file (type png)
 <use Figure/figure-2.png>
-Package pdftex.def Info: Figure/figure-2.png  used on input line 65.
+Package pdftex.def Info: Figure/figure-2.png  used on input line 67.
 (pdftex.def)             Requested size: 469.75502pt x 381.96884pt.
 
-Overfull \hbox (3.0pt too wide) in paragraph at lines 65--66
+Overfull \hbox (3.0pt too wide) in paragraph at lines 67--68
 [][] 
  []
 
@@ -645,42 +659,37 @@ figure-1.png>] [3 <./Figure/figure-2.png>]
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 91.
+(amsmath)                 on input line 93.
 
-(Table/tab1.tex
-! Undefined control sequence.
-l.12 Monthly school fees (\euro
-                               {}) & 161 & 105.484 & 317.641 & 0 & 3,200 \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-) [4] (Prelim report 1.bbl) [5] (Prelim report 1.aux)
+(Table/tab1.tex) (Table/tab2.tex) [4] [5] (Prelim report 1.bbl) [6]
+(Prelim report 1.aux)
 Package rerunfilecheck Info: File `"Prelim report 1".out' has not changed.
-(rerunfilecheck)             Checksum: 75E6D23FE7E5E03EABAF82AE6DD3B217;1188.
+(rerunfilecheck)             Checksum: CCA2513573D8C1C71511084265A19F2C;1346.
  ) 
 Here is how much of TeX's memory you used:
- 15898 strings out of 476406
- 267028 string characters out of 2799384
- 1864787 words of memory out of 3000000
- 35983 multiletter control sequences out of 15000+600000
- 554677 words of font info for 77 fonts, out of 8000000 for 9000
+ 16055 strings out of 476406
+ 269923 string characters out of 2799384
+ 1876787 words of memory out of 3000000
+ 36128 multiletter control sequences out of 15000+600000
+ 557559 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,10n,79p,1814b,495s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 68i,15n,79p,1814b,499s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Program Files/MiKTeX/fonts/enc/dvips/tex-gyre/q-rm.enc}<C:/Program Files/
 MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/
-Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts
-/type1/public/tex-gyre/qplb.pfb><C:/Program Files/MiKTeX/fonts/type1/public/tex
--gyre/qplr.pfb><C:/Program Files/MiKTeX/fonts/type1/public/tex-gyre/qplri.pfb>
-Output written on "Prelim report 1.pdf" (5 pages, 826994 bytes).
+/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:
+/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:
+/Program Files/MiKTeX/fonts/type1/public/tex-gyre/qplb.pfb><C:/Program Files/Mi
+KTeX/fonts/type1/public/tex-gyre/qplr.pfb><C:/Program Files/MiKTeX/fonts/type1/
+public/tex-gyre/qplri.pfb>
+Output written on "Prelim report 1.pdf" (6 pages, 875233 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 30 named destinations out of 1000 (max. 500000)
- 59 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 197 PDF objects out of 1000 (max. 8388607)
+ 35 named destinations out of 1000 (max. 500000)
+ 67 words of extra memory for PDF output out of 10000 (max. 10000000)
 

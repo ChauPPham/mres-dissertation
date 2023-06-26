@@ -12,6 +12,7 @@ require("haven")
 require("tidyverse")
 require("base")
 require("stargazer")
+require("sjlabelled")
 
 background <- read_dta("LISS data/avars_201001_EN_2.0p.dta")  # background data
 family <- read_dta("LISS data/cf10c_EN_1.0p.dta")             # family data
@@ -95,22 +96,26 @@ useful_variables <- c(1:10, 17:28, 31, 175:180, 182:183) # If merge before calcu
 
 usable <- inner_join(pool, timeuse) %>% mutate(child_dif = tp19a003 - aantalki
 ) %>% filter(child_dif >= 0, (aantalki+tp19a003 != 0), !is.na(tp19a045)
-) %>% select(all_of(useful_variables), child_dif, CRRA_coef, tp19a045, simpc, a, b) 
+) %>% select(all_of(useful_variables), tp19a003, child_dif, CRRA_coef, tp19a045, simpc, a, b) 
 usable$oplcat <- factor(usable$oplcat, levels = c("1", "2", "3", "4", "5", "6"),
                         labels = c("primary", "vmbo", "havo/vwo", "mbo", "hbo", "wo"))
 
-test1 <- lm(tp19a045 ~ AA_0.1 + AA_0.5 + AA_0.9 + CRRA_coef + bm10a004 + oplcat + nettohh_f + simpc, data = usable)
+test1 <- lm(tp19a045 ~ AA_0.1 + AA_0.5 + AA_0.9 + CRRA_coef + bm10a004 + oplcat + nettohh_f + simpc + tp19a003, data = usable)
 summary(test1)
 
-test2 <- lm(tp19a045 ~ a + b + CRRA_coef + bm10a004 + oplcat + nettohh_f + simpc, data = usable)
+test2 <- lm(tp19a045 ~ a + b + CRRA_coef + bm10a004 + oplcat + nettohh_f + simpc + tp19a003, data = usable)
 summary(test2)
 
 # write.csv(pool, "LISS data/pool.csv")
 # write.csv(usable, "LISS data/usable.csv")
 
-# usable %>% select(tp19a045, bm10a004, simpc, nettohh_f, CRRA_coef, AA_0.1, AA_0.5, AA_0.9, a, b) %>% as.data.frame() %>% stargazer(type = "latex", title = "Summary Statistics (LISS)", covariate.labels = c("Monthly school fees (euros)", "Financial responsibility", "Education", "Have a PC", "Household income", "Risk aversion ($\\rho$)", "$AA_{0.1}$", "$AA_{0.5}$", "$AA_{0.9}$", "Index $a$", "Index $b$"), out = "Reports/Table/tab1.tex")
+# usable <- usable %>% remove_all_labels()
 
-### oplcat are educational level: factor variable, missing in the summary table -> causes some weird labelling. Need to fix
+# usable %>% select(tp19a045, bm10a004, simpc, nettohh_f, tp19a003, CRRA_coef, AA_0.1, AA_0.5, AA_0.9, a, b) %>% as.data.frame() %>% stargazer(type = "latex", title = "Summary Statistics (LISS)", covariate.labels = c("Monthly school fees (euros)", "Financial responsibility", "Have a PC", "# of living-at-home children", "Household income", "Risk aversion", "$AA_{0.1}$", "$AA_{0.5}$", "$AA_{0.9}$", "Index $a$", "Index $b$"), out = "Reports/Table/tab1.tex")
+
+#stargazer(test1, test2, type = "latex", omit = c("oplcatvmbo", "oplcathavo/vwo", "oplcatmbo", "oplcathbo", "oplcatwo", "bm10a004", "simpc", "Constant"), add.lines = list(c("Controls and constant", "YES", "YES")), covariate.labels = c("$AA_{0.1}$", "$AA_{0.5}$", "$AA_{0.9}$", "Index $a$", "Index $b$", "Risk aversion", "Household income", "\\# of living-at-home children"), dep.var.labels = "Monthly schooling fees", out = "Reports/Table/tab2.tex", title = "Simple regression models", label = "tab:2")
+
+################ oplcat are educational level: factor variable, missing in the SUMMARY table -> causes some weird labelling. Need to fix
 
 
 
