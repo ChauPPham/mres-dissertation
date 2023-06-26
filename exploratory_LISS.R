@@ -2,7 +2,7 @@
 # Author: Chau Pham
 # Purpose: Exploratory coding with LISS data for MRES dissertation
 
-# Last changes: 06/23/2023
+# Last changes: 06/26/2023
 #--------------------------------------------------------------#
 
 ##===== Load & clean data
@@ -46,83 +46,27 @@ pool <- pool %>% mutate(m_0.9 = bm10a087/100, AA_0.9 = 0.9 - m_0.9)
 # pi(p) = 1/exp(log(1/p)^alpha), pi(p) is the probability weighting function; p is probability of outcome x
 # when involving sure gain, p = 1 -> Value of prospect reduces to v(x) = x^sigma
 
-# bm10a107 records the prize of the sure gain box at last iteration -> derive certainty equivalence for 1000 risky box
-# while the risky box is fixed (get 0 prob 0.5 and get 1000 prob 0.5)
-# bm10a128 records the prize of the sure gain box at last iteration -> derive certainty equivalence for 10000 risky box
-# while the risky box is fixed (get 0 prob 0.5 and get 18000 prob 0.5)
+# bm10a107 records the prize of the sure gain box at last iteration -> certainty equivalence for 1000 risky box while the risky box is fixed (get 0 prob 0.5 and get 1000 prob 0.5)
+# bm10a128 records the prize of the sure gain box at last iteration -> certainty equivalence for 18000 risky box while the risky box is fixed (get 0 prob 0.5 and get 18000 prob 0.5)
+# use the power utility: u(x) = x^sigma
+# CE ~ 1000_p_0 implies w(p) = CE^sigma/1000^sigma
+# Using 2 questions on CE, run a linear regression of the form log(CE) = a + b*log(stake)
+# where a = 1/sigma*log(w(p)), if assume EU -> w(p) = 0.5
+pool$sigma1 <- 0
+pool$sigma2 <- 0
 
-alpha_grid <- seq(0, 1.5, by = 0.05)
-pool <- pool %>% mutate(sigma1 = 0, alpha1 = 0, sigma2 = 0, alpha2 = 0)
-
-fn <- function(sigma, alpha, value, stake) {
-  risky_sure <- (stake^sigma)/(exp(log(2)^alpha)) - value^sigma
-  risky_sure
+for (i in 1:nrow(pool)) {
+  data_temp <- tibble(stake = c(1000, 18000), CE = c(pool$bm10a107[i], pool$bm10a128[i]))
+  test <- lm(log(CE) ~ log(stake), data = data_temp)
+  inter <- test$coefficients[1]
+  beta <- test$coefficients[2]
+  pool[i, "sigma1"] <- 1/((inter/beta)/log(0.5))
 }
 
+pool <- pool %>% mutate(CRRA_coef = 1 - sigma1)
 
 
-for (j in 1:nrow(pool)){
-  store <- data.frame(fn1_val = numeric(length(alpha_grid)), 
-                      sigma1 = 0, alpha1 = 0, fn2_val = 0, sigma2 = 0, alpha2 = 0)
-  
-  for (i in 1:length(alpha_grid)){
-    alpha <- alpha_grid[i]
-    value1 <- pool$bm10a107[j]
-    value2 <- pool$bm10a128[j]
-    
-    fn1 <- function(x) fn(x, alpha, value1, 1000)  # Question 5 with 1000 stake
-    
-    store[i,3] <- alpha
-    
-    if (fn1(0)*fn1(1.5) <= 0){
-      store[i,2] <- uniroot(fn1, interval = c(0, 1.5), tol = 1e-8)$root
-    }
-    else if (fn1(0) > 0){
-      # if positive, find minimum
-      store[i,2] <- optim(0, fn1, lower = 0, upper = 1.5)$par
-    }
-    else {
-      # if negative, find maximum
-      store[i,2] <- optim(0, fn1, lower = 0, upper = 1.5, control = list(fnscale = -1))$par
-    }
-    store[i,1] <- fn1(store[i, 2])
-    
-    
-    fn2 <- function(x) fn(x, alpha, value2, 18000)   # Question 6 with 18000 stake
-    store[i, 6] <- alpha
-    if (fn2(0)*fn2(1.5) <= 0){
-      store[i,5] <- uniroot(fn2, interval = c(0, 1.5), tol = 1e-8)$root
-    }
-    else if (fn2(0) > 0){
-      # if positive, find minimum
-      store[i,5] <- optim(0, fn2, lower = 0, upper = 1.5)$par
-    }
-    else {
-      # if negative, find maximum
-      store[i,5] <- optim(0, fn2, lower = 0, upper = 1.5, control = list(fnscale = -1))$par
-    }
-    store[i,4] <- fn2(store[i, 5])
-    
-    # calculate the euclidean distance between the pairs -> choose minimum
-    for (i in 1:nrow(store)){
-      dif <- store %>% select(sigma2, alpha2)
-      dif <- dif %>% mutate(pair_dif = sqrt((sigma2 - store[i,2])^2 + (alpha2 - store[i,3])^2))
-      store$dif[i] <- dif[which.min(dif$pair_dif), 3]
-    }
-  }
-  
-# Chooses pair of alpha, sigma that gives the smallest error 
-#(squared distance from 0) -> NOT IDEAL
-# IDEAL IS TO FIND THE PAIR OF SIGMA ALPHA THAT CAN SOLVE BOTH fn1, fn2
-  pos <- which.min(store$dif) 
-  pool$sigma1[j] <- store[pos, 2]
-  pool$alpha1[j] <- store[pos, 3]
-  pool$sigma2[j] <- store[pos, 5]
-  pool$alpha2[j] <- store[pos, 6]
 
-}
-
-pool <- pool %>% mutate(coef_risk_low = 1 - sigma1, coef_risk_high = 1 - sigma2)
 
 #========== Linear regression
 useful_variables <- c(1:10, 17:28, 31, 175:180, 182:183) # If merge before calculating 
@@ -135,11 +79,11 @@ useful_variables <- c(1:10, 17:28, 31, 175:180, 182:183) # If merge before calcu
 
 usable <- inner_join(pool, timeuse) %>% mutate(child_dif = tp19a003 - aantalki
 ) %>% filter(child_dif >= 0, (aantalki+tp19a003 != 0), !is.na(tp19a045)
-) %>% select(all_of(useful_variables), child_dif, coef_risk_low, coef_risk_high, tp19a045, simpc) 
+) %>% select(all_of(useful_variables), child_dif, CRRA_coef, tp19a045, simpc) 
 usable$oplcat <- factor(usable$oplcat, levels = c("1", "2", "3", "4", "5", "6"),
                         labels = c("primary", "vmbo", "havo/vwo", "mbo", "hbo", "wo"))
 
-test <- lm(tp19a045 ~ AA_0.1 + AA_0.5 + AA_0.9 + coef_risk_low + coef_risk_high + bm10a004 + oplcat + nettohh_f + simpc, data = usable)
+test <- lm(tp19a045 ~ AA_0.1 + AA_0.5 + AA_0.9 + CRRA_coef + bm10a004 + oplcat + nettohh_f + simpc, data = usable)
 summary(test)
 
 # write.csv(pool, "LISS data/pool.csv")
