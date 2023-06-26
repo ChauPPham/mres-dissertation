@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.23)  25 JUN 2023 23:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.23)  26 JUN 2023 16:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -392,18 +392,88 @@ Package caption Info: Standard document class detected.
 \c@continuedfloat=\count293
 Package caption Info: hyperref package is loaded.
 )
+(C:\Program Files\MiKTeX\tex/latex/threeparttable\threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box55
+)
+(C:\Program Files\MiKTeX\tex/latex/makecell\makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+
+(C:\Program Files\MiKTeX\tex/latex/tools\array.sty
+Package: array 2022/03/10 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen184
+\ar@mcellbox=\box56
+\extrarowheight=\dimen185
+\NC@list=\toks35
+\extratabsurround=\skip63
+\backup@length=\skip64
+\ar@cellbox=\box57
+)
+\rotheadsize=\dimen186
+\c@nlinenum=\count294
+\TeXr@lab=\toks36
+)
+(C:\Program Files\MiKTeX\tex/latex/cellspace\cellspace.sty
+Package: cellspace 2022/01/04 v1.9.0 Spacing table cells (JN)
+
+(C:\Program Files\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+(C:\Program Files\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(C:\Program Files\MiKTeX\tex/generic/xkeyval\xkeyval.tex
+(C:\Program Files\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks37
+\XKV@tempa@toks=\toks38
+)
+\XKV@depth=\count295
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\cellspacetoplimit=\dimen187
+\cellspacebottomlimit=\dimen188
+\cellspace@firstht=\dimen189
+\cellspace@lastdp=\dimen190
+)
+(C:\Program Files\MiKTeX\tex/latex/multirow\multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip65
+\multirow@cntb=\count296
+\multirow@dima=\skip66
+\bigstrutjot=\dimen191
+)
+(C:\Program Files\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen192
+\lightrulewidth=\dimen193
+\cmidrulewidth=\dimen194
+\belowrulesep=\dimen195
+\belowbottomsep=\dimen196
+\aboverulesep=\dimen197
+\abovetopsep=\dimen198
+\cmidrulesep=\dimen199
+\cmidrulekern=\dimen256
+\defaultaddspace=\dimen257
+\@cmidla=\count297
+\@cmidlb=\count298
+\@aboverulesep=\dimen258
+\@belowrulesep=\dimen259
+\@thisruleclass=\count299
+\@lastruleclass=\count300
+\@thisrulewidth=\dimen260
+)
 (C:\Program Files\MiKTeX\tex/latex/tools\verbatim.sty
 Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks35
-\verbatim@line=\toks36
+\every@verbatim=\toks39
+\verbatim@line=\toks40
 \verbatim@in@stream=\read2
 )
 (C:\Program Files\MiKTeX\tex/latex/natbib\natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip63
-\bibsep=\skip64
+\bibhang=\skip67
+\bibsep=\skip68
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count294
+\c@NAT@ctr=\count301
 )
 LaTeX Font Info:    Trying to load font information for OT1+qpl on input line 3
 9.
@@ -413,8 +483,8 @@ File: ot1qpl.fd 2009/09/25 v1.2 font definition file for OT1/qpl
 )
 (C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count295
-\l__pdf_internal_box=\box55
+\l__color_backend_stack_int=\count302
+\l__pdf_internal_box=\box58
 )
 (Prelim report 1.aux)
 \openout1 = `"Prelim report 1.aux"'.
@@ -456,17 +526,17 @@ File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 
 (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count296
-\scratchdimen=\dimen184
-\scratchbox=\box56
-\nofMPsegments=\count297
-\nofMParguments=\count298
-\everyMPshowfont=\toks37
-\MPscratchCnt=\count299
-\MPscratchDim=\dimen185
-\MPnumerator=\count300
-\makeMPintoPDFobject=\count301
-\everyMPtoPDFconversion=\toks38
+\scratchcounter=\count303
+\scratchdimen=\dimen261
+\scratchbox=\box59
+\nofMPsegments=\count304
+\nofMParguments=\count305
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count306
+\MPscratchDim=\dimen262
+\MPnumerator=\count307
+\makeMPintoPDFobject=\count308
+\everyMPtoPDFconversion=\toks42
 ))) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -475,8 +545,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 (C:\Program Files\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\Gin@req@height=\dimen186
-\Gin@req@width=\dimen187
+\Gin@req@height=\dimen263
+\Gin@req@width=\dimen264
 )
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -528,6 +598,7 @@ Package hyperref Info: Link coloring ON on input line 39.
 \openout3 = `"Prelim report 1.out"'.
 
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 42.
 
@@ -547,7 +618,7 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 42
 (C:\Program Files\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-<Figure/figure-1.png, id=20, 729.927pt x 518.53725pt>
+<Figure/figure-1.png, id=32, 729.927pt x 518.53725pt>
 File: Figure/figure-1.png Graphic file (type png)
 <use Figure/figure-1.png>
 Package pdftex.def Info: Figure/figure-1.png  used on input line 53.
@@ -557,7 +628,7 @@ Overfull \hbox (3.0pt too wide) in paragraph at lines 53--54
 [][] 
  []
 
-<Figure/figure-2.png, id=25, 660.66824pt x 537.207pt>
+<Figure/figure-2.png, id=37, 660.66824pt x 537.207pt>
 File: Figure/figure-2.png Graphic file (type png)
 <use Figure/figure-2.png>
 Package pdftex.def Info: Figure/figure-2.png  used on input line 65.
@@ -570,30 +641,46 @@ Overfull \hbox (3.0pt too wide) in paragraph at lines 65--66
 [1
 
 {C:/Users/user/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2 <./Figure/
-figure-1.png>] [3 <./Figure/figure-2.png>] (Prelim report 1.bbl) [4]
-(Prelim report 1.aux)
+figure-1.png>] [3 <./Figure/figure-2.png>]
+
+Package amsmath Warning: Foreign command \over;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 91.
+
+(Table/tab1.tex
+! Undefined control sequence.
+l.12 Monthly school fees (\euro
+                               {}) & 161 & 105.484 & 317.641 & 0 & 3,200 \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+) [4] (Prelim report 1.bbl) [5] (Prelim report 1.aux)
 Package rerunfilecheck Info: File `"Prelim report 1".out' has not changed.
-(rerunfilecheck)             Checksum: EB1538E26DA3E2F3425CB07157B64969;683.
+(rerunfilecheck)             Checksum: 75E6D23FE7E5E03EABAF82AE6DD3B217;1188.
  ) 
 Here is how much of TeX's memory you used:
- 15108 strings out of 476406
- 254224 string characters out of 2799384
+ 15898 strings out of 476406
+ 267028 string characters out of 2799384
  1864787 words of memory out of 3000000
- 35240 multiletter control sequences out of 15000+600000
+ 35983 multiletter control sequences out of 15000+600000
  554677 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,8n,71p,1814b,459s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 68i,10n,79p,1814b,495s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Program Files/MiKTeX/fonts/enc/dvips/tex-gyre/q-rm.enc}<C:/Program Files/
 MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:
-/Program Files/MiKTeX/fonts/type1/public/tex-gyre/qplb.pfb><C:/Program Files/Mi
-KTeX/fonts/type1/public/tex-gyre/qplr.pfb><C:/Program Files/MiKTeX/fonts/type1/
-public/tex-gyre/qplri.pfb>
-Output written on "Prelim report 1.pdf" (4 pages, 795752 bytes).
+/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/
+Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts
+/type1/public/tex-gyre/qplb.pfb><C:/Program Files/MiKTeX/fonts/type1/public/tex
+-gyre/qplr.pfb><C:/Program Files/MiKTeX/fonts/type1/public/tex-gyre/qplri.pfb>
+Output written on "Prelim report 1.pdf" (5 pages, 826994 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
- 21 named destinations out of 1000 (max. 500000)
- 35 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 163 PDF objects out of 1000 (max. 8388607)
+ 30 named destinations out of 1000 (max. 500000)
+ 59 words of extra memory for PDF output out of 10000 (max. 10000000)
 

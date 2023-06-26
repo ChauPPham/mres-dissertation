@@ -22,11 +22,22 @@ Gilboa, I. and Schmeidler, D. (1989).
 \newblock Maxmin expected utility with non-unique prior.
 \newblock {\em Journal of mathematical economics}, 18(2):141--153.
 
+\bibitem[Prelec, 1998]{prelec1998probability}
+Prelec, D. (1998).
+\newblock The probability weighting function.
+\newblock {\em Econometrica}, pages 497--527.
+
 \bibitem[Schmeidler, 1989]{schmeidler1989subjective}
 Schmeidler, D. (1989).
 \newblock Subjective probability and expected utility without additivity.
 \newblock {\em Econometrica: Journal of the Econometric Society}, pages
   571--587.
+
+\bibitem[Tanaka et~al., 2010]{tanaka2010}
+Tanaka, T., Camerer, C.~F., and Nguyen, Q. (2010).
+\newblock Risk and time preferences: Linking experimental and household survey
+  data from vietnam.
+\newblock {\em American Economic Review}, 100(1):557--71.
 
 \bibitem[Tversky and Kahneman, 1992]{tversky1992advances}
 Tversky, A. and Kahneman, D. (1992).

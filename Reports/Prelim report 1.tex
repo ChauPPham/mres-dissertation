@@ -12,7 +12,7 @@
 \usepackage[colorlinks, citecolor = blue]{hyperref}
 \usepackage[nameinlink, noabbrev]{cleveref}
 \usepackage{caption}
-%\usepackage{threeparttable, makecell, cellspace, multirow, booktabs}
+\usepackage{threeparttable, makecell, cellspace, multirow, booktabs}
 \usepackage{verbatim}
 \usepackage{natbib}
 
@@ -57,7 +57,7 @@ To elicit ambiguity aversion, \citet{DIMMOCK2016559, dimmock2016ambiguity} desig
 
 The question will be asked repeatedly until the respondent chooses "Indifferent" or until the 6th iteration whichever occurs first. \Cref{fig:1} shows the first question in the sequence. If the respondent chooses "Choice U" in this question, she is then presented with a similar question wherein Choice U stays the same while the number of the winning balls in Choice K increases using a bisection method.\footnote{After each question that the respondent chooses either "Choice K" or "Choice U", the proportion of the winning balls in the risky choice is adjusted as follows. In the first question, if "Choice K" is chosen, the proportion of winning ball in the next question is then $(0\% + 50\%)/2 = 25\%$ and $50\%$ becomes the new ceiling instead of $100\%$. If "Choice U" is chosen, the proportion of winning ball in the next question is $(50\% + 100\%)/2 = 75\%$ and $50\%$ becomes the new floor. The new floor and ceiling are carried to the next question and get updated again depending on the subsequent choices of the respondent.} If, on the other hand, "Choice K" is chosen in the first question, in the following question, the number of winning balls in Choice K is reduced. If "Indifferent" is chosen at any stage of the sequence, the sequence stops and the proportion of winning balls in the last stage indicates probability of winning a risky `lottery' that makes the risky choice and ambiguous choice equally attractive. Finally, if "Indifferent" is never chosen, the sequence stops after the 6th iteration of the question and the final probability of winning a risky `lottery' is adjusted via the bisection method. In total, three sequences of questions on ambiguity with varying initial degree of risk are asked in both the LISS panel and ALP.
 
-In a similar manner, to elicit risk attitudes, a sequence of questions about two choices involving sure gain on one side and a risky lottery on the other are presented to respondents. \Cref{fig:2} shows the first question in this sequence of questions on risk for the ALP. Depending on the choices of the respondent, the prize of the sure-gain Box A is updated via a bisection method while the risky Box B remains the same. The question is repeated until "Indifferent" is chosen or until the 4th iteration is reached.
+In a similar manner, to elicit risk attitudes, two sequences of questions about two choices involving sure gain on one side and a risky lottery on the other are presented to respondents. \Cref{fig:2} shows the first question in this sequence of questions on risk for the ALP. Depending on the choices of the respondent, the prize of the sure-gain Box A is updated via a bisection method while the risky Box B remains the same. The question is repeated until "Indifferent" is chosen or until the 4th iteration is reached.
 
 \begin{figure}[!ht]
 	\setlength{\fboxrule}{1.5pt}
@@ -83,12 +83,19 @@ and
 \begin{equation}
 	b = 1-s-2c\quad\text{(index of ambiguity aversion or pessimism).}
 \end{equation}
-Index $a$ captures \textit{likelihood insensitivity}, defined as the lack of influence of the updating of probabilities following the arrival of new information. Index $b$ 
+Index $a$ captures \textit{likelihood insensitivity}, defined as the lack of influence of the updating of probabilities following the arrival of new information. Index $b$ captures the degree of \textit{pessimism}, that is, good outcomes are assigned lower weights due to the presence of ambiguity.
+
+\subsection{Elicitation of attitudes towards risk}
+Following method described in \citet{tanaka2010, abdellaoui2011}, attitudes towards risk is elicited using expected utility theory (EU) assuming a power utility function, i.e., $u(x)=x^\sigma$.\footnote{An alternative to EU theory is prospect theory \citep{tversky1992advances} with Prelec's \citeyearpar{prelec1998probability} probability weighting function. Prospect theory is adopted in both \citet{tanaka2010, abdellaoui2011} instead of standard EU theory. Due to complications in the calculation of involved parameters, I have not adopted this approach in the following results.} Using two sequences of risk question, the coefficient of relative risk aversion (CRRA) can be estimated by fitting the data to the reduced-form regression:
+\begin{equation}
+	\log(CE)={1\over \sigma}\log(p) + \beta\times \log(stake).
+\end{equation}
+and $\rho=1-\sigma$ is the estimated CRRA coefficient.
 
 
-
-
-
+\section{Preliminary results}
+\subsection{LISS panel}
+\input{Table/tab1.tex}
 
 
 

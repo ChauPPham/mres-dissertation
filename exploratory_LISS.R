@@ -11,7 +11,7 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 require("haven")
 require("tidyverse")
 require("base")
-require("nleqslv")
+require("stargazer")
 
 background <- read_dta("LISS data/avars_201001_EN_2.0p.dta")  # background data
 family <- read_dta("LISS data/cf10c_EN_1.0p.dta")             # family data
@@ -36,6 +36,22 @@ pool <- pool %>% mutate(m_0.1 = bm10a065/100, AA_0.1 = 0.1 - m_0.1)
 # m(0.9), AA(0.9) = 0.9 - m(0.9)
 pool <- pool %>% mutate(m_0.9 = bm10a087/100, AA_0.9 = 0.9 - m_0.9)
 
+# Temporary storage to calculate ambiguity indices
+store_temp <- pool %>% select(id = nomem_encr, AA_0.1, AA_0.5, AA_0.9) %>% pivot_longer(cols = starts_with("AA"), names_to = "local_index") %>% cbind(prob = rep(c(0.1, 0.5, 0.9), nrow(pool)))
+
+pool$a <- 0
+pool$b <- 0
+
+for (i in 2:nrow(pool)-1){
+  pos_start <- 3*i + 1
+  pos_end <- pos_start + 2
+  
+  test <- lm(value ~ prob, data = store_temp[pos_start:pos_end, ])
+  c <- test$coefficients[1]
+  s <- test$coefficients[2]
+  pool[i, "a"] <- 1 - s
+  pool[i, "b"] <- 1 - s - 2*c
+}
 
 
 ##========== Calculate risk-aversion indices
@@ -79,19 +95,22 @@ useful_variables <- c(1:10, 17:28, 31, 175:180, 182:183) # If merge before calcu
 
 usable <- inner_join(pool, timeuse) %>% mutate(child_dif = tp19a003 - aantalki
 ) %>% filter(child_dif >= 0, (aantalki+tp19a003 != 0), !is.na(tp19a045)
-) %>% select(all_of(useful_variables), child_dif, CRRA_coef, tp19a045, simpc) 
+) %>% select(all_of(useful_variables), child_dif, CRRA_coef, tp19a045, simpc, a, b) 
 usable$oplcat <- factor(usable$oplcat, levels = c("1", "2", "3", "4", "5", "6"),
                         labels = c("primary", "vmbo", "havo/vwo", "mbo", "hbo", "wo"))
 
-test <- lm(tp19a045 ~ AA_0.1 + AA_0.5 + AA_0.9 + CRRA_coef + bm10a004 + oplcat + nettohh_f + simpc, data = usable)
-summary(test)
+test1 <- lm(tp19a045 ~ AA_0.1 + AA_0.5 + AA_0.9 + CRRA_coef + bm10a004 + oplcat + nettohh_f + simpc, data = usable)
+summary(test1)
+
+test2 <- lm(tp19a045 ~ a + b + CRRA_coef + bm10a004 + oplcat + nettohh_f + simpc, data = usable)
+summary(test2)
 
 # write.csv(pool, "LISS data/pool.csv")
 # write.csv(usable, "LISS data/usable.csv")
-# pool %>% select(bm10a107, sigma1, alpha1, bm10a128, sigma2, alpha2, coef_risk_low, coef_risk_high)
 
+# usable %>% select(tp19a045, bm10a004, simpc, nettohh_f, CRRA_coef, AA_0.1, AA_0.5, AA_0.9, a, b) %>% as.data.frame() %>% stargazer(type = "latex", title = "Summary Statistics (LISS)", covariate.labels = c("Monthly school fees (euros)", "Financial responsibility", "Education", "Have a PC", "Household income", "Risk aversion ($\\rho$)", "$AA_{0.1}$", "$AA_{0.5}$", "$AA_{0.9}$", "Index $a$", "Index $b$"), out = "Reports/Table/tab1.tex")
 
-
+### oplcat are educational level: factor variable, missing in the summary table -> causes some weird labelling. Need to fix
 
 
 
