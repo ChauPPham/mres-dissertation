@@ -1,0 +1,4969 @@
+
+# Set working directory
+# setwd()
+
+
+new_data <- read.table('NLSY79.dat', sep=' ')
+names(new_data) <- c('G0070300',
+'G0078100',
+'G0085900',
+'G0093700',
+'G0101500',
+'G0109300',
+'G0117100',
+'G0131400',
+'G0132700',
+'G0148200',
+'G0148300',
+'G0163800',
+'G0163900',
+'G0179400',
+'G0179500',
+'G0195000',
+'G0195100',
+'G0210600',
+'G0210700',
+'G0226300',
+'G0226400',
+'G0228100',
+'G0241600',
+'G0242100',
+'G0260300',
+'G0260700',
+'G0276000',
+'G0281900',
+'G0292700',
+'G0299300',
+'G0313100',
+'G0314300',
+'G0332100',
+'G0333300',
+'R0000100',
+'R0000149',
+'R0006500',
+'R0007900',
+'R0173600',
+'R0214700',
+'R0214800',
+'R0216701',
+'R0406401',
+'R0618300',
+'R0618301',
+'R0618901',
+'R0898201',
+'R1145001',
+'R1520201',
+'R1890901',
+'R2257500',
+'R2258001',
+'R2303100',
+'R2303500',
+'R2444700',
+'R2444900',
+'R2445401',
+'R2870200',
+'R2870400',
+'R2871101',
+'R3074000',
+'R3074100',
+'R3074801',
+'R3400700',
+'R3400800',
+'R3401501',
+'R3656100',
+'R3656200',
+'R3656901',
+'R4006600',
+'R4006700',
+'R4007401',
+'R4395800',
+'R4395900',
+'R4396000',
+'R4417700',
+'R4417800',
+'R4418501',
+'R5080700',
+'R5080800',
+'R5103900',
+'R5166000',
+'R5166100',
+'R5166901',
+'R6478700',
+'R6478800',
+'R6479600',
+'R7006500',
+'R7006600',
+'R7007300',
+'R7353300',
+'R7353400',
+'R7353500',
+'R7703700',
+'R7703900',
+'R7704600',
+'R8047100',
+'R8047200',
+'R8047300',
+'R8496100',
+'R8496300',
+'R8497000',
+'T0279100',
+'T0279200',
+'T0279300',
+'T0960500',
+'T0960600',
+'T0960700',
+'T0960800',
+'T0960900',
+'T0961000',
+'T0961100',
+'T0961200',
+'T0961300',
+'T0961400',
+'T0961500',
+'T0961600',
+'T0987800',
+'T0987900',
+'T0988800',
+'T2210000',
+'T2210100',
+'T2210700',
+'T3094500',
+'T3094600',
+'T3094700',
+'T3095000',
+'T3107800',
+'T3108000',
+'T3108600',
+'T4093500',
+'T4093600',
+'T4093700',
+'T4093800',
+'T4094100',
+'T4112300',
+'T4112500',
+'T4969200',
+'T4969300',
+'T4969400',
+'T4969500',
+'T4969600',
+'T4969700',
+'T4969800',
+'T4969900',
+'T4970600',
+'T4970700',
+'T4970800',
+'T4970900',
+'T4971000',
+'T4971100',
+'T4976800',
+'T4976900',
+'T4977000',
+'T4977100',
+'T4977200',
+'T4977300',
+'T4977400',
+'T4977500',
+'T4977600',
+'T4978500',
+'T4978600',
+'T4978700',
+'T4978800',
+'T4978900',
+'T4979000',
+'T4979100',
+'T4979200',
+'T4981600',
+'T4981700',
+'T4981800',
+'T4981900',
+'T4982000',
+'T4982100',
+'T4982200',
+'T4982300',
+'T4982400',
+'T4982500',
+'T4982600',
+'T4982700',
+'T4982800',
+'T4982900',
+'T4983000',
+'T4983100',
+'T4990400',
+'T4990500',
+'T4990600',
+'T4990700',
+'T4990800',
+'T4990900',
+'T4991000',
+'T4991100',
+'T4994400',
+'T4994500',
+'T4994600',
+'T4994700',
+'T4994800',
+'T4994900',
+'T4995000',
+'T4995100',
+'T4996100',
+'T4996200',
+'T4996300',
+'T4996400',
+'T4996500',
+'T4996600',
+'T4996700',
+'T4996800',
+'T4996900',
+'T4998700',
+'T4998800',
+'T4998900',
+'T4999000',
+'T4999300',
+'T5022600',
+'T5022800',
+'T5770800',
+'T5770900',
+'T8218700',
+'T8218900',
+'T9900000',
+'X0530100',
+'X0532900',
+'X0535700',
+'X0538500',
+'X0541300',
+'X0543900',
+'X0546100',
+'X0547400',
+'X0548700',
+'X0549900',
+'X0550900')
+
+
+# Handle missing values
+
+new_data[new_data == -1] = NA  # Refused
+new_data[new_data == -2] = NA  # Dont know
+new_data[new_data == -3] = NA  # Invalid missing
+new_data[new_data == -4] = NA  # Valid missing
+new_data[new_data == -5] = NA  # Non-interview
+
+
+# If there are values not categorized they will be represented as NA
+
+vallabels = function(data) {
+  data$R0006500 <- factor(data$R0006500,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,95.0),
+labels=c("NONE",
+"1ST GRADE",
+"2ND GRADE",
+"3RD GRADE",
+"4TH GRADE",
+"5TH GRADE",
+"6TH GRADE",
+"7TH GRADE",
+"8TH GRADE",
+"9TH GRADE",
+"10TH GRADE",
+"11TH GRADE",
+"12TH GRADE",
+"1ST YR COL",
+"2ND YR COL",
+"3RD YR COL",
+"4TH YR COL",
+"5TH YR COL",
+"6TH YR COL",
+"7TH YR COL",
+"8TH YR COL OR MORE",
+"UNGRADED"))
+  data$R0007900 <- factor(data$R0007900,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,95.0),
+labels=c("NONE",
+"1ST GRADE",
+"2ND GRADE",
+"3RD GRADE",
+"4TH GRADE",
+"5TH GRADE",
+"6TH GRADE",
+"7TH GRADE",
+"8TH GRADE",
+"9TH GRADE",
+"10TH GRADE",
+"11TH GRADE",
+"12TH GRADE",
+"1ST YR COL",
+"2ND YR COL",
+"3RD YR COL",
+"4TH YR COL",
+"5TH YR COL",
+"6TH YR COL",
+"7TH YR COL",
+"8TH YR COL OR MORE",
+"UNGRADED"))
+  data$R0173600 <- factor(data$R0173600,
+levels=c(1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0),
+labels=c("CROSS MALE WHITE",
+"CROSS MALE WH. POOR",
+"CROSS MALE BLACK",
+"CROSS MALE HISPANIC",
+"CROSS FEMALE WHITE",
+"CROSS FEMALE WH POOR",
+"CROSS FEMALE BLACK",
+"CROSS FEMALE HISPANIC",
+"SUP MALE WH POOR",
+"SUP MALE BLACK",
+"SUP MALE HISPANIC",
+"SUP FEM WH POOR",
+"SUP FEMALE BLACK",
+"SUP FEMALE HISPANIC",
+"MIL MALE WHITE",
+"MIL MALE BLACK",
+"MIL MALE HISPANIC",
+"MIL FEMALE WHITE",
+"MIL FEMALE BLACK",
+"MIL FEMALE HISPANIC"))
+  data$R0214700 <- factor(data$R0214700,
+levels=c(1.0,2.0,3.0),
+labels=c("HISPANIC",
+"BLACK",
+"NON-BLACK, NON-HISPANIC"))
+  data$R0214800 <- factor(data$R0214800,
+levels=c(1.0,2.0),
+labels=c("MALE",
+"FEMALE"))
+  data$R0216701 <- factor(data$R0216701,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,95.0),
+labels=c("NONE",
+"1ST GRADE",
+"2ND GRADE",
+"3RD GRADE",
+"4TH GRADE",
+"5TH GRADE",
+"6TH GRADE",
+"7TH GRADE",
+"8TH GRADE",
+"9TH GRADE",
+"10TH GRADE",
+"11TH GRADE",
+"12TH GRADE",
+"1ST YR COL",
+"2ND YR COL",
+"3RD YR COL",
+"4TH YR COL",
+"5TH YR COL",
+"6TH YR COL",
+"7TH YR COL",
+"8TH YR COL OR MORE",
+"UNGRADED"))
+  data$R0406401 <- factor(data$R0406401,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,95.0),
+labels=c("NONE",
+"1ST GRADE",
+"2ND GRADE",
+"3RD GRADE",
+"4TH GRADE",
+"5TH GRADE",
+"6TH GRADE",
+"7TH GRADE",
+"8TH GRADE",
+"9TH GRADE",
+"10TH GRADE",
+"11TH GRADE",
+"12TH GRADE",
+"1ST YR COL",
+"2ND YR COL",
+"3RD YR COL",
+"4TH YR COL",
+"5TH YR COL",
+"6TH YR COL",
+"7TH YR COL",
+"8TH YR COL OR MORE",
+"UNGRADED"))
+  data$R0618901 <- factor(data$R0618901,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,95.0),
+labels=c("NONE",
+"1ST GRADE",
+"2ND GRADE",
+"3RD GRADE",
+"4TH GRADE",
+"5TH GRADE",
+"6TH GRADE",
+"7TH GRADE",
+"8TH GRADE",
+"9TH GRADE",
+"10TH GRADE",
+"11TH GRADE",
+"12TH GRADE",
+"1ST YR COL",
+"2ND YR COL",
+"3RD YR COL",
+"4TH YR COL",
+"5TH YR COL",
+"6TH YR COL",
+"7TH YR COL",
+"8TH YR COL OR MORE",
+"UNGRADED"))
+  data$R0898201 <- factor(data$R0898201,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,95.0),
+labels=c("NONE",
+"1ST GRADE",
+"2ND GRADE",
+"3RD GRADE",
+"4TH GRADE",
+"5TH GRADE",
+"6TH GRADE",
+"7TH GRADE",
+"8TH GRADE",
+"9TH GRADE",
+"10TH GRADE",
+"11TH GRADE",
+"12TH GRADE",
+"1ST YR COL",
+"2ND YR COL",
+"3RD YR COL",
+"4TH YR COL",
+"5TH YR COL",
+"6TH YR COL",
+"7TH YR COL",
+"8TH YR COL OR MORE",
+"UNGRADED"))
+  data$R1145001 <- factor(data$R1145001,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,95.0),
+labels=c("NONE",
+"1ST GRADE",
+"2ND GRADE",
+"3RD GRADE",
+"4TH GRADE",
+"5TH GRADE",
+"6TH GRADE",
+"7TH GRADE",
+"8TH GRADE",
+"9TH GRADE",
+"10TH GRADE",
+"11TH GRADE",
+"12TH GRADE",
+"1ST YR COL",
+"2ND YR COL",
+"3RD YR COL",
+"4TH YR COL",
+"5TH YR COL",
+"6TH YR COL",
+"7TH YR COL",
+"8TH YR COL OR MORE",
+"UNGRADED"))
+  data$R1520201 <- factor(data$R1520201,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,95.0),
+labels=c("NONE",
+"1ST GRADE",
+"2ND GRADE",
+"3RD GRADE",
+"4TH GRADE",
+"5TH GRADE",
+"6TH GRADE",
+"7TH GRADE",
+"8TH GRADE",
+"9TH GRADE",
+"10TH GRADE",
+"11TH GRADE",
+"12TH GRADE",
+"1ST YR COL",
+"2ND YR COL",
+"3RD YR COL",
+"4TH YR COL",
+"5TH YR COL",
+"6TH YR COL",
+"7TH YR COL",
+"8TH YR COL OR MORE",
+"UNGRADED"))
+  data$R1890901 <- factor(data$R1890901,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,95.0),
+labels=c("NONE",
+"1ST GRADE",
+"2ND GRADE",
+"3RD GRADE",
+"4TH GRADE",
+"5TH GRADE",
+"6TH GRADE",
+"7TH GRADE",
+"8TH GRADE",
+"9TH GRADE",
+"10TH GRADE",
+"11TH GRADE",
+"12TH GRADE",
+"1ST YR COL",
+"2ND YR COL",
+"3RD YR COL",
+"4TH YR COL",
+"5TH YR COL",
+"6TH YR COL",
+"7TH YR COL",
+"8TH YR COL OR MORE",
+"UNGRADED"))
+  data$R2258001 <- factor(data$R2258001,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,95.0),
+labels=c("NONE",
+"1ST GRADE",
+"2ND GRADE",
+"3RD GRADE",
+"4TH GRADE",
+"5TH GRADE",
+"6TH GRADE",
+"7TH GRADE",
+"8TH GRADE",
+"9TH GRADE",
+"10TH GRADE",
+"11TH GRADE",
+"12TH GRADE",
+"1ST YR COL",
+"2ND YR COL",
+"3RD YR COL",
+"4TH YR COL",
+"5TH YR COL",
+"6TH YR COL",
+"7TH YR COL",
+"8TH YR COL OR MORE",
+"UNGRADED"))
+  data$R2444900 <- factor(data$R2444900,
+levels=c(0.0,1.0),
+labels=c("NOT IN POVERTY",
+"IN POVERTY"))
+  data$R2445401 <- factor(data$R2445401,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,95.0),
+labels=c("NONE",
+"1ST GRADE",
+"2ND GRADE",
+"3RD GRADE",
+"4TH GRADE",
+"5TH GRADE",
+"6TH GRADE",
+"7TH GRADE",
+"8TH GRADE",
+"9TH GRADE",
+"10TH GRADE",
+"11TH GRADE",
+"12TH GRADE",
+"1ST YR COL",
+"2ND YR COL",
+"3RD YR COL",
+"4TH YR COL",
+"5TH YR COL",
+"6TH YR COL",
+"7TH YR COL",
+"8TH YR COL OR MORE",
+"UNGRADED"))
+  data$R2870400 <- factor(data$R2870400,
+levels=c(0.0,1.0),
+labels=c("NOT IN POVERTY",
+"IN POVERTY"))
+  data$R2871101 <- factor(data$R2871101,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,95.0),
+labels=c("NONE",
+"1ST GRADE",
+"2ND GRADE",
+"3RD GRADE",
+"4TH GRADE",
+"5TH GRADE",
+"6TH GRADE",
+"7TH GRADE",
+"8TH GRADE",
+"9TH GRADE",
+"10TH GRADE",
+"11TH GRADE",
+"12TH GRADE",
+"1ST YR COL",
+"2ND YR COL",
+"3RD YR COL",
+"4TH YR COL",
+"5TH YR COL",
+"6TH YR COL",
+"7TH YR COL",
+"8TH YR COL OR MORE",
+"UNGRADED"))
+  data$R3074100 <- factor(data$R3074100,
+levels=c(0.0,1.0),
+labels=c("NOT IN POVERTY",
+"IN POVERTY"))
+  data$R3074801 <- factor(data$R3074801,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,95.0),
+labels=c("NONE",
+"1ST GRADE",
+"2ND GRADE",
+"3RD GRADE",
+"4TH GRADE",
+"5TH GRADE",
+"6TH GRADE",
+"7TH GRADE",
+"8TH GRADE",
+"9TH GRADE",
+"10TH GRADE",
+"11TH GRADE",
+"12TH GRADE",
+"1ST YR COL",
+"2ND YR COL",
+"3RD YR COL",
+"4TH YR COL",
+"5TH YR COL",
+"6TH YR COL",
+"7TH YR COL",
+"8TH YR COL OR MORE",
+"UNGRADED"))
+  data$R3400800 <- factor(data$R3400800,
+levels=c(0.0,1.0),
+labels=c("NOT IN POVERTY",
+"IN POVERTY"))
+  data$R3401501 <- factor(data$R3401501,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,95.0),
+labels=c("NONE",
+"1ST GRADE",
+"2ND GRADE",
+"3RD GRADE",
+"4TH GRADE",
+"5TH GRADE",
+"6TH GRADE",
+"7TH GRADE",
+"8TH GRADE",
+"9TH GRADE",
+"10TH GRADE",
+"11TH GRADE",
+"12TH GRADE",
+"1ST YR COL",
+"2ND YR COL",
+"3RD YR COL",
+"4TH YR COL",
+"5TH YR COL",
+"6TH YR COL",
+"7TH YR COL",
+"8TH YR COL OR MORE",
+"UNGRADED"))
+  data$R3656200 <- factor(data$R3656200,
+levels=c(0.0,1.0),
+labels=c("NOT IN POVERTY",
+"IN POVERTY"))
+  data$R3656901 <- factor(data$R3656901,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,95.0),
+labels=c("NONE",
+"1ST GRADE",
+"2ND GRADE",
+"3RD GRADE",
+"4TH GRADE",
+"5TH GRADE",
+"6TH GRADE",
+"7TH GRADE",
+"8TH GRADE",
+"9TH GRADE",
+"10TH GRADE",
+"11TH GRADE",
+"12TH GRADE",
+"1ST YR COL",
+"2ND YR COL",
+"3RD YR COL",
+"4TH YR COL",
+"5TH YR COL",
+"6TH YR COL",
+"7TH YR COL",
+"8TH YR COL OR MORE",
+"UNGRADED"))
+  data$R4006700 <- factor(data$R4006700,
+levels=c(0.0,1.0),
+labels=c("NOT IN POVERTY",
+"IN POVERTY"))
+  data$R4007401 <- factor(data$R4007401,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,95.0),
+labels=c("NONE",
+"1ST GRADE",
+"2ND GRADE",
+"3RD GRADE",
+"4TH GRADE",
+"5TH GRADE",
+"6TH GRADE",
+"7TH GRADE",
+"8TH GRADE",
+"9TH GRADE",
+"10TH GRADE",
+"11TH GRADE",
+"12TH GRADE",
+"1ST YR COL",
+"2ND YR COL",
+"3RD YR COL",
+"4TH YR COL",
+"5TH YR COL",
+"6TH YR COL",
+"7TH YR COL",
+"8TH YR COL OR MORE",
+"UNGRADED"))
+  data$R4395800 <- factor(data$R4395800,
+levels=c(0.0,1.0),
+labels=c("NO",
+"YES"))
+  data$R4395900 <- factor(data$R4395900,
+levels=c(0.0,1.0),
+labels=c("NO",
+"YES"))
+  data$R4396000 <- factor(data$R4396000,
+levels=c(0.0,1.0),
+labels=c("NO",
+"YES"))
+  data$R4417800 <- factor(data$R4417800,
+levels=c(0.0,1.0),
+labels=c("NOT IN POVERTY",
+"IN POVERTY"))
+  data$R4418501 <- factor(data$R4418501,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,95.0),
+labels=c("NONE",
+"1ST GRADE",
+"2ND GRADE",
+"3RD GRADE",
+"4TH GRADE",
+"5TH GRADE",
+"6TH GRADE",
+"7TH GRADE",
+"8TH GRADE",
+"9TH GRADE",
+"10TH GRADE",
+"11TH GRADE",
+"12TH GRADE",
+"1ST YR COL",
+"2ND YR COL",
+"3RD YR COL",
+"4TH YR COL",
+"5TH YR COL",
+"6TH YR COL",
+"7TH YR COL",
+"8TH YR COL OR MORE",
+"UNGRADED"))
+  data$R5080800 <- factor(data$R5080800,
+levels=c(0.0,1.0),
+labels=c("0: 0  NOT IN POVERTY",
+"1: 1  IN POVERTY"))
+  data$R5103900 <- factor(data$R5103900,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,93.0,94.0,95.0),
+labels=c("NONE",
+"1ST GRADE",
+"2ND GRADE",
+"3RD GRADE",
+"4TH GRADE",
+"5TH GRADE",
+"6TH GRADE",
+"7TH GRADE",
+"8TH GRADE",
+"9TH GRADE",
+"10TH GRADE",
+"11TH GRADE",
+"12TH GRADE",
+"1ST YEAR COLLEGE",
+"2ND YEAR COLLEGE",
+"3RD YEAR COLLEGE",
+"4TH YEAR COLLEGE",
+"5TH YEAR COLLEGE",
+"6TH YEAR COLLEGE",
+"7TH YEAR COLLEGE",
+"8TH YEAR COLLEGE OR MORE",
+"PRE-KINDERGARTEN",
+"KINDERGARTEN",
+"UNGRADED"))
+  data$R5166100 <- factor(data$R5166100,
+levels=c(0.0,1.0),
+labels=c("0: NOT IN POVERTY",
+"1: IN POVERTY"))
+  data$R5166901 <- factor(data$R5166901,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,93.0,94.0,95.0),
+labels=c("NONE",
+"1ST GRADE",
+"2ND GRADE",
+"3RD GRADE",
+"4TH GRADE",
+"5TH GRADE",
+"6TH GRADE",
+"7TH GRADE",
+"8TH GRADE",
+"9TH GRADE",
+"10TH GRADE",
+"11TH GRADE",
+"12TH GRADE",
+"1ST YEAR COLLEGE",
+"2ND YEAR COLLEGE",
+"3RD YEAR COLLEGE",
+"4TH YEAR COLLEGE",
+"5TH YEAR COLLEGE",
+"6TH YEAR COLLEGE",
+"7TH YEAR COLLEGE",
+"8TH YEAR COLLEGE OR MORE",
+"PRE-KINDERGARTEN",
+"KINDERGARTEN",
+"UNGRADED"))
+  data$R6478800 <- factor(data$R6478800,
+levels=c(0.0,1.0),
+labels=c("0: 0  NOT IN POVERTY",
+"1: 1  IN POVERTY"))
+  data$R6479600 <- factor(data$R6479600,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,93.0,94.0,95.0),
+labels=c("NONE",
+"1ST GRADE",
+"2ND GRADE",
+"3RD GRADE",
+"4TH GRADE",
+"5TH GRADE",
+"6TH GRADE",
+"7TH GRADE",
+"8TH GRADE",
+"9TH GRADE",
+"10TH GRADE",
+"11TH GRADE",
+"12TH GRADE",
+"1ST YEAR COLLEGE",
+"2ND YEAR COLLEGE",
+"3RD YEAR COLLEGE",
+"4TH YEAR COLLEGE",
+"5TH YEAR COLLEGE",
+"6TH YEAR COLLEGE",
+"7TH YEAR COLLEGE",
+"8TH YEAR COLLEGE OR MORE",
+"PRE-KINDERGARTEN",
+"KINDERGARTEN",
+"UNGRADED"))
+  data$R7006600 <- factor(data$R7006600,
+levels=c(0.0,1.0),
+labels=c("0: 0  NOT IN POVERTY",
+"1: 1  IN POVERTY"))
+  data$R7007300 <- factor(data$R7007300,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,93.0,94.0,95.0),
+labels=c("NONE",
+"1ST GRADE",
+"2ND GRADE",
+"3RD GRADE",
+"4TH GRADE",
+"5TH GRADE",
+"6TH GRADE",
+"7TH GRADE",
+"8TH GRADE",
+"9TH GRADE",
+"10TH GRADE",
+"11TH GRADE",
+"12TH GRADE",
+"1ST YEAR COLLEGE",
+"2ND YEAR COLLEGE",
+"3RD YEAR COLLEGE",
+"4TH YEAR COLLEGE",
+"5TH YEAR COLLEGE",
+"6TH YEAR COLLEGE",
+"7TH YEAR COLLEGE",
+"8TH YEAR COLLEGE OR MORE",
+"PRE-KINDERGARTEN",
+"KINDERGARTEN",
+"UNGRADED"))
+  data$R7353300 <- factor(data$R7353300,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$R7353400 <- factor(data$R7353400,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$R7353500 <- factor(data$R7353500,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$R7703900 <- factor(data$R7703900,
+levels=c(0.0,1.0),
+labels=c("0: 0  NOT IN POVERTY",
+"1: 1  IN POVERTY"))
+  data$R7704600 <- factor(data$R7704600,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,93.0,94.0,95.0),
+labels=c("NONE",
+"1ST GRADE",
+"2ND GRADE",
+"3RD GRADE",
+"4TH GRADE",
+"5TH GRADE",
+"6TH GRADE",
+"7TH GRADE",
+"8TH GRADE",
+"9TH GRADE",
+"10TH GRADE",
+"11TH GRADE",
+"12TH GRADE",
+"1ST YEAR COLLEGE",
+"2ND YEAR COLLEGE",
+"3RD YEAR COLLEGE",
+"4TH YEAR COLLEGE",
+"5TH YEAR COLLEGE",
+"6TH YEAR COLLEGE",
+"7TH YEAR COLLEGE",
+"8TH YEAR COLLEGE OR MORE",
+"PRE-KINDERGARTEN",
+"KINDERGARTEN",
+"UNGRADED"))
+  data$R8047100 <- factor(data$R8047100,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$R8047200 <- factor(data$R8047200,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$R8047300 <- factor(data$R8047300,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$R8496300 <- factor(data$R8496300,
+levels=c(0.0,1.0),
+labels=c("0: 0  NOT IN POVERTY",
+"1: 1  IN POVERTY"))
+  data$R8497000 <- factor(data$R8497000,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,93.0,94.0,95.0),
+labels=c("NONE",
+"1ST GRADE",
+"2ND GRADE",
+"3RD GRADE",
+"4TH GRADE",
+"5TH GRADE",
+"6TH GRADE",
+"7TH GRADE",
+"8TH GRADE",
+"9TH GRADE",
+"10TH GRADE",
+"11TH GRADE",
+"12TH GRADE",
+"1ST YEAR COLLEGE",
+"2ND YEAR COLLEGE",
+"3RD YEAR COLLEGE",
+"4TH YEAR COLLEGE",
+"5TH YEAR COLLEGE",
+"6TH YEAR COLLEGE",
+"7TH YEAR COLLEGE",
+"8TH YEAR COLLEGE OR MORE",
+"PRE-KINDERGARTEN",
+"KINDERGARTEN",
+"UNGRADED"))
+  data$T0279100 <- factor(data$T0279100,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T0279200 <- factor(data$T0279200,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T0279300 <- factor(data$T0279300,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T0987900 <- factor(data$T0987900,
+levels=c(0.0,1.0),
+labels=c("0: 0  NOT IN POVERTY",
+"1: 1  IN POVERTY"))
+  data$T0988800 <- factor(data$T0988800,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,93.0,94.0,95.0),
+labels=c("NONE",
+"1ST GRADE",
+"2ND GRADE",
+"3RD GRADE",
+"4TH GRADE",
+"5TH GRADE",
+"6TH GRADE",
+"7TH GRADE",
+"8TH GRADE",
+"9TH GRADE",
+"10TH GRADE",
+"11TH GRADE",
+"12TH GRADE",
+"1ST YEAR COLLEGE",
+"2ND YEAR COLLEGE",
+"3RD YEAR COLLEGE",
+"4TH YEAR COLLEGE",
+"5TH YEAR COLLEGE",
+"6TH YEAR COLLEGE",
+"7TH YEAR COLLEGE",
+"8TH YEAR COLLEGE OR MORE",
+"PRE-KINDERGARTEN",
+"KINDERGARTEN",
+"UNGRADED"))
+  data$T2210100 <- factor(data$T2210100,
+levels=c(0.0,1.0),
+labels=c("0: NOT IN POVERTY",
+"1: IN POVERTY"))
+  data$T2210700 <- factor(data$T2210700,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,93.0,94.0,95.0),
+labels=c("NONE",
+"1ST GRADE",
+"2ND GRADE",
+"3RD GRADE",
+"4TH GRADE",
+"5TH GRADE",
+"6TH GRADE",
+"7TH GRADE",
+"8TH GRADE",
+"9TH GRADE",
+"10TH GRADE",
+"11TH GRADE",
+"12TH GRADE",
+"1ST YEAR COLLEGE",
+"2ND YEAR COLLEGE",
+"3RD YEAR COLLEGE",
+"4TH YEAR COLLEGE",
+"5TH YEAR COLLEGE",
+"6TH YEAR COLLEGE",
+"7TH YEAR COLLEGE",
+"8TH YEAR COLLEGE OR MORE",
+"PRE-KINDERGARTEN",
+"KINDERGARTEN",
+"UNGRADED"))
+  data$T3094500 <- factor(data$T3094500,
+levels=c(1.0,2.0),
+labels=c("First job",
+"Second job"))
+  data$T3094600 <- factor(data$T3094600,
+levels=c(1.0,2.0),
+labels=c("First job",
+"Second job"))
+  data$T3094700 <- factor(data$T3094700,
+levels=c(1.0,2.0),
+labels=c("First job",
+"Second job"))
+  data$T3108000 <- factor(data$T3108000,
+levels=c(0.0,1.0),
+labels=c("0: NOT IN POVERTY",
+"1: IN POVERTY"))
+  data$T3108600 <- factor(data$T3108600,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,93.0,94.0,95.0),
+labels=c("NONE",
+"1ST GRADE",
+"2ND GRADE",
+"3RD GRADE",
+"4TH GRADE",
+"5TH GRADE",
+"6TH GRADE",
+"7TH GRADE",
+"8TH GRADE",
+"9TH GRADE",
+"10TH GRADE",
+"11TH GRADE",
+"12TH GRADE",
+"1ST YEAR COLLEGE",
+"2ND YEAR COLLEGE",
+"3RD YEAR COLLEGE",
+"4TH YEAR COLLEGE",
+"5TH YEAR COLLEGE",
+"6TH YEAR COLLEGE",
+"7TH YEAR COLLEGE",
+"8TH YEAR COLLEGE OR MORE",
+"PRE-KINDERGARTEN",
+"KINDERGARTEN",
+"UNGRADED"))
+  data$T4093500 <- factor(data$T4093500,
+levels=c(0.0,1.0),
+labels=c("0: 0  CONDITION DOES NOT APPLY",
+"1: 1  CONDITION APPLIES"))
+  data$T4093600 <- factor(data$T4093600,
+levels=c(1.0,2.0),
+labels=c("First job",
+"Second job"))
+  data$T4093700 <- factor(data$T4093700,
+levels=c(1.0,2.0),
+labels=c("First job",
+"Second job"))
+  data$T4093800 <- factor(data$T4093800,
+levels=c(1.0,2.0),
+labels=c("First job",
+"Second job"))
+  data$T4112500 <- factor(data$T4112500,
+levels=c(0.0,1.0),
+labels=c("0: NOT IN POVERTY",
+"1: IN POVERTY"))
+  data$T4969200 <- factor(data$T4969200,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4969300 <- factor(data$T4969300,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4969400 <- factor(data$T4969400,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4969500 <- factor(data$T4969500,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4969600 <- factor(data$T4969600,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4969700 <- factor(data$T4969700,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4969800 <- factor(data$T4969800,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4969900 <- factor(data$T4969900,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4976800 <- factor(data$T4976800,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4976900 <- factor(data$T4976900,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4977000 <- factor(data$T4977000,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4977100 <- factor(data$T4977100,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4977200 <- factor(data$T4977200,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4977300 <- factor(data$T4977300,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4977400 <- factor(data$T4977400,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4977500 <- factor(data$T4977500,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4977600 <- factor(data$T4977600,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4978500 <- factor(data$T4978500,
+levels=c(0.0,1.0),
+labels=c("NO",
+"YES"))
+  data$T4978600 <- factor(data$T4978600,
+levels=c(0.0,1.0),
+labels=c("NO",
+"YES"))
+  data$T4978700 <- factor(data$T4978700,
+levels=c(0.0,1.0),
+labels=c("NO",
+"YES"))
+  data$T4978800 <- factor(data$T4978800,
+levels=c(0.0,1.0),
+labels=c("NO",
+"YES"))
+  data$T4978900 <- factor(data$T4978900,
+levels=c(0.0,1.0),
+labels=c("NO",
+"YES"))
+  data$T4979000 <- factor(data$T4979000,
+levels=c(0.0,1.0),
+labels=c("NO",
+"YES"))
+  data$T4979100 <- factor(data$T4979100,
+levels=c(0.0,1.0),
+labels=c("NO",
+"YES"))
+  data$T4979200 <- factor(data$T4979200,
+levels=c(0.0,1.0),
+labels=c("NO",
+"YES"))
+  data$T4994400 <- factor(data$T4994400,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4994500 <- factor(data$T4994500,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4994600 <- factor(data$T4994600,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4994700 <- factor(data$T4994700,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4994800 <- factor(data$T4994800,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4994900 <- factor(data$T4994900,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4995000 <- factor(data$T4995000,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4995100 <- factor(data$T4995100,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4996100 <- factor(data$T4996100,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4996200 <- factor(data$T4996200,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4996300 <- factor(data$T4996300,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4996400 <- factor(data$T4996400,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4996500 <- factor(data$T4996500,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4996600 <- factor(data$T4996600,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4996700 <- factor(data$T4996700,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4996800 <- factor(data$T4996800,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4996900 <- factor(data$T4996900,
+levels=c(0.0,1.0),
+labels=c("No",
+"Yes"))
+  data$T4998700 <- factor(data$T4998700,
+levels=c(0.0,1.0),
+labels=c("0: 0  CONDITION DOES NOT APPLY",
+"1: 1  CONDITION APPLIES"))
+  data$T4998800 <- factor(data$T4998800,
+levels=c(1.0,2.0),
+labels=c("First job",
+"Second job"))
+  data$T4998900 <- factor(data$T4998900,
+levels=c(1.0,2.0),
+labels=c("First job",
+"Second job"))
+  data$T4999000 <- factor(data$T4999000,
+levels=c(1.0,2.0),
+labels=c("First job",
+"Second job"))
+  data$T5022800 <- factor(data$T5022800,
+levels=c(0.0,1.0),
+labels=c("0: NOT IN POVERTY",
+"1: IN POVERTY"))
+  data$T5770900 <- factor(data$T5770900,
+levels=c(0.0,1.0),
+labels=c("0: NOT IN POVERTY",
+"1: IN POVERTY"))
+  data$T8218900 <- factor(data$T8218900,
+levels=c(0.0,1.0),
+labels=c("0: NOT IN POVERTY",
+"1: IN POVERTY"))
+  data$T9900000 <- factor(data$T9900000,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,93.0,94.0,95.0),
+labels=c("NONE",
+"1ST GRADE",
+"2ND GRADE",
+"3RD GRADE",
+"4TH GRADE",
+"5TH GRADE",
+"6TH GRADE",
+"7TH GRADE",
+"8TH GRADE",
+"9TH GRADE",
+"10TH GRADE",
+"11TH GRADE",
+"12TH GRADE",
+"1ST YEAR COLLEGE",
+"2ND YEAR COLLEGE",
+"3RD YEAR COLLEGE",
+"4TH YEAR COLLEGE",
+"5TH YEAR COLLEGE",
+"6TH YEAR COLLEGE",
+"7TH YEAR COLLEGE",
+"8TH YEAR COLLEGE OR MORE",
+"PRE-KINDERGARTEN",
+"KINDERGARTEN",
+"UNGRADED"))
+return(data)
+}
+
+
+# If there are values not categorized they will be represented as NA
+
+vallabels_continuous = function(data) {
+data$G0070300[1.0 <= data$G0070300 & data$G0070300 <= 999.0] <- 1.0
+data$G0070300[1000.0 <= data$G0070300 & data$G0070300 <= 1999.0] <- 1000.0
+data$G0070300[2000.0 <= data$G0070300 & data$G0070300 <= 2999.0] <- 2000.0
+data$G0070300[3000.0 <= data$G0070300 & data$G0070300 <= 3999.0] <- 3000.0
+data$G0070300[4000.0 <= data$G0070300 & data$G0070300 <= 4999.0] <- 4000.0
+data$G0070300[5000.0 <= data$G0070300 & data$G0070300 <= 5999.0] <- 5000.0
+data$G0070300[6000.0 <= data$G0070300 & data$G0070300 <= 6999.0] <- 6000.0
+data$G0070300[7000.0 <= data$G0070300 & data$G0070300 <= 7999.0] <- 7000.0
+data$G0070300[8000.0 <= data$G0070300 & data$G0070300 <= 8999.0] <- 8000.0
+data$G0070300[9000.0 <= data$G0070300 & data$G0070300 <= 9999.0] <- 9000.0
+data$G0070300[10000.0 <= data$G0070300 & data$G0070300 <= 14999.0] <- 10000.0
+data$G0070300[15000.0 <= data$G0070300 & data$G0070300 <= 19999.0] <- 15000.0
+data$G0070300[20000.0 <= data$G0070300 & data$G0070300 <= 24999.0] <- 20000.0
+data$G0070300[25000.0 <= data$G0070300 & data$G0070300 <= 49999.0] <- 25000.0
+data$G0070300[50000.0 <= data$G0070300 & data$G0070300 <= 9.9999999E7] <- 50000.0
+data$G0070300 <- factor(data$G0070300,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0078100[1.0 <= data$G0078100 & data$G0078100 <= 999.0] <- 1.0
+data$G0078100[1000.0 <= data$G0078100 & data$G0078100 <= 1999.0] <- 1000.0
+data$G0078100[2000.0 <= data$G0078100 & data$G0078100 <= 2999.0] <- 2000.0
+data$G0078100[3000.0 <= data$G0078100 & data$G0078100 <= 3999.0] <- 3000.0
+data$G0078100[4000.0 <= data$G0078100 & data$G0078100 <= 4999.0] <- 4000.0
+data$G0078100[5000.0 <= data$G0078100 & data$G0078100 <= 5999.0] <- 5000.0
+data$G0078100[6000.0 <= data$G0078100 & data$G0078100 <= 6999.0] <- 6000.0
+data$G0078100[7000.0 <= data$G0078100 & data$G0078100 <= 7999.0] <- 7000.0
+data$G0078100[8000.0 <= data$G0078100 & data$G0078100 <= 8999.0] <- 8000.0
+data$G0078100[9000.0 <= data$G0078100 & data$G0078100 <= 9999.0] <- 9000.0
+data$G0078100[10000.0 <= data$G0078100 & data$G0078100 <= 14999.0] <- 10000.0
+data$G0078100[15000.0 <= data$G0078100 & data$G0078100 <= 19999.0] <- 15000.0
+data$G0078100[20000.0 <= data$G0078100 & data$G0078100 <= 24999.0] <- 20000.0
+data$G0078100[25000.0 <= data$G0078100 & data$G0078100 <= 49999.0] <- 25000.0
+data$G0078100[50000.0 <= data$G0078100 & data$G0078100 <= 9.9999999E7] <- 50000.0
+data$G0078100 <- factor(data$G0078100,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0085900[1.0 <= data$G0085900 & data$G0085900 <= 999.0] <- 1.0
+data$G0085900[1000.0 <= data$G0085900 & data$G0085900 <= 1999.0] <- 1000.0
+data$G0085900[2000.0 <= data$G0085900 & data$G0085900 <= 2999.0] <- 2000.0
+data$G0085900[3000.0 <= data$G0085900 & data$G0085900 <= 3999.0] <- 3000.0
+data$G0085900[4000.0 <= data$G0085900 & data$G0085900 <= 4999.0] <- 4000.0
+data$G0085900[5000.0 <= data$G0085900 & data$G0085900 <= 5999.0] <- 5000.0
+data$G0085900[6000.0 <= data$G0085900 & data$G0085900 <= 6999.0] <- 6000.0
+data$G0085900[7000.0 <= data$G0085900 & data$G0085900 <= 7999.0] <- 7000.0
+data$G0085900[8000.0 <= data$G0085900 & data$G0085900 <= 8999.0] <- 8000.0
+data$G0085900[9000.0 <= data$G0085900 & data$G0085900 <= 9999.0] <- 9000.0
+data$G0085900[10000.0 <= data$G0085900 & data$G0085900 <= 14999.0] <- 10000.0
+data$G0085900[15000.0 <= data$G0085900 & data$G0085900 <= 19999.0] <- 15000.0
+data$G0085900[20000.0 <= data$G0085900 & data$G0085900 <= 24999.0] <- 20000.0
+data$G0085900[25000.0 <= data$G0085900 & data$G0085900 <= 49999.0] <- 25000.0
+data$G0085900[50000.0 <= data$G0085900 & data$G0085900 <= 9.9999999E7] <- 50000.0
+data$G0085900 <- factor(data$G0085900,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0093700[1.0 <= data$G0093700 & data$G0093700 <= 999.0] <- 1.0
+data$G0093700[1000.0 <= data$G0093700 & data$G0093700 <= 1999.0] <- 1000.0
+data$G0093700[2000.0 <= data$G0093700 & data$G0093700 <= 2999.0] <- 2000.0
+data$G0093700[3000.0 <= data$G0093700 & data$G0093700 <= 3999.0] <- 3000.0
+data$G0093700[4000.0 <= data$G0093700 & data$G0093700 <= 4999.0] <- 4000.0
+data$G0093700[5000.0 <= data$G0093700 & data$G0093700 <= 5999.0] <- 5000.0
+data$G0093700[6000.0 <= data$G0093700 & data$G0093700 <= 6999.0] <- 6000.0
+data$G0093700[7000.0 <= data$G0093700 & data$G0093700 <= 7999.0] <- 7000.0
+data$G0093700[8000.0 <= data$G0093700 & data$G0093700 <= 8999.0] <- 8000.0
+data$G0093700[9000.0 <= data$G0093700 & data$G0093700 <= 9999.0] <- 9000.0
+data$G0093700[10000.0 <= data$G0093700 & data$G0093700 <= 14999.0] <- 10000.0
+data$G0093700[15000.0 <= data$G0093700 & data$G0093700 <= 19999.0] <- 15000.0
+data$G0093700[20000.0 <= data$G0093700 & data$G0093700 <= 24999.0] <- 20000.0
+data$G0093700[25000.0 <= data$G0093700 & data$G0093700 <= 49999.0] <- 25000.0
+data$G0093700[50000.0 <= data$G0093700 & data$G0093700 <= 9.9999999E7] <- 50000.0
+data$G0093700 <- factor(data$G0093700,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0101500[1.0 <= data$G0101500 & data$G0101500 <= 999.0] <- 1.0
+data$G0101500[1000.0 <= data$G0101500 & data$G0101500 <= 1999.0] <- 1000.0
+data$G0101500[2000.0 <= data$G0101500 & data$G0101500 <= 2999.0] <- 2000.0
+data$G0101500[3000.0 <= data$G0101500 & data$G0101500 <= 3999.0] <- 3000.0
+data$G0101500[4000.0 <= data$G0101500 & data$G0101500 <= 4999.0] <- 4000.0
+data$G0101500[5000.0 <= data$G0101500 & data$G0101500 <= 5999.0] <- 5000.0
+data$G0101500[6000.0 <= data$G0101500 & data$G0101500 <= 6999.0] <- 6000.0
+data$G0101500[7000.0 <= data$G0101500 & data$G0101500 <= 7999.0] <- 7000.0
+data$G0101500[8000.0 <= data$G0101500 & data$G0101500 <= 8999.0] <- 8000.0
+data$G0101500[9000.0 <= data$G0101500 & data$G0101500 <= 9999.0] <- 9000.0
+data$G0101500[10000.0 <= data$G0101500 & data$G0101500 <= 14999.0] <- 10000.0
+data$G0101500[15000.0 <= data$G0101500 & data$G0101500 <= 19999.0] <- 15000.0
+data$G0101500[20000.0 <= data$G0101500 & data$G0101500 <= 24999.0] <- 20000.0
+data$G0101500[25000.0 <= data$G0101500 & data$G0101500 <= 49999.0] <- 25000.0
+data$G0101500[50000.0 <= data$G0101500 & data$G0101500 <= 9.9999999E7] <- 50000.0
+data$G0101500 <- factor(data$G0101500,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0109300[1.0 <= data$G0109300 & data$G0109300 <= 999.0] <- 1.0
+data$G0109300[1000.0 <= data$G0109300 & data$G0109300 <= 1999.0] <- 1000.0
+data$G0109300[2000.0 <= data$G0109300 & data$G0109300 <= 2999.0] <- 2000.0
+data$G0109300[3000.0 <= data$G0109300 & data$G0109300 <= 3999.0] <- 3000.0
+data$G0109300[4000.0 <= data$G0109300 & data$G0109300 <= 4999.0] <- 4000.0
+data$G0109300[5000.0 <= data$G0109300 & data$G0109300 <= 5999.0] <- 5000.0
+data$G0109300[6000.0 <= data$G0109300 & data$G0109300 <= 6999.0] <- 6000.0
+data$G0109300[7000.0 <= data$G0109300 & data$G0109300 <= 7999.0] <- 7000.0
+data$G0109300[8000.0 <= data$G0109300 & data$G0109300 <= 8999.0] <- 8000.0
+data$G0109300[9000.0 <= data$G0109300 & data$G0109300 <= 9999.0] <- 9000.0
+data$G0109300[10000.0 <= data$G0109300 & data$G0109300 <= 14999.0] <- 10000.0
+data$G0109300[15000.0 <= data$G0109300 & data$G0109300 <= 19999.0] <- 15000.0
+data$G0109300[20000.0 <= data$G0109300 & data$G0109300 <= 24999.0] <- 20000.0
+data$G0109300[25000.0 <= data$G0109300 & data$G0109300 <= 49999.0] <- 25000.0
+data$G0109300[50000.0 <= data$G0109300 & data$G0109300 <= 9.9999999E7] <- 50000.0
+data$G0109300 <- factor(data$G0109300,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0117100[1.0 <= data$G0117100 & data$G0117100 <= 999.0] <- 1.0
+data$G0117100[1000.0 <= data$G0117100 & data$G0117100 <= 1999.0] <- 1000.0
+data$G0117100[2000.0 <= data$G0117100 & data$G0117100 <= 2999.0] <- 2000.0
+data$G0117100[3000.0 <= data$G0117100 & data$G0117100 <= 3999.0] <- 3000.0
+data$G0117100[4000.0 <= data$G0117100 & data$G0117100 <= 4999.0] <- 4000.0
+data$G0117100[5000.0 <= data$G0117100 & data$G0117100 <= 5999.0] <- 5000.0
+data$G0117100[6000.0 <= data$G0117100 & data$G0117100 <= 6999.0] <- 6000.0
+data$G0117100[7000.0 <= data$G0117100 & data$G0117100 <= 7999.0] <- 7000.0
+data$G0117100[8000.0 <= data$G0117100 & data$G0117100 <= 8999.0] <- 8000.0
+data$G0117100[9000.0 <= data$G0117100 & data$G0117100 <= 9999.0] <- 9000.0
+data$G0117100[10000.0 <= data$G0117100 & data$G0117100 <= 14999.0] <- 10000.0
+data$G0117100[15000.0 <= data$G0117100 & data$G0117100 <= 19999.0] <- 15000.0
+data$G0117100[20000.0 <= data$G0117100 & data$G0117100 <= 24999.0] <- 20000.0
+data$G0117100[25000.0 <= data$G0117100 & data$G0117100 <= 49999.0] <- 25000.0
+data$G0117100[50000.0 <= data$G0117100 & data$G0117100 <= 9.9999999E7] <- 50000.0
+data$G0117100 <- factor(data$G0117100,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0131400[1.0 <= data$G0131400 & data$G0131400 <= 999.0] <- 1.0
+data$G0131400[1000.0 <= data$G0131400 & data$G0131400 <= 1999.0] <- 1000.0
+data$G0131400[2000.0 <= data$G0131400 & data$G0131400 <= 2999.0] <- 2000.0
+data$G0131400[3000.0 <= data$G0131400 & data$G0131400 <= 3999.0] <- 3000.0
+data$G0131400[4000.0 <= data$G0131400 & data$G0131400 <= 4999.0] <- 4000.0
+data$G0131400[5000.0 <= data$G0131400 & data$G0131400 <= 5999.0] <- 5000.0
+data$G0131400[6000.0 <= data$G0131400 & data$G0131400 <= 6999.0] <- 6000.0
+data$G0131400[7000.0 <= data$G0131400 & data$G0131400 <= 7999.0] <- 7000.0
+data$G0131400[8000.0 <= data$G0131400 & data$G0131400 <= 8999.0] <- 8000.0
+data$G0131400[9000.0 <= data$G0131400 & data$G0131400 <= 9999.0] <- 9000.0
+data$G0131400[10000.0 <= data$G0131400 & data$G0131400 <= 14999.0] <- 10000.0
+data$G0131400[15000.0 <= data$G0131400 & data$G0131400 <= 19999.0] <- 15000.0
+data$G0131400[20000.0 <= data$G0131400 & data$G0131400 <= 24999.0] <- 20000.0
+data$G0131400[25000.0 <= data$G0131400 & data$G0131400 <= 49999.0] <- 25000.0
+data$G0131400[50000.0 <= data$G0131400 & data$G0131400 <= 9.9999999E7] <- 50000.0
+data$G0131400 <- factor(data$G0131400,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0132700[1.0 <= data$G0132700 & data$G0132700 <= 999.0] <- 1.0
+data$G0132700[1000.0 <= data$G0132700 & data$G0132700 <= 1999.0] <- 1000.0
+data$G0132700[2000.0 <= data$G0132700 & data$G0132700 <= 2999.0] <- 2000.0
+data$G0132700[3000.0 <= data$G0132700 & data$G0132700 <= 3999.0] <- 3000.0
+data$G0132700[4000.0 <= data$G0132700 & data$G0132700 <= 4999.0] <- 4000.0
+data$G0132700[5000.0 <= data$G0132700 & data$G0132700 <= 5999.0] <- 5000.0
+data$G0132700[6000.0 <= data$G0132700 & data$G0132700 <= 6999.0] <- 6000.0
+data$G0132700[7000.0 <= data$G0132700 & data$G0132700 <= 7999.0] <- 7000.0
+data$G0132700[8000.0 <= data$G0132700 & data$G0132700 <= 8999.0] <- 8000.0
+data$G0132700[9000.0 <= data$G0132700 & data$G0132700 <= 9999.0] <- 9000.0
+data$G0132700[10000.0 <= data$G0132700 & data$G0132700 <= 14999.0] <- 10000.0
+data$G0132700[15000.0 <= data$G0132700 & data$G0132700 <= 19999.0] <- 15000.0
+data$G0132700[20000.0 <= data$G0132700 & data$G0132700 <= 24999.0] <- 20000.0
+data$G0132700[25000.0 <= data$G0132700 & data$G0132700 <= 49999.0] <- 25000.0
+data$G0132700[50000.0 <= data$G0132700 & data$G0132700 <= 9.9999999E7] <- 50000.0
+data$G0132700 <- factor(data$G0132700,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0148200[1.0 <= data$G0148200 & data$G0148200 <= 999.0] <- 1.0
+data$G0148200[1000.0 <= data$G0148200 & data$G0148200 <= 1999.0] <- 1000.0
+data$G0148200[2000.0 <= data$G0148200 & data$G0148200 <= 2999.0] <- 2000.0
+data$G0148200[3000.0 <= data$G0148200 & data$G0148200 <= 3999.0] <- 3000.0
+data$G0148200[4000.0 <= data$G0148200 & data$G0148200 <= 4999.0] <- 4000.0
+data$G0148200[5000.0 <= data$G0148200 & data$G0148200 <= 5999.0] <- 5000.0
+data$G0148200[6000.0 <= data$G0148200 & data$G0148200 <= 6999.0] <- 6000.0
+data$G0148200[7000.0 <= data$G0148200 & data$G0148200 <= 7999.0] <- 7000.0
+data$G0148200[8000.0 <= data$G0148200 & data$G0148200 <= 8999.0] <- 8000.0
+data$G0148200[9000.0 <= data$G0148200 & data$G0148200 <= 9999.0] <- 9000.0
+data$G0148200[10000.0 <= data$G0148200 & data$G0148200 <= 14999.0] <- 10000.0
+data$G0148200[15000.0 <= data$G0148200 & data$G0148200 <= 19999.0] <- 15000.0
+data$G0148200[20000.0 <= data$G0148200 & data$G0148200 <= 24999.0] <- 20000.0
+data$G0148200[25000.0 <= data$G0148200 & data$G0148200 <= 49999.0] <- 25000.0
+data$G0148200[50000.0 <= data$G0148200 & data$G0148200 <= 9.9999999E7] <- 50000.0
+data$G0148200 <- factor(data$G0148200,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0148300[1.0 <= data$G0148300 & data$G0148300 <= 999.0] <- 1.0
+data$G0148300[1000.0 <= data$G0148300 & data$G0148300 <= 1999.0] <- 1000.0
+data$G0148300[2000.0 <= data$G0148300 & data$G0148300 <= 2999.0] <- 2000.0
+data$G0148300[3000.0 <= data$G0148300 & data$G0148300 <= 3999.0] <- 3000.0
+data$G0148300[4000.0 <= data$G0148300 & data$G0148300 <= 4999.0] <- 4000.0
+data$G0148300[5000.0 <= data$G0148300 & data$G0148300 <= 5999.0] <- 5000.0
+data$G0148300[6000.0 <= data$G0148300 & data$G0148300 <= 6999.0] <- 6000.0
+data$G0148300[7000.0 <= data$G0148300 & data$G0148300 <= 7999.0] <- 7000.0
+data$G0148300[8000.0 <= data$G0148300 & data$G0148300 <= 8999.0] <- 8000.0
+data$G0148300[9000.0 <= data$G0148300 & data$G0148300 <= 9999.0] <- 9000.0
+data$G0148300[10000.0 <= data$G0148300 & data$G0148300 <= 14999.0] <- 10000.0
+data$G0148300[15000.0 <= data$G0148300 & data$G0148300 <= 19999.0] <- 15000.0
+data$G0148300[20000.0 <= data$G0148300 & data$G0148300 <= 24999.0] <- 20000.0
+data$G0148300[25000.0 <= data$G0148300 & data$G0148300 <= 49999.0] <- 25000.0
+data$G0148300[50000.0 <= data$G0148300 & data$G0148300 <= 9.9999999E7] <- 50000.0
+data$G0148300 <- factor(data$G0148300,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0163800[1.0 <= data$G0163800 & data$G0163800 <= 999.0] <- 1.0
+data$G0163800[1000.0 <= data$G0163800 & data$G0163800 <= 1999.0] <- 1000.0
+data$G0163800[2000.0 <= data$G0163800 & data$G0163800 <= 2999.0] <- 2000.0
+data$G0163800[3000.0 <= data$G0163800 & data$G0163800 <= 3999.0] <- 3000.0
+data$G0163800[4000.0 <= data$G0163800 & data$G0163800 <= 4999.0] <- 4000.0
+data$G0163800[5000.0 <= data$G0163800 & data$G0163800 <= 5999.0] <- 5000.0
+data$G0163800[6000.0 <= data$G0163800 & data$G0163800 <= 6999.0] <- 6000.0
+data$G0163800[7000.0 <= data$G0163800 & data$G0163800 <= 7999.0] <- 7000.0
+data$G0163800[8000.0 <= data$G0163800 & data$G0163800 <= 8999.0] <- 8000.0
+data$G0163800[9000.0 <= data$G0163800 & data$G0163800 <= 9999.0] <- 9000.0
+data$G0163800[10000.0 <= data$G0163800 & data$G0163800 <= 14999.0] <- 10000.0
+data$G0163800[15000.0 <= data$G0163800 & data$G0163800 <= 19999.0] <- 15000.0
+data$G0163800[20000.0 <= data$G0163800 & data$G0163800 <= 24999.0] <- 20000.0
+data$G0163800[25000.0 <= data$G0163800 & data$G0163800 <= 49999.0] <- 25000.0
+data$G0163800[50000.0 <= data$G0163800 & data$G0163800 <= 9.9999999E7] <- 50000.0
+data$G0163800 <- factor(data$G0163800,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0163900[1.0 <= data$G0163900 & data$G0163900 <= 999.0] <- 1.0
+data$G0163900[1000.0 <= data$G0163900 & data$G0163900 <= 1999.0] <- 1000.0
+data$G0163900[2000.0 <= data$G0163900 & data$G0163900 <= 2999.0] <- 2000.0
+data$G0163900[3000.0 <= data$G0163900 & data$G0163900 <= 3999.0] <- 3000.0
+data$G0163900[4000.0 <= data$G0163900 & data$G0163900 <= 4999.0] <- 4000.0
+data$G0163900[5000.0 <= data$G0163900 & data$G0163900 <= 5999.0] <- 5000.0
+data$G0163900[6000.0 <= data$G0163900 & data$G0163900 <= 6999.0] <- 6000.0
+data$G0163900[7000.0 <= data$G0163900 & data$G0163900 <= 7999.0] <- 7000.0
+data$G0163900[8000.0 <= data$G0163900 & data$G0163900 <= 8999.0] <- 8000.0
+data$G0163900[9000.0 <= data$G0163900 & data$G0163900 <= 9999.0] <- 9000.0
+data$G0163900[10000.0 <= data$G0163900 & data$G0163900 <= 14999.0] <- 10000.0
+data$G0163900[15000.0 <= data$G0163900 & data$G0163900 <= 19999.0] <- 15000.0
+data$G0163900[20000.0 <= data$G0163900 & data$G0163900 <= 24999.0] <- 20000.0
+data$G0163900[25000.0 <= data$G0163900 & data$G0163900 <= 49999.0] <- 25000.0
+data$G0163900[50000.0 <= data$G0163900 & data$G0163900 <= 9.9999999E7] <- 50000.0
+data$G0163900 <- factor(data$G0163900,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0179400[1.0 <= data$G0179400 & data$G0179400 <= 999.0] <- 1.0
+data$G0179400[1000.0 <= data$G0179400 & data$G0179400 <= 1999.0] <- 1000.0
+data$G0179400[2000.0 <= data$G0179400 & data$G0179400 <= 2999.0] <- 2000.0
+data$G0179400[3000.0 <= data$G0179400 & data$G0179400 <= 3999.0] <- 3000.0
+data$G0179400[4000.0 <= data$G0179400 & data$G0179400 <= 4999.0] <- 4000.0
+data$G0179400[5000.0 <= data$G0179400 & data$G0179400 <= 5999.0] <- 5000.0
+data$G0179400[6000.0 <= data$G0179400 & data$G0179400 <= 6999.0] <- 6000.0
+data$G0179400[7000.0 <= data$G0179400 & data$G0179400 <= 7999.0] <- 7000.0
+data$G0179400[8000.0 <= data$G0179400 & data$G0179400 <= 8999.0] <- 8000.0
+data$G0179400[9000.0 <= data$G0179400 & data$G0179400 <= 9999.0] <- 9000.0
+data$G0179400[10000.0 <= data$G0179400 & data$G0179400 <= 14999.0] <- 10000.0
+data$G0179400[15000.0 <= data$G0179400 & data$G0179400 <= 19999.0] <- 15000.0
+data$G0179400[20000.0 <= data$G0179400 & data$G0179400 <= 24999.0] <- 20000.0
+data$G0179400[25000.0 <= data$G0179400 & data$G0179400 <= 49999.0] <- 25000.0
+data$G0179400[50000.0 <= data$G0179400 & data$G0179400 <= 9.9999999E7] <- 50000.0
+data$G0179400 <- factor(data$G0179400,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0179500[1.0 <= data$G0179500 & data$G0179500 <= 999.0] <- 1.0
+data$G0179500[1000.0 <= data$G0179500 & data$G0179500 <= 1999.0] <- 1000.0
+data$G0179500[2000.0 <= data$G0179500 & data$G0179500 <= 2999.0] <- 2000.0
+data$G0179500[3000.0 <= data$G0179500 & data$G0179500 <= 3999.0] <- 3000.0
+data$G0179500[4000.0 <= data$G0179500 & data$G0179500 <= 4999.0] <- 4000.0
+data$G0179500[5000.0 <= data$G0179500 & data$G0179500 <= 5999.0] <- 5000.0
+data$G0179500[6000.0 <= data$G0179500 & data$G0179500 <= 6999.0] <- 6000.0
+data$G0179500[7000.0 <= data$G0179500 & data$G0179500 <= 7999.0] <- 7000.0
+data$G0179500[8000.0 <= data$G0179500 & data$G0179500 <= 8999.0] <- 8000.0
+data$G0179500[9000.0 <= data$G0179500 & data$G0179500 <= 9999.0] <- 9000.0
+data$G0179500[10000.0 <= data$G0179500 & data$G0179500 <= 14999.0] <- 10000.0
+data$G0179500[15000.0 <= data$G0179500 & data$G0179500 <= 19999.0] <- 15000.0
+data$G0179500[20000.0 <= data$G0179500 & data$G0179500 <= 24999.0] <- 20000.0
+data$G0179500[25000.0 <= data$G0179500 & data$G0179500 <= 49999.0] <- 25000.0
+data$G0179500[50000.0 <= data$G0179500 & data$G0179500 <= 9.9999999E7] <- 50000.0
+data$G0179500 <- factor(data$G0179500,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0195000[1.0 <= data$G0195000 & data$G0195000 <= 999.0] <- 1.0
+data$G0195000[1000.0 <= data$G0195000 & data$G0195000 <= 1999.0] <- 1000.0
+data$G0195000[2000.0 <= data$G0195000 & data$G0195000 <= 2999.0] <- 2000.0
+data$G0195000[3000.0 <= data$G0195000 & data$G0195000 <= 3999.0] <- 3000.0
+data$G0195000[4000.0 <= data$G0195000 & data$G0195000 <= 4999.0] <- 4000.0
+data$G0195000[5000.0 <= data$G0195000 & data$G0195000 <= 5999.0] <- 5000.0
+data$G0195000[6000.0 <= data$G0195000 & data$G0195000 <= 6999.0] <- 6000.0
+data$G0195000[7000.0 <= data$G0195000 & data$G0195000 <= 7999.0] <- 7000.0
+data$G0195000[8000.0 <= data$G0195000 & data$G0195000 <= 8999.0] <- 8000.0
+data$G0195000[9000.0 <= data$G0195000 & data$G0195000 <= 9999.0] <- 9000.0
+data$G0195000[10000.0 <= data$G0195000 & data$G0195000 <= 14999.0] <- 10000.0
+data$G0195000[15000.0 <= data$G0195000 & data$G0195000 <= 19999.0] <- 15000.0
+data$G0195000[20000.0 <= data$G0195000 & data$G0195000 <= 24999.0] <- 20000.0
+data$G0195000[25000.0 <= data$G0195000 & data$G0195000 <= 49999.0] <- 25000.0
+data$G0195000[50000.0 <= data$G0195000 & data$G0195000 <= 9.9999999E7] <- 50000.0
+data$G0195000 <- factor(data$G0195000,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0195100[1.0 <= data$G0195100 & data$G0195100 <= 999.0] <- 1.0
+data$G0195100[1000.0 <= data$G0195100 & data$G0195100 <= 1999.0] <- 1000.0
+data$G0195100[2000.0 <= data$G0195100 & data$G0195100 <= 2999.0] <- 2000.0
+data$G0195100[3000.0 <= data$G0195100 & data$G0195100 <= 3999.0] <- 3000.0
+data$G0195100[4000.0 <= data$G0195100 & data$G0195100 <= 4999.0] <- 4000.0
+data$G0195100[5000.0 <= data$G0195100 & data$G0195100 <= 5999.0] <- 5000.0
+data$G0195100[6000.0 <= data$G0195100 & data$G0195100 <= 6999.0] <- 6000.0
+data$G0195100[7000.0 <= data$G0195100 & data$G0195100 <= 7999.0] <- 7000.0
+data$G0195100[8000.0 <= data$G0195100 & data$G0195100 <= 8999.0] <- 8000.0
+data$G0195100[9000.0 <= data$G0195100 & data$G0195100 <= 9999.0] <- 9000.0
+data$G0195100[10000.0 <= data$G0195100 & data$G0195100 <= 14999.0] <- 10000.0
+data$G0195100[15000.0 <= data$G0195100 & data$G0195100 <= 19999.0] <- 15000.0
+data$G0195100[20000.0 <= data$G0195100 & data$G0195100 <= 24999.0] <- 20000.0
+data$G0195100[25000.0 <= data$G0195100 & data$G0195100 <= 49999.0] <- 25000.0
+data$G0195100[50000.0 <= data$G0195100 & data$G0195100 <= 9.9999999E7] <- 50000.0
+data$G0195100 <- factor(data$G0195100,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0210600[1.0 <= data$G0210600 & data$G0210600 <= 999.0] <- 1.0
+data$G0210600[1000.0 <= data$G0210600 & data$G0210600 <= 1999.0] <- 1000.0
+data$G0210600[2000.0 <= data$G0210600 & data$G0210600 <= 2999.0] <- 2000.0
+data$G0210600[3000.0 <= data$G0210600 & data$G0210600 <= 3999.0] <- 3000.0
+data$G0210600[4000.0 <= data$G0210600 & data$G0210600 <= 4999.0] <- 4000.0
+data$G0210600[5000.0 <= data$G0210600 & data$G0210600 <= 5999.0] <- 5000.0
+data$G0210600[6000.0 <= data$G0210600 & data$G0210600 <= 6999.0] <- 6000.0
+data$G0210600[7000.0 <= data$G0210600 & data$G0210600 <= 7999.0] <- 7000.0
+data$G0210600[8000.0 <= data$G0210600 & data$G0210600 <= 8999.0] <- 8000.0
+data$G0210600[9000.0 <= data$G0210600 & data$G0210600 <= 9999.0] <- 9000.0
+data$G0210600[10000.0 <= data$G0210600 & data$G0210600 <= 14999.0] <- 10000.0
+data$G0210600[15000.0 <= data$G0210600 & data$G0210600 <= 19999.0] <- 15000.0
+data$G0210600[20000.0 <= data$G0210600 & data$G0210600 <= 24999.0] <- 20000.0
+data$G0210600[25000.0 <= data$G0210600 & data$G0210600 <= 49999.0] <- 25000.0
+data$G0210600[50000.0 <= data$G0210600 & data$G0210600 <= 9.9999999E7] <- 50000.0
+data$G0210600 <- factor(data$G0210600,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0210700[1.0 <= data$G0210700 & data$G0210700 <= 999.0] <- 1.0
+data$G0210700[1000.0 <= data$G0210700 & data$G0210700 <= 1999.0] <- 1000.0
+data$G0210700[2000.0 <= data$G0210700 & data$G0210700 <= 2999.0] <- 2000.0
+data$G0210700[3000.0 <= data$G0210700 & data$G0210700 <= 3999.0] <- 3000.0
+data$G0210700[4000.0 <= data$G0210700 & data$G0210700 <= 4999.0] <- 4000.0
+data$G0210700[5000.0 <= data$G0210700 & data$G0210700 <= 5999.0] <- 5000.0
+data$G0210700[6000.0 <= data$G0210700 & data$G0210700 <= 6999.0] <- 6000.0
+data$G0210700[7000.0 <= data$G0210700 & data$G0210700 <= 7999.0] <- 7000.0
+data$G0210700[8000.0 <= data$G0210700 & data$G0210700 <= 8999.0] <- 8000.0
+data$G0210700[9000.0 <= data$G0210700 & data$G0210700 <= 9999.0] <- 9000.0
+data$G0210700[10000.0 <= data$G0210700 & data$G0210700 <= 14999.0] <- 10000.0
+data$G0210700[15000.0 <= data$G0210700 & data$G0210700 <= 19999.0] <- 15000.0
+data$G0210700[20000.0 <= data$G0210700 & data$G0210700 <= 24999.0] <- 20000.0
+data$G0210700[25000.0 <= data$G0210700 & data$G0210700 <= 49999.0] <- 25000.0
+data$G0210700[50000.0 <= data$G0210700 & data$G0210700 <= 9.9999999E7] <- 50000.0
+data$G0210700 <- factor(data$G0210700,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0226300[1.0 <= data$G0226300 & data$G0226300 <= 999.0] <- 1.0
+data$G0226300[1000.0 <= data$G0226300 & data$G0226300 <= 1999.0] <- 1000.0
+data$G0226300[2000.0 <= data$G0226300 & data$G0226300 <= 2999.0] <- 2000.0
+data$G0226300[3000.0 <= data$G0226300 & data$G0226300 <= 3999.0] <- 3000.0
+data$G0226300[4000.0 <= data$G0226300 & data$G0226300 <= 4999.0] <- 4000.0
+data$G0226300[5000.0 <= data$G0226300 & data$G0226300 <= 5999.0] <- 5000.0
+data$G0226300[6000.0 <= data$G0226300 & data$G0226300 <= 6999.0] <- 6000.0
+data$G0226300[7000.0 <= data$G0226300 & data$G0226300 <= 7999.0] <- 7000.0
+data$G0226300[8000.0 <= data$G0226300 & data$G0226300 <= 8999.0] <- 8000.0
+data$G0226300[9000.0 <= data$G0226300 & data$G0226300 <= 9999.0] <- 9000.0
+data$G0226300[10000.0 <= data$G0226300 & data$G0226300 <= 14999.0] <- 10000.0
+data$G0226300[15000.0 <= data$G0226300 & data$G0226300 <= 19999.0] <- 15000.0
+data$G0226300[20000.0 <= data$G0226300 & data$G0226300 <= 24999.0] <- 20000.0
+data$G0226300[25000.0 <= data$G0226300 & data$G0226300 <= 49999.0] <- 25000.0
+data$G0226300[50000.0 <= data$G0226300 & data$G0226300 <= 9.9999999E7] <- 50000.0
+data$G0226300 <- factor(data$G0226300,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0226400[1.0 <= data$G0226400 & data$G0226400 <= 999.0] <- 1.0
+data$G0226400[1000.0 <= data$G0226400 & data$G0226400 <= 1999.0] <- 1000.0
+data$G0226400[2000.0 <= data$G0226400 & data$G0226400 <= 2999.0] <- 2000.0
+data$G0226400[3000.0 <= data$G0226400 & data$G0226400 <= 3999.0] <- 3000.0
+data$G0226400[4000.0 <= data$G0226400 & data$G0226400 <= 4999.0] <- 4000.0
+data$G0226400[5000.0 <= data$G0226400 & data$G0226400 <= 5999.0] <- 5000.0
+data$G0226400[6000.0 <= data$G0226400 & data$G0226400 <= 6999.0] <- 6000.0
+data$G0226400[7000.0 <= data$G0226400 & data$G0226400 <= 7999.0] <- 7000.0
+data$G0226400[8000.0 <= data$G0226400 & data$G0226400 <= 8999.0] <- 8000.0
+data$G0226400[9000.0 <= data$G0226400 & data$G0226400 <= 9999.0] <- 9000.0
+data$G0226400[10000.0 <= data$G0226400 & data$G0226400 <= 14999.0] <- 10000.0
+data$G0226400[15000.0 <= data$G0226400 & data$G0226400 <= 19999.0] <- 15000.0
+data$G0226400[20000.0 <= data$G0226400 & data$G0226400 <= 24999.0] <- 20000.0
+data$G0226400[25000.0 <= data$G0226400 & data$G0226400 <= 49999.0] <- 25000.0
+data$G0226400[50000.0 <= data$G0226400 & data$G0226400 <= 9.9999999E7] <- 50000.0
+data$G0226400 <- factor(data$G0226400,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0228100[1.0 <= data$G0228100 & data$G0228100 <= 999.0] <- 1.0
+data$G0228100[1000.0 <= data$G0228100 & data$G0228100 <= 1999.0] <- 1000.0
+data$G0228100[2000.0 <= data$G0228100 & data$G0228100 <= 2999.0] <- 2000.0
+data$G0228100[3000.0 <= data$G0228100 & data$G0228100 <= 3999.0] <- 3000.0
+data$G0228100[4000.0 <= data$G0228100 & data$G0228100 <= 4999.0] <- 4000.0
+data$G0228100[5000.0 <= data$G0228100 & data$G0228100 <= 5999.0] <- 5000.0
+data$G0228100[6000.0 <= data$G0228100 & data$G0228100 <= 6999.0] <- 6000.0
+data$G0228100[7000.0 <= data$G0228100 & data$G0228100 <= 7999.0] <- 7000.0
+data$G0228100[8000.0 <= data$G0228100 & data$G0228100 <= 8999.0] <- 8000.0
+data$G0228100[9000.0 <= data$G0228100 & data$G0228100 <= 9999.0] <- 9000.0
+data$G0228100[10000.0 <= data$G0228100 & data$G0228100 <= 14999.0] <- 10000.0
+data$G0228100[15000.0 <= data$G0228100 & data$G0228100 <= 19999.0] <- 15000.0
+data$G0228100[20000.0 <= data$G0228100 & data$G0228100 <= 24999.0] <- 20000.0
+data$G0228100[25000.0 <= data$G0228100 & data$G0228100 <= 49999.0] <- 25000.0
+data$G0228100[50000.0 <= data$G0228100 & data$G0228100 <= 9.9999999E7] <- 50000.0
+data$G0228100 <- factor(data$G0228100,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0241600[1.0 <= data$G0241600 & data$G0241600 <= 999.0] <- 1.0
+data$G0241600[1000.0 <= data$G0241600 & data$G0241600 <= 1999.0] <- 1000.0
+data$G0241600[2000.0 <= data$G0241600 & data$G0241600 <= 2999.0] <- 2000.0
+data$G0241600[3000.0 <= data$G0241600 & data$G0241600 <= 3999.0] <- 3000.0
+data$G0241600[4000.0 <= data$G0241600 & data$G0241600 <= 4999.0] <- 4000.0
+data$G0241600[5000.0 <= data$G0241600 & data$G0241600 <= 5999.0] <- 5000.0
+data$G0241600[6000.0 <= data$G0241600 & data$G0241600 <= 6999.0] <- 6000.0
+data$G0241600[7000.0 <= data$G0241600 & data$G0241600 <= 7999.0] <- 7000.0
+data$G0241600[8000.0 <= data$G0241600 & data$G0241600 <= 8999.0] <- 8000.0
+data$G0241600[9000.0 <= data$G0241600 & data$G0241600 <= 9999.0] <- 9000.0
+data$G0241600[10000.0 <= data$G0241600 & data$G0241600 <= 14999.0] <- 10000.0
+data$G0241600[15000.0 <= data$G0241600 & data$G0241600 <= 19999.0] <- 15000.0
+data$G0241600[20000.0 <= data$G0241600 & data$G0241600 <= 24999.0] <- 20000.0
+data$G0241600[25000.0 <= data$G0241600 & data$G0241600 <= 49999.0] <- 25000.0
+data$G0241600[50000.0 <= data$G0241600 & data$G0241600 <= 9.9999999E7] <- 50000.0
+data$G0241600 <- factor(data$G0241600,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0242100[1.0 <= data$G0242100 & data$G0242100 <= 999.0] <- 1.0
+data$G0242100[1000.0 <= data$G0242100 & data$G0242100 <= 1999.0] <- 1000.0
+data$G0242100[2000.0 <= data$G0242100 & data$G0242100 <= 2999.0] <- 2000.0
+data$G0242100[3000.0 <= data$G0242100 & data$G0242100 <= 3999.0] <- 3000.0
+data$G0242100[4000.0 <= data$G0242100 & data$G0242100 <= 4999.0] <- 4000.0
+data$G0242100[5000.0 <= data$G0242100 & data$G0242100 <= 5999.0] <- 5000.0
+data$G0242100[6000.0 <= data$G0242100 & data$G0242100 <= 6999.0] <- 6000.0
+data$G0242100[7000.0 <= data$G0242100 & data$G0242100 <= 7999.0] <- 7000.0
+data$G0242100[8000.0 <= data$G0242100 & data$G0242100 <= 8999.0] <- 8000.0
+data$G0242100[9000.0 <= data$G0242100 & data$G0242100 <= 9999.0] <- 9000.0
+data$G0242100[10000.0 <= data$G0242100 & data$G0242100 <= 14999.0] <- 10000.0
+data$G0242100[15000.0 <= data$G0242100 & data$G0242100 <= 19999.0] <- 15000.0
+data$G0242100[20000.0 <= data$G0242100 & data$G0242100 <= 24999.0] <- 20000.0
+data$G0242100[25000.0 <= data$G0242100 & data$G0242100 <= 49999.0] <- 25000.0
+data$G0242100[50000.0 <= data$G0242100 & data$G0242100 <= 9.9999999E7] <- 50000.0
+data$G0242100 <- factor(data$G0242100,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0260300[1.0 <= data$G0260300 & data$G0260300 <= 999.0] <- 1.0
+data$G0260300[1000.0 <= data$G0260300 & data$G0260300 <= 1999.0] <- 1000.0
+data$G0260300[2000.0 <= data$G0260300 & data$G0260300 <= 2999.0] <- 2000.0
+data$G0260300[3000.0 <= data$G0260300 & data$G0260300 <= 3999.0] <- 3000.0
+data$G0260300[4000.0 <= data$G0260300 & data$G0260300 <= 4999.0] <- 4000.0
+data$G0260300[5000.0 <= data$G0260300 & data$G0260300 <= 5999.0] <- 5000.0
+data$G0260300[6000.0 <= data$G0260300 & data$G0260300 <= 6999.0] <- 6000.0
+data$G0260300[7000.0 <= data$G0260300 & data$G0260300 <= 7999.0] <- 7000.0
+data$G0260300[8000.0 <= data$G0260300 & data$G0260300 <= 8999.0] <- 8000.0
+data$G0260300[9000.0 <= data$G0260300 & data$G0260300 <= 9999.0] <- 9000.0
+data$G0260300[10000.0 <= data$G0260300 & data$G0260300 <= 14999.0] <- 10000.0
+data$G0260300[15000.0 <= data$G0260300 & data$G0260300 <= 19999.0] <- 15000.0
+data$G0260300[20000.0 <= data$G0260300 & data$G0260300 <= 24999.0] <- 20000.0
+data$G0260300[25000.0 <= data$G0260300 & data$G0260300 <= 49999.0] <- 25000.0
+data$G0260300[50000.0 <= data$G0260300 & data$G0260300 <= 9.9999999E7] <- 50000.0
+data$G0260300 <- factor(data$G0260300,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0260700[1.0 <= data$G0260700 & data$G0260700 <= 999.0] <- 1.0
+data$G0260700[1000.0 <= data$G0260700 & data$G0260700 <= 1999.0] <- 1000.0
+data$G0260700[2000.0 <= data$G0260700 & data$G0260700 <= 2999.0] <- 2000.0
+data$G0260700[3000.0 <= data$G0260700 & data$G0260700 <= 3999.0] <- 3000.0
+data$G0260700[4000.0 <= data$G0260700 & data$G0260700 <= 4999.0] <- 4000.0
+data$G0260700[5000.0 <= data$G0260700 & data$G0260700 <= 5999.0] <- 5000.0
+data$G0260700[6000.0 <= data$G0260700 & data$G0260700 <= 6999.0] <- 6000.0
+data$G0260700[7000.0 <= data$G0260700 & data$G0260700 <= 7999.0] <- 7000.0
+data$G0260700[8000.0 <= data$G0260700 & data$G0260700 <= 8999.0] <- 8000.0
+data$G0260700[9000.0 <= data$G0260700 & data$G0260700 <= 9999.0] <- 9000.0
+data$G0260700[10000.0 <= data$G0260700 & data$G0260700 <= 14999.0] <- 10000.0
+data$G0260700[15000.0 <= data$G0260700 & data$G0260700 <= 19999.0] <- 15000.0
+data$G0260700[20000.0 <= data$G0260700 & data$G0260700 <= 24999.0] <- 20000.0
+data$G0260700[25000.0 <= data$G0260700 & data$G0260700 <= 49999.0] <- 25000.0
+data$G0260700[50000.0 <= data$G0260700 & data$G0260700 <= 9.9999999E7] <- 50000.0
+data$G0260700 <- factor(data$G0260700,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0276000[1.0 <= data$G0276000 & data$G0276000 <= 999.0] <- 1.0
+data$G0276000[1000.0 <= data$G0276000 & data$G0276000 <= 1999.0] <- 1000.0
+data$G0276000[2000.0 <= data$G0276000 & data$G0276000 <= 2999.0] <- 2000.0
+data$G0276000[3000.0 <= data$G0276000 & data$G0276000 <= 3999.0] <- 3000.0
+data$G0276000[4000.0 <= data$G0276000 & data$G0276000 <= 4999.0] <- 4000.0
+data$G0276000[5000.0 <= data$G0276000 & data$G0276000 <= 5999.0] <- 5000.0
+data$G0276000[6000.0 <= data$G0276000 & data$G0276000 <= 6999.0] <- 6000.0
+data$G0276000[7000.0 <= data$G0276000 & data$G0276000 <= 7999.0] <- 7000.0
+data$G0276000[8000.0 <= data$G0276000 & data$G0276000 <= 8999.0] <- 8000.0
+data$G0276000[9000.0 <= data$G0276000 & data$G0276000 <= 9999.0] <- 9000.0
+data$G0276000[10000.0 <= data$G0276000 & data$G0276000 <= 14999.0] <- 10000.0
+data$G0276000[15000.0 <= data$G0276000 & data$G0276000 <= 19999.0] <- 15000.0
+data$G0276000[20000.0 <= data$G0276000 & data$G0276000 <= 24999.0] <- 20000.0
+data$G0276000[25000.0 <= data$G0276000 & data$G0276000 <= 49999.0] <- 25000.0
+data$G0276000[50000.0 <= data$G0276000 & data$G0276000 <= 9.9999999E7] <- 50000.0
+data$G0276000 <- factor(data$G0276000,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0281900[1.0 <= data$G0281900 & data$G0281900 <= 999.0] <- 1.0
+data$G0281900[1000.0 <= data$G0281900 & data$G0281900 <= 1999.0] <- 1000.0
+data$G0281900[2000.0 <= data$G0281900 & data$G0281900 <= 2999.0] <- 2000.0
+data$G0281900[3000.0 <= data$G0281900 & data$G0281900 <= 3999.0] <- 3000.0
+data$G0281900[4000.0 <= data$G0281900 & data$G0281900 <= 4999.0] <- 4000.0
+data$G0281900[5000.0 <= data$G0281900 & data$G0281900 <= 5999.0] <- 5000.0
+data$G0281900[6000.0 <= data$G0281900 & data$G0281900 <= 6999.0] <- 6000.0
+data$G0281900[7000.0 <= data$G0281900 & data$G0281900 <= 7999.0] <- 7000.0
+data$G0281900[8000.0 <= data$G0281900 & data$G0281900 <= 8999.0] <- 8000.0
+data$G0281900[9000.0 <= data$G0281900 & data$G0281900 <= 9999.0] <- 9000.0
+data$G0281900[10000.0 <= data$G0281900 & data$G0281900 <= 14999.0] <- 10000.0
+data$G0281900[15000.0 <= data$G0281900 & data$G0281900 <= 19999.0] <- 15000.0
+data$G0281900[20000.0 <= data$G0281900 & data$G0281900 <= 24999.0] <- 20000.0
+data$G0281900[25000.0 <= data$G0281900 & data$G0281900 <= 49999.0] <- 25000.0
+data$G0281900[50000.0 <= data$G0281900 & data$G0281900 <= 9.9999999E7] <- 50000.0
+data$G0281900 <- factor(data$G0281900,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0292700[1.0 <= data$G0292700 & data$G0292700 <= 999.0] <- 1.0
+data$G0292700[1000.0 <= data$G0292700 & data$G0292700 <= 1999.0] <- 1000.0
+data$G0292700[2000.0 <= data$G0292700 & data$G0292700 <= 2999.0] <- 2000.0
+data$G0292700[3000.0 <= data$G0292700 & data$G0292700 <= 3999.0] <- 3000.0
+data$G0292700[4000.0 <= data$G0292700 & data$G0292700 <= 4999.0] <- 4000.0
+data$G0292700[5000.0 <= data$G0292700 & data$G0292700 <= 5999.0] <- 5000.0
+data$G0292700[6000.0 <= data$G0292700 & data$G0292700 <= 6999.0] <- 6000.0
+data$G0292700[7000.0 <= data$G0292700 & data$G0292700 <= 7999.0] <- 7000.0
+data$G0292700[8000.0 <= data$G0292700 & data$G0292700 <= 8999.0] <- 8000.0
+data$G0292700[9000.0 <= data$G0292700 & data$G0292700 <= 9999.0] <- 9000.0
+data$G0292700[10000.0 <= data$G0292700 & data$G0292700 <= 14999.0] <- 10000.0
+data$G0292700[15000.0 <= data$G0292700 & data$G0292700 <= 19999.0] <- 15000.0
+data$G0292700[20000.0 <= data$G0292700 & data$G0292700 <= 24999.0] <- 20000.0
+data$G0292700[25000.0 <= data$G0292700 & data$G0292700 <= 49999.0] <- 25000.0
+data$G0292700[50000.0 <= data$G0292700 & data$G0292700 <= 9.9999999E7] <- 50000.0
+data$G0292700 <- factor(data$G0292700,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0299300[1.0 <= data$G0299300 & data$G0299300 <= 999.0] <- 1.0
+data$G0299300[1000.0 <= data$G0299300 & data$G0299300 <= 1999.0] <- 1000.0
+data$G0299300[2000.0 <= data$G0299300 & data$G0299300 <= 2999.0] <- 2000.0
+data$G0299300[3000.0 <= data$G0299300 & data$G0299300 <= 3999.0] <- 3000.0
+data$G0299300[4000.0 <= data$G0299300 & data$G0299300 <= 4999.0] <- 4000.0
+data$G0299300[5000.0 <= data$G0299300 & data$G0299300 <= 5999.0] <- 5000.0
+data$G0299300[6000.0 <= data$G0299300 & data$G0299300 <= 6999.0] <- 6000.0
+data$G0299300[7000.0 <= data$G0299300 & data$G0299300 <= 7999.0] <- 7000.0
+data$G0299300[8000.0 <= data$G0299300 & data$G0299300 <= 8999.0] <- 8000.0
+data$G0299300[9000.0 <= data$G0299300 & data$G0299300 <= 9999.0] <- 9000.0
+data$G0299300[10000.0 <= data$G0299300 & data$G0299300 <= 14999.0] <- 10000.0
+data$G0299300[15000.0 <= data$G0299300 & data$G0299300 <= 19999.0] <- 15000.0
+data$G0299300[20000.0 <= data$G0299300 & data$G0299300 <= 24999.0] <- 20000.0
+data$G0299300[25000.0 <= data$G0299300 & data$G0299300 <= 49999.0] <- 25000.0
+data$G0299300[50000.0 <= data$G0299300 & data$G0299300 <= 9.9999999E7] <- 50000.0
+data$G0299300 <- factor(data$G0299300,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0313100[1.0 <= data$G0313100 & data$G0313100 <= 999.0] <- 1.0
+data$G0313100[1000.0 <= data$G0313100 & data$G0313100 <= 1999.0] <- 1000.0
+data$G0313100[2000.0 <= data$G0313100 & data$G0313100 <= 2999.0] <- 2000.0
+data$G0313100[3000.0 <= data$G0313100 & data$G0313100 <= 3999.0] <- 3000.0
+data$G0313100[4000.0 <= data$G0313100 & data$G0313100 <= 4999.0] <- 4000.0
+data$G0313100[5000.0 <= data$G0313100 & data$G0313100 <= 5999.0] <- 5000.0
+data$G0313100[6000.0 <= data$G0313100 & data$G0313100 <= 6999.0] <- 6000.0
+data$G0313100[7000.0 <= data$G0313100 & data$G0313100 <= 7999.0] <- 7000.0
+data$G0313100[8000.0 <= data$G0313100 & data$G0313100 <= 8999.0] <- 8000.0
+data$G0313100[9000.0 <= data$G0313100 & data$G0313100 <= 9999.0] <- 9000.0
+data$G0313100[10000.0 <= data$G0313100 & data$G0313100 <= 14999.0] <- 10000.0
+data$G0313100[15000.0 <= data$G0313100 & data$G0313100 <= 19999.0] <- 15000.0
+data$G0313100[20000.0 <= data$G0313100 & data$G0313100 <= 24999.0] <- 20000.0
+data$G0313100[25000.0 <= data$G0313100 & data$G0313100 <= 49999.0] <- 25000.0
+data$G0313100[50000.0 <= data$G0313100 & data$G0313100 <= 9.9999999E7] <- 50000.0
+data$G0313100 <- factor(data$G0313100,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0314300[1.0 <= data$G0314300 & data$G0314300 <= 999.0] <- 1.0
+data$G0314300[1000.0 <= data$G0314300 & data$G0314300 <= 1999.0] <- 1000.0
+data$G0314300[2000.0 <= data$G0314300 & data$G0314300 <= 2999.0] <- 2000.0
+data$G0314300[3000.0 <= data$G0314300 & data$G0314300 <= 3999.0] <- 3000.0
+data$G0314300[4000.0 <= data$G0314300 & data$G0314300 <= 4999.0] <- 4000.0
+data$G0314300[5000.0 <= data$G0314300 & data$G0314300 <= 5999.0] <- 5000.0
+data$G0314300[6000.0 <= data$G0314300 & data$G0314300 <= 6999.0] <- 6000.0
+data$G0314300[7000.0 <= data$G0314300 & data$G0314300 <= 7999.0] <- 7000.0
+data$G0314300[8000.0 <= data$G0314300 & data$G0314300 <= 8999.0] <- 8000.0
+data$G0314300[9000.0 <= data$G0314300 & data$G0314300 <= 9999.0] <- 9000.0
+data$G0314300[10000.0 <= data$G0314300 & data$G0314300 <= 14999.0] <- 10000.0
+data$G0314300[15000.0 <= data$G0314300 & data$G0314300 <= 19999.0] <- 15000.0
+data$G0314300[20000.0 <= data$G0314300 & data$G0314300 <= 24999.0] <- 20000.0
+data$G0314300[25000.0 <= data$G0314300 & data$G0314300 <= 49999.0] <- 25000.0
+data$G0314300[50000.0 <= data$G0314300 & data$G0314300 <= 9.9999999E7] <- 50000.0
+data$G0314300 <- factor(data$G0314300,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0332100[1.0 <= data$G0332100 & data$G0332100 <= 999.0] <- 1.0
+data$G0332100[1000.0 <= data$G0332100 & data$G0332100 <= 1999.0] <- 1000.0
+data$G0332100[2000.0 <= data$G0332100 & data$G0332100 <= 2999.0] <- 2000.0
+data$G0332100[3000.0 <= data$G0332100 & data$G0332100 <= 3999.0] <- 3000.0
+data$G0332100[4000.0 <= data$G0332100 & data$G0332100 <= 4999.0] <- 4000.0
+data$G0332100[5000.0 <= data$G0332100 & data$G0332100 <= 5999.0] <- 5000.0
+data$G0332100[6000.0 <= data$G0332100 & data$G0332100 <= 6999.0] <- 6000.0
+data$G0332100[7000.0 <= data$G0332100 & data$G0332100 <= 7999.0] <- 7000.0
+data$G0332100[8000.0 <= data$G0332100 & data$G0332100 <= 8999.0] <- 8000.0
+data$G0332100[9000.0 <= data$G0332100 & data$G0332100 <= 9999.0] <- 9000.0
+data$G0332100[10000.0 <= data$G0332100 & data$G0332100 <= 14999.0] <- 10000.0
+data$G0332100[15000.0 <= data$G0332100 & data$G0332100 <= 19999.0] <- 15000.0
+data$G0332100[20000.0 <= data$G0332100 & data$G0332100 <= 24999.0] <- 20000.0
+data$G0332100[25000.0 <= data$G0332100 & data$G0332100 <= 49999.0] <- 25000.0
+data$G0332100[50000.0 <= data$G0332100 & data$G0332100 <= 9.9999999E7] <- 50000.0
+data$G0332100 <- factor(data$G0332100,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$G0333300[1.0 <= data$G0333300 & data$G0333300 <= 999.0] <- 1.0
+data$G0333300[1000.0 <= data$G0333300 & data$G0333300 <= 1999.0] <- 1000.0
+data$G0333300[2000.0 <= data$G0333300 & data$G0333300 <= 2999.0] <- 2000.0
+data$G0333300[3000.0 <= data$G0333300 & data$G0333300 <= 3999.0] <- 3000.0
+data$G0333300[4000.0 <= data$G0333300 & data$G0333300 <= 4999.0] <- 4000.0
+data$G0333300[5000.0 <= data$G0333300 & data$G0333300 <= 5999.0] <- 5000.0
+data$G0333300[6000.0 <= data$G0333300 & data$G0333300 <= 6999.0] <- 6000.0
+data$G0333300[7000.0 <= data$G0333300 & data$G0333300 <= 7999.0] <- 7000.0
+data$G0333300[8000.0 <= data$G0333300 & data$G0333300 <= 8999.0] <- 8000.0
+data$G0333300[9000.0 <= data$G0333300 & data$G0333300 <= 9999.0] <- 9000.0
+data$G0333300[10000.0 <= data$G0333300 & data$G0333300 <= 14999.0] <- 10000.0
+data$G0333300[15000.0 <= data$G0333300 & data$G0333300 <= 19999.0] <- 15000.0
+data$G0333300[20000.0 <= data$G0333300 & data$G0333300 <= 24999.0] <- 20000.0
+data$G0333300[25000.0 <= data$G0333300 & data$G0333300 <= 49999.0] <- 25000.0
+data$G0333300[50000.0 <= data$G0333300 & data$G0333300 <= 9.9999999E7] <- 50000.0
+data$G0333300 <- factor(data$G0333300,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$R2257500[1.0 <= data$R2257500 & data$R2257500 <= 999.0] <- 1.0
+data$R2257500[1000.0 <= data$R2257500 & data$R2257500 <= 1999.0] <- 1000.0
+data$R2257500[2000.0 <= data$R2257500 & data$R2257500 <= 2999.0] <- 2000.0
+data$R2257500[3000.0 <= data$R2257500 & data$R2257500 <= 3999.0] <- 3000.0
+data$R2257500[4000.0 <= data$R2257500 & data$R2257500 <= 4999.0] <- 4000.0
+data$R2257500[5000.0 <= data$R2257500 & data$R2257500 <= 5999.0] <- 5000.0
+data$R2257500[6000.0 <= data$R2257500 & data$R2257500 <= 6999.0] <- 6000.0
+data$R2257500[7000.0 <= data$R2257500 & data$R2257500 <= 7999.0] <- 7000.0
+data$R2257500[8000.0 <= data$R2257500 & data$R2257500 <= 8999.0] <- 8000.0
+data$R2257500[9000.0 <= data$R2257500 & data$R2257500 <= 9999.0] <- 9000.0
+data$R2257500[10000.0 <= data$R2257500 & data$R2257500 <= 14999.0] <- 10000.0
+data$R2257500[15000.0 <= data$R2257500 & data$R2257500 <= 19999.0] <- 15000.0
+data$R2257500[20000.0 <= data$R2257500 & data$R2257500 <= 24999.0] <- 20000.0
+data$R2257500[25000.0 <= data$R2257500 & data$R2257500 <= 49999.0] <- 25000.0
+data$R2257500[50000.0 <= data$R2257500 & data$R2257500 <= 9999999.0] <- 50000.0
+data$R2257500 <- factor(data$R2257500,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 9999999: 50000+"))
+data$R2303100[1.0 <= data$R2303100 & data$R2303100 <= 4.0] <- 1.0
+data$R2303100[5.0 <= data$R2303100 & data$R2303100 <= 9.0] <- 5.0
+data$R2303100[10.0 <= data$R2303100 & data$R2303100 <= 14.0] <- 10.0
+data$R2303100[15.0 <= data$R2303100 & data$R2303100 <= 19.0] <- 15.0
+data$R2303100[20.0 <= data$R2303100 & data$R2303100 <= 24.0] <- 20.0
+data$R2303100[25.0 <= data$R2303100 & data$R2303100 <= 29.0] <- 25.0
+data$R2303100[30.0 <= data$R2303100 & data$R2303100 <= 34.0] <- 30.0
+data$R2303100[35.0 <= data$R2303100 & data$R2303100 <= 39.0] <- 35.0
+data$R2303100[40.0 <= data$R2303100 & data$R2303100 <= 44.0] <- 40.0
+data$R2303100[45.0 <= data$R2303100 & data$R2303100 <= 49.0] <- 45.0
+data$R2303100[50.0 <= data$R2303100 & data$R2303100 <= 9999999.0] <- 50.0
+data$R2303100 <- factor(data$R2303100,
+levels=c(0.0,1.0,5.0,10.0,15.0,20.0,25.0,30.0,35.0,40.0,45.0,50.0),
+labels=c("0",
+"1 TO 4",
+"5 TO 9",
+"10 TO 14",
+"15 TO 19",
+"20 TO 24",
+"25 TO 29",
+"30 TO 34",
+"35 TO 39",
+"40 TO 44",
+"45 TO 49",
+"50 TO 9999999: 50+"))
+data$R2303500[1.0 <= data$R2303500 & data$R2303500 <= 4.0] <- 1.0
+data$R2303500[5.0 <= data$R2303500 & data$R2303500 <= 9.0] <- 5.0
+data$R2303500[10.0 <= data$R2303500 & data$R2303500 <= 14.0] <- 10.0
+data$R2303500[15.0 <= data$R2303500 & data$R2303500 <= 19.0] <- 15.0
+data$R2303500[20.0 <= data$R2303500 & data$R2303500 <= 24.0] <- 20.0
+data$R2303500[25.0 <= data$R2303500 & data$R2303500 <= 29.0] <- 25.0
+data$R2303500[30.0 <= data$R2303500 & data$R2303500 <= 34.0] <- 30.0
+data$R2303500[35.0 <= data$R2303500 & data$R2303500 <= 39.0] <- 35.0
+data$R2303500[40.0 <= data$R2303500 & data$R2303500 <= 44.0] <- 40.0
+data$R2303500[45.0 <= data$R2303500 & data$R2303500 <= 49.0] <- 45.0
+data$R2303500[50.0 <= data$R2303500 & data$R2303500 <= 9999999.0] <- 50.0
+data$R2303500 <- factor(data$R2303500,
+levels=c(0.0,1.0,5.0,10.0,15.0,20.0,25.0,30.0,35.0,40.0,45.0,50.0),
+labels=c("0",
+"1 TO 4",
+"5 TO 9",
+"10 TO 14",
+"15 TO 19",
+"20 TO 24",
+"25 TO 29",
+"30 TO 34",
+"35 TO 39",
+"40 TO 44",
+"45 TO 49",
+"50 TO 9999999: 50+"))
+data$R2444700[1.0 <= data$R2444700 & data$R2444700 <= 999.0] <- 1.0
+data$R2444700[1000.0 <= data$R2444700 & data$R2444700 <= 1999.0] <- 1000.0
+data$R2444700[2000.0 <= data$R2444700 & data$R2444700 <= 2999.0] <- 2000.0
+data$R2444700[3000.0 <= data$R2444700 & data$R2444700 <= 3999.0] <- 3000.0
+data$R2444700[4000.0 <= data$R2444700 & data$R2444700 <= 4999.0] <- 4000.0
+data$R2444700[5000.0 <= data$R2444700 & data$R2444700 <= 5999.0] <- 5000.0
+data$R2444700[6000.0 <= data$R2444700 & data$R2444700 <= 6999.0] <- 6000.0
+data$R2444700[7000.0 <= data$R2444700 & data$R2444700 <= 7999.0] <- 7000.0
+data$R2444700[8000.0 <= data$R2444700 & data$R2444700 <= 8999.0] <- 8000.0
+data$R2444700[9000.0 <= data$R2444700 & data$R2444700 <= 9999.0] <- 9000.0
+data$R2444700[10000.0 <= data$R2444700 & data$R2444700 <= 14999.0] <- 10000.0
+data$R2444700[15000.0 <= data$R2444700 & data$R2444700 <= 19999.0] <- 15000.0
+data$R2444700[20000.0 <= data$R2444700 & data$R2444700 <= 24999.0] <- 20000.0
+data$R2444700[25000.0 <= data$R2444700 & data$R2444700 <= 49999.0] <- 25000.0
+data$R2444700[50000.0 <= data$R2444700 & data$R2444700 <= 9999999.0] <- 50000.0
+data$R2444700 <- factor(data$R2444700,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 9999999: 50000+"))
+data$R2870200[1.0 <= data$R2870200 & data$R2870200 <= 999.0] <- 1.0
+data$R2870200[1000.0 <= data$R2870200 & data$R2870200 <= 1999.0] <- 1000.0
+data$R2870200[2000.0 <= data$R2870200 & data$R2870200 <= 2999.0] <- 2000.0
+data$R2870200[3000.0 <= data$R2870200 & data$R2870200 <= 3999.0] <- 3000.0
+data$R2870200[4000.0 <= data$R2870200 & data$R2870200 <= 4999.0] <- 4000.0
+data$R2870200[5000.0 <= data$R2870200 & data$R2870200 <= 5999.0] <- 5000.0
+data$R2870200[6000.0 <= data$R2870200 & data$R2870200 <= 6999.0] <- 6000.0
+data$R2870200[7000.0 <= data$R2870200 & data$R2870200 <= 7999.0] <- 7000.0
+data$R2870200[8000.0 <= data$R2870200 & data$R2870200 <= 8999.0] <- 8000.0
+data$R2870200[9000.0 <= data$R2870200 & data$R2870200 <= 9999.0] <- 9000.0
+data$R2870200[10000.0 <= data$R2870200 & data$R2870200 <= 14999.0] <- 10000.0
+data$R2870200[15000.0 <= data$R2870200 & data$R2870200 <= 19999.0] <- 15000.0
+data$R2870200[20000.0 <= data$R2870200 & data$R2870200 <= 24999.0] <- 20000.0
+data$R2870200[25000.0 <= data$R2870200 & data$R2870200 <= 49999.0] <- 25000.0
+data$R2870200[50000.0 <= data$R2870200 & data$R2870200 <= 9999999.0] <- 50000.0
+data$R2870200 <- factor(data$R2870200,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 9999999: 50000+"))
+data$R3074000[1.0 <= data$R3074000 & data$R3074000 <= 999.0] <- 1.0
+data$R3074000[1000.0 <= data$R3074000 & data$R3074000 <= 1999.0] <- 1000.0
+data$R3074000[2000.0 <= data$R3074000 & data$R3074000 <= 2999.0] <- 2000.0
+data$R3074000[3000.0 <= data$R3074000 & data$R3074000 <= 3999.0] <- 3000.0
+data$R3074000[4000.0 <= data$R3074000 & data$R3074000 <= 4999.0] <- 4000.0
+data$R3074000[5000.0 <= data$R3074000 & data$R3074000 <= 5999.0] <- 5000.0
+data$R3074000[6000.0 <= data$R3074000 & data$R3074000 <= 6999.0] <- 6000.0
+data$R3074000[7000.0 <= data$R3074000 & data$R3074000 <= 7999.0] <- 7000.0
+data$R3074000[8000.0 <= data$R3074000 & data$R3074000 <= 8999.0] <- 8000.0
+data$R3074000[9000.0 <= data$R3074000 & data$R3074000 <= 9999.0] <- 9000.0
+data$R3074000[10000.0 <= data$R3074000 & data$R3074000 <= 14999.0] <- 10000.0
+data$R3074000[15000.0 <= data$R3074000 & data$R3074000 <= 19999.0] <- 15000.0
+data$R3074000[20000.0 <= data$R3074000 & data$R3074000 <= 24999.0] <- 20000.0
+data$R3074000[25000.0 <= data$R3074000 & data$R3074000 <= 49999.0] <- 25000.0
+data$R3074000[50000.0 <= data$R3074000 & data$R3074000 <= 9999999.0] <- 50000.0
+data$R3074000 <- factor(data$R3074000,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 9999999: 50000+"))
+data$R3400700[1.0 <= data$R3400700 & data$R3400700 <= 999.0] <- 1.0
+data$R3400700[1000.0 <= data$R3400700 & data$R3400700 <= 1999.0] <- 1000.0
+data$R3400700[2000.0 <= data$R3400700 & data$R3400700 <= 2999.0] <- 2000.0
+data$R3400700[3000.0 <= data$R3400700 & data$R3400700 <= 3999.0] <- 3000.0
+data$R3400700[4000.0 <= data$R3400700 & data$R3400700 <= 4999.0] <- 4000.0
+data$R3400700[5000.0 <= data$R3400700 & data$R3400700 <= 5999.0] <- 5000.0
+data$R3400700[6000.0 <= data$R3400700 & data$R3400700 <= 6999.0] <- 6000.0
+data$R3400700[7000.0 <= data$R3400700 & data$R3400700 <= 7999.0] <- 7000.0
+data$R3400700[8000.0 <= data$R3400700 & data$R3400700 <= 8999.0] <- 8000.0
+data$R3400700[9000.0 <= data$R3400700 & data$R3400700 <= 9999.0] <- 9000.0
+data$R3400700[10000.0 <= data$R3400700 & data$R3400700 <= 14999.0] <- 10000.0
+data$R3400700[15000.0 <= data$R3400700 & data$R3400700 <= 19999.0] <- 15000.0
+data$R3400700[20000.0 <= data$R3400700 & data$R3400700 <= 24999.0] <- 20000.0
+data$R3400700[25000.0 <= data$R3400700 & data$R3400700 <= 49999.0] <- 25000.0
+data$R3400700[50000.0 <= data$R3400700 & data$R3400700 <= 9999999.0] <- 50000.0
+data$R3400700 <- factor(data$R3400700,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 9999999: 50000+"))
+data$R3656100[1.0 <= data$R3656100 & data$R3656100 <= 999.0] <- 1.0
+data$R3656100[1000.0 <= data$R3656100 & data$R3656100 <= 1999.0] <- 1000.0
+data$R3656100[2000.0 <= data$R3656100 & data$R3656100 <= 2999.0] <- 2000.0
+data$R3656100[3000.0 <= data$R3656100 & data$R3656100 <= 3999.0] <- 3000.0
+data$R3656100[4000.0 <= data$R3656100 & data$R3656100 <= 4999.0] <- 4000.0
+data$R3656100[5000.0 <= data$R3656100 & data$R3656100 <= 5999.0] <- 5000.0
+data$R3656100[6000.0 <= data$R3656100 & data$R3656100 <= 6999.0] <- 6000.0
+data$R3656100[7000.0 <= data$R3656100 & data$R3656100 <= 7999.0] <- 7000.0
+data$R3656100[8000.0 <= data$R3656100 & data$R3656100 <= 8999.0] <- 8000.0
+data$R3656100[9000.0 <= data$R3656100 & data$R3656100 <= 9999.0] <- 9000.0
+data$R3656100[10000.0 <= data$R3656100 & data$R3656100 <= 14999.0] <- 10000.0
+data$R3656100[15000.0 <= data$R3656100 & data$R3656100 <= 19999.0] <- 15000.0
+data$R3656100[20000.0 <= data$R3656100 & data$R3656100 <= 24999.0] <- 20000.0
+data$R3656100[25000.0 <= data$R3656100 & data$R3656100 <= 49999.0] <- 25000.0
+data$R3656100[50000.0 <= data$R3656100 & data$R3656100 <= 9999999.0] <- 50000.0
+data$R3656100 <- factor(data$R3656100,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 9999999: 50000+"))
+data$R4006600[1.0 <= data$R4006600 & data$R4006600 <= 999.0] <- 1.0
+data$R4006600[1000.0 <= data$R4006600 & data$R4006600 <= 1999.0] <- 1000.0
+data$R4006600[2000.0 <= data$R4006600 & data$R4006600 <= 2999.0] <- 2000.0
+data$R4006600[3000.0 <= data$R4006600 & data$R4006600 <= 3999.0] <- 3000.0
+data$R4006600[4000.0 <= data$R4006600 & data$R4006600 <= 4999.0] <- 4000.0
+data$R4006600[5000.0 <= data$R4006600 & data$R4006600 <= 5999.0] <- 5000.0
+data$R4006600[6000.0 <= data$R4006600 & data$R4006600 <= 6999.0] <- 6000.0
+data$R4006600[7000.0 <= data$R4006600 & data$R4006600 <= 7999.0] <- 7000.0
+data$R4006600[8000.0 <= data$R4006600 & data$R4006600 <= 8999.0] <- 8000.0
+data$R4006600[9000.0 <= data$R4006600 & data$R4006600 <= 9999.0] <- 9000.0
+data$R4006600[10000.0 <= data$R4006600 & data$R4006600 <= 14999.0] <- 10000.0
+data$R4006600[15000.0 <= data$R4006600 & data$R4006600 <= 19999.0] <- 15000.0
+data$R4006600[20000.0 <= data$R4006600 & data$R4006600 <= 24999.0] <- 20000.0
+data$R4006600[25000.0 <= data$R4006600 & data$R4006600 <= 49999.0] <- 25000.0
+data$R4006600[50000.0 <= data$R4006600 & data$R4006600 <= 9999999.0] <- 50000.0
+data$R4006600 <- factor(data$R4006600,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 9999999: 50000+"))
+data$R4417700[1.0 <= data$R4417700 & data$R4417700 <= 999.0] <- 1.0
+data$R4417700[1000.0 <= data$R4417700 & data$R4417700 <= 1999.0] <- 1000.0
+data$R4417700[2000.0 <= data$R4417700 & data$R4417700 <= 2999.0] <- 2000.0
+data$R4417700[3000.0 <= data$R4417700 & data$R4417700 <= 3999.0] <- 3000.0
+data$R4417700[4000.0 <= data$R4417700 & data$R4417700 <= 4999.0] <- 4000.0
+data$R4417700[5000.0 <= data$R4417700 & data$R4417700 <= 5999.0] <- 5000.0
+data$R4417700[6000.0 <= data$R4417700 & data$R4417700 <= 6999.0] <- 6000.0
+data$R4417700[7000.0 <= data$R4417700 & data$R4417700 <= 7999.0] <- 7000.0
+data$R4417700[8000.0 <= data$R4417700 & data$R4417700 <= 8999.0] <- 8000.0
+data$R4417700[9000.0 <= data$R4417700 & data$R4417700 <= 9999.0] <- 9000.0
+data$R4417700[10000.0 <= data$R4417700 & data$R4417700 <= 14999.0] <- 10000.0
+data$R4417700[15000.0 <= data$R4417700 & data$R4417700 <= 19999.0] <- 15000.0
+data$R4417700[20000.0 <= data$R4417700 & data$R4417700 <= 24999.0] <- 20000.0
+data$R4417700[25000.0 <= data$R4417700 & data$R4417700 <= 49999.0] <- 25000.0
+data$R4417700[50000.0 <= data$R4417700 & data$R4417700 <= 9999999.0] <- 50000.0
+data$R4417700 <- factor(data$R4417700,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 9999999: 50000+"))
+data$R5080700[1.0 <= data$R5080700 & data$R5080700 <= 999.0] <- 1.0
+data$R5080700[1000.0 <= data$R5080700 & data$R5080700 <= 1999.0] <- 1000.0
+data$R5080700[2000.0 <= data$R5080700 & data$R5080700 <= 2999.0] <- 2000.0
+data$R5080700[3000.0 <= data$R5080700 & data$R5080700 <= 3999.0] <- 3000.0
+data$R5080700[4000.0 <= data$R5080700 & data$R5080700 <= 4999.0] <- 4000.0
+data$R5080700[5000.0 <= data$R5080700 & data$R5080700 <= 5999.0] <- 5000.0
+data$R5080700[6000.0 <= data$R5080700 & data$R5080700 <= 6999.0] <- 6000.0
+data$R5080700[7000.0 <= data$R5080700 & data$R5080700 <= 7999.0] <- 7000.0
+data$R5080700[8000.0 <= data$R5080700 & data$R5080700 <= 8999.0] <- 8000.0
+data$R5080700[9000.0 <= data$R5080700 & data$R5080700 <= 9999.0] <- 9000.0
+data$R5080700[10000.0 <= data$R5080700 & data$R5080700 <= 14999.0] <- 10000.0
+data$R5080700[15000.0 <= data$R5080700 & data$R5080700 <= 19999.0] <- 15000.0
+data$R5080700[20000.0 <= data$R5080700 & data$R5080700 <= 24999.0] <- 20000.0
+data$R5080700[25000.0 <= data$R5080700 & data$R5080700 <= 49999.0] <- 25000.0
+data$R5080700[50000.0 <= data$R5080700 & data$R5080700 <= 9.9999999E7] <- 50000.0
+data$R5080700 <- factor(data$R5080700,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$R5166000[1.0 <= data$R5166000 & data$R5166000 <= 999.0] <- 1.0
+data$R5166000[1000.0 <= data$R5166000 & data$R5166000 <= 1999.0] <- 1000.0
+data$R5166000[2000.0 <= data$R5166000 & data$R5166000 <= 2999.0] <- 2000.0
+data$R5166000[3000.0 <= data$R5166000 & data$R5166000 <= 3999.0] <- 3000.0
+data$R5166000[4000.0 <= data$R5166000 & data$R5166000 <= 4999.0] <- 4000.0
+data$R5166000[5000.0 <= data$R5166000 & data$R5166000 <= 5999.0] <- 5000.0
+data$R5166000[6000.0 <= data$R5166000 & data$R5166000 <= 6999.0] <- 6000.0
+data$R5166000[7000.0 <= data$R5166000 & data$R5166000 <= 7999.0] <- 7000.0
+data$R5166000[8000.0 <= data$R5166000 & data$R5166000 <= 8999.0] <- 8000.0
+data$R5166000[9000.0 <= data$R5166000 & data$R5166000 <= 9999.0] <- 9000.0
+data$R5166000[10000.0 <= data$R5166000 & data$R5166000 <= 14999.0] <- 10000.0
+data$R5166000[15000.0 <= data$R5166000 & data$R5166000 <= 19999.0] <- 15000.0
+data$R5166000[20000.0 <= data$R5166000 & data$R5166000 <= 24999.0] <- 20000.0
+data$R5166000[25000.0 <= data$R5166000 & data$R5166000 <= 49999.0] <- 25000.0
+data$R5166000[50000.0 <= data$R5166000 & data$R5166000 <= 9.9999999E7] <- 50000.0
+data$R5166000 <- factor(data$R5166000,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$R6478700[1.0 <= data$R6478700 & data$R6478700 <= 999.0] <- 1.0
+data$R6478700[1000.0 <= data$R6478700 & data$R6478700 <= 1999.0] <- 1000.0
+data$R6478700[2000.0 <= data$R6478700 & data$R6478700 <= 2999.0] <- 2000.0
+data$R6478700[3000.0 <= data$R6478700 & data$R6478700 <= 3999.0] <- 3000.0
+data$R6478700[4000.0 <= data$R6478700 & data$R6478700 <= 4999.0] <- 4000.0
+data$R6478700[5000.0 <= data$R6478700 & data$R6478700 <= 5999.0] <- 5000.0
+data$R6478700[6000.0 <= data$R6478700 & data$R6478700 <= 6999.0] <- 6000.0
+data$R6478700[7000.0 <= data$R6478700 & data$R6478700 <= 7999.0] <- 7000.0
+data$R6478700[8000.0 <= data$R6478700 & data$R6478700 <= 8999.0] <- 8000.0
+data$R6478700[9000.0 <= data$R6478700 & data$R6478700 <= 9999.0] <- 9000.0
+data$R6478700[10000.0 <= data$R6478700 & data$R6478700 <= 14999.0] <- 10000.0
+data$R6478700[15000.0 <= data$R6478700 & data$R6478700 <= 19999.0] <- 15000.0
+data$R6478700[20000.0 <= data$R6478700 & data$R6478700 <= 24999.0] <- 20000.0
+data$R6478700[25000.0 <= data$R6478700 & data$R6478700 <= 49999.0] <- 25000.0
+data$R6478700[50000.0 <= data$R6478700 & data$R6478700 <= 9.9999999E7] <- 50000.0
+data$R6478700 <- factor(data$R6478700,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$R7006500[1.0 <= data$R7006500 & data$R7006500 <= 999.0] <- 1.0
+data$R7006500[1000.0 <= data$R7006500 & data$R7006500 <= 1999.0] <- 1000.0
+data$R7006500[2000.0 <= data$R7006500 & data$R7006500 <= 2999.0] <- 2000.0
+data$R7006500[3000.0 <= data$R7006500 & data$R7006500 <= 3999.0] <- 3000.0
+data$R7006500[4000.0 <= data$R7006500 & data$R7006500 <= 4999.0] <- 4000.0
+data$R7006500[5000.0 <= data$R7006500 & data$R7006500 <= 5999.0] <- 5000.0
+data$R7006500[6000.0 <= data$R7006500 & data$R7006500 <= 6999.0] <- 6000.0
+data$R7006500[7000.0 <= data$R7006500 & data$R7006500 <= 7999.0] <- 7000.0
+data$R7006500[8000.0 <= data$R7006500 & data$R7006500 <= 8999.0] <- 8000.0
+data$R7006500[9000.0 <= data$R7006500 & data$R7006500 <= 9999.0] <- 9000.0
+data$R7006500[10000.0 <= data$R7006500 & data$R7006500 <= 14999.0] <- 10000.0
+data$R7006500[15000.0 <= data$R7006500 & data$R7006500 <= 19999.0] <- 15000.0
+data$R7006500[20000.0 <= data$R7006500 & data$R7006500 <= 24999.0] <- 20000.0
+data$R7006500[25000.0 <= data$R7006500 & data$R7006500 <= 49999.0] <- 25000.0
+data$R7006500[50000.0 <= data$R7006500 & data$R7006500 <= 9.9999999E7] <- 50000.0
+data$R7006500 <- factor(data$R7006500,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$R7703700[1.0 <= data$R7703700 & data$R7703700 <= 999.0] <- 1.0
+data$R7703700[1000.0 <= data$R7703700 & data$R7703700 <= 1999.0] <- 1000.0
+data$R7703700[2000.0 <= data$R7703700 & data$R7703700 <= 2999.0] <- 2000.0
+data$R7703700[3000.0 <= data$R7703700 & data$R7703700 <= 3999.0] <- 3000.0
+data$R7703700[4000.0 <= data$R7703700 & data$R7703700 <= 4999.0] <- 4000.0
+data$R7703700[5000.0 <= data$R7703700 & data$R7703700 <= 5999.0] <- 5000.0
+data$R7703700[6000.0 <= data$R7703700 & data$R7703700 <= 6999.0] <- 6000.0
+data$R7703700[7000.0 <= data$R7703700 & data$R7703700 <= 7999.0] <- 7000.0
+data$R7703700[8000.0 <= data$R7703700 & data$R7703700 <= 8999.0] <- 8000.0
+data$R7703700[9000.0 <= data$R7703700 & data$R7703700 <= 9999.0] <- 9000.0
+data$R7703700[10000.0 <= data$R7703700 & data$R7703700 <= 14999.0] <- 10000.0
+data$R7703700[15000.0 <= data$R7703700 & data$R7703700 <= 19999.0] <- 15000.0
+data$R7703700[20000.0 <= data$R7703700 & data$R7703700 <= 24999.0] <- 20000.0
+data$R7703700[25000.0 <= data$R7703700 & data$R7703700 <= 49999.0] <- 25000.0
+data$R7703700[50000.0 <= data$R7703700 & data$R7703700 <= 9.9999999E7] <- 50000.0
+data$R7703700 <- factor(data$R7703700,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$R8496100[1.0 <= data$R8496100 & data$R8496100 <= 999.0] <- 1.0
+data$R8496100[1000.0 <= data$R8496100 & data$R8496100 <= 1999.0] <- 1000.0
+data$R8496100[2000.0 <= data$R8496100 & data$R8496100 <= 2999.0] <- 2000.0
+data$R8496100[3000.0 <= data$R8496100 & data$R8496100 <= 3999.0] <- 3000.0
+data$R8496100[4000.0 <= data$R8496100 & data$R8496100 <= 4999.0] <- 4000.0
+data$R8496100[5000.0 <= data$R8496100 & data$R8496100 <= 5999.0] <- 5000.0
+data$R8496100[6000.0 <= data$R8496100 & data$R8496100 <= 6999.0] <- 6000.0
+data$R8496100[7000.0 <= data$R8496100 & data$R8496100 <= 7999.0] <- 7000.0
+data$R8496100[8000.0 <= data$R8496100 & data$R8496100 <= 8999.0] <- 8000.0
+data$R8496100[9000.0 <= data$R8496100 & data$R8496100 <= 9999.0] <- 9000.0
+data$R8496100[10000.0 <= data$R8496100 & data$R8496100 <= 14999.0] <- 10000.0
+data$R8496100[15000.0 <= data$R8496100 & data$R8496100 <= 19999.0] <- 15000.0
+data$R8496100[20000.0 <= data$R8496100 & data$R8496100 <= 24999.0] <- 20000.0
+data$R8496100[25000.0 <= data$R8496100 & data$R8496100 <= 49999.0] <- 25000.0
+data$R8496100[50000.0 <= data$R8496100 & data$R8496100 <= 9.99999999E8] <- 50000.0
+data$R8496100 <- factor(data$R8496100,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 999999999: 50000+"))
+data$T0960500[1.0 <= data$T0960500 & data$T0960500 <= 499.0] <- 1.0
+data$T0960500[500.0 <= data$T0960500 & data$T0960500 <= 999.0] <- 500.0
+data$T0960500[1000.0 <= data$T0960500 & data$T0960500 <= 1499.0] <- 1000.0
+data$T0960500[1500.0 <= data$T0960500 & data$T0960500 <= 1999.0] <- 1500.0
+data$T0960500[2000.0 <= data$T0960500 & data$T0960500 <= 2499.0] <- 2000.0
+data$T0960500[2500.0 <= data$T0960500 & data$T0960500 <= 2999.0] <- 2500.0
+data$T0960500[3000.0 <= data$T0960500 & data$T0960500 <= 3499.0] <- 3000.0
+data$T0960500[3500.0 <= data$T0960500 & data$T0960500 <= 3999.0] <- 3500.0
+data$T0960500[4000.0 <= data$T0960500 & data$T0960500 <= 4499.0] <- 4000.0
+data$T0960500[4500.0 <= data$T0960500 & data$T0960500 <= 4999.0] <- 4500.0
+data$T0960500[5000.0 <= data$T0960500 & data$T0960500 <= 9.9999999E7] <- 5000.0
+data$T0960500 <- factor(data$T0960500,
+levels=c(0.0,1.0,500.0,1000.0,1500.0,2000.0,2500.0,3000.0,3500.0,4000.0,4500.0,5000.0),
+labels=c("0",
+"1 TO 499",
+"500 TO 999",
+"1000 TO 1499",
+"1500 TO 1999",
+"2000 TO 2499",
+"2500 TO 2999",
+"3000 TO 3499",
+"3500 TO 3999",
+"4000 TO 4499",
+"4500 TO 4999",
+"5000 TO 99999999: 5000+"))
+data$T0960600[1.0 <= data$T0960600 & data$T0960600 <= 499.0] <- 1.0
+data$T0960600[500.0 <= data$T0960600 & data$T0960600 <= 999.0] <- 500.0
+data$T0960600[1000.0 <= data$T0960600 & data$T0960600 <= 1499.0] <- 1000.0
+data$T0960600[1500.0 <= data$T0960600 & data$T0960600 <= 1999.0] <- 1500.0
+data$T0960600[2000.0 <= data$T0960600 & data$T0960600 <= 2499.0] <- 2000.0
+data$T0960600[2500.0 <= data$T0960600 & data$T0960600 <= 2999.0] <- 2500.0
+data$T0960600[3000.0 <= data$T0960600 & data$T0960600 <= 3499.0] <- 3000.0
+data$T0960600[3500.0 <= data$T0960600 & data$T0960600 <= 3999.0] <- 3500.0
+data$T0960600[4000.0 <= data$T0960600 & data$T0960600 <= 4499.0] <- 4000.0
+data$T0960600[4500.0 <= data$T0960600 & data$T0960600 <= 4999.0] <- 4500.0
+data$T0960600[5000.0 <= data$T0960600 & data$T0960600 <= 9.9999999E7] <- 5000.0
+data$T0960600 <- factor(data$T0960600,
+levels=c(0.0,1.0,500.0,1000.0,1500.0,2000.0,2500.0,3000.0,3500.0,4000.0,4500.0,5000.0),
+labels=c("0",
+"1 TO 499",
+"500 TO 999",
+"1000 TO 1499",
+"1500 TO 1999",
+"2000 TO 2499",
+"2500 TO 2999",
+"3000 TO 3499",
+"3500 TO 3999",
+"4000 TO 4499",
+"4500 TO 4999",
+"5000 TO 99999999: 5000+"))
+data$T0960700[1.0 <= data$T0960700 & data$T0960700 <= 499.0] <- 1.0
+data$T0960700[500.0 <= data$T0960700 & data$T0960700 <= 999.0] <- 500.0
+data$T0960700[1000.0 <= data$T0960700 & data$T0960700 <= 1499.0] <- 1000.0
+data$T0960700[1500.0 <= data$T0960700 & data$T0960700 <= 1999.0] <- 1500.0
+data$T0960700[2000.0 <= data$T0960700 & data$T0960700 <= 2499.0] <- 2000.0
+data$T0960700[2500.0 <= data$T0960700 & data$T0960700 <= 2999.0] <- 2500.0
+data$T0960700[3000.0 <= data$T0960700 & data$T0960700 <= 3499.0] <- 3000.0
+data$T0960700[3500.0 <= data$T0960700 & data$T0960700 <= 3999.0] <- 3500.0
+data$T0960700[4000.0 <= data$T0960700 & data$T0960700 <= 4499.0] <- 4000.0
+data$T0960700[4500.0 <= data$T0960700 & data$T0960700 <= 4999.0] <- 4500.0
+data$T0960700[5000.0 <= data$T0960700 & data$T0960700 <= 9.9999999E7] <- 5000.0
+data$T0960700 <- factor(data$T0960700,
+levels=c(0.0,1.0,500.0,1000.0,1500.0,2000.0,2500.0,3000.0,3500.0,4000.0,4500.0,5000.0),
+labels=c("0",
+"1 TO 499",
+"500 TO 999",
+"1000 TO 1499",
+"1500 TO 1999",
+"2000 TO 2499",
+"2500 TO 2999",
+"3000 TO 3499",
+"3500 TO 3999",
+"4000 TO 4499",
+"4500 TO 4999",
+"5000 TO 99999999: 5000+"))
+data$T0960800[1.0 <= data$T0960800 & data$T0960800 <= 9.0] <- 1.0
+data$T0960800[10.0 <= data$T0960800 & data$T0960800 <= 19.0] <- 10.0
+data$T0960800[20.0 <= data$T0960800 & data$T0960800 <= 29.0] <- 20.0
+data$T0960800[30.0 <= data$T0960800 & data$T0960800 <= 39.0] <- 30.0
+data$T0960800[40.0 <= data$T0960800 & data$T0960800 <= 49.0] <- 40.0
+data$T0960800[50.0 <= data$T0960800 & data$T0960800 <= 59.0] <- 50.0
+data$T0960800[60.0 <= data$T0960800 & data$T0960800 <= 69.0] <- 60.0
+data$T0960800[70.0 <= data$T0960800 & data$T0960800 <= 79.0] <- 70.0
+data$T0960800[80.0 <= data$T0960800 & data$T0960800 <= 89.0] <- 80.0
+data$T0960800[90.0 <= data$T0960800 & data$T0960800 <= 99.0] <- 90.0
+data$T0960800[100.0 <= data$T0960800 & data$T0960800 <= 9.9999999E7] <- 100.0
+data$T0960800 <- factor(data$T0960800,
+levels=c(0.0,1.0,10.0,20.0,30.0,40.0,50.0,60.0,70.0,80.0,90.0,100.0),
+labels=c("0",
+"1 TO 9",
+"10 TO 19",
+"20 TO 29",
+"30 TO 39",
+"40 TO 49",
+"50 TO 59",
+"60 TO 69",
+"70 TO 79",
+"80 TO 89",
+"90 TO 99",
+"100 TO 99999999: 100+"))
+data$T0960900[1.0 <= data$T0960900 & data$T0960900 <= 9.0] <- 1.0
+data$T0960900[10.0 <= data$T0960900 & data$T0960900 <= 19.0] <- 10.0
+data$T0960900[20.0 <= data$T0960900 & data$T0960900 <= 29.0] <- 20.0
+data$T0960900[30.0 <= data$T0960900 & data$T0960900 <= 39.0] <- 30.0
+data$T0960900[40.0 <= data$T0960900 & data$T0960900 <= 49.0] <- 40.0
+data$T0960900[50.0 <= data$T0960900 & data$T0960900 <= 59.0] <- 50.0
+data$T0960900[60.0 <= data$T0960900 & data$T0960900 <= 69.0] <- 60.0
+data$T0960900[70.0 <= data$T0960900 & data$T0960900 <= 79.0] <- 70.0
+data$T0960900[80.0 <= data$T0960900 & data$T0960900 <= 89.0] <- 80.0
+data$T0960900[90.0 <= data$T0960900 & data$T0960900 <= 99.0] <- 90.0
+data$T0960900[100.0 <= data$T0960900 & data$T0960900 <= 9.9999999E7] <- 100.0
+data$T0960900 <- factor(data$T0960900,
+levels=c(0.0,1.0,10.0,20.0,30.0,40.0,50.0,60.0,70.0,80.0,90.0,100.0),
+labels=c("0",
+"1 TO 9",
+"10 TO 19",
+"20 TO 29",
+"30 TO 39",
+"40 TO 49",
+"50 TO 59",
+"60 TO 69",
+"70 TO 79",
+"80 TO 89",
+"90 TO 99",
+"100 TO 99999999: 100+"))
+data$T0961000[1.0 <= data$T0961000 & data$T0961000 <= 499.0] <- 1.0
+data$T0961000[500.0 <= data$T0961000 & data$T0961000 <= 999.0] <- 500.0
+data$T0961000[1000.0 <= data$T0961000 & data$T0961000 <= 1499.0] <- 1000.0
+data$T0961000[1500.0 <= data$T0961000 & data$T0961000 <= 1999.0] <- 1500.0
+data$T0961000[2000.0 <= data$T0961000 & data$T0961000 <= 2499.0] <- 2000.0
+data$T0961000[2500.0 <= data$T0961000 & data$T0961000 <= 2999.0] <- 2500.0
+data$T0961000[3000.0 <= data$T0961000 & data$T0961000 <= 3499.0] <- 3000.0
+data$T0961000[3500.0 <= data$T0961000 & data$T0961000 <= 3999.0] <- 3500.0
+data$T0961000[4000.0 <= data$T0961000 & data$T0961000 <= 4499.0] <- 4000.0
+data$T0961000[4500.0 <= data$T0961000 & data$T0961000 <= 4999.0] <- 4500.0
+data$T0961000[5000.0 <= data$T0961000 & data$T0961000 <= 9.9999999E7] <- 5000.0
+data$T0961000 <- factor(data$T0961000,
+levels=c(0.0,1.0,500.0,1000.0,1500.0,2000.0,2500.0,3000.0,3500.0,4000.0,4500.0,5000.0),
+labels=c("0",
+"1 TO 499",
+"500 TO 999",
+"1000 TO 1499",
+"1500 TO 1999",
+"2000 TO 2499",
+"2500 TO 2999",
+"3000 TO 3499",
+"3500 TO 3999",
+"4000 TO 4499",
+"4500 TO 4999",
+"5000 TO 99999999: 5000+"))
+data$T0961100[1.0 <= data$T0961100 & data$T0961100 <= 99.0] <- 1.0
+data$T0961100[100.0 <= data$T0961100 & data$T0961100 <= 199.0] <- 100.0
+data$T0961100[200.0 <= data$T0961100 & data$T0961100 <= 299.0] <- 200.0
+data$T0961100[300.0 <= data$T0961100 & data$T0961100 <= 399.0] <- 300.0
+data$T0961100[400.0 <= data$T0961100 & data$T0961100 <= 499.0] <- 400.0
+data$T0961100[500.0 <= data$T0961100 & data$T0961100 <= 599.0] <- 500.0
+data$T0961100[600.0 <= data$T0961100 & data$T0961100 <= 699.0] <- 600.0
+data$T0961100[700.0 <= data$T0961100 & data$T0961100 <= 799.0] <- 700.0
+data$T0961100[800.0 <= data$T0961100 & data$T0961100 <= 899.0] <- 800.0
+data$T0961100[900.0 <= data$T0961100 & data$T0961100 <= 999.0] <- 900.0
+data$T0961100[1000.0 <= data$T0961100 & data$T0961100 <= 9.9999999E7] <- 1000.0
+data$T0961100 <- factor(data$T0961100,
+levels=c(0.0,1.0,100.0,200.0,300.0,400.0,500.0,600.0,700.0,800.0,900.0,1000.0),
+labels=c("0",
+"1 TO 99",
+"100 TO 199",
+"200 TO 299",
+"300 TO 399",
+"400 TO 499",
+"500 TO 599",
+"600 TO 699",
+"700 TO 799",
+"800 TO 899",
+"900 TO 999",
+"1000 TO 99999999: 1000+"))
+data$T0961200[1.0 <= data$T0961200 & data$T0961200 <= 99.0] <- 1.0
+data$T0961200[100.0 <= data$T0961200 & data$T0961200 <= 199.0] <- 100.0
+data$T0961200[200.0 <= data$T0961200 & data$T0961200 <= 299.0] <- 200.0
+data$T0961200[300.0 <= data$T0961200 & data$T0961200 <= 399.0] <- 300.0
+data$T0961200[400.0 <= data$T0961200 & data$T0961200 <= 499.0] <- 400.0
+data$T0961200[500.0 <= data$T0961200 & data$T0961200 <= 599.0] <- 500.0
+data$T0961200[600.0 <= data$T0961200 & data$T0961200 <= 699.0] <- 600.0
+data$T0961200[700.0 <= data$T0961200 & data$T0961200 <= 799.0] <- 700.0
+data$T0961200[800.0 <= data$T0961200 & data$T0961200 <= 899.0] <- 800.0
+data$T0961200[900.0 <= data$T0961200 & data$T0961200 <= 999.0] <- 900.0
+data$T0961200[1000.0 <= data$T0961200 & data$T0961200 <= 9.9999999E7] <- 1000.0
+data$T0961200 <- factor(data$T0961200,
+levels=c(0.0,1.0,100.0,200.0,300.0,400.0,500.0,600.0,700.0,800.0,900.0,1000.0),
+labels=c("0",
+"1 TO 99",
+"100 TO 199",
+"200 TO 299",
+"300 TO 399",
+"400 TO 499",
+"500 TO 599",
+"600 TO 699",
+"700 TO 799",
+"800 TO 899",
+"900 TO 999",
+"1000 TO 99999999: 1000+"))
+data$T0961300[1.0 <= data$T0961300 & data$T0961300 <= 99.0] <- 1.0
+data$T0961300[100.0 <= data$T0961300 & data$T0961300 <= 199.0] <- 100.0
+data$T0961300[200.0 <= data$T0961300 & data$T0961300 <= 299.0] <- 200.0
+data$T0961300[300.0 <= data$T0961300 & data$T0961300 <= 399.0] <- 300.0
+data$T0961300[400.0 <= data$T0961300 & data$T0961300 <= 499.0] <- 400.0
+data$T0961300[500.0 <= data$T0961300 & data$T0961300 <= 599.0] <- 500.0
+data$T0961300[600.0 <= data$T0961300 & data$T0961300 <= 699.0] <- 600.0
+data$T0961300[700.0 <= data$T0961300 & data$T0961300 <= 799.0] <- 700.0
+data$T0961300[800.0 <= data$T0961300 & data$T0961300 <= 899.0] <- 800.0
+data$T0961300[900.0 <= data$T0961300 & data$T0961300 <= 999.0] <- 900.0
+data$T0961300[1000.0 <= data$T0961300 & data$T0961300 <= 9.9999999E7] <- 1000.0
+data$T0961300 <- factor(data$T0961300,
+levels=c(0.0,1.0,100.0,200.0,300.0,400.0,500.0,600.0,700.0,800.0,900.0,1000.0),
+labels=c("0",
+"1 TO 99",
+"100 TO 199",
+"200 TO 299",
+"300 TO 399",
+"400 TO 499",
+"500 TO 599",
+"600 TO 699",
+"700 TO 799",
+"800 TO 899",
+"900 TO 999",
+"1000 TO 99999999: 1000+"))
+data$T0961400[1.0 <= data$T0961400 & data$T0961400 <= 9.0] <- 1.0
+data$T0961400[10.0 <= data$T0961400 & data$T0961400 <= 19.0] <- 10.0
+data$T0961400[20.0 <= data$T0961400 & data$T0961400 <= 29.0] <- 20.0
+data$T0961400[30.0 <= data$T0961400 & data$T0961400 <= 39.0] <- 30.0
+data$T0961400[40.0 <= data$T0961400 & data$T0961400 <= 49.0] <- 40.0
+data$T0961400[50.0 <= data$T0961400 & data$T0961400 <= 59.0] <- 50.0
+data$T0961400[60.0 <= data$T0961400 & data$T0961400 <= 69.0] <- 60.0
+data$T0961400[70.0 <= data$T0961400 & data$T0961400 <= 79.0] <- 70.0
+data$T0961400[80.0 <= data$T0961400 & data$T0961400 <= 89.0] <- 80.0
+data$T0961400[90.0 <= data$T0961400 & data$T0961400 <= 99.0] <- 90.0
+data$T0961400[100.0 <= data$T0961400 & data$T0961400 <= 9.9999999E7] <- 100.0
+data$T0961400 <- factor(data$T0961400,
+levels=c(0.0,1.0,10.0,20.0,30.0,40.0,50.0,60.0,70.0,80.0,90.0,100.0),
+labels=c("0",
+"1 TO 9",
+"10 TO 19",
+"20 TO 29",
+"30 TO 39",
+"40 TO 49",
+"50 TO 59",
+"60 TO 69",
+"70 TO 79",
+"80 TO 89",
+"90 TO 99",
+"100 TO 99999999: 100+"))
+data$T0961500[1.0 <= data$T0961500 & data$T0961500 <= 9.0] <- 1.0
+data$T0961500[10.0 <= data$T0961500 & data$T0961500 <= 19.0] <- 10.0
+data$T0961500[20.0 <= data$T0961500 & data$T0961500 <= 29.0] <- 20.0
+data$T0961500[30.0 <= data$T0961500 & data$T0961500 <= 39.0] <- 30.0
+data$T0961500[40.0 <= data$T0961500 & data$T0961500 <= 49.0] <- 40.0
+data$T0961500[50.0 <= data$T0961500 & data$T0961500 <= 59.0] <- 50.0
+data$T0961500[60.0 <= data$T0961500 & data$T0961500 <= 69.0] <- 60.0
+data$T0961500[70.0 <= data$T0961500 & data$T0961500 <= 79.0] <- 70.0
+data$T0961500[80.0 <= data$T0961500 & data$T0961500 <= 89.0] <- 80.0
+data$T0961500[90.0 <= data$T0961500 & data$T0961500 <= 99.0] <- 90.0
+data$T0961500[100.0 <= data$T0961500 & data$T0961500 <= 9.9999999E7] <- 100.0
+data$T0961500 <- factor(data$T0961500,
+levels=c(0.0,1.0,10.0,20.0,30.0,40.0,50.0,60.0,70.0,80.0,90.0,100.0),
+labels=c("0",
+"1 TO 9",
+"10 TO 19",
+"20 TO 29",
+"30 TO 39",
+"40 TO 49",
+"50 TO 59",
+"60 TO 69",
+"70 TO 79",
+"80 TO 89",
+"90 TO 99",
+"100 TO 99999999: 100+"))
+data$T0961600[1.0 <= data$T0961600 & data$T0961600 <= 9.0] <- 1.0
+data$T0961600[10.0 <= data$T0961600 & data$T0961600 <= 19.0] <- 10.0
+data$T0961600[20.0 <= data$T0961600 & data$T0961600 <= 29.0] <- 20.0
+data$T0961600[30.0 <= data$T0961600 & data$T0961600 <= 39.0] <- 30.0
+data$T0961600[40.0 <= data$T0961600 & data$T0961600 <= 49.0] <- 40.0
+data$T0961600[50.0 <= data$T0961600 & data$T0961600 <= 59.0] <- 50.0
+data$T0961600[60.0 <= data$T0961600 & data$T0961600 <= 69.0] <- 60.0
+data$T0961600[70.0 <= data$T0961600 & data$T0961600 <= 79.0] <- 70.0
+data$T0961600[80.0 <= data$T0961600 & data$T0961600 <= 89.0] <- 80.0
+data$T0961600[90.0 <= data$T0961600 & data$T0961600 <= 99.0] <- 90.0
+data$T0961600[100.0 <= data$T0961600 & data$T0961600 <= 9.9999999E7] <- 100.0
+data$T0961600 <- factor(data$T0961600,
+levels=c(0.0,1.0,10.0,20.0,30.0,40.0,50.0,60.0,70.0,80.0,90.0,100.0),
+labels=c("0",
+"1 TO 9",
+"10 TO 19",
+"20 TO 29",
+"30 TO 39",
+"40 TO 49",
+"50 TO 59",
+"60 TO 69",
+"70 TO 79",
+"80 TO 89",
+"90 TO 99",
+"100 TO 99999999: 100+"))
+data$T0987800[1.0 <= data$T0987800 & data$T0987800 <= 999.0] <- 1.0
+data$T0987800[1000.0 <= data$T0987800 & data$T0987800 <= 1999.0] <- 1000.0
+data$T0987800[2000.0 <= data$T0987800 & data$T0987800 <= 2999.0] <- 2000.0
+data$T0987800[3000.0 <= data$T0987800 & data$T0987800 <= 3999.0] <- 3000.0
+data$T0987800[4000.0 <= data$T0987800 & data$T0987800 <= 4999.0] <- 4000.0
+data$T0987800[5000.0 <= data$T0987800 & data$T0987800 <= 5999.0] <- 5000.0
+data$T0987800[6000.0 <= data$T0987800 & data$T0987800 <= 6999.0] <- 6000.0
+data$T0987800[7000.0 <= data$T0987800 & data$T0987800 <= 7999.0] <- 7000.0
+data$T0987800[8000.0 <= data$T0987800 & data$T0987800 <= 8999.0] <- 8000.0
+data$T0987800[9000.0 <= data$T0987800 & data$T0987800 <= 9999.0] <- 9000.0
+data$T0987800[10000.0 <= data$T0987800 & data$T0987800 <= 14999.0] <- 10000.0
+data$T0987800[15000.0 <= data$T0987800 & data$T0987800 <= 19999.0] <- 15000.0
+data$T0987800[20000.0 <= data$T0987800 & data$T0987800 <= 24999.0] <- 20000.0
+data$T0987800[25000.0 <= data$T0987800 & data$T0987800 <= 49999.0] <- 25000.0
+data$T0987800[50000.0 <= data$T0987800 & data$T0987800 <= 9.9999999E7] <- 50000.0
+data$T0987800 <- factor(data$T0987800,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$T2210000[1.0 <= data$T2210000 & data$T2210000 <= 999.0] <- 1.0
+data$T2210000[1000.0 <= data$T2210000 & data$T2210000 <= 1999.0] <- 1000.0
+data$T2210000[2000.0 <= data$T2210000 & data$T2210000 <= 2999.0] <- 2000.0
+data$T2210000[3000.0 <= data$T2210000 & data$T2210000 <= 3999.0] <- 3000.0
+data$T2210000[4000.0 <= data$T2210000 & data$T2210000 <= 4999.0] <- 4000.0
+data$T2210000[5000.0 <= data$T2210000 & data$T2210000 <= 5999.0] <- 5000.0
+data$T2210000[6000.0 <= data$T2210000 & data$T2210000 <= 6999.0] <- 6000.0
+data$T2210000[7000.0 <= data$T2210000 & data$T2210000 <= 7999.0] <- 7000.0
+data$T2210000[8000.0 <= data$T2210000 & data$T2210000 <= 8999.0] <- 8000.0
+data$T2210000[9000.0 <= data$T2210000 & data$T2210000 <= 9999.0] <- 9000.0
+data$T2210000[10000.0 <= data$T2210000 & data$T2210000 <= 14999.0] <- 10000.0
+data$T2210000[15000.0 <= data$T2210000 & data$T2210000 <= 19999.0] <- 15000.0
+data$T2210000[20000.0 <= data$T2210000 & data$T2210000 <= 24999.0] <- 20000.0
+data$T2210000[25000.0 <= data$T2210000 & data$T2210000 <= 49999.0] <- 25000.0
+data$T2210000[50000.0 <= data$T2210000 & data$T2210000 <= 9.9999999E7] <- 50000.0
+data$T2210000 <- factor(data$T2210000,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$T3095000[10.0 <= data$T3095000 & data$T3095000 <= 9999.0] <- 10.0
+data$T3095000 <- factor(data$T3095000,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0),
+labels=c("0",
+"1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"7",
+"8",
+"9",
+"10 TO 9999: 10+"))
+data$T3107800[1.0 <= data$T3107800 & data$T3107800 <= 999.0] <- 1.0
+data$T3107800[1000.0 <= data$T3107800 & data$T3107800 <= 1999.0] <- 1000.0
+data$T3107800[2000.0 <= data$T3107800 & data$T3107800 <= 2999.0] <- 2000.0
+data$T3107800[3000.0 <= data$T3107800 & data$T3107800 <= 3999.0] <- 3000.0
+data$T3107800[4000.0 <= data$T3107800 & data$T3107800 <= 4999.0] <- 4000.0
+data$T3107800[5000.0 <= data$T3107800 & data$T3107800 <= 5999.0] <- 5000.0
+data$T3107800[6000.0 <= data$T3107800 & data$T3107800 <= 6999.0] <- 6000.0
+data$T3107800[7000.0 <= data$T3107800 & data$T3107800 <= 7999.0] <- 7000.0
+data$T3107800[8000.0 <= data$T3107800 & data$T3107800 <= 8999.0] <- 8000.0
+data$T3107800[9000.0 <= data$T3107800 & data$T3107800 <= 9999.0] <- 9000.0
+data$T3107800[10000.0 <= data$T3107800 & data$T3107800 <= 14999.0] <- 10000.0
+data$T3107800[15000.0 <= data$T3107800 & data$T3107800 <= 19999.0] <- 15000.0
+data$T3107800[20000.0 <= data$T3107800 & data$T3107800 <= 24999.0] <- 20000.0
+data$T3107800[25000.0 <= data$T3107800 & data$T3107800 <= 49999.0] <- 25000.0
+data$T3107800[50000.0 <= data$T3107800 & data$T3107800 <= 9.9999999E7] <- 50000.0
+data$T3107800 <- factor(data$T3107800,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$T4094100[10.0 <= data$T4094100 & data$T4094100 <= 9999.0] <- 10.0
+data$T4094100 <- factor(data$T4094100,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0),
+labels=c("0",
+"1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"7",
+"8",
+"9",
+"10 TO 9999: 10+"))
+data$T4112300[1.0 <= data$T4112300 & data$T4112300 <= 999.0] <- 1.0
+data$T4112300[1000.0 <= data$T4112300 & data$T4112300 <= 1999.0] <- 1000.0
+data$T4112300[2000.0 <= data$T4112300 & data$T4112300 <= 2999.0] <- 2000.0
+data$T4112300[3000.0 <= data$T4112300 & data$T4112300 <= 3999.0] <- 3000.0
+data$T4112300[4000.0 <= data$T4112300 & data$T4112300 <= 4999.0] <- 4000.0
+data$T4112300[5000.0 <= data$T4112300 & data$T4112300 <= 5999.0] <- 5000.0
+data$T4112300[6000.0 <= data$T4112300 & data$T4112300 <= 6999.0] <- 6000.0
+data$T4112300[7000.0 <= data$T4112300 & data$T4112300 <= 7999.0] <- 7000.0
+data$T4112300[8000.0 <= data$T4112300 & data$T4112300 <= 8999.0] <- 8000.0
+data$T4112300[9000.0 <= data$T4112300 & data$T4112300 <= 9999.0] <- 9000.0
+data$T4112300[10000.0 <= data$T4112300 & data$T4112300 <= 14999.0] <- 10000.0
+data$T4112300[15000.0 <= data$T4112300 & data$T4112300 <= 19999.0] <- 15000.0
+data$T4112300[20000.0 <= data$T4112300 & data$T4112300 <= 24999.0] <- 20000.0
+data$T4112300[25000.0 <= data$T4112300 & data$T4112300 <= 49999.0] <- 25000.0
+data$T4112300[50000.0 <= data$T4112300 & data$T4112300 <= 9.9999999E7] <- 50000.0
+data$T4112300 <- factor(data$T4112300,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$T4970600[1.0 <= data$T4970600 & data$T4970600 <= 9.0] <- 1.0
+data$T4970600[10.0 <= data$T4970600 & data$T4970600 <= 19.0] <- 10.0
+data$T4970600[20.0 <= data$T4970600 & data$T4970600 <= 29.0] <- 20.0
+data$T4970600[30.0 <= data$T4970600 & data$T4970600 <= 39.0] <- 30.0
+data$T4970600[40.0 <= data$T4970600 & data$T4970600 <= 49.0] <- 40.0
+data$T4970600[50.0 <= data$T4970600 & data$T4970600 <= 59.0] <- 50.0
+data$T4970600[60.0 <= data$T4970600 & data$T4970600 <= 69.0] <- 60.0
+data$T4970600[70.0 <= data$T4970600 & data$T4970600 <= 79.0] <- 70.0
+data$T4970600[80.0 <= data$T4970600 & data$T4970600 <= 89.0] <- 80.0
+data$T4970600[90.0 <= data$T4970600 & data$T4970600 <= 99.0] <- 90.0
+data$T4970600[100.0 <= data$T4970600 & data$T4970600 <= 9.9999999E7] <- 100.0
+data$T4970600 <- factor(data$T4970600,
+levels=c(0.0,1.0,10.0,20.0,30.0,40.0,50.0,60.0,70.0,80.0,90.0,100.0),
+labels=c("0",
+"1 TO 9",
+"10 TO 19",
+"20 TO 29",
+"30 TO 39",
+"40 TO 49",
+"50 TO 59",
+"60 TO 69",
+"70 TO 79",
+"80 TO 89",
+"90 TO 99",
+"100 TO 99999999: 100+"))
+data$T4970700[1.0 <= data$T4970700 & data$T4970700 <= 9.0] <- 1.0
+data$T4970700[10.0 <= data$T4970700 & data$T4970700 <= 19.0] <- 10.0
+data$T4970700[20.0 <= data$T4970700 & data$T4970700 <= 29.0] <- 20.0
+data$T4970700[30.0 <= data$T4970700 & data$T4970700 <= 39.0] <- 30.0
+data$T4970700[40.0 <= data$T4970700 & data$T4970700 <= 49.0] <- 40.0
+data$T4970700[50.0 <= data$T4970700 & data$T4970700 <= 59.0] <- 50.0
+data$T4970700[60.0 <= data$T4970700 & data$T4970700 <= 69.0] <- 60.0
+data$T4970700[70.0 <= data$T4970700 & data$T4970700 <= 79.0] <- 70.0
+data$T4970700[80.0 <= data$T4970700 & data$T4970700 <= 89.0] <- 80.0
+data$T4970700[90.0 <= data$T4970700 & data$T4970700 <= 99.0] <- 90.0
+data$T4970700[100.0 <= data$T4970700 & data$T4970700 <= 9.9999999E7] <- 100.0
+data$T4970700 <- factor(data$T4970700,
+levels=c(0.0,1.0,10.0,20.0,30.0,40.0,50.0,60.0,70.0,80.0,90.0,100.0),
+labels=c("0",
+"1 TO 9",
+"10 TO 19",
+"20 TO 29",
+"30 TO 39",
+"40 TO 49",
+"50 TO 59",
+"60 TO 69",
+"70 TO 79",
+"80 TO 89",
+"90 TO 99",
+"100 TO 99999999: 100+"))
+data$T4970800[1.0 <= data$T4970800 & data$T4970800 <= 9.0] <- 1.0
+data$T4970800[10.0 <= data$T4970800 & data$T4970800 <= 19.0] <- 10.0
+data$T4970800[20.0 <= data$T4970800 & data$T4970800 <= 29.0] <- 20.0
+data$T4970800[30.0 <= data$T4970800 & data$T4970800 <= 39.0] <- 30.0
+data$T4970800[40.0 <= data$T4970800 & data$T4970800 <= 49.0] <- 40.0
+data$T4970800[50.0 <= data$T4970800 & data$T4970800 <= 59.0] <- 50.0
+data$T4970800[60.0 <= data$T4970800 & data$T4970800 <= 69.0] <- 60.0
+data$T4970800[70.0 <= data$T4970800 & data$T4970800 <= 79.0] <- 70.0
+data$T4970800[80.0 <= data$T4970800 & data$T4970800 <= 89.0] <- 80.0
+data$T4970800[90.0 <= data$T4970800 & data$T4970800 <= 99.0] <- 90.0
+data$T4970800[100.0 <= data$T4970800 & data$T4970800 <= 9.9999999E7] <- 100.0
+data$T4970800 <- factor(data$T4970800,
+levels=c(0.0,1.0,10.0,20.0,30.0,40.0,50.0,60.0,70.0,80.0,90.0,100.0),
+labels=c("0",
+"1 TO 9",
+"10 TO 19",
+"20 TO 29",
+"30 TO 39",
+"40 TO 49",
+"50 TO 59",
+"60 TO 69",
+"70 TO 79",
+"80 TO 89",
+"90 TO 99",
+"100 TO 99999999: 100+"))
+data$T4970900[1.0 <= data$T4970900 & data$T4970900 <= 9.0] <- 1.0
+data$T4970900[10.0 <= data$T4970900 & data$T4970900 <= 19.0] <- 10.0
+data$T4970900[20.0 <= data$T4970900 & data$T4970900 <= 29.0] <- 20.0
+data$T4970900[30.0 <= data$T4970900 & data$T4970900 <= 39.0] <- 30.0
+data$T4970900[40.0 <= data$T4970900 & data$T4970900 <= 49.0] <- 40.0
+data$T4970900[50.0 <= data$T4970900 & data$T4970900 <= 59.0] <- 50.0
+data$T4970900[60.0 <= data$T4970900 & data$T4970900 <= 69.0] <- 60.0
+data$T4970900[70.0 <= data$T4970900 & data$T4970900 <= 79.0] <- 70.0
+data$T4970900[80.0 <= data$T4970900 & data$T4970900 <= 89.0] <- 80.0
+data$T4970900[90.0 <= data$T4970900 & data$T4970900 <= 99.0] <- 90.0
+data$T4970900[100.0 <= data$T4970900 & data$T4970900 <= 9.9999999E7] <- 100.0
+data$T4970900 <- factor(data$T4970900,
+levels=c(0.0,1.0,10.0,20.0,30.0,40.0,50.0,60.0,70.0,80.0,90.0,100.0),
+labels=c("0",
+"1 TO 9",
+"10 TO 19",
+"20 TO 29",
+"30 TO 39",
+"40 TO 49",
+"50 TO 59",
+"60 TO 69",
+"70 TO 79",
+"80 TO 89",
+"90 TO 99",
+"100 TO 99999999: 100+"))
+data$T4971000[1.0 <= data$T4971000 & data$T4971000 <= 9.0] <- 1.0
+data$T4971000[10.0 <= data$T4971000 & data$T4971000 <= 19.0] <- 10.0
+data$T4971000[20.0 <= data$T4971000 & data$T4971000 <= 29.0] <- 20.0
+data$T4971000[30.0 <= data$T4971000 & data$T4971000 <= 39.0] <- 30.0
+data$T4971000[40.0 <= data$T4971000 & data$T4971000 <= 49.0] <- 40.0
+data$T4971000[50.0 <= data$T4971000 & data$T4971000 <= 59.0] <- 50.0
+data$T4971000[60.0 <= data$T4971000 & data$T4971000 <= 69.0] <- 60.0
+data$T4971000[70.0 <= data$T4971000 & data$T4971000 <= 79.0] <- 70.0
+data$T4971000[80.0 <= data$T4971000 & data$T4971000 <= 89.0] <- 80.0
+data$T4971000[90.0 <= data$T4971000 & data$T4971000 <= 99.0] <- 90.0
+data$T4971000[100.0 <= data$T4971000 & data$T4971000 <= 9.9999999E7] <- 100.0
+data$T4971000 <- factor(data$T4971000,
+levels=c(0.0,1.0,10.0,20.0,30.0,40.0,50.0,60.0,70.0,80.0,90.0,100.0),
+labels=c("0",
+"1 TO 9",
+"10 TO 19",
+"20 TO 29",
+"30 TO 39",
+"40 TO 49",
+"50 TO 59",
+"60 TO 69",
+"70 TO 79",
+"80 TO 89",
+"90 TO 99",
+"100 TO 99999999: 100+"))
+data$T4971100[1.0 <= data$T4971100 & data$T4971100 <= 9.0] <- 1.0
+data$T4971100[10.0 <= data$T4971100 & data$T4971100 <= 19.0] <- 10.0
+data$T4971100[20.0 <= data$T4971100 & data$T4971100 <= 29.0] <- 20.0
+data$T4971100[30.0 <= data$T4971100 & data$T4971100 <= 39.0] <- 30.0
+data$T4971100[40.0 <= data$T4971100 & data$T4971100 <= 49.0] <- 40.0
+data$T4971100[50.0 <= data$T4971100 & data$T4971100 <= 59.0] <- 50.0
+data$T4971100[60.0 <= data$T4971100 & data$T4971100 <= 69.0] <- 60.0
+data$T4971100[70.0 <= data$T4971100 & data$T4971100 <= 79.0] <- 70.0
+data$T4971100[80.0 <= data$T4971100 & data$T4971100 <= 89.0] <- 80.0
+data$T4971100[90.0 <= data$T4971100 & data$T4971100 <= 99.0] <- 90.0
+data$T4971100[100.0 <= data$T4971100 & data$T4971100 <= 9.9999999E7] <- 100.0
+data$T4971100 <- factor(data$T4971100,
+levels=c(0.0,1.0,10.0,20.0,30.0,40.0,50.0,60.0,70.0,80.0,90.0,100.0),
+labels=c("0",
+"1 TO 9",
+"10 TO 19",
+"20 TO 29",
+"30 TO 39",
+"40 TO 49",
+"50 TO 59",
+"60 TO 69",
+"70 TO 79",
+"80 TO 89",
+"90 TO 99",
+"100 TO 99999999: 100+"))
+data$T4981600[1.0 <= data$T4981600 & data$T4981600 <= 99.0] <- 1.0
+data$T4981600[100.0 <= data$T4981600 & data$T4981600 <= 199.0] <- 100.0
+data$T4981600[200.0 <= data$T4981600 & data$T4981600 <= 299.0] <- 200.0
+data$T4981600[300.0 <= data$T4981600 & data$T4981600 <= 399.0] <- 300.0
+data$T4981600[400.0 <= data$T4981600 & data$T4981600 <= 499.0] <- 400.0
+data$T4981600[500.0 <= data$T4981600 & data$T4981600 <= 599.0] <- 500.0
+data$T4981600[600.0 <= data$T4981600 & data$T4981600 <= 699.0] <- 600.0
+data$T4981600[700.0 <= data$T4981600 & data$T4981600 <= 799.0] <- 700.0
+data$T4981600[800.0 <= data$T4981600 & data$T4981600 <= 899.0] <- 800.0
+data$T4981600[900.0 <= data$T4981600 & data$T4981600 <= 999.0] <- 900.0
+data$T4981600[1000.0 <= data$T4981600 & data$T4981600 <= 9.9999999E7] <- 1000.0
+data$T4981600 <- factor(data$T4981600,
+levels=c(0.0,1.0,100.0,200.0,300.0,400.0,500.0,600.0,700.0,800.0,900.0,1000.0),
+labels=c("0",
+"1 TO 99: .01-.09",
+"100 TO 199: 1.00-1.99",
+"200 TO 299: 2.00-2.99",
+"300 TO 399: 3.00-3.99",
+"400 TO 499: 4.00-4.99",
+"500 TO 599: 5.00-5.99",
+"600 TO 699: 6.00-6.99",
+"700 TO 799: 7.00-7.99",
+"800 TO 899: 8.00-8.99",
+"900 TO 999: 9.00-9.99",
+"1000 TO 99999999: 10.00+"))
+data$T4981700[1.0 <= data$T4981700 & data$T4981700 <= 99.0] <- 1.0
+data$T4981700[100.0 <= data$T4981700 & data$T4981700 <= 199.0] <- 100.0
+data$T4981700[200.0 <= data$T4981700 & data$T4981700 <= 299.0] <- 200.0
+data$T4981700[300.0 <= data$T4981700 & data$T4981700 <= 399.0] <- 300.0
+data$T4981700[400.0 <= data$T4981700 & data$T4981700 <= 499.0] <- 400.0
+data$T4981700[500.0 <= data$T4981700 & data$T4981700 <= 599.0] <- 500.0
+data$T4981700[600.0 <= data$T4981700 & data$T4981700 <= 699.0] <- 600.0
+data$T4981700[700.0 <= data$T4981700 & data$T4981700 <= 799.0] <- 700.0
+data$T4981700[800.0 <= data$T4981700 & data$T4981700 <= 899.0] <- 800.0
+data$T4981700[900.0 <= data$T4981700 & data$T4981700 <= 999.0] <- 900.0
+data$T4981700[1000.0 <= data$T4981700 & data$T4981700 <= 9.9999999E7] <- 1000.0
+data$T4981700 <- factor(data$T4981700,
+levels=c(0.0,1.0,100.0,200.0,300.0,400.0,500.0,600.0,700.0,800.0,900.0,1000.0),
+labels=c("0",
+"1 TO 99: .01-.09",
+"100 TO 199: 1.00-1.99",
+"200 TO 299: 2.00-2.99",
+"300 TO 399: 3.00-3.99",
+"400 TO 499: 4.00-4.99",
+"500 TO 599: 5.00-5.99",
+"600 TO 699: 6.00-6.99",
+"700 TO 799: 7.00-7.99",
+"800 TO 899: 8.00-8.99",
+"900 TO 999: 9.00-9.99",
+"1000 TO 99999999: 10.00+"))
+data$T4981800[1.0 <= data$T4981800 & data$T4981800 <= 99.0] <- 1.0
+data$T4981800[100.0 <= data$T4981800 & data$T4981800 <= 199.0] <- 100.0
+data$T4981800[200.0 <= data$T4981800 & data$T4981800 <= 299.0] <- 200.0
+data$T4981800[300.0 <= data$T4981800 & data$T4981800 <= 399.0] <- 300.0
+data$T4981800[400.0 <= data$T4981800 & data$T4981800 <= 499.0] <- 400.0
+data$T4981800[500.0 <= data$T4981800 & data$T4981800 <= 599.0] <- 500.0
+data$T4981800[600.0 <= data$T4981800 & data$T4981800 <= 699.0] <- 600.0
+data$T4981800[700.0 <= data$T4981800 & data$T4981800 <= 799.0] <- 700.0
+data$T4981800[800.0 <= data$T4981800 & data$T4981800 <= 899.0] <- 800.0
+data$T4981800[900.0 <= data$T4981800 & data$T4981800 <= 999.0] <- 900.0
+data$T4981800[1000.0 <= data$T4981800 & data$T4981800 <= 9.9999999E7] <- 1000.0
+data$T4981800 <- factor(data$T4981800,
+levels=c(0.0,1.0,100.0,200.0,300.0,400.0,500.0,600.0,700.0,800.0,900.0,1000.0),
+labels=c("0",
+"1 TO 99: .01-.09",
+"100 TO 199: 1.00-1.99",
+"200 TO 299: 2.00-2.99",
+"300 TO 399: 3.00-3.99",
+"400 TO 499: 4.00-4.99",
+"500 TO 599: 5.00-5.99",
+"600 TO 699: 6.00-6.99",
+"700 TO 799: 7.00-7.99",
+"800 TO 899: 8.00-8.99",
+"900 TO 999: 9.00-9.99",
+"1000 TO 99999999: 10.00+"))
+data$T4981900[1.0 <= data$T4981900 & data$T4981900 <= 99.0] <- 1.0
+data$T4981900[100.0 <= data$T4981900 & data$T4981900 <= 199.0] <- 100.0
+data$T4981900[200.0 <= data$T4981900 & data$T4981900 <= 299.0] <- 200.0
+data$T4981900[300.0 <= data$T4981900 & data$T4981900 <= 399.0] <- 300.0
+data$T4981900[400.0 <= data$T4981900 & data$T4981900 <= 499.0] <- 400.0
+data$T4981900[500.0 <= data$T4981900 & data$T4981900 <= 599.0] <- 500.0
+data$T4981900[600.0 <= data$T4981900 & data$T4981900 <= 699.0] <- 600.0
+data$T4981900[700.0 <= data$T4981900 & data$T4981900 <= 799.0] <- 700.0
+data$T4981900[800.0 <= data$T4981900 & data$T4981900 <= 899.0] <- 800.0
+data$T4981900[900.0 <= data$T4981900 & data$T4981900 <= 999.0] <- 900.0
+data$T4981900[1000.0 <= data$T4981900 & data$T4981900 <= 9.9999999E7] <- 1000.0
+data$T4981900 <- factor(data$T4981900,
+levels=c(0.0,1.0,100.0,200.0,300.0,400.0,500.0,600.0,700.0,800.0,900.0,1000.0),
+labels=c("0",
+"1 TO 99: .01-.09",
+"100 TO 199: 1.00-1.99",
+"200 TO 299: 2.00-2.99",
+"300 TO 399: 3.00-3.99",
+"400 TO 499: 4.00-4.99",
+"500 TO 599: 5.00-5.99",
+"600 TO 699: 6.00-6.99",
+"700 TO 799: 7.00-7.99",
+"800 TO 899: 8.00-8.99",
+"900 TO 999: 9.00-9.99",
+"1000 TO 99999999: 10.00+"))
+data$T4982000[1.0 <= data$T4982000 & data$T4982000 <= 99.0] <- 1.0
+data$T4982000[100.0 <= data$T4982000 & data$T4982000 <= 199.0] <- 100.0
+data$T4982000[200.0 <= data$T4982000 & data$T4982000 <= 299.0] <- 200.0
+data$T4982000[300.0 <= data$T4982000 & data$T4982000 <= 399.0] <- 300.0
+data$T4982000[400.0 <= data$T4982000 & data$T4982000 <= 499.0] <- 400.0
+data$T4982000[500.0 <= data$T4982000 & data$T4982000 <= 599.0] <- 500.0
+data$T4982000[600.0 <= data$T4982000 & data$T4982000 <= 699.0] <- 600.0
+data$T4982000[700.0 <= data$T4982000 & data$T4982000 <= 799.0] <- 700.0
+data$T4982000[800.0 <= data$T4982000 & data$T4982000 <= 899.0] <- 800.0
+data$T4982000[900.0 <= data$T4982000 & data$T4982000 <= 999.0] <- 900.0
+data$T4982000[1000.0 <= data$T4982000 & data$T4982000 <= 9.9999999E7] <- 1000.0
+data$T4982000 <- factor(data$T4982000,
+levels=c(0.0,1.0,100.0,200.0,300.0,400.0,500.0,600.0,700.0,800.0,900.0,1000.0),
+labels=c("0",
+"1 TO 99: .01-.09",
+"100 TO 199: 1.00-1.99",
+"200 TO 299: 2.00-2.99",
+"300 TO 399: 3.00-3.99",
+"400 TO 499: 4.00-4.99",
+"500 TO 599: 5.00-5.99",
+"600 TO 699: 6.00-6.99",
+"700 TO 799: 7.00-7.99",
+"800 TO 899: 8.00-8.99",
+"900 TO 999: 9.00-9.99",
+"1000 TO 99999999: 10.00+"))
+data$T4982100[1.0 <= data$T4982100 & data$T4982100 <= 99.0] <- 1.0
+data$T4982100[100.0 <= data$T4982100 & data$T4982100 <= 199.0] <- 100.0
+data$T4982100[200.0 <= data$T4982100 & data$T4982100 <= 299.0] <- 200.0
+data$T4982100[300.0 <= data$T4982100 & data$T4982100 <= 399.0] <- 300.0
+data$T4982100[400.0 <= data$T4982100 & data$T4982100 <= 499.0] <- 400.0
+data$T4982100[500.0 <= data$T4982100 & data$T4982100 <= 599.0] <- 500.0
+data$T4982100[600.0 <= data$T4982100 & data$T4982100 <= 699.0] <- 600.0
+data$T4982100[700.0 <= data$T4982100 & data$T4982100 <= 799.0] <- 700.0
+data$T4982100[800.0 <= data$T4982100 & data$T4982100 <= 899.0] <- 800.0
+data$T4982100[900.0 <= data$T4982100 & data$T4982100 <= 999.0] <- 900.0
+data$T4982100[1000.0 <= data$T4982100 & data$T4982100 <= 9.9999999E7] <- 1000.0
+data$T4982100 <- factor(data$T4982100,
+levels=c(0.0,1.0,100.0,200.0,300.0,400.0,500.0,600.0,700.0,800.0,900.0,1000.0),
+labels=c("0",
+"1 TO 99: .01-.09",
+"100 TO 199: 1.00-1.99",
+"200 TO 299: 2.00-2.99",
+"300 TO 399: 3.00-3.99",
+"400 TO 499: 4.00-4.99",
+"500 TO 599: 5.00-5.99",
+"600 TO 699: 6.00-6.99",
+"700 TO 799: 7.00-7.99",
+"800 TO 899: 8.00-8.99",
+"900 TO 999: 9.00-9.99",
+"1000 TO 99999999: 10.00+"))
+data$T4982200[1.0 <= data$T4982200 & data$T4982200 <= 99.0] <- 1.0
+data$T4982200[100.0 <= data$T4982200 & data$T4982200 <= 199.0] <- 100.0
+data$T4982200[200.0 <= data$T4982200 & data$T4982200 <= 299.0] <- 200.0
+data$T4982200[300.0 <= data$T4982200 & data$T4982200 <= 399.0] <- 300.0
+data$T4982200[400.0 <= data$T4982200 & data$T4982200 <= 499.0] <- 400.0
+data$T4982200[500.0 <= data$T4982200 & data$T4982200 <= 599.0] <- 500.0
+data$T4982200[600.0 <= data$T4982200 & data$T4982200 <= 699.0] <- 600.0
+data$T4982200[700.0 <= data$T4982200 & data$T4982200 <= 799.0] <- 700.0
+data$T4982200[800.0 <= data$T4982200 & data$T4982200 <= 899.0] <- 800.0
+data$T4982200[900.0 <= data$T4982200 & data$T4982200 <= 999.0] <- 900.0
+data$T4982200[1000.0 <= data$T4982200 & data$T4982200 <= 9.9999999E7] <- 1000.0
+data$T4982200 <- factor(data$T4982200,
+levels=c(0.0,1.0,100.0,200.0,300.0,400.0,500.0,600.0,700.0,800.0,900.0,1000.0),
+labels=c("0",
+"1 TO 99: .01-.09",
+"100 TO 199: 1.00-1.99",
+"200 TO 299: 2.00-2.99",
+"300 TO 399: 3.00-3.99",
+"400 TO 499: 4.00-4.99",
+"500 TO 599: 5.00-5.99",
+"600 TO 699: 6.00-6.99",
+"700 TO 799: 7.00-7.99",
+"800 TO 899: 8.00-8.99",
+"900 TO 999: 9.00-9.99",
+"1000 TO 99999999: 10.00+"))
+data$T4982300[1.0 <= data$T4982300 & data$T4982300 <= 99.0] <- 1.0
+data$T4982300[100.0 <= data$T4982300 & data$T4982300 <= 199.0] <- 100.0
+data$T4982300[200.0 <= data$T4982300 & data$T4982300 <= 299.0] <- 200.0
+data$T4982300[300.0 <= data$T4982300 & data$T4982300 <= 399.0] <- 300.0
+data$T4982300[400.0 <= data$T4982300 & data$T4982300 <= 499.0] <- 400.0
+data$T4982300[500.0 <= data$T4982300 & data$T4982300 <= 599.0] <- 500.0
+data$T4982300[600.0 <= data$T4982300 & data$T4982300 <= 699.0] <- 600.0
+data$T4982300[700.0 <= data$T4982300 & data$T4982300 <= 799.0] <- 700.0
+data$T4982300[800.0 <= data$T4982300 & data$T4982300 <= 899.0] <- 800.0
+data$T4982300[900.0 <= data$T4982300 & data$T4982300 <= 999.0] <- 900.0
+data$T4982300[1000.0 <= data$T4982300 & data$T4982300 <= 9.9999999E7] <- 1000.0
+data$T4982300 <- factor(data$T4982300,
+levels=c(0.0,1.0,100.0,200.0,300.0,400.0,500.0,600.0,700.0,800.0,900.0,1000.0),
+labels=c("0",
+"1 TO 99: .01-.09",
+"100 TO 199: 1.00-1.99",
+"200 TO 299: 2.00-2.99",
+"300 TO 399: 3.00-3.99",
+"400 TO 499: 4.00-4.99",
+"500 TO 599: 5.00-5.99",
+"600 TO 699: 6.00-6.99",
+"700 TO 799: 7.00-7.99",
+"800 TO 899: 8.00-8.99",
+"900 TO 999: 9.00-9.99",
+"1000 TO 99999999: 10.00+"))
+data$T4982400[1.0 <= data$T4982400 & data$T4982400 <= 9.0] <- 1.0
+data$T4982400[10.0 <= data$T4982400 & data$T4982400 <= 19.0] <- 10.0
+data$T4982400[20.0 <= data$T4982400 & data$T4982400 <= 29.0] <- 20.0
+data$T4982400[30.0 <= data$T4982400 & data$T4982400 <= 39.0] <- 30.0
+data$T4982400[40.0 <= data$T4982400 & data$T4982400 <= 49.0] <- 40.0
+data$T4982400[50.0 <= data$T4982400 & data$T4982400 <= 59.0] <- 50.0
+data$T4982400[60.0 <= data$T4982400 & data$T4982400 <= 69.0] <- 60.0
+data$T4982400[70.0 <= data$T4982400 & data$T4982400 <= 79.0] <- 70.0
+data$T4982400[80.0 <= data$T4982400 & data$T4982400 <= 89.0] <- 80.0
+data$T4982400[90.0 <= data$T4982400 & data$T4982400 <= 99.0] <- 90.0
+data$T4982400[100.0 <= data$T4982400 & data$T4982400 <= 9.9999999E7] <- 100.0
+data$T4982400 <- factor(data$T4982400,
+levels=c(0.0,1.0,10.0,20.0,30.0,40.0,50.0,60.0,70.0,80.0,90.0,100.0),
+labels=c("0",
+"1 TO 9",
+"10 TO 19",
+"20 TO 29",
+"30 TO 39",
+"40 TO 49",
+"50 TO 59",
+"60 TO 69",
+"70 TO 79",
+"80 TO 89",
+"90 TO 99",
+"100 TO 99999999: 100+"))
+data$T4982500[1.0 <= data$T4982500 & data$T4982500 <= 9.0] <- 1.0
+data$T4982500[10.0 <= data$T4982500 & data$T4982500 <= 19.0] <- 10.0
+data$T4982500[20.0 <= data$T4982500 & data$T4982500 <= 29.0] <- 20.0
+data$T4982500[30.0 <= data$T4982500 & data$T4982500 <= 39.0] <- 30.0
+data$T4982500[40.0 <= data$T4982500 & data$T4982500 <= 49.0] <- 40.0
+data$T4982500[50.0 <= data$T4982500 & data$T4982500 <= 59.0] <- 50.0
+data$T4982500[60.0 <= data$T4982500 & data$T4982500 <= 69.0] <- 60.0
+data$T4982500[70.0 <= data$T4982500 & data$T4982500 <= 79.0] <- 70.0
+data$T4982500[80.0 <= data$T4982500 & data$T4982500 <= 89.0] <- 80.0
+data$T4982500[90.0 <= data$T4982500 & data$T4982500 <= 99.0] <- 90.0
+data$T4982500[100.0 <= data$T4982500 & data$T4982500 <= 9.9999999E7] <- 100.0
+data$T4982500 <- factor(data$T4982500,
+levels=c(0.0,1.0,10.0,20.0,30.0,40.0,50.0,60.0,70.0,80.0,90.0,100.0),
+labels=c("0",
+"1 TO 9",
+"10 TO 19",
+"20 TO 29",
+"30 TO 39",
+"40 TO 49",
+"50 TO 59",
+"60 TO 69",
+"70 TO 79",
+"80 TO 89",
+"90 TO 99",
+"100 TO 99999999: 100+"))
+data$T4982600[1.0 <= data$T4982600 & data$T4982600 <= 9.0] <- 1.0
+data$T4982600[10.0 <= data$T4982600 & data$T4982600 <= 19.0] <- 10.0
+data$T4982600[20.0 <= data$T4982600 & data$T4982600 <= 29.0] <- 20.0
+data$T4982600[30.0 <= data$T4982600 & data$T4982600 <= 39.0] <- 30.0
+data$T4982600[40.0 <= data$T4982600 & data$T4982600 <= 49.0] <- 40.0
+data$T4982600[50.0 <= data$T4982600 & data$T4982600 <= 59.0] <- 50.0
+data$T4982600[60.0 <= data$T4982600 & data$T4982600 <= 69.0] <- 60.0
+data$T4982600[70.0 <= data$T4982600 & data$T4982600 <= 79.0] <- 70.0
+data$T4982600[80.0 <= data$T4982600 & data$T4982600 <= 89.0] <- 80.0
+data$T4982600[90.0 <= data$T4982600 & data$T4982600 <= 99.0] <- 90.0
+data$T4982600[100.0 <= data$T4982600 & data$T4982600 <= 9.9999999E7] <- 100.0
+data$T4982600 <- factor(data$T4982600,
+levels=c(0.0,1.0,10.0,20.0,30.0,40.0,50.0,60.0,70.0,80.0,90.0,100.0),
+labels=c("0",
+"1 TO 9",
+"10 TO 19",
+"20 TO 29",
+"30 TO 39",
+"40 TO 49",
+"50 TO 59",
+"60 TO 69",
+"70 TO 79",
+"80 TO 89",
+"90 TO 99",
+"100 TO 99999999: 100+"))
+data$T4982700[1.0 <= data$T4982700 & data$T4982700 <= 9.0] <- 1.0
+data$T4982700[10.0 <= data$T4982700 & data$T4982700 <= 19.0] <- 10.0
+data$T4982700[20.0 <= data$T4982700 & data$T4982700 <= 29.0] <- 20.0
+data$T4982700[30.0 <= data$T4982700 & data$T4982700 <= 39.0] <- 30.0
+data$T4982700[40.0 <= data$T4982700 & data$T4982700 <= 49.0] <- 40.0
+data$T4982700[50.0 <= data$T4982700 & data$T4982700 <= 59.0] <- 50.0
+data$T4982700[60.0 <= data$T4982700 & data$T4982700 <= 69.0] <- 60.0
+data$T4982700[70.0 <= data$T4982700 & data$T4982700 <= 79.0] <- 70.0
+data$T4982700[80.0 <= data$T4982700 & data$T4982700 <= 89.0] <- 80.0
+data$T4982700[90.0 <= data$T4982700 & data$T4982700 <= 99.0] <- 90.0
+data$T4982700[100.0 <= data$T4982700 & data$T4982700 <= 9.9999999E7] <- 100.0
+data$T4982700 <- factor(data$T4982700,
+levels=c(0.0,1.0,10.0,20.0,30.0,40.0,50.0,60.0,70.0,80.0,90.0,100.0),
+labels=c("0",
+"1 TO 9",
+"10 TO 19",
+"20 TO 29",
+"30 TO 39",
+"40 TO 49",
+"50 TO 59",
+"60 TO 69",
+"70 TO 79",
+"80 TO 89",
+"90 TO 99",
+"100 TO 99999999: 100+"))
+data$T4982800[1.0 <= data$T4982800 & data$T4982800 <= 9.0] <- 1.0
+data$T4982800[10.0 <= data$T4982800 & data$T4982800 <= 19.0] <- 10.0
+data$T4982800[20.0 <= data$T4982800 & data$T4982800 <= 29.0] <- 20.0
+data$T4982800[30.0 <= data$T4982800 & data$T4982800 <= 39.0] <- 30.0
+data$T4982800[40.0 <= data$T4982800 & data$T4982800 <= 49.0] <- 40.0
+data$T4982800[50.0 <= data$T4982800 & data$T4982800 <= 59.0] <- 50.0
+data$T4982800[60.0 <= data$T4982800 & data$T4982800 <= 69.0] <- 60.0
+data$T4982800[70.0 <= data$T4982800 & data$T4982800 <= 79.0] <- 70.0
+data$T4982800[80.0 <= data$T4982800 & data$T4982800 <= 89.0] <- 80.0
+data$T4982800[90.0 <= data$T4982800 & data$T4982800 <= 99.0] <- 90.0
+data$T4982800[100.0 <= data$T4982800 & data$T4982800 <= 9.9999999E7] <- 100.0
+data$T4982800 <- factor(data$T4982800,
+levels=c(0.0,1.0,10.0,20.0,30.0,40.0,50.0,60.0,70.0,80.0,90.0,100.0),
+labels=c("0",
+"1 TO 9",
+"10 TO 19",
+"20 TO 29",
+"30 TO 39",
+"40 TO 49",
+"50 TO 59",
+"60 TO 69",
+"70 TO 79",
+"80 TO 89",
+"90 TO 99",
+"100 TO 99999999: 100+"))
+data$T4982900[1.0 <= data$T4982900 & data$T4982900 <= 9.0] <- 1.0
+data$T4982900[10.0 <= data$T4982900 & data$T4982900 <= 19.0] <- 10.0
+data$T4982900[20.0 <= data$T4982900 & data$T4982900 <= 29.0] <- 20.0
+data$T4982900[30.0 <= data$T4982900 & data$T4982900 <= 39.0] <- 30.0
+data$T4982900[40.0 <= data$T4982900 & data$T4982900 <= 49.0] <- 40.0
+data$T4982900[50.0 <= data$T4982900 & data$T4982900 <= 59.0] <- 50.0
+data$T4982900[60.0 <= data$T4982900 & data$T4982900 <= 69.0] <- 60.0
+data$T4982900[70.0 <= data$T4982900 & data$T4982900 <= 79.0] <- 70.0
+data$T4982900[80.0 <= data$T4982900 & data$T4982900 <= 89.0] <- 80.0
+data$T4982900[90.0 <= data$T4982900 & data$T4982900 <= 99.0] <- 90.0
+data$T4982900[100.0 <= data$T4982900 & data$T4982900 <= 9.9999999E7] <- 100.0
+data$T4982900 <- factor(data$T4982900,
+levels=c(0.0,1.0,10.0,20.0,30.0,40.0,50.0,60.0,70.0,80.0,90.0,100.0),
+labels=c("0",
+"1 TO 9",
+"10 TO 19",
+"20 TO 29",
+"30 TO 39",
+"40 TO 49",
+"50 TO 59",
+"60 TO 69",
+"70 TO 79",
+"80 TO 89",
+"90 TO 99",
+"100 TO 99999999: 100+"))
+data$T4983000[1.0 <= data$T4983000 & data$T4983000 <= 9.0] <- 1.0
+data$T4983000[10.0 <= data$T4983000 & data$T4983000 <= 19.0] <- 10.0
+data$T4983000[20.0 <= data$T4983000 & data$T4983000 <= 29.0] <- 20.0
+data$T4983000[30.0 <= data$T4983000 & data$T4983000 <= 39.0] <- 30.0
+data$T4983000[40.0 <= data$T4983000 & data$T4983000 <= 49.0] <- 40.0
+data$T4983000[50.0 <= data$T4983000 & data$T4983000 <= 59.0] <- 50.0
+data$T4983000[60.0 <= data$T4983000 & data$T4983000 <= 69.0] <- 60.0
+data$T4983000[70.0 <= data$T4983000 & data$T4983000 <= 79.0] <- 70.0
+data$T4983000[80.0 <= data$T4983000 & data$T4983000 <= 89.0] <- 80.0
+data$T4983000[90.0 <= data$T4983000 & data$T4983000 <= 99.0] <- 90.0
+data$T4983000[100.0 <= data$T4983000 & data$T4983000 <= 9.9999999E7] <- 100.0
+data$T4983000 <- factor(data$T4983000,
+levels=c(0.0,1.0,10.0,20.0,30.0,40.0,50.0,60.0,70.0,80.0,90.0,100.0),
+labels=c("0",
+"1 TO 9",
+"10 TO 19",
+"20 TO 29",
+"30 TO 39",
+"40 TO 49",
+"50 TO 59",
+"60 TO 69",
+"70 TO 79",
+"80 TO 89",
+"90 TO 99",
+"100 TO 99999999: 100+"))
+data$T4983100[1.0 <= data$T4983100 & data$T4983100 <= 9.0] <- 1.0
+data$T4983100[10.0 <= data$T4983100 & data$T4983100 <= 19.0] <- 10.0
+data$T4983100[20.0 <= data$T4983100 & data$T4983100 <= 29.0] <- 20.0
+data$T4983100[30.0 <= data$T4983100 & data$T4983100 <= 39.0] <- 30.0
+data$T4983100[40.0 <= data$T4983100 & data$T4983100 <= 49.0] <- 40.0
+data$T4983100[50.0 <= data$T4983100 & data$T4983100 <= 59.0] <- 50.0
+data$T4983100[60.0 <= data$T4983100 & data$T4983100 <= 69.0] <- 60.0
+data$T4983100[70.0 <= data$T4983100 & data$T4983100 <= 79.0] <- 70.0
+data$T4983100[80.0 <= data$T4983100 & data$T4983100 <= 89.0] <- 80.0
+data$T4983100[90.0 <= data$T4983100 & data$T4983100 <= 99.0] <- 90.0
+data$T4983100[100.0 <= data$T4983100 & data$T4983100 <= 9.9999999E7] <- 100.0
+data$T4983100 <- factor(data$T4983100,
+levels=c(0.0,1.0,10.0,20.0,30.0,40.0,50.0,60.0,70.0,80.0,90.0,100.0),
+labels=c("0",
+"1 TO 9",
+"10 TO 19",
+"20 TO 29",
+"30 TO 39",
+"40 TO 49",
+"50 TO 59",
+"60 TO 69",
+"70 TO 79",
+"80 TO 89",
+"90 TO 99",
+"100 TO 99999999: 100+"))
+data$T4990400[1.0 <= data$T4990400 & data$T4990400 <= 4999.0] <- 1.0
+data$T4990400[5000.0 <= data$T4990400 & data$T4990400 <= 9999.0] <- 5000.0
+data$T4990400[10000.0 <= data$T4990400 & data$T4990400 <= 14999.0] <- 10000.0
+data$T4990400[15000.0 <= data$T4990400 & data$T4990400 <= 19999.0] <- 15000.0
+data$T4990400[20000.0 <= data$T4990400 & data$T4990400 <= 24999.0] <- 20000.0
+data$T4990400[25000.0 <= data$T4990400 & data$T4990400 <= 29999.0] <- 25000.0
+data$T4990400[30000.0 <= data$T4990400 & data$T4990400 <= 39999.0] <- 30000.0
+data$T4990400[40000.0 <= data$T4990400 & data$T4990400 <= 49999.0] <- 40000.0
+data$T4990400[50000.0 <= data$T4990400 & data$T4990400 <= 59999.0] <- 50000.0
+data$T4990400[60000.0 <= data$T4990400 & data$T4990400 <= 69999.0] <- 60000.0
+data$T4990400[70000.0 <= data$T4990400 & data$T4990400 <= 79999.0] <- 70000.0
+data$T4990400[80000.0 <= data$T4990400 & data$T4990400 <= 89999.0] <- 80000.0
+data$T4990400[90000.0 <= data$T4990400 & data$T4990400 <= 99999.0] <- 90000.0
+data$T4990400[100000.0 <= data$T4990400 & data$T4990400 <= 149999.0] <- 100000.0
+data$T4990400[150000.0 <= data$T4990400 & data$T4990400 <= 9.99999999999E11] <- 150000.0
+data$T4990400 <- factor(data$T4990400,
+levels=c(0.0,1.0,5000.0,10000.0,15000.0,20000.0,25000.0,30000.0,40000.0,50000.0,60000.0,70000.0,80000.0,90000.0,100000.0,150000.0),
+labels=c("0",
+"1 TO 4999",
+"5000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 29999",
+"30000 TO 39999",
+"40000 TO 49999",
+"50000 TO 59999",
+"60000 TO 69999",
+"70000 TO 79999",
+"80000 TO 89999",
+"90000 TO 99999",
+"100000 TO 149999",
+"150000 TO 999999999999: 150000+"))
+data$T4990500[1.0 <= data$T4990500 & data$T4990500 <= 4999.0] <- 1.0
+data$T4990500[5000.0 <= data$T4990500 & data$T4990500 <= 9999.0] <- 5000.0
+data$T4990500[10000.0 <= data$T4990500 & data$T4990500 <= 14999.0] <- 10000.0
+data$T4990500[15000.0 <= data$T4990500 & data$T4990500 <= 19999.0] <- 15000.0
+data$T4990500[20000.0 <= data$T4990500 & data$T4990500 <= 24999.0] <- 20000.0
+data$T4990500[25000.0 <= data$T4990500 & data$T4990500 <= 29999.0] <- 25000.0
+data$T4990500[30000.0 <= data$T4990500 & data$T4990500 <= 39999.0] <- 30000.0
+data$T4990500[40000.0 <= data$T4990500 & data$T4990500 <= 49999.0] <- 40000.0
+data$T4990500[50000.0 <= data$T4990500 & data$T4990500 <= 59999.0] <- 50000.0
+data$T4990500[60000.0 <= data$T4990500 & data$T4990500 <= 69999.0] <- 60000.0
+data$T4990500[70000.0 <= data$T4990500 & data$T4990500 <= 79999.0] <- 70000.0
+data$T4990500[80000.0 <= data$T4990500 & data$T4990500 <= 89999.0] <- 80000.0
+data$T4990500[90000.0 <= data$T4990500 & data$T4990500 <= 99999.0] <- 90000.0
+data$T4990500[100000.0 <= data$T4990500 & data$T4990500 <= 149999.0] <- 100000.0
+data$T4990500[150000.0 <= data$T4990500 & data$T4990500 <= 9.99999999999E11] <- 150000.0
+data$T4990500 <- factor(data$T4990500,
+levels=c(0.0,1.0,5000.0,10000.0,15000.0,20000.0,25000.0,30000.0,40000.0,50000.0,60000.0,70000.0,80000.0,90000.0,100000.0,150000.0),
+labels=c("0",
+"1 TO 4999",
+"5000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 29999",
+"30000 TO 39999",
+"40000 TO 49999",
+"50000 TO 59999",
+"60000 TO 69999",
+"70000 TO 79999",
+"80000 TO 89999",
+"90000 TO 99999",
+"100000 TO 149999",
+"150000 TO 999999999999: 150000+"))
+data$T4990600[1.0 <= data$T4990600 & data$T4990600 <= 4999.0] <- 1.0
+data$T4990600[5000.0 <= data$T4990600 & data$T4990600 <= 9999.0] <- 5000.0
+data$T4990600[10000.0 <= data$T4990600 & data$T4990600 <= 14999.0] <- 10000.0
+data$T4990600[15000.0 <= data$T4990600 & data$T4990600 <= 19999.0] <- 15000.0
+data$T4990600[20000.0 <= data$T4990600 & data$T4990600 <= 24999.0] <- 20000.0
+data$T4990600[25000.0 <= data$T4990600 & data$T4990600 <= 29999.0] <- 25000.0
+data$T4990600[30000.0 <= data$T4990600 & data$T4990600 <= 39999.0] <- 30000.0
+data$T4990600[40000.0 <= data$T4990600 & data$T4990600 <= 49999.0] <- 40000.0
+data$T4990600[50000.0 <= data$T4990600 & data$T4990600 <= 59999.0] <- 50000.0
+data$T4990600[60000.0 <= data$T4990600 & data$T4990600 <= 69999.0] <- 60000.0
+data$T4990600[70000.0 <= data$T4990600 & data$T4990600 <= 79999.0] <- 70000.0
+data$T4990600[80000.0 <= data$T4990600 & data$T4990600 <= 89999.0] <- 80000.0
+data$T4990600[90000.0 <= data$T4990600 & data$T4990600 <= 99999.0] <- 90000.0
+data$T4990600[100000.0 <= data$T4990600 & data$T4990600 <= 149999.0] <- 100000.0
+data$T4990600[150000.0 <= data$T4990600 & data$T4990600 <= 9.99999999999E11] <- 150000.0
+data$T4990600 <- factor(data$T4990600,
+levels=c(0.0,1.0,5000.0,10000.0,15000.0,20000.0,25000.0,30000.0,40000.0,50000.0,60000.0,70000.0,80000.0,90000.0,100000.0,150000.0),
+labels=c("0",
+"1 TO 4999",
+"5000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 29999",
+"30000 TO 39999",
+"40000 TO 49999",
+"50000 TO 59999",
+"60000 TO 69999",
+"70000 TO 79999",
+"80000 TO 89999",
+"90000 TO 99999",
+"100000 TO 149999",
+"150000 TO 999999999999: 150000+"))
+data$T4990700[1.0 <= data$T4990700 & data$T4990700 <= 4999.0] <- 1.0
+data$T4990700[5000.0 <= data$T4990700 & data$T4990700 <= 9999.0] <- 5000.0
+data$T4990700[10000.0 <= data$T4990700 & data$T4990700 <= 14999.0] <- 10000.0
+data$T4990700[15000.0 <= data$T4990700 & data$T4990700 <= 19999.0] <- 15000.0
+data$T4990700[20000.0 <= data$T4990700 & data$T4990700 <= 24999.0] <- 20000.0
+data$T4990700[25000.0 <= data$T4990700 & data$T4990700 <= 29999.0] <- 25000.0
+data$T4990700[30000.0 <= data$T4990700 & data$T4990700 <= 39999.0] <- 30000.0
+data$T4990700[40000.0 <= data$T4990700 & data$T4990700 <= 49999.0] <- 40000.0
+data$T4990700[50000.0 <= data$T4990700 & data$T4990700 <= 59999.0] <- 50000.0
+data$T4990700[60000.0 <= data$T4990700 & data$T4990700 <= 69999.0] <- 60000.0
+data$T4990700[70000.0 <= data$T4990700 & data$T4990700 <= 79999.0] <- 70000.0
+data$T4990700[80000.0 <= data$T4990700 & data$T4990700 <= 89999.0] <- 80000.0
+data$T4990700[90000.0 <= data$T4990700 & data$T4990700 <= 99999.0] <- 90000.0
+data$T4990700[100000.0 <= data$T4990700 & data$T4990700 <= 149999.0] <- 100000.0
+data$T4990700[150000.0 <= data$T4990700 & data$T4990700 <= 9.99999999999E11] <- 150000.0
+data$T4990700 <- factor(data$T4990700,
+levels=c(0.0,1.0,5000.0,10000.0,15000.0,20000.0,25000.0,30000.0,40000.0,50000.0,60000.0,70000.0,80000.0,90000.0,100000.0,150000.0),
+labels=c("0",
+"1 TO 4999",
+"5000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 29999",
+"30000 TO 39999",
+"40000 TO 49999",
+"50000 TO 59999",
+"60000 TO 69999",
+"70000 TO 79999",
+"80000 TO 89999",
+"90000 TO 99999",
+"100000 TO 149999",
+"150000 TO 999999999999: 150000+"))
+data$T4990800[1.0 <= data$T4990800 & data$T4990800 <= 4999.0] <- 1.0
+data$T4990800[5000.0 <= data$T4990800 & data$T4990800 <= 9999.0] <- 5000.0
+data$T4990800[10000.0 <= data$T4990800 & data$T4990800 <= 14999.0] <- 10000.0
+data$T4990800[15000.0 <= data$T4990800 & data$T4990800 <= 19999.0] <- 15000.0
+data$T4990800[20000.0 <= data$T4990800 & data$T4990800 <= 24999.0] <- 20000.0
+data$T4990800[25000.0 <= data$T4990800 & data$T4990800 <= 29999.0] <- 25000.0
+data$T4990800[30000.0 <= data$T4990800 & data$T4990800 <= 39999.0] <- 30000.0
+data$T4990800[40000.0 <= data$T4990800 & data$T4990800 <= 49999.0] <- 40000.0
+data$T4990800[50000.0 <= data$T4990800 & data$T4990800 <= 59999.0] <- 50000.0
+data$T4990800[60000.0 <= data$T4990800 & data$T4990800 <= 69999.0] <- 60000.0
+data$T4990800[70000.0 <= data$T4990800 & data$T4990800 <= 79999.0] <- 70000.0
+data$T4990800[80000.0 <= data$T4990800 & data$T4990800 <= 89999.0] <- 80000.0
+data$T4990800[90000.0 <= data$T4990800 & data$T4990800 <= 99999.0] <- 90000.0
+data$T4990800[100000.0 <= data$T4990800 & data$T4990800 <= 149999.0] <- 100000.0
+data$T4990800[150000.0 <= data$T4990800 & data$T4990800 <= 9.99999999999E11] <- 150000.0
+data$T4990800 <- factor(data$T4990800,
+levels=c(0.0,1.0,5000.0,10000.0,15000.0,20000.0,25000.0,30000.0,40000.0,50000.0,60000.0,70000.0,80000.0,90000.0,100000.0,150000.0),
+labels=c("0",
+"1 TO 4999",
+"5000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 29999",
+"30000 TO 39999",
+"40000 TO 49999",
+"50000 TO 59999",
+"60000 TO 69999",
+"70000 TO 79999",
+"80000 TO 89999",
+"90000 TO 99999",
+"100000 TO 149999",
+"150000 TO 999999999999: 150000+"))
+data$T4990900[1.0 <= data$T4990900 & data$T4990900 <= 4999.0] <- 1.0
+data$T4990900[5000.0 <= data$T4990900 & data$T4990900 <= 9999.0] <- 5000.0
+data$T4990900[10000.0 <= data$T4990900 & data$T4990900 <= 14999.0] <- 10000.0
+data$T4990900[15000.0 <= data$T4990900 & data$T4990900 <= 19999.0] <- 15000.0
+data$T4990900[20000.0 <= data$T4990900 & data$T4990900 <= 24999.0] <- 20000.0
+data$T4990900[25000.0 <= data$T4990900 & data$T4990900 <= 29999.0] <- 25000.0
+data$T4990900[30000.0 <= data$T4990900 & data$T4990900 <= 39999.0] <- 30000.0
+data$T4990900[40000.0 <= data$T4990900 & data$T4990900 <= 49999.0] <- 40000.0
+data$T4990900[50000.0 <= data$T4990900 & data$T4990900 <= 59999.0] <- 50000.0
+data$T4990900[60000.0 <= data$T4990900 & data$T4990900 <= 69999.0] <- 60000.0
+data$T4990900[70000.0 <= data$T4990900 & data$T4990900 <= 79999.0] <- 70000.0
+data$T4990900[80000.0 <= data$T4990900 & data$T4990900 <= 89999.0] <- 80000.0
+data$T4990900[90000.0 <= data$T4990900 & data$T4990900 <= 99999.0] <- 90000.0
+data$T4990900[100000.0 <= data$T4990900 & data$T4990900 <= 149999.0] <- 100000.0
+data$T4990900[150000.0 <= data$T4990900 & data$T4990900 <= 9.99999999999E11] <- 150000.0
+data$T4990900 <- factor(data$T4990900,
+levels=c(0.0,1.0,5000.0,10000.0,15000.0,20000.0,25000.0,30000.0,40000.0,50000.0,60000.0,70000.0,80000.0,90000.0,100000.0,150000.0),
+labels=c("0",
+"1 TO 4999",
+"5000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 29999",
+"30000 TO 39999",
+"40000 TO 49999",
+"50000 TO 59999",
+"60000 TO 69999",
+"70000 TO 79999",
+"80000 TO 89999",
+"90000 TO 99999",
+"100000 TO 149999",
+"150000 TO 999999999999: 150000+"))
+data$T4991000[1.0 <= data$T4991000 & data$T4991000 <= 4999.0] <- 1.0
+data$T4991000[5000.0 <= data$T4991000 & data$T4991000 <= 9999.0] <- 5000.0
+data$T4991000[10000.0 <= data$T4991000 & data$T4991000 <= 14999.0] <- 10000.0
+data$T4991000[15000.0 <= data$T4991000 & data$T4991000 <= 19999.0] <- 15000.0
+data$T4991000[20000.0 <= data$T4991000 & data$T4991000 <= 24999.0] <- 20000.0
+data$T4991000[25000.0 <= data$T4991000 & data$T4991000 <= 29999.0] <- 25000.0
+data$T4991000[30000.0 <= data$T4991000 & data$T4991000 <= 39999.0] <- 30000.0
+data$T4991000[40000.0 <= data$T4991000 & data$T4991000 <= 49999.0] <- 40000.0
+data$T4991000[50000.0 <= data$T4991000 & data$T4991000 <= 59999.0] <- 50000.0
+data$T4991000[60000.0 <= data$T4991000 & data$T4991000 <= 69999.0] <- 60000.0
+data$T4991000[70000.0 <= data$T4991000 & data$T4991000 <= 79999.0] <- 70000.0
+data$T4991000[80000.0 <= data$T4991000 & data$T4991000 <= 89999.0] <- 80000.0
+data$T4991000[90000.0 <= data$T4991000 & data$T4991000 <= 99999.0] <- 90000.0
+data$T4991000[100000.0 <= data$T4991000 & data$T4991000 <= 149999.0] <- 100000.0
+data$T4991000[150000.0 <= data$T4991000 & data$T4991000 <= 9.99999999999E11] <- 150000.0
+data$T4991000 <- factor(data$T4991000,
+levels=c(0.0,1.0,5000.0,10000.0,15000.0,20000.0,25000.0,30000.0,40000.0,50000.0,60000.0,70000.0,80000.0,90000.0,100000.0,150000.0),
+labels=c("0",
+"1 TO 4999",
+"5000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 29999",
+"30000 TO 39999",
+"40000 TO 49999",
+"50000 TO 59999",
+"60000 TO 69999",
+"70000 TO 79999",
+"80000 TO 89999",
+"90000 TO 99999",
+"100000 TO 149999",
+"150000 TO 999999999999: 150000+"))
+data$T4991100[1.0 <= data$T4991100 & data$T4991100 <= 4999.0] <- 1.0
+data$T4991100[5000.0 <= data$T4991100 & data$T4991100 <= 9999.0] <- 5000.0
+data$T4991100[10000.0 <= data$T4991100 & data$T4991100 <= 14999.0] <- 10000.0
+data$T4991100[15000.0 <= data$T4991100 & data$T4991100 <= 19999.0] <- 15000.0
+data$T4991100[20000.0 <= data$T4991100 & data$T4991100 <= 24999.0] <- 20000.0
+data$T4991100[25000.0 <= data$T4991100 & data$T4991100 <= 29999.0] <- 25000.0
+data$T4991100[30000.0 <= data$T4991100 & data$T4991100 <= 39999.0] <- 30000.0
+data$T4991100[40000.0 <= data$T4991100 & data$T4991100 <= 49999.0] <- 40000.0
+data$T4991100[50000.0 <= data$T4991100 & data$T4991100 <= 59999.0] <- 50000.0
+data$T4991100[60000.0 <= data$T4991100 & data$T4991100 <= 69999.0] <- 60000.0
+data$T4991100[70000.0 <= data$T4991100 & data$T4991100 <= 79999.0] <- 70000.0
+data$T4991100[80000.0 <= data$T4991100 & data$T4991100 <= 89999.0] <- 80000.0
+data$T4991100[90000.0 <= data$T4991100 & data$T4991100 <= 99999.0] <- 90000.0
+data$T4991100[100000.0 <= data$T4991100 & data$T4991100 <= 149999.0] <- 100000.0
+data$T4991100[150000.0 <= data$T4991100 & data$T4991100 <= 9.99999999999E11] <- 150000.0
+data$T4991100 <- factor(data$T4991100,
+levels=c(0.0,1.0,5000.0,10000.0,15000.0,20000.0,25000.0,30000.0,40000.0,50000.0,60000.0,70000.0,80000.0,90000.0,100000.0,150000.0),
+labels=c("0",
+"1 TO 4999",
+"5000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 29999",
+"30000 TO 39999",
+"40000 TO 49999",
+"50000 TO 59999",
+"60000 TO 69999",
+"70000 TO 79999",
+"80000 TO 89999",
+"90000 TO 99999",
+"100000 TO 149999",
+"150000 TO 999999999999: 150000+"))
+data$T4999300[10.0 <= data$T4999300 & data$T4999300 <= 9999.0] <- 10.0
+data$T4999300 <- factor(data$T4999300,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0),
+labels=c("0",
+"1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"7",
+"8",
+"9",
+"10 TO 9999: 10+"))
+data$T5022600[1.0 <= data$T5022600 & data$T5022600 <= 999.0] <- 1.0
+data$T5022600[1000.0 <= data$T5022600 & data$T5022600 <= 1999.0] <- 1000.0
+data$T5022600[2000.0 <= data$T5022600 & data$T5022600 <= 2999.0] <- 2000.0
+data$T5022600[3000.0 <= data$T5022600 & data$T5022600 <= 3999.0] <- 3000.0
+data$T5022600[4000.0 <= data$T5022600 & data$T5022600 <= 4999.0] <- 4000.0
+data$T5022600[5000.0 <= data$T5022600 & data$T5022600 <= 5999.0] <- 5000.0
+data$T5022600[6000.0 <= data$T5022600 & data$T5022600 <= 6999.0] <- 6000.0
+data$T5022600[7000.0 <= data$T5022600 & data$T5022600 <= 7999.0] <- 7000.0
+data$T5022600[8000.0 <= data$T5022600 & data$T5022600 <= 8999.0] <- 8000.0
+data$T5022600[9000.0 <= data$T5022600 & data$T5022600 <= 9999.0] <- 9000.0
+data$T5022600[10000.0 <= data$T5022600 & data$T5022600 <= 14999.0] <- 10000.0
+data$T5022600[15000.0 <= data$T5022600 & data$T5022600 <= 19999.0] <- 15000.0
+data$T5022600[20000.0 <= data$T5022600 & data$T5022600 <= 24999.0] <- 20000.0
+data$T5022600[25000.0 <= data$T5022600 & data$T5022600 <= 49999.0] <- 25000.0
+data$T5022600[50000.0 <= data$T5022600 & data$T5022600 <= 9.9999999E7] <- 50000.0
+data$T5022600 <- factor(data$T5022600,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$T5770800[1.0 <= data$T5770800 & data$T5770800 <= 999.0] <- 1.0
+data$T5770800[1000.0 <= data$T5770800 & data$T5770800 <= 1999.0] <- 1000.0
+data$T5770800[2000.0 <= data$T5770800 & data$T5770800 <= 2999.0] <- 2000.0
+data$T5770800[3000.0 <= data$T5770800 & data$T5770800 <= 3999.0] <- 3000.0
+data$T5770800[4000.0 <= data$T5770800 & data$T5770800 <= 4999.0] <- 4000.0
+data$T5770800[5000.0 <= data$T5770800 & data$T5770800 <= 5999.0] <- 5000.0
+data$T5770800[6000.0 <= data$T5770800 & data$T5770800 <= 6999.0] <- 6000.0
+data$T5770800[7000.0 <= data$T5770800 & data$T5770800 <= 7999.0] <- 7000.0
+data$T5770800[8000.0 <= data$T5770800 & data$T5770800 <= 8999.0] <- 8000.0
+data$T5770800[9000.0 <= data$T5770800 & data$T5770800 <= 9999.0] <- 9000.0
+data$T5770800[10000.0 <= data$T5770800 & data$T5770800 <= 14999.0] <- 10000.0
+data$T5770800[15000.0 <= data$T5770800 & data$T5770800 <= 19999.0] <- 15000.0
+data$T5770800[20000.0 <= data$T5770800 & data$T5770800 <= 24999.0] <- 20000.0
+data$T5770800[25000.0 <= data$T5770800 & data$T5770800 <= 49999.0] <- 25000.0
+data$T5770800[50000.0 <= data$T5770800 & data$T5770800 <= 9.9999999E7] <- 50000.0
+data$T5770800 <- factor(data$T5770800,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$T8218700[1.0 <= data$T8218700 & data$T8218700 <= 999.0] <- 1.0
+data$T8218700[1000.0 <= data$T8218700 & data$T8218700 <= 1999.0] <- 1000.0
+data$T8218700[2000.0 <= data$T8218700 & data$T8218700 <= 2999.0] <- 2000.0
+data$T8218700[3000.0 <= data$T8218700 & data$T8218700 <= 3999.0] <- 3000.0
+data$T8218700[4000.0 <= data$T8218700 & data$T8218700 <= 4999.0] <- 4000.0
+data$T8218700[5000.0 <= data$T8218700 & data$T8218700 <= 5999.0] <- 5000.0
+data$T8218700[6000.0 <= data$T8218700 & data$T8218700 <= 6999.0] <- 6000.0
+data$T8218700[7000.0 <= data$T8218700 & data$T8218700 <= 7999.0] <- 7000.0
+data$T8218700[8000.0 <= data$T8218700 & data$T8218700 <= 8999.0] <- 8000.0
+data$T8218700[9000.0 <= data$T8218700 & data$T8218700 <= 9999.0] <- 9000.0
+data$T8218700[10000.0 <= data$T8218700 & data$T8218700 <= 14999.0] <- 10000.0
+data$T8218700[15000.0 <= data$T8218700 & data$T8218700 <= 19999.0] <- 15000.0
+data$T8218700[20000.0 <= data$T8218700 & data$T8218700 <= 24999.0] <- 20000.0
+data$T8218700[25000.0 <= data$T8218700 & data$T8218700 <= 49999.0] <- 25000.0
+data$T8218700[50000.0 <= data$T8218700 & data$T8218700 <= 9.9999999E7] <- 50000.0
+data$T8218700 <- factor(data$T8218700,
+levels=c(0.0,1.0,1000.0,2000.0,3000.0,4000.0,5000.0,6000.0,7000.0,8000.0,9000.0,10000.0,15000.0,20000.0,25000.0,50000.0),
+labels=c("0",
+"1 TO 999",
+"1000 TO 1999",
+"2000 TO 2999",
+"3000 TO 3999",
+"4000 TO 4999",
+"5000 TO 5999",
+"6000 TO 6999",
+"7000 TO 7999",
+"8000 TO 8999",
+"9000 TO 9999",
+"10000 TO 14999",
+"15000 TO 19999",
+"20000 TO 24999",
+"25000 TO 49999",
+"50000 TO 99999999: 50000+"))
+data$X0530100[8.0 <= data$X0530100 & data$X0530100 <= 14.0] <- 8.0
+data$X0530100[15.0 <= data$X0530100 & data$X0530100 <= 100.0] <- 15.0
+data$X0530100 <- factor(data$X0530100,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,15.0),
+labels=c("0",
+"1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"7",
+"8 TO 14: 8 to 14",
+"15 TO 100: 15+"))
+data$X0532900[8.0 <= data$X0532900 & data$X0532900 <= 14.0] <- 8.0
+data$X0532900[15.0 <= data$X0532900 & data$X0532900 <= 100.0] <- 15.0
+data$X0532900 <- factor(data$X0532900,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,15.0),
+labels=c("0",
+"1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"7",
+"8 TO 14: 8 to 14",
+"15 TO 100: 15+"))
+data$X0535700[8.0 <= data$X0535700 & data$X0535700 <= 14.0] <- 8.0
+data$X0535700[15.0 <= data$X0535700 & data$X0535700 <= 100.0] <- 15.0
+data$X0535700 <- factor(data$X0535700,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,15.0),
+labels=c("0",
+"1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"7",
+"8 TO 14: 8 to 14",
+"15 TO 100: 15+"))
+data$X0538500[8.0 <= data$X0538500 & data$X0538500 <= 14.0] <- 8.0
+data$X0538500[15.0 <= data$X0538500 & data$X0538500 <= 100.0] <- 15.0
+data$X0538500 <- factor(data$X0538500,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,15.0),
+labels=c("0",
+"1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"7",
+"8 TO 14: 8 to 14",
+"15 TO 100: 15+"))
+data$X0541300[8.0 <= data$X0541300 & data$X0541300 <= 14.0] <- 8.0
+data$X0541300[15.0 <= data$X0541300 & data$X0541300 <= 100.0] <- 15.0
+data$X0541300 <- factor(data$X0541300,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,15.0),
+labels=c("0",
+"1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"7",
+"8 TO 14: 8 to 14",
+"15 TO 100: 15+"))
+data$X0543900[8.0 <= data$X0543900 & data$X0543900 <= 14.0] <- 8.0
+data$X0543900[15.0 <= data$X0543900 & data$X0543900 <= 100.0] <- 15.0
+data$X0543900 <- factor(data$X0543900,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,15.0),
+labels=c("0",
+"1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"7",
+"8 TO 14: 8 to 14",
+"15 TO 100: 15+"))
+data$X0546100[8.0 <= data$X0546100 & data$X0546100 <= 14.0] <- 8.0
+data$X0546100[15.0 <= data$X0546100 & data$X0546100 <= 100.0] <- 15.0
+data$X0546100 <- factor(data$X0546100,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,15.0),
+labels=c("0",
+"1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"7",
+"8 TO 14: 8 to 14",
+"15 TO 100: 15+"))
+data$X0547400[8.0 <= data$X0547400 & data$X0547400 <= 14.0] <- 8.0
+data$X0547400[15.0 <= data$X0547400 & data$X0547400 <= 100.0] <- 15.0
+data$X0547400 <- factor(data$X0547400,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,15.0),
+labels=c("0",
+"1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"7",
+"8 TO 14: 8 to 14",
+"15 TO 100: 15+"))
+data$X0548700[8.0 <= data$X0548700 & data$X0548700 <= 14.0] <- 8.0
+data$X0548700[15.0 <= data$X0548700 & data$X0548700 <= 100.0] <- 15.0
+data$X0548700 <- factor(data$X0548700,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,15.0),
+labels=c("0",
+"1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"7",
+"8 TO 14: 8 to 14",
+"15 TO 100: 15+"))
+data$X0549900[8.0 <= data$X0549900 & data$X0549900 <= 14.0] <- 8.0
+data$X0549900[15.0 <= data$X0549900 & data$X0549900 <= 100.0] <- 15.0
+data$X0549900 <- factor(data$X0549900,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,15.0),
+labels=c("0",
+"1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"7",
+"8 TO 14: 8 to 14",
+"15 TO 100: 15+"))
+data$X0550900[8.0 <= data$X0550900 & data$X0550900 <= 14.0] <- 8.0
+data$X0550900[15.0 <= data$X0550900 & data$X0550900 <= 100.0] <- 15.0
+data$X0550900 <- factor(data$X0550900,
+levels=c(0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,15.0),
+labels=c("0",
+"1",
+"2",
+"3",
+"4",
+"5",
+"6",
+"7",
+"8 TO 14: 8 to 14",
+"15 TO 100: 15+"))
+return(data)
+}
+
+varlabels <- c("TOTAL WELFARE AMT RECVD 1986  87",
+"TOTAL WELFARE AMT RECVD 1987  88",
+"TOTAL WELFARE AMT RECVD 1988  89",
+"TOTAL WELFARE AMT RECVD 1989  90",
+"TOTAL WELFARE AMT RECVD 1990  91",
+"TOTAL WELFARE AMT RECVD 1991  92",
+"TOTAL WELFARE AMT RECVD 1992  93",
+"TOTAL WELFARE AMT RECVD 1993  94",
+"TOTAL WELFARE AMT RECVD 1994  94",
+"TOTAL WELFARE AMT RECVD 1995  96",
+"TOTAL WELFARE AMT RECVD 1996  96",
+"TOTAL WELFARE AMT RECVD 1997",
+"TOTAL WELFARE AMT RECVD 1998",
+"TOTAL WELFARE AMT RECVD 1999",
+"TOTAL WELFARE AMT RECVD 2000",
+"TOTAL WELFARE AMT RECVD 2001",
+"TOTAL WELFARE AMT RECVD 2002",
+"TOTAL WELFARE AMT RECVD 2003",
+"TOTAL WELFARE AMT RECVD 2004",
+"TOTAL WELFARE AMT RECVD 2005",
+"TOTAL WELFARE AMT RECVD 2006",
+"TOTAL WELFARE AMT RECVD 2007",
+"TOTAL WELFARE AMT RECVD 2008",
+"TOTAL WELFARE AMT RECVD 2009",
+"TOTAL WELFARE AMT RECVD 2010",
+"TOTAL WELFARE AMT RECVD 2011",
+"TOTAL WELFARE AMT RECVD 2012",
+"TOTAL WELFARE AMT RECVD 2013",
+"TOTAL WELFARE AMT RECVD 2014",
+"TOTAL WELFARE AMT RECVD 2015",
+"TOTAL WELFARE AMT RECVD 2016",
+"TOTAL WELFARE AMT RECVD 2017",
+"TOTAL WELFARE AMT RECVD 2018",
+"TOTAL WELFARE ALT AMT RECVD 2019",
+"ID# (1-12686) 79",
+"HH ID # 79",
+"HGC BY RS MOTHER 79",
+"HGC BY RS FATHER 79",
+"SAMPLE ID  79 INT",
+"RACL/ETHNIC COHORT /SCRNR 79",
+"SEX OF R 79",
+"HIGHEST GRADE COMPLTD (REV) 79",
+"HIGHEST GRADE COMPLTD (REV) 80",
+"PROFILES AFQT PRCTILE 89 (REV) 81",
+"PROFILES AFQT PRCTILE 2006 (REV) 81",
+"HIGHEST GRADE COMPLTD (REV) 81",
+"HIGHEST GRADE COMPLTD (REV) 82",
+"HIGHEST GRADE COMPLTD (REV) 83",
+"HIGHEST GRADE COMPLTD (REV) 84",
+"HIGHEST GRADE COMPLTD (REV) 85",
+"TOT NET FAMILY INC P-C YR 86",
+"HIGHEST GRADE COMPLTD (REV) 86",
+"YR OF BIRTH RS FATHER 87",
+"YR OF BIRTH RS MOTHER 87",
+"TOT NET FAMILY INC P-C YR 87",
+"POVERTY STATUS 87",
+"HIGHEST GRADE COMPLTD (REV) 87",
+"TOT NET FAMILY INC P-C YR 88",
+"POVERTY STATUS 88",
+"HIGHEST GRADE COMPLTD (REV) 88",
+"TOT NET FAMILY INC P-C YR 89",
+"POVERTY STATUS 89",
+"HIGHEST GRADE COMPLTD (REV) 89",
+"TOT NET FAMILY INC P-C YR 90",
+"POVERTY STATUS 90",
+"HIGHEST GRADE COMPLTD (REV) 90",
+"TOT NET FAMILY INC P-C YR 91",
+"POVERTY STATUS 91",
+"HIGHEST GRADE COMPLTD (REV) 91",
+"TOT NET FAMILY INC P-C YR 92",
+"POVERTY STATUS 92",
+"HIGHEST GRADE COMPLTD (REV) 92",
+"R TAKE JOB DBLE FAM INC CUT INCOM 3RD 93",
+"R TAKE JOB DBLE FAM INC CUT INCOM 1/2 93",
+"R TAKE JOB DBLE FAM INC CUT INCOM 2O% 93",
+"TOTAL NET FAMILY INCOME 93",
+"POVERTY STATUS 93",
+"HIGHEST GRADE COMPLTD (REV) 93",
+"TOTAL NET FAMILY INCOME 94",
+"POVERTY STATUS 94",
+"HIGHEST GRADE COMPLTD (REV) 94",
+"TOTAL NET FAMILY INCOME 96",
+"POVERTY STATUS 96",
+"HIGHEST GRADE COMPLTD (REV) 96",
+"TOTAL NET FAMILY INCOME 1998",
+"POVERTY STATUS 1998",
+"HIGHEST GRADE COMPLTD (REV) 1998",
+"TOTAL NET FAMILY INCOME 2000",
+"POVERTY STATUS 2000",
+"HIGHEST GRADE COMPLTD (REV) 2000",
+"TAKE JOB DBLE FAM INC CUT INC 3RD 2002",
+"TAKE JOB DBLE FAM INC CUT INC 1/2 2002",
+"TAKE JOB DBL FAM INC CUT IN 20 PC 2002",
+"TOTAL NET FAMILY INCOME 2002",
+"POVERTY STATUS 2002",
+"HIGHEST GRADE COMPLTD (REV) 2002",
+"TAKE JOB DBLE FAM INC CUT INC 3RD 2004",
+"TAKE JOB DBLE FAM INC CUT INC 1/2 2004",
+"TAKE JOB DBL FAM INC CUT IN 20 PC 2004",
+"TOTAL NET FAMILY INCOME 2004",
+"POVERTY STATUS 2004",
+"HIGHEST GRADE COMPLTD (REV) 2004",
+"TAKE JOB DBLE FAM INC CUT INC 3RD 2006",
+"TAKE JOB DBLE FAM INC CUT INC 1/2 2006",
+"TAKE JOB DBL FAM INC CUT IN 20 PC 2006",
+"LOW PRICE TO SELL $10K ITEM BEFORE KNOWING WORTH 2006",
+"EST LOW PRICE TO SELL 10K ITEM NOT KNOWING WORTH 2006",
+"EST LOWPRICE TO SELL 10K ITEM NOT KNOWING WORTH 2006",
+"PERCENTAGE OF SALE AMT ON 10K ITEM  R WOULD SAVE 2006",
+"EST % OF SALE ON 10K ITEM R WOULD SAVE - LOW 2006",
+"EST % OF SALE ON 10K ITEM R WOULD SAVE - HIGH 2006",
+"LOW PRICE TO SELL $1K ITEM BEFORE KNOWING WORTH 2006",
+"EST LOW PRICE TO SELL 1K ITEM NOT KNOWING WORTH 2006",
+"EST LOW PRICE TO SELL 1K ITEM NOT KNOWING WORTH - 2006",
+"PERCENTAGE OF SALE AMT ON 1K ITEM  R WOULD SAVE 2006",
+"EST % OF SALE ON 1K ITEM R WOULD SAVE - LOW 2006",
+"EST % OF SALE ON 1K ITEM R WOULD SAVE - HIGH 2006",
+"TOTAL NET FAMILY INCOME 2006",
+"POVERTY STATUS 2006",
+"HIGHEST GRADE COMPLTD (REV) 2006",
+"TOTAL NET FAMILY INCOME 2008",
+"POVERTY STATUS 2008",
+"HIGHEST GRADE COMPLTD (REV) 2008",
+"CHOOSING FIRST JOB OR SECOND JOB 2010",
+"FIRST JOB OR SECOND JOB (INCREASED % INCOME CUT) 2010",
+"FIRST (INCREASED % INCOME INCREASE) OR SECOND JOB 2010",
+"TAKING RISKS IN PLACING BETS 2010",
+"TOTAL NET FAMILY INCOME 2010",
+"POVERTY STATUS 2010",
+"HIGHEST GRADE COMPLTD (REV) 2010",
+"R INTERVIEWED IN 2010? 2012",
+"CHOOSING FIRST JOB OR SECOND JOB 2012",
+"FIRST JOB OR SECOND JOB (INCREASED % INCOME CUT) 2012",
+"FIRST (INCREASED % INCOME INCREASE) OR SECOND JOB 2012",
+"TAKING RISKS IN PLACING BETS 2012",
+"TOTAL NET FAMILY INCOME 2012",
+"POVERTY STATUS 2012",
+"BIO CHILD EVER ATTEND PRIVATE HIGH SCHOOL L1 2014",
+"BIO CHILD EVER ATTEND PRIVATE HIGH SCHOOL L2 2014",
+"BIO CHILD EVER ATTEND PRIVATE HIGH SCHOOL L3 2014",
+"BIO CHILD EVER ATTEND PRIVATE HIGH SCHOOL L4 2014",
+"BIO CHILD EVER ATTEND PRIVATE HIGH SCHOOL L5 2014",
+"BIO CHILD EVER ATTEND PRIVATE HIGH SCHOOL L6 2014",
+"BIO CHILD EVER ATTEND PRIVATE HIGH SCHOOL L7 2014",
+"BIO CHILD EVER ATTEND PRIVATE HIGH SCHOOL L8 2014",
+"AMT ACTUALLY PAID FOR PRIV HS FOR BIO CHILD L1 2014",
+"AMT ACTUALLY PAID FOR PRIV HS FOR BIO CHILD L2 2014",
+"AMT ACTUALLY PAID FOR PRIV HS FOR BIO CHILD L3 2014",
+"AMT ACTUALLY PAID FOR PRIV HS FOR BIO CHILD L4 2014",
+"AMT ACTUALLY PAID FOR PRIV HS FOR BIO CHILD L5 2014",
+"AMT ACTUALLY PAID FOR PRIV HS FOR BIO CHILD L6 2014",
+"BIOCHILD EVER ATTEND 2- OR 4- YEAR COLLEGE L1 2014",
+"BIOCHILD EVER ATTEND 2- OR 4- YEAR COLLEGE L2 2014",
+"BIOCHILD EVER ATTEND 2- OR 4- YEAR COLLEGE L3 2014",
+"BIOCHILD EVER ATTEND 2- OR 4- YEAR COLLEGE L4 2014",
+"BIOCHILD EVER ATTEND 2- OR 4- YEAR COLLEGE L5 2014",
+"BIOCHILD EVER ATTEND 2- OR 4- YEAR COLLEGE L6 2014",
+"BIOCHILD EVER ATTEND 2- OR 4- YEAR COLLEGE L7 2014",
+"BIOCHILD EVER ATTEND 2- OR 4- YEAR COLLEGE L8 2014",
+"BIOCHILD EVER ATTEND 2- OR 4- YEAR COLLEGE L9 2014",
+"BIOCHILD GRADUATE WITH BACHELORS DEGREE L1 2014",
+"BIOCHILD GRADUATE WITH BACHELORS DEGREE L2 2014",
+"BIOCHILD GRADUATE WITH BACHELORS DEGREE L3 2014",
+"BIOCHILD GRADUATE WITH BACHELORS DEGREE L4 2014",
+"BIOCHILD GRADUATE WITH BACHELORS DEGREE L5 2014",
+"BIOCHILD GRADUATE WITH BACHELORS DEGREE L6 2014",
+"BIOCHILD GRADUATE WITH BACHELORS DEGREE L7 2014",
+"BIOCHILD GRADUATE WITH BACHELORS DEGREE L8 2014",
+"NUMBER OF YEARS BIOCHILD ATTENDED COLLEGE L1 2014",
+"NUMBER OF YEARS BIOCHILD ATTENDED COLLEGE L2 2014",
+"NUMBER OF YEARS BIOCHILD ATTENDED COLLEGE L3 2014",
+"NUMBER OF YEARS BIOCHILD ATTENDED COLLEGE L4 2014",
+"NUMBER OF YEARS BIOCHILD ATTENDED COLLEGE L5 2014",
+"NUMBER OF YEARS BIOCHILD ATTENDED COLLEGE L6 2014",
+"NUMBER OF YEARS BIOCHILD ATTENDED COLLEGE L7 2014",
+"NUMBER OF YEARS BIOCHILD ATTENDED COLLEGE L8 2014",
+"AMT PAID FOR BIOCHILD TO ATTEND COLLEGE L1 2014",
+"AMT PAID FOR BIOCHILD TO ATTEND COLLEGE L2 2014",
+"AMT PAID FOR BIOCHILD TO ATTEND COLLEGE L3 2014",
+"AMT PAID FOR BIOCHILD TO ATTEND COLLEGE L4 2014",
+"AMT PAID FOR BIOCHILD TO ATTEND COLLEGE L5 2014",
+"AMT PAID FOR BIOCHILD TO ATTEND COLLEGE L6 2014",
+"AMT PAID FOR BIOCHILD TO ATTEND COLLEGE L7 2014",
+"AMT PAID FOR BIOCHILD TO ATTEND COLLEGE L8 2014",
+"AMT BIOCH LIVING EXPENSES PD BY R-SPOUSE-PARTNER L1 2014",
+"AMT BIOCH LIVING EXPENSES PD BY R-SPOUSE-PARTNER L2 2014",
+"AMT BIOCH LIVING EXPENSES PD BY R-SPOUSE-PARTNER L3 2014",
+"AMT BIOCH LIVING EXPENSES PD BY R-SPOUSE-PARTNER L4 2014",
+"AMT BIOCH LIVING EXPENSES PD BY R-SPOUSE-PARTNER L5 2014",
+"AMT BIOCH LIVING EXPENSES PD BY R-SPOUSE-PARTNER L6 2014",
+"AMT BIOCH LIVING EXPENSES PD BY R-SPOUSE-PARTNER L7 2014",
+"AMT BIOCH LIVING EXPENSES PD BY R-SPOUSE-PARTNER L8 2014",
+"BIOCH ATTEND COLL LONGER/MORE EXPENSV IF MORE HELP L1 2014",
+"BIOCH ATTEND COLL LONGER/MORE EXPENSV IF MORE HELP L2 2014",
+"BIOCH ATTEND COLL LONGER/MORE EXPENSV IF MORE HELP L3 2014",
+"BIOCH ATTEND COLL LONGER/MORE EXPENSV IF MORE HELP L4 2014",
+"BIOCH ATTEND COLL LONGER/MORE EXPENSV IF MORE HELP L5 2014",
+"BIOCH ATTEND COLL LONGER/MORE EXPENSV IF MORE HELP L6 2014",
+"BIOCH ATTEND COLL LONGER/MORE EXPENSV IF MORE HELP L7 2014",
+"BIOCH ATTEND COLL LONGER/MORE EXPENSV IF MORE HELP L8 2014",
+"FAMILY CONTRIBUTE IF BIOCHILD ATTEND COLLEGE L1 2014",
+"FAMILY CONTRIBUTE IF BIOCHILD ATTEND COLLEGE L2 2014",
+"FAMILY CONTRIBUTE IF BIOCHILD ATTEND COLLEGE L3 2014",
+"FAMILY CONTRIBUTE IF BIOCHILD ATTEND COLLEGE L4 2014",
+"FAMILY CONTRIBUTE IF BIOCHILD ATTEND COLLEGE L5 2014",
+"FAMILY CONTRIBUTE IF BIOCHILD ATTEND COLLEGE L6 2014",
+"FAMILY CONTRIBUTE IF BIOCHILD ATTEND COLLEGE L7 2014",
+"FAMILY CONTRIBUTE IF BIOCHILD ATTEND COLLEGE L8 2014",
+"FAMILY CONTRIBUTE IF BIOCHILD ATTEND COLLEGE L9 2014",
+"R INTERVIEWED IN OR AFTER 2010? 2014",
+"CHOOSING FIRST JOB OR SECOND JOB 2014",
+"FIRST JOB OR SECOND JOB (INCREASED % INCOME CUT) 2014",
+"FIRST (INCREASED % INCOME INCREASE) OR SECOND JOB 2014",
+"TAKING RISKS IN PLACING BETS 2014",
+"TOTAL NET FAMILY INCOME 2014",
+"POVERTY STATUS 2014",
+"TOTAL NET FAMILY INCOME 2016",
+"POVERTY STATUS 2016",
+"TOTAL NET FAMILY INCOME 2018",
+"POVERTY STATUS 2018",
+"HIGHEST GRADE EVER COMPLETED XRND",
+"TWO-DIGIT ID OF 1ST CHILD XRND",
+"TWO-DIGIT ID OF 2ND CHILD XRND",
+"TWO-DIGIT ID OF 3RD CHILD XRND",
+"TWO-DIGIT ID OF 4TH CHILD XRND",
+"TWO-DIGIT ID OF 5TH CHILD XRND",
+"TWO-DIGIT ID OF 6TH CHILD XRND",
+"TWO-DIGIT ID OF 7TH CHILD XRND",
+"TWO-DIGIT ID OF 8TH CHILD XRND",
+"TWO-DIGIT ID OF 9TH CHILD XRND",
+"TWO-DIGIT ID OF 10TH CHILD XRND",
+"TWO-DIGIT ID OF 11TH CHILD XRND"
+)
+
+
+# Use qnames rather than rnums
+
+qnames = function(data) {
+names(data) <- c("WELFARE-AMT-1986_REVISED_XRND",
+"WELFARE-AMT-1987_REVISED_XRND",
+"WELFARE-AMT-1988_REVISED_XRND",
+"WELFARE-AMT-1989_REVISED_XRND",
+"WELFARE-AMT-1990_REVISED_XRND",
+"WELFARE-AMT-1991_REVISED_XRND",
+"WELFARE-AMT-1992_REVISED_XRND",
+"WELFARE-AMT-1993_REVISED_XRND",
+"WELFARE-AMT-1994_REVISED_XRND",
+"WELFARE-AMT-1995_REVISED_XRND",
+"WELFARE-AMT-1996_REVISED_XRND",
+"WELFARE-AMT-1997_REVISED_XRND",
+"WELFARE-AMT-1998_REVISED_XRND",
+"WELFARE-AMT-1999_REVISED_XRND",
+"WELFARE-AMT-2000_REVISED_XRND",
+"WELFARE-AMT-2001_REVISED_XRND",
+"WELFARE-AMT-2002_REVISED_XRND",
+"WELFARE-AMT-2003_XRND",
+"WELFARE-AMT-2004_XRND",
+"WELFARE-AMT-2005_XRND",
+"WELFARE-AMT-2006_XRND",
+"WELFARE-AMT-2007_XRND",
+"WELFARE-AMT-2008_XRND",
+"WELFARE-AMT-2009_XRND",
+"WELFARE-AMT-2010_XRND",
+"WELFARE-AMT-2011_XRND",
+"WELFARE-AMT-2012_XRND",
+"WELFARE-AMT-2013_XRND",
+"WELFARE-AMT-2014_XRND",
+"WELFARE-AMT-2015_XRND",
+"WELFARE-AMT-2016_XRND",
+"WELFARE-AMT-2017_XRND",
+"WELFARE-AMT-2018_XRND",
+"WELFARE-AMT-2019_XRND",
+"CASEID_1979",
+"HHID_1979",
+"HGC-MOTHER_1979",
+"HGC-FATHER_1979",
+"SAMPLE_ID_1979",
+"SAMPLE_RACE_78SCRN",
+"SAMPLE_SEX_1979",
+"HGCREV79_1979",
+"HGCREV80_1980",
+"AFQT-2_1981",
+"AFQT-3_1981",
+"HGCREV81_1981",
+"HGCREV82_1982",
+"HGCREV83_1983",
+"HGCREV84_1984",
+"HGCREV85_1985",
+"TNFI_TRUNC_1986",
+"HGCREV86_1986",
+"FAM-DAD_Y_1987",
+"FAM-MOM_Y_1987",
+"TNFI_TRUNC_1987",
+"POVSTATUS_1987",
+"HGCREV87_1987",
+"TNFI_TRUNC_1988",
+"POVSTATUS_1988",
+"HGCREV88_1988",
+"TNFI_TRUNC_1989",
+"POVSTATUS_1989",
+"HGCREV89_1989",
+"TNFI_TRUNC_1990",
+"POVSTATUS_1990",
+"HGCREV90_1990",
+"TNFI_TRUNC_1991",
+"POVSTATUS_1991",
+"HGCREV91_1991",
+"TNFI_TRUNC_1992",
+"POVSTATUS_1992",
+"HGCREV92_1992",
+"RISK-INCOME-1_1993",
+"RISK-INCOME-2_1993",
+"RISK-INCOME-3_1993",
+"TNFI_TRUNC_1993",
+"POVSTATUS_1993",
+"HGCREV93_1993",
+"TNFI_TRUNC_1994",
+"POVSTATUS_1994",
+"HGCREV94_1994",
+"TNFI_TRUNC_1996",
+"POVSTATUS_1996",
+"HGCREV96_1996",
+"TNFI_TRUNC_1998",
+"POVSTATUS_1998",
+"HGCREV98_1998",
+"TNFI_TRUNC_2000",
+"POVSTATUS_2000",
+"HGCREV00_2000",
+"RISK-INCOME-1_2002",
+"RISK-INCOME-2_2002",
+"RISK-INCOME-3_2002",
+"TNFI_TRUNC_2002",
+"POVSTATUS_2002",
+"HGCREV02_2002",
+"RISK-INCOME-1_2004",
+"RISK-INCOME-2_2004",
+"RISK-INCOME-3_2004",
+"TNFI_TRUNC_2004",
+"POVSTATUS_2004",
+"HGCREV04_2004",
+"RISK-INCOME-1_2006",
+"RISK-INCOME-2_2006",
+"RISK-INCOME-3_2006",
+"RISK_1_2006",
+"RISK_1_SR000001_2006",
+"RISK_1_SR000002_2006",
+"RISK_2_2006",
+"RISK_2_SR000001_2006",
+"RISK_2_SR000002_2006",
+"RISK_3_2006",
+"RISK_3_SR000001_2006",
+"RISK_3_SR000002_2006",
+"RISK_4_2006",
+"RISK_4_SR000001_2006",
+"RISK_4_SR000002_2006",
+"TNFI_TRUNC_2006",
+"POVSTATUS_2006",
+"HGCREV06_2006",
+"TNFI_TRUNC_2008",
+"POVSTATUS_2008",
+"HGCREV08_2008",
+"RISK-INCOME-1_2010",
+"RISK-INCOME-2_2010",
+"RISK-INCOME-3_2010",
+"RISK_5H_2010",
+"TNFI_TRUNC_2010",
+"POVSTATUS_2010",
+"HGCREV10_2010",
+"RISK_LINT_2012",
+"RISK-INCOME-1_2012",
+"RISK-INCOME-2_2012",
+"RISK-INCOME-3_2012",
+"RISK_5H_2012",
+"TNFI_TRUNC_2012",
+"POVSTATUS_2012",
+"EDUCEXPEND_2.01_2014",
+"EDUCEXPEND_2.02_2014",
+"EDUCEXPEND_2.03_2014",
+"EDUCEXPEND_2.04_2014",
+"EDUCEXPEND_2.05_2014",
+"EDUCEXPEND_2.06_2014",
+"EDUCEXPEND_2.07_2014",
+"EDUCEXPEND_2.08_2014",
+"EDUCEXPEND_4.01_2014",
+"EDUCEXPEND_4.02_2014",
+"EDUCEXPEND_4.03_2014",
+"EDUCEXPEND_4.04_2014",
+"EDUCEXPEND_4.05_2014",
+"EDUCEXPEND_4.06_2014",
+"EDUCEXPEND_8.01_2014",
+"EDUCEXPEND_8.02_2014",
+"EDUCEXPEND_8.03_2014",
+"EDUCEXPEND_8.04_2014",
+"EDUCEXPEND_8.05_2014",
+"EDUCEXPEND_8.06_2014",
+"EDUCEXPEND_8.07_2014",
+"EDUCEXPEND_8.08_2014",
+"EDUCEXPEND_8.09_2014",
+"EDUCEXPEND_9.01_2014",
+"EDUCEXPEND_9.02_2014",
+"EDUCEXPEND_9.03_2014",
+"EDUCEXPEND_9.04_2014",
+"EDUCEXPEND_9.05_2014",
+"EDUCEXPEND_9.06_2014",
+"EDUCEXPEND_9.07_2014",
+"EDUCEXPEND_9.08_2014",
+"EDUCEXPEND_11.01_2014",
+"EDUCEXPEND_11.02_2014",
+"EDUCEXPEND_11.03_2014",
+"EDUCEXPEND_11.04_2014",
+"EDUCEXPEND_11.05_2014",
+"EDUCEXPEND_11.06_2014",
+"EDUCEXPEND_11.07_2014",
+"EDUCEXPEND_11.08_2014",
+"EDUCEXPEND_12.01_2014",
+"EDUCEXPEND_12.02_2014",
+"EDUCEXPEND_12.03_2014",
+"EDUCEXPEND_12.04_2014",
+"EDUCEXPEND_12.05_2014",
+"EDUCEXPEND_12.06_2014",
+"EDUCEXPEND_12.07_2014",
+"EDUCEXPEND_12.08_2014",
+"EDUCEXPEND_16.01_2014",
+"EDUCEXPEND_16.02_2014",
+"EDUCEXPEND_16.03_2014",
+"EDUCEXPEND_16.04_2014",
+"EDUCEXPEND_16.05_2014",
+"EDUCEXPEND_16.06_2014",
+"EDUCEXPEND_16.07_2014",
+"EDUCEXPEND_16.08_2014",
+"EDUCEXPEND_19.01_2014",
+"EDUCEXPEND_19.02_2014",
+"EDUCEXPEND_19.03_2014",
+"EDUCEXPEND_19.04_2014",
+"EDUCEXPEND_19.05_2014",
+"EDUCEXPEND_19.06_2014",
+"EDUCEXPEND_19.07_2014",
+"EDUCEXPEND_19.08_2014",
+"EDUCEXPEND_21.01_2014",
+"EDUCEXPEND_21.02_2014",
+"EDUCEXPEND_21.03_2014",
+"EDUCEXPEND_21.04_2014",
+"EDUCEXPEND_21.05_2014",
+"EDUCEXPEND_21.06_2014",
+"EDUCEXPEND_21.07_2014",
+"EDUCEXPEND_21.08_2014",
+"EDUCEXPEND_21.09_2014",
+"RISK_LINT_2014",
+"RISK-INCOME-1_2014",
+"RISK-INCOME-2_2014",
+"RISK-INCOME-3_2014",
+"RISK_5H_2014",
+"TNFI_TRUNC_2014",
+"POVSTATUS_2014",
+"TNFI_TRUNC_2016",
+"POVSTATUS_2016",
+"TNFI_TRUNC_2018",
+"POVSTATUS_2018",
+"HGC_EVER_XRND",
+"C1_ID_XRND",
+"C2_ID_XRND",
+"C3_ID_XRND",
+"C4_ID_XRND",
+"C5_ID_XRND",
+"C6_ID_XRND",
+"C7_ID_XRND",
+"C8_ID_XRND",
+"C9_ID_XRND",
+"C10_ID_XRND",
+"C11_ID_XRND")
+return(data)
+}
+
+
+#********************************************************************************************************
+
+# Remove the '#' before the following line to create a data file called "categories" with value labels.
+#categories <- vallabels(new_data)
+
+# Remove the '#' before the following lines to rename variables using Qnames instead of Reference Numbers
+#new_data <- qnames(new_data)
+#categories <- qnames(categories)
+
+# Produce summaries for the raw (uncategorized) data file
+summary(new_data)
+
+# Remove the '#' before the following lines to produce summaries for the "categories" data file.
+#categories <- vallabels(new_data)
+#categories <- vallabels_continuous(new_data)
+#summary(categories)
+
+#************************************************************************************************************
+

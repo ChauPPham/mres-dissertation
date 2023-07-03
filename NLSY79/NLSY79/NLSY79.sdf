@@ -1,0 +1,237 @@
+
+
+Reference
+Number     Year    Variable Description                                                                                       Question Name             
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+G00703.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELFARE/SSI RECEIVED DURING CAL YR 1986 (REVISED)                    WELFARE-AMT-1986_REVISED  
+G00781.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELFARE/SSI RECEIVED DURING CAL YR 1987 (REVISED)                    WELFARE-AMT-1987_REVISED  
+G00859.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELFARE/SSI RECEIVED DURING CAL YR 1988 (REVISED)                    WELFARE-AMT-1988_REVISED  
+G00937.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELFARE/SSI RECEIVED DURING CAL YR 1989 (REVISED)                    WELFARE-AMT-1989_REVISED  
+G01015.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELFARE/SSI RECEIVED DURING CAL YR 1990 (REVISED)                    WELFARE-AMT-1990_REVISED  
+G01093.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELFARE/SSI RECEIVED DURING CAL YR 1991 (REVISED)                    WELFARE-AMT-1991_REVISED  
+G01171.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELFARE/SSI RECEIVED DURING CAL YR 1992 (REVISED)                    WELFARE-AMT-1992_REVISED  
+G01314.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELFARE/SSI RECEIVED DURING CAL YR 1993 (REVISED)                    WELFARE-AMT-1993_REVISED  
+G01327.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELFARE/SSI RECEIVED DURING CAL YR 1994 (REVISED)                    WELFARE-AMT-1994_REVISED  
+G01482.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELFARE/SSI RECEIVED DURING CAL YR 1995 (REVISED)                    WELFARE-AMT-1995_REVISED  
+G01483.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELFARE/SSI RECEIVED DURING CAL YR 1996 (REVISED)                    WELFARE-AMT-1996_REVISED  
+G01638.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELFARE/SSI RECEIVED DURING CAL YR 1997 (REVISED)                    WELFARE-AMT-1997_REVISED  
+G01639.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELFARE/SSI RECEIVED DURING CAL YR 1998 (REVISED)                    WELFARE-AMT-1998_REVISED  
+G01794.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELFARE/SSI RECEIVED DURING CAL YR 1999 (REVISED)                    WELFARE-AMT-1999_REVISED  
+G01795.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELFARE/SSI RECEIVED DURING CAL YR 2000 (REVISED)                    WELFARE-AMT-2000_REVISED  
+G01950.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELFARE/SSI RECEIVED DURING CAL YR 2001 (REVISED)                    WELFARE-AMT-2001_REVISED  
+G01951.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELFARE/SSI RECEIVED DURING CAL YR 2002 (REVISED)                    WELFARE-AMT-2002_REVISED  
+G02106.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELFARE/SSI RECEIVED DURING CAL YR 2003                              WELFARE-AMT-2003          
+G02107.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELFARE/SSI RECEIVED DURING CAL YR 2004                              WELFARE-AMT-2004          
+G02263.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELFARE/SSI RECEIVED DURING CAL YR 2005                              WELFARE-AMT-2005          
+G02264.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELFARE/SSI RECEIVED DURING CAL YR 2006                              WELFARE-AMT-2006          
+G02281.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELFARE/SSI RECEIVED DURING CAL YR 2007                              WELFARE-AMT-2007          
+G02416.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELFARE/SSI RECEIVED DURING CAL YR 2008                              WELFARE-AMT-2008          
+G02421.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELF/SSI RECEIVED DURING CAL YR 2009                                 WELFARE-AMT-2009          
+G02603.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELF/SSI RECEIVED DURING CAL YR 2010                                 WELFARE-AMT-2010          
+G02607.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELF/SSI RECEIVED DURING CAL YR 2011                                 WELFARE-AMT-2011          
+G02760.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELF/SSI RECEIVED DURING CAL YR 2012                                 WELFARE-AMT-2012          
+G02819.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELF/SSI RECEIVED DURING CAL YR 2013                                 WELFARE-AMT-2013          
+G02927.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELF/SSI RECEIVED DURING CAL YR 2014                                 WELFARE-AMT-2014          
+G02993.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELF/SSI RECEIVED DURING CAL YR 2015                                 WELFARE-AMT-2015          
+G03131.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELF/SSI RECEIVED DURING CAL YR 2016                                 WELFARE-AMT-2016          
+G03143.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELF/SSI RECEIVED DURING CAL YR 2017                                 WELFARE-AMT-2017          
+G03321.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELF/SSI RECEIVED DURING CAL YR 2018                                 WELFARE-AMT-2018          
+G03333.00  XRND    TOTAL AMOUNT AFDC, FOOD STAMPS OR OTH WELF/SSI RECEIVED DURING CAL YR 2019                                 WELFARE-AMT-2019          
+R00001.00  1979    IDENTIFICATION CODE                                                                                        CASEID                    
+R00001.49  1979    HOUSEHOLD IDENTIFICATION NUMBER                                                                            HHID                      
+R00065.00  1979    HIGHEST GRADE COMPLETED BY R'S MOTHER                                                                      HGC-MOTHER                
+R00079.00  1979    HIGHEST GRADE COMPLETED BY R'S FATHER                                                                      HGC-FATHER                
+R01736.00  1979    SAMPLE IDENTIFICATION CODE                                                                                 SAMPLE_ID                 
+R02147.00  78SCRN  R'S RACIAL/ETHNIC COHORT FROM SCREENER                                                                     SAMPLE_RACE               
+R02148.00  1979    SEX OF R                                                                                                   SAMPLE_SEX                
+R02167.01  1979    HIGHEST GRADE COMPLETED AS OF MAY 1 SURVEY YEAR (REVISED)                                                  HGCREV79                  
+R04064.01  1980    HIGHEST GRADE COMPLETED AS OF MAY 1 SURVEY YEAR (REVISED)                                                  HGCREV80                  
+R06183.00  1981    PROFILES, ARMED FORCES QUALIFICATION TEST (AFQT) PERCENTILE SCORE - REVISED 1989                           AFQT-2                    
+R06183.01  1981    PROFILES, ARMED FORCES QUALIFICATION TEST (AFQT) PERCENTILE SCORE - REVISED 2006                           AFQT-3                    
+R06189.01  1981    HIGHEST GRADE COMPLETED AS OF MAY 1 SURVEY YEAR (REVISED)                                                  HGCREV81                  
+R08982.01  1982    HIGHEST GRADE COMPLETED AS OF MAY 1 SURVEY YEAR (REVISED)                                                  HGCREV82                  
+R11450.01  1983    HIGHEST GRADE COMPLETED AS OF MAY 1 SURVEY YEAR (REVISED)                                                  HGCREV83                  
+R15202.01  1984    HIGHEST GRADE COMPLETED AS OF MAY 1 SURVEY YEAR (REVISED)                                                  HGCREV84                  
+R18909.01  1985    HIGHEST GRADE COMPLETED AS OF MAY 1 SURVEY YEAR (REVISED)                                                  HGCREV85                  
+R22575.00  1986    TOTAL NET FAMILY INCOME IN PAST CALENDAR YEAR *KEY* (TRUNCATED)                                            TNFI_TRUNC                
+R22580.01  1986    HIGHEST GRADE COMPLETED AS OF MAY 1 SURVEY YEAR (REVISED)                                                  HGCREV86                  
+R23031.00  1987    YEAR OF BIRTH OF R'S FATHER                                                                                FAM-DAD_Y                 
+R23035.00  1987    YEAR OF BIRTH OF R'S MOTHER                                                                                FAM-MOM_Y                 
+R24447.00  1987    TOTAL NET FAMILY INCOME IN PAST CALENDAR YEAR *KEY* (TRUNCATED)                                            TNFI_TRUNC                
+R24449.00  1987    FAMILY POVERTY STATUS IN 1986                                                                              POVSTATUS                 
+R24454.01  1987    HIGHEST GRADE COMPLETED AS OF MAY 1 SURVEY YEAR (REVISED)                                                  HGCREV87                  
+R28702.00  1988    TOTAL NET FAMILY INCOME IN PAST CALENDAR YEAR *KEY* (TRUNCATED)                                            TNFI_TRUNC                
+R28704.00  1988    FAMILY POVERTY STATUS IN 1987                                                                              POVSTATUS                 
+R28711.01  1988    HIGHEST GRADE COMPLETED AS OF MAY 1 SURVEY YEAR (REVISED)                                                  HGCREV88                  
+R30740.00  1989    TOTAL NET FAMILY INCOME IN PAST CALENDAR YEAR *KEY* (TRUNCATED)                                            TNFI_TRUNC                
+R30741.00  1989    FAMILY POVERTY STATUS IN 1988                                                                              POVSTATUS                 
+R30748.01  1989    HIGHEST GRADE COMPLETED AS OF MAY 1 SURVEY YEAR (REVISED)                                                  HGCREV89                  
+R34007.00  1990    TOTAL NET FAMILY INCOME IN PAST CALENDAR YEAR *KEY* (TRUNCATED)                                            TNFI_TRUNC                
+R34008.00  1990    FAMILY POVERTY STATUS IN 1989                                                                              POVSTATUS                 
+R34015.01  1990    HIGHEST GRADE COMPLETED AS OF MAY 1 SURVEY YEAR (REVISED)                                                  HGCREV90                  
+R36561.00  1991    TOTAL NET FAMILY INCOME IN PAST CALENDAR YEAR *KEY* (TRUNCATED)                                            TNFI_TRUNC                
+R36562.00  1991    FAMILY POVERTY STATUS IN 1990                                                                              POVSTATUS                 
+R36569.01  1991    HIGHEST GRADE COMPLETED AS OF MAY 1 SURVEY YEAR (REVISED)                                                  HGCREV91                  
+R40066.00  1992    TOTAL NET FAMILY INCOME IN PAST CALENDAR YEAR *KEY* (TRUNCATED)                                            TNFI_TRUNC                
+R40067.00  1992    FAMILY POVERTY STATUS IN 1991                                                                              POVSTATUS                 
+R40074.01  1992    HIGHEST GRADE COMPLETED AS OF MAY 1 SURVEY YEAR (REVISED)                                                  HGCREV92                  
+R43958.00  1993    WOULD R TAKE JOB THAT COULD EITHER DOUBLE FAMILY INCOME OR CUT INCOME BY 3RD?                              RISK-INCOME-1             
+R43959.00  1993    WOULD R TAKE JOB THAT COULD EITHER DOUBLE FAMILY INCOME OR CUT INCOME BY HALF?                             RISK-INCOME-2             
+R43960.00  1993    WOULD R TAKE JOB THAT COULD EITHER DOUBLE FAMILY INCOME OR CUT INCOME BY 20 PCT                            RISK-INCOME-3             
+R44177.00  1993    TOTAL NET FAMILY INCOME IN PAST CALENDAR YEAR *KEY* (TRUNCATED)                                            TNFI_TRUNC                
+R44178.00  1993    FAMILY POVERTY STATUS IN 1992                                                                              POVSTATUS                 
+R44185.01  1993    HIGHEST GRADE COMPLETED AS OF MAY 1 SURVEY YEAR (REVISED)                                                  HGCREV93                  
+R50807.00  1994    TOTAL NET FAMILY INCOME IN PAST CALENDAR YEAR *KEY* (TRUNCATED)                                            TNFI_TRUNC                
+R50808.00  1994    FAMILY POVERTY STATUS IN 1993                                                                              POVSTATUS                 
+R51039.00  1994    HIGHEST GRADE COMPLETED AS OF MAY 1 SURVEY YEAR (REVISED)                                                  HGCREV94                  
+R51660.00  1996    TOTAL NET FAMILY INCOME IN PAST CALENDAR YEAR *KEY* (TRUNCATED)                                            TNFI_TRUNC                
+R51661.00  1996    FAMILY POVERTY STATUS IN 1995                                                                              POVSTATUS                 
+R51669.01  1996    HIGHEST GRADE COMPLETED AS OF MAY 1 SURVEY YEAR (REVISED)                                                  HGCREV96                  
+R64787.00  1998    TOTAL NET FAMILY INCOME IN PAST CALENDAR YEAR *KEY* (TRUNCATED)                                            TNFI_TRUNC                
+R64788.00  1998    FAMILY POVERTY STATUS IN 1997                                                                              POVSTATUS                 
+R64796.00  1998    HIGHEST GRADE COMPLETED AS OF MAY 1 SURVEY YEAR (REVISED)                                                  HGCREV98                  
+R70065.00  2000    TOTAL NET FAMILY INCOME IN PAST CALENDAR YEAR *KEY* (TRUNCATED)                                            TNFI_TRUNC                
+R70066.00  2000    FAMILY POVERTY STATUS IN 1999                                                                              POVSTATUS                 
+R70073.00  2000    HIGHEST GRADE COMPLETED AS OF MAY 1 SURVEY YEAR (REVISED)                                                  HGCREV00                  
+R73533.00  2002    WOULD R TAKE JOB THAT COULD EITHER DOUBLE FAMILY INCOME OR CUT INCOME BY 3RD?                              RISK-INCOME-1             
+R73534.00  2002    WOULD R TAKE JOB THAT COULD EITHER DOUBLE FAMILY INCOME OR CUT INCOME BY HALF?                             RISK-INCOME-2             
+R73535.00  2002    WOULD R TAKE JOB THAT COULD EITHER DOUBLE FAMILY INCOME OR CUT INCOME BY 20 PCT                            RISK-INCOME-3             
+R77037.00  2002    TOTAL NET FAMILY INCOME IN PAST CALENDAR YEAR *KEY* (TRUNCATED)                                            TNFI_TRUNC                
+R77039.00  2002    FAMILY POVERTY STATUS IN 2001                                                                              POVSTATUS                 
+R77046.00  2002    HIGHEST GRADE COMPLETED AS OF MAY 1 SURVEY YEAR (REVISED)                                                  HGCREV02                  
+R80471.00  2004    WOULD R TAKE JOB THAT COULD EITHER DOUBLE FAMILY INCOME OR CUT INCOME BY 3RD?                              RISK-INCOME-1             
+R80472.00  2004    WOULD R TAKE JOB THAT COULD EITHER DOUBLE FAMILY INCOME OR CUT INCOME BY HALF?                             RISK-INCOME-2             
+R80473.00  2004    WOULD R TAKE JOB THAT COULD EITHER DOUBLE FAMILY INCOME OR CUT INCOME BY 20 PCT                            RISK-INCOME-3             
+R84961.00  2004    TOTAL NET FAMILY INCOME IN PAST CALENDAR YEAR *KEY* (TRUNCATED)                                            TNFI_TRUNC                
+R84963.00  2004    FAMILY POVERTY STATUS IN 2003                                                                              POVSTATUS                 
+R84970.00  2004    HIGHEST GRADE COMPLETED AS OF MAY 1 SURVEY YEAR (REVISED)                                                  HGCREV04                  
+T02791.00  2006    WOULD R TAKE JOB THAT COULD EITHER DOUBLE FAMILY INCOME OR CUT INCOME BY 3RD?                              RISK-INCOME-1             
+T02792.00  2006    WOULD R TAKE JOB THAT COULD EITHER DOUBLE FAMILY INCOME OR CUT INCOME BY HALF?                             RISK-INCOME-2             
+T02793.00  2006    WOULD R TAKE JOB THAT COULD EITHER DOUBLE FAMILY INCOME OR CUT INCOME BY 20 PCT                            RISK-INCOME-3             
+T09605.00  2006    LOWEST PRICE TO SELL $10,000 ITEM BEFORE KNOWING WORTH                                                     RISK_1                    
+T09606.00  2006    ESTIMATED LOWEST PRICE TO SELL 10K ITEM BEFORE KNOWING WORTH - LOW                                         RISK_1_SR000001           
+T09607.00  2006    ESTIMATED LOWEST PRICE TO SELL 10K ITEM BEFORE KNOWING WORTH - HIGH                                        RISK_1_SR000002           
+T09608.00  2006    PERCENTAGE OF SALE AMOUNT ON 10K ITEM R WOULD SAVE                                                         RISK_2                    
+T09609.00  2006    ESTIMATED PERCENTAGE OF SALE ON 10K ITEM R WOULD SAVE - LOW                                                RISK_2_SR000001           
+T09610.00  2006    ESTIMATED PERCENTAGE OF SALE ON 10K ITEM R WOULD SAVE - HIGH                                               RISK_2_SR000002           
+T09611.00  2006    LOWEST PRICE TO SELL $1,000 ITEM BEFORE KNOWING WORTH                                                      RISK_3                    
+T09612.00  2006    ESTIMATED LOWEST PRICE TO SELL 1K ITEM BEFORE KNOWING WORTH - LOW                                          RISK_3_SR000001           
+T09613.00  2006    ESTIMATED LOWEST PRICE TO SELL 1K ITEM BEFORE KNOWING WORTH - HIGH                                         RISK_3_SR000002           
+T09614.00  2006    PERCENTAGE OF SALE AMOUNT ON 1K ITEM R WOULD SAVE                                                          RISK_4                    
+T09615.00  2006    ESTIMATED PERCENTAGE OF SALE ON 1K ITEM R WOULD SAVE - LOW                                                 RISK_4_SR000001           
+T09616.00  2006    ESTIMATED PERCENTAGE OF SALE ON 1K ITEM R WOULD SAVE - HIGH                                                RISK_4_SR000002           
+T09878.00  2006    TOTAL NET FAMILY INCOME IN PAST CALENDAR YEAR *KEY* (TRUNCATED)                                            TNFI_TRUNC                
+T09879.00  2006    FAMILY POVERTY STATUS IN 2005                                                                              POVSTATUS                 
+T09888.00  2006    HIGHEST GRADE COMPLETED AS OF MAY 1 SURVEY YEAR (REVISED)                                                  HGCREV06                  
+T22100.00  2008    TOTAL NET FAMILY INCOME IN PAST CALENDAR YEAR *KEY* (TRUNCATED)                                            TNFI_TRUNC                
+T22101.00  2008    FAMILY POVERTY STATUS IN 2007                                                                              POVSTATUS                 
+T22107.00  2008    HIGHEST GRADE COMPLETED AS OF MAY 1 SURVEY YEAR (REVISED)                                                  HGCREV08                  
+T30945.00  2010    CHOOSING FIRST JOB OR SECOND JOB                                                                           RISK-INCOME-1             
+T30946.00  2010    CHOOSING FIRST JOB OR SECOND JOB (INCREASED % INCOME CUT)                                                  RISK-INCOME-2             
+T30947.00  2010    CHOOSING FIRST JOB (INCREASED % INCOME INCREASE) OR SECOND JOB                                             RISK-INCOME-3             
+T30950.00  2010    TAKING RISKS IN PLACING BETS                                                                               RISK_5H                   
+T31078.00  2010    TOTAL NET FAMILY INCOME IN PAST CALENDAR YEAR *KEY* (TRUNCATED)                                            TNFI_TRUNC                
+T31080.00  2010    FAMILY POVERTY STATUS IN 2009                                                                              POVSTATUS                 
+T31086.00  2010    HIGHEST GRADE COMPLETED AS OF MAY 1 SURVEY YEAR (REVISED)                                                  HGCREV10                  
+T40935.00  2012    R INTERVIEWED IN 2010?                                                                                     RISK_LINT                 
+T40936.00  2012    CHOOSING FIRST JOB OR SECOND JOB                                                                           RISK-INCOME-1             
+T40937.00  2012    CHOOSING FIRST JOB OR SECOND JOB (INCREASED % INCOME CUT)                                                  RISK-INCOME-2             
+T40938.00  2012    CHOOSING FIRST JOB (INCREASED % INCOME INCREASE) OR SECOND JOB                                             RISK-INCOME-3             
+T40941.00  2012    TAKING RISKS IN PLACING BETS                                                                               RISK_5H                   
+T41123.00  2012    TOTAL NET FAMILY INCOME IN PAST CALENDAR YEAR *KEY* (TRUNCATED)                                            TNFI_TRUNC                
+T41125.00  2012    FAMILY POVERTY STATUS IN 2011                                                                              POVSTATUS                 
+T49692.00  2014    BIO CHILD 01 EVER ATTEND PRIVATE HIGH SCHOOL                                                               EDUCEXPEND_2.01           
+T49693.00  2014    BIO CHILD 02 EVER ATTEND PRIVATE HIGH SCHOOL                                                               EDUCEXPEND_2.02           
+T49694.00  2014    BIO CHILD 03 EVER ATTEND PRIVATE HIGH SCHOOL                                                               EDUCEXPEND_2.03           
+T49695.00  2014    BIO CHILD 04 EVER ATTEND PRIVATE HIGH SCHOOL                                                               EDUCEXPEND_2.04           
+T49696.00  2014    BIO CHILD 05 EVER ATTEND PRIVATE HIGH SCHOOL                                                               EDUCEXPEND_2.05           
+T49697.00  2014    BIO CHILD 06 EVER ATTEND PRIVATE HIGH SCHOOL                                                               EDUCEXPEND_2.06           
+T49698.00  2014    BIO CHILD 07 EVER ATTEND PRIVATE HIGH SCHOOL                                                               EDUCEXPEND_2.07           
+T49699.00  2014    BIO CHILD 08 EVER ATTEND PRIVATE HIGH SCHOOL                                                               EDUCEXPEND_2.08           
+T49706.00  2014    AMOUNT ACTUALLY PAID FOR PRIVATE HIGH SCHOOL FOR BIO CHILD 01                                              EDUCEXPEND_4.01           
+T49707.00  2014    AMOUNT ACTUALLY PAID FOR PRIVATE HIGH SCHOOL FOR BIO CHILD 02                                              EDUCEXPEND_4.02           
+T49708.00  2014    AMOUNT ACTUALLY PAID FOR PRIVATE HIGH SCHOOL FOR BIO CHILD 03                                              EDUCEXPEND_4.03           
+T49709.00  2014    AMOUNT ACTUALLY PAID FOR PRIVATE HIGH SCHOOL FOR BIO CHILD 04                                              EDUCEXPEND_4.04           
+T49710.00  2014    AMOUNT ACTUALLY PAID FOR PRIVATE HIGH SCHOOL FOR BIO CHILD 05                                              EDUCEXPEND_4.05           
+T49711.00  2014    AMOUNT ACTUALLY PAID FOR PRIVATE HIGH SCHOOL FOR BIO CHILD 06                                              EDUCEXPEND_4.06           
+T49768.00  2014    BIOCHILD 01 EVER ATTEND TWO-YEAR OR FOUR-YEAR COLLEGE                                                      EDUCEXPEND_8.01           
+T49769.00  2014    BIOCHILD 02 EVER ATTEND TWO-YEAR OR FOUR-YEAR COLLEGE                                                      EDUCEXPEND_8.02           
+T49770.00  2014    BIOCHILD 03 EVER ATTEND TWO-YEAR OR FOUR-YEAR COLLEGE                                                      EDUCEXPEND_8.03           
+T49771.00  2014    BIOCHILD 04 EVER ATTEND TWO-YEAR OR FOUR-YEAR COLLEGE                                                      EDUCEXPEND_8.04           
+T49772.00  2014    BIOCHILD 05 EVER ATTEND TWO-YEAR OR FOUR-YEAR COLLEGE                                                      EDUCEXPEND_8.05           
+T49773.00  2014    BIOCHILD 06 EVER ATTEND TWO-YEAR OR FOUR-YEAR COLLEGE                                                      EDUCEXPEND_8.06           
+T49774.00  2014    BIOCHILD 07 EVER ATTEND TWO-YEAR OR FOUR-YEAR COLLEGE                                                      EDUCEXPEND_8.07           
+T49775.00  2014    BIOCHILD 08 EVER ATTEND TWO-YEAR OR FOUR-YEAR COLLEGE                                                      EDUCEXPEND_8.08           
+T49776.00  2014    BIOCHILD 09 EVER ATTEND TWO-YEAR OR FOUR-YEAR COLLEGE                                                      EDUCEXPEND_8.09           
+T49785.00  2014    BIOCHILD 01 GRADUATE WITH BACHELORS DEGREE                                                                 EDUCEXPEND_9.01           
+T49786.00  2014    BIOCHILD 02 GRADUATE WITH BACHELORS DEGREE                                                                 EDUCEXPEND_9.02           
+T49787.00  2014    BIOCHILD 03 GRADUATE WITH BACHELORS DEGREE                                                                 EDUCEXPEND_9.03           
+T49788.00  2014    BIOCHILD 04 GRADUATE WITH BACHELORS DEGREE                                                                 EDUCEXPEND_9.04           
+T49789.00  2014    BIOCHILD 05 GRADUATE WITH BACHELORS DEGREE                                                                 EDUCEXPEND_9.05           
+T49790.00  2014    BIOCHILD 06 GRADUATE WITH BACHELORS DEGREE                                                                 EDUCEXPEND_9.06           
+T49791.00  2014    BIOCHILD 07 GRADUATE WITH BACHELORS DEGREE                                                                 EDUCEXPEND_9.07           
+T49792.00  2014    BIOCHILD 08 GRADUATE WITH BACHELORS DEGREE                                                                 EDUCEXPEND_9.08           
+T49816.00  2014    NUMBER OF YEARS BIOCHILD 01 ATTENDED COLLEGE                                                               EDUCEXPEND_11.01          
+T49817.00  2014    NUMBER OF YEARS BIOCHILD 02 ATTENDED COLLEGE                                                               EDUCEXPEND_11.02          
+T49818.00  2014    NUMBER OF YEARS BIOCHILD 03 ATTENDED COLLEGE                                                               EDUCEXPEND_11.03          
+T49819.00  2014    NUMBER OF YEARS BIOCHILD 04 ATTENDED COLLEGE                                                               EDUCEXPEND_11.04          
+T49820.00  2014    NUMBER OF YEARS BIOCHILD 05 ATTENDED COLLEGE                                                               EDUCEXPEND_11.05          
+T49821.00  2014    NUMBER OF YEARS BIOCHILD 06 ATTENDED COLLEGE                                                               EDUCEXPEND_11.06          
+T49822.00  2014    NUMBER OF YEARS BIOCHILD 07 ATTENDED COLLEGE                                                               EDUCEXPEND_11.07          
+T49823.00  2014    NUMBER OF YEARS BIOCHILD 08 ATTENDED COLLEGE                                                               EDUCEXPEND_11.08          
+T49824.00  2014    AMOUNT PAID FOR BIOCHILD 01 TO ATTEND COLLEGE                                                              EDUCEXPEND_12.01          
+T49825.00  2014    AMOUNT PAID FOR BIOCHILD 02 TO ATTEND COLLEGE                                                              EDUCEXPEND_12.02          
+T49826.00  2014    AMOUNT PAID FOR BIOCHILD 03 TO ATTEND COLLEGE                                                              EDUCEXPEND_12.03          
+T49827.00  2014    AMOUNT PAID FOR BIOCHILD 04 TO ATTEND COLLEGE                                                              EDUCEXPEND_12.04          
+T49828.00  2014    AMOUNT PAID FOR BIOCHILD 05 TO ATTEND COLLEGE                                                              EDUCEXPEND_12.05          
+T49829.00  2014    AMOUNT PAID FOR BIOCHILD 06 TO ATTEND COLLEGE                                                              EDUCEXPEND_12.06          
+T49830.00  2014    AMOUNT PAID FOR BIOCHILD 07 TO ATTEND COLLEGE                                                              EDUCEXPEND_12.07          
+T49831.00  2014    AMOUNT PAID FOR BIOCHILD 08 TO ATTEND COLLEGE                                                              EDUCEXPEND_12.08          
+T49904.00  2014    AMOUNT OF BIOCHILD 01'S LIVING EXPENSES PAID BY R OR SPOUSE/PARTNER                                        EDUCEXPEND_16.01          
+T49905.00  2014    AMOUNT OF BIOCHILD 02'S LIVING EXPENSES PAID BY R OR SPOUSE/PARTNER                                        EDUCEXPEND_16.02          
+T49906.00  2014    AMOUNT OF BIOCHILD 03'S LIVING EXPENSES PAID BY R OR SPOUSE/PARTNER                                        EDUCEXPEND_16.03          
+T49907.00  2014    AMOUNT OF BIOCHILD 04'S LIVING EXPENSES PAID BY R OR SPOUSE/PARTNER                                        EDUCEXPEND_16.04          
+T49908.00  2014    AMOUNT OF BIOCHILD 05'S LIVING EXPENSES PAID BY R OR SPOUSE/PARTNER                                        EDUCEXPEND_16.05          
+T49909.00  2014    AMOUNT OF BIOCHILD 06'S LIVING EXPENSES PAID BY R OR SPOUSE/PARTNER                                        EDUCEXPEND_16.06          
+T49910.00  2014    AMOUNT OF BIOCHILD 07'S LIVING EXPENSES PAID BY R OR SPOUSE/PARTNER                                        EDUCEXPEND_16.07          
+T49911.00  2014    AMOUNT OF BIOCHILD 08'S LIVING EXPENSES PAID BY R OR SPOUSE/PARTNER                                        EDUCEXPEND_16.08          
+T49944.00  2014    WOULD BIOCHILD 01 HAVE ATTENDED COLLEGE LONGER OR MORE EXPENSIVE COLLEGE IF FAMILY COULD CONTRIBUTE MORE?  EDUCEXPEND_19.01          
+T49945.00  2014    WOULD BIOCHILD 02 HAVE ATTENDED COLLEGE LONGER OR MORE EXPENSIVE COLLEGE IF FAMILY COULD CONTRIBUTE MORE?  EDUCEXPEND_19.02          
+T49946.00  2014    WOULD BIOCHILD 03 HAVE ATTENDED COLLEGE LONGER OR MORE EXPENSIVE COLLEGE IF FAMILY COULD CONTRIBUTE MORE?  EDUCEXPEND_19.03          
+T49947.00  2014    WOULD BIOCHILD 04 HAVE ATTENDED COLLEGE LONGER OR MORE EXPENSIVE COLLEGE IF FAMILY COULD CONTRIBUTE MORE?  EDUCEXPEND_19.04          
+T49948.00  2014    WOULD BIOCHILD 05 HAVE ATTENDED COLLEGE LONGER OR MORE EXPENSIVE COLLEGE IF FAMILY COULD CONTRIBUTE MORE?  EDUCEXPEND_19.05          
+T49949.00  2014    WOULD BIOCHILD 06 HAVE ATTENDED COLLEGE LONGER OR MORE EXPENSIVE COLLEGE IF FAMILY COULD CONTRIBUTE MORE?  EDUCEXPEND_19.06          
+T49950.00  2014    WOULD BIOCHILD 07 HAVE ATTENDED COLLEGE LONGER OR MORE EXPENSIVE COLLEGE IF FAMILY COULD CONTRIBUTE MORE?  EDUCEXPEND_19.07          
+T49951.00  2014    WOULD BIOCHILD 08 HAVE ATTENDED COLLEGE LONGER OR MORE EXPENSIVE COLLEGE IF FAMILY COULD CONTRIBUTE MORE?  EDUCEXPEND_19.08          
+T49961.00  2014    FAMILY WOULD CONTRIBUTE IF BIOCHILD 01 HAD ATTENDED COLLEGE                                                EDUCEXPEND_21.01          
+T49962.00  2014    FAMILY WOULD CONTRIBUTE IF BIOCHILD 02 HAD ATTENDED COLLEGE                                                EDUCEXPEND_21.02          
+T49963.00  2014    FAMILY WOULD CONTRIBUTE IF BIOCHILD 03 HAD ATTENDED COLLEGE                                                EDUCEXPEND_21.03          
+T49964.00  2014    FAMILY WOULD CONTRIBUTE IF BIOCHILD 04 HAD ATTENDED COLLEGE                                                EDUCEXPEND_21.04          
+T49965.00  2014    FAMILY WOULD CONTRIBUTE IF BIOCHILD 05 HAD ATTENDED COLLEGE                                                EDUCEXPEND_21.05          
+T49966.00  2014    FAMILY WOULD CONTRIBUTE IF BIOCHILD 06 HAD ATTENDED COLLEGE                                                EDUCEXPEND_21.06          
+T49967.00  2014    FAMILY WOULD CONTRIBUTE IF BIOCHILD 07 HAD ATTENDED COLLEGE                                                EDUCEXPEND_21.07          
+T49968.00  2014    FAMILY WOULD CONTRIBUTE IF BIOCHILD 08 HAD ATTENDED COLLEGE                                                EDUCEXPEND_21.08          
+T49969.00  2014    FAMILY WOULD CONTRIBUTE IF BIOCHILD 09 HAD ATTENDED COLLEGE                                                EDUCEXPEND_21.09          
+T49987.00  2014    R INTERVIEWED IN OR AFTER 2010?                                                                            RISK_LINT                 
+T49988.00  2014    CHOOSING FIRST JOB OR SECOND JOB                                                                           RISK-INCOME-1             
+T49989.00  2014    CHOOSING FIRST JOB OR SECOND JOB (INCREASED % INCOME CUT)                                                  RISK-INCOME-2             
+T49990.00  2014    CHOOSING FIRST JOB (INCREASED % INCOME INCREASE) OR SECOND JOB                                             RISK-INCOME-3             
+T49993.00  2014    TAKING RISKS IN PLACING BETS                                                                               RISK_5H                   
+T50226.00  2014    TOTAL NET FAMILY INCOME IN PAST CALENDAR YEAR *KEY* (TRUNCATED)                                            TNFI_TRUNC                
+T50228.00  2014    FAMILY POVERTY STATUS IN PREVIOUS CALENDAR YEAR                                                            POVSTATUS                 
+T57708.00  2016    TOTAL NET FAMILY INCOME IN PAST CALENDAR YEAR *KEY* (TRUNCATED)                                            TNFI_TRUNC                
+T57709.00  2016    FAMILY POVERTY STATUS IN PREVIOUS CALENDAR YEAR                                                            POVSTATUS                 
+T82187.00  2018    TOTAL NET FAMILY INCOME IN PAST CALENDAR YEAR *KEY* (TRUNCATED)                                            TNFI_TRUNC                
+T82189.00  2018    FAMILY POVERTY STATUS IN PREVIOUS CALENDAR YEAR                                                            POVSTATUS                 
+T99000.00  XRND    HIGHEST GRADE EVER COMPLETED                                                                               HGC_EVER                  
+X05301.00  XRND    TWO-DIGIT ID OF 1ST CHILD                                                                                  C1_ID                     
+X05329.00  XRND    TWO-DIGIT ID OF 2ND CHILD                                                                                  C2_ID                     
+X05357.00  XRND    TWO-DIGIT ID OF 3RD CHILD                                                                                  C3_ID                     
+X05385.00  XRND    TWO-DIGIT ID OF 4TH CHILD                                                                                  C4_ID                     
+X05413.00  XRND    TWO-DIGIT ID OF 5TH CHILD                                                                                  C5_ID                     
+X05439.00  XRND    TWO-DIGIT ID OF 6TH CHILD                                                                                  C6_ID                     
+X05461.00  XRND    TWO-DIGIT ID OF 7TH CHILD                                                                                  C7_ID                     
+X05474.00  XRND    TWO-DIGIT ID OF 8TH CHILD                                                                                  C8_ID                     
+X05487.00  XRND    TWO-DIGIT ID OF 9TH CHILD                                                                                  C9_ID                     
+X05499.00  XRND    TWO-DIGIT ID OF 10TH CHILD                                                                                 C10_ID                    
+X05509.00  XRND    TWO-DIGIT ID OF 11TH CHILD                                                                                 C11_ID                    
