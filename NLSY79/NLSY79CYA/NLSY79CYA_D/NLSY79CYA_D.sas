@@ -5,7 +5,7 @@ options nocenter validvarname=any;
 data new_data;
 
 
-infile 'NLSY79CYA_D.dat' lrecl=814 missover DSD DLM=' ' print;
+infile 'NLSY79CYA_D.dat' lrecl=817 missover DSD DLM=' ' print;
 input
   C0000100
   C0000200
@@ -108,6 +108,7 @@ input
   C1955300
   C1955400
   C1955800
+  C1955900
   C1956000
   C1956600
   C1956700
@@ -389,6 +390,7 @@ end;
   label C1955300 = "HOME D: IS THERE MUSIC INSTRM AT HM 1998";
   label C1955400 = "HOME D: FAMILY GETS DAILY NEWSPAPER 1998";
   label C1955800 = "HOME D: HOW OFT CH TAKEN TO MUSEUM 1998";
+  label C1955900 = "HOME D: HOW OFT CH TAKE TO PERFMNCE 1998";
   label C1956000 = "HOME D: HOW OFT FAM GET W/RELS,FRND 1998";
   label C1956600 = "HOME D: HOW OFT CH SPEND TIME W/DAD 1998";
   label C1956700 = "HOME D: HOW OFT CH W/ DAD OUTDOORS 1998";
@@ -672,6 +674,7 @@ end;
   C1955300 = 'MS981D03_1998'n
   C1955400 = 'MS981D04_1998'n
   C1955800 = 'MS981D08_1998'n
+  C1955900 = 'MS981D09_1998'n
   C1956000 = 'MS981D10_1998'n
   C1956600 = 'MS981D16_1998'n
   C1956700 = 'MS981D17_1998'n
@@ -1443,20 +1446,18 @@ value vx100f
   5='ABOUT ONCE A WEEK OR MORE OFTEN'
 ;
 value vx101f
+  1='NEVER'
+  2='ONCE OR TWICE'
+  3='SEVERAL TIMES'
+  4='ABOUT ONCE A MONTH'
+  5='ABOUT ONCE A WEEK OR MORE OFTEN'
+;
+value vx102f
   1='ONCE A YEAR OR LESS'
   2='A FEW TIMES A YEAR'
   3='ABOUT ONCE A MONTH'
   4='TWO OR THREE TIMES A MONTH'
   5='ABOUT ONCE A WEEK OR MORE'
-;
-value vx102f
-  1='ONCE A DAY OR MORE OFTEN'
-  2='AT LEAST 4 TIMES A WEEK'
-  3='ABOUT ONCE A WEEK'
-  4='ABOUT ONCE A MONTH'
-  5='A FEW TIMES A YEAR OR LESS'
-  6='NEVER'
-  7='NO FATHER, STEPFATHER, OR FATHER-FIGURE'
 ;
 value vx103f
   1='ONCE A DAY OR MORE OFTEN'
@@ -1468,6 +1469,15 @@ value vx103f
   7='NO FATHER, STEPFATHER, OR FATHER-FIGURE'
 ;
 value vx104f
+  1='ONCE A DAY OR MORE OFTEN'
+  2='AT LEAST 4 TIMES A WEEK'
+  3='ABOUT ONCE A WEEK'
+  4='ABOUT ONCE A MONTH'
+  5='A FEW TIMES A YEAR OR LESS'
+  6='NEVER'
+  7='NO FATHER, STEPFATHER, OR FATHER-FIGURE'
+;
+value vx105f
   1='More than once a day'
   2='Once a day'
   3='Several times a week'
@@ -1476,31 +1486,24 @@ value vx104f
   6='Never'
   7='No father, step-father, father figure'
 ;
-value vx105f
+value vx106f
   0='No'
   1='Yes'
   2='Do not have a TV'
 ;
-value vx106f
+value vx107f
   1='None'
   2='1 to 9'
   3='10 to 19'
   4='20 or more'
-;
-value vx107f
-  0='No'
-  1='Yes'
 ;
 value vx108f
   0='No'
   1='Yes'
 ;
 value vx109f
-  1='Never'
-  2='Once or twice'
-  3='Several times'
-  4='About once a month'
-  5='About once a week or more often'
+  0='No'
+  1='Yes'
 ;
 value vx110f
   1='Never'
@@ -1510,20 +1513,18 @@ value vx110f
   5='About once a week or more often'
 ;
 value vx111f
+  1='Never'
+  2='Once or twice'
+  3='Several times'
+  4='About once a month'
+  5='About once a week or more often'
+;
+value vx112f
   1='ONCE A YEAR OR LESS'
   2='A FEW TIMES A YEAR'
   3='ABOUT ONCE A MONTH'
   4='TWO OR THREE TIMES A MONTH'
   5='ABOUT ONCE A WEEK OR MORE'
-;
-value vx112f
-  1='Once a day or more often'
-  2='At least 4 times a week'
-  3='About once a week'
-  4='About once a month'
-  5='A few times a year or less'
-  6='Never'
-  7='No father, stepfather, or father-figure'
 ;
 value vx113f
   1='Once a day or more often'
@@ -1535,6 +1536,15 @@ value vx113f
   7='No father, stepfather, or father-figure'
 ;
 value vx114f
+  1='Once a day or more often'
+  2='At least 4 times a week'
+  3='About once a week'
+  4='About once a month'
+  5='A few times a year or less'
+  6='Never'
+  7='No father, stepfather, or father-figure'
+;
+value vx115f
   1='More than once a day'
   2='Once a day'
   3='Several times a week'
@@ -1543,14 +1553,10 @@ value vx114f
   6='Never'
   7='No father, stepfather, father-figure'
 ;
-value vx115f
-  0='No'
-  1='Yes'
-  2='Do not have a TV'
-;
 value vx116f
   0='No'
   1='Yes'
+  2='Do not have a TV'
 ;
 value vx117f
   0='No'
@@ -1577,25 +1583,22 @@ value vx122f
   1='Yes'
 ;
 value vx123f
+  0='No'
+  1='Yes'
+;
+value vx124f
   1='None'
   2='1 to 9'
   3='10 to 19'
   4='20 or more'
-;
-value vx124f
-  0='No'
-  1='Yes'
 ;
 value vx125f
   0='No'
   1='Yes'
 ;
 value vx126f
-  1='Never'
-  2='Once or twice'
-  3='Several times'
-  4='About once a month'
-  5='About once a week or more often'
+  0='No'
+  1='Yes'
 ;
 value vx127f
   1='Never'
@@ -1605,20 +1608,18 @@ value vx127f
   5='About once a week or more often'
 ;
 value vx128f
+  1='Never'
+  2='Once or twice'
+  3='Several times'
+  4='About once a month'
+  5='About once a week or more often'
+;
+value vx129f
   1='Once a year or less'
   2='A few times a year'
   3='About once a month'
   4='Two or three times a month'
   5='About once a week or more'
-;
-value vx129f
-  1='Once a day or more often'
-  2='At least 4 times a week'
-  3='About once a week'
-  4='About once a month'
-  5='A few times a year or less'
-  6='Never'
-  7='No father, stepfather, or father-figure'
 ;
 value vx130f
   1='Once a day or more often'
@@ -1630,6 +1631,15 @@ value vx130f
   7='No father, stepfather, or father-figure'
 ;
 value vx131f
+  1='Once a day or more often'
+  2='At least 4 times a week'
+  3='About once a week'
+  4='About once a month'
+  5='A few times a year or less'
+  6='Never'
+  7='No father, stepfather, or father-figure'
+;
+value vx132f
   1='More than once a day'
   2='Once a day'
   3='Several times a week'
@@ -1638,67 +1648,60 @@ value vx131f
   6='Never'
   7='No father, stepfather, father-figure'
 ;
-value vx132f
+value vx133f
   0='No'
   1='Yes'
   2='Do not have a TV'
 ;
-value vx133f
+value vx134f
   0='NOT SELECTED'
   1='gone to the movies together?'
 ;
-value vx134f
+value vx135f
   0='NOT SELECTED'
   1-2='gone out to dinner?'
 ;
-value vx135f
+value vx136f
   0='NOT SELECTED'
   1-3='gone shopping or to get something for you - such as clothes, books, records, or games?'
 ;
-value vx136f
+value vx137f
   0='NOT SELECTED'
   1-4='gone on an outing together, like to a museum or sporting event?'
 ;
-value vx137f
+value vx138f
   0='NOT SELECTED'
   1-6='none of the above?'
 ;
-value vx138f
+value vx139f
   0='NOT SELECTED'
   1='done things together, such as build or make things, cook, or sew?'
 ;
-value vx139f
+value vx140f
   0='NOT SELECTED'
   1-2='worked on schoolwork together?'
 ;
-value vx140f
+value vx141f
   0='NOT SELECTED'
   1-3='played a game or sport?'
 ;
-value vx141f
+value vx142f
   0='NOT SELECTED'
   1-4='none of the above?'
 ;
-value vx142f
+value vx143f
   1='None'
   2='1 to 9'
   3='10 to 19'
   4='20 or more'
-;
-value vx143f
-  0='No'
-  1='Yes'
 ;
 value vx144f
   0='No'
   1='Yes'
 ;
 value vx145f
-  1='Never'
-  2='Once or twice'
-  3='Several times'
-  4='About once a month'
-  5='About once a week or more often'
+  0='No'
+  1='Yes'
 ;
 value vx146f
   1='Never'
@@ -1708,20 +1711,18 @@ value vx146f
   5='About once a week or more often'
 ;
 value vx147f
+  1='Never'
+  2='Once or twice'
+  3='Several times'
+  4='About once a month'
+  5='About once a week or more often'
+;
+value vx148f
   1='Once a year or less'
   2='A few times a year'
   3='About once a month'
   4='Two or three times a month'
   5='About once a week or more'
-;
-value vx148f
-  1='Once a day or more often'
-  2='At least 4 times a week'
-  3='About once a week'
-  4='About once a month'
-  5='A few times a year or less'
-  6='Never'
-  7='No father, stepfather, or father-figure'
 ;
 value vx149f
   1='Once a day or more often'
@@ -1733,6 +1734,15 @@ value vx149f
   7='No father, stepfather, or father-figure'
 ;
 value vx150f
+  1='Once a day or more often'
+  2='At least 4 times a week'
+  3='About once a week'
+  4='About once a month'
+  5='A few times a year or less'
+  6='Never'
+  7='No father, stepfather, or father-figure'
+;
+value vx151f
   1='More than once a day'
   2='Once a day'
   3='Several times a week'
@@ -1741,103 +1751,96 @@ value vx150f
   6='Never'
   7='No father, stepfather, father-figure'
 ;
-value vx151f
+value vx152f
   0='No'
   1='Yes'
   2='Do not have a TV'
 ;
-value vx152f
-  0='NOT SELECTED'
-  1='Gone to the movies together?'
-;
 value vx153f
   0='NOT SELECTED'
-  1-2='Gone out to dinner?'
+  1='Gone to the movies together?'
 ;
 value vx154f
   0='NOT SELECTED'
-  1-3='Gone shopping or to get something for you - such as clothes, books, CDs, or games?'
+  1-2='Gone out to dinner?'
 ;
 value vx155f
   0='NOT SELECTED'
-  1-4='Gone on an outing together, like to a museum or sporting event?'
+  1-3='Gone shopping or to get something for you - such as clothes, books, CDs, or games?'
 ;
 value vx156f
   0='NOT SELECTED'
-  1-6='None of the above?'
+  1-4='Gone on an outing together, like to a museum or sporting event?'
 ;
 value vx157f
   0='NOT SELECTED'
-  1='Done things together, such as build or make things, cook, or sew?'
+  1-6='None of the above?'
 ;
 value vx158f
   0='NOT SELECTED'
-  1-2='Worked on schoolwork together?'
+  1='Done things together, such as build or make things, cook, or sew?'
 ;
 value vx159f
   0='NOT SELECTED'
-  1-3='Played a game or sport?'
+  1-2='Worked on schoolwork together?'
 ;
 value vx160f
   0='NOT SELECTED'
-  1-4='None of the above?'
+  1-3='Played a game or sport?'
 ;
 value vx161f
   0='NOT SELECTED'
-  1='Gone to the movies together?'
+  1-4='None of the above?'
 ;
 value vx162f
   0='NOT SELECTED'
-  1-2='Gone out to dinner?'
+  1='Gone to the movies together?'
 ;
 value vx163f
   0='NOT SELECTED'
-  1-3='Gone shopping or to get something for you - such as clothes, books, CDs, or games?'
+  1-2='Gone out to dinner?'
 ;
 value vx164f
   0='NOT SELECTED'
-  1-4='Gone on an outing together, like to a museum or sporting event?'
+  1-3='Gone shopping or to get something for you - such as clothes, books, CDs, or games?'
 ;
 value vx165f
   0='NOT SELECTED'
-  1-6='None of the above?'
+  1-4='Gone on an outing together, like to a museum or sporting event?'
 ;
 value vx166f
   0='NOT SELECTED'
-  1='Done things together, such as build or make things, cook, or sew?'
+  1-6='None of the above?'
 ;
 value vx167f
   0='NOT SELECTED'
-  1-2='Worked on schoolwork together?'
+  1='Done things together, such as build or make things, cook, or sew?'
 ;
 value vx168f
   0='NOT SELECTED'
-  1-3='Played a game or sport?'
+  1-2='Worked on schoolwork together?'
 ;
 value vx169f
   0='NOT SELECTED'
-  1-4='None of the above?'
+  1-3='Played a game or sport?'
 ;
 value vx170f
+  0='NOT SELECTED'
+  1-4='None of the above?'
+;
+value vx171f
   1='None'
   2='1 to 9'
   3='10 to 19'
   4='20 or more'
-;
-value vx171f
-  0='No'
-  1='Yes'
 ;
 value vx172f
   0='No'
   1='Yes'
 ;
 value vx173f
-  1='Never'
-  2='Once or twice'
-  3='Several times'
-  4='About once a month'
-  5='About once a week or more often'
+  0='No'
+  1='Yes'
 ;
 value vx174f
   1='Never'
@@ -1847,20 +1850,18 @@ value vx174f
   5='About once a week or more often'
 ;
 value vx175f
+  1='Never'
+  2='Once or twice'
+  3='Several times'
+  4='About once a month'
+  5='About once a week or more often'
+;
+value vx176f
   1='Once a year or less'
   2='A few times a year'
   3='About once a month'
   4='Two or three times a month'
   5='About once a week or more'
-;
-value vx176f
-  1='Once a day or more often'
-  2='At least 4 times a week'
-  3='About once a week'
-  4='About once a month'
-  5='A few times a year or less'
-  6='Never'
-  7='No father, stepfather, or father-figure'
 ;
 value vx177f
   1='Once a day or more often'
@@ -1872,6 +1873,15 @@ value vx177f
   7='No father, stepfather, or father-figure'
 ;
 value vx178f
+  1='Once a day or more often'
+  2='At least 4 times a week'
+  3='About once a week'
+  4='About once a month'
+  5='A few times a year or less'
+  6='Never'
+  7='No father, stepfather, or father-figure'
+;
+value vx179f
   1='More than once a day'
   2='Once a day'
   3='Several times a week'
@@ -1880,67 +1890,60 @@ value vx178f
   6='Never'
   7='No father, stepfather, father-figure'
 ;
-value vx179f
+value vx180f
   0='No'
   1='Yes'
   2='Do not have a TV'
 ;
-value vx180f
+value vx181f
   0='NOT SELECTED'
   1='Gone to the movies together?'
 ;
-value vx181f
+value vx182f
   0='NOT SELECTED'
   1-2='Gone out to dinner?'
 ;
-value vx182f
+value vx183f
   0='NOT SELECTED'
   1-3='Gone shopping or to get something for you - such as clothes, books, CDs, DVDs or games?'
 ;
-value vx183f
+value vx184f
   0='NOT SELECTED'
   1-4='Gone on an outing together, like to a museum or sporting event?'
 ;
-value vx184f
+value vx185f
   0='NOT SELECTED'
   1-6='None of the above?'
 ;
-value vx185f
+value vx186f
   0='NOT SELECTED'
   1='Done things together, such as build or make things, cook, do arts and crafts or sew?'
 ;
-value vx186f
+value vx187f
   0='NOT SELECTED'
   1-2='Worked on schoolwork together?'
 ;
-value vx187f
+value vx188f
   0='NOT SELECTED'
   1-3='Played a game or sport?'
 ;
-value vx188f
+value vx189f
   0='NOT SELECTED'
   1-4='None of the above?'
 ;
-value vx189f
+value vx190f
   1='None'
   2='1 to 9'
   3='10 to 19'
   4='20 or more'
-;
-value vx190f
-  0='No'
-  1='Yes'
 ;
 value vx191f
   0='No'
   1='Yes'
 ;
 value vx192f
-  1='Never'
-  2='Once or twice'
-  3='Several times'
-  4='About once a month'
-  5='About once a week or more often'
+  0='No'
+  1='Yes'
 ;
 value vx193f
   1='Never'
@@ -1950,20 +1953,18 @@ value vx193f
   5='About once a week or more often'
 ;
 value vx194f
+  1='Never'
+  2='Once or twice'
+  3='Several times'
+  4='About once a month'
+  5='About once a week or more often'
+;
+value vx195f
   1='Once a year or less'
   2='A few times a year'
   3='About once a month'
   4='Two or three times a month'
   5='About once a week or more'
-;
-value vx195f
-  1='Once a day or more often'
-  2='At least 4 times a week'
-  3='About once a week'
-  4='About once a month'
-  5='A few times a year or less'
-  6='Never'
-  7='No father, stepfather, or father-figure'
 ;
 value vx196f
   1='Once a day or more often'
@@ -1975,6 +1976,15 @@ value vx196f
   7='No father, stepfather, or father-figure'
 ;
 value vx197f
+  1='Once a day or more often'
+  2='At least 4 times a week'
+  3='About once a week'
+  4='About once a month'
+  5='A few times a year or less'
+  6='Never'
+  7='No father, stepfather, or father-figure'
+;
+value vx198f
   1='More than once a day'
   2='Once a day'
   3='Several times a week'
@@ -1983,67 +1993,60 @@ value vx197f
   6='Never'
   7='No father, stepfather, father-figure'
 ;
-value vx198f
+value vx199f
   0='No'
   1='Yes'
   2='Do not have a TV'
 ;
-value vx199f
+value vx200f
   0='NOT SELECTED'
   1='Gone to the movies together?'
 ;
-value vx200f
+value vx201f
   0='NOT SELECTED'
   1-2='Gone out to dinner?'
 ;
-value vx201f
+value vx202f
   0='NOT SELECTED'
   1-3='Gone shopping or to get something for you - such as clothes, books, CDs, DVDs or games?'
 ;
-value vx202f
+value vx203f
   0='NOT SELECTED'
   1-4='Gone on an outing together, like to a museum or sporting event?'
 ;
-value vx203f
+value vx204f
   0='NOT SELECTED'
   1-6='None of the above?'
 ;
-value vx204f
+value vx205f
   0='NOT SELECTED'
   1='Done things together, such as build or make things, cook, do arts and crafts or sew?'
 ;
-value vx205f
+value vx206f
   0='NOT SELECTED'
   1-2='Worked on schoolwork together?'
 ;
-value vx206f
+value vx207f
   0='NOT SELECTED'
   1-3='Played a game or sport?'
 ;
-value vx207f
+value vx208f
   0='NOT SELECTED'
   1-4='None of the above?'
 ;
-value vx208f
+value vx209f
   1='None'
   2='1 to 9'
   3='10 to 19'
   4='20 or more'
-;
-value vx209f
-  0='No'
-  1='Yes'
 ;
 value vx210f
   0='No'
   1='Yes'
 ;
 value vx211f
-  1='Never'
-  2='Once or twice'
-  3='Several times'
-  4='About once a month'
-  5='About once a week or more often'
+  0='No'
+  1='Yes'
 ;
 value vx212f
   1='Never'
@@ -2053,20 +2056,18 @@ value vx212f
   5='About once a week or more often'
 ;
 value vx213f
+  1='Never'
+  2='Once or twice'
+  3='Several times'
+  4='About once a month'
+  5='About once a week or more often'
+;
+value vx214f
   1='Once a year or less'
   2='A few times a year'
   3='About once a month'
   4='Two or three times a month'
   5='About once a week or more'
-;
-value vx214f
-  1='Once a day or more often'
-  2='At least 4 times a week'
-  3='About once a week'
-  4='About once a month'
-  5='A few times a year or less'
-  6='Never'
-  7='No father, stepfather, or father-figure'
 ;
 value vx215f
   1='Once a day or more often'
@@ -2078,6 +2079,15 @@ value vx215f
   7='No father, stepfather, or father-figure'
 ;
 value vx216f
+  1='Once a day or more often'
+  2='At least 4 times a week'
+  3='About once a week'
+  4='About once a month'
+  5='A few times a year or less'
+  6='Never'
+  7='No father, stepfather, or father-figure'
+;
+value vx217f
   1='More than once a day'
   2='Once a day'
   3='Several times a week'
@@ -2086,67 +2096,60 @@ value vx216f
   6='Never'
   7='No father, stepfather, father-figure'
 ;
-value vx217f
+value vx218f
   0='No'
   1='Yes'
   2='Do not have a TV'
 ;
-value vx218f
+value vx219f
   0='NOT SELECTED'
   1='Gone to the movies together?'
 ;
-value vx219f
+value vx220f
   0='NOT SELECTED'
   1-2='Gone out to dinner?'
 ;
-value vx220f
+value vx221f
   0='NOT SELECTED'
   1-3='Gone shopping or to get something for you - such as clothes, books, CDs, DVDs or games?'
 ;
-value vx221f
+value vx222f
   0='NOT SELECTED'
   1-4='Gone on an outing together, like to a museum or sporting event?'
 ;
-value vx222f
+value vx223f
   0='NOT SELECTED'
   1-6='None of the above?'
 ;
-value vx223f
+value vx224f
   0='NOT SELECTED'
   1='Done things together, such as build or make things, cook, do arts and crafts or sew?'
 ;
-value vx224f
+value vx225f
   0='NOT SELECTED'
   1-2='Worked on schoolwork together?'
 ;
-value vx225f
+value vx226f
   0='NOT SELECTED'
   1-3='Played a game or sport?'
 ;
-value vx226f
+value vx227f
   0='NOT SELECTED'
   1-4='None of the above?'
 ;
-value vx227f
+value vx228f
   1='None'
   2='1 to 9'
   3='10 to 19'
   4='20 or more'
-;
-value vx228f
-  0='No'
-  1='Yes'
 ;
 value vx229f
   0='No'
   1='Yes'
 ;
 value vx230f
-  1='Never'
-  2='Once or twice'
-  3='Several times'
-  4='About once a month'
-  5='About once a week or more often'
+  0='No'
+  1='Yes'
 ;
 value vx231f
   1='Never'
@@ -2156,20 +2159,18 @@ value vx231f
   5='About once a week or more often'
 ;
 value vx232f
+  1='Never'
+  2='Once or twice'
+  3='Several times'
+  4='About once a month'
+  5='About once a week or more often'
+;
+value vx233f
   1='Once a year or less'
   2='A few times a year'
   3='About once a month'
   4='Two or three times a month'
   5='About once a week or more'
-;
-value vx233f
-  1='Once a day or more often'
-  2='At least 4 times a week'
-  3='About once a week'
-  4='About once a month'
-  5='A few times a year or less'
-  6='Never'
-  7='No father, stepfather, or father-figure'
 ;
 value vx234f
   1='Once a day or more often'
@@ -2181,6 +2182,15 @@ value vx234f
   7='No father, stepfather, or father-figure'
 ;
 value vx235f
+  1='Once a day or more often'
+  2='At least 4 times a week'
+  3='About once a week'
+  4='About once a month'
+  5='A few times a year or less'
+  6='Never'
+  7='No father, stepfather, or father-figure'
+;
+value vx236f
   1='More than once a day'
   2='Once a day'
   3='Several times a week'
@@ -2189,67 +2199,60 @@ value vx235f
   6='Never'
   7='No father, stepfather, father-figure'
 ;
-value vx236f
+value vx237f
   0='No'
   1='Yes'
   2='Do not have a TV'
 ;
-value vx237f
+value vx238f
   0='NOT SELECTED'
   1='Gone to the movies together?'
 ;
-value vx238f
+value vx239f
   0='NOT SELECTED'
   1-2='Gone out to dinner?'
 ;
-value vx239f
+value vx240f
   0='NOT SELECTED'
   1-3='Gone shopping or to get something for you - such as clothes, books, CDs, DVDs or games?'
 ;
-value vx240f
+value vx241f
   0='NOT SELECTED'
   1-4='Gone on an outing together, like to a museum or sporting event?'
 ;
-value vx241f
+value vx242f
   0='NOT SELECTED'
   1-6='None of the above?'
 ;
-value vx242f
+value vx243f
   0='NOT SELECTED'
   1='Done things together, such as build or make things, cook, do arts and crafts or sew?'
 ;
-value vx243f
+value vx244f
   0='NOT SELECTED'
   1-2='Worked on schoolwork together?'
 ;
-value vx244f
+value vx245f
   0='NOT SELECTED'
   1-3='Played a game or sport?'
 ;
-value vx245f
+value vx246f
   0='NOT SELECTED'
   1-4='None of the above?'
 ;
-value vx246f
+value vx247f
   1='None'
   2='1 to 9'
   3='10 to 19'
   4='20 or more'
-;
-value vx247f
-  0='No'
-  1='Yes'
 ;
 value vx248f
   0='No'
   1='Yes'
 ;
 value vx249f
-  1='Never'
-  2='Once or twice'
-  3='Several times'
-  4='About once a month'
-  5='About once a week or more often'
+  0='No'
+  1='Yes'
 ;
 value vx250f
   1='Never'
@@ -2259,20 +2262,18 @@ value vx250f
   5='About once a week or more often'
 ;
 value vx251f
+  1='Never'
+  2='Once or twice'
+  3='Several times'
+  4='About once a month'
+  5='About once a week or more often'
+;
+value vx252f
   1='Once a year or less'
   2='A few times a year'
   3='About once a month'
   4='Two or three times a month'
   5='About once a week or more'
-;
-value vx252f
-  1='Once a day or more often'
-  2='At least 4 times a week'
-  3='About once a week'
-  4='About once a month'
-  5='A few times a year or less'
-  6='Never'
-  7='No father, stepfather, or father-figure'
 ;
 value vx253f
   1='Once a day or more often'
@@ -2284,6 +2285,15 @@ value vx253f
   7='No father, stepfather, or father-figure'
 ;
 value vx254f
+  1='Once a day or more often'
+  2='At least 4 times a week'
+  3='About once a week'
+  4='About once a month'
+  5='A few times a year or less'
+  6='Never'
+  7='No father, stepfather, or father-figure'
+;
+value vx255f
   1='More than once a day'
   2='Once a day'
   3='Several times a week'
@@ -2292,31 +2302,24 @@ value vx254f
   6='Never'
   7='No father, stepfather, father-figure'
 ;
-value vx255f
+value vx256f
   0='No'
   1='Yes'
   2='Do not have a TV'
 ;
-value vx256f
+value vx257f
   1='None'
   2='1 to 9'
   3='10 to 19'
   4='20 or more'
-;
-value vx257f
-  0='No'
-  1='Yes'
 ;
 value vx258f
   0='No'
   1='Yes'
 ;
 value vx259f
-  1='Never'
-  2='Once or twice'
-  3='Several times'
-  4='About once a month'
-  5='About once a week or more often'
+  0='No'
+  1='Yes'
 ;
 value vx260f
   1='Never'
@@ -2326,20 +2329,18 @@ value vx260f
   5='About once a week or more often'
 ;
 value vx261f
+  1='Never'
+  2='Once or twice'
+  3='Several times'
+  4='About once a month'
+  5='About once a week or more often'
+;
+value vx262f
   1='Once a year or less'
   2='A few times a year'
   3='About once a month'
   4='Two or three times a month'
   5='About once a week or more'
-;
-value vx262f
-  1='Once a day or more often'
-  2='At least 4 times a week'
-  3='About once a week'
-  4='About once a month'
-  5='A few times a year or less'
-  6='Never'
-  7='No father, stepfather, or father-figure'
 ;
 value vx263f
   1='Once a day or more often'
@@ -2351,6 +2352,15 @@ value vx263f
   7='No father, stepfather, or father-figure'
 ;
 value vx264f
+  1='Once a day or more often'
+  2='At least 4 times a week'
+  3='About once a week'
+  4='About once a month'
+  5='A few times a year or less'
+  6='Never'
+  7='No father, stepfather, or father-figure'
+;
+value vx265f
   1='More than once a day'
   2='Once a day'
   3='Several times a week'
@@ -2359,12 +2369,12 @@ value vx264f
   6='Never'
   7='No father, stepfather, father-figure'
 ;
-value vx265f
+value vx266f
   0='No'
   1='Yes'
   2='Do not have a TV'
 ;
-value vx266f
+value vx267f
   532='532'
 ;
 */
@@ -2474,172 +2484,173 @@ tables _ALL_ /MISSING;
   format C1955300 vx98f.;
   format C1955400 vx99f.;
   format C1955800 vx100f.;
-  format C1956000 vx101f.;
-  format C1956600 vx102f.;
-  format C1956700 vx103f.;
-  format C1956800 vx104f.;
-  format C1956900 vx105f.;
-  format C2426700 vx106f.;
-  format C2427400 vx107f.;
-  format C2427500 vx108f.;
-  format C2427900 vx109f.;
-  format C2428000 vx110f.;
-  format C2428100 vx111f.;
-  format C2428800 vx112f.;
-  format C2428900 vx113f.;
-  format C2429000 vx114f.;
-  format C2429100 vx115f.;
-  format C2445100 vx116f.;
-  format C2445200 vx117f.;
-  format C2445300 vx118f.;
-  format C2445400 vx119f.;
-  format C2445600 vx120f.;
-  format C2445700 vx121f.;
-  format C2445800 vx122f.;
-  format C2719700 vx123f.;
-  format C2720400 vx124f.;
-  format C2720500 vx125f.;
-  format C2720900 vx126f.;
-  format C2721000 vx127f.;
-  format C2721100 vx128f.;
-  format C2721900 vx129f.;
-  format C2722000 vx130f.;
-  format C2722100 vx131f.;
-  format C2722300 vx132f.;
-  format C2751400 vx133f.;
-  format C2751401 vx134f.;
-  format C2751402 vx135f.;
-  format C2751403 vx136f.;
-  format C2751405 vx137f.;
-  format C2751500 vx138f.;
-  format C2751501 vx139f.;
-  format C2751502 vx140f.;
-  format C2751503 vx141f.;
-  format C2995800 vx142f.;
-  format C2996500 vx143f.;
-  format C2996600 vx144f.;
-  format C2997000 vx145f.;
-  format C2997100 vx146f.;
-  format C2997200 vx147f.;
-  format C2997900 vx148f.;
-  format C2998000 vx149f.;
-  format C2998100 vx150f.;
-  format C2998200 vx151f.;
-  format C3030900 vx152f.;
-  format C3030901 vx153f.;
-  format C3030902 vx154f.;
-  format C3030903 vx155f.;
-  format C3030905 vx156f.;
-  format C3031000 vx157f.;
-  format C3031001 vx158f.;
-  format C3031002 vx159f.;
-  format C3031003 vx160f.;
-  format C3356200 vx161f.;
-  format C3356201 vx162f.;
-  format C3356202 vx163f.;
-  format C3356203 vx164f.;
-  format C3356205 vx165f.;
-  format C3356300 vx166f.;
-  format C3356301 vx167f.;
-  format C3356302 vx168f.;
-  format C3356303 vx169f.;
-  format C3398300 vx170f.;
-  format C3399000 vx171f.;
-  format C3399100 vx172f.;
-  format C3399500 vx173f.;
-  format C3399600 vx174f.;
-  format C3399700 vx175f.;
-  format C3400400 vx176f.;
-  format C3400500 vx177f.;
-  format C3400600 vx178f.;
-  format C3400700 vx179f.;
-  format C3859900 vx180f.;
-  format C3859901 vx181f.;
-  format C3859902 vx182f.;
-  format C3859903 vx183f.;
-  format C3859905 vx184f.;
-  format C3860000 vx185f.;
-  format C3860001 vx186f.;
-  format C3860002 vx187f.;
-  format C3860003 vx188f.;
-  format C3924200 vx189f.;
-  format C3924900 vx190f.;
-  format C3925000 vx191f.;
-  format C3925400 vx192f.;
-  format C3925500 vx193f.;
-  format C3925600 vx194f.;
-  format C3926300 vx195f.;
-  format C3926400 vx196f.;
-  format C3926500 vx197f.;
-  format C3926600 vx198f.;
-  format C5108100 vx199f.;
-  format C5108101 vx200f.;
-  format C5108102 vx201f.;
-  format C5108103 vx202f.;
-  format C5108105 vx203f.;
-  format C5108200 vx204f.;
-  format C5108201 vx205f.;
-  format C5108202 vx206f.;
-  format C5108203 vx207f.;
-  format C5175400 vx208f.;
-  format C5176100 vx209f.;
-  format C5176200 vx210f.;
-  format C5176600 vx211f.;
-  format C5176700 vx212f.;
-  format C5176800 vx213f.;
-  format C5177500 vx214f.;
-  format C5177600 vx215f.;
-  format C5177700 vx216f.;
-  format C5177800 vx217f.;
-  format C5685400 vx218f.;
-  format C5685401 vx219f.;
-  format C5685402 vx220f.;
-  format C5685403 vx221f.;
-  format C5685405 vx222f.;
-  format C5685500 vx223f.;
-  format C5685501 vx224f.;
-  format C5685502 vx225f.;
-  format C5685503 vx226f.;
-  format C5751900 vx227f.;
-  format C5752600 vx228f.;
-  format C5752700 vx229f.;
-  format C5753100 vx230f.;
-  format C5753200 vx231f.;
-  format C5753300 vx232f.;
-  format C5754000 vx233f.;
-  format C5754100 vx234f.;
-  format C5754200 vx235f.;
-  format C5754300 vx236f.;
-  format C5957300 vx237f.;
-  format C5957301 vx238f.;
-  format C5957302 vx239f.;
-  format C5957303 vx240f.;
-  format C5957305 vx241f.;
-  format C5957400 vx242f.;
-  format C5957401 vx243f.;
-  format C5957402 vx244f.;
-  format C5957403 vx245f.;
-  format C6021800 vx246f.;
-  format C6022500 vx247f.;
-  format C6022600 vx248f.;
-  format C6023000 vx249f.;
-  format C6023100 vx250f.;
-  format C6023200 vx251f.;
-  format C6023900 vx252f.;
-  format C6024000 vx253f.;
-  format C6024100 vx254f.;
-  format C6024200 vx255f.;
-  format C6090400 vx256f.;
-  format C6091100 vx257f.;
-  format C6091200 vx258f.;
-  format C6091600 vx259f.;
-  format C6091700 vx260f.;
-  format C6091800 vx261f.;
-  format C6092500 vx262f.;
-  format C6092600 vx263f.;
-  format C6092700 vx264f.;
-  format C6092800 vx265f.;
-  format Y2267000 vx266f.;
+  format C1955900 vx101f.;
+  format C1956000 vx102f.;
+  format C1956600 vx103f.;
+  format C1956700 vx104f.;
+  format C1956800 vx105f.;
+  format C1956900 vx106f.;
+  format C2426700 vx107f.;
+  format C2427400 vx108f.;
+  format C2427500 vx109f.;
+  format C2427900 vx110f.;
+  format C2428000 vx111f.;
+  format C2428100 vx112f.;
+  format C2428800 vx113f.;
+  format C2428900 vx114f.;
+  format C2429000 vx115f.;
+  format C2429100 vx116f.;
+  format C2445100 vx117f.;
+  format C2445200 vx118f.;
+  format C2445300 vx119f.;
+  format C2445400 vx120f.;
+  format C2445600 vx121f.;
+  format C2445700 vx122f.;
+  format C2445800 vx123f.;
+  format C2719700 vx124f.;
+  format C2720400 vx125f.;
+  format C2720500 vx126f.;
+  format C2720900 vx127f.;
+  format C2721000 vx128f.;
+  format C2721100 vx129f.;
+  format C2721900 vx130f.;
+  format C2722000 vx131f.;
+  format C2722100 vx132f.;
+  format C2722300 vx133f.;
+  format C2751400 vx134f.;
+  format C2751401 vx135f.;
+  format C2751402 vx136f.;
+  format C2751403 vx137f.;
+  format C2751405 vx138f.;
+  format C2751500 vx139f.;
+  format C2751501 vx140f.;
+  format C2751502 vx141f.;
+  format C2751503 vx142f.;
+  format C2995800 vx143f.;
+  format C2996500 vx144f.;
+  format C2996600 vx145f.;
+  format C2997000 vx146f.;
+  format C2997100 vx147f.;
+  format C2997200 vx148f.;
+  format C2997900 vx149f.;
+  format C2998000 vx150f.;
+  format C2998100 vx151f.;
+  format C2998200 vx152f.;
+  format C3030900 vx153f.;
+  format C3030901 vx154f.;
+  format C3030902 vx155f.;
+  format C3030903 vx156f.;
+  format C3030905 vx157f.;
+  format C3031000 vx158f.;
+  format C3031001 vx159f.;
+  format C3031002 vx160f.;
+  format C3031003 vx161f.;
+  format C3356200 vx162f.;
+  format C3356201 vx163f.;
+  format C3356202 vx164f.;
+  format C3356203 vx165f.;
+  format C3356205 vx166f.;
+  format C3356300 vx167f.;
+  format C3356301 vx168f.;
+  format C3356302 vx169f.;
+  format C3356303 vx170f.;
+  format C3398300 vx171f.;
+  format C3399000 vx172f.;
+  format C3399100 vx173f.;
+  format C3399500 vx174f.;
+  format C3399600 vx175f.;
+  format C3399700 vx176f.;
+  format C3400400 vx177f.;
+  format C3400500 vx178f.;
+  format C3400600 vx179f.;
+  format C3400700 vx180f.;
+  format C3859900 vx181f.;
+  format C3859901 vx182f.;
+  format C3859902 vx183f.;
+  format C3859903 vx184f.;
+  format C3859905 vx185f.;
+  format C3860000 vx186f.;
+  format C3860001 vx187f.;
+  format C3860002 vx188f.;
+  format C3860003 vx189f.;
+  format C3924200 vx190f.;
+  format C3924900 vx191f.;
+  format C3925000 vx192f.;
+  format C3925400 vx193f.;
+  format C3925500 vx194f.;
+  format C3925600 vx195f.;
+  format C3926300 vx196f.;
+  format C3926400 vx197f.;
+  format C3926500 vx198f.;
+  format C3926600 vx199f.;
+  format C5108100 vx200f.;
+  format C5108101 vx201f.;
+  format C5108102 vx202f.;
+  format C5108103 vx203f.;
+  format C5108105 vx204f.;
+  format C5108200 vx205f.;
+  format C5108201 vx206f.;
+  format C5108202 vx207f.;
+  format C5108203 vx208f.;
+  format C5175400 vx209f.;
+  format C5176100 vx210f.;
+  format C5176200 vx211f.;
+  format C5176600 vx212f.;
+  format C5176700 vx213f.;
+  format C5176800 vx214f.;
+  format C5177500 vx215f.;
+  format C5177600 vx216f.;
+  format C5177700 vx217f.;
+  format C5177800 vx218f.;
+  format C5685400 vx219f.;
+  format C5685401 vx220f.;
+  format C5685402 vx221f.;
+  format C5685403 vx222f.;
+  format C5685405 vx223f.;
+  format C5685500 vx224f.;
+  format C5685501 vx225f.;
+  format C5685502 vx226f.;
+  format C5685503 vx227f.;
+  format C5751900 vx228f.;
+  format C5752600 vx229f.;
+  format C5752700 vx230f.;
+  format C5753100 vx231f.;
+  format C5753200 vx232f.;
+  format C5753300 vx233f.;
+  format C5754000 vx234f.;
+  format C5754100 vx235f.;
+  format C5754200 vx236f.;
+  format C5754300 vx237f.;
+  format C5957300 vx238f.;
+  format C5957301 vx239f.;
+  format C5957302 vx240f.;
+  format C5957303 vx241f.;
+  format C5957305 vx242f.;
+  format C5957400 vx243f.;
+  format C5957401 vx244f.;
+  format C5957402 vx245f.;
+  format C5957403 vx246f.;
+  format C6021800 vx247f.;
+  format C6022500 vx248f.;
+  format C6022600 vx249f.;
+  format C6023000 vx250f.;
+  format C6023100 vx251f.;
+  format C6023200 vx252f.;
+  format C6023900 vx253f.;
+  format C6024000 vx254f.;
+  format C6024100 vx255f.;
+  format C6024200 vx256f.;
+  format C6090400 vx257f.;
+  format C6091100 vx258f.;
+  format C6091200 vx259f.;
+  format C6091600 vx260f.;
+  format C6091700 vx261f.;
+  format C6091800 vx262f.;
+  format C6092500 vx263f.;
+  format C6092600 vx264f.;
+  format C6092700 vx265f.;
+  format C6092800 vx266f.;
+  format Y2267000 vx267f.;
 run;
 */
 
@@ -2748,171 +2759,172 @@ tables _ALL_ /MISSING;
   format 'MS981D03_1998'n vx98f.;
   format 'MS981D04_1998'n vx99f.;
   format 'MS981D08_1998'n vx100f.;
-  format 'MS981D10_1998'n vx101f.;
-  format 'MS981D16_1998'n vx102f.;
-  format 'MS981D17_1998'n vx103f.;
-  format 'MS981D18_1998'n vx104f.;
-  format 'MS981D19_1998'n vx105f.;
-  format 'MS1-C01_2000'n vx106f.;
-  format 'MS1-C03_2000'n vx107f.;
-  format 'MS1-C04_2000'n vx108f.;
-  format 'MS1-C08_2000'n vx109f.;
-  format 'MS1-C09_2000'n vx110f.;
-  format 'MS1-C10_2000'n vx111f.;
-  format 'MS1-C16_2000'n vx112f.;
-  format 'MS1-C17_2000'n vx113f.;
-  format 'MS1-C18_2000'n vx114f.;
-  format 'MS1-C19_2000'n vx115f.;
-  format 'CSAS001A_2000'n vx116f.;
-  format 'CSAS001B_2000'n vx117f.;
-  format 'CSAS001C_2000'n vx118f.;
-  format 'CSAS001D_2000'n vx119f.;
-  format 'CSAS002A_2000'n vx120f.;
-  format 'CSAS002B_2000'n vx121f.;
-  format 'CSAS002C_2000'n vx122f.;
-  format 'HOME-D01_2002'n vx123f.;
-  format 'HOME-D03_2002'n vx124f.;
-  format 'HOME-D04_2002'n vx125f.;
-  format 'HOME-D08_2002'n vx126f.;
-  format 'HOME-D09_2002'n vx127f.;
-  format 'HOME-D10_2002'n vx128f.;
-  format 'HOME-D16_2002'n vx129f.;
-  format 'HOME-D17_2002'n vx130f.;
-  format 'HOME-D18_2002'n vx131f.;
-  format 'HOME-D19_2002'n vx132f.;
-  format 'CSAS001~000001_2002'n vx133f.;
-  format 'CSAS001~000002_2002'n vx134f.;
-  format 'CSAS001~000003_2002'n vx135f.;
-  format 'CSAS001~000004_2002'n vx136f.;
-  format 'CSAS001~000006_2002'n vx137f.;
-  format 'CSAS002~000001_2002'n vx138f.;
-  format 'CSAS002~000002_2002'n vx139f.;
-  format 'CSAS002~000003_2002'n vx140f.;
-  format 'CSAS002~000004_2002'n vx141f.;
-  format 'HOME-D01_2004'n vx142f.;
-  format 'HOME-D03_2004'n vx143f.;
-  format 'HOME-D04_2004'n vx144f.;
-  format 'HOME-D08_2004'n vx145f.;
-  format 'HOME-D09_2004'n vx146f.;
-  format 'HOME-D10_2004'n vx147f.;
-  format 'HOME-D16_2004'n vx148f.;
-  format 'HOME-D17_2004'n vx149f.;
-  format 'HOME-D18_2004'n vx150f.;
-  format 'HOME-D19_2004'n vx151f.;
-  format 'CSAS001~000001_2004'n vx152f.;
-  format 'CSAS001~000002_2004'n vx153f.;
-  format 'CSAS001~000003_2004'n vx154f.;
-  format 'CSAS001~000004_2004'n vx155f.;
-  format 'CSAS001~000006_2004'n vx156f.;
-  format 'CSAS002~000001_2004'n vx157f.;
-  format 'CSAS002~000002_2004'n vx158f.;
-  format 'CSAS002~000003_2004'n vx159f.;
-  format 'CSAS002~000004_2004'n vx160f.;
-  format 'CSAS001~000001_2006'n vx161f.;
-  format 'CSAS001~000002_2006'n vx162f.;
-  format 'CSAS001~000003_2006'n vx163f.;
-  format 'CSAS001~000004_2006'n vx164f.;
-  format 'CSAS001~000006_2006'n vx165f.;
-  format 'CSAS002~000001_2006'n vx166f.;
-  format 'CSAS002~000002_2006'n vx167f.;
-  format 'CSAS002~000003_2006'n vx168f.;
-  format 'CSAS002~000004_2006'n vx169f.;
-  format 'MS-HOME-D01_2006'n vx170f.;
-  format 'MS-HOME-D03_2006'n vx171f.;
-  format 'MS-HOME-D04_2006'n vx172f.;
-  format 'MS-HOME-D08_2006'n vx173f.;
-  format 'MS-HOME-D09_2006'n vx174f.;
-  format 'MS-HOME-D10_2006'n vx175f.;
-  format 'MS-HOME-D16_2006'n vx176f.;
-  format 'MS-HOME-D17_2006'n vx177f.;
-  format 'MS-HOME-D18_2006'n vx178f.;
-  format 'MS-HOME-D19_2006'n vx179f.;
-  format 'CSAS001~000001_2008'n vx180f.;
-  format 'CSAS001~000002_2008'n vx181f.;
-  format 'CSAS001~000003_2008'n vx182f.;
-  format 'CSAS001~000004_2008'n vx183f.;
-  format 'CSAS001~000006_2008'n vx184f.;
-  format 'CSAS002~000001_2008'n vx185f.;
-  format 'CSAS002~000002_2008'n vx186f.;
-  format 'CSAS002~000003_2008'n vx187f.;
-  format 'CSAS002~000004_2008'n vx188f.;
-  format 'MS-HOME-D01_2008'n vx189f.;
-  format 'MS-HOME-D03_2008'n vx190f.;
-  format 'MS-HOME-D04_2008'n vx191f.;
-  format 'MS-HOME-D08_2008'n vx192f.;
-  format 'MS-HOME-D09_2008'n vx193f.;
-  format 'MS-HOME-D10_2008'n vx194f.;
-  format 'MS-HOME-D16_2008'n vx195f.;
-  format 'MS-HOME-D17_2008'n vx196f.;
-  format 'MS-HOME-D18_2008'n vx197f.;
-  format 'MS-HOME-D19_2008'n vx198f.;
-  format 'CSAS001~000001_2010'n vx199f.;
-  format 'CSAS001~000002_2010'n vx200f.;
-  format 'CSAS001~000003_2010'n vx201f.;
-  format 'CSAS001~000004_2010'n vx202f.;
-  format 'CSAS001~000006_2010'n vx203f.;
-  format 'CSAS002~000001_2010'n vx204f.;
-  format 'CSAS002~000002_2010'n vx205f.;
-  format 'CSAS002~000003_2010'n vx206f.;
-  format 'CSAS002~000004_2010'n vx207f.;
-  format 'MS-HOME-D01_2010'n vx208f.;
-  format 'MS-HOME-D03_2010'n vx209f.;
-  format 'MS-HOME-D04_2010'n vx210f.;
-  format 'MS-HOME-D08_2010'n vx211f.;
-  format 'MS-HOME-D09_2010'n vx212f.;
-  format 'MS-HOME-D10_2010'n vx213f.;
-  format 'MS-HOME-D16_2010'n vx214f.;
-  format 'MS-HOME-D17_2010'n vx215f.;
-  format 'MS-HOME-D18_2010'n vx216f.;
-  format 'MS-HOME-D19_2010'n vx217f.;
-  format 'CSAS001~000001_2012'n vx218f.;
-  format 'CSAS001~000002_2012'n vx219f.;
-  format 'CSAS001~000003_2012'n vx220f.;
-  format 'CSAS001~000004_2012'n vx221f.;
-  format 'CSAS001~000006_2012'n vx222f.;
-  format 'CSAS002~000001_2012'n vx223f.;
-  format 'CSAS002~000002_2012'n vx224f.;
-  format 'CSAS002~000003_2012'n vx225f.;
-  format 'CSAS002~000004_2012'n vx226f.;
-  format 'MS-HOME-D01_2012'n vx227f.;
-  format 'MS-HOME-D03_2012'n vx228f.;
-  format 'MS-HOME-D04_2012'n vx229f.;
-  format 'MS-HOME-D08_2012'n vx230f.;
-  format 'MS-HOME-D09_2012'n vx231f.;
-  format 'MS-HOME-D10_2012'n vx232f.;
-  format 'MS-HOME-D16_2012'n vx233f.;
-  format 'MS-HOME-D17_2012'n vx234f.;
-  format 'MS-HOME-D18_2012'n vx235f.;
-  format 'MS-HOME-D19_2012'n vx236f.;
-  format 'CSAS001~000001_2014'n vx237f.;
-  format 'CSAS001~000002_2014'n vx238f.;
-  format 'CSAS001~000003_2014'n vx239f.;
-  format 'CSAS001~000004_2014'n vx240f.;
-  format 'CSAS001~000006_2014'n vx241f.;
-  format 'CSAS002~000001_2014'n vx242f.;
-  format 'CSAS002~000002_2014'n vx243f.;
-  format 'CSAS002~000003_2014'n vx244f.;
-  format 'CSAS002~000004_2014'n vx245f.;
-  format 'MS-HOME-D01_2014'n vx246f.;
-  format 'MS-HOME-D03_2014'n vx247f.;
-  format 'MS-HOME-D04_2014'n vx248f.;
-  format 'MS-HOME-D08_2014'n vx249f.;
-  format 'MS-HOME-D09_2014'n vx250f.;
-  format 'MS-HOME-D10_2014'n vx251f.;
-  format 'MS-HOME-D16_2014'n vx252f.;
-  format 'MS-HOME-D17_2014'n vx253f.;
-  format 'MS-HOME-D18_2014'n vx254f.;
-  format 'MS-HOME-D19_2014'n vx255f.;
-  format 'MS-HOME-D01_2016'n vx256f.;
-  format 'MS-HOME-D03_2016'n vx257f.;
-  format 'MS-HOME-D04_2016'n vx258f.;
-  format 'MS-HOME-D08_2016'n vx259f.;
-  format 'MS-HOME-D09_2016'n vx260f.;
-  format 'MS-HOME-D10_2016'n vx261f.;
-  format 'MS-HOME-D16_2016'n vx262f.;
-  format 'MS-HOME-D17_2016'n vx263f.;
-  format 'MS-HOME-D18_2016'n vx264f.;
-  format 'MS-HOME-D19_2016'n vx265f.;
-  format 'VERSION_R29_XRND'n vx266f.;
+  format 'MS981D09_1998'n vx101f.;
+  format 'MS981D10_1998'n vx102f.;
+  format 'MS981D16_1998'n vx103f.;
+  format 'MS981D17_1998'n vx104f.;
+  format 'MS981D18_1998'n vx105f.;
+  format 'MS981D19_1998'n vx106f.;
+  format 'MS1-C01_2000'n vx107f.;
+  format 'MS1-C03_2000'n vx108f.;
+  format 'MS1-C04_2000'n vx109f.;
+  format 'MS1-C08_2000'n vx110f.;
+  format 'MS1-C09_2000'n vx111f.;
+  format 'MS1-C10_2000'n vx112f.;
+  format 'MS1-C16_2000'n vx113f.;
+  format 'MS1-C17_2000'n vx114f.;
+  format 'MS1-C18_2000'n vx115f.;
+  format 'MS1-C19_2000'n vx116f.;
+  format 'CSAS001A_2000'n vx117f.;
+  format 'CSAS001B_2000'n vx118f.;
+  format 'CSAS001C_2000'n vx119f.;
+  format 'CSAS001D_2000'n vx120f.;
+  format 'CSAS002A_2000'n vx121f.;
+  format 'CSAS002B_2000'n vx122f.;
+  format 'CSAS002C_2000'n vx123f.;
+  format 'HOME-D01_2002'n vx124f.;
+  format 'HOME-D03_2002'n vx125f.;
+  format 'HOME-D04_2002'n vx126f.;
+  format 'HOME-D08_2002'n vx127f.;
+  format 'HOME-D09_2002'n vx128f.;
+  format 'HOME-D10_2002'n vx129f.;
+  format 'HOME-D16_2002'n vx130f.;
+  format 'HOME-D17_2002'n vx131f.;
+  format 'HOME-D18_2002'n vx132f.;
+  format 'HOME-D19_2002'n vx133f.;
+  format 'CSAS001~000001_2002'n vx134f.;
+  format 'CSAS001~000002_2002'n vx135f.;
+  format 'CSAS001~000003_2002'n vx136f.;
+  format 'CSAS001~000004_2002'n vx137f.;
+  format 'CSAS001~000006_2002'n vx138f.;
+  format 'CSAS002~000001_2002'n vx139f.;
+  format 'CSAS002~000002_2002'n vx140f.;
+  format 'CSAS002~000003_2002'n vx141f.;
+  format 'CSAS002~000004_2002'n vx142f.;
+  format 'HOME-D01_2004'n vx143f.;
+  format 'HOME-D03_2004'n vx144f.;
+  format 'HOME-D04_2004'n vx145f.;
+  format 'HOME-D08_2004'n vx146f.;
+  format 'HOME-D09_2004'n vx147f.;
+  format 'HOME-D10_2004'n vx148f.;
+  format 'HOME-D16_2004'n vx149f.;
+  format 'HOME-D17_2004'n vx150f.;
+  format 'HOME-D18_2004'n vx151f.;
+  format 'HOME-D19_2004'n vx152f.;
+  format 'CSAS001~000001_2004'n vx153f.;
+  format 'CSAS001~000002_2004'n vx154f.;
+  format 'CSAS001~000003_2004'n vx155f.;
+  format 'CSAS001~000004_2004'n vx156f.;
+  format 'CSAS001~000006_2004'n vx157f.;
+  format 'CSAS002~000001_2004'n vx158f.;
+  format 'CSAS002~000002_2004'n vx159f.;
+  format 'CSAS002~000003_2004'n vx160f.;
+  format 'CSAS002~000004_2004'n vx161f.;
+  format 'CSAS001~000001_2006'n vx162f.;
+  format 'CSAS001~000002_2006'n vx163f.;
+  format 'CSAS001~000003_2006'n vx164f.;
+  format 'CSAS001~000004_2006'n vx165f.;
+  format 'CSAS001~000006_2006'n vx166f.;
+  format 'CSAS002~000001_2006'n vx167f.;
+  format 'CSAS002~000002_2006'n vx168f.;
+  format 'CSAS002~000003_2006'n vx169f.;
+  format 'CSAS002~000004_2006'n vx170f.;
+  format 'MS-HOME-D01_2006'n vx171f.;
+  format 'MS-HOME-D03_2006'n vx172f.;
+  format 'MS-HOME-D04_2006'n vx173f.;
+  format 'MS-HOME-D08_2006'n vx174f.;
+  format 'MS-HOME-D09_2006'n vx175f.;
+  format 'MS-HOME-D10_2006'n vx176f.;
+  format 'MS-HOME-D16_2006'n vx177f.;
+  format 'MS-HOME-D17_2006'n vx178f.;
+  format 'MS-HOME-D18_2006'n vx179f.;
+  format 'MS-HOME-D19_2006'n vx180f.;
+  format 'CSAS001~000001_2008'n vx181f.;
+  format 'CSAS001~000002_2008'n vx182f.;
+  format 'CSAS001~000003_2008'n vx183f.;
+  format 'CSAS001~000004_2008'n vx184f.;
+  format 'CSAS001~000006_2008'n vx185f.;
+  format 'CSAS002~000001_2008'n vx186f.;
+  format 'CSAS002~000002_2008'n vx187f.;
+  format 'CSAS002~000003_2008'n vx188f.;
+  format 'CSAS002~000004_2008'n vx189f.;
+  format 'MS-HOME-D01_2008'n vx190f.;
+  format 'MS-HOME-D03_2008'n vx191f.;
+  format 'MS-HOME-D04_2008'n vx192f.;
+  format 'MS-HOME-D08_2008'n vx193f.;
+  format 'MS-HOME-D09_2008'n vx194f.;
+  format 'MS-HOME-D10_2008'n vx195f.;
+  format 'MS-HOME-D16_2008'n vx196f.;
+  format 'MS-HOME-D17_2008'n vx197f.;
+  format 'MS-HOME-D18_2008'n vx198f.;
+  format 'MS-HOME-D19_2008'n vx199f.;
+  format 'CSAS001~000001_2010'n vx200f.;
+  format 'CSAS001~000002_2010'n vx201f.;
+  format 'CSAS001~000003_2010'n vx202f.;
+  format 'CSAS001~000004_2010'n vx203f.;
+  format 'CSAS001~000006_2010'n vx204f.;
+  format 'CSAS002~000001_2010'n vx205f.;
+  format 'CSAS002~000002_2010'n vx206f.;
+  format 'CSAS002~000003_2010'n vx207f.;
+  format 'CSAS002~000004_2010'n vx208f.;
+  format 'MS-HOME-D01_2010'n vx209f.;
+  format 'MS-HOME-D03_2010'n vx210f.;
+  format 'MS-HOME-D04_2010'n vx211f.;
+  format 'MS-HOME-D08_2010'n vx212f.;
+  format 'MS-HOME-D09_2010'n vx213f.;
+  format 'MS-HOME-D10_2010'n vx214f.;
+  format 'MS-HOME-D16_2010'n vx215f.;
+  format 'MS-HOME-D17_2010'n vx216f.;
+  format 'MS-HOME-D18_2010'n vx217f.;
+  format 'MS-HOME-D19_2010'n vx218f.;
+  format 'CSAS001~000001_2012'n vx219f.;
+  format 'CSAS001~000002_2012'n vx220f.;
+  format 'CSAS001~000003_2012'n vx221f.;
+  format 'CSAS001~000004_2012'n vx222f.;
+  format 'CSAS001~000006_2012'n vx223f.;
+  format 'CSAS002~000001_2012'n vx224f.;
+  format 'CSAS002~000002_2012'n vx225f.;
+  format 'CSAS002~000003_2012'n vx226f.;
+  format 'CSAS002~000004_2012'n vx227f.;
+  format 'MS-HOME-D01_2012'n vx228f.;
+  format 'MS-HOME-D03_2012'n vx229f.;
+  format 'MS-HOME-D04_2012'n vx230f.;
+  format 'MS-HOME-D08_2012'n vx231f.;
+  format 'MS-HOME-D09_2012'n vx232f.;
+  format 'MS-HOME-D10_2012'n vx233f.;
+  format 'MS-HOME-D16_2012'n vx234f.;
+  format 'MS-HOME-D17_2012'n vx235f.;
+  format 'MS-HOME-D18_2012'n vx236f.;
+  format 'MS-HOME-D19_2012'n vx237f.;
+  format 'CSAS001~000001_2014'n vx238f.;
+  format 'CSAS001~000002_2014'n vx239f.;
+  format 'CSAS001~000003_2014'n vx240f.;
+  format 'CSAS001~000004_2014'n vx241f.;
+  format 'CSAS001~000006_2014'n vx242f.;
+  format 'CSAS002~000001_2014'n vx243f.;
+  format 'CSAS002~000002_2014'n vx244f.;
+  format 'CSAS002~000003_2014'n vx245f.;
+  format 'CSAS002~000004_2014'n vx246f.;
+  format 'MS-HOME-D01_2014'n vx247f.;
+  format 'MS-HOME-D03_2014'n vx248f.;
+  format 'MS-HOME-D04_2014'n vx249f.;
+  format 'MS-HOME-D08_2014'n vx250f.;
+  format 'MS-HOME-D09_2014'n vx251f.;
+  format 'MS-HOME-D10_2014'n vx252f.;
+  format 'MS-HOME-D16_2014'n vx253f.;
+  format 'MS-HOME-D17_2014'n vx254f.;
+  format 'MS-HOME-D18_2014'n vx255f.;
+  format 'MS-HOME-D19_2014'n vx256f.;
+  format 'MS-HOME-D01_2016'n vx257f.;
+  format 'MS-HOME-D03_2016'n vx258f.;
+  format 'MS-HOME-D04_2016'n vx259f.;
+  format 'MS-HOME-D08_2016'n vx260f.;
+  format 'MS-HOME-D09_2016'n vx261f.;
+  format 'MS-HOME-D10_2016'n vx262f.;
+  format 'MS-HOME-D16_2016'n vx263f.;
+  format 'MS-HOME-D17_2016'n vx264f.;
+  format 'MS-HOME-D18_2016'n vx265f.;
+  format 'MS-HOME-D19_2016'n vx266f.;
+  format 'VERSION_R29_XRND'n vx267f.;
 run;
 */

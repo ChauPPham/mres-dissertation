@@ -2,9 +2,9 @@
 
 * project, setmaster("E:\GitHub\mres-dissertation\NLSY79\master_do_file.do")
 
-/*========================================================*/
-/* Calculate investment indices based on HOME for group A */
-/*========================================================*/
+/*==============================================================*/
+/* Calculate investment indices based on HOME for group A (0-2) */
+/*==============================================================*/
 use "NLSY79CYA_A.dta", clear
 
 *========== Creates dummy variables
@@ -77,9 +77,9 @@ quietly forval i = 1986(2)2012 {
 keep C0000100 C0000200 C0005300 C0005400 C0005700 Y2267000 *SCALED*
 *save HOME_A.dta, replace
 
-/*========================================================*/
-/* Calculate investment indices based on HOME for group B */
-/*========================================================*/
+/*==============================================================*/
+/* Calculate investment indices based on HOME for group B (3-5) */
+/*==============================================================*/
 use "NLSY79CYA_B.dta", clear
 
 local year = 1986
@@ -177,9 +177,9 @@ keep C0000100 C0000200 C0005300 C0005400 C0005700 Y2267000 *SCALED*
 *save HOME_B.dta, replace
 
 
-/*========================================================*/
-/* Calculate investment indices based on HOME for group C */
-/*========================================================*/
+/*==============================================================*/
+/* Calculate investment indices based on HOME for group C (6-9) */
+/*==============================================================*/
 use "NLSY79CYA_C.dta", clear
 
 local year = 1986
@@ -266,7 +266,127 @@ keep C0000100 C0000200 C0005300 C0005400 C0005700 Y2267000 *SCALED*
 *save HOME_C.dta, replace
 
 
-/*========================================================*/
-/* Calculate investment indices based on HOME for group D */
-/*========================================================*/
+/*================================================================*/
+/* Calculate investment indices based on HOME for group D (10-14) */
+/*================================================================*/
 use "NLSY79CYA_D.dta", clear
+
+*===== Not HOME section
+local year = 1988
+quietly foreach var in C0722200 C0932800 C1123000 C1348800 C1570100 C1908700 C2445100 C2751400 C3030900 C3356200 C3859900 C5108100 C5685400 C5957300 {
+	gen NH_MOVIE_`year' = `var' if `var' >= 0
+	local year = `year' + 2
+}	/*Not HOME: movie with parents last month?*/
+
+local year = 1988
+quietly foreach var in C0722300 C0932900 C1123100 C1348900 C1570200 C1908800 C2445200 C2751401 C3030901 C3356201 C3859901 C5108101 C5685401 C5957301 {
+	gen NH_DINNER_`year' = `var' if `var' >= 0
+	local year = `year' + 2
+}	/*Not HOME: dinner with parents last month?*/
+
+local year = 1988
+quietly foreach var in C0722400 C0933000 C1123200 C1349000 C1570300 C1908900 C2445300 C2751402 C3030902 C3356202 C3859902 C5108102 C5685402 C5957302 {
+	gen NH_SHOPPING_`year' = `var' if `var' >= 0
+	local year = `year' + 2
+}	/*Not HOME: shopping with parents last month?*/
+
+local year = 1988
+quietly foreach var in C0722500 C0933100 C1123300 C1349100 C1570400 C1909000 C2445400 C2751405 C3030905 C3356205 C3859905 C5108105 C5685405 C5957305 {
+	gen NH_OUTING_`year' = `var' if `var' >= 0
+	local year = `year' + 2
+}	/*Not HOME: outing with parents last month (type other)?*/
+
+local year = 1988
+quietly foreach var in C0722700 C0933300 C1123500 C1349300 C1570600 C1909200 C2445600 C2751500 C3031000 C3356300 C3860000 C5108200 C5685500 C5957400 {
+	gen NH_DO_TOGETHER_`year' = `var' if `var' >= 0
+	local year = `year' + 2
+}	/*Not HOME: do something together with parents LAST WEEK?*/
+
+local year = 1988
+quietly foreach var in C0722900 C0933500 C1123700 C1349500 C1570800 C1909400 C2445800 C2751502 C3031002 C3356302 C3860002 C5108202 C5685502 C5957402 {
+	gen NH_GAME_`year' = `var' if `var' >= 0
+	local year = `year' + 2
+}	/*Not HOME: play game or sports together with parents LAST WEEK?*/
+
+local year = 1988
+quietly foreach var in C0722800 C0933400 C1123600 C1349400 C1570700 C1909300 C2445700 C2751501 C3031001 C3356301 C3860001 C5108201 C5685501 C5957401 {
+	gen NH_SCHOOLWORK_`year' = `var' if `var' >= 0
+	local year = `year' + 2
+}	/*Not HOME: do school work together with parents LAST WEEK?*/
+
+
+*===== HOME section
+local year = 1988
+quietly foreach var in C0759500 C0962000 C1160200 C1412200 C1613800 C1954600 C2426700 C2719700 C2995800 C3398300 C3924200 C5175400 C5751900 C6021800 C6090400 {
+	gen BOOK_`year' = 1 if `var' >= 4
+	replace BOOK_`year' = 0 if (`var' < 4 & `var' >= 0)
+	local year = `year' + 2
+}	/*how many children books >= 10*/
+
+local year = 1988
+quietly foreach var in C0760200 C0962700 C1160900 C1412900 C1614500 C1955300 C2427400 C2720400 C2996500 C3399000 C3924900 C5176100 C5752600 C6022500 C6091100 {
+	gen MUSIC_`year' = 1 if `var' == 1
+	replace MUSIC_`year' = 0 if `var' == 0
+	local year = `year' + 2
+}	/*is there musical instrument at home for child*/
+
+local year = 1988
+quietly foreach var in C0760300 C0962800 C1161000 C1413000 C1614600 C1955400 C2427500 C2720500 C2996600 C3399100 C3925000 C5176200 C5752700 C6022600 C6091200 {
+	gen NEWS_`year' = 1 if `var' == 1
+	replace NEWS_`year' = 0 if (`var' >= 0 & `var' != 1)
+	local year = `year' + 2
+}	/*daily newspaper subscribe?*/
+
+local year = 1988
+quietly foreach var in C0760700 C0963200 C1161400 C1413400 C1615000 C1955800 C2427900 C2720900 C2997000 C3399500 C3925400 C5176600 C5753100 C6023000 C6091600 {
+	gen MUSEUM_`year' = 1 if `var' > 2
+	replace MUSEUM_`year' = 0 if (`var' >= 0 & `var' <= 2)
+	local year = `year' + 2
+}	/*how often go to museum in PAST YEAR >= 3 times per year*/
+
+local year = 1988
+quietly foreach var in C0760800 C0963300 C1161500 C1413500 C1615100 C1955900 C2428000 C2721000 C2997100 C3399600 C3925500 C5176700 C5753200 C6023100 C6091700 {
+	gen THEATER_`year' = 1 if `var' > 2
+	replace THEATER_`year' = 0 if (`var' >= 0 & `var' <= 2)
+	local year = `year' + 2
+}	/*how often go to theater (performance) PAST YEAR >= 3 times per year*/
+
+local year = 1988
+quietly foreach var in C0760900 C0963400 C1161600 C1413600 C1615200 C1956000 C2428100 C2721100 C2997200 C3399700 C3925600 C5176800 C5753300 C6023200 C6091800 {
+	gen VISIT_`year' = 1 if `var' >= 4
+	replace VISIT_`year' = 0 if (`var' < 4 & `var' >= 0)
+	local year = `year' + 2
+}	/*how often see friends, relatives >= 2 times a month*/
+
+local year = 1988
+quietly foreach var in C0761100 C0964000 C1162200 C1414200 C1615800 C1956600 C2428800 C2721900 C2997900 C3400400 C3926300 C5177500 C5754000 C6023900 C6092500 {
+	gen WITH_DAD_`year' = 1 if (`var' <= 2 & `var' >= 0)
+	replace WITH_DAD_`year' = 0 if `var' > 2
+	local year = `year' + 2
+}	/*how often spend time with dad >= 4 times a week*/
+
+local year = 1988
+quietly foreach var in C0761200 C0964100 C1162300 C1414300 C1615900 C1956700 C2428900 C2722000 C2998000 C3400500 C3926400 C5177600 C5754100 C6024000 C6092600 {
+	gen DAD_OUTDOOR_`year' = 1 if (`var' <= 3 & `var' >= 0)
+	replace DAD_OUTDOOR_`year' = 0 if `var' > 3
+	local year = `year' + 2
+}	/*how often spend time with dad outdoors >= once a week*/
+
+local year = 1988
+quietly foreach var in C0761400 C0964300 C1162500 C1414500 C1616000 C1956900 C2429100 C2722300 C2998200 C3400700 C3926600 C5177800 C5754300 C6024200 C6092800 {
+	gen DISCUSS_`year' = 1 if `var' == 1
+	replace DISCUSS_`year' = 0 if (`var' >= 0 & `var' != 1)
+	local year = `year' + 2
+}	/*whether discuss TV programs*/
+
+quietly forval i = 1988(2)2016 {
+	egen INV_C_TOTAL_`i' = rowtotal(*_`i'), missing
+	quietly su INV_C_TOTAL_`i'
+	scalar mean_`i' = r(mean)
+	scalar sd_`i' = r(sd)
+	gen INV_C_SCALED_`i' = (INV_C_TOTAL_`i' - mean_`i')/sd_`i'
+}
+
+keep C0000100 C0000200 C0005300 C0005400 C0005700 Y2267000 *SCALED*
+*save HOME_D.dta, replace
+

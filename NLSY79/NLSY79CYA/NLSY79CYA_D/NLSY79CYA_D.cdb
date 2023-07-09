@@ -2534,6 +2534,34 @@ Min:              1        Max:              5        Mean:                2.24
 Lead In: C19557.00[Default]
 Default Next Question: C19559.00
 --------------------------------------------------------------------------------
+C19559.00    [MS981D09]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART D (10-14 YRS): HOW OFTEN CHILD TAKEN TO THEATER IN THE 
+             PAST YEAR
+ 
+9.     How often has a family member taken or arranged to take your child to any
+type of musical or theatrical performance within the past year?  (Circle Only 
+One)
+ 
+     691       1 NEVER
+     707       2 ONCE OR TWICE
+     372       3 SEVERAL TIMES
+      59       4 ABOUT ONCE A MONTH
+      17       5 ABOUT ONCE A WEEK OR MORE OFTEN
+  -------
+    1846
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1846      MISSING(-7)    9705
+ 
+Min:              1        Max:              5        Mean:                1.92
+ 
+Lead In: C19558.00[Default]
+Default Next Question: C19560.00
+--------------------------------------------------------------------------------
 C19560.00    [MS981D10]                                     Survey Year: 1998
   PRIMARY VARIABLE
 
