@@ -82,7 +82,7 @@ gen AGE_AT_INVESTMENT = year - C0005700
 rename INV_A_SCALED_ INVESTMENT
 keep if INVESTMENT != .
 replace AGE_AT_INVESTMENT = 2 if AGE_AT_INVESTMENT > 2
-save HOME_A.dta, replace
+*save HOME_A.dta, replace
 
 /*==============================================================*/
 /* Calculate investment indices based on HOME for group B (3-5) */
@@ -194,7 +194,7 @@ rename INV_B_SCALED_ INVESTMENT
 keep if INVESTMENT != .
 replace AGE_AT_INVESTMENT = 5 if AGE_AT_INVESTMENT > 5
 replace AGE_AT_INVESTMENT = 3 if AGE_AT_INVESTMENT < 3
-save HOME_B.dta, replace
+*save HOME_B.dta, replace
 
 
 /*==============================================================*/
@@ -289,7 +289,7 @@ rename INV_C_SCALED_ INVESTMENT
 keep if INVESTMENT != .
 replace AGE_AT_INVESTMENT = 9 if AGE_AT_INVESTMENT > 9
 replace AGE_AT_INVESTMENT = 6 if AGE_AT_INVESTMENT < 6
-save HOME_C.dta, replace
+*save HOME_C.dta, replace
 
 
 /*================================================================*/
@@ -420,7 +420,7 @@ rename INV_D_SCALED_ INVESTMENT
 keep if INVESTMENT != .
 replace AGE_AT_INVESTMENT = 14 if AGE_AT_INVESTMENT > 14
 replace AGE_AT_INVESTMENT = 10 if AGE_AT_INVESTMENT < 10
-save HOME_D.dta, replace
+*save HOME_D.dta, replace
 
 /*================================*/
 /*========== Merge data ==========*/
@@ -428,7 +428,7 @@ save HOME_D.dta, replace
 use HOME_A, clear
 append using HOME_B HOME_C HOME_D, gen(source)
 sort C0000100 year
-save MERGE_CHILD.dta, replace
+*save MERGE_CHILD.dta, replace
 
 /*==============================================================================*/
 
