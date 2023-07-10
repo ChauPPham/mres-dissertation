@@ -2,6 +2,8 @@
 
 * project, setmaster("E:\GitHub\mres-dissertation\NLSY79\master_do_file.do")
 
+/*========== Calculate using NLSY79 Child and Young Adults ==========*/
+
 /*==============================================================*/
 /* Calculate investment indices based on HOME for group A (0-2) */
 /*==============================================================*/
@@ -75,16 +77,42 @@ quietly forval i = 1986(2)2012 {
 }
 
 keep C0000100 C0000200 C0005300 C0005400 C0005700 Y2267000 *SCALED*
-*save HOME_A.dta, replace
+reshape long INV_A_SCALED_, i(C0000100) j(year)
+gen AGE_AT_INVESTMENT = year - C0005700
+rename INV_A_SCALED_ INVESTMENT
+keep if INVESTMENT != .
+replace AGE_AT_INVESTMENT = 2 if AGE_AT_INVESTMENT > 2
+save HOME_A.dta, replace
 
 /*==============================================================*/
 /* Calculate investment indices based on HOME for group B (3-5) */
 /*==============================================================*/
 use "NLSY79CYA_B.dta", clear
 
-local year = 1986
+/* Generate variables to deal with splitting of 3 category and 4-5 category*/
+
 gen temp_READ_2000 = C2266600 if C2266600 >= 0
 replace temp_READ_2000 = C2417100 if C2417100 >= 0 
+gen temp_BOOK_2000 = C2266700 if C2266700 >= 0
+replace temp_BOOK_2000 = C2417200 if C2417200 >= 0 
+gen temp_MAG_2000 = C2266800 if C2266800 >= 0
+replace temp_MAG_2000 = C2417300 if C2417300 >= 0
+gen temp_TAPE_2000 = C2266900 if C2266900 >= 0 
+replace temp_TAPE_2000 = C2417400 if C2417400 >= 0
+gen temp_OUT_2000 = C2267900 if C2267900 >= 0
+replace temp_OUT_2000 = C2419300 if C2419300 >= 0
+gen temp_MUSEUM_2000 = C2268000 if C2268000 >= 0
+replace temp_MUSEUM_2000 = C2419400 if C2419400 >= 0
+gen temp_SEE_DAD_2000 = C2268800 if C2268800 >= 0
+replace temp_SEE_DAD_2000 = C2420100 if C2420100 >= 0
+gen temp_EAT_2000 = C2268900 if C2268900 >= 0
+replace temp_EAT_2000 = C2420200 if C2420200 >= 0
+
+quietly foreach var of varlist temp_* {
+	replace `var' = -7 if `var' == .
+}
+
+local year = 1986
 quietly foreach var in C0542000 C0752400 C0954000 C1152100 C1403300 C1604900 C1945500 temp_READ_2000 C2711400 C2987800 C3390300 C3916200 C5167400 C5743900 C6013800 C6082500 {
 	gen READ_`year' = 1 if `var' >= 4
 	replace READ_`year' = 0 if (`var' >= 0 & `var' < 4)
@@ -92,8 +120,6 @@ quietly foreach var in C0542000 C0752400 C0954000 C1152100 C1403300 C1604900 C19
 } /*how often read to child >= 1 per week*/
 
 local year = 1986
-gen temp_BOOK_2000 = C2266700 if C2266700 >= 0
-replace temp_BOOK_2000 = C2417200 if C2417200 >= 0 
 quietly foreach var in C0542100 C0752500 C0954100 C1152200 C1403400 C1605000 C1945600 temp_BOOK_2000 C2711500 C2987900 C3390400 C3916300 C5167500 C5744000 C6013900 C6082600 {
 	gen BOOK_`year' = 1 if `var' >= 4
 	replace BOOK_`year' = 0 if (`var' < 4 & `var' >= 0)
@@ -101,8 +127,6 @@ quietly foreach var in C0542100 C0752500 C0954100 C1152200 C1403400 C1605000 C19
 }	/*how many children books >= 10*/
 
 local year = 1986
-gen temp_MAG_2000 = C2266800 if C2266800 >= 0
-replace temp_MAG_2000 = C2417300 if C2417300 >= 0
 quietly foreach var in C0542200 C0752600 C0954200 C1152300 C1403500 C1605100 C1945700 temp_MAG_2000 C2711600 C2988000 C3390500 C3916400 C5167600 C5744100 C6014000 C6082700 {
 	gen MAG_`year' = 1 if `var' >= 4
 	replace MAG_`year' = 0 if (`var' < 4 & `var' > 0)
@@ -110,8 +134,6 @@ quietly foreach var in C0542200 C0752600 C0954200 C1152300 C1403500 C1605100 C19
 }	/*how many magazine >= 3 regularly*/
 
 local year = 1986
-gen temp_TAPE_2000 = C2266900 if C2266900 >= 0 
-replace temp_TAPE_2000 = C2417400 if C2417400 >= 0
 quietly foreach var in C0542300 C0752700 C0954300 C1152400 C1403600 C1605200 C1945800 temp_TAPE_2000 C2711700 C2988100 C3390600 C3916500 C5167700 C5744200 C6014100 C6082800 {
 	gen TAPE_`year' = 1 if `var' == 1
 	replace TAPE_`year' = 0 if `var' == 0
@@ -128,8 +150,6 @@ foreach var in C0542400 C0752800 C0954400 C1152500 C1403700 C1605300 C1945900 te
 */
 
 local year = 1986
-gen temp_OUT_2000 = C2267900 if C2267900 >= 0
-replace temp_OUT_2000 = C2419300 if C2419300 >= 0
 quietly foreach var in C0543700 C0754400 C0956000 C1154100 C1405300 C1607000 C1947600 temp_OUT_2000 C2712700 C2989100 C3391600 C3917500 C5168700 C5745200 C6015100 C6083800 {
 	gen OUT_`year' = 1 if `var' >= 4
 	replace OUT_`year' = 0 if (`var' < 4 & `var' >= 0)
@@ -137,8 +157,6 @@ quietly foreach var in C0543700 C0754400 C0956000 C1154100 C1405300 C1607000 C19
 }	/*how often go outing (group with get out of house for HOME A) > 3 per month*/
 
 local year = 1986
-gen temp_MUSEUM_2000 = C2268000 if C2268000 >= 0
-replace temp_MUSEUM_2000 = C2419400 if C2419400 >= 0
 quietly foreach var in C0543800 C0754500 C0956100 C1154200 C1405400 C1607100 C1947700 temp_MUSEUM_2000 C2712800 C2989200 C3391700 C3917600 C5168800 C5745300 C6015200 C6083900 {
 	gen MUSEUM_`year' = 1 if `var' > 2
 	replace MUSEUM_`year' = 0 if (`var' >= 0 & `var' <= 2)
@@ -146,8 +164,6 @@ quietly foreach var in C0543800 C0754500 C0956100 C1154200 C1405400 C1607100 C19
 }	/*how often go to museum in PAST YEAR >= 3 times per year*/
 
 local year = 1986
-gen temp_SEE_DAD_2000 = C2268800 if C2268800 >= 0
-replace temp_SEE_DAD_2000 = C2420100 if C2420100 >= 0
 quietly foreach var in C0543900 C0754600 C0956700 C1154800 C1406000 C1607700 C1948300 temp_SEE_DAD_2000 C2713600 C2989900 C3392400 C3918300 C5169500 C5746000 C6015900 C6084600 {
 	gen SEE_DAD_`year' = `var' if `var' == 1
 	replace SEE_DAD_`year' = 0 if (`var' == 2 | `var' == 0)
@@ -155,8 +171,6 @@ quietly foreach var in C0543900 C0754600 C0956700 C1154800 C1406000 C1607700 C19
 }	/* see father figure daily*/
 
 local year = 1986
-gen temp_EAT_2000 = C2268900 if C2268900 >= 0
-replace temp_EAT_2000 = C2420200 if C2420200 >= 0
 quietly foreach var in C0544000 C0754700 C0956800 C1154900 C1406100 C1607400 C1948400 temp_EAT_2000 C2713700 C2990000 C3392500 C3918400 C5169600 C5746100 C6016000 C6084700 {
 	gen EAT_`year' = 1 if (`var' <= 2 & `var' > 0)
 	replace EAT_`year' = 0 if (`var' > 2)
@@ -174,7 +188,13 @@ quietly forval i = 1986(2)2016 {
 }
 
 keep C0000100 C0000200 C0005300 C0005400 C0005700 Y2267000 *SCALED*
-*save HOME_B.dta, replace
+reshape long INV_B_SCALED_, i(C0000100) j(year)
+gen AGE_AT_INVESTMENT = year - C0005700
+rename INV_B_SCALED_ INVESTMENT
+keep if INVESTMENT != .
+replace AGE_AT_INVESTMENT = 5 if AGE_AT_INVESTMENT > 5
+replace AGE_AT_INVESTMENT = 3 if AGE_AT_INVESTMENT < 3
+save HOME_B.dta, replace
 
 
 /*==============================================================*/
@@ -263,7 +283,13 @@ quietly forval i = 1986(2)2016 {
 }
 
 keep C0000100 C0000200 C0005300 C0005400 C0005700 Y2267000 *SCALED*
-*save HOME_C.dta, replace
+reshape long INV_C_SCALED_, i(C0000100) j(year)
+gen AGE_AT_INVESTMENT = year - C0005700
+rename INV_C_SCALED_ INVESTMENT
+keep if INVESTMENT != .
+replace AGE_AT_INVESTMENT = 9 if AGE_AT_INVESTMENT > 9
+replace AGE_AT_INVESTMENT = 6 if AGE_AT_INVESTMENT < 6
+save HOME_C.dta, replace
 
 
 /*================================================================*/
@@ -380,13 +406,36 @@ quietly foreach var in C0761400 C0964300 C1162500 C1414500 C1616000 C1956900 C24
 }	/*whether discuss TV programs*/
 
 quietly forval i = 1988(2)2016 {
-	egen INV_C_TOTAL_`i' = rowtotal(*_`i'), missing
-	quietly su INV_C_TOTAL_`i'
+	egen INV_D_TOTAL_`i' = rowtotal(*_`i'), missing
+	quietly su INV_D_TOTAL_`i'
 	scalar mean_`i' = r(mean)
 	scalar sd_`i' = r(sd)
-	gen INV_C_SCALED_`i' = (INV_C_TOTAL_`i' - mean_`i')/sd_`i'
+	gen INV_D_SCALED_`i' = (INV_D_TOTAL_`i' - mean_`i')/sd_`i'
 }
 
 keep C0000100 C0000200 C0005300 C0005400 C0005700 Y2267000 *SCALED*
-*save HOME_D.dta, replace
+reshape long INV_D_SCALED_, i(C0000100) j(year)
+gen AGE_AT_INVESTMENT = year - C0005700
+rename INV_D_SCALED_ INVESTMENT
+keep if INVESTMENT != .
+replace AGE_AT_INVESTMENT = 14 if AGE_AT_INVESTMENT > 14
+replace AGE_AT_INVESTMENT = 10 if AGE_AT_INVESTMENT < 10
+save HOME_D.dta, replace
+
+/*================================*/
+/*========== Merge data ==========*/
+/*================================*/
+use HOME_A, clear
+append using HOME_B HOME_C HOME_D, gen(source)
+sort C0000100 year
+save MERGE_CHILD.dta, replace
+
+/*==============================================================================*/
+
+/*========== Calculate using NLSY79_main ==========*/
+
+
+
+
+
 
