@@ -431,8 +431,17 @@ sort C0000100 year
 *save MERGE_CHILD.dta, replace
 
 /*==============================================================================*/
-
 /*========== Calculate using NLSY79_main ==========*/
+use NLSY79_main.dta, clear
+
+*========== Impute answers with range
+gen WTA_10K_IMPUTED = T0960500 if T0960500 >= 0
+replace WTA_10K_IMPUTED = abs(T0960700 - T0960600)/2 if (T0960600 >= 0 & T0960700 >= 0)
+replace WTA_10K_IMPUTED = T0960600 + 500/2 if (T0960700 - T0960600 == 0 & T0960600 >= 0 & T0960700 >= 0)
+
+gen WTA_1K_IMPUTED = T0961100 if T0961100 >= 0
+replace WTA_1K_IMPUTED = abs(T0961300 - T0961200)/2 if (T0961200 >= 0 & T0961300 >= 0)
+replace WTA_1K_IMPUTED = T0961200 + 500/2 if (T0961200 - T0961300 == 0 & T0961200 >= 0 & T0961300 >= 0)
 
 
 
