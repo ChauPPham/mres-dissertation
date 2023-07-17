@@ -443,10 +443,14 @@ gen WTA_1K_IMPUTED = T0961100 if T0961100 >= 0
 replace WTA_1K_IMPUTED = abs(T0961300 - T0961200)/2 if (T0961200 >= 0 & T0961300 >= 0)
 replace WTA_1K_IMPUTED = T0961200 + 500/2 if (T0961200 - T0961300 == 0 & T0961200 >= 0 & T0961300 >= 0)
 
-*gen alpha1 = ln(2)/ln(10000/WTA_10K_IMPUTED)
-*gen alpha2 = ln(2)/ln(1000/WTA_1K_IMPUTED)
+/* INACCURATE UNDERLYING THEORY
+gen alpha1 = 1-ln(2)/ln(10000/WTA_10K_IMPUTED)
+replace alpha1 = 1 if WTA_10K_IMPUTED == 0
+replace alpha1 = -6 if WTA_10K_IMPUTED > 9000 & WTA_10K_IMPUTED != .
 
-
-
+gen alpha2 = 1-ln(2)/ln(1000/WTA_1K_IMPUTED)
+replace alpha2 = 1 if WTA_1K_IMPUTED == 0
+replace alpha2 = -6 if WTA_1K_IMPUTED > 900 & WTA_1K_IMPUTED != .
+*/
 
 
