@@ -74,10 +74,20 @@ quietly forval i = 1986(2)2012 {
 	scalar mean_`i' = r(mean)
 	scalar sd_`i' = r(sd)
 	gen INV_A_SCALED_`i' = (INV_A_TOTAL_`i' - mean_`i')/sd_`i'
+	egen GOODS_A_TOTAL_`i' = rowtotal(BOOK_`i' TOY1_`i' TOY2_`i'), missing
+	quietly su GOODS_A_TOTAL_`i'
+	scalar mean_`i' = r(mean)
+	scalar sd_`i'= r(sd)
+	gen GOODS_A_SCALED_`i' = (GOODS_A_TOTAL_`i' - mean_`i')/sd_`i'
+	gen TIME_A_TOTAL_`i' = INV_A_TOTAL_`i' - GOODS_A_TOTAL_`i'
+	quietly su TIME_A_TOTAL_`i'
+	scalar mean_`i' = r(mean)
+	scalar sd_`i'= r(sd)
+	gen TIME_A_SCALED_`i' = (TIME_A_TOTAL_`i' - mean_`i')/sd_`i'
 }
 
 keep C0000100 C0000200 C0005300 C0005400 C0005700 Y2267000 *SCALED*
-reshape long INV_A_SCALED_, i(C0000100) j(year)
+reshape long INV_A_SCALED_ GOODS_A_SCALED_ TIME_A_SCALED_, i(C0000100) j(year)
 gen AGE_AT_INVESTMENT = year - C0005700
 rename INV_A_SCALED_ INVESTMENT
 keep if INVESTMENT != .
@@ -185,10 +195,20 @@ quietly forval i = 1986(2)2016 {
 	scalar mean_`i' = r(mean)
 	scalar sd_`i' = r(sd)
 	gen INV_B_SCALED_`i' = (INV_B_TOTAL_`i' - mean_`i')/sd_`i'
+	egen GOODS_B_TOTAL_`i' = rowtotal(BOOK_`i' MAG_`i' TAPE_`i'), missing
+	quietly su GOODS_B_TOTAL_`i'
+	scalar mean_`i' = r(mean)
+	scalar sd_`i'= r(sd)
+	gen GOODS_B_SCALED_`i' = (GOODS_B_TOTAL_`i' - mean_`i')/sd_`i'
+	gen TIME_B_TOTAL_`i' = INV_B_TOTAL_`i' - GOODS_B_TOTAL_`i'
+	quietly su TIME_B_TOTAL_`i'
+	scalar mean_`i' = r(mean)
+	scalar sd_`i'= r(sd)
+	gen TIME_B_SCALED_`i' = (TIME_B_TOTAL_`i' - mean_`i')/sd_`i'
 }
 
 keep C0000100 C0000200 C0005300 C0005400 C0005700 Y2267000 *SCALED*
-reshape long INV_B_SCALED_, i(C0000100) j(year)
+reshape long INV_B_SCALED_ GOODS_B_SCALED_ TIME_B_SCALED_, i(C0000100) j(year)
 gen AGE_AT_INVESTMENT = year - C0005700
 rename INV_B_SCALED_ INVESTMENT
 keep if INVESTMENT != .
@@ -280,10 +300,20 @@ quietly forval i = 1986(2)2016 {
 	scalar mean_`i' = r(mean)
 	scalar sd_`i' = r(sd)
 	gen INV_C_SCALED_`i' = (INV_C_TOTAL_`i' - mean_`i')/sd_`i'
+	egen GOODS_C_TOTAL_`i' = rowtotal(BOOK_`i' MUSIC_`i' NEWS_`i'), missing
+	quietly su GOODS_C_TOTAL_`i'
+	scalar mean_`i' = r(mean)
+	scalar sd_`i'= r(sd)
+	gen GOODS_C_SCALED_`i' = (GOODS_C_TOTAL_`i' - mean_`i')/sd_`i'
+	gen TIME_C_TOTAL_`i' = INV_C_TOTAL_`i' - GOODS_C_TOTAL_`i'
+	quietly su TIME_C_TOTAL_`i'
+	scalar mean_`i' = r(mean)
+	scalar sd_`i'= r(sd)
+	gen TIME_C_SCALED_`i' = (TIME_C_TOTAL_`i' - mean_`i')/sd_`i'
 }
 
 keep C0000100 C0000200 C0005300 C0005400 C0005700 Y2267000 *SCALED*
-reshape long INV_C_SCALED_, i(C0000100) j(year)
+reshape long INV_C_SCALED_ GOODS_C_SCALED_ TIME_C_SCALED_, i(C0000100) j(year)
 gen AGE_AT_INVESTMENT = year - C0005700
 rename INV_C_SCALED_ INVESTMENT
 keep if INVESTMENT != .
@@ -411,12 +441,24 @@ quietly forval i = 1988(2)2016 {
 	scalar mean_`i' = r(mean)
 	scalar sd_`i' = r(sd)
 	gen INV_D_SCALED_`i' = (INV_D_TOTAL_`i' - mean_`i')/sd_`i'
+	egen GOODS_D_TOTAL_`i' = rowtotal(BOOK_`i' MUSIC_`i' NEWS_`i'), missing
+	quietly su GOODS_D_TOTAL_`i'
+	scalar mean_`i' = r(mean)
+	scalar sd_`i'= r(sd)
+	gen GOODS_D_SCALED_`i' = (GOODS_D_TOTAL_`i' - mean_`i')/sd_`i'
+	gen TIME_D_TOTAL_`i' = INV_D_TOTAL_`i' - GOODS_D_TOTAL_`i'
+	quietly su TIME_D_TOTAL_`i'
+	scalar mean_`i' = r(mean)
+	scalar sd_`i'= r(sd)
+	gen TIME_D_SCALED_`i' = (TIME_D_TOTAL_`i' - mean_`i')/sd_`i'
 }
 
 keep C0000100 C0000200 C0005300 C0005400 C0005700 Y2267000 *SCALED*
-reshape long INV_D_SCALED_, i(C0000100) j(year)
+reshape long INV_D_SCALED_ GOODS_D_SCALED_ TIME_D_SCALED_`i', i(C0000100) j(year)
 gen AGE_AT_INVESTMENT = year - C0005700
 rename INV_D_SCALED_ INVESTMENT
+rename GOODS_D_SCALED_ GOODS_INV
+rename TIME_D_SCALED_ TIME_INV
 keep if INVESTMENT != .
 replace AGE_AT_INVESTMENT = 14 if AGE_AT_INVESTMENT > 14
 replace AGE_AT_INVESTMENT = 10 if AGE_AT_INVESTMENT < 10
