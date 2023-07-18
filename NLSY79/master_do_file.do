@@ -4,6 +4,7 @@
 
 /*========== Calculate using NLSY79 Child and Young Adults ==========*/
 
+**# Bookmark #1
 /*==============================================================*/
 /* Calculate investment indices based on HOME for group A (0-2) */
 /*==============================================================*/
@@ -86,14 +87,27 @@ quietly forval i = 1986(2)2012 {
 	gen TIME_A_SCALED_`i' = (TIME_A_TOTAL_`i' - mean_`i')/sd_`i'
 }
 
-keep C0000100 C0000200 C0005300 C0005400 C0005700 Y2267000 *SCALED*
-reshape long INV_A_SCALED_ GOODS_A_SCALED_ TIME_A_SCALED_, i(C0000100) j(year)
+keep C0000100 C0000200 C0005300 C0005400 C0005700 Y2267000 *SCALED* *TOTAL*
+reshape long INV_A_SCALED_ GOODS_A_SCALED_ TIME_A_SCALED_ INV_A_TOTAL_ GOODS_A_TOTAL_ TIME_A_TOTAL_, i(C0000100) j(year)
+quietly foreach i of varlist *TOTAL* {
+	su `i'
+	scalar mean = r(mean)
+	scalar sd = r(sd)
+	gen `i'ALL = (`i' - mean)/sd
+}
+rename INV_A_TOTAL_ALL INV_ALL
+rename GOODS_A_TOTAL_ALL GOODS_ALL
+rename TIME_A_TOTAL_ALL TIME_ALL
+drop *TOTAL*
 gen AGE_AT_INVESTMENT = year - C0005700
-rename INV_A_SCALED_ INVESTMENT
+rename INV_A_SCALED_ INVESTMENT 
+rename GOODS_A_SCALED_ GOODS_INV
+rename TIME_A_SCALED_ TIME_INV
 keep if INVESTMENT != .
 replace AGE_AT_INVESTMENT = 2 if AGE_AT_INVESTMENT > 2
 *save HOME_A.dta, replace
 
+**# Bookmark #2
 /*==============================================================*/
 /* Calculate investment indices based on HOME for group B (3-5) */
 /*==============================================================*/
@@ -207,16 +221,29 @@ quietly forval i = 1986(2)2016 {
 	gen TIME_B_SCALED_`i' = (TIME_B_TOTAL_`i' - mean_`i')/sd_`i'
 }
 
-keep C0000100 C0000200 C0005300 C0005400 C0005700 Y2267000 *SCALED*
-reshape long INV_B_SCALED_ GOODS_B_SCALED_ TIME_B_SCALED_, i(C0000100) j(year)
+keep C0000100 C0000200 C0005300 C0005400 C0005700 Y2267000 *SCALED* *TOTAL*
+reshape long INV_B_SCALED_ GOODS_B_SCALED_ TIME_B_SCALED_ INV_B_TOTAL_ GOODS_B_TOTAL_ TIME_B_TOTAL_, i(C0000100) j(year)
+quietly foreach i of varlist *TOTAL* {
+	su `i'
+	scalar mean = r(mean)
+	scalar sd = r(sd)
+	gen `i'ALL = (`i' - mean)/sd
+}
+rename INV_B_TOTAL_ALL INV_ALL
+rename GOODS_B_TOTAL_ALL GOODS_ALL
+rename TIME_B_TOTAL_ALL TIME_ALL
+drop *TOTAL*
 gen AGE_AT_INVESTMENT = year - C0005700
 rename INV_B_SCALED_ INVESTMENT
+rename GOODS_B_SCALED_ GOODS_INV
+rename TIME_B_SCALED_ TIME_INV
 keep if INVESTMENT != .
 replace AGE_AT_INVESTMENT = 5 if AGE_AT_INVESTMENT > 5
 replace AGE_AT_INVESTMENT = 3 if AGE_AT_INVESTMENT < 3
 *save HOME_B.dta, replace
 
 
+**# Bookmark #3
 /*==============================================================*/
 /* Calculate investment indices based on HOME for group C (6-9) */
 /*==============================================================*/
@@ -312,16 +339,29 @@ quietly forval i = 1986(2)2016 {
 	gen TIME_C_SCALED_`i' = (TIME_C_TOTAL_`i' - mean_`i')/sd_`i'
 }
 
-keep C0000100 C0000200 C0005300 C0005400 C0005700 Y2267000 *SCALED*
-reshape long INV_C_SCALED_ GOODS_C_SCALED_ TIME_C_SCALED_, i(C0000100) j(year)
+keep C0000100 C0000200 C0005300 C0005400 C0005700 Y2267000 *SCALED* *TOTAL*
+reshape long INV_C_SCALED_ GOODS_C_SCALED_ TIME_C_SCALED_ INV_C_TOTAL_ GOODS_C_TOTAL_ TIME_C_TOTAL_, i(C0000100) j(year)
+quietly foreach i of varlist *TOTAL* {
+	su `i'
+	scalar mean = r(mean)
+	scalar sd = r(sd)
+	gen `i'ALL = (`i' - mean)/sd
+}
+rename INV_C_TOTAL_ALL INV_ALL
+rename GOODS_C_TOTAL_ALL GOODS_ALL
+rename TIME_C_TOTAL_ALL TIME_ALL
+drop *TOTAL*
 gen AGE_AT_INVESTMENT = year - C0005700
 rename INV_C_SCALED_ INVESTMENT
+rename GOODS_C_SCALED_ GOODS_INV
+rename TIME_C_SCALED_ TIME_INV
 keep if INVESTMENT != .
 replace AGE_AT_INVESTMENT = 9 if AGE_AT_INVESTMENT > 9
 replace AGE_AT_INVESTMENT = 6 if AGE_AT_INVESTMENT < 6
 *save HOME_C.dta, replace
 
 
+**# Bookmark #4
 /*================================================================*/
 /* Calculate investment indices based on HOME for group D (10-14) */
 /*================================================================*/
@@ -453,8 +493,18 @@ quietly forval i = 1988(2)2016 {
 	gen TIME_D_SCALED_`i' = (TIME_D_TOTAL_`i' - mean_`i')/sd_`i'
 }
 
-keep C0000100 C0000200 C0005300 C0005400 C0005700 Y2267000 *SCALED*
-reshape long INV_D_SCALED_ GOODS_D_SCALED_ TIME_D_SCALED_`i', i(C0000100) j(year)
+keep C0000100 C0000200 C0005300 C0005400 C0005700 Y2267000 *SCALED* *TOTAL*
+reshape long INV_D_SCALED_ GOODS_D_SCALED_ TIME_D_SCALED_ INV_D_TOTAL_ GOODS_D_TOTAL_ TIME_D_TOTAL_, i(C0000100) j(year)
+quietly foreach i of varlist *TOTAL* {
+	su `i'
+	scalar mean = r(mean)
+	scalar sd = r(sd)
+	gen `i'ALL = (`i' - mean)/sd
+}
+rename INV_D_TOTAL_ALL INV_ALL
+rename GOODS_D_TOTAL_ALL GOODS_ALL
+rename TIME_D_TOTAL_ALL TIME_ALL
+drop *TOTAL*
 gen AGE_AT_INVESTMENT = year - C0005700
 rename INV_D_SCALED_ INVESTMENT
 rename GOODS_D_SCALED_ GOODS_INV
@@ -464,9 +514,10 @@ replace AGE_AT_INVESTMENT = 14 if AGE_AT_INVESTMENT > 14
 replace AGE_AT_INVESTMENT = 10 if AGE_AT_INVESTMENT < 10
 *save HOME_D.dta, replace
 
-/*================================*/
-/*========== Merge data ==========*/
-/*================================*/
+**# Bookmark #5
+/*======================================*/
+/*========== Merge child data ==========*/
+/*======================================*/
 use HOME_A, clear
 append using HOME_B HOME_C HOME_D, gen(source)
 sort C0000100 year
@@ -484,6 +535,39 @@ replace WTA_10K_IMPUTED = T0960600 + 500/2 if (T0960700 - T0960600 == 0 & T09606
 gen WTA_1K_IMPUTED = T0961100 if T0961100 >= 0
 replace WTA_1K_IMPUTED = abs(T0961300 - T0961200)/2 if (T0961200 >= 0 & T0961300 >= 0)
 replace WTA_1K_IMPUTED = T0961200 + 500/2 if (T0961200 - T0961300 == 0 & T0961200 >= 0 & T0961300 >= 0)
+save NLSY79_main.dta, replace
+
+local year = 1986
+foreach i of varlist G0070300 G0078100 G0085900 G0093700 G0101500 G0109300 G0117100 G0131400 G0132700 G0148200 G0148300 G0163800 G0163900 G0179400 G0179500 G0195000 G0195100 G0210600 G0210700 G0226300 G0226400 G0228100 G0241600 G0242100 G0260300 G0260700 G0276000 G0281900 G0292700 G0299300 G0313100 {
+	rename `i' WELFARE_`year'
+	local year = `year' + 1
+}
+
+local year = 1979
+foreach i of varlist R0216701 R0406401 R0618901 R0898201 R1145001 R1520201 R1890901 R2258001 R2445401 R2871101 R3074801 R3401501 R3656901 R4007401 R4418501 R5103900 R5166901 R6479600 R7007300 R7704600 R8497000 T0988800 T2210700 T3108600 T9900000 {
+	rename `i' HGC_`year'
+	local year = `year' + 1 if `year' < 1994
+	local year = `year' + 2 if `year' >= 1994
+}
+
+local year = 1986
+foreach i of varlist R2257500 R2444700 R2870200 R3074000 R3400700 R3656100 R4006600 R4417700 R5080700 R5166000 R6478700 R7006500 R7703700 R8496100 T0987800 T2210000 T3107800 T4112300 T5022600 T5770800 T8218700 {
+	rename `i' HH_INCOME_`year'
+	local year = `year' + 1 if `year' < 1994
+	local year = `year' + 2 if `year' >= 1994
+}
+
+local year = 1987
+foreach i of varlist R2444900 R2870400 R3074100 R3400800 R3656200 R4006700 R4417800 R5080800 R5166100 R6478800 R7006600 R7703900 R8496300 T0987900 T2210100 T3108000 T4112500 T5022800 T5770900 T8218900 {
+	rename `i' POVERTY_`year' 
+	local year = `year' + 1 if `year' < 1994
+	local year = `year' + 2 if `year' >= 1994
+}
+
+/* For highest grade and degree completed/received, the first survey year are 1979 and 1988 respectively. In subsequent years, the survey update entries for which there are changes and leave those unchanged as not eligible? -> Need to update manually if want to find the highest grade/degree completed by any certain year
+*/
+local year = 
+R2509800 R2909200 R3111200 R3511200 R3711200 R4138900 R4527600 R5222900 R5822800 R6541400 R7104600 R7811500 T0015400 T1215400 T1215600 T2274100 T3214200 T4202500
 
 /* INACCURATE UNDERLYING THEORY
 gen alpha1 = 1-ln(2)/ln(10000/WTA_10K_IMPUTED)
@@ -494,5 +578,50 @@ gen alpha2 = 1-ln(2)/ln(1000/WTA_1K_IMPUTED)
 replace alpha2 = 1 if WTA_1K_IMPUTED == 0
 replace alpha2 = -6 if WTA_1K_IMPUTED > 900 & WTA_1K_IMPUTED != .
 */
+
+**# Bookmark #6
+/*============================================*/
+/*========== Merge child & mom data ==========*/
+/*============================================*/
+use MERGE_CHILD, clear
+rename C0000200 R0000100
+merge m:1 R0000100 using NLSY79_main.dta, keep(match) nogen
+order C0000100 year C0005400 C0005300 C0005700 R0000100 R0214800 R0000149 R0173600 
+replace T2274100 = T1215600 if T2274100 < 0
+gen DEGREE_CATEGORY = 0 if T2274100 == 0 & T3108600 < 9 & T3108600 >= 0
+replace DEGREE_CATEGORY = 1 if T2274100 == 0 & T3108600 >= 9 & T3108600 <= 12
+replace DEGREE_CATEGORY = 2 if T2274100 == 1 & T3108600 == 12
+replace DEGREE_CATEGORY = 3 if (T2274100 == 1 | T2274100 == 2) & T3108600 > 12 & T3108600 < 90
+replace DEGREE_CATEGORY = 4 if (T2274100 == 3 | T2274100 == 4)
+replace DEGREE_CATEGORY = 5 if (T2274100 >= 5 & T2274100 < 8)
+label define DEGREE_CAT 0 "No high school" 1 "Some high school" 2 "High school" 3 "Some college" 4 "College" 5 "Postgraduate"
+label values DEGREE_CATEGORY DEGREE_CAT
+save POOL.dta, replace
+
+
+**# Bookmark #7
+/*===================================*/
+/*========== Data analysis ==========*/
+/*===================================*/
+use POOL.dta, clear
+/* Using 1993 risk aversion question -> investment in 1994*/
+gen RISK_AVERSE_1993 = 0 if R4395800 >= 0
+replace RISK_AVERSE_1993 = 1 if R4395800 == 0 & R4396000 == 0 & year == 1994
+replace RISK_AVERSE_1993 = 2 if R4395800 == 0 & R4396000 == 1 & year == 1994
+replace RISK_AVERSE_1993 = 3 if R4395800 == 1 & R4395900 == 0 & year == 1994
+replace RISK_AVERSE_1993 = 4 if R4395800 == 1 & R4395900 == 1 & year == 1994
+replace RISK_AVERSE_1993 = . if RISK_AVERSE_1993 == 0
+label define RISK_1993 1 "Very strongly risk averse" 2 "Strongly risk averse" 3 "Moderately risk averse" 4 "Weakly risk averse"
+label values RISK_AVERSE_1993 RISK_1993
+
+
+/* Using 2010 risk-aversion questions*/
+gen RISK_AVERSE_2010 = 0 if T3094500 >= 0
+replace RISK_AVERSE_2010 = 1 if T3094500 == 1 & T3094700 == 1 & year == 2010
+replace RISK_AVERSE_2010 = 2 if T3094500 == 1 & T3094700 == 2 & year == 2010
+replace RISK_AVERSE_2010 = 3 if T3094500 == 2 & T3094600 == 1 & year == 2010
+replace RISK_AVERSE_2010 = 4 if T3094500 == 2 & T3094600 == 2 & year == 2010
+replace RISK_AVERSE_2010 = . if RISK_AVERSE == 0 
+
 
 
