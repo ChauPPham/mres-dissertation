@@ -520,10 +520,15 @@ replace AGE_AT_INVESTMENT = 10 if AGE_AT_INVESTMENT < 10
 /*======================================*/
 use HOME_A, clear
 append using HOME_B HOME_C HOME_D, gen(source)
+gen AGE_CAT = source
+label define AGE_CAT 0 "Group A (0-2)" 1 "Group B (3-5)" 2 "Group C(6-9)" 3 "Group D (10-14)"
+label values AGE_CAT AGE_CAT
+drop source
 sort C0000100 year
-*save MERGE_CHILD.dta, replace
+save MERGE_CHILD.dta, replace
 
-/*==============================================================================*/
+**# Bookmark #6
+/*============================================================================*/
 /*========== Calculate using NLSY79_main ==========*/
 use NLSY79_main.dta, clear
 
@@ -535,7 +540,6 @@ replace WTA_10K_IMPUTED = T0960600 + 500/2 if (T0960700 - T0960600 == 0 & T09606
 gen WTA_1K_IMPUTED = T0961100 if T0961100 >= 0
 replace WTA_1K_IMPUTED = abs(T0961300 - T0961200)/2 if (T0961200 >= 0 & T0961300 >= 0)
 replace WTA_1K_IMPUTED = T0961200 + 500/2 if (T0961200 - T0961300 == 0 & T0961200 >= 0 & T0961300 >= 0)
-save NLSY79_main.dta, replace
 
 local year = 1986
 foreach i of varlist G0070300 G0078100 G0085900 G0093700 G0101500 G0109300 G0117100 G0131400 G0132700 G0148200 G0148300 G0163800 G0163900 G0179400 G0179500 G0195000 G0195100 G0210600 G0210700 G0226300 G0226400 G0228100 G0241600 G0242100 G0260300 G0260700 G0276000 G0281900 G0292700 G0299300 G0313100 {
@@ -543,31 +547,98 @@ foreach i of varlist G0070300 G0078100 G0085900 G0093700 G0101500 G0109300 G0117
 	local year = `year' + 1
 }
 
-local year = 1979
-foreach i of varlist R0216701 R0406401 R0618901 R0898201 R1145001 R1520201 R1890901 R2258001 R2445401 R2871101 R3074801 R3401501 R3656901 R4007401 R4418501 R5103900 R5166901 R6479600 R7007300 R7704600 R8497000 T0988800 T2210700 T3108600 T9900000 {
-	rename `i' HGC_`year'
-	local year = `year' + 1 if `year' < 1994
-	local year = `year' + 2 if `year' >= 1994
-}
-
 local year = 1986
 foreach i of varlist R2257500 R2444700 R2870200 R3074000 R3400700 R3656100 R4006600 R4417700 R5080700 R5166000 R6478700 R7006500 R7703700 R8496100 T0987800 T2210000 T3107800 T4112300 T5022600 T5770800 T8218700 {
 	rename `i' HH_INCOME_`year'
-	local year = `year' + 1 if `year' < 1994
-	local year = `year' + 2 if `year' >= 1994
+	if `year' >= 1994 local year = `year' + 2 
+	if `year' < 1994 local year = `year' + 1 
 }
 
 local year = 1987
 foreach i of varlist R2444900 R2870400 R3074100 R3400800 R3656200 R4006700 R4417800 R5080800 R5166100 R6478800 R7006600 R7703900 R8496300 T0987900 T2210100 T3108000 T4112500 T5022800 T5770900 T8218900 {
 	rename `i' POVERTY_`year' 
-	local year = `year' + 1 if `year' < 1994
-	local year = `year' + 2 if `year' >= 1994
+	if `year' >= 1994 local year = `year' + 2 
+	if `year' < 1994 local year = `year' + 1 
 }
 
-/* For highest grade and degree completed/received, the first survey year are 1979 and 1988 respectively. In subsequent years, the survey update entries for which there are changes and leave those unchanged as not eligible? -> Need to update manually if want to find the highest grade/degree completed by any certain year
+/* For highest grade and degree completed/received, the first survey year are 1979 and 1988 respectively. In subsequent years, the survey update entries for which there are changes and leave those unchanged as unrecorded (minus values)? -> Need to update manually if want to find the highest grade/degree completed by any certain year
 */
-local year = 
-R2509800 R2909200 R3111200 R3511200 R3711200 R4138900 R4527600 R5222900 R5822800 R6541400 R7104600 R7811500 T0015400 T1215400 T1215600 T2274100 T3214200 T4202500
+
+local year = 1979
+foreach i of varlist R0216701 R0406401 R0618901 R0898201 R1145001 R1520201 R1890901 R2258001 R2445401 R2871101 R3074801 R3401501 R3656901 R4007401 R4418501 R5103900 R5166901 R6479600 R7007300 R7704600 R8497000 T0988800 T2210700 T3108600 T9900000 {
+	if `year' <= 1994 local prev_year = `year' - 1 
+	if `year' > 1994 local prev_year = `year' - 2 
+	if `year' > 1979 replace `i' = HGC_`prev_year' if (`i' < 0 | `i' > HGC_`prev_year')
+	rename `i' HGC_`year'
+	if `year' >= 1994 local year = `year' + 2 
+	if `year' < 1994 local year = `year' + 1 
+}
+
+replace T1215600 = T1215400 if T1215600 < 0
+local year = 1988
+foreach i of varlist R2509800 R2909200 R3111200 R3511200 R3711200 R4138900 R4527600 R5222900 R5822800 R6541400 R7104600 R7811500 T0015400 T1215600 T2274100 T3214200 T4202500 {
+	if `year' <= 1994 local prev_year = `year' - 1 
+	if `year' > 1994 local prev_year = `year' - 2 
+	if `year' > 1988 replace `i' = HDC_`prev_year' if (`i' < 0 | `i' > HDC_`prev_year')
+	rename `i' HDC_`year'
+	if `year' >= 1994 local year = `year' + 2 
+	if `year' < 1994 local year = `year' + 1 
+}
+
+local year = 1994 /*year 1993 will be recoded as 1994 for convenience*/
+foreach i of valist R4395800 R7353300 R8047100 T0279100 {
+	rename `i' RISK1_a_`year'
+	if `year' != 1994 local `year' = `year' + 2 
+	if `year' == 1994 local `year' = `year' + 8 
+}
+
+local year = 1994
+foreach i of varlist R4395900 R7353400 R8047200 T0279200 {
+	rename `i' RISK1_b_`year'
+	if `year' != 1994 local `year' = `year' + 2 
+	if `year' == 1994 local `year' = `year' + 8 
+}
+
+local year = 1994
+foreach i of varlist R4396000 R7353500 R8047300 T0279300 {
+	rename `i' RISK1_c_`year'
+	if `year' != 1994 local `year' = `year' + 2 
+	if `year' == 1994 local `year' = `year' + 8 
+}
+
+local year = 2010
+foreach i of varlist T3094500 T4093600 T4998800 {
+	rename `i' RISK2_a_`year'
+	local `year' = `year' + 2
+}
+
+local year = 2010
+foreach i of varlist T3094600 T4093700 T4998900 {
+	rename `i' RISK2_b_`year'
+	local `year' = `year' + 2
+}
+
+local year = 2010
+foreach i of varlist T3094700 T4093800 T4999000 {
+	rename `i' RISK2_c_`year'
+	local `year' = `year' + 2
+}
+
+local year = 2010
+foreach i of varlist T3094800 T4093900 T4999100 {
+	rename `i' RISK3_`year'
+	local `year' = `year' + 2
+}
+
+local year = 2010
+foreach i of varlist T3095000 T4094100 T4999300 {
+	rename `i' RISK4_`year'
+	local `year' = `year' + 2
+}
+
+reshape long HGC_ HDC_ RISK1_a_ RISK2_b_ RISK3_ RISK4_ WELFARE_ POVERTY_  HH_INCOME_, i(C0000100) j(year)
+
+save NLSY79_main.dta, replace
 
 /* INACCURATE UNDERLYING THEORY
 gen alpha1 = 1-ln(2)/ln(10000/WTA_10K_IMPUTED)
@@ -579,7 +650,7 @@ replace alpha2 = 1 if WTA_1K_IMPUTED == 0
 replace alpha2 = -6 if WTA_1K_IMPUTED > 900 & WTA_1K_IMPUTED != .
 */
 
-**# Bookmark #6
+**# Bookmark #7
 /*============================================*/
 /*========== Merge child & mom data ==========*/
 /*============================================*/
@@ -599,7 +670,7 @@ label values DEGREE_CATEGORY DEGREE_CAT
 save POOL.dta, replace
 
 
-**# Bookmark #7
+**# Bookmark #8
 /*===================================*/
 /*========== Data analysis ==========*/
 /*===================================*/
