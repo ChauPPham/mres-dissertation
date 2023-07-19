@@ -2,6 +2,9 @@
 
 * project, setmaster("E:\GitHub\mres-dissertation\NLSY79\master_do_file.do")
 
+*ssc install reghdfe
+*ssc install ftools
+
 /*========== Calculate using NLSY79 Child and Young Adults ==========*/
 
 **# Bookmark #1
@@ -515,6 +518,53 @@ replace AGE_AT_INVESTMENT = 10 if AGE_AT_INVESTMENT < 10
 *save HOME_D.dta, replace
 
 **# Bookmark #5
+/*=============================================*/
+/*========== Reshape supplement data ==========*/
+/*=============================================*/
+use NLSY79CYA_supplement.dta, clear
+
+local year = 1991
+quietly foreach i of varlist C0127410 C0127610 C0127810 C0127910 C0128010 C1987300 C2493300 C2521100 C2791600 C3101100 C3603400 C3983400 C5527300 C5803600 {
+	rename `i' NO_UNDER_18_`year'
+	if `year' < 1994 local year = `year' + 1
+	if `year' >= 1994 local year = `year' + 2
+}
+
+local year 1986
+quietly foreach i of varlist C0571600 C0792000 C0992000 C1192300 C1500100 C1557000 C1792700 C2502600 C2531100 C2802400 C3110400 C3614100 C3992700 C5536700 C5812500 {
+	rename `i' COG_SCORE_`year'
+	local year = `year' + 2
+}
+
+local year = 1986
+quietly foreach i of varlist C0571700 C0792100 C0992100 C1192400 C1500200 C1557100 C1792800 C2502800 C2531300 C2802600 C3110600 C3614300 C3992900 C5536900 C5812700 {
+	rename `i' EMO_SCORE_`year'
+	local year = `year' + 2
+}
+
+local year = 1986
+quietly foreach i of varlist C0580100 C0799600 C0998800 C1198800 C1507800 C1564700 C1800100 C2503700 C2532200 C2803000 C3111500 C3615200 C3993800 C5537800 C5813600 {
+	rename `i' PIAT_MATH_`year'
+	local year = `year' + 2
+}
+
+local year = 1986
+quietly foreach i of varlist C0580400 C0799900 C0999100 C1199100 C1508100 C1565000 C1800400 C2503900 C2532400 C2803200 C3111700 C3615400 C3994000 C5538000 C5813800 {
+	rename `i' PIAT_REC_`year' 
+	local year = `year' + 2
+}
+
+local year = 1986
+quietly foreach i of varlist C0580700 C0800200 C0999400 C1199400 C1508400 C1565300 C1800700 C2504300 C2532800 C2803600 C3112100 C3615800 C3994400 C5538400 C5814200 {
+	rename `i' PIAT_COMP_`year'
+	local year = `year' + 2
+}
+
+reshape long NO_UNDER_18_ COG_SCORE_ EMO_SCORE_ PIAT_MATH_ PIAT_COMP_ PIAT_REC_, i(C0000100) j(year)
+rename *_ *
+save NLSY79CYA_supplement, replace
+
+**# Bookmark #6
 /*======================================*/
 /*========== Merge child data ==========*/
 /*======================================*/
@@ -525,9 +575,10 @@ label define AGE_CAT 0 "Group A (0-2)" 1 "Group B (3-5)" 2 "Group C(6-9)" 3 "Gro
 label values AGE_CAT AGE_CAT
 drop source
 sort C0000100 year
+merge m:m C0000100 year C0000200 C0005300 C0005400 C0005700 Y2267000 using NLSY79CYA_supplement, keep(match) nogen
 save MERGE_CHILD.dta, replace
 
-**# Bookmark #6
+**# Bookmark #7
 /*============================================================================*/
 /*========== Calculate using NLSY79_main ==========*/
 use NLSY79_main.dta, clear
@@ -540,6 +591,8 @@ replace WTA_10K_IMPUTED = T0960600 + 500/2 if (T0960700 - T0960600 == 0 & T09606
 gen WTA_1K_IMPUTED = T0961100 if T0961100 >= 0
 replace WTA_1K_IMPUTED = abs(T0961300 - T0961200)/2 if (T0961200 >= 0 & T0961300 >= 0)
 replace WTA_1K_IMPUTED = T0961200 + 500/2 if (T0961200 - T0961300 == 0 & T0961200 >= 0 & T0961300 >= 0)
+
+*save NLSY79_main.dta, replace
 
 local year = 1986
 foreach i of varlist G0070300 G0078100 G0085900 G0093700 G0101500 G0109300 G0117100 G0131400 G0132700 G0148200 G0148300 G0163800 G0163900 G0179400 G0179500 G0195000 G0195100 G0210600 G0210700 G0226300 G0226400 G0228100 G0241600 G0242100 G0260300 G0260700 G0276000 G0281900 G0292700 G0299300 G0313100 {
@@ -586,59 +639,64 @@ foreach i of varlist R2509800 R2909200 R3111200 R3511200 R3711200 R4138900 R4527
 }
 
 local year = 1994 /*year 1993 will be recoded as 1994 for convenience*/
-foreach i of valist R4395800 R7353300 R8047100 T0279100 {
+foreach i of varlist R4395800 R7353300 R8047100 T0279100 {
 	rename `i' RISK1_a_`year'
-	if `year' != 1994 local `year' = `year' + 2 
-	if `year' == 1994 local `year' = `year' + 8 
+	if `year' > 1994 local year = `year' + 2 
+	if `year' == 1994 local year = `year' + 8 
 }
 
 local year = 1994
 foreach i of varlist R4395900 R7353400 R8047200 T0279200 {
 	rename `i' RISK1_b_`year'
-	if `year' != 1994 local `year' = `year' + 2 
-	if `year' == 1994 local `year' = `year' + 8 
+	if `year' > 1994 local year = `year' + 2 
+	if `year' == 1994 local year = `year' + 8 
 }
 
 local year = 1994
 foreach i of varlist R4396000 R7353500 R8047300 T0279300 {
 	rename `i' RISK1_c_`year'
-	if `year' != 1994 local `year' = `year' + 2 
-	if `year' == 1994 local `year' = `year' + 8 
+	if `year' > 1994 local year = `year' + 2 
+	if `year' == 1994 local year = `year' + 8 
 }
 
 local year = 2010
 foreach i of varlist T3094500 T4093600 T4998800 {
 	rename `i' RISK2_a_`year'
-	local `year' = `year' + 2
+	local year = `year' + 2
 }
 
 local year = 2010
 foreach i of varlist T3094600 T4093700 T4998900 {
 	rename `i' RISK2_b_`year'
-	local `year' = `year' + 2
+	local year = `year' + 2
 }
 
 local year = 2010
 foreach i of varlist T3094700 T4093800 T4999000 {
 	rename `i' RISK2_c_`year'
-	local `year' = `year' + 2
+	local year = `year' + 2
 }
 
 local year = 2010
 foreach i of varlist T3094800 T4093900 T4999100 {
 	rename `i' RISK3_`year'
-	local `year' = `year' + 2
+	local year = `year' + 2
 }
 
 local year = 2010
 foreach i of varlist T3095000 T4094100 T4999300 {
 	rename `i' RISK4_`year'
-	local `year' = `year' + 2
+	local year = `year' + 2
 }
 
-reshape long HGC_ HDC_ RISK1_a_ RISK2_b_ RISK3_ RISK4_ WELFARE_ POVERTY_  HH_INCOME_, i(C0000100) j(year)
+quietly reshape long HGC_ HDC_ RISK1_a_ RISK1_b_ RISK1_c_ RISK2_a_ RISK2_b_ RISK2_c_ RISK3_ RISK4_ WELFARE_ POVERTY_  HH_INCOME_, i(R0000100) j(year)
+foreach i of varlist HGC_ HDC_ RISK1_a_ RISK1_b_ RISK1_c_ RISK2_a_ RISK2_b_ RISK2_c_ RISK3_ RISK4_ WELFARE_ POVERTY_  HH_INCOME_ {
+	replace `i' = . if `i' < 0
+}
+rename *_ *
+replace WELFARE = 0 if WELFARE < 0
 
-save NLSY79_main.dta, replace
+save NLSY79_long.dta, replace
 
 /* INACCURATE UNDERLYING THEORY
 gen alpha1 = 1-ln(2)/ln(10000/WTA_10K_IMPUTED)
@@ -650,30 +708,47 @@ replace alpha2 = 1 if WTA_1K_IMPUTED == 0
 replace alpha2 = -6 if WTA_1K_IMPUTED > 900 & WTA_1K_IMPUTED != .
 */
 
-**# Bookmark #7
-/*============================================*/
-/*========== Merge child & mom data ==========*/
-/*============================================*/
+**# Bookmark #8
+/*===================================================*/
+/*========== Merge child & mom data (wide) ==========*/
+/*===================================================*/
 use MERGE_CHILD, clear
 rename C0000200 R0000100
 merge m:1 R0000100 using NLSY79_main.dta, keep(match) nogen
 order C0000100 year C0005400 C0005300 C0005700 R0000100 R0214800 R0000149 R0173600 
 replace T2274100 = T1215600 if T2274100 < 0
-gen DEGREE_CATEGORY = 0 if T2274100 == 0 & T3108600 < 9 & T3108600 >= 0
-replace DEGREE_CATEGORY = 1 if T2274100 == 0 & T3108600 >= 9 & T3108600 <= 12
-replace DEGREE_CATEGORY = 2 if T2274100 == 1 & T3108600 == 12
-replace DEGREE_CATEGORY = 3 if (T2274100 == 1 | T2274100 == 2) & T3108600 > 12 & T3108600 < 90
-replace DEGREE_CATEGORY = 4 if (T2274100 == 3 | T2274100 == 4)
-replace DEGREE_CATEGORY = 5 if (T2274100 >= 5 & T2274100 < 8)
+gen DEGREE_CAT = 0 if T2274100 == 0 & T3108600 < 9 & T3108600 >= 0
+replace DEGREE_CAT = 1 if T2274100 == 0 & T3108600 >= 9 & T3108600 <= 12
+replace DEGREE_CAT = 2 if T2274100 == 1 & T3108600 == 12
+replace DEGREE_CAT = 3 if (T2274100 == 1 | T2274100 == 2) & T3108600 > 12 & T3108600 < 90
+replace DEGREE_CAT = 4 if (T2274100 == 3 | T2274100 == 4)
+replace DEGREE_CAT = 5 if (T2274100 >= 5 & T2274100 < 8)
 label define DEGREE_CAT 0 "No high school" 1 "Some high school" 2 "High school" 3 "Some college" 4 "College" 5 "Postgraduate"
-label values DEGREE_CATEGORY DEGREE_CAT
+label values DEGREE_CAT DEGREE_CAT
 save POOL.dta, replace
 
+**# Bookmark #9
+/*===================================================*/
+/*========== Merge child & mom data (long) ==========*/
+/*===================================================*/
+use MERGE_CHILD, clear
+rename C0000200 R0000100
+merge m:m R0000100 year using NLSY79_long.dta, keep(match) nogen
+order C0000100 year C0005400 C0005300 C0005700 R0000100 R0214800 R0000149 R0173600 
+gen DEGREE_CAT = 0 if HDC == 0 | (HGC < 9 & HGC >= 0)
+replace DEGREE_CAT = 1 if HDC == 0 | (HGC >= 9 & HGC <= 12)
+replace DEGREE_CAT = 2 if HDC == 1 | HGC == 12
+replace DEGREE_CAT = 3 if (HDC == 1 | HDC == 2) & HGC > 12 & HGC < 90
+replace DEGREE_CAT = 4 if (HDC == 3 | HDC == 4)
+replace DEGREE_CAT = 5 if (HDC >= 5 & HDC < 8)
+label define DEGREE_CAT 0 "No high school" 1 "Some high school" 2 "High school" 3 "Some college" 4 "College" 5 "Postgraduate"
+label values DEGREE_CAT DEGREE_CAT
+save POOL_long.dta, replace
 
-**# Bookmark #8
-/*===================================*/
-/*========== Data analysis ==========*/
-/*===================================*/
+**# Bookmark #10
+/*==========================================*/
+/*========== Data analysis (wide) ==========*/
+/*==========================================*/
 use POOL.dta, clear
 /* Using 1993 risk aversion question -> investment in 1994*/
 gen RISK_AVERSE_1993 = 0 if R4395800 >= 0
@@ -693,6 +768,64 @@ replace RISK_AVERSE_2010 = 2 if T3094500 == 1 & T3094700 == 2 & year == 2010
 replace RISK_AVERSE_2010 = 3 if T3094500 == 2 & T3094600 == 1 & year == 2010
 replace RISK_AVERSE_2010 = 4 if T3094500 == 2 & T3094600 == 2 & year == 2010
 replace RISK_AVERSE_2010 = . if RISK_AVERSE == 0 
+
+
+**# Bookmark #11
+/*==========================================*/
+/*========== Data analysis (long) ==========*/
+/*==========================================*/
+use POOL_long.dta, clear
+gen RISK_AVERSE1 = .
+replace RISK_AVERSE1 = 1 if RISK1_a == 0 & RISK1_c == 0
+replace RISK_AVERSE1 = 2 if RISK1_a == 0 & RISK1_c == 1
+replace RISK_AVERSE1 = 3 if RISK1_a == 1 & RISK1_b == 0
+replace RISK_AVERSE1 = 4 if RISK1_a == 1 & RISK1_b == 1
+label define RISK1 1 "Very strongly risk averse" 2 "Strongly risk averse" 3 "Moderately risk averse" 4 "Weakly risk averse"
+label values RISK_AVERSE1 RISK1
+
+gen ln_INCOME = log(HH_INCOME)
+
+/*Drop duplicate values
+by C0000100 year: gen dup = cond(_N==1, 0, _n)
+tabulate dup
+drop if dup > 1
+*/
+
+local identifier = 1
+foreach i in INV_ALL GOODS_ALL TIME_ALL {
+	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME i.DEGREE_CAT if POVERTY >= 0, absorb(year AGE_CAT) vce(cluster R0000149)
+	eststo model_`identifier'
+	local 
+	
+}
+
+/* Some regression commands
+reghdfe INV_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 5, absorb(year AGE_CAT) vce(cluster R0000100)
+reghdfe INV_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 4, absorb(year AGE_CAT) vce(cluster R0000100)
+reghdfe INV_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 3, absorb(year AGE_CAT) vce(cluster R0000100)
+reghdfe INV_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 2, absorb(year AGE_CAT) vce(cluster R0000100)
+reghdfe INV_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 1, absorb(year AGE_CAT) vce(cluster R0000100)
+reghdfe GOODS_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 1, absorb(year AGE_CAT) vce(cluster R0000100)
+reghdfe GOODS_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 2, absorb(year AGE_CAT) vce(cluster R0000100)
+reghdfe GOODS_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 3, absorb(year AGE_CAT) vce(cluster R0000100)
+reghdfe GOODS_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 4, absorb(year AGE_CAT) vce(cluster R0000100)
+reghdfe GOODS_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 5, absorb(year AGE_CAT) vce(cluster R0000100)
+reghdfe TIME_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 1, absorb(year AGE_CAT) vce(cluster R0000100)
+reghdfe TIME_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 2, absorb(year AGE_CAT) vce(cluster R0000100)
+reghdfe TIME_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 3, absorb(year AGE_CAT) vce(cluster R0000100)
+reghdfe TIME_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 4, absorb(year AGE_CAT) vce(cluster R0000100)
+reghdfe TIME_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 5, absorb(year AGE_CAT) vce(cluster R0000100)
+reghdfe EMO_SCORE i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & EMO_SCORE >= 0 & DEGREE_CAT == 1, absorb(year AGE_CAT) vce(cluster R0000100)
+reghdfe EMO_SCORE i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & EMO_SCORE >= 0 & DEGREE_CAT == 2, absorb(year AGE_CAT) vce(cluster R0000100)
+reghdfe EMO_SCORE i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & EMO_SCORE >= 0 & DEGREE_CAT == 3, absorb(year AGE_CAT) vce(cluster R0000100)
+reghdfe EMO_SCORE i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & EMO_SCORE >= 0 & DEGREE_CAT == 4, absorb(year AGE_CAT) vce(cluster R0000100)
+reghdfe EMO_SCORE i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & EMO_SCORE >= 0 & DEGREE_CAT == 5, absorb(year AGE_CAT) vce(cluster R0000100)
+reghdfe COG_SCORE i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & COG_SCORE >= 0 & DEGREE_CAT == 1, absorb(year AGE_CAT) vce(cluster R0000100)
+reghdfe COG_SCORE i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & COG_SCORE >= 0 & DEGREE_CAT == 2, absorb(year AGE_CAT) vce(cluster R0000100)
+reghdfe COG_SCORE i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & COG_SCORE >= 0 & DEGREE_CAT == 3, absorb(year AGE_CAT) vce(cluster R0000100)
+reghdfe COG_SCORE i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & COG_SCORE >= 0 & DEGREE_CAT == 4, absorb(year AGE_CAT) vce(cluster R0000100)
+reghdfe COG_SCORE i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & COG_SCORE >= 0 & DEGREE_CAT == 5, absorb(year AGE_CAT) vce(cluster R0000100)
+*/
 
 
 
