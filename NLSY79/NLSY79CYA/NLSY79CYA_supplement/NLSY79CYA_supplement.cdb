@@ -1,0 +1,3808 @@
+C00001.00    [CPUBID]                                       Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             ID CODE OF CHILD
+ 
+PUBLIC IDENTIFICATION CODE OF CHILD
+ 
+UNIVERSE: All biological children of NLSY79 mothers, regardless of age.
+ 
+   11551           1 TO 9999999: See Min & Max values below for range as of this
+                          release
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:            201        Max:        1267501        Mean:           600544.28
+ 
+Lead In: None.
+Default Next Question: C00002.00
+--------------------------------------------------------------------------------
+C00002.00    [MPUBID]                                       Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             ID CODE OF MOTHER OF CHILD
+ 
+PUBLIC IDENTIFICATION CODE OF MOTHER OF CHILD
+ 
+UNIVERSE: All biological children of NLSY79 mothers, regardless of age.
+ 
+NOTE: SEE YOUTH REFERENCE NUMBER R(    1.)
+ 
+   11551           1 TO 12686: NLSY79 Public ID
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:              2        Max:          12675        Mean:             6005.42
+ 
+Lead In: C00001.00[Default]
+Default Next Question: C00003.00
+--------------------------------------------------------------------------------
+C00053.00    [CRACE]                                        Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             RACE OF CHILD (MOTHER'S RACIAL/ETHNIC COHORT FROM SCREENER)
+ 
+RACE OF CHILD (MOTHER'S RACIAL/ETHNIC COHORT FROM SCREENER)
+ 
+NOTE: Child race/ethnicity is based on the report of the mother. See NLSY79 main
+Youth Reference Number R( 2147.)
+ 
+    2224       1 HISPANIC
+    3196       2 BLACK
+    6131       3 NON-BLACK, NON-HISPANIC
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:              1        Max:              3        Mean:                2.34
+ 
+Lead In: C00052.00[Default]
+Default Next Question: C00054.00
+--------------------------------------------------------------------------------
+C00054.00    [CSEX]                                         Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             SEX OF CHILD
+ 
+SEX OF CHILD
+ 
+    5898       1 MALE
+    5651       2 FEMALE
+  -------
+   11549
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:              1        Max:              2        Mean:                1.49
+ 
+Lead In: C00053.00[Default]
+Default Next Question: C00055.00
+--------------------------------------------------------------------------------
+C00057.00    [CYRB]                                         Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             DATE OF BIRTH OF CHILD - YEAR
+ 
+DATE OF BIRTH OF CHILD - YEAR
+ 
+    1223        1970 TO 1978: < before 1979
+     528        1979
+     607        1980
+     714        1981
+     703        1982
+     715        1983
+     657        1984
+     676        1985
+     618        1986
+     621        1987
+     585        1988
+     629        1989
+     495        1990
+     424        1991
+     402        1992
+     348        1993
+     303        1994
+     245        1995
+     229        1996
+     216        1997
+     156        1998
+     129        1999
+     100        2000
+      81        2001
+      48        2002
+      34        2003
+      24        2004
+      15        2005
+      11        2006
+       4        2007
+       3        2008
+       3        2009
+       2        2010
+       2        2011
+       1        2014
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:           1970        Max:           2014        Mean:              1986.1
+ 
+Lead In: C00055.00[Default]
+Default Next Question: C00057.01
+--------------------------------------------------------------------------------
+C00070.00    [MAGEBIR]                                      Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             AGE OF MOTHER AT BIRTH OF CHILD
+ 
+AGE OF MOTHER AT BIRTH OF CHILD
+ 
+      37          10 TO 14
+    2074          15 TO 19
+    3642          20 TO 24
+    3045          25 TO 29
+    1818          30 TO 34
+     772          35 TO 39
+     140          40 TO 44
+      12          45 TO 49
+       5          50 TO 52
+  -------
+   11545
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       6
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:             11        Max:             50        Mean:               25.24
+ 
+Lead In: C00058.00[Default]
+Default Next Question: C03200.00
+--------------------------------------------------------------------------------
+C01274.10    [NHCHLD1991]                                   Survey Year: 1991
+  PRIMARY VARIABLE
+
+ 
+             # HOUSEHOLD MEMBERS UNDER 18 IN HOUSEHOLD OF MOTHER
+ 
+# HOUSEHOLD MEMBERS UNDER 18 IN HOUSEHOLD OF MOTHER  91 INT
+ 
+ACTUAL NUMBER
+ 
+    1157           0
+    1642           1
+    2962           2
+    2003           3
+     840           4
+     284           5
+     107           6
+      69           7
+       6           9
+       4          10
+  -------
+    9074
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     240
+TOTAL =========>    9314      MISSING(-7)    2237
+ 
+Min:              0        Max:             10        Mean:                2.16
+ 
+Lead In: C01274.09[Default]
+Default Next Question: C01274.11
+--------------------------------------------------------------------------------
+C01276.10    [NHCHLD1992]                                   Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             # HOUSEHOLD MEMBERS UNDER 18 IN HOUSEHOLD OF MOTHER
+ 
+# HOUSEHOLD MEMBERS UNDER 18 IN HOUSEHOLD OF MOTHER  92 INT
+ 
+ACTUAL NUMBER
+ 
+    1011           0
+    1587           1
+    2990           2
+    2171           3
+     861           4
+     238           5
+     142           6
+      77           7
+      23           8
+      23           9
+       4          11
+  -------
+    9127
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     169
+TOTAL =========>    9296      MISSING(-7)    2255
+ 
+Min:              0        Max:             11        Mean:                2.25
+ 
+Lead In: C01276.09[Default]
+Default Next Question: C01276.11
+--------------------------------------------------------------------------------
+C01278.10    [NHCHLD1993]                                   Survey Year: 1993
+  PRIMARY VARIABLE
+
+ 
+             # HOUSEHOLD MEMBERS UNDER 18 IN HOUSEHOLD OF MOTHER
+ 
+# HOUSEHOLD MEMBERS UNDER 18 IN HOUSEHOLD OF MOTHER  93 INT
+ 
+ACTUAL NUMBER
+ 
+     869           0
+    1574           1
+    3114           2
+    2251           3
+     927           4
+     288           5
+     185           6
+      49           7
+      32           8
+       6          10
+  -------
+    9295
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      47
+TOTAL =========>    9342      MISSING(-7)    2209
+ 
+Min:              0        Max:             10        Mean:                2.31
+ 
+Lead In: C01278.09[Default]
+Default Next Question: C01278.11
+--------------------------------------------------------------------------------
+C01279.10    [NHCHLD1994]                                   Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             # HOUSEHOLD MEMBERS UNDER 18 IN HOUSEHOLD OF MOTHER
+ 
+# HOUSEHOLD MEMBERS UNDER 18 IN HOUSEHOLD OF MOTHER  94 INT
+ 
+ACTUAL NUMBER
+ 
+     729           0
+    1529           1
+    3179           2
+    2295           3
+     923           4
+     349           5
+     151           6
+      38           7
+      24           8
+      13          10
+  -------
+    9230
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       1
+TOTAL =========>    9231      MISSING(-7)    2320
+ 
+Min:              0        Max:             10        Mean:                2.35
+ 
+Lead In: C01279.09[Default]
+Default Next Question: C01279.11
+--------------------------------------------------------------------------------
+C01280.10    [NHCHLD1996]                                   Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             # HOUSEHOLD MEMBERS UNDER 18 IN HOUSEHOLD OF MOTHER
+ 
+# HOUSEHOLD MEMBERS UNDER 18 IN HOUSEHOLD OF MOTHER
+ 
+NOTE: ACTUAL NUMBER
+ 
+     647           0
+    1527           1
+    3105           2
+    2170           3
+    1014           4
+     339           5
+     105           6
+      34           7
+      57           8
+  -------
+    8998
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      23
+TOTAL =========>    9021      MISSING(-7)    2530
+ 
+Min:              0        Max:              8        Mean:                2.37
+ 
+Lead In: C01280.09[Default]
+Default Next Question: C01280.11
+--------------------------------------------------------------------------------
+C05713.00    [COGNP1986]                                    Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE 86 INT
+ 
+     111           0
+     545           1 TO 9
+     417          10 TO 19
+     335          20 TO 29
+     484          30 TO 39
+     481          40 TO 49
+     355          50 TO 59
+     523          60 TO 69
+     289          70 TO 79
+     552          80 TO 89
+     284          90 TO 99
+  -------
+    4376
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     595
+TOTAL =========>    4971      MISSING(-7)    6580
+ 
+Min:              0        Max:             99        Mean:               46.02
+ 
+Lead In: C05712.00[Default]
+Default Next Question: C05714.00
+--------------------------------------------------------------------------------
+C05714.00    [EMOTP1986]                                    Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE 86 INT
+ 
+      84           0
+     645           1 TO 9
+     427          10 TO 19
+     243          20 TO 29
+     399          30 TO 39
+     286          40 TO 49
+     675          50 TO 59
+     170          60 TO 69
+     871          70 TO 79
+     295          80 TO 89
+     417          90 TO 99
+  -------
+    4512
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     459
+TOTAL =========>    4971      MISSING(-7)    6580
+ 
+Min:              0        Max:             99        Mean:               48.34
+ 
+Lead In: C05713.00[Default]
+Default Next Question: C05715.00
+--------------------------------------------------------------------------------
+C05716.00    [COGNZ1986]                                    Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE  86 INT
+ 
+ACTUAL SCORE  (1 DECIMAL PLACE IMPLIED.)
+ 
+       3         200 TO 299
+       9         300 TO 399
+      11         400 TO 499
+      65         500 TO 599
+     135         600 TO 699
+     433         700 TO 799
+     752         800 TO 899
+    1006         900 TO 999
+     837        1000 TO 1099
+     949        1100 TO 1199
+     164        1200 TO 1299
+      12        1300 TO 1399
+  -------
+    4376
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     595
+TOTAL =========>    4971      MISSING(-7)    6580
+ 
+Min:            281        Max:           1348        Mean:              969.51
+ 
+Lead In: C05715.00[Default]
+Default Next Question: C05717.00
+--------------------------------------------------------------------------------
+C05717.00    [EMOTZ1986]                                    Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE  86 INT
+ 
+ACTUAL SCORE  (1 DECIMAL PLACE IMPLIED.)
+ 
+       1         300 TO 399
+       7         400 TO 499
+      65         500 TO 599
+     206         600 TO 699
+     450         700 TO 799
+     528         800 TO 899
+     994         900 TO 999
+    1260        1000 TO 1099
+     721        1100 TO 1199
+     267        1200 TO 1299
+      13        1300 TO 1399
+  -------
+    4512
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     459
+TOTAL =========>    4971      MISSING(-7)    6580
+ 
+Min:            367        Max:           1336        Mean:              980.52
+ 
+Lead In: C05716.00[Default]
+Default Next Question: C05718.00
+--------------------------------------------------------------------------------
+C05801.00    [MATHZ1986]                                    Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             PIAT MATH:  TOTAL STANDARD SCORE
+ 
+PIAT MATH:  TOTAL STANDARD SCORE  86 INT
+ 
+      38          65 TO 69
+     260          70 TO 84
+     704          85 TO 99
+     733         100 TO 114
+     136         115 TO 129
+       9         130 TO 144
+  -------
+    1880
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     150
+TOTAL =========>    2030      MISSING(-7)    9521
+ 
+Min:             65        Max:            135        Mean:               97.43
+ 
+Lead In: C05800.00[Default]
+Default Next Question: C05802.00
+--------------------------------------------------------------------------------
+C05804.00    [RECOGZ1986]                                   Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING RECOGNITION:  TOTAL STANDARD SCORE
+ 
+PIAT READING RECOGNITION:  TOTAL STANDARD SCORE  86 INT
+ 
+      19          65 TO 69
+     145          70 TO 84
+     534          85 TO 99
+     793         100 TO 114
+     357         115 TO 129
+      25         130 TO 144
+  -------
+    1873
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     159
+TOTAL =========>    2032      MISSING(-7)    9519
+ 
+Min:             65        Max:            135        Mean:              103.25
+ 
+Lead In: C05803.00[Default]
+Default Next Question: C05805.00
+--------------------------------------------------------------------------------
+C05807.00    [COMPZ1986]                                    Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING COMPREHENSION:  TOTAL STANDARD SCORE
+ 
+PIAT READING COMPREHENSION: TOTAL STANDARD SCORE 86 INT
+ 
+      12          65 TO 69
+     104          70 TO 84
+     334          85 TO 99
+     574         100 TO 114
+     264         115 TO 129
+      23         130 TO 144
+  -------
+    1311
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     310
+TOTAL =========>    1621      MISSING(-7)    9930
+ 
+Min:             65        Max:            135        Mean:              104.23
+ 
+Lead In: C05806.00[Default]
+Default Next Question: C05809.00
+--------------------------------------------------------------------------------
+C07917.00    [COGNP1988]                                    Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE  88 INT
+ 
+     131           0
+     746           1 TO 9
+     532          10 TO 19
+     498          20 TO 29
+     541          30 TO 39
+     393          40 TO 49
+     718          50 TO 59
+     204          60 TO 69
+     954          70 TO 79
+     496          80 TO 89
+     369          90 TO 99
+  -------
+    5582
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     684
+TOTAL =========>    6266      MISSING(-7)    5285
+ 
+Min:              0        Max:             98        Mean:               46.28
+ 
+Lead In: C07916.00[Default]
+Default Next Question: C07918.00
+--------------------------------------------------------------------------------
+C07918.00    [EMOTP1988]                                    Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE  88 INT
+ 
+     121           0
+     695           1 TO 9
+     307          10 TO 19
+     643          20 TO 29
+     506          30 TO 39
+     404          40 TO 49
+     378          50 TO 59
+     718          60 TO 69
+     683          70 TO 79
+     553          80 TO 89
+     356          90 TO 99
+  -------
+    5364
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     902
+TOTAL =========>    6266      MISSING(-7)    5285
+ 
+Min:              0        Max:             98        Mean:               48.08
+ 
+Lead In: C07917.00[Default]
+Default Next Question: C07919.00
+--------------------------------------------------------------------------------
+C07920.00    [COGNZ1988]                                    Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE  88 INT
+ 
+ACTUAL SCORE  (1 DECIMAL PLACE IMPLIED.)
+ 
+       2         200 TO 299
+       5         300 TO 399
+      19         400 TO 499
+      93         500 TO 599
+     166         600 TO 699
+     540         700 TO 799
+     871         800 TO 899
+    1312         900 TO 999
+    1372        1000 TO 1099
+     848        1100 TO 1199
+     340        1200 TO 1299
+      14        1300 TO 1399
+  -------
+    5582
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     684
+TOTAL =========>    6266      MISSING(-7)    5285
+ 
+Min:            221        Max:           1300        Mean:              971.11
+ 
+Lead In: C07919.00[Default]
+Default Next Question: C07921.00
+--------------------------------------------------------------------------------
+C07921.00    [EMOTZ1988]                                    Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE  88 INT
+ 
+ACTUAL SCORE  (1 DECIMAL PLACE IMPLIED.)
+ 
+       1         200 TO 299
+       5         300 TO 399
+      27         400 TO 499
+      71         500 TO 599
+     187         600 TO 699
+     441         700 TO 799
+     804         800 TO 899
+    1148         900 TO 999
+    1478        1000 TO 1099
+    1009        1100 TO 1199
+     182        1200 TO 1299
+      11        1300 TO 1399
+  -------
+    5364
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     902
+TOTAL =========>    6266      MISSING(-7)    5285
+ 
+Min:            284        Max:           1303        Mean:              979.43
+ 
+Lead In: C07920.00[Default]
+Default Next Question: C07922.00
+--------------------------------------------------------------------------------
+C07996.00    [MATHZ1988]                                    Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             PIAT MATH:  TOTAL STANDARD SCORE
+ 
+PIAT MATH:  TOTAL STANDARD SCORE  88 INT
+ 
+       1           0 TO 64
+      82          65 TO 69
+     436          70 TO 84
+    1296          85 TO 99
+    1148         100 TO 114
+     249         115 TO 129
+      18         130 TO 144
+  -------
+    3230
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     183
+TOTAL =========>    3413      MISSING(-7)    8138
+ 
+Min:              0        Max:            135        Mean:               96.99
+ 
+Lead In: C07995.00[Default]
+Default Next Question: C07997.00
+--------------------------------------------------------------------------------
+C07999.00    [RECOGZ1988]                                   Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING RECOGNITION:  TOTAL STANDARD SCORE
+ 
+PIAT READING RECOGNITION:  TOTAL STANDARD SCORE  88 INT
+ 
+       1           0 TO 64
+      47          65 TO 69
+     329          70 TO 84
+    1036          85 TO 99
+    1248         100 TO 114
+     501         115 TO 129
+      47         130 TO 144
+  -------
+    3209
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     205
+TOTAL =========>    3414      MISSING(-7)    8137
+ 
+Min:              0        Max:            135        Mean:              101.32
+ 
+Lead In: C07998.00[Default]
+Default Next Question: C08000.00
+--------------------------------------------------------------------------------
+C08002.00    [COMPZ1988]                                    Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING COMPREHENSION:  TOTAL STANDARD SCORE
+ 
+PIAT READING COMPREHENSION:  TOTAL STANDARD SCORE  88 INT
+ 
+      53          65 TO 69
+     254          70 TO 84
+     777          85 TO 99
+     987         100 TO 114
+     363         115 TO 129
+      33         130 TO 144
+  -------
+    2467
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     315
+TOTAL =========>    2782      MISSING(-7)    8769
+ 
+Min:             65        Max:            135        Mean:              101.19
+ 
+Lead In: C08001.00[Default]
+Default Next Question: C08004.00
+--------------------------------------------------------------------------------
+C09917.00    [COGNP1990]                                    Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE  90 INT
+ 
+     139           0
+     729           1 TO 9
+     496          10 TO 19
+     272          20 TO 29
+     633          30 TO 39
+     161          40 TO 49
+     605          50 TO 59
+     748          60 TO 69
+     429          70 TO 79
+     625          80 TO 89
+     345          90 TO 99
+  -------
+    5182
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     619
+TOTAL =========>    5801      MISSING(-7)    5750
+ 
+Min:              0        Max:             96        Mean:               46.94
+ 
+Lead In: C09916.00[Default]
+Default Next Question: C09918.00
+--------------------------------------------------------------------------------
+C09918.00    [EMOTP1990]                                    Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE  90 INT
+ 
+     118           0
+     561           1 TO 9
+     534          10 TO 19
+     209          20 TO 29
+     723          30 TO 39
+     226          40 TO 49
+     474          50 TO 59
+     412          60 TO 69
+     604          70 TO 79
+     649          80 TO 89
+     244          90 TO 99
+  -------
+    4754
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)    1047
+TOTAL =========>    5801      MISSING(-7)    5750
+ 
+Min:              0        Max:             95        Mean:               47.29
+ 
+Lead In: C09917.00[Default]
+Default Next Question: C09919.00
+--------------------------------------------------------------------------------
+C09920.00    [COGNZ1990]                                    Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE  90 INT
+ 
+NOTE: 1 IMPLIED DECIMAL PLACE
+ 
+       3         200 TO 299
+       8         300 TO 399
+      29         400 TO 499
+      85         500 TO 599
+     200         600 TO 699
+     408         700 TO 799
+     819         800 TO 899
+    1063         900 TO 999
+    1467        1000 TO 1099
+     937        1100 TO 1199
+     163        1200 TO 1299
+  -------
+    5182
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     619
+TOTAL =========>    5801      MISSING(-7)    5750
+ 
+Min:            244        Max:           1272        Mean:              970.82
+ 
+Lead In: C09919.00[Default]
+Default Next Question: C09921.00
+--------------------------------------------------------------------------------
+C09921.00    [EMOTZ1990]                                    Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE  90 INT
+ 
+NOTE: 1 IMPLIED DECIMAL PLACE
+ 
+       5         300 TO 399
+      21         400 TO 499
+      94         500 TO 599
+     175         600 TO 699
+     352         700 TO 799
+     701         800 TO 899
+    1023         900 TO 999
+    1490        1000 TO 1099
+     649        1100 TO 1199
+     244        1200 TO 1299
+  -------
+    4754
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)    1047
+TOTAL =========>    5801      MISSING(-7)    5750
+ 
+Min:            352        Max:           1250        Mean:              974.92
+ 
+Lead In: C09920.00[Default]
+Default Next Question: C09922.00
+--------------------------------------------------------------------------------
+C09988.00    [MATHZ1990]                                    Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             PIAT MATH:  TOTAL STANDARD SCORE
+ 
+PIAT MATH:  TOTAL STANDARD SCORE  90 INT
+ 
+      79          65 TO 69
+     437          70 TO 84
+    1309          85 TO 99
+    1188         100 TO 114
+     272         115 TO 129
+      30         130 TO 144
+  -------
+    3315
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     289
+TOTAL =========>    3604      MISSING(-7)    7947
+ 
+Min:             65        Max:            135        Mean:               97.46
+ 
+Lead In: C09987.00[Default]
+Default Next Question: C09989.00
+--------------------------------------------------------------------------------
+C09991.00    [RECOGZ1990]                                   Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING RECOGNITION:  TOTAL STANDARD SCORE
+ 
+PIAT READING RECOGNITION:  TOTAL STANDARD SCORE  90 INT
+ 
+      67          65 TO 69
+     342          70 TO 84
+    1023          85 TO 99
+    1262         100 TO 114
+     486         115 TO 129
+      87         130 TO 144
+  -------
+    3267
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     340
+TOTAL =========>    3607      MISSING(-7)    7944
+ 
+Min:             65        Max:            135        Mean:               101.4
+ 
+Lead In: C09990.00[Default]
+Default Next Question: C09992.00
+--------------------------------------------------------------------------------
+C09994.00    [COMPZ1990]                                    Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING COMPREHENSION:  TOTAL STANDARD SCORE
+ 
+PIAT READING COMPREHENSION:  TOTAL STANDARD SCORE  90 INT
+ 
+      74          65 TO 69
+     310          70 TO 84
+     860          85 TO 99
+     989         100 TO 114
+     391         115 TO 129
+      44         130 TO 144
+  -------
+    2668
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     401
+TOTAL =========>    3069      MISSING(-7)    8482
+ 
+Min:             65        Max:            135        Mean:               100.6
+ 
+Lead In: C09993.00[Default]
+Default Next Question: C09996.00
+--------------------------------------------------------------------------------
+C11920.00    [COGNP1992]                                    Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE  92 INT
+ 
+     124           0
+     813           1 TO 9
+     648          10 TO 19
+     263          20 TO 29
+     681          30 TO 39
+     442          40 TO 49
+     415          50 TO 59
+    1089          60 TO 69
+     400          70 TO 79
+     703          80 TO 89
+     293          90 TO 99
+  -------
+    5871
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     638
+TOTAL =========>    6509      MISSING(-7)    5042
+ 
+Min:              0        Max:             99        Mean:                46.5
+ 
+Lead In: C11919.00[Default]
+Default Next Question: C11921.00
+--------------------------------------------------------------------------------
+C11921.00    [EMOTP1992]                                    Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE  92 INT
+ 
+     149           0
+     543           1 TO 9
+     460          10 TO 19
+     551          20 TO 29
+     651          30 TO 39
+     325          40 TO 49
+     275          50 TO 59
+     857          60 TO 69
+     430          70 TO 79
+     767          80 TO 89
+     336          90 TO 99
+  -------
+    5344
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)    1165
+TOTAL =========>    6509      MISSING(-7)    5042
+ 
+Min:              0        Max:             95        Mean:               47.68
+ 
+Lead In: C11920.00[Default]
+Default Next Question: C11922.00
+--------------------------------------------------------------------------------
+C11923.00    [COGNZ1992]                                    Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE  92 INT
+ 
+1 IMPLIED DECIMAL PLACE
+ 
+       3         100 TO 199
+       5         200 TO 299
+      13         300 TO 399
+      20         400 TO 499
+      92         500 TO 599
+     257         600 TO 699
+     480         700 TO 799
+     869         800 TO 899
+    1511         900 TO 999
+    1295        1000 TO 1099
+    1113        1100 TO 1199
+     212        1200 TO 1299
+       1        1400 TO 1499
+  -------
+    5871
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     638
+TOTAL =========>    6509      MISSING(-7)    5042
+ 
+Min:            111        Max:           1482        Mean:              968.61
+ 
+Lead In: C11922.00[Default]
+Default Next Question: C11924.00
+--------------------------------------------------------------------------------
+C11924.00    [EMOTZ1992]                                    Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE  92 INT
+ 
+1 IMPLIED DECIMAL PLACE
+ 
+       4         300 TO 399
+      28         400 TO 499
+     117         500 TO 599
+     185         600 TO 699
+     359         700 TO 799
+     947         800 TO 899
+    1060         900 TO 999
+    1340        1000 TO 1099
+    1048        1100 TO 1199
+     256        1200 TO 1299
+  -------
+    5344
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)    1165
+TOTAL =========>    6509      MISSING(-7)    5042
+ 
+Min:            316        Max:           1243        Mean:               975.4
+ 
+Lead In: C11923.00[Default]
+Default Next Question: C11925.00
+--------------------------------------------------------------------------------
+C11988.00    [MATHZ1992]                                    Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             PIAT MATH: TOTAL STANDARD SCORE
+ 
+PIAT MATH: TOTAL STANDARD SCORE  92 INT
+ 
+     110          65 TO 69
+     494          70 TO 84
+    1571          85 TO 99
+    1373         100 TO 114
+     385         115 TO 129
+      37         130 TO 144
+  -------
+    3970
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     407
+TOTAL =========>    4377      MISSING(-7)    7174
+ 
+Min:             65        Max:            135        Mean:               97.91
+ 
+Lead In: C11987.00[Default]
+Default Next Question: C11989.00
+--------------------------------------------------------------------------------
+C11991.00    [RECOGZ1992]                                   Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING RECOGNITION: TOTAL STANDARD SCORE
+ 
+PIAT READING RECOGNITION: TOTAL STANDARD SCORE  92 INT
+ 
+      92          65 TO 69
+     394          70 TO 84
+    1146          85 TO 99
+    1540         100 TO 114
+     628         115 TO 129
+     114         130 TO 144
+  -------
+    3914
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     466
+TOTAL =========>    4380      MISSING(-7)    7171
+ 
+Min:             65        Max:            135        Mean:              101.98
+ 
+Lead In: C11990.00[Default]
+Default Next Question: C11992.00
+--------------------------------------------------------------------------------
+C11994.00    [COMPZ1992]                                    Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING COMPREHENSION: TOTAL STANDARD SCORE
+ 
+PIAT READING COMPREHENSION: TOTAL STANDARD SCORE  92 INT
+ 
+      86          65 TO 69
+     374          70 TO 84
+    1071          85 TO 99
+    1290         100 TO 114
+     455         115 TO 129
+      41         130 TO 144
+  -------
+    3317
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     629
+TOTAL =========>    3946      MISSING(-7)    7605
+ 
+Min:             65        Max:            135        Mean:              100.26
+ 
+Lead In: C11993.00[Default]
+Default Next Question: C11996.00
+--------------------------------------------------------------------------------
+C14998.00    [COGNP1994]                                    Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE 94 INT
+ 
+     141           0
+     698           1 TO 9
+     500          10 TO 19
+     573          20 TO 29
+     339          30 TO 39
+     529          40 TO 49
+     156          50 TO 59
+    1020          60 TO 69
+     533          70 TO 79
+     640          80 TO 89
+     332          90 TO 99
+  -------
+    5461
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     646
+TOTAL =========>    6107      MISSING(-7)    5444
+ 
+Min:              0        Max:             96        Mean:               46.89
+ 
+Lead In: C14997.00[Default]
+Default Next Question: C14999.00
+--------------------------------------------------------------------------------
+C14999.00    [EMOTP1994]                                    Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE  94 INT
+ 
+     151           0
+     585           1 TO 9
+     584          10 TO 19
+     231          20 TO 29
+     695          30 TO 39
+     396          40 TO 49
+     296          50 TO 59
+     890          60 TO 69
+     162          70 TO 79
+     812          80 TO 89
+     326          90 TO 99
+  -------
+    5128
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     979
+TOTAL =========>    6107      MISSING(-7)    5444
+ 
+Min:              0        Max:             95        Mean:               47.65
+ 
+Lead In: C14998.00[Default]
+Default Next Question: C15000.00
+--------------------------------------------------------------------------------
+C15001.00    [COGNZ1994]                                    Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE  94 INT
+ 
+NOTE: 1 implied decimal place
+ 
+       3         100 TO 199
+       3         200 TO 299
+       5         300 TO 399
+      44         400 TO 499
+      70         500 TO 599
+     222         600 TO 699
+     497         700 TO 799
+     578         800 TO 899
+    1358         900 TO 999
+    1199        1000 TO 1099
+    1285        1100 TO 1199
+     197        1200 TO 1299
+  -------
+    5461
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     646
+TOTAL =========>    6107      MISSING(-7)    5444
+ 
+Min:            178        Max:           1263        Mean:              969.61
+ 
+Lead In: C15000.00[Default]
+Default Next Question: C15002.00
+--------------------------------------------------------------------------------
+C15002.00    [EMOTZ1994]                                    Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE  94 INT
+ 
+NOTE: 1 implied decimal place
+ 
+       1         100 TO 199
+       5         200 TO 299
+      10         300 TO 399
+      29         400 TO 499
+      67         500 TO 599
+     191         600 TO 699
+     436         700 TO 799
+     813         800 TO 899
+    1091         900 TO 999
+    1185        1000 TO 1099
+    1063        1100 TO 1199
+     237        1200 TO 1299
+  -------
+    5128
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     979
+TOTAL =========>    6107      MISSING(-7)    5444
+ 
+Min:            184        Max:           1243        Mean:              976.17
+ 
+Lead In: C15001.00[Default]
+Default Next Question: C15003.00
+--------------------------------------------------------------------------------
+C15078.00    [MATHZ1994]                                    Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             PIAT MATH: TOTAL STANDARD SCORE
+ 
+PIAT MATH: TOTAL STANDARD SCORE  94 INT
+ 
+     113          65 TO 69
+     445          70 TO 84
+    1431          85 TO 99
+    1493         100 TO 114
+     411         115 TO 129
+      51         130 TO 144
+  -------
+    3944
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     361
+TOTAL =========>    4305      MISSING(-7)    7246
+ 
+Min:             65        Max:            135        Mean:               98.81
+ 
+Lead In: C15077.00[Default]
+Default Next Question: C15079.00
+--------------------------------------------------------------------------------
+C15081.00    [RECOGZ1994]                                   Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING RECOGNITION: TOTAL STANDARD SCORE
+ 
+PIAT READING RECOGNITION: TOTAL STANDARD SCORE  94 INT
+ 
+      88          65 TO 69
+     378          70 TO 84
+    1174          85 TO 99
+    1458         100 TO 114
+     650         115 TO 129
+     185         130 TO 144
+  -------
+    3933
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     373
+TOTAL =========>    4306      MISSING(-7)    7245
+ 
+Min:             65        Max:            135        Mean:              102.41
+ 
+Lead In: C15080.00[Default]
+Default Next Question: C15082.00
+--------------------------------------------------------------------------------
+C15084.00    [COMPZ1994]                                    Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING COMPREHENSION: TOTAL STANDARD SCORE
+ 
+PIAT READING COMPREHENSION: TOTAL STANDARD SCORE  94 INT
+ 
+      92          65 TO 69
+     396          70 TO 84
+    1202          85 TO 99
+    1232         100 TO 114
+     404         115 TO 129
+      23         130 TO 144
+  -------
+    3349
+ 
+Refusal(-1)           24
+Don't Know(-2)         0
+Invalid Skip(-3)     420
+TOTAL =========>    3793      MISSING(-7)    7758
+ 
+Min:             65        Max:            135        Mean:               99.16
+ 
+Lead In: C15083.00[Default]
+Default Next Question: C15086.00
+--------------------------------------------------------------------------------
+C15567.00    [COGNP1996]                                    Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE
+ 
+     154           0
+     501           1 TO 9
+     384          10 TO 19
+     529          20 TO 29
+     609          30 TO 39
+      61          40 TO 49
+     649          50 TO 59
+     395          60 TO 69
+     730          70 TO 79
+     513          80 TO 89
+     240          90 TO 99
+  -------
+    4765
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     665
+TOTAL =========>    5430      MISSING(-7)    6121
+ 
+Min:              0        Max:             95        Mean:               47.12
+ 
+Lead In: C15566.00[Default]
+Default Next Question: C15568.00
+--------------------------------------------------------------------------------
+C15568.00    [EMOTP1996]                                    Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE
+ 
+     126           0
+     614           1 TO 9
+     322          10 TO 19
+     319          20 TO 29
+     674          30 TO 39
+       4          40 TO 49
+     588          50 TO 59
+     497          60 TO 69
+     382          70 TO 79
+     631          80 TO 89
+     346          90 TO 99
+  -------
+    4503
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     927
+TOTAL =========>    5430      MISSING(-7)    6121
+ 
+Min:              0        Max:             94        Mean:               47.84
+ 
+Lead In: C15567.00[Default]
+Default Next Question: C15569.00
+--------------------------------------------------------------------------------
+C15570.00    [COGNZ1996]                                    Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE
+ 
+NOTE: 1 implied decimal place
+ 
+       2           1 TO 99
+       2         100 TO 199
+       2         200 TO 299
+      14         300 TO 399
+      34         400 TO 499
+      61         500 TO 599
+     222         600 TO 699
+     318         700 TO 799
+     753         800 TO 899
+     830         900 TO 999
+    2527        1000 TO 99999999: 1000+
+  -------
+    4765
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     665
+TOTAL =========>    5430      MISSING(-7)    6121
+ 
+Min:             57        Max:           1249        Mean:              970.53
+ 
+Lead In: C15569.00[Default]
+Default Next Question: C15571.00
+--------------------------------------------------------------------------------
+C15571.00    [EMOTZ1996]                                    Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE
+ 
+NOTE: 1 implied decimal place
+ 
+       1           1 TO 99
+       2         200 TO 299
+      15         300 TO 399
+      36         400 TO 499
+      71         500 TO 599
+     134         600 TO 699
+     342         700 TO 799
+     729         800 TO 899
+     801         900 TO 999
+    2372        1000 TO 99999999: 1000+
+  -------
+    4503
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     927
+TOTAL =========>    5430      MISSING(-7)    6121
+ 
+Min:             70        Max:           1226        Mean:                 975
+ 
+Lead In: C15570.00[Default]
+Default Next Question: C15572.00
+--------------------------------------------------------------------------------
+C15647.00    [MATHZ1996]                                    Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             PIAT MATH: TOTAL STANDARD SCORE
+ 
+PIAT MATH: TOTAL STANDARD SCORE
+ 
+      79           0 TO 69
+     384          70 TO 84
+    1221          85 TO 99
+    1421         100 TO 114
+     499         115 TO 129
+      75         130 TO 999999: 130 +
+  -------
+    3679
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     368
+TOTAL =========>    4047      MISSING(-7)    7504
+ 
+Min:             65        Max:            135        Mean:              100.64
+ 
+Lead In: C15646.00[Default]
+Default Next Question: C15648.00
+--------------------------------------------------------------------------------
+C15650.00    [RECOGZ1996]                                   Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING RECOGNITION: TOTAL STANDARD SCORE
+ 
+PIAT READING RECOGNITION: TOTAL STANDARD SCORE
+ 
+      86           0 TO 69
+     307          70 TO 84
+    1009          85 TO 99
+    1418         100 TO 114
+     661         115 TO 129
+     188         130 TO 999999: 130 +
+  -------
+    3669
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     378
+TOTAL =========>    4047      MISSING(-7)    7504
+ 
+Min:             65        Max:            135        Mean:              103.71
+ 
+Lead In: C15649.00[Default]
+Default Next Question: C15651.00
+--------------------------------------------------------------------------------
+C15653.00    [COMPZ1996]                                    Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING COMPREHENSION: TOTAL STANDARD SCORE
+ 
+PIAT READING COMPREHENSION: TOTAL STANDARD SCORE
+ 
+      66           0 TO 69
+     302          70 TO 84
+    1029          85 TO 99
+    1155         100 TO 114
+     403         115 TO 129
+      34         130 TO 999999: 130 +
+  -------
+    2989
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     364
+TOTAL =========>    3353      MISSING(-7)    8198
+ 
+Min:             65        Max:            135        Mean:              100.25
+ 
+Lead In: C15652.00[Default]
+Default Next Question: C15655.00
+--------------------------------------------------------------------------------
+C17924.00    [COGNP1998]                                    Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE
+ 
+     144           0
+     583           1 TO 9
+     403          10 TO 19
+     116          20 TO 29
+     547          30 TO 39
+      75          40 TO 49
+     798          50 TO 59
+     143          60 TO 69
+     651          70 TO 79
+     520          80 TO 89
+     210          90 TO 99
+  -------
+    4190
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     733
+TOTAL =========>    4923      MISSING(-7)    6628
+ 
+Min:              0        Max:             95        Mean:               47.27
+ 
+Lead In: C17923.00[Default]
+Default Next Question: C17925.00
+--------------------------------------------------------------------------------
+C17925.00    [EMOTP1998]                                    Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE
+ 
+     100           0
+     513           1 TO 9
+     231          10 TO 19
+     364          20 TO 29
+     510          30 TO 39
+     131          40 TO 49
+     515          50 TO 59
+     315          60 TO 69
+     529          70 TO 79
+     405          80 TO 89
+     328          90 TO 99
+  -------
+    3941
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     982
+TOTAL =========>    4923      MISSING(-7)    6628
+ 
+Min:              0        Max:             92        Mean:               47.54
+ 
+Lead In: C17924.00[Default]
+Default Next Question: C17926.00
+--------------------------------------------------------------------------------
+C17927.00    [COGNZ1998]                                    Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE
+ 
+NOTE: 1 implied decimal place
+ 
+       2         200 TO 299
+      18         300 TO 399
+      19         400 TO 499
+      58         500 TO 599
+     190         600 TO 699
+     295         700 TO 799
+     664         800 TO 899
+     676         900 TO 999
+    2268        1000 TO 99999999
+  -------
+    4190
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     733
+TOTAL =========>    4923      MISSING(-7)    6628
+ 
+Min:            219        Max:           1245        Mean:              971.75
+ 
+Lead In: C17926.00[Default]
+Default Next Question: C17928.00
+--------------------------------------------------------------------------------
+C17928.00    [EMOTZ1998]                                    Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE
+ 
+NOTE: 1 implied decimal place
+ 
+       4         200 TO 299
+      12         300 TO 399
+      23         400 TO 499
+      61         500 TO 599
+     128         600 TO 699
+     385         700 TO 799
+     541         800 TO 899
+     783         900 TO 999
+    2004        1000 TO 99999999
+  -------
+    3941
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     982
+TOTAL =========>    4923      MISSING(-7)    6628
+ 
+Min:            217        Max:           1212        Mean:              973.94
+ 
+Lead In: C17927.00[Default]
+Default Next Question: C17929.00
+--------------------------------------------------------------------------------
+C18001.00    [MATHZ1998]                                    Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             PIAT MATH: TOTAL STANDARD SCORE
+ 
+PIAT MATH: TOTAL STANDARD SCORE
+ 
+     102           0 TO 69
+     309          70 TO 84
+    1098          85 TO 99
+    1323         100 TO 114
+     482         115 TO 129
+      73         130 TO 999999
+  -------
+    3387
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     440
+TOTAL =========>    3827      MISSING(-7)    7724
+ 
+Min:             65        Max:            135        Mean:              100.95
+ 
+Lead In: C18000.00[Default]
+Default Next Question: C18002.00
+--------------------------------------------------------------------------------
+C18004.00    [RECOGZ1998]                                   Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING RECOGNITION: TOTAL STANDARD SCORE
+ 
+PIAT READING RECOGNITION: TOTAL STANDARD SCORE
+ 
+      83           0 TO 69
+     273          70 TO 84
+     868          85 TO 99
+    1323         100 TO 114
+     645         115 TO 129
+     194         130 TO 999999
+  -------
+    3386
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     441
+TOTAL =========>    3827      MISSING(-7)    7724
+ 
+Min:             65        Max:            135        Mean:              104.18
+ 
+Lead In: C18003.00[Default]
+Default Next Question: C18005.00
+--------------------------------------------------------------------------------
+C18007.00    [COMPZ1998]                                    Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING COMPREHENSION: TOTAL STANDARD SCORE
+ 
+PIAT READING COMPREHENSION: TOTAL STANDARD SCORE
+ 
+      96           0 TO 69
+     307          70 TO 84
+     918          85 TO 99
+    1192         100 TO 114
+     391         115 TO 129
+      34         130 TO 999999
+  -------
+    2938
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     417
+TOTAL =========>    3355      MISSING(-7)    8196
+ 
+Min:             65        Max:            135        Mean:              100.38
+ 
+Lead In: C18006.00[Default]
+Default Next Question: C18009.00
+--------------------------------------------------------------------------------
+C19873.00    [NHCHLD1998]                                   Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             # HOUSEHOLD MEMBERS UNDER 18 IN HOUSEHOLD OF MOTHER
+ 
+NUMBER OF HOUSEHOLD MEMBERS UNDER 18 YEARS OF AGE IN HOUSEHOLD OF MOTHER
+ 
+NOTE: ACTUAL NUMBER
+ 
+     662           0
+    1652           1
+    3078           2
+    2053           3
+     912           4
+     347           5
+     101           6
+      51           7
+      22           8
+      11           9
+  -------
+    8889
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      20
+TOTAL =========>    8909      MISSING(-7)    2642
+ 
+Min:              0        Max:              9        Mean:                2.32
+ 
+Lead In: C19872.00[Default]
+Default Next Question: C19874.00
+--------------------------------------------------------------------------------
+C24933.00    [NHCHLD2000]                                   Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             # HOUSEHOLD MEMBERS UNDER 18 IN HOUSEHOLD OF MOTHER
+ 
+NUMBER OF HOUSEHOLD MEMBERS UNDER 18 YEARS OF AGE IN HOUSEHOLD OF MOTHER
+ 
+NOTE: ACTUAL NUMBER
+ 
+     981           0
+    1788           1
+    2995           2
+    1650           3
+     712           4
+     253           5
+      61           6
+      44           7
+      24           8
+      11           9
+  -------
+    8519
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      35
+TOTAL =========>    8554      MISSING(-7)    2997
+ 
+Min:              0        Max:              9        Mean:                2.09
+ 
+Lead In: C24932.00[Default]
+Default Next Question: C24934.00
+--------------------------------------------------------------------------------
+C25026.00    [COGNZ2000]                                    Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE
+ 
+NOTE: 1 implied decimal place
+ 
+       2         100 TO 199
+       8         300 TO 399
+      19         400 TO 499
+      62         500 TO 599
+      83         600 TO 699
+     257         700 TO 799
+     353         800 TO 899
+     665         900 TO 999
+    1492        1000 TO 99999999: 1000+
+  -------
+    2941
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     450
+TOTAL =========>    3391      MISSING(-7)    8160
+ 
+Min:            110        Max:           1240        Mean:              978.09
+ 
+Lead In: C25025.00[Default]
+Default Next Question: C25027.00
+--------------------------------------------------------------------------------
+C25027.00    [COGNP2000]                                    Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE
+ 
+      93           0
+     354           1 TO 9
+     287          10 TO 19
+     105          20 TO 29
+     309          30 TO 39
+     300          40 TO 49
+     246          50 TO 59
+     398          60 TO 69
+     216          70 TO 79
+     445          80 TO 89
+     188          90 TO 99
+  -------
+    2941
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     450
+TOTAL =========>    3391      MISSING(-7)    8160
+ 
+Min:              0        Max:             95        Mean:               48.58
+ 
+Lead In: C25026.00[Default]
+Default Next Question: C25028.00
+--------------------------------------------------------------------------------
+C25028.00    [EMOTZ2000]                                    Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE
+ 
+NOTE: 1 implied decimal place
+ 
+       1           1 TO 99
+       2         200 TO 299
+       7         300 TO 399
+      15         400 TO 499
+      48         500 TO 599
+      70         600 TO 699
+     247         700 TO 799
+     387         800 TO 899
+     508         900 TO 999
+    1523        1000 TO 99999999: 1000+
+  -------
+    2808
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     583
+TOTAL =========>    3391      MISSING(-7)    8160
+ 
+Min:             65        Max:           1277        Mean:              983.68
+ 
+Lead In: C25027.00[Default]
+Default Next Question: C25029.00
+--------------------------------------------------------------------------------
+C25029.00    [EMOTP2000]                                    Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE
+ 
+      74           0
+     320           1 TO 9
+     183          10 TO 19
+     238          20 TO 29
+     371          30 TO 39
+      99          40 TO 49
+     257          50 TO 59
+     385          60 TO 69
+     220          70 TO 79
+     429          80 TO 89
+     232          90 TO 99
+  -------
+    2808
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     583
+TOTAL =========>    3391      MISSING(-7)    8160
+ 
+Min:              0        Max:             97        Mean:               49.44
+ 
+Lead In: C25028.00[Default]
+Default Next Question: C25030.00
+--------------------------------------------------------------------------------
+C25037.00    [MATHZ2000]                                    Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             PIAT MATH: TOTAL STANDARD SCORE
+ 
+PIAT MATH: TOTAL STANDARD SCORE
+ 
+      68           0 TO 69
+     203          70 TO 84
+     700          85 TO 99
+     969         100 TO 114
+     436         115 TO 129
+      86         130 TO 999999: 130 +
+  -------
+    2462
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     225
+TOTAL =========>    2687      MISSING(-7)    8864
+ 
+Min:             65        Max:            135        Mean:               102.7
+ 
+Lead In: C25036.00[Default]
+Default Next Question: C25038.00
+--------------------------------------------------------------------------------
+C25039.00    [RECOGZ2000]                                   Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING RECOGNITION: TOTAL STANDARD SCORE
+ 
+PIAT READING RECOGNITION: TOTAL STANDARD SCORE
+ 
+      53           0 TO 69
+     169          70 TO 84
+     606          85 TO 99
+     898         100 TO 114
+     563         115 TO 129
+     175         130 TO 999999: 130 +
+  -------
+    2464
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     223
+TOTAL =========>    2687      MISSING(-7)    8864
+ 
+Min:             65        Max:            135        Mean:              105.81
+ 
+Lead In: C25038.00[Default]
+Default Next Question: C25040.00
+--------------------------------------------------------------------------------
+C25043.00    [COMPZ2000]                                    Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING COMPREHENSION: TOTAL STANDARD SCORE
+ 
+PIAT READING COMPREHENSION: TOTAL STANDARD SCORE
+ 
+      69           0 TO 69
+     205          70 TO 84
+     657          85 TO 99
+     832         100 TO 114
+     393         115 TO 129
+      35         130 TO 999999: 130 +
+  -------
+    2191
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     218
+TOTAL =========>    2409      MISSING(-7)    9142
+ 
+Min:             65        Max:            135        Mean:              101.57
+ 
+Lead In: C25042.00[Default]
+Default Next Question: C25044.00
+--------------------------------------------------------------------------------
+C25211.00    [NHCHLD2002]                                   Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             # HOUSEHOLD MEMBERS UNDER 18 IN HOUSEHOLD OF MOTHER
+ 
+NUMBER OF HOUSEHOLD MEMBERS UNDER 18 YEARS OF AGE IN HOUSEHOLD OF MOTHER
+ 
+NOTE: ACTUAL NUMBER
+ 
+    1284           0
+    2078           1
+    2673           2
+    1349           3
+     468           4
+     165           5
+      74           6
+      30           7
+      26           8
+      10           9
+      11          10
+  -------
+    8168
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      42
+TOTAL =========>    8210      MISSING(-7)    3341
+ 
+Min:              0        Max:             10        Mean:                1.86
+ 
+Lead In: C25210.00[Default]
+Default Next Question: C25212.00
+--------------------------------------------------------------------------------
+C25311.00    [COGNZ2002]                                    Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE
+ 
+NOTE: 1 implied decimal place
+ 
+       5         300 TO 399
+      12         400 TO 499
+      39         500 TO 599
+     124         600 TO 699
+     218         700 TO 799
+     460         800 TO 899
+     515         900 TO 999
+    1464        1000 TO 99999999: 1000+
+  -------
+    2837
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     391
+TOTAL =========>    3228      MISSING(-7)    8323
+ 
+Min:            318        Max:           1271        Mean:              971.83
+ 
+Lead In: C25310.00[Default]
+Default Next Question: C25312.00
+--------------------------------------------------------------------------------
+C25312.00    [COGNP2002]                                    Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE
+ 
+      75           0
+     332           1 TO 9
+     279          10 TO 19
+     245          20 TO 29
+     300          30 TO 39
+     128          40 TO 49
+     374          50 TO 59
+     148          60 TO 69
+     402          70 TO 79
+     399          80 TO 89
+     155          90 TO 99
+  -------
+    2837
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     391
+TOTAL =========>    3228      MISSING(-7)    8323
+ 
+Min:              0        Max:             96        Mean:               46.85
+ 
+Lead In: C25311.00[Default]
+Default Next Question: C25313.00
+--------------------------------------------------------------------------------
+C25313.00    [EMOTZ2002]                                    Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE
+ 
+NOTE: 1 implied decimal place
+ 
+       1         200 TO 299
+       6         300 TO 399
+      13         400 TO 499
+      47         500 TO 599
+      84         600 TO 699
+     177         700 TO 799
+     523         800 TO 899
+     529         900 TO 999
+    1237        1000 TO 99999999: 1000+
+  -------
+    2617
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     611
+TOTAL =========>    3228      MISSING(-7)    8323
+ 
+Min:            282        Max:           1233        Mean:              977.56
+ 
+Lead In: C25312.00[Default]
+Default Next Question: C25314.00
+--------------------------------------------------------------------------------
+C25314.00    [EMOTP2002]                                    Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE
+ 
+      67           0
+     261           1 TO 9
+     291          10 TO 19
+     233          20 TO 29
+     163          30 TO 39
+     365          40 TO 49
+     144          50 TO 59
+     363          60 TO 69
+     219          70 TO 79
+     313          80 TO 89
+     198          90 TO 99
+  -------
+    2617
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     611
+TOTAL =========>    3228      MISSING(-7)    8323
+ 
+Min:              0        Max:             94        Mean:               47.95
+ 
+Lead In: C25313.00[Default]
+Default Next Question: C25315.00
+--------------------------------------------------------------------------------
+C25322.00    [MATHZ2002]                                    Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             PIAT MATH: TOTAL STANDARD SCORE
+ 
+PIAT MATH: TOTAL STANDARD SCORE
+ 
+      58           0 TO 69
+     204          70 TO 84
+     648          85 TO 99
+    1004         100 TO 114
+     475         115 TO 129
+      98         130 TO 999999: 130 +
+  -------
+    2487
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     249
+TOTAL =========>    2736      MISSING(-7)    8815
+ 
+Min:             65        Max:            135        Mean:              103.66
+ 
+Lead In: C25321.00[Default]
+Default Next Question: C25323.00
+--------------------------------------------------------------------------------
+C25324.00    [RECOGZ2002]                                   Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING RECOGNITION: TOTAL STANDARD SCORE
+ 
+PIAT READING RECOGNITION: TOTAL STANDARD SCORE
+ 
+      51           0 TO 69
+     161          70 TO 84
+     520          85 TO 99
+     964         100 TO 114
+     599         115 TO 129
+     196         130 TO 999999: 130 +
+  -------
+    2491
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     245
+TOTAL =========>    2736      MISSING(-7)    8815
+ 
+Min:             65        Max:            135        Mean:              106.86
+ 
+Lead In: C25323.00[Default]
+Default Next Question: C25325.00
+--------------------------------------------------------------------------------
+C25328.00    [COMPZ2002]                                    Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING COMPREHENSION: TOTAL STANDARD SCORE
+ 
+PIAT READING COMPREHENSION: TOTAL STANDARD SCORE
+ 
+      54           0 TO 69
+     209          70 TO 84
+     700          85 TO 99
+     922         100 TO 114
+     362         115 TO 129
+      38         130 TO 999999: 130 +
+  -------
+    2285
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     267
+TOTAL =========>    2552      MISSING(-7)    8999
+ 
+Min:             19        Max:            135        Mean:              101.54
+ 
+Lead In: C25327.00[Default]
+Default Next Question: C25329.00
+--------------------------------------------------------------------------------
+C27916.00    [NHCHLD2004]                                   Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             # HOUSEHOLD MEMBERS UNDER 18 IN HOUSEHOLD OF MOTHER
+ 
+NUMBER OF HOUSEHOLD MEMBERS UNDER 18 YEARS OF AGE IN HOUSEHOLD OF MOTHER
+ 
+NOTE: ACTUAL NUMBER
+ 
+    1983           0
+    2226           1
+    2403           2
+    1055           3
+     360           4
+     116           5
+      64           6
+      58           7
+      26           8
+  -------
+    8291
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      30
+TOTAL =========>    8321      MISSING(-7)    3230
+ 
+Min:              0        Max:              8        Mean:                1.59
+ 
+Lead In: C27915.00[Default]
+Default Next Question: C27917.00
+--------------------------------------------------------------------------------
+C28024.00    [COGNZ2004]                                    Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE
+ 
+NOTE: 1 implied decimal place
+ 
+       1         100 TO 199
+       2         300 TO 399
+      20         400 TO 499
+      43         500 TO 599
+      70         600 TO 699
+     232         700 TO 799
+     292         800 TO 899
+     547         900 TO 999
+     991        1000 TO 99999999: 1000+
+  -------
+    2198
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     315
+TOTAL =========>    2513      MISSING(-7)    9038
+ 
+Min:            123        Max:           1243        Mean:              965.48
+ 
+Lead In: C28023.00[Default]
+Default Next Question: C28025.00
+--------------------------------------------------------------------------------
+C28025.00    [COGNP2004]                                    Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE
+ 
+      69           0
+     299           1 TO 9
+     231          10 TO 19
+      83          20 TO 29
+     286          30 TO 39
+     238          40 TO 49
+     131          50 TO 59
+     248          60 TO 69
+     128          70 TO 79
+     350          80 TO 89
+     135          90 TO 99
+  -------
+    2198
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     315
+TOTAL =========>    2513      MISSING(-7)    9038
+ 
+Min:              0        Max:             95        Mean:               46.03
+ 
+Lead In: C28024.00[Default]
+Default Next Question: C28026.00
+--------------------------------------------------------------------------------
+C28026.00    [EMOTZ2004]                                    Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE
+ 
+NOTE: 1 implied decimal place
+ 
+      19         400 TO 499
+      27         500 TO 599
+      53         600 TO 699
+     130         700 TO 799
+     239         800 TO 899
+     542         900 TO 999
+     941        1000 TO 99999999: 1000+
+  -------
+    1951
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     562
+TOTAL =========>    2513      MISSING(-7)    9038
+ 
+Min:            411        Max:           1233        Mean:              980.65
+ 
+Lead In: C28025.00[Default]
+Default Next Question: C28027.00
+--------------------------------------------------------------------------------
+C28027.00    [EMOTP2004]                                    Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE
+ 
+      46           0
+     184           1 TO 9
+     227          10 TO 19
+     194          20 TO 29
+     114          30 TO 39
+     245          40 TO 49
+     149          50 TO 59
+     252          60 TO 69
+     169          70 TO 79
+     213          80 TO 89
+     158          90 TO 99
+  -------
+    1951
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     562
+TOTAL =========>    2513      MISSING(-7)    9038
+ 
+Min:              0        Max:             94        Mean:               48.37
+ 
+Lead In: C28026.00[Default]
+Default Next Question: C28028.00
+--------------------------------------------------------------------------------
+C28030.00    [MATHZ2004]                                    Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             PIAT MATH: TOTAL STANDARD SCORE
+ 
+PIAT MATH: TOTAL STANDARD SCORE
+ 
+      51           0 TO 69
+     147          70 TO 84
+     545          85 TO 99
+     751         100 TO 114
+     433         115 TO 129
+      96         130 TO 999999: 130 +
+  -------
+    2023
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     214
+TOTAL =========>    2237      MISSING(-7)    9314
+ 
+Min:             65        Max:            135        Mean:              104.34
+ 
+Lead In: C28029.00[Default]
+Default Next Question: C28031.00
+--------------------------------------------------------------------------------
+C28032.00    [RECOGZ2004]                                   Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING RECOGNITION: TOTAL STANDARD SCORE
+ 
+PIAT READING RECOGNITION: TOTAL STANDARD SCORE
+ 
+      45           0 TO 69
+     109          70 TO 84
+     444          85 TO 99
+     792         100 TO 114
+     479         115 TO 129
+     170         130 TO 999999: 130 +
+  -------
+    2039
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     198
+TOTAL =========>    2237      MISSING(-7)    9314
+ 
+Min:             65        Max:            135        Mean:              106.95
+ 
+Lead In: C28031.00[Default]
+Default Next Question: C28033.00
+--------------------------------------------------------------------------------
+C28036.00    [COMPZ2004]                                    Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING COMPREHENSION: TOTAL STANDARD SCORE
+ 
+PIAT READING COMPREHENSION: TOTAL STANDARD SCORE
+ 
+      49           0 TO 69
+     168          70 TO 84
+     576          85 TO 99
+     750         100 TO 114
+     327         115 TO 129
+      38         130 TO 999999: 130 +
+  -------
+    1908
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     201
+TOTAL =========>    2109      MISSING(-7)    9442
+ 
+Min:             22        Max:            135        Mean:              101.99
+ 
+Lead In: C28035.00[Default]
+Default Next Question: C28037.00
+--------------------------------------------------------------------------------
+C31011.00    [NHCHLD2006]                                   Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             # HOUSEHOLD MEMBERS UNDER 18 IN HOUSEHOLD OF MOTHER
+ 
+NUMBER OF HOUSEHOLD MEMBERS UNDER 18 YEARS OF AGE IN HOUSEHOLD OF MOTHER
+ 
+NOTE: ACTUAL NUMBER
+ 
+    2504           0
+    2342           1
+    1999           2
+     784           3
+     328           4
+      92           5
+      39           6
+      35           7
+      14           8
+  -------
+    8137
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      22
+TOTAL =========>    8159      MISSING(-7)    3392
+ 
+Min:              0        Max:              8        Mean:                1.36
+ 
+Lead In: C31010.00[Default]
+Default Next Question: C31012.00
+--------------------------------------------------------------------------------
+C31104.00    [COGNZ2006]                                    Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE
+ 
+NOTE: 1 implied decimal place
+ 
+       5         300 TO 399
+       5         400 TO 499
+      44         500 TO 599
+      61         600 TO 699
+     115         700 TO 799
+     261         800 TO 899
+     310         900 TO 999
+     810        1000 TO 99999999: 1000+
+  -------
+    1611
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     311
+TOTAL =========>    1922      MISSING(-7)    9629
+ 
+Min:            346        Max:           1267        Mean:              971.86
+ 
+Lead In: C31103.00[Default]
+Default Next Question: C31105.00
+--------------------------------------------------------------------------------
+C31105.00    [COGNP2006]                                    Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE
+ 
+      60           0
+     170           1 TO 9
+     127          10 TO 19
+     155          20 TO 29
+     206          30 TO 39
+      83          40 TO 49
+     182          50 TO 59
+     119          60 TO 69
+     243          70 TO 79
+     226          80 TO 89
+      40          90 TO 99
+  -------
+    1611
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     311
+TOTAL =========>    1922      MISSING(-7)    9629
+ 
+Min:              0        Max:             96        Mean:               47.51
+ 
+Lead In: C31104.00[Default]
+Default Next Question: C31106.00
+--------------------------------------------------------------------------------
+C31106.00    [EMOTZ2006]                                    Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE
+ 
+NOTE: 1 implied decimal place
+ 
+      11         400 TO 499
+      25         500 TO 599
+      56         600 TO 699
+     114         700 TO 799
+     161         800 TO 899
+     373         900 TO 999
+     703        1000 TO 99999999: 1000+
+  -------
+    1443
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     479
+TOTAL =========>    1922      MISSING(-7)    9629
+ 
+Min:            420        Max:           1274        Mean:              977.65
+ 
+Lead In: C31105.00[Default]
+Default Next Question: C31107.00
+--------------------------------------------------------------------------------
+C31107.00    [EMOTP2006]                                    Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE
+ 
+      36           0
+     170           1 TO 9
+     129          10 TO 19
+     155          20 TO 29
+      56          30 TO 39
+     194          40 TO 49
+      65          50 TO 59
+     228          60 TO 69
+      89          70 TO 79
+     215          80 TO 89
+     106          90 TO 99
+  -------
+    1443
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     479
+TOTAL =========>    1922      MISSING(-7)    9629
+ 
+Min:              0        Max:             96        Mean:                48.3
+ 
+Lead In: C31106.00[Default]
+Default Next Question: C31108.00
+--------------------------------------------------------------------------------
+C31115.00    [MATHZ2006]                                    Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             PIAT MATH: TOTAL STANDARD SCORE
+ 
+PIAT MATH: TOTAL STANDARD SCORE
+ 
+      32           0 TO 69
+     106          70 TO 84
+     388          85 TO 99
+     578         100 TO 114
+     401         115 TO 129
+     106         130 TO 999999: 130 +
+  -------
+    1611
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     220
+TOTAL =========>    1831      MISSING(-7)    9720
+ 
+Min:             65        Max:            135        Mean:              106.25
+ 
+Lead In: C31114.00[Default]
+Default Next Question: C31116.00
+--------------------------------------------------------------------------------
+C31117.00    [RECOGZ2006]                                   Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING RECOGNITION: TOTAL STANDARD SCORE
+ 
+PIAT READING RECOGNITION: TOTAL STANDARD SCORE
+ 
+      23           0 TO 69
+      86          70 TO 84
+     319          85 TO 99
+     600         100 TO 114
+     439         115 TO 129
+     147         130 TO 999999: 130 +
+  -------
+    1614
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     217
+TOTAL =========>    1831      MISSING(-7)    9720
+ 
+Min:             65        Max:            135        Mean:              108.46
+ 
+Lead In: C31116.00[Default]
+Default Next Question: C31118.00
+--------------------------------------------------------------------------------
+C31121.00    [COMPZ2006]                                    Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING COMPREHENSION: TOTAL STANDARD SCORE
+ 
+PIAT READING COMPREHENSION: TOTAL STANDARD SCORE
+ 
+      32           0 TO 69
+     141          70 TO 84
+     401          85 TO 99
+     663         100 TO 114
+     271         115 TO 129
+      19         130 TO 999999: 130 +
+  -------
+    1527
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     222
+TOTAL =========>    1749      MISSING(-7)    9802
+ 
+Min:             19        Max:            135        Mean:              102.52
+ 
+Lead In: C31120.00[Default]
+Default Next Question: C31122.00
+--------------------------------------------------------------------------------
+C36034.00    [NHCHLD2008]                                   Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             # HOUSEHOLD MEMBERS UNDER 18 IN HOUSEHOLD OF MOTHER
+ 
+NUMBER OF HOUSEHOLD MEMBERS UNDER 18 YEARS OF AGE IN HOUSEHOLD OF MOTHER
+ 
+NOTE: ACTUAL NUMBER
+ 
+    3357           0
+    2384           1
+    1597           2
+     604           3
+     176           4
+      67           5
+      49           6
+      26           7
+  -------
+    8260
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      16
+TOTAL =========>    8276      MISSING(-7)    3275
+ 
+Min:              0        Max:              7        Mean:                1.08
+ 
+Lead In: C36033.00[Default]
+Default Next Question: C36035.00
+--------------------------------------------------------------------------------
+C36141.00    [COGNZ2008]                                    Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE
+ 
+NOTE: 1 implied decimal place
+ 
+       1         300 TO 399
+       7         400 TO 499
+      19         500 TO 599
+      38         600 TO 699
+      67         700 TO 799
+     204         800 TO 899
+     205         900 TO 999
+     542        1000 TO 99999999: 1000+
+  -------
+    1083
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     270
+TOTAL =========>    1353      MISSING(-7)   10198
+ 
+Min:            375        Max:           1302        Mean:              978.48
+ 
+Lead In: C36140.00[Default]
+Default Next Question: C36142.00
+--------------------------------------------------------------------------------
+C36142.00    [COGNP2008]                                    Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE
+ 
+      32           0
+     156           1 TO 9
+      41          10 TO 19
+     117          20 TO 29
+     136          30 TO 39
+      59          40 TO 49
+      14          50 TO 59
+     184          60 TO 69
+     185          70 TO 79
+      55          80 TO 89
+     104          90 TO 99
+  -------
+    1083
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     270
+TOTAL =========>    1353      MISSING(-7)   10198
+ 
+Min:              0        Max:             98        Mean:               48.59
+ 
+Lead In: C36141.00[Default]
+Default Next Question: C36143.00
+--------------------------------------------------------------------------------
+C36143.00    [EMOTZ2008]                                    Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE
+ 
+NOTE: 1 implied decimal place
+ 
+       1         400 TO 499
+      17         500 TO 599
+      30         600 TO 699
+     100         700 TO 799
+     133         800 TO 899
+     159         900 TO 999
+     570        1000 TO 99999999: 1000+
+  -------
+    1010
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     343
+TOTAL =========>    1353      MISSING(-7)   10198
+ 
+Min:            479        Max:           1249        Mean:              988.59
+ 
+Lead In: C36142.00[Default]
+Default Next Question: C36144.00
+--------------------------------------------------------------------------------
+C36144.00    [EMOTP2008]                                    Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE
+ 
+      22           0
+     133           1 TO 9
+     103          10 TO 19
+      27          20 TO 29
+     143          30 TO 39
+       4          40 TO 49
+     140          50 TO 59
+      68          60 TO 69
+     174          70 TO 79
+     112          80 TO 89
+      84          90 TO 99
+  -------
+    1010
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     343
+TOTAL =========>    1353      MISSING(-7)   10198
+ 
+Min:              0        Max:             95        Mean:               49.81
+ 
+Lead In: C36143.00[Default]
+Default Next Question: C36145.00
+--------------------------------------------------------------------------------
+C36152.00    [MATHZ2008]                                    Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             PIAT MATH: TOTAL STANDARD SCORE
+ 
+PIAT MATH: TOTAL STANDARD SCORE
+ 
+      31           0 TO 69
+      54          70 TO 84
+     240          85 TO 99
+     365         100 TO 114
+     326         115 TO 129
+      78         130 TO 999999: 130 +
+  -------
+    1094
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     196
+TOTAL =========>    1290      MISSING(-7)   10261
+ 
+Min:             65        Max:            135        Mean:              107.55
+ 
+Lead In: C36151.00[Default]
+Default Next Question: C36153.00
+--------------------------------------------------------------------------------
+C36154.00    [RECOGZ2008]                                   Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING RECOGNITION: TOTAL STANDARD SCORE
+ 
+PIAT READING RECOGNITION: TOTAL STANDARD SCORE
+ 
+       9           0 TO 69
+      63          70 TO 84
+     211          85 TO 99
+     407         100 TO 114
+     302         115 TO 129
+     104         130 TO 999999: 130 +
+  -------
+    1096
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     194
+TOTAL =========>    1290      MISSING(-7)   10261
+ 
+Min:             65        Max:            135        Mean:              108.98
+ 
+Lead In: C36153.00[Default]
+Default Next Question: C36155.00
+--------------------------------------------------------------------------------
+C36158.00    [COMPZ2008]                                    Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING COMPREHENSION: TOTAL STANDARD SCORE
+ 
+PIAT READING COMPREHENSION: TOTAL STANDARD SCORE
+ 
+      28           0 TO 69
+      87          70 TO 84
+     284          85 TO 99
+     440         100 TO 114
+     198         115 TO 129
+      10         130 TO 999999: 130 +
+  -------
+    1047
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     203
+TOTAL =========>    1250      MISSING(-7)   10301
+ 
+Min:             65        Max:            135        Mean:               102.4
+ 
+Lead In: C36157.00[Default]
+Default Next Question: C36159.00
+--------------------------------------------------------------------------------
+C39834.00    [NHCHLD2010]                                   Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             # HOUSEHOLD MEMBERS UNDER 18 IN HOUSEHOLD OF MOTHER
+ 
+NUMBER OF HOUSEHOLD MEMBERS UNDER 18 YEARS OF AGE IN HOUSEHOLD OF MOTHER
+ 
+NOTE: ACTUAL NUMBER
+ 
+    3984           0
+    2126           1
+    1268           2
+     462           3
+     152           4
+      48           5
+      34           6
+      13           7
+  -------
+    8087
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      21
+TOTAL =========>    8108      MISSING(-7)    3443
+ 
+Min:              0        Max:              7        Mean:                 .89
+ 
+Lead In: C39833.00[Default]
+Default Next Question: C39835.00
+--------------------------------------------------------------------------------
+C39927.00    [COGNZ2010]                                    Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE
+ 
+NOTE: 1 implied decimal place
+ 
+       2         300 TO 399
+       5         400 TO 499
+      23         500 TO 599
+      29         600 TO 699
+      41         700 TO 799
+     128         800 TO 899
+     115         900 TO 999
+     386        1000 TO 99999999: 1000+
+  -------
+     729
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     166
+TOTAL =========>     895      MISSING(-7)   10656
+ 
+Min:            374        Max:           1261        Mean:              977.03
+ 
+Lead In: C39926.00[Default]
+Default Next Question: C39928.00
+--------------------------------------------------------------------------------
+C39928.00    [COGNP2010]                                    Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE
+ 
+      31           0
+      72           1 TO 9
+      54          10 TO 19
+      72          20 TO 29
+      21          30 TO 39
+      87          40 TO 49
+      30          50 TO 59
+     130          60 TO 69
+     138          70 TO 79
+      21          80 TO 89
+      73          90 TO 99
+  -------
+     729
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     166
+TOTAL =========>     895      MISSING(-7)   10656
+ 
+Min:              0        Max:             96        Mean:               48.81
+ 
+Lead In: C39927.00[Default]
+Default Next Question: C39929.00
+--------------------------------------------------------------------------------
+C39929.00    [EMOTZ2010]                                    Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE
+ 
+NOTE: 1 implied decimal place
+ 
+       3         400 TO 499
+       9         500 TO 599
+      26         600 TO 699
+      37         700 TO 799
+      84         800 TO 899
+     193         900 TO 999
+     333        1000 TO 99999999: 1000+
+  -------
+     685
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     210
+TOTAL =========>     895      MISSING(-7)   10656
+ 
+Min:            462        Max:           1311        Mean:              984.79
+ 
+Lead In: C39928.00[Default]
+Default Next Question: C39930.00
+--------------------------------------------------------------------------------
+C39930.00    [EMOTP2010]                                    Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE
+ 
+      17           0
+      58           1 TO 9
+      66          10 TO 19
+      94          20 TO 29
+      15          30 TO 39
+     102          40 TO 49
+      38          50 TO 59
+     110          60 TO 69
+      36          70 TO 79
+     107          80 TO 89
+      42          90 TO 99
+  -------
+     685
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     210
+TOTAL =========>     895      MISSING(-7)   10656
+ 
+Min:              0        Max:             98        Mean:               49.05
+ 
+Lead In: C39929.00[Default]
+Default Next Question: C39931.00
+--------------------------------------------------------------------------------
+C39938.00    [MATHZ2010]                                    Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             PIAT MATH: TOTAL STANDARD SCORE
+ 
+PIAT MATH: TOTAL STANDARD SCORE
+ 
+      14           0 TO 69
+      45          70 TO 84
+     168          85 TO 99
+     263         100 TO 114
+     181         115 TO 129
+      61         130 TO 999999: 130 +
+  -------
+     732
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     134
+TOTAL =========>     866      MISSING(-7)   10685
+ 
+Min:             65        Max:            135        Mean:               107.3
+ 
+Lead In: C39937.00[Default]
+Default Next Question: C39939.00
+--------------------------------------------------------------------------------
+C39940.00    [RECOGZ2010]                                   Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING RECOGNITION: TOTAL STANDARD SCORE
+ 
+PIAT READING RECOGNITION: TOTAL STANDARD SCORE
+ 
+       9           0 TO 69
+      42          70 TO 84
+     122          85 TO 99
+     297         100 TO 114
+     206         115 TO 129
+      54         130 TO 999999: 130 +
+  -------
+     730
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     136
+TOTAL =========>     866      MISSING(-7)   10685
+ 
+Min:             65        Max:            135        Mean:              108.33
+ 
+Lead In: C39939.00[Default]
+Default Next Question: C39941.00
+--------------------------------------------------------------------------------
+C39944.00    [COMPZ2010]                                    Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING COMPREHENSION: TOTAL STANDARD SCORE
+ 
+PIAT READING COMPREHENSION: TOTAL STANDARD SCORE
+ 
+      17           0 TO 69
+      62          70 TO 84
+     198          85 TO 99
+     290         100 TO 114
+     119         115 TO 129
+       9         130 TO 999999: 130 +
+  -------
+     695
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     147
+TOTAL =========>     842      MISSING(-7)   10709
+ 
+Min:             65        Max:            135        Mean:              101.94
+ 
+Lead In: C39943.00[Default]
+Default Next Question: C39945.00
+--------------------------------------------------------------------------------
+C55273.00    [NHCHLD2012]                                   Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             # HOUSEHOLD MEMBERS UNDER 18 IN HOUSEHOLD OF MOTHER
+ 
+NUMBER OF HOUSEHOLD MEMBERS UNDER 18 YEARS OF AGE IN HOUSEHOLD OF MOTHER
+ 
+NOTE: ACTUAL NUMBER
+ 
+    4733           0
+    1893           1
+     771           2
+     277           3
+      78           4
+      50           5
+      13           6
+       6           7
+       4           8
+       6           9
+       8          11 TO 9999
+  -------
+    7839
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      53
+TOTAL =========>    7892      MISSING(-7)    3659
+ 
+Min:              0        Max:             11        Mean:                 .65
+ 
+Lead In: C55272.00[Default]
+Default Next Question: C55274.00
+--------------------------------------------------------------------------------
+C55367.00    [COGNZ2012]                                    Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE
+ 
+NOTE: 1 implied decimal place
+ 
+       4         400 TO 499
+       4         500 TO 599
+      15         600 TO 699
+      43         700 TO 799
+      44         800 TO 899
+      95         900 TO 999
+     204        1000 TO 99999999: 1000+
+  -------
+     409
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      91
+TOTAL =========>     500      MISSING(-7)   11051
+ 
+Min:            412        Max:           1255        Mean:              975.88
+ 
+Lead In: C55366.00[Default]
+Default Next Question: C55368.00
+--------------------------------------------------------------------------------
+C55368.00    [COGNP2012]                                    Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE
+ 
+       9           0
+      57           1 TO 9
+      38          10 TO 19
+      41          20 TO 29
+       2          30 TO 39
+      58          40 TO 49
+      11          50 TO 59
+      81          60 TO 69
+      60          70 TO 79
+      11          80 TO 89
+      41          90 TO 99
+  -------
+     409
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      91
+TOTAL =========>     500      MISSING(-7)   11051
+ 
+Min:              0        Max:             95        Mean:               47.96
+ 
+Lead In: C55367.00[Default]
+Default Next Question: C55369.00
+--------------------------------------------------------------------------------
+C55369.00    [EMOTZ2012]                                    Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE
+ 
+NOTE: 1 implied decimal place
+ 
+       1         300 TO 399
+       1         400 TO 499
+       2         500 TO 599
+      16         600 TO 699
+      26         700 TO 799
+      55         800 TO 899
+     110         900 TO 999
+     165        1000 TO 99999999: 1000+
+  -------
+     376
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     124
+TOTAL =========>     500      MISSING(-7)   11051
+ 
+Min:            321        Max:           1238        Mean:              977.05
+ 
+Lead In: C55368.00[Default]
+Default Next Question: C55370.00
+--------------------------------------------------------------------------------
+C55370.00    [EMOTP2012]                                    Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE
+ 
+       4           0
+      42           1 TO 9
+      47          10 TO 19
+      58          20 TO 29
+      60          40 TO 49
+       7          50 TO 59
+      64          60 TO 69
+       7          70 TO 79
+      58          80 TO 89
+      29          90 TO 99
+  -------
+     376
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     124
+TOTAL =========>     500      MISSING(-7)   11051
+ 
+Min:              0        Max:             95        Mean:               47.04
+ 
+Lead In: C55369.00[Default]
+Default Next Question: C55371.00
+--------------------------------------------------------------------------------
+C55378.00    [MATHZ2012]                                    Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             PIAT MATH: TOTAL STANDARD SCORE
+ 
+PIAT MATH: TOTAL STANDARD SCORE
+ 
+      18           0 TO 69
+      29          70 TO 84
+     100          85 TO 99
+     142         100 TO 114
+     110         115 TO 129
+      32         130 TO 999999: 130 +
+  -------
+     431
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      76
+TOTAL =========>     507      MISSING(-7)   11044
+ 
+Min:             65        Max:            135        Mean:              106.01
+ 
+Lead In: C55377.00[Default]
+Default Next Question: C55379.00
+--------------------------------------------------------------------------------
+C55380.00    [RECOGZ2012]                                   Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING RECOGNITION: TOTAL STANDARD SCORE
+ 
+PIAT READING RECOGNITION: TOTAL STANDARD SCORE
+ 
+       7           0 TO 69
+      30          70 TO 84
+      80          85 TO 99
+     189         100 TO 114
+      98         115 TO 129
+      27         130 TO 999999: 130 +
+  -------
+     431
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      76
+TOTAL =========>     507      MISSING(-7)   11044
+ 
+Min:             65        Max:            135        Mean:              106.81
+ 
+Lead In: C55379.00[Default]
+Default Next Question: C55381.00
+--------------------------------------------------------------------------------
+C55384.00    [COMPZ2012]                                    Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING COMPREHENSION: TOTAL STANDARD SCORE
+ 
+PIAT READING COMPREHENSION: TOTAL STANDARD SCORE
+ 
+      14           0 TO 69
+      37          70 TO 84
+     139          85 TO 99
+     164         100 TO 114
+      67         115 TO 129
+       3         130 TO 999999: 130 +
+  -------
+     424
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      77
+TOTAL =========>     501      MISSING(-7)   11050
+ 
+Min:             65        Max:            135        Mean:              100.45
+ 
+Lead In: C55383.00[Default]
+Default Next Question: C55385.00
+--------------------------------------------------------------------------------
+C58036.00    [NHCHLD2014]                                   Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             # HOUSEHOLD MEMBERS UNDER 18 IN HOUSEHOLD OF MOTHER
+ 
+NUMBER OF HOUSEHOLD MEMBERS UNDER 18 YEARS OF AGE IN HOUSEHOLD OF MOTHER
+ 
+NOTE: ACTUAL NUMBER
+ 
+    5486           0
+    1347           1
+     466           2
+     178           3
+      55           4
+      20           5
+      23           6
+       4           7
+       6          10
+  -------
+    7585
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      39
+TOTAL =========>    7624      MISSING(-7)    3927
+ 
+Min:              0        Max:             10        Mean:                 .44
+ 
+Lead In: C58035.00[Default]
+Default Next Question: C58037.00
+--------------------------------------------------------------------------------
+C58125.00    [COGNZ2014]                                    Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION STANDARD SCORE
+ 
+NOTE: 1 implied decimal place
+ 
+       2         400 TO 499
+       6         500 TO 599
+       7         600 TO 699
+      13         700 TO 799
+      44         800 TO 899
+      36         900 TO 999
+     100        1000 TO 99999999: 1000+
+  -------
+     208
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      68
+TOTAL =========>     276      MISSING(-7)   11275
+ 
+Min:            451        Max:           1291        Mean:              969.52
+ 
+Lead In: C58124.00[Default]
+Default Next Question: C58126.00
+--------------------------------------------------------------------------------
+C58126.00    [COGNP2014]                                    Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE
+ 
+HOME INVENTORY: COGNITIVE STIMULATION PERCENTILE SCORE
+ 
+       8           0
+      20           1 TO 9
+      23          10 TO 19
+      21          20 TO 29
+       4          30 TO 39
+      32          40 TO 49
+       6          50 TO 59
+      34          60 TO 69
+      30          70 TO 79
+       2          80 TO 89
+      28          90 TO 99
+  -------
+     208
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      68
+TOTAL =========>     276      MISSING(-7)   11275
+ 
+Min:              0        Max:             97        Mean:               46.62
+ 
+Lead In: C58125.00[Default]
+Default Next Question: C58127.00
+--------------------------------------------------------------------------------
+C58127.00    [EMOTZ2014]                                    Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT STANDARD SCORE
+ 
+NOTE: 1 implied decimal place
+ 
+       3         500 TO 599
+       7         600 TO 699
+      17         700 TO 799
+      21         800 TO 899
+      53         900 TO 999
+      86        1000 TO 99999999: 1000+
+  -------
+     187
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      89
+TOTAL =========>     276      MISSING(-7)   11275
+ 
+Min:            511        Max:           1222        Mean:              973.55
+ 
+Lead In: C58126.00[Default]
+Default Next Question: C58128.00
+--------------------------------------------------------------------------------
+C58128.00    [EMOTP2014]                                    Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE
+ 
+HOME INVENTORY: EMOTIONAL SUPPORT PERCENTILE SCORE
+ 
+       3           0
+      24           1 TO 9
+      18          10 TO 19
+      25          20 TO 29
+       1          30 TO 39
+      30          40 TO 49
+       8          50 TO 59
+      33          60 TO 69
+       3          70 TO 79
+      26          80 TO 89
+      16          90 TO 99
+  -------
+     187
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      89
+TOTAL =========>     276      MISSING(-7)   11275
+ 
+Min:              0        Max:             93        Mean:               46.73
+ 
+Lead In: C58127.00[Default]
+Default Next Question: C58129.00
+--------------------------------------------------------------------------------
+C58136.00    [MATHZ2014]                                    Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             PIAT MATH: TOTAL STANDARD SCORE
+ 
+PIAT MATH: TOTAL STANDARD SCORE
+ 
+      10           0 TO 69
+      15          70 TO 84
+      58          85 TO 99
+      59         100 TO 114
+      55         115 TO 129
+      15         130 TO 999999: 130 +
+  -------
+     212
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      60
+TOTAL =========>     272      MISSING(-7)   11279
+ 
+Min:             65        Max:            135        Mean:                 105
+ 
+Lead In: C58135.00[Default]
+Default Next Question: C58137.00
+--------------------------------------------------------------------------------
+C58138.00    [RECOGZ2014]                                   Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING RECOGNITION: TOTAL STANDARD SCORE
+ 
+PIAT READING RECOGNITION: TOTAL STANDARD SCORE
+ 
+       3           0 TO 69
+      15          70 TO 84
+      40          85 TO 99
+      82         100 TO 114
+      57         115 TO 129
+      15         130 TO 999999: 130 +
+  -------
+     212
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      60
+TOTAL =========>     272      MISSING(-7)   11279
+ 
+Min:             65        Max:            135        Mean:              107.64
+ 
+Lead In: C58137.00[Default]
+Default Next Question: C58139.00
+--------------------------------------------------------------------------------
+C58142.00    [COMPZ2014]                                    Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             PIAT READING COMPREHENSION: TOTAL STANDARD SCORE
+ 
+PIAT READING COMPREHENSION: TOTAL STANDARD SCORE
+ 
+       4           0 TO 69
+      23          70 TO 84
+      70          85 TO 99
+      85         100 TO 114
+      26         115 TO 129
+       2         130 TO 999999: 130 +
+  -------
+     210
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      61
+TOTAL =========>     271      MISSING(-7)   11280
+ 
+Min:             65        Max:            135        Mean:              100.01
+ 
+Lead In: C58141.00[Default]
+Default Next Question: C58143.00
+--------------------------------------------------------------------------------
+Y22670.00    [VERSION_R29]                                  Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             VERSION_R29 CHILD/YOUNG ADULT
+ 
+This variable identifies the release version of the current NLSY79 Child/Young 
+Adult data set, This information allows User Services to identify the release 
+version used by a researcher who is asking a question and to access past 
+versions of the data if necessary.
+ 
+   11551         532
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:            532        Max:            532        Mean:                 532
+ 
+Lead In: Y12053.00[Default]
+Default Next Question: Y12054.00

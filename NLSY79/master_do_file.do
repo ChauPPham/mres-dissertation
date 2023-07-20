@@ -576,6 +576,7 @@ label values AGE_CAT AGE_CAT
 drop source
 sort C0000100 year
 merge m:m C0000100 year C0000200 C0005300 C0005400 C0005700 Y2267000 using NLSY79CYA_supplement, keep(match) nogen
+merge m:m C0000100 year C0000200 C0005300 C0005400 C0005700 Y2267000 using NLSY79CYA_supplement2, keep(match) nogen
 save MERGE_CHILD.dta, replace
 
 **# Bookmark #7
@@ -775,12 +776,14 @@ replace RISK_AVERSE_2010 = . if RISK_AVERSE == 0
 /*========== Data analysis (long) ==========*/
 /*==========================================*/
 use POOL_long.dta, clear
+
+/* Generate a categorical variable for risk aversion based on 1993-2006 questions*/
 gen RISK_AVERSE1 = .
-replace RISK_AVERSE1 = 1 if RISK1_a == 0 & RISK1_c == 0
-replace RISK_AVERSE1 = 2 if RISK1_a == 0 & RISK1_c == 1
-replace RISK_AVERSE1 = 3 if RISK1_a == 1 & RISK1_b == 0
-replace RISK_AVERSE1 = 4 if RISK1_a == 1 & RISK1_b == 1
-label define RISK1 1 "Very strongly risk averse" 2 "Strongly risk averse" 3 "Moderately risk averse" 4 "Weakly risk averse"
+replace RISK_AVERSE1 = 4 if RISK1_a == 0 & RISK1_c == 0
+replace RISK_AVERSE1 = 3 if RISK1_a == 0 & RISK1_c == 1
+replace RISK_AVERSE1 = 2 if RISK1_a == 1 & RISK1_b == 0
+replace RISK_AVERSE1 = 1 if RISK1_a == 1 & RISK1_b == 1
+label define RISK1 4 "Very strongly risk averse" 3 "Strongly risk averse" 2 "Moderately risk averse" 1 "Weakly risk averse"
 label values RISK_AVERSE1 RISK1
 
 gen ln_INCOME = log(HH_INCOME)
@@ -791,41 +794,45 @@ tabulate dup
 drop if dup > 1
 */
 
+/* Count the number of siblings one has */
+by R0000100 C0000100, sort: gen NO_SIB = _n == 1
+by R0000100: replace NO_SIB = sum(NO_SIB)
+by R0000100: replace NO_SIB = NO_SIB[_N] - 1
+
+
 local identifier = 1
-foreach i in INV_ALL GOODS_ALL TIME_ALL {
-	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME i.DEGREE_CAT if POVERTY >= 0, absorb(year AGE_CAT) vce(cluster R0000149)
+quietly foreach i of varlist INV_ALL GOODS_ALL TIME_ALL {
+	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT != ., absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo model_`identifier'
-	local 
 	
+	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 0 | DEGREE_CAT == 1, absorb(year AGE_CAT) vce(cluster R0000100)
+	eststo model_`identifier'_a
+	
+	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 2 | DEGREE_CAT == 3, absorb(year AGE_CAT) vce(cluster R0000100)
+	eststo model_`identifier'_b
+	
+	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 4 | DEGREE_CAT == 5, absorb(year AGE_CAT) vce(cluster R0000100)
+	eststo model_`identifier'_c
+	
+	local ++identifier
 }
 
-/* Some regression commands
-reghdfe INV_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 5, absorb(year AGE_CAT) vce(cluster R0000100)
-reghdfe INV_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 4, absorb(year AGE_CAT) vce(cluster R0000100)
-reghdfe INV_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 3, absorb(year AGE_CAT) vce(cluster R0000100)
-reghdfe INV_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 2, absorb(year AGE_CAT) vce(cluster R0000100)
-reghdfe INV_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 1, absorb(year AGE_CAT) vce(cluster R0000100)
-reghdfe GOODS_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 1, absorb(year AGE_CAT) vce(cluster R0000100)
-reghdfe GOODS_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 2, absorb(year AGE_CAT) vce(cluster R0000100)
-reghdfe GOODS_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 3, absorb(year AGE_CAT) vce(cluster R0000100)
-reghdfe GOODS_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 4, absorb(year AGE_CAT) vce(cluster R0000100)
-reghdfe GOODS_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 5, absorb(year AGE_CAT) vce(cluster R0000100)
-reghdfe TIME_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 1, absorb(year AGE_CAT) vce(cluster R0000100)
-reghdfe TIME_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 2, absorb(year AGE_CAT) vce(cluster R0000100)
-reghdfe TIME_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 3, absorb(year AGE_CAT) vce(cluster R0000100)
-reghdfe TIME_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 4, absorb(year AGE_CAT) vce(cluster R0000100)
-reghdfe TIME_ALL i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 5, absorb(year AGE_CAT) vce(cluster R0000100)
-reghdfe EMO_SCORE i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & EMO_SCORE >= 0 & DEGREE_CAT == 1, absorb(year AGE_CAT) vce(cluster R0000100)
-reghdfe EMO_SCORE i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & EMO_SCORE >= 0 & DEGREE_CAT == 2, absorb(year AGE_CAT) vce(cluster R0000100)
-reghdfe EMO_SCORE i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & EMO_SCORE >= 0 & DEGREE_CAT == 3, absorb(year AGE_CAT) vce(cluster R0000100)
-reghdfe EMO_SCORE i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & EMO_SCORE >= 0 & DEGREE_CAT == 4, absorb(year AGE_CAT) vce(cluster R0000100)
-reghdfe EMO_SCORE i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & EMO_SCORE >= 0 & DEGREE_CAT == 5, absorb(year AGE_CAT) vce(cluster R0000100)
-reghdfe COG_SCORE i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & COG_SCORE >= 0 & DEGREE_CAT == 1, absorb(year AGE_CAT) vce(cluster R0000100)
-reghdfe COG_SCORE i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & COG_SCORE >= 0 & DEGREE_CAT == 2, absorb(year AGE_CAT) vce(cluster R0000100)
-reghdfe COG_SCORE i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & COG_SCORE >= 0 & DEGREE_CAT == 3, absorb(year AGE_CAT) vce(cluster R0000100)
-reghdfe COG_SCORE i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & COG_SCORE >= 0 & DEGREE_CAT == 4, absorb(year AGE_CAT) vce(cluster R0000100)
-reghdfe COG_SCORE i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & COG_SCORE >= 0 & DEGREE_CAT == 5, absorb(year AGE_CAT) vce(cluster R0000100)
-*/
+quietly foreach i of varlist COG_SCORE EMO_SCORE {
+	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & `i' >= 0 & DEGREE_CAT != . | DEGREE_CAT == 2, absorb(year AGE_CAT) vce(cluster R0000100)
+	eststo model_`identifier'
+	
+	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & `i' >= 0 & DEGREE_CAT == 0 | DEGREE_CAT == 1, absorb(year AGE_CAT) vce(cluster R0000100)
+	eststo model_`identifier'_a
+	
+	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & `i' >= 0 & DEGREE_CAT == 2 | DEGREE_CAT == 3, absorb(year AGE_CAT) vce(cluster R0000100)
+	eststo model_`identifier'_b
+	
+	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & `i' >= 0 & DEGREE_CAT == 4 | DEGREE_CAT == 5, absorb(year AGE_CAT) vce(cluster R0000100)
+	eststo model_`identifier'_c
+	
+	local ++identifier
+}
+
 
 
 
