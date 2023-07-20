@@ -531,13 +531,13 @@ quietly foreach i of varlist C0127410 C0127610 C0127810 C0127910 C0128010 C19873
 }
 
 local year 1986
-quietly foreach i of varlist C0571600 C0792000 C0992000 C1192300 C1500100 C1557000 C1792700 C2502600 C2531100 C2802400 C3110400 C3614100 C3992700 C5536700 C5812500 {
+quietly foreach i of varlist C0571300 C0791700 C0991700 C1192000 C1499800 C1556700 C1792400 C2502700 C2531200 C2802500 C3110500 C3614200 C3992800 C5536800 C5812600 {
 	rename `i' COG_SCORE_`year'
 	local year = `year' + 2
 }
 
 local year = 1986
-quietly foreach i of varlist C0571700 C0792100 C0992100 C1192400 C1500200 C1557100 C1792800 C2502800 C2531300 C2802600 C3110600 C3614300 C3992900 C5536900 C5812700 {
+quietly foreach i of varlist C0571400 C0791800 C0991800 C1192100 C1499900 C1556800 C1792500 C2502900 C2531400 C2802700 C3110700 C3614400 C3993000 C5537000 C5812800 {
 	rename `i' EMO_SCORE_`year'
 	local year = `year' + 2
 }
@@ -562,7 +562,7 @@ quietly foreach i of varlist C0580700 C0800200 C0999400 C1199400 C1508400 C15653
 
 reshape long NO_UNDER_18_ COG_SCORE_ EMO_SCORE_ PIAT_MATH_ PIAT_COMP_ PIAT_REC_, i(C0000100) j(year)
 rename *_ *
-*save NLSY79CYA_supplement, replace
+save NLSY79CYA_supplement, replace
 
 **# Bookmark #6
 /*======================================*/
@@ -576,7 +576,6 @@ label values AGE_CAT AGE_CAT
 drop source
 sort C0000100 year
 merge m:m C0000100 year C0000200 C0005300 C0005400 C0005700 Y2267000 using NLSY79CYA_supplement, keep(match) nogen
-merge m:m C0000100 year C0000200 C0005300 C0005400 C0005700 Y2267000 using NLSY79CYA_supplement2, keep(match) nogen
 save MERGE_CHILD.dta, replace
 
 **# Bookmark #7
@@ -639,6 +638,7 @@ foreach i of varlist R2509800 R2909200 R3111200 R3511200 R3711200 R4138900 R4527
 	if `year' < 1994 local year = `year' + 1 
 }
 
+/* Recode Question on risk aversion: Choosing job in 1993 version */
 local year = 1994 /*year 1993 will be recoded as 1994 for convenience*/
 foreach i of varlist R4395800 R7353300 R8047100 T0279100 {
 	rename `i' RISK1_a_`year'
@@ -660,6 +660,7 @@ foreach i of varlist R4396000 R7353500 R8047300 T0279300 {
 	if `year' == 1994 local year = `year' + 8 
 }
 
+/* Recode Question on risk aversion: Choosing job in 2010 version */
 local year = 2010
 foreach i of varlist T3094500 T4093600 T4998800 {
 	rename `i' RISK2_a_`year'
@@ -678,26 +679,47 @@ foreach i of varlist T3094700 T4093800 T4999000 {
 	local year = `year' + 2
 }
 
+/* Recode Question on risk aversion: Willingness to take risk in GENERAL */
 local year = 2010
 foreach i of varlist T3094800 T4093900 T4999100 {
 	rename `i' RISK3_`year'
 	local year = `year' + 2
 }
 
+/* Recode Question on risk aversion: Willingness to take risk in placing fair bets */
 local year = 2010
 foreach i of varlist T3095000 T4094100 T4999300 {
 	rename `i' RISK4_`year'
 	local year = `year' + 2
 }
 
-quietly reshape long HGC_ HDC_ RISK1_a_ RISK1_b_ RISK1_c_ RISK2_a_ RISK2_b_ RISK2_c_ RISK3_ RISK4_ WELFARE_ POVERTY_  HH_INCOME_, i(R0000100) j(year)
-foreach i of varlist HGC_ HDC_ RISK1_a_ RISK1_b_ RISK1_c_ RISK2_a_ RISK2_b_ RISK2_c_ RISK3_ RISK4_ WELFARE_ POVERTY_  HH_INCOME_ {
+/* Recode Questions on willingness to take risks in different scenarios */
+local year = 2010 
+foreach i of varlist T3094901 T4094001 T4999201 {
+	rename `i' RISK_FINANCIAL_`year'
+	local year = `year' + 2
+}
+
+local year = 2010
+foreach i of varlist T3094902 T4094002 T4999202 {
+	rename `i' RISK_OCCUPATION_`year'
+	local year = `year' + 2
+}
+
+local year = 2010 
+foreach i of varlist T3094906 T4094006 T4999206 {
+	rename `i' RISK_MAJOR_`year' 
+	local year = `year' + 2
+}
+
+quietly reshape long HGC_ HDC_ RISK1_a_ RISK1_b_ RISK1_c_ RISK2_a_ RISK2_b_ RISK2_c_ RISK3_ RISK4_ RISK_FINANCIAL_ RISK_OCCUPATION_ RISK_MAJOR_ WELFARE_ POVERTY_  HH_INCOME_, i(R0000100) j(year)
+quietly foreach i of varlist HGC_ HDC_ RISK1_a_ RISK1_b_ RISK1_c_ RISK2_a_ RISK2_b_ RISK2_c_ RISK3_ RISK4_ RISK_FINANCIAL_ RISK_OCCUPATION_ RISK_MAJOR_ WELFARE_ POVERTY_  HH_INCOME_ {
 	replace `i' = . if `i' < 0
 }
 rename *_ *
 replace WELFARE = 0 if WELFARE < 0
 
-save NLSY79_long.dta, replace
+*save NLSY79_long.dta, replace
 
 /* INACCURATE UNDERLYING THEORY
 gen alpha1 = 1-ln(2)/ln(10000/WTA_10K_IMPUTED)
@@ -789,7 +811,7 @@ label values RISK_AVERSE1 RISK1
 gen ln_INCOME = log(HH_INCOME)
 
 /*Drop duplicate values
-by C0000100 year: gen dup = cond(_N==1, 0, _n)
+bys C0000100 year: gen dup = cond(_N==1, 0, _n)
 tabulate dup
 drop if dup > 1
 */
@@ -834,5 +856,55 @@ quietly foreach i of varlist COG_SCORE EMO_SCORE {
 }
 
 
+/*==================================================================*/
+/*==================== Output regression tables ====================*/
+/*==================================================================*/
+* 1 - HOME SCORE (normalised)
+* 2 - Goods investment (normalised) (taken from HOME SECTION)
+* 3 - Time investment (normalised) (taken from HOME SECTION)
+* 4 - Cognitive stimulation (in %) (taken from HOME SECTION)
+* 5 - Emotional support (in %) (taken from HOME SECTION)
+forvalues i = 1(1)5 {
+	if `i' == 1 esttab model_`i'* using tex\regression, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "HS dropout" "HS" "College") se star(* 0.10 ** 0.05 *** 0.01) label nonum booktabs replace
+	if `i' > 1 esttab model_`i'* using tex\regression, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "HS dropout" "HS" "College") se star(* 0.10 ** 0.05 *** 0.01) label nonum booktabs append
+}
 
+/* Private school choice */
+quietly foreach i of varlist T4969200 T4969300 T4969400 T4969500 T4969600 T4969700 T4969800 T4969900 {
+	replace `i' = . if `i' < 0
+}
 
+/* Private school tuition fees */
+quietly foreach i of varlist T4970600 T4970700 T4970800 T4970900 T4971000 T4971100 {
+	replace `i' = . if `i' < 0
+}
+
+/* Child attends 2 or 4 years college */
+quietly foreach i of varlist T4976800 T4976900 T4977000 T4977100 T4977200 T4977300 T4977400 T4977500 T4977600 {
+	replace `i' = . if `i' < 0
+}
+
+/* Child graduates with Bachelor degree */
+quietly foreach i of varlist T4978500 T4978600 T4978700 T4978800 T4978900 T4979000 T4979100 T4979200 {
+	replace `i' = . if `i' < 0
+}
+
+/* Number of years child attend college */
+quietly foreach i of varlist T4981600 T4981700 T4981800 T4981900 T4982000 T4982100 T4982200 T4982300 {
+	replace `i' = . if `i' < 0
+}
+
+/* Amount of child living expenses paid by parents */
+quietly foreach i of varlist T4990400 T4990500 T4990600 T4990700 T4990800 T4990900 T4991000 T4991100 {
+	replace `i' = . if `i' < 0
+}
+
+/* Child attend college longer/more expensive if more help */
+quietly foreach i of varlist T4994400 T4994500 T4994600 T4994700 T4994800 T4994900 T4995000 T4995100 {
+	replace `i'= . if `i' < 0
+}
+
+/* Family contribute if child attends college */
+quietly foreach i of varlist T4996100 T4996200 T4996300 T4996400 T4996500 T4996600 T4996700 T4996800 T4996900 {
+	replace `i' = . if `i' < 0
+}
