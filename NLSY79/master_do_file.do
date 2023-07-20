@@ -562,7 +562,7 @@ quietly foreach i of varlist C0580700 C0800200 C0999400 C1199400 C1508400 C15653
 
 reshape long NO_UNDER_18_ COG_SCORE_ EMO_SCORE_ PIAT_MATH_ PIAT_COMP_ PIAT_REC_, i(C0000100) j(year)
 rename *_ *
-save NLSY79CYA_supplement, replace
+*save NLSY79CYA_supplement, replace
 
 **# Bookmark #6
 /*======================================*/
