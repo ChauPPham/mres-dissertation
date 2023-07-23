@@ -4,6 +4,7 @@
 
 *ssc install reghdfe
 *ssc install ftools
+*findit eststo -> Install related commands for outputing summary & regression tables
 
 /*========== Calculate using NLSY79 Child and Young Adults ==========*/
 
@@ -824,32 +825,32 @@ by R0000100: replace NO_SIB = NO_SIB[_N] - 1
 
 local identifier = 1
 quietly foreach i of varlist INV_ALL GOODS_ALL TIME_ALL {
-	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT != ., absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C0007000 R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & C0007000 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_CAT != ., absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo model_`identifier'
 	
-	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 0 | DEGREE_CAT == 1, absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C0007000 R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & C0007000 >= 0 & R0006500 >= 0 & R0007900 >= 0 & (DEGREE_CAT == 0 | DEGREE_CAT == 1), absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo model_`identifier'_a
 	
-	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 2 | DEGREE_CAT == 3, absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C0007000 R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & C0007000 >= 0 & R0006500 >= 0 & R0007900 >= 0 & (DEGREE_CAT == 2 | DEGREE_CAT == 3), absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo model_`identifier'_b
 	
-	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & DEGREE_CAT == 4 | DEGREE_CAT == 5, absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C0007000 R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & C0007000 >= 0 & R0006500 >= 0 & R0007900 >= 0 & (DEGREE_CAT == 4 | DEGREE_CAT == 5), absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo model_`identifier'_c
 	
 	local ++identifier
 }
 
 quietly foreach i of varlist COG_SCORE EMO_SCORE {
-	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & `i' >= 0 & DEGREE_CAT != . | DEGREE_CAT == 2, absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C0007000 R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & C0007000 >= 0 & R0006500 >= 0 & R0007900 >= 0 & `i' >= 0 & (DEGREE_CAT != .), absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo model_`identifier'
 	
-	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & `i' >= 0 & DEGREE_CAT == 0 | DEGREE_CAT == 1, absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C0007000 R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & C0007000 >= 0 & R0006500 >= 0 & R0007900 >= 0 & `i' >= 0 & (DEGREE_CAT == 0 | DEGREE_CAT == 1), absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo model_`identifier'_a
 	
-	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & `i' >= 0 & DEGREE_CAT == 2 | DEGREE_CAT == 3, absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C0007000 R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & C0007000 >= 0 & R0006500 >= 0 & R0007900 >= 0 & `i' >= 0 & (DEGREE_CAT == 2 | DEGREE_CAT == 3), absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo model_`identifier'_b
 	
-	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & `i' >= 0 & DEGREE_CAT == 4 | DEGREE_CAT == 5, absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C0007000 R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & C0007000 >= 0 & R0006500 >= 0 & R0007900 >= 0 & `i' >= 0 & (DEGREE_CAT == 4 | DEGREE_CAT == 5), absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo model_`identifier'_c
 	
 	local ++identifier
@@ -864,10 +865,18 @@ quietly foreach i of varlist COG_SCORE EMO_SCORE {
 * 3 - Time investment (normalised) (taken from HOME SECTION)
 * 4 - Cognitive stimulation (in %) (taken from HOME SECTION)
 * 5 - Emotional support (in %) (taken from HOME SECTION)
+
+forvalues i = 1(1)5 {
+	if `i' == 1 esttab model_`i'*, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "HS dropout" "HS" "College") se star(* 0.10 ** 0.05 *** 0.01) label nonum 
+	if `i' > 1 esttab model_`i'*, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "HS dropout" "HS" "College") se star(* 0.10 ** 0.05 *** 0.01) label nonum
+}
+
+/* 
 forvalues i = 1(1)5 {
 	if `i' == 1 esttab model_`i'* using tex\regression, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "HS dropout" "HS" "College") se star(* 0.10 ** 0.05 *** 0.01) label nonum booktabs replace
 	if `i' > 1 esttab model_`i'* using tex\regression, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "HS dropout" "HS" "College") se star(* 0.10 ** 0.05 *** 0.01) label nonum booktabs append
 }
+*/
 
 /* Private school choice */
 quietly foreach i of varlist T4969200 T4969300 T4969400 T4969500 T4969600 T4969700 T4969800 T4969900 {
