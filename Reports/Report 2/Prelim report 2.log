@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.8)  23 JUL 2023 17:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.8)  23 JUL 2023 17:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -664,19 +664,20 @@ Package rerunfilecheck Info: File `"Prelim report 2".out' has not changed.
 (rerunfilecheck)             Checksum: DAF8632B66B9225E0642BC66F222D8B8;315.
  ) 
 Here is how much of TeX's memory you used:
- 15861 strings out of 475551
- 266888 string characters out of 5762555
- 1925238 words of memory out of 5000000
- 36838 multiletter control sequences out of 15000+600000
- 585976 words of font info for 76 fonts, out of 8000000 for 9000
+ 15870 strings out of 475551
+ 267043 string characters out of 5762555
+ 1927238 words of memory out of 5000000
+ 36845 multiletter control sequences out of 15000+600000
+ 597681 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,6n,80p,1025b,434s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 68i,8n,80p,1025b,432s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qpl
 b.pfb><C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre
-/qplr.pfb>
-Output written on "Prelim report 2.pdf" (1 page, 107727 bytes).
+/qplr.pfb><C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-
+gyre/qplri.pfb>
+Output written on "Prelim report 2.pdf" (1 page, 154533 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
- 4 named destinations out of 1000 (max. 500000)
+ 38 PDF objects out of 1000 (max. 8388607)
+ 5 named destinations out of 1000 (max. 500000)
  17 words of extra memory for PDF output out of 10000 (max. 10000000)
 
