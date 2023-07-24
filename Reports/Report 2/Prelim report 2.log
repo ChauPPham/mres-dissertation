@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.8)  23 JUL 2023 17:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.8)  24 JUL 2023 11:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -651,33 +651,77 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 44
 (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
+(../../NLSY79/tex/regression.tex)
+Overfull \hbox (54.13622pt too wide) in paragraph at lines 3--64
+[][]
+ []
+
+
+Overfull \hbox (47.13449pt too wide) in paragraph at lines 3--64
+[]
+ []
+
+
+Overfull \hbox (54.13622pt too wide) in paragraph at lines 3--64
+[]
+ []
+
+
+Overfull \hbox (37.94348pt too wide) in paragraph at lines 3--64
+[]
+ []
+
+
+Overfull \hbox (36.72897pt too wide) in paragraph at lines 3--64
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--64
+
+ []
+
+
+LaTeX Warning: Float too large for page by 85.38176pt on input line 64.
+
 [1
 
 {C:/Users/hoang/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/hoan
-g/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-rm.enc}]
+g/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-rm.enc}] [2]
 (Prelim report 2.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
  ***********
-Package rerunfilecheck Info: File `"Prelim report 2".out' has not changed.
-(rerunfilecheck)             Checksum: DAF8632B66B9225E0642BC66F222D8B8;315.
+
+
+Package rerunfilecheck Warning: File `"Prelim report 2".out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `"Prelim report 2".out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  DAF8632B66B9225E0642BC66F222D8B8;315.
  ) 
 Here is how much of TeX's memory you used:
- 15870 strings out of 475551
- 267043 string characters out of 5762555
- 1927238 words of memory out of 5000000
- 36845 multiletter control sequences out of 15000+600000
+ 15894 strings out of 475551
+ 267610 string characters out of 5762555
+ 1956238 words of memory out of 5000000
+ 36862 multiletter control sequences out of 15000+600000
  597681 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,8n,80p,1025b,432s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qpl
-b.pfb><C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre
-/qplr.pfb><C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-
-gyre/qplri.pfb>
-Output written on "Prelim report 2.pdf" (1 page, 154533 bytes).
+ 68i,11n,80p,1025b,439s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmmi8.pfb><C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmr8.pfb><C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmsy6.pfb><C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmsy7.pfb><C:/Users/hoang/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/tex-gyre/qplb.pfb><C:/Users/hoang/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/tex-gyre/qplr.pfb><C:/Users/hoang/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/tex-gyre/qplri.pfb>
+Output written on "Prelim report 2.pdf" (2 pages, 192756 bytes).
 PDF statistics:
- 38 PDF objects out of 1000 (max. 8388607)
- 5 named destinations out of 1000 (max. 500000)
- 17 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 58 PDF objects out of 1000 (max. 8388607)
+ 7 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
