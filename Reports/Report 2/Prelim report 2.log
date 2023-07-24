@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.8)  24 JUL 2023 11:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.8)  24 JUL 2023 19:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -476,10 +476,60 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@lastruleclass=\count304
 \@thisrulewidth=\dimen266
 )
+(C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/diagbox\diagbox.sty
+Package: diagbox 2020/02/09 v2.3 Making table heads with diagonal lines
+
+(C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/pict2e\pict2e.sty
+Package: pict2e 2020/09/30 v0.4b Improved picture commands (HjG,RN,JT)
+
+(C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/pict2e\pict2e.cfg
+File: pict2e.cfg 2016/02/05 v0.1u pict2e configuration for teTeX/TeXLive
+)
+Package pict2e Info: Driver file: pdftex.def on input line 112.
+
+(C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+)
+Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 114.
+ (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/pict2e\p2e-pdftex.def
+File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
+) (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+\pIIe@GRAPH=\toks41
+\@arclen=\dimen267
+\@arcrad=\dimen268
+\pIIe@tempdima=\dimen269
+\pIIe@tempdimb=\dimen270
+\pIIe@tempdimc=\dimen271
+\pIIe@tempdimd=\dimen272
+\pIIe@tempdime=\dimen273
+\pIIe@tempdimf=\dimen274
+)
+\diagbox@boxa=\box58
+\diagbox@boxb=\box59
+\diagbox@boxm=\box60
+\diagbox@wd=\dimen275
+\diagbox@ht=\dimen276
+\diagbox@insepl=\dimen277
+\diagbox@insepr=\dimen278
+\diagbox@outsepl=\dimen279
+\diagbox@outsepr=\dimen280
+)
+(C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen281
+\TX@old@table=\dimen282
+\TX@old@col=\dimen283
+\TX@target=\dimen284
+\TX@delta=\dimen285
+\TX@cols=\count305
+\TX@ftn=\toks42
+)
 (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
 Package: verbatim 2022-07-02 v1.5u LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks41
-\verbatim@line=\toks42
+\every@verbatim=\toks43
+\verbatim@line=\toks44
 \verbatim@in@stream=\read2
 )
 (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
@@ -487,13 +537,13 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip67
 \bibsep=\skip68
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count305
+\c@NAT@ctr=\count306
 )
 (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/footmisc\footmisc.sty
 Package: footmisc 2023/05/26 v6.0e a miscellany of footnote facilities
-\FN@temptoken=\toks43
-\footnotemargin=\dimen267
-\@outputbox@depth=\dimen268
+\FN@temptoken=\toks45
+\footnotemargin=\dimen286
+\@outputbox@depth=\dimen287
 Package footmisc Info: Declaring symbol style bringhurst on input line 695.
 Package footmisc Info: Declaring symbol style chicago on input line 703.
 Package footmisc Info: Declaring symbol style wiley on input line 712.
@@ -504,7 +554,7 @@ Package footmisc Info: Declaring symbol style lamport*-robust on input line 764
 .
 )
 LaTeX Font Info:    Trying to load font information for OT1+qpl on input line 4
-1.
+3.
 
 (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/tex-gyre\ot1qpl.fd
 File: ot1qpl.fd 2009/09/25 v1.2 font definition file for OT1/qpl
@@ -512,29 +562,29 @@ File: ot1qpl.fd 2009/09/25 v1.2 font definition file for OT1/qpl
 (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count306
-\l__pdf_internal_box=\box58
+\l__color_backend_stack_int=\count307
+\l__pdf_internal_box=\box61
 ) (Prelim report 2.aux)
 \openout1 = `"Prelim report 2.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
 
 (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
@@ -542,45 +592,14 @@ Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
-Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-)
 (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
 fg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
-
-(C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
-File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
-
-(C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
-ii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count307
-\scratchdimen=\dimen269
-\scratchbox=\box59
-\nofMPsegments=\count308
-\nofMParguments=\count309
-\everyMPshowfont=\toks44
-\MPscratchCnt=\count310
-\MPscratchDim=\dimen270
-\MPnumerator=\count311
-\makeMPintoPDFobject=\count312
-\everyMPtoPDFconversion=\toks45
-)))
-(C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
-ase.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-
-(C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
-fg
-File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
-))
-\Gin@req@height=\dimen271
-\Gin@req@width=\dimen272
+)
+\Gin@req@height=\dimen288
+\Gin@req@width=\dimen289
 )
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -625,7 +644,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 149.
 (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
 )
-Package hyperref Info: Link coloring ON on input line 41.
+Package hyperref Info: Link coloring ON on input line 43.
  (Prelim report 2.out) (Prelim report 2.out)
 \@outlinefile=\write3
 \openout3 = `"Prelim report 2.out"'.
@@ -633,84 +652,103 @@ Package hyperref Info: Link coloring ON on input line 41.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
 
+(C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count308
+\scratchdimen=\dimen290
+\scratchbox=\box62
+\nofMPsegments=\count309
+\nofMParguments=\count310
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count311
+\MPscratchDim=\dimen291
+\MPnumerator=\count312
+\makeMPintoPDFobject=\count313
+\everyMPtoPDFconversion=\toks47
+)
+(C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
 
-(C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+(C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
+
+ (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
 
 
 (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 44
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 46
 .
 
 (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
+[1
+
+{C:/Users/hoang/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/hoan
+g/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-rm.enc}]
+(Tables/table-1-risk.tex) (Tables/table-2-HOME.tex)
 (../../NLSY79/tex/regression.tex)
-Overfull \hbox (54.13622pt too wide) in paragraph at lines 3--64
+Overfull \hbox (54.13622pt too wide) in paragraph at lines 3--102
 [][]
  []
 
 
-Overfull \hbox (47.13449pt too wide) in paragraph at lines 3--64
+Overfull \hbox (47.13449pt too wide) in paragraph at lines 3--102
 []
  []
 
 
-Overfull \hbox (54.13622pt too wide) in paragraph at lines 3--64
+Overfull \hbox (54.13622pt too wide) in paragraph at lines 3--102
 []
  []
 
 
-Overfull \hbox (37.94348pt too wide) in paragraph at lines 3--64
+Overfull \hbox (37.94348pt too wide) in paragraph at lines 3--102
 []
  []
 
 
-Overfull \hbox (36.72897pt too wide) in paragraph at lines 3--64
+Overfull \hbox (36.72897pt too wide) in paragraph at lines 3--102
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--64
+Underfull \hbox (badness 10000) in paragraph at lines 3--102
 
  []
 
 
-LaTeX Warning: Float too large for page by 85.38176pt on input line 64.
+LaTeX Warning: Float too large for page by 85.38176pt on input line 102.
 
-[1
-
-{C:/Users/hoang/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/hoan
-g/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-rm.enc}] [2]
-(Prelim report 2.aux)
+[2] [3] [4] (Prelim report 2.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
  ***********
-
-
-Package rerunfilecheck Warning: File `"Prelim report 2".out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `"Prelim report 2".out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  DAF8632B66B9225E0642BC66F222D8B8;315.
+Package rerunfilecheck Info: File `"Prelim report 2".out' has not changed.
+(rerunfilecheck)             Checksum: 1D98F903C76B852D480AB211E236C413;450.
  ) 
 Here is how much of TeX's memory you used:
- 15894 strings out of 475551
- 267610 string characters out of 5762555
- 1956238 words of memory out of 5000000
- 36862 multiletter control sequences out of 15000+600000
- 597681 words of font info for 80 fonts, out of 8000000 for 9000
+ 16290 strings out of 475551
+ 274495 string characters out of 5762555
+ 1973238 words of memory out of 5000000
+ 37227 multiletter control sequences out of 15000+600000
+ 603341 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,11n,80p,1025b,439s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 63i,18n,67p,1369b,648s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmmi8.pfb><C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
 onts/cm/cmr8.pfb><C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -719,9 +757,9 @@ pe1/public/amsfonts/cm/cmsy7.pfb><C:/Users/hoang/AppData/Local/Programs/MiKTeX/
 fonts/type1/public/tex-gyre/qplb.pfb><C:/Users/hoang/AppData/Local/Programs/MiK
 TeX/fonts/type1/public/tex-gyre/qplr.pfb><C:/Users/hoang/AppData/Local/Programs
 /MiKTeX/fonts/type1/public/tex-gyre/qplri.pfb>
-Output written on "Prelim report 2.pdf" (2 pages, 192756 bytes).
+Output written on "Prelim report 2.pdf" (4 pages, 211546 bytes).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
- 7 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 85 PDF objects out of 1000 (max. 8388607)
+ 14 named destinations out of 1000 (max. 500000)
+ 25 words of extra memory for PDF output out of 10000 (max. 10000000)
 

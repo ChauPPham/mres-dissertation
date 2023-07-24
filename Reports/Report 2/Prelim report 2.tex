@@ -12,10 +12,12 @@
 \usepackage[colorlinks, citecolor = blue]{hyperref}
 \usepackage[nameinlink, noabbrev]{cleveref}	% Use \Cref always 
 \usepackage{caption}
-\usepackage{threeparttable, makecell, cellspace, multirow, booktabs}
+\usepackage{threeparttable, makecell, cellspace, multirow, booktabs, diagbox, tabularx}
 \usepackage{verbatim}
 \usepackage{natbib}
 \usepackage[bottom]{footmisc}	% keep footnotes at end of the page
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
 
 %---- Simple table template
 \begin{comment} 
@@ -44,7 +46,7 @@
 \onehalfspacing
 
 \section{Data \& methodology}
-I use data of National Longitudinal Survey of Youth 1979 (NLSY79) and NLSY79 Child and Young Adults (CYA) to study the effects of parental risk aversion on children investment. The NLSY79 is a longitudinal project that follows the lives of a sample of American youth born between 1957 and 1964 with the first round of data collection in 1979. The original cohort included 12,686 respondents ages 14-22 when first interviewed but later dropped to 9,964 respondents after the exclusion of the military subsample. Data are collected annually from 1979 to 1994 and biannually thereafter. Beginning in 1986, additional information was collected biannually about children born to female NLSY79 respondents, constituting the NLSY79 CYA dataset. The Child and Young Adult contains information on a rich set of assessments on cognitive ability, temperament, motor and social development, behaviour problems, self-competence of the children as well as the quality of their home environment. 
+I use data of National Longitudinal Survey of Youth 1979 (NLSY79) and NLSY79 Child and Young Adults (CYA) to study the effects of parental risk aversion on children investment. The NLSY79 is a longitudinal project that follows the lives of a sample of American youth born between 1957 and 1964 with the first round of data collection in 1979. The original cohort included 12,686 respondents ages 14-22 when first interviewed but later dropped to 9,964 respondents after the exclusion of the military subsample. Data are collected annually from 1979 to 1994 and biannually thereafter. Beginning in 1986, additional information was collected biannually about children born to female NLSY79 respondents, constituting the NLSY79 CYA dataset. The Child and Young Adult contains information on a rich set of assessments on cognitive ability, temperament, motor and social development, behaviour problems, self-competence of the children as well as the quality of their home environment. By linking investment, as measured by The HOME (Home Observation Measurement of the Environment) indices along with its subsection indices in the NLSY79 CYA, and an indicator of risk attitudes generated from a series of questions in the NLSY79, it is possible to study the effect of parental (maternal) risk aversion on investment in children.
 
 \subsection{Parental risk aversion}
 To measure attitudes towards risk of parents,\footnote{More precisely, risk attitudes of mothers as NLSY79 and NLSY79 CYA are linked by identifying unique pairs of mother-child.} participants of NLSY79 were asked a series of hypothetical questions on occupational choice. The first question of the series reads:
@@ -55,8 +57,44 @@ To measure attitudes towards risk of parents,\footnote{More precisely, risk atti
 \end{minipage}
 \end{center}
 \begin{flushright}
-	\textit{Questionnaire Public Report, National Longitudinal Survey of Youth 1979 (NLSY79), 1993}
+	\textit{Questionnaire Public Report, National Longitudinal Survey of Youth 1979 (NLSY79), 1993.}
 \end{flushright}
+Depending on respondents' answers to this question, survey participants were asked a similar question holding the first choice constant while the income cut in the second choice is modified. If participants choose ``First job" in the first question, the income cut in the second question is lowered to 20\%. If ``Second job" is chosen in the first question, the income cut is increased to 1/2 in the second question. The first series of questions on risk attitudes were asked in four rounds in 1993, 2002, 2004 and 2006. In 2010, 2012, and 2014, roughly 1,800 survey participants who had not been interviewed in previous rounds were asked a slightly modified version of the original questions. The first question of the ``new" series reads:
+
+\begin{center}
+\begin{minipage}{.9\linewidth}\small
+	``Suppose that you are the only income earner in the family, and that you have to choose between two new jobs. The first job would guarantee your current total family income for life. The second job is possibly better paying, but the income is also less certain. There is a 50-50 chance the second job would increase your total lifetime income by 20 percent and a 50-50 change that is would cut it by 10 percent."
+\end{minipage}
+\end{center} 
+\begin{flushright}
+	\textit{Questionnaire Public Report, National Longitudinal Survey of Youth 1979 (NLSY79), 2010.}
+\end{flushright}
+Choosing ``First job" would lead respondents to a second question with income cut increased to 15\% as opposed to 5\% for ``Second job". Unlike the previous series, however, respondents to the ``new" series are only interviewed once. 
+
+Using these two series on risk attitudes, a 4-level categorical variable denoting degrees of risk aversion is created. The specifics of the created variable is shown in \Cref{table:1}. As all the hypothetical lotteries on job returns deliver positive gains in expectation, it is only possible to classify those who choose ``Second job" in both questions they are presented as ``Weakly risk averse." Since there are no questions with the derived hypothetical lottery that pays 0 in expectation or involves expected loss, little can be inferred about those who are risk neutral or risk loving.  
+
+\begin{table}[!h]
+	\centering
+	\setlength{\extrarowheight}{0.1cm}
+	\caption{Indicator of risk attitudes}	
+	\input{Tables/table-1-risk}
+	\label{table:1}
+\end{table}
+
+
+
+\subsection{Investment data}
+Investment in children can be captured by parental inputs measured by HOME indices. HOME (Short Form) comprises of primary measures of the quality of a child's home environment included in the NLSY79 Child survey. Various components of the HOME evaluate the cognitive stimulation and emotional support children below 15 years old receive from the home environment. Items that made up the HOME score are grouped into goods input and time input. These are reported in \Cref{table:2}. Apart from measures of HOME section, several items included in the self-administered questions for children between 10-14 are also present and have the (NH) prefix.  
+
+For each age group, to generate the generic investment index, indicators of all items in \Cref{table:2} for the corresponding age are totalled then normalised to have a mean zero and one standard deviation. A similar procedure is also applied to goods investment index and time investment index.
+
+\begin{table}
+	\centering
+	\setlength{\extrarowheight}{0.1cm}
+	\caption{Components of HOME index}	
+	\input{Tables/table-2-HOME}
+	\label{table:2}
+\end{table}  
 
 
 \begin{table}

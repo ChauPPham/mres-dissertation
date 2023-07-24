@@ -720,6 +720,46 @@ quietly foreach i of varlist HGC_ HDC_ RISK1_a_ RISK1_b_ RISK1_c_ RISK2_a_ RISK2
 rename *_ *
 replace WELFARE = 0 if WELFARE < 0
 
+/* Private school choice */
+quietly foreach i of varlist T4969200 T4969300 T4969400 T4969500 T4969600 T4969700 T4969800 T4969900 {
+	replace `i' = . if `i' < 0
+}
+
+/* Private school tuition fees */
+quietly foreach i of varlist T4970600 T4970700 T4970800 T4970900 T4971000 T4971100 {
+	replace `i' = . if `i' < 0
+}
+
+/* Child attends 2 or 4 years college */
+quietly foreach i of varlist T4976800 T4976900 T4977000 T4977100 T4977200 T4977300 T4977400 T4977500 T4977600 {
+	replace `i' = . if `i' < 0
+}
+
+/* Child graduates with Bachelor degree */
+quietly foreach i of varlist T4978500 T4978600 T4978700 T4978800 T4978900 T4979000 T4979100 T4979200 {
+	replace `i' = . if `i' < 0
+}
+
+/* Number of years child attend college */
+quietly foreach i of varlist T4981600 T4981700 T4981800 T4981900 T4982000 T4982100 T4982200 T4982300 {
+	replace `i' = . if `i' < 0
+}
+
+/* Amount of child living expenses paid by parents */
+quietly foreach i of varlist T4990400 T4990500 T4990600 T4990700 T4990800 T4990900 T4991000 T4991100 {
+	replace `i' = . if `i' < 0
+}
+
+/* Child attend college longer/more expensive if more help */
+quietly foreach i of varlist T4994400 T4994500 T4994600 T4994700 T4994800 T4994900 T4995000 T4995100 {
+	replace `i'= . if `i' < 0
+}
+
+/* Family contribute if child attends college */
+quietly foreach i of varlist T4996100 T4996200 T4996300 T4996400 T4996500 T4996600 T4996700 T4996800 T4996900 {
+	replace `i' = . if `i' < 0
+}
+
 *save NLSY79_long.dta, replace
 
 /* INACCURATE UNDERLYING THEORY
@@ -809,6 +849,13 @@ replace RISK_AVERSE1 = 1 if RISK1_a == 1 & RISK1_b == 1
 label define RISK1 4 "Very strongly risk averse" 3 "Strongly risk averse" 2 "Moderately risk averse" 1 "Weakly risk averse"
 label values RISK_AVERSE1 RISK1
 
+/* Using the same categorical variable for risk aversion based on 2010-2014 questions */
+replace RISK_AVERSE1 = 4 if RISK2_a == 1 & RISK2_c == 1
+replace RISK_AVERSE1 = 3 if RISK2_a == 1 & RISK2_c == 2
+replace RISK_AVERSE1 = 2 if RISK2_a == 2 & RISK2_b == 1
+replace RISK_AVERSE1 = 1 if RISK2_a == 2 & RISK2_c == 2
+
+
 gen ln_INCOME = log(HH_INCOME)
 
 /*Drop duplicate values
@@ -828,15 +875,10 @@ quietly foreach i of varlist INV_ALL GOODS_ALL TIME_ALL {
 	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C0007000 R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & C0007000 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_CAT != ., absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo model_`identifier'
 	
-	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C0007000 R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & C0007000 >= 0 & R0006500 >= 0 & R0007900 >= 0 & (DEGREE_CAT == 0 | DEGREE_CAT == 1), absorb(year AGE_CAT) vce(cluster R0000100)
-	eststo model_`identifier'_a
-	
-	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C0007000 R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & C0007000 >= 0 & R0006500 >= 0 & R0007900 >= 0 & (DEGREE_CAT == 2 | DEGREE_CAT == 3), absorb(year AGE_CAT) vce(cluster R0000100)
-	eststo model_`identifier'_b
-	
-	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C0007000 R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & C0007000 >= 0 & R0006500 >= 0 & R0007900 >= 0 & (DEGREE_CAT == 4 | DEGREE_CAT == 5), absorb(year AGE_CAT) vce(cluster R0000100)
-	eststo model_`identifier'_c
-	
+	forval j = 0/5 {
+		reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C0007000 R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & C0007000 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_CAT == `j', absorb(year AGE_CAT) vce(cluster R0000100)
+		eststo model_`identifier'_`j'
+	}
 	local ++identifier
 }
 
@@ -844,14 +886,10 @@ quietly foreach i of varlist COG_SCORE EMO_SCORE {
 	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C0007000 R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & C0007000 >= 0 & R0006500 >= 0 & R0007900 >= 0 & `i' >= 0 & (DEGREE_CAT != .), absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo model_`identifier'
 	
-	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C0007000 R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & C0007000 >= 0 & R0006500 >= 0 & R0007900 >= 0 & `i' >= 0 & (DEGREE_CAT == 0 | DEGREE_CAT == 1), absorb(year AGE_CAT) vce(cluster R0000100)
-	eststo model_`identifier'_a
-	
-	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C0007000 R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & C0007000 >= 0 & R0006500 >= 0 & R0007900 >= 0 & `i' >= 0 & (DEGREE_CAT == 2 | DEGREE_CAT == 3), absorb(year AGE_CAT) vce(cluster R0000100)
-	eststo model_`identifier'_b
-	
-	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C0007000 R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & C0007000 >= 0 & R0006500 >= 0 & R0007900 >= 0 & `i' >= 0 & (DEGREE_CAT == 4 | DEGREE_CAT == 5), absorb(year AGE_CAT) vce(cluster R0000100)
-	eststo model_`identifier'_c
+	forval j = 0/5 {
+		reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C0007000 R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & C0007000 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_CAT == `j' & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
+		eststo model_`identifier'_`j'
+	}
 	
 	local ++identifier
 }
@@ -866,57 +904,19 @@ quietly foreach i of varlist COG_SCORE EMO_SCORE {
 * 4 - Cognitive stimulation (in %) (taken from HOME SECTION)
 * 5 - Emotional support (in %) (taken from HOME SECTION)
 
-forvalues i = 1(1)5 {
-	if `i' == 1 esttab model_`i'*, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "HS dropout" "HS" "College") se star(* 0.10 ** 0.05 *** 0.01) label nonum 
-	if `i' > 1 esttab model_`i'*, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "HS dropout" "HS" "College") se star(* 0.10 ** 0.05 *** 0.01) label nonum
+forvalues i = 1/5 {
+	if `i' == 1 esttab model_`i'*, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "No HS" "HS dropout" "HS" "Some College" "College" "Postgraduate") se star(* 0.10 ** 0.05 *** 0.01) label nonum 
+	if `i' > 1 esttab model_`i'*, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "No HS" "HS dropout" "HS" "Some College" "College" "Postgraduate") se star(* 0.10 ** 0.05 *** 0.01) label nonum
 }
 
 /* 
-forvalues i = 1(1)5 {
-	if `i' == 1 esttab model_`i'* using tex\regression, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "HS dropout" "HS" "College") se star(* 0.10 ** 0.05 *** 0.01) label nonum booktabs replace
-	if `i' > 1 esttab model_`i'* using tex\regression, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "HS dropout" "HS" "College") se star(* 0.10 ** 0.05 *** 0.01) label nonum booktabs append
+forvalues i = 1/5 {
+	if `i' == 1 esttab model_`i'* using "tex/regression", keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "No HS" "HS dropout" "HS" "Some College" "College" "Postgraduate") se star(* 0.10 ** 0.05 *** 0.01) label nonum booktabs replace
+	if `i' > 1 esttab model_`i'* using "tex/regression", keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "No HS" "HS dropout" "HS" "Some College" "College" "Postgraduate") se star(* 0.10 ** 0.05 *** 0.01) label nonum booktabs append
 }
 */
 
-/* Private school choice */
-quietly foreach i of varlist T4969200 T4969300 T4969400 T4969500 T4969600 T4969700 T4969800 T4969900 {
-	replace `i' = . if `i' < 0
-}
 
-/* Private school tuition fees */
-quietly foreach i of varlist T4970600 T4970700 T4970800 T4970900 T4971000 T4971100 {
-	replace `i' = . if `i' < 0
-}
-
-/* Child attends 2 or 4 years college */
-quietly foreach i of varlist T4976800 T4976900 T4977000 T4977100 T4977200 T4977300 T4977400 T4977500 T4977600 {
-	replace `i' = . if `i' < 0
-}
-
-/* Child graduates with Bachelor degree */
-quietly foreach i of varlist T4978500 T4978600 T4978700 T4978800 T4978900 T4979000 T4979100 T4979200 {
-	replace `i' = . if `i' < 0
-}
-
-/* Number of years child attend college */
-quietly foreach i of varlist T4981600 T4981700 T4981800 T4981900 T4982000 T4982100 T4982200 T4982300 {
-	replace `i' = . if `i' < 0
-}
-
-/* Amount of child living expenses paid by parents */
-quietly foreach i of varlist T4990400 T4990500 T4990600 T4990700 T4990800 T4990900 T4991000 T4991100 {
-	replace `i' = . if `i' < 0
-}
-
-/* Child attend college longer/more expensive if more help */
-quietly foreach i of varlist T4994400 T4994500 T4994600 T4994700 T4994800 T4994900 T4995000 T4995100 {
-	replace `i'= . if `i' < 0
-}
-
-/* Family contribute if child attends college */
-quietly foreach i of varlist T4996100 T4996200 T4996300 T4996400 T4996500 T4996600 T4996700 T4996800 T4996900 {
-	replace `i' = . if `i' < 0
-}
 
 
 
