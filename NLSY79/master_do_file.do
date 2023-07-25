@@ -879,30 +879,47 @@ by R0000100: egen AGE_FIRST_BIRTH = min(C0007000)
 /*==============================================================*/
 /*==================== Output summary table ====================*/
 /*==============================================================*/
-estpost tabstat ....., by(DEGREE_CAT) statistics(mean sd) columns(statistics) listwise
-esttab ., main(mean) aux(sd) nostar unstack noobs nonote label
+label var INV_ALL "HOME index"
+label var GOODS_ALL "Goods index"
+label var TIME_ALL "Time index"
+label var COG_SCORE "Cognitive Stimulation score (%)"
+label var EMO_SCORE "Emotional Support score (%)"
+label var C0005400 "Sex"
+label var C0005300 "Race"
+label var C0007000 "Age of mother at child's birth"
+label var AGE_FIRST_BIRTH "Age of mother at first's birth"
+label var NO_SIB "Number of siblings"
+label var NO_UNDER_18 "Number of members under 18 in mother's household"
+label var DEGREE_CAT "Mother's education"
+label var R0618300 "Mother's AFQT score (1981)"
+label var R0006500 "Highest grade achieved by mother's mother"
+label var R0007900 "Highest grade achieved by mother's father"
+label var HH_INCOME "Net household income"
+
+estpost tabstat INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE C0005400 C0005300 C000700 AGE_FIRST_BIRTH NO_SIB NO_UNDER_18 R0618300 R0006500 R0007900 HH_INCOME, by(DEGREE_CAT) statistics(mean sd) columns(statistics) listwise
+esttab ., main(mean) aux(sd) noobs nostar unstack nonote label
 
 
 
 
 local identifier = 1
 quietly foreach i of varlist INV_ALL GOODS_ALL TIME_ALL {
-	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB AGE_FIRST_BIRTH R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_CAT != ., absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_CAT != ., absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo model_`identifier'
 	
 	forval j = 0/5 {
-		reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB AGE_FIRST_BIRTH R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_CAT == `j', absorb(year AGE_CAT) vce(cluster R0000100)
+		reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_CAT == `j', absorb(year AGE_CAT) vce(cluster R0000100)
 		eststo model_`identifier'_`j'
 	}
 	local ++identifier
 }
 
 quietly foreach i of varlist COG_SCORE EMO_SCORE {
-	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB AGE_FIRST_BIRTH R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & `i' >= 0 & (DEGREE_CAT != .), absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & `i' >= 0 & (DEGREE_CAT != .), absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo model_`identifier'
 	
 	forval j = 0/5 {
-		reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB AGE_FIRST_BIRTH R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_CAT == `j' & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
+		reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_CAT == `j' & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
 		eststo model_`identifier'_`j'
 	}
 	
