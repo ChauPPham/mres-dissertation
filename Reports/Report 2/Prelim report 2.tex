@@ -12,12 +12,17 @@
 \usepackage[colorlinks, citecolor = blue]{hyperref}
 \usepackage[nameinlink, noabbrev]{cleveref}	% Use \Cref always 
 \usepackage{caption}
-\usepackage{threeparttable, makecell, cellspace, multirow, booktabs, diagbox, tabularx}
+\usepackage{threeparttable, makecell, cellspace, multirow, booktabs, diagbox, tabularx, longtable, threeparttablex}
 \usepackage{verbatim}
 \usepackage{natbib}
 \usepackage[bottom]{footmisc}	% keep footnotes at end of the page
 
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+\renewcommand\theadalign{bc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
 
 %---- Simple table template
 \begin{comment} 
@@ -71,7 +76,7 @@ Depending on respondents' answers to this question, survey participants were ask
 \end{flushright}
 Choosing ``First job" would lead respondents to a second question with income cut increased to 15\% as opposed to 5\% for ``Second job". Unlike the previous series, however, respondents to the ``new" series are only interviewed once. 
 
-Using these two series on risk attitudes, a 4-level categorical variable denoting degrees of risk aversion is created. The specifics of the created variable is shown in \Cref{table:1}. As all the hypothetical lotteries on job returns deliver positive gains in expectation, it is only possible to classify those who choose ``Second job" in both questions they are presented as ``Weakly risk averse." Since there are no questions with the derived hypothetical lottery that pays 0 in expectation or involves expected loss, little can be inferred about those who are risk neutral or risk loving.  
+Using these two series on risk attitudes, a 4-level categorical variable denoting degrees of risk aversion is created. The specifics of the created variable is shown in \Cref{table:1}. As all the hypothetical lotteries on job returns deliver positive gains in expectation, it is only possible to classify those who choose ``Second job" in both questions they are presented as ``Weakly risk averse." Since there are no questions with the derived hypothetical lottery that pays 0 in expectation or involves expected loss, little can be inferred about those who are risk neutral or risk loving. 
 
 \begin{table}[!h]
 	\centering
@@ -99,17 +104,44 @@ For each age group, to generate the generic investment index, indicators of all 
 \subsection{Summary statistics}
 Descriptive statistics of variables used in our analysis are reported in \Cref{table:3}. 
 
-\begin{table}
+\begin{ThreePartTable}
 	\centering
 	\setlength{\extrarowheight}{0.2em}
-	\caption{Summary statistics}	
-	\input{Tables/table-3-summary}
-	\label{table:3}
+	\begin{TableNotes}\footnotesize
+		\item[a] Mean and standard deviations enclosed in parentheses are reported for all numerical variables. Only frequency is reported for categorical variables.
+	\end{TableNotes}
+	\input{../../NLSY79/tex/summary}
+\end{ThreePartTable}
+
+\section{Preliminary results}
+\subsection{Simple regression}
+OLS estimates of the relationship between parental risk aversion and investment in children are reported in \Cref{table:4}. The particular regression equation takes the form:
+\begin{equation}
+	Y_{it} = c + \alpha RISK_{it} + \beta Z_{it} + \gamma_t +  \varepsilon_{it}
+\end{equation}
+where $Y_{it}$ are measurements of parental inputs, namely HOME index and its subcomponents. $Z_{it}$ is a vector of controls for child $i$ at year $t$. This includes both child's characteristics and mother's characteristics as reported in \Cref{table:3}. I also augment the equation by adding year and age category fixed effects.\footnote{Since HOME index along with its subcomponents are calculated and normalised by age category (see \Cref{table:2}) rather than age, I decided to include age-category as a fixed effect for the model.} $RISK_{it}$ is a 4-level categorical variable derived from the question on occupational choice for mother of child $i$ at time $t$. $\gamma_t$ denotes time fixed effect. Standard errors are clustered by mother. 
+
+\begin{table}[!h]
+	\centering \setlength{\extrarowheight}{0.1em}
+	\caption{OLS Estimates of the effect of Risk Aversion on Parental Inputs}
+	\input{../../NLSY79/tex/regression_1}
+	\label{table:4}
 \end{table}
 
-\begin{table}
-	\input{../../NLSY79/tex/regression}
-\end{table}
+\subsection{Separating old and new measures of risk aversion}
+
+It is important to note that the two series involve different stakes of gains and losses. Consequently, degree of risk aversion may differ considerably between those answering old series and those answering new series even if they might belong to the same category of risk aversion. To account for this potential erroneous categorisation, I add an interaction term between the risk aversion variable and an indicator denoting old and new series of question. Results are reported in \Cref{table:5}
+
+    
+\begin{ThreePartTable}
+	\centering
+	\setlength{\extrarowheight}{0.2em}
+	\begin{TableNotes}\footnotesize
+		\item ... 
+	\end{TableNotes}
+	\input{../../NLSY79/tex/regression_2}
+\end{ThreePartTable}
+
 
 \pagebreak
 

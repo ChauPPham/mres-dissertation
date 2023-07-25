@@ -876,57 +876,52 @@ by R0000100: replace NO_SIB = NO_SIB[_N] - 1
 by R0000100: egen AGE_FIRST_BIRTH = min(C0007000)
 
 
+**# Bookmark #12
 /*==============================================================*/
 /*==================== Output summary table ====================*/
 /*==============================================================*/
 label var INV_ALL "HOME index"
 label var GOODS_ALL "Goods index"
 label var TIME_ALL "Time index"
-label var COG_SCORE "Cognitive Stimulation score (%)"
-label var EMO_SCORE "Emotional Support score (%)"
+label var COG_SCORE "Cognitive Stimulation score (\%)"
+label var EMO_SCORE "Emotional Support score (\%)"
 label var C0005400 "Sex"
 label var C0005300 "Race"
 label var C0007000 "Age of mother at child's birth"
-label var AGE_FIRST_BIRTH "Age of mother at first's birth"
+label var AGE_FIRST_BIRTH "Age of mother at first birth"
 label var NO_SIB "Number of siblings"
-label var NO_UNDER_18 "Number of members under 18 in mother's household"
+label var NO_UNDER_18 "$\#$ members under 18 in mother's HH"
 label var DEGREE_CAT "Mother's education"
 label var R0618300 "Mother's AFQT score (1981)"
-label var R0006500 "Highest grade achieved by mother's mother"
-label var R0007900 "Highest grade achieved by mother's father"
-label var HH_INCOME "Net household income"
+label var R0006500 "Mother's mother's years of schooling"
+label var R0007900 "Mother's father's years of schooling"
+label var HH_INCOME "Net household income (\$)"
 
-estpost tabstat INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE C0005400 C0005300 C000700 AGE_FIRST_BIRTH NO_SIB NO_UNDER_18 R0618300 R0006500 R0007900 HH_INCOME, by(DEGREE_CAT) statistics(mean sd) columns(statistics) listwise
-esttab ., main(mean) aux(sd) noobs nostar unstack nonote label
+tab C0005400, gen(SEX)
+label var SEX2 "Female"
 
+tab C0005300, gen(RACE)
+label var RACE1 "Hispanic"
+label var RACE2 "Black"
+label var RACE3 "Non-Black, non-Hispanic"
 
+tab RISK_AVERSE1, gen(RISK_AVERSION)
+label var RISK_AVERSION1 "Weakly risk averse"
+label var RISK_AVERSION2 "Moderately risk averse"
+label var RISK_AVERSION3 "Strongly risk averse"
+label var RISK_AVERSION4 "Very strongly risk averse"
 
+gen DEGREE_SEP = DEGREE_CAT
+replace DEGREE_SEP = 3 if DEGREE_CAT > 3
+label define DEGREE_SEP 0 "\thead{No \\high school}" 1 "\thead{Some \\high school}" 2 "\thead{High school}" 3 "\thead{College\\ and above}"	/* Need to manually change to two lines in tex */
+label values DEGREE_SEP DEGREE_SEP
 
-local identifier = 1
-quietly foreach i of varlist INV_ALL GOODS_ALL TIME_ALL {
-	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_CAT != ., absorb(year AGE_CAT) vce(cluster R0000100)
-	eststo model_`identifier'
-	
-	forval j = 0/5 {
-		reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_CAT == `j', absorb(year AGE_CAT) vce(cluster R0000100)
-		eststo model_`identifier'_`j'
-	}
-	local ++identifier
-}
-
-quietly foreach i of varlist COG_SCORE EMO_SCORE {
-	reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & `i' >= 0 & (DEGREE_CAT != .), absorb(year AGE_CAT) vce(cluster R0000100)
-	eststo model_`identifier'
-	
-	forval j = 0/5 {
-		reghdfe `i' i.RISK_AVERSE1 POVERTY ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if POVERTY >= 0 & R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_CAT == `j' & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
-		eststo model_`identifier'_`j'
-	}
-	
-	local ++identifier
-}
+qui estpost tabstat RISK_AVERSION1 RISK_AVERSION2 RISK_AVERSION3 RISK_AVERSION4 INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE SEX2 RACE1 RACE2 RACE3 C000700 AGE_FIRST_BIRTH NO_SIB NO_UNDER_18 R0618300 R0006500 R0007900 HH_INCOME if RISK_AVERSE1 != . & NO_UNDER_18 >= 0 & R0618300 >= 0 & R0006500 >= 0 & R0007900 >= 0, by(DEGREE_SEP) statistics(mean sd) columns(statistics)
+*esttab . using tex/summary.tex, main(mean %12.2f) aux(sd %12.2f) noobs nostar unstack nonote label replace booktabs nonum long title("Summary statistics \label{table:3}")
+esttab ., main(mean %12.2f) aux(sd %12.2f) nostar nonote label unstack nonum long title("Summary statistics")
 
 
+**# Bookmark #13
 /*==================================================================*/
 /*==================== Output regression tables ====================*/
 /*==================================================================*/
@@ -935,20 +930,85 @@ quietly foreach i of varlist COG_SCORE EMO_SCORE {
 * 3 - Time investment (normalised) (taken from HOME SECTION)
 * 4 - Cognitive stimulation (in %) (taken from HOME SECTION)
 * 5 - Emotional support (in %) (taken from HOME SECTION)
+eststo clear
 
-forvalues i = 1/5 {
-	if `i' == 1 esttab model_`i'*, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "No HS" "HS dropout" "HS" "Some College" "College" "Postgraduate") se star(* 0.10 ** 0.05 *** 0.01) label nonum 
-	if `i' > 1 esttab model_`i'*, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "No HS" "HS dropout" "HS" "Some College" "College" "Postgraduate") se star(* 0.10 ** 0.05 *** 0.01) label nonum
+/*========== WITHOUT INTERACTION TERM ==========*/
+local identifier = 1
+quietly foreach i of varlist INV_ALL GOODS_ALL TIME_ALL {
+	reghdfe `i' i.RISK_AVERSE1 ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP != ., absorb(year AGE_CAT) vce(cluster R0000100)
+	eststo model_`identifier'
+	
+	forval j = 0/3 {
+		reghdfe `i' i.RISK_AVERSE1 ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP == `j', absorb(year AGE_CAT) vce(cluster R0000100)
+		eststo model_`identifier'_`j'
+	}
+	local ++identifier
 }
 
-/* 
+quietly foreach i of varlist COG_SCORE EMO_SCORE {
+	reghdfe `i' i.RISK_AVERSE1 ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & `i' >= 0 & (DEGREE_SEP != .), absorb(year AGE_CAT) vce(cluster R0000100)
+	eststo model_`identifier'
+	
+	forval j = 0/3 {
+		reghdfe `i' i.RISK_AVERSE1 ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP == `j' & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
+		eststo model_`identifier'_`j'
+	}
+	
+	local ++identifier
+}
+
+
 forvalues i = 1/5 {
-	if `i' == 1 esttab model_`i'* using "tex/regression", keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "No HS" "HS dropout" "HS" "Some College" "College" "Postgraduate") se star(* 0.10 ** 0.05 *** 0.01) label nonum booktabs replace
-	if `i' > 1 esttab model_`i'* using "tex/regression", keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "No HS" "HS dropout" "HS" "Some College" "College" "Postgraduate") se star(* 0.10 ** 0.05 *** 0.01) label nonum booktabs append
+	if `i' == 1 esttab model_`i'*, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum sfmt(%12.3f)
+	if `i' > 1 esttab model_`i'*, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum sfmt(%12.3f)
+}
+
+/*
+forvalues i = 1/5 {
+	if `i' == 1 esttab model_`i'* using "tex/regression_1", keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum booktabs replace sfmt(%12.3f)
+	if `i' > 1 esttab model_`i'* using "tex/regression_1", keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum booktabs append sfmt(%12.3f)
 }
 */
 
 
+/*========== WITHINTERACTION TERM ==========*/
+label define NEW 0 "Old" 1 "New"
+label value NEW NEW 
+eststo clear
+
+local identifier = 1
+foreach i of varlist INV_ALL GOODS_ALL TIME_ALL {
+	reghdfe `i' i.RISK_AVERSE1 b1.RISK_AVERSE1#NEW  ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP != ., absorb(year AGE_CAT) vce(cluster R0000100)
+	eststo model_`identifier'
+	
+	forval j = 0/3 {
+		reghdfe `i' i.RISK_AVERSE1 b1.RISK_AVERSE1#NEW ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP == `j', absorb(year AGE_CAT) vce(cluster R0000100)
+		eststo model_`identifier'_`j'
+	}
+	local ++identifier
+}
+
+foreach i of varlist COG_SCORE EMO_SCORE {
+	reghdfe `i' i.RISK_AVERSE1 ln_INCOME b1.RISK_AVERSE1#NEW R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & `i' >= 0 & (DEGREE_SEP != .), absorb(year AGE_CAT) vce(cluster R0000100)
+	eststo model_`identifier'
+	
+	forval j = 0/3 {
+		reghdfe `i' i.RISK_AVERSE1 b1.RISK_AVERSE1#NEW ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP == `j' & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
+		eststo model_`identifier'_`j'
+	}
+	
+	local ++identifier
+}
 
 
+forvalues i = 1/5 {
+	if `i' == 1 esttab model_`i'*, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1 1.RISK_AVERSE1#1.NEW 2.RISK_AVERSE1#1.NEW 3.RISK_AVERSE1#1.NEW 4.RISK_AVERSE1#1.NEW) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum sfmt(%12.3f)
+	if `i' > 1 esttab model_`i'*, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1 1.RISK_AVERSE1#1.NEW 2.RISK_AVERSE1#1.NEW 3.RISK_AVERSE1#1.NEW 4.RISK_AVERSE1#1.NEW) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum sfmt(%12.3f)
+}
 
+/*
+forvalues i = 1/5 {
+	if `i' == 1 esttab model_`i'* using "tex/regression_1", keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum booktabs replace sfmt(%12.3f)
+	if `i' > 1 esttab model_`i'* using "tex/regression_1", keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum booktabs append sfmt(%12.3f)
+}
+*/
