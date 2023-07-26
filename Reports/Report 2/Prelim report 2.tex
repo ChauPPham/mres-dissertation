@@ -64,7 +64,7 @@ To measure attitudes towards risk of parents,\footnote{More precisely, risk atti
 \begin{flushright}
 	\textit{Questionnaire Public Report, National Longitudinal Survey of Youth 1979 (NLSY79), 1993.}
 \end{flushright}
-Depending on respondents' answers to this question, survey participants were asked a similar question holding the first choice constant while the income cut in the second choice is modified. If participants choose ``First job" in the first question, the income cut in the second question is lowered to 20\%. If ``Second job" is chosen in the first question, the income cut is increased to 1/2 in the second question. The first series of questions on risk attitudes were asked in four rounds in 1993, 2002, 2004 and 2006. In 2010, 2012, and 2014, roughly 1,800 survey participants who had not been interviewed in previous rounds were asked a slightly modified version of the original questions. The first question of the ``new" series reads:
+Depending on respondents' answers to this question, survey participants were asked a similar question holding the first choice constant while the income cut in the second choice is modified. If participants choose ``First job" in the first question, the income cut in the second question is lowered to 20\%. If ``Second job" is chosen in the first question, the income cut is increased to 1/2 in the second question. The first series of questions on risk attitudes were asked in four rounds in 1993, 2002, 2004 and 2006. In 2010, 2012, and 2014, roughly 1,800 survey participants who had not been interviewed in previous rounds were asked a slightly modified version of the original questions.\footnote{The majority of these participants responded to the survey in 2010. Only those who did not were asked in following rounds. After various restrictions on data availability for investment variables and other controls, roughly 900 observations all collected in 2010 are left for the new series.} The first question of the ``new" series reads:
 
 \begin{center}
 \begin{minipage}{.9\linewidth}\small
@@ -121,21 +121,25 @@ OLS estimates of the relationship between parental risk aversion and investment 
 \end{equation}
 where $Y_{it}$ are measurements of parental inputs, namely HOME index and its subcomponents. $Z_{it}$ is a vector of controls for child $i$ at year $t$. This includes both child's characteristics and mother's characteristics as reported in \Cref{table:3}. I also augment the equation by adding year and age category fixed effects.\footnote{Since HOME index along with its subcomponents are calculated and normalised by age category (see \Cref{table:2}) rather than age, I decided to include age-category as a fixed effect for the model.} $RISK_{it}$ is a 4-level categorical variable derived from the question on occupational choice for mother of child $i$ at time $t$. $\gamma_t$ denotes time fixed effect. Standard errors are clustered by mother. 
 
-\begin{table}[!h]
+Results indicate heterogeneous effects of risk aversion on parental inputs. The effects are heterogeneous both in the dimensions of investment as well as the signs of impact at varying degree of risk aversion. At a glance, children of those who never attended high school tend to receive less investment the more risk averse their mothers are. On the other hand, the opposite trend is found for children of high school dropouts, children of more risk averse mothers tend to receive more investment. Results for the other two subsamples of mothers with high school degree and above are weak and mostly insignificant. 
+
+\begin{table}
 	\centering \setlength{\extrarowheight}{0.1em}
 	\caption{OLS Estimates of the effect of Risk Aversion on Parental Inputs}
 	\input{../../NLSY79/tex/regression_1}
 	\label{table:4}
 \end{table}
 
+\pagebreak 
+
 \subsection{Separating old and new measures of risk aversion}
+It is important to note that the two series involve different stakes of gains and losses. Consequently, degree of risk aversion may differ considerably between those answering old series and those answering new series even if they might belong to the same category of risk aversion. To account for this potential erroneous categorisation, I add an interaction term between the risk aversion variable and an indicator denoting old and new series of question. Results are reported in \Cref{table:5}. One caveat of this approach, however, is that since data for the new series are all collected in 2010, there is a high degree of collinearity for the interaction terms. Specifically, the interaction term between very strongly risk averse and the indicator is omitted. 
 
-It is important to note that the two series involve different stakes of gains and losses. Consequently, degree of risk aversion may differ considerably between those answering old series and those answering new series even if they might belong to the same category of risk aversion. To account for this potential erroneous categorisation, I add an interaction term between the risk aversion variable and an indicator denoting old and new series of question. Results are reported in \Cref{table:5}
-
+\pagebreak
     
 \begin{ThreePartTable}
 	\centering
-	\setlength{\extrarowheight}{0.2em}
+	\setlength{\extrarowheight}{0.1em}
 	\begin{TableNotes}\footnotesize
 		\item ... 
 	\end{TableNotes}

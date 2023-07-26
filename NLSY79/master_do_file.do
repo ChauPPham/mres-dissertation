@@ -971,13 +971,13 @@ forvalues i = 1/5 {
 */
 
 
-/*========== WITHINTERACTION TERM ==========*/
+/*========== WITH INTERACTION TERM ==========*/
 label define NEW 0 "Old" 1 "New"
 label value NEW NEW 
 eststo clear
 
 local identifier = 1
-foreach i of varlist INV_ALL GOODS_ALL TIME_ALL {
+qui foreach i of varlist INV_ALL GOODS_ALL TIME_ALL {
 	reghdfe `i' i.RISK_AVERSE1 b1.RISK_AVERSE1#NEW  ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP != ., absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo model_`identifier'
 	
@@ -988,7 +988,7 @@ foreach i of varlist INV_ALL GOODS_ALL TIME_ALL {
 	local ++identifier
 }
 
-foreach i of varlist COG_SCORE EMO_SCORE {
+qui foreach i of varlist COG_SCORE EMO_SCORE {
 	reghdfe `i' i.RISK_AVERSE1 ln_INCOME b1.RISK_AVERSE1#NEW R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & `i' >= 0 & (DEGREE_SEP != .), absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo model_`identifier'
 	
@@ -1002,13 +1002,13 @@ foreach i of varlist COG_SCORE EMO_SCORE {
 
 
 forvalues i = 1/5 {
-	if `i' == 1 esttab model_`i'*, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1 1.RISK_AVERSE1#1.NEW 2.RISK_AVERSE1#1.NEW 3.RISK_AVERSE1#1.NEW 4.RISK_AVERSE1#1.NEW) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum sfmt(%12.3f)
-	if `i' > 1 esttab model_`i'*, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1 1.RISK_AVERSE1#1.NEW 2.RISK_AVERSE1#1.NEW 3.RISK_AVERSE1#1.NEW 4.RISK_AVERSE1#1.NEW) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum sfmt(%12.3f)
+	if `i' == 1 esttab model_`i'*, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1 1.RISK_AVERSE1#1.NEW 2.RISK_AVERSE1#1.NEW 3.RISK_AVERSE1#1.NEW) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum sfmt(%12.3f)
+	if `i' > 1 esttab model_`i'*, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1 1.RISK_AVERSE1#1.NEW 2.RISK_AVERSE1#1.NEW 3.RISK_AVERSE1#1.NEW) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum sfmt(%12.3f)
 }
 
 /*
 forvalues i = 1/5 {
-	if `i' == 1 esttab model_`i'* using "tex/regression_1", keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum booktabs replace sfmt(%12.3f)
-	if `i' > 1 esttab model_`i'* using "tex/regression_1", keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum booktabs append sfmt(%12.3f)
+	if `i' == 1 esttab model_`i'* using "tex/regression_2", keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1 1.RISK_AVERSE1#1.NEW 2.RISK_AVERSE1#1.NEW 3.RISK_AVERSE1#1.NEW) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum booktabs replace sfmt(%12.3f) long title("OLS estimates with interaction term\label{table:5}")
+	if `i' > 1 esttab model_`i'* using "tex/regression_2", keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1 1.RISK_AVERSE1#1.NEW 2.RISK_AVERSE1#1.NEW 3.RISK_AVERSE1#1.NEW) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum booktabs append sfmt(%12.3f) long
 }
 */
