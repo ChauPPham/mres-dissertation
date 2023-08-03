@@ -8,7 +8,7 @@
 
 /*========== Calculate using NLSY79 Child and Young Adults ==========*/
 
-**# Bookmark #1
+**# Bookmark #1 Investment indice HOME A
 /*==============================================================*/
 /* Calculate investment indices based on HOME for group A (0-2) */
 /*==============================================================*/
@@ -111,7 +111,7 @@ keep if INVESTMENT != .
 replace AGE_AT_INVESTMENT = 2 if AGE_AT_INVESTMENT > 2
 *save HOME_A.dta, replace
 
-**# Bookmark #2
+**# Bookmark #2 Investment indice HOME B
 /*==============================================================*/
 /* Calculate investment indices based on HOME for group B (3-5) */
 /*==============================================================*/
@@ -247,7 +247,7 @@ replace AGE_AT_INVESTMENT = 3 if AGE_AT_INVESTMENT < 3
 *save HOME_B.dta, replace
 
 
-**# Bookmark #3
+**# Bookmark #3 Investment indice HOME C
 /*==============================================================*/
 /* Calculate investment indices based on HOME for group C (6-9) */
 /*==============================================================*/
@@ -365,7 +365,7 @@ replace AGE_AT_INVESTMENT = 6 if AGE_AT_INVESTMENT < 6
 *save HOME_C.dta, replace
 
 
-**# Bookmark #4
+**# Bookmark #4 Investment indice HOME D
 /*================================================================*/
 /* Calculate investment indices based on HOME for group D (10-14) */
 /*================================================================*/
@@ -518,7 +518,7 @@ replace AGE_AT_INVESTMENT = 14 if AGE_AT_INVESTMENT > 14
 replace AGE_AT_INVESTMENT = 10 if AGE_AT_INVESTMENT < 10
 *save HOME_D.dta, replace
 
-**# Bookmark #5
+**# Bookmark #5 Supplement data
 /*=============================================*/
 /*========== Reshape supplement data ==========*/
 /*=============================================*/
@@ -565,7 +565,7 @@ reshape long NO_UNDER_18_ COG_SCORE_ EMO_SCORE_ PIAT_MATH_ PIAT_COMP_ PIAT_REC_,
 rename *_ *
 save NLSY79CYA_supplement, replace
 
-**# Bookmark #6
+**# Bookmark #6 Merging child datasets
 /*======================================*/
 /*========== Merge child data ==========*/
 /*======================================*/
@@ -579,7 +579,7 @@ sort C0000100 year
 merge m:m C0000100 year C0000200 C0005300 C0005400 C0005700 Y2267000 using NLSY79CYA_supplement, keep(match) nogen
 save MERGE_CHILD.dta, replace
 
-**# Bookmark #7
+**# Bookmark #7 Reshape NLSY79 data
 /*============================================================================*/
 /*========== Calculate using NLSY79_main ==========*/
 use NLSY79_main.dta, clear
@@ -772,7 +772,7 @@ replace alpha2 = 1 if WTA_1K_IMPUTED == 0
 replace alpha2 = -6 if WTA_1K_IMPUTED > 900 & WTA_1K_IMPUTED != .
 */
 
-**# Bookmark #8
+**# Bookmark #8 Merging child & mom data (wide)
 /*===================================================*/
 /*========== Merge child & mom data (wide) ==========*/
 /*===================================================*/
@@ -791,7 +791,7 @@ label define DEGREE_CAT 0 "No high school" 1 "Some high school" 2 "High school" 
 label values DEGREE_CAT DEGREE_CAT
 save POOL.dta, replace
 
-**# Bookmark #9
+**# Bookmark #9 Merging child & mom data (long)
 /*===================================================*/
 /*========== Merge child & mom data (long) ==========*/
 /*===================================================*/

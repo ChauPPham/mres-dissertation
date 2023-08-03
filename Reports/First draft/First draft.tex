@@ -1,7 +1,7 @@
 \documentclass[]{article}
 
 %opening
-\title{Parental risk aversion and investment in children}
+\title{Risk preference of mothers and investment in children}
 \author{Chau Pham}
 %\date{} for no date shown
 \usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools, mathrsfs}
@@ -61,8 +61,74 @@ Other works involving risk preference of parents focus on educational outcomes. 
 
 
 \section{Data \& methodology}
+I use data of National Longitudinal Survey of Youth 1979 (NLSY79) and NLSY79 Child and Young Adults (CYA) to study the effects of parental risk aversion on children investment. The NLSY79 is a longitudinal project that follows the lives of a sample of American youth born between 1957 and 1964 with the first round of data collection in 1979. The original cohort included 12,686 respondents ages 14-22 when first interviewed but later dropped to 9,964 respondents after the exclusion of the military subsample. Data are collected annually from 1979 to 1994 and biannually thereafter. Beginning in 1986, additional information was collected biannually about children born to female NLSY79 respondents, constituting the NLSY79 CYA dataset. The Child and Young Adult contains information on a rich set of assessments on cognitive ability, temperament, motor and social development, behaviour problems, self-competence of the children as well as the quality of their home environment. By linking investment, as measured by The HOME (Home Observation Measurement of the Environment) indices along with its subsection indices in the NLSY79 CYA, and an indicator of risk attitudes generated from a series of questions in the NLSY79, it is possible to study the effect of maternal risk aversion on investment in children.
+
+\subsection{Mothers' risk preference}
+To measure attitudes towards risk of parents,\footnote{More precisely, risk attitudes of mothers as NLSY79 and NLSY79 CYA are linked by identifying unique pairs of mother-child.} participants of NLSY79 were asked a series of hypothetical questions on occupational choice. The first question of the series reads:
+
+\begin{center}
+	\begin{minipage}[!h]{.9\linewidth}\small
+		``...Suppose that you are the only income earner in the family, and you have a good job guaranteed to give you your current (family) income every year for life. You are given the opportunity to take a new and equally good job, with a 50-50 chance that it will double your (family) income and a 50-50 chance that it will cut your (family) income by a third. Would you take the new job?"
+	\end{minipage}
+\end{center}
+\begin{flushright}
+	\textit{Questionnaire Public Report, National Longitudinal Survey of Youth 1979 (NLSY79), 1993.}
+\end{flushright}
+Depending on respondents' answers to this question, survey participants were asked a similar question holding the first choice constant while the income cut in the second choice is modified. If participants choose ``First job" in the first question, the income cut in the second question is lowered to 20\%. If ``Second job" is chosen in the first question, the income cut is increased to 1/2 in the second question. The first series of questions on risk attitudes were asked in four rounds in 1993, 2002, 2004 and 2006. Based on answers to this series of questions, respondents can be categorized into four groups numbered 1-4 where individuals in group 1 choose the ``First job" in both questions present to them while individuals in group 4 opt for ``Second job" in both questions administered to them. Specifics of groups categorization are presented in \Cref{table:1-risk-category}.
+
+\begin{table}[!h]
+	\centering
+	\setlength{\extrarowheight}{0.2em}
+	\caption{Category of risk attitudes}	
+	\input{Tables/table-1-risk-category}
+	\label{table:1-risk-category}
+\end{table}
+
+Using the series of questions on risk attitudes, following \citet{kimball2008imputing} and \citet{kimball2009risk}, under the assumption that respondents have constant relative risk aversion (CRRA) and risk tolerance are log-normally distributed, I calculated and imputed values of CRRA coefficient for each respondent. The procedure is as follows. First, assuming that CRRA well approximates individuals' utility over lifetime income,
+\[U(W)={W^{1-{1/\theta}}\over 1-{1/\theta}}\]
+where $\theta$ is the coefficient of relative risk tolerance and its reciprocal, $\gamma = 1/\theta$, coefficient of relative risk aversion, bounds on $\theta$ are calculated for each category in \Cref{table:1}. A second assumption I would emphasize here that deviates from \citet{kimball2008imputing} and \cite{kimball2009risk} is that respondents have time-varying risk preference. In the previously cited works, due to the structure of PSID surveys, there is only one response per individual, making the inference on the true risk preference impossible without further assumption. When there are multiple responses from each individual, under the assumption that the true risk preference remains constant over time, inference on the parameters of risk tolerance, and hence risk aversion, is possible.\footnote{As the true risk preference is constant, differences in responses of an individual are attributed to response error.} However, according to \citet{dohmen2011individual} and \citet{dohmen2017risk}, willingness to take risks vary over the course of life-cycle and trending downward as individuals age. Thus, to allow for time-varying risk preference, for each wave that collects the responses to risk preference questions, the mean log risk tolerance and standard deviation are calculated using maximum likelihood. The coefficient of risk aversion, $\gamma$ are then imputed using the conditional expectation that an individual belongs to a certain risk category $j$,
+\begin{equation}
+	\mathbb E(\gamma|c=j)=\exp\Big(-\mu+{\sigma^2\over 2}\Big){\Phi\Big({\log(\bar{\theta}_j)-\mu+\sigma^2\over \sigma}\Big)-\Phi\Big({\log(\underline{\theta}_j)-\mu+\sigma^2\over \sigma}\Big)\over \Phi\Big({\log(\bar{\theta}_j)-\mu\over \sigma}\Big)-\Phi\Big({\log(\underline{\theta}_j)-\mu\over \sigma}\Big)}
+	\label{eq:1-conditional-expectation}
+\end{equation}
+where $\mu$ and $\sigma$ are respectively the mean and standard log risk tolerance for a certain wave of response. $\bar \theta_j$ and $\underline{\theta}_j$ are upper and lower bounds on the coefficient of risk tolerance. Bounds on risk tolerance $\theta$ and imputed values of risk aversion $\gamma$ are reported in \Cref{table:2-risk-coefficient}. 
+
+\begin{table}[!h]
+	\centering
+	\setlength{\extrarowheight}{0.2em}
+	\caption{Imputed values of risk preference}	
+	\input{Tables/table-2-risk-coefficient}
+	\label{table:2-risk-coefficient}
+\end{table}
+
+a 4-level categorical variable denoting degrees of risk aversion is created. The specifics of the created variable is shown in \Cref{table:1}. As all the hypothetical lotteries on job returns deliver positive gains in expectation, it is only possible to classify those who choose ``Second job" in both questions they are presented as ``Weakly risk averse." Since there are no questions with the derived hypothetical lottery that pays 0 in expectation or involves expected loss, little can be inferred about those who are risk neutral or risk loving. 
 
 
+
+\subsection{Investment data}
+Investment in children can be captured by parental inputs measured by HOME indices. HOME (Short Form) comprises of primary measures of the quality of a child's home environment included in the NLSY79 Child survey. Various components of the HOME evaluate the cognitive stimulation and emotional support children below 15 years old receive from the home environment. Items that made up the HOME score are grouped into goods input and time input. These are reported in \Cref{table:2}. Apart from measures of HOME section, several items included in the self-administered questions for children between 10-14 are also present and have the (NH) prefix.  
+
+For each age group, to generate the generic investment index, indicators of all items in \Cref{table:2} for the corresponding age are totalled then normalised to have a mean zero and one standard deviation. A similar procedure is also applied to goods investment index and time investment index. Other assessments of cognitive stimulation and emotional support constitute cognitive stimulation index and emotional support index. Both of which are measured in percentages.
+
+\begin{table}
+	\centering
+	\setlength{\extrarowheight}{0.2em}
+	\caption{Components of HOME index}	
+	\input{Tables/table-2-HOME}
+	\label{table:2}
+\end{table}  
+
+\subsection{Summary statistics}
+Descriptive statistics of variables used in our analysis are reported in \Cref{table:3}. 
+
+\begin{ThreePartTable}
+	\centering
+	\setlength{\extrarowheight}{0.2em}
+	\begin{TableNotes}\footnotesize
+		\item[a] Mean and standard deviations enclosed in parentheses are reported for all numerical variables. Only frequency is reported for categorical variables.
+	\end{TableNotes}
+	\input{../../NLSY79/tex/summary}
+\end{ThreePartTable}
 
 
 
