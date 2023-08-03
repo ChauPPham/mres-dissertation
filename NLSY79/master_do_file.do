@@ -809,32 +809,8 @@ label define DEGREE_CAT 0 "No high school" 1 "Some high school" 2 "High school" 
 label values DEGREE_CAT DEGREE_CAT
 save POOL_long.dta, replace
 
-**# Bookmark #10
-/*==========================================*/
-/*========== Data analysis (wide) ==========*/
-/*==========================================*/
-use POOL.dta, clear
-/* Using 1993 risk aversion question -> investment in 1994*/
-gen RISK_AVERSE_1993 = 0 if R4395800 >= 0
-replace RISK_AVERSE_1993 = 1 if R4395800 == 0 & R4396000 == 0 & year == 1994
-replace RISK_AVERSE_1993 = 2 if R4395800 == 0 & R4396000 == 1 & year == 1994
-replace RISK_AVERSE_1993 = 3 if R4395800 == 1 & R4395900 == 0 & year == 1994
-replace RISK_AVERSE_1993 = 4 if R4395800 == 1 & R4395900 == 1 & year == 1994
-replace RISK_AVERSE_1993 = . if RISK_AVERSE_1993 == 0
-label define RISK_1993 1 "Very strongly risk averse" 2 "Strongly risk averse" 3 "Moderately risk averse" 4 "Weakly risk averse"
-label values RISK_AVERSE_1993 RISK_1993
-
-
-/* Using 2010 risk-aversion questions*/
-gen RISK_AVERSE_2010 = 0 if T3094500 >= 0
-replace RISK_AVERSE_2010 = 1 if T3094500 == 1 & T3094700 == 1 & year == 2010
-replace RISK_AVERSE_2010 = 2 if T3094500 == 1 & T3094700 == 2 & year == 2010
-replace RISK_AVERSE_2010 = 3 if T3094500 == 2 & T3094600 == 1 & year == 2010
-replace RISK_AVERSE_2010 = 4 if T3094500 == 2 & T3094600 == 2 & year == 2010
-replace RISK_AVERSE_2010 = . if RISK_AVERSE == 0 
-
-
-**# Bookmark #11
+**# Bookmark #10 Data analysis
+*=====================================================================================*
 /*==========================================*/
 /*========== Data analysis (long) ==========*/
 /*==========================================*/
@@ -849,7 +825,8 @@ replace RISK_AVERSE1 = 1 if RISK1_a == 1 & RISK1_b == 1
 label define RISK1 4 "Very strongly risk averse" 3 "Strongly risk averse" 2 "Moderately risk averse" 1 "Weakly risk averse"
 label values RISK_AVERSE1 RISK1
 
-/* Using the same categorical variable for risk aversion based on 2010-2014 questions */
+/* Using the same categorical variable for risk aversion based on 2010-2014 questions */ 
+* THIS PART NEEDS FURTHER CONSIDERATION
 replace RISK_AVERSE1 = 4 if RISK2_a == 1 & RISK2_c == 1
 replace RISK_AVERSE1 = 3 if RISK2_a == 1 & RISK2_c == 2
 replace RISK_AVERSE1 = 2 if RISK2_a == 2 & RISK2_b == 1
@@ -875,8 +852,13 @@ by R0000100: replace NO_SIB = NO_SIB[_N] - 1
 /* Generate variable for age at first birth */
 by R0000100: egen AGE_FIRST_BIRTH = min(C0007000)
 
+* Run MLE to generate gamma - coefficient of relative risk aversion 
+* ASSUMPTION: 
+* 1. risk attitudes vary from year to year (since there is only one type of question, cannot elicit status quo bias (Kimball, 2008, 2009))
+* 2. individuals have constant relative  risk preference (CRRA)
+do risk_mle.do
 
-**# Bookmark #12
+**# Bookmark #11 Summary table
 /*==============================================================*/
 /*==================== Output summary table ====================*/
 /*==============================================================*/
@@ -916,12 +898,12 @@ replace DEGREE_SEP = 3 if DEGREE_CAT > 3
 label define DEGREE_SEP 0 "\thead{No \\high school}" 1 "\thead{Some \\high school}" 2 "\thead{High school}" 3 "\thead{College\\ and above}"	/* Need to manually change to two lines in tex */
 label values DEGREE_SEP DEGREE_SEP
 
-qui estpost tabstat RISK_AVERSION1 RISK_AVERSION2 RISK_AVERSION3 RISK_AVERSION4 INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE SEX2 RACE1 RACE2 RACE3 C000700 AGE_FIRST_BIRTH NO_SIB NO_UNDER_18 R0618300 R0006500 R0007900 HH_INCOME if RISK_AVERSE1 != . & NO_UNDER_18 >= 0 & R0618300 >= 0 & R0006500 >= 0 & R0007900 >= 0, by(DEGREE_SEP) statistics(mean sd) columns(statistics)
+qui estpost tabstat gamma RISK_AVERSION1 RISK_AVERSION2 RISK_AVERSION3 RISK_AVERSION4 INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE SEX2 RACE1 RACE2 RACE3 C000700 AGE_FIRST_BIRTH NO_SIB NO_UNDER_18 R0618300 R0006500 R0007900 HH_INCOME if RISK_AVERSE1 != . & NO_UNDER_18 >= 0 & R0618300 >= 0 & R0006500 >= 0 & R0007900 >= 0, by(DEGREE_SEP) statistics(mean sd) columns(statistics)
 *esttab . using tex/summary.tex, main(mean %12.2f) aux(sd %12.2f) noobs nostar unstack nonote label replace booktabs nonum long title("Summary statistics \label{table:3}")
 esttab ., main(mean %12.2f) aux(sd %12.2f) nostar nonote label unstack nonum long title("Summary statistics")
 
 
-**# Bookmark #13
+**# Bookmark #13 Regression table
 /*==================================================================*/
 /*==================== Output regression tables ====================*/
 /*==================================================================*/
@@ -932,25 +914,26 @@ esttab ., main(mean %12.2f) aux(sd %12.2f) nostar nonote label unstack nonum lon
 * 5 - Emotional support (in %) (taken from HOME SECTION)
 eststo clear
 
-/*========== WITHOUT INTERACTION TERM ==========*/
+
+*==================== RISK AS GAMMA (COEF OF RRA) ============================*
 local identifier = 1
 quietly foreach i of varlist INV_ALL GOODS_ALL TIME_ALL {
-	reghdfe `i' i.RISK_AVERSE1 ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP != ., absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' gamma ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP != ., absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo model_`identifier'
 	
 	forval j = 0/3 {
-		reghdfe `i' i.RISK_AVERSE1 ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP == `j', absorb(year AGE_CAT) vce(cluster R0000100)
+		reghdfe `i' gamma ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP == `j', absorb(year AGE_CAT) vce(cluster R0000100)
 		eststo model_`identifier'_`j'
 	}
 	local ++identifier
 }
 
 quietly foreach i of varlist COG_SCORE EMO_SCORE {
-	reghdfe `i' i.RISK_AVERSE1 ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & `i' >= 0 & (DEGREE_SEP != .), absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' gamma ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & `i' >= 0 & (DEGREE_SEP != .), absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo model_`identifier'
 	
 	forval j = 0/3 {
-		reghdfe `i' i.RISK_AVERSE1 ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP == `j' & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
+		reghdfe `i' gamma ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP == `j' & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
 		eststo model_`identifier'_`j'
 	}
 	
@@ -971,6 +954,48 @@ forvalues i = 1/5 {
 */
 
 
+
+
+*==================== RISK AS CATEGORICAL VARIABLE ===========================*
+/*========== WITHOUT INTERACTION TERM ==========*/
+local identifier = 1
+quietly foreach i of varlist INV_ALL GOODS_ALL TIME_ALL {
+	reghdfe `i' i.RISK_AVERSE1 ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP != ., absorb(year AGE_CAT) vce(cluster R0000100)
+	eststo robust_`identifier'
+	
+	forval j = 0/3 {
+		reghdfe `i' i.RISK_AVERSE1 ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP == `j', absorb(year AGE_CAT) vce(cluster R0000100)
+		eststo robust_`identifier'_`j'
+	}
+	local ++identifier
+}
+
+quietly foreach i of varlist COG_SCORE EMO_SCORE {
+	reghdfe `i' i.RISK_AVERSE1 ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & `i' >= 0 & (DEGREE_SEP != .), absorb(year AGE_CAT) vce(cluster R0000100)
+	eststo robust_`identifier'
+	
+	forval j = 0/3 {
+		reghdfe `i' i.RISK_AVERSE1 ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP == `j' & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
+		eststo robust_`identifier'_`j'
+	}
+	
+	local ++identifier
+}
+
+
+forvalues i = 1/5 {
+	if `i' == 1 esttab robust_`i'*, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum sfmt(%12.3f)
+	if `i' > 1 esttab robust_`i'*, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum sfmt(%12.3f)
+}
+
+/*
+forvalues i = 1/5 {
+	if `i' == 1 esttab robust_`i'* using "tex/regression_1", keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum booktabs replace sfmt(%12.3f)
+	if `i' > 1 esttab robust_`i'* using "tex/regression_1", keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum booktabs append sfmt(%12.3f)
+}
+*/
+
+* THIS SECTION NEEDS MORE ATTENTION: SINCE NOT GROUPING OLD AND NEW QUESTIONS ANYMORE
 /*========== WITH INTERACTION TERM ==========*/
 label define NEW 0 "Old" 1 "New"
 label value NEW NEW 
