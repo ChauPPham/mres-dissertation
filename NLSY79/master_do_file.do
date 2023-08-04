@@ -822,15 +822,17 @@ replace RISK_AVERSE1 = 4 if RISK1_a == 0 & RISK1_c == 0
 replace RISK_AVERSE1 = 3 if RISK1_a == 0 & RISK1_c == 1
 replace RISK_AVERSE1 = 2 if RISK1_a == 1 & RISK1_b == 0
 replace RISK_AVERSE1 = 1 if RISK1_a == 1 & RISK1_b == 1
-label define RISK1 4 "Very strongly risk averse" 3 "Strongly risk averse" 2 "Moderately risk averse" 1 "Weakly risk averse"
+label define RISK1 4 "High risk aversion" 3 "Moderate risk aversion" 2 "Low risk aversion" 1 "Lowest risk aversion"
 label values RISK_AVERSE1 RISK1
 
 /* Using the same categorical variable for risk aversion based on 2010-2014 questions */ 
 * THIS PART NEEDS FURTHER CONSIDERATION
+/*
 replace RISK_AVERSE1 = 4 if RISK2_a == 1 & RISK2_c == 1
 replace RISK_AVERSE1 = 3 if RISK2_a == 1 & RISK2_c == 2
 replace RISK_AVERSE1 = 2 if RISK2_a == 2 & RISK2_b == 1
 replace RISK_AVERSE1 = 1 if RISK2_a == 2 & RISK2_b == 2
+*/
 
 /* Generate dummy variable for new and old series */
 gen NEW = 0

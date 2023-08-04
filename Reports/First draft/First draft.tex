@@ -86,22 +86,34 @@ Depending on respondents' answers to this question, survey participants were ask
 
 Using the series of questions on risk attitudes, following \citet{kimball2008imputing} and \citet{kimball2009risk}, under the assumption that respondents have constant relative risk aversion (CRRA) and risk tolerance are log-normally distributed, I calculated and imputed values of CRRA coefficient for each respondent. The procedure is as follows. First, assuming that CRRA well approximates individuals' utility over lifetime income,
 \[U(W)={W^{1-{1/\theta}}\over 1-{1/\theta}}\]
-where $\theta$ is the coefficient of relative risk tolerance and its reciprocal, $\gamma = 1/\theta$, coefficient of relative risk aversion, bounds on $\theta$ are calculated for each category in \Cref{table:1}. A second assumption I would emphasize here that deviates from \citet{kimball2008imputing} and \cite{kimball2009risk} is that respondents have time-varying risk preference. In the previously cited works, due to the structure of PSID surveys, there is only one response per individual, making the inference on the true risk preference impossible without further assumption. When there are multiple responses from each individual, under the assumption that the true risk preference remains constant over time, inference on the parameters of risk tolerance, and hence risk aversion, is possible.\footnote{As the true risk preference is constant, differences in responses of an individual are attributed to response error.} However, according to \citet{dohmen2011individual} and \citet{dohmen2017risk}, willingness to take risks vary over the course of life-cycle and trending downward as individuals age. Thus, to allow for time-varying risk preference, for each wave that collects the responses to risk preference questions, the mean log risk tolerance and standard deviation are calculated using maximum likelihood. The coefficient of risk aversion, $\gamma$ are then imputed using the conditional expectation that an individual belongs to a certain risk category $j$,
+where $\theta$ is the coefficient of relative risk tolerance and its reciprocal, $\gamma = 1/\theta$, coefficient of relative risk aversion, bounds on $\theta$ are reported in \Cref{table:2-risk-bound} for each category. A second assumption I would emphasize here that deviates from \citet{kimball2008imputing} and \cite{kimball2009risk} is that respondents have time-varying risk preference. In the previously cited works, due to the structure of PSID surveys, there is only one response per individual, making the inference on the true risk preference impossible without further assumption. When there are multiple responses from each individual, under the assumption that the true risk preference remains constant over time, inference on the parameters of risk tolerance, and hence risk aversion, is possible.\footnote{As the true risk preference is constant, differences in responses of an individual are attributed to response error.} However, according to \citet{dohmen2011individual} and \citet{dohmen2017risk}, willingness to take risks varies over the course of life-cycle and trends downward as individuals age. Thus, to allow for time-varying risk preference, for each wave that collects the responses to risk preference questions, the mean log risk tolerance is calculated using maximum likelihood.\footnote{For each year, MLE is carried out for the samples of mothers that have investment data on children reported for that year. The first wave of answers on risk preference is recoded as year 1994 instead of 1993 to match the closest corresponding investment data. Results of the MLE are reported in Appendix A.} The variance of log risk tolerance, on the other hand, is imputed from \cite{kimball2009risk} and assumed to be fixed across waves. While fixing the variance goes against the assumption of time-varying risk preference, the treatment is necessary as \citet{kimball2008imputing} pointed out the substantial noise in responses to questions of this nature. The coefficient of risk aversion, $\gamma$ are then imputed using the conditional expectation that an individual belongs to a certain risk category $j$,
+
 \begin{equation}
-	\mathbb E(\gamma|c=j)=\exp\Big(-\mu+{\sigma^2\over 2}\Big){\Phi\Big({\log(\bar{\theta}_j)-\mu+\sigma^2\over \sigma}\Big)-\Phi\Big({\log(\underline{\theta}_j)-\mu+\sigma^2\over \sigma}\Big)\over \Phi\Big({\log(\bar{\theta}_j)-\mu\over \sigma}\Big)-\Phi\Big({\log(\underline{\theta}_j)-\mu\over \sigma}\Big)}
+	\mathbb E(\gamma|c=j)=\exp\Big(-\mu+{\sigma_x^2\over 2}\Big){\Phi\Big({\log(\bar{\theta}_j)-\mu-b+\sigma_x^2\over \sigma_{\xi}}\Big)-\Phi\Big({\log(\underline{\theta}_j)-\mu-b+\sigma_x^2\over \sigma_{\xi}}\Big)\over \Phi\Big({\log(\bar{\theta}_j)-\mu-b\over \sigma_\xi}\Big)-\Phi\Big({\log(\underline{\theta}_j)-\mu-b\over \sigma_\xi}\Big)}
 	\label{eq:1-conditional-expectation}
 \end{equation}
-where $\mu$ and $\sigma$ are respectively the mean and standard log risk tolerance for a certain wave of response. $\bar \theta_j$ and $\underline{\theta}_j$ are upper and lower bounds on the coefficient of risk tolerance. Bounds on risk tolerance $\theta$ and imputed values of risk aversion $\gamma$ are reported in \Cref{table:2-risk-coefficient}. 
+
+where $\mu$ and $\sigma_x$ are respectively the mean and standard log risk tolerance for a certain wave of response. $\bar \theta_j$ and $\underline{\theta}_j$ are upper and lower bounds on the coefficient of risk tolerance. $b$ denotes status quo bias and $\sigma_\xi$ standard deviation of response error which take value of -0.21 and 1.69.\footnote{These values are computed for the Health and Retirement Study (HRS) capitalizing on the difference in responses to two different versions of the risk preference questions. For more information, see \citet{kimball2009risk} and their accompanying appendix.} Imputed values of $\gamma$ are shown in \Cref{table:3-imputed-risk}.
 
 \begin{table}[!h]
 	\centering
-	\setlength{\extrarowheight}{0.2em}
-	\caption{Imputed values of risk preference}	
+	\setlength{\extrarowheight}{0.3em}
+	\caption{Risk tolerance response category}	
 	\input{Tables/table-2-risk-coefficient}
-	\label{table:2-risk-coefficient}
+	\label{table:2-risk-bound}
 \end{table}
 
-a 4-level categorical variable denoting degrees of risk aversion is created. The specifics of the created variable is shown in \Cref{table:1}. As all the hypothetical lotteries on job returns deliver positive gains in expectation, it is only possible to classify those who choose ``Second job" in both questions they are presented as ``Weakly risk averse." Since there are no questions with the derived hypothetical lottery that pays 0 in expectation or involves expected loss, little can be inferred about those who are risk neutral or risk loving. 
+\begin{comment}
+	\begin{table}[!h]
+		\centering
+		\setlength{\extrarowheight}{0.3em}
+		\caption{Imputed coefficient of risk aversion}	
+		\input{Tables/table-3-risk-imputed}
+		\label{table:3-imputed-risk}
+	\end{table}
+	content...
+\end{comment}
+
 
 
 
