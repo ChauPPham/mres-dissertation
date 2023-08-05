@@ -922,22 +922,22 @@ eststo clear
 *==================== RISK AS GAMMA (COEF OF RRA) ============================*
 local identifier = 1
 quietly foreach i of varlist INV_ALL GOODS_ALL TIME_ALL {
-	reghdfe `i' gamma ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP != ., absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' gamma c.gamma#year ln_INCOME R0618301 i.C00054 i.C00053 NO_SIB C000700 R0006500 R0007900 if R0618301 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP != ., absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo model_`identifier'
 	
 	forval j = 0/3 {
-		reghdfe `i' gamma ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP == `j', absorb(year AGE_CAT) vce(cluster R0000100)
+		reghdfe `i' gamma c.gamma#year ln_INCOME R0618301 i.C00054 i.C00053 NO_SIB C000700 R0006500 R0007900 if R0618301 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP == `j', absorb(year AGE_CAT) vce(cluster R0000100)
 		eststo model_`identifier'_`j'
 	}
 	local ++identifier
 }
 
 quietly foreach i of varlist COG_SCORE EMO_SCORE {
-	reghdfe `i' gamma ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & `i' >= 0 & (DEGREE_SEP != .), absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' gamma c.gamma#year ln_INCOME R0618301 i.C00054 i.C00053 NO_SIB C000700 R0006500 R0007900 if R0618301 >= 0 & R0006500 >= 0 & R0007900 >= 0 & `i' >= 0 & (DEGREE_SEP != .), absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo model_`identifier'
 	
 	forval j = 0/3 {
-		reghdfe `i' gamma ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP == `j' & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
+		reghdfe `i' gamma c.gamma#year ln_INCOME R0618301 i.C00054 i.C00053 NO_SIB C000700 R0006500 R0007900 if R0618301 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP == `j' & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
 		eststo model_`identifier'_`j'
 	}
 	
