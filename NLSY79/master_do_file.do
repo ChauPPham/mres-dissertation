@@ -760,6 +760,21 @@ quietly foreach i of varlist T4996100 T4996200 T4996300 T4996400 T4996500 T49966
 	replace `i' = . if `i' < 0
 }
 
+/* Generate a categorical variable for risk aversion based on 1993-2006 questions*/
+gen RISK_AVERSE1 = .
+replace RISK_AVERSE1 = 4 if RISK1_a == 0 & RISK1_c == 0
+replace RISK_AVERSE1 = 3 if RISK1_a == 0 & RISK1_c == 1
+replace RISK_AVERSE1 = 2 if RISK1_a == 1 & RISK1_b == 0
+replace RISK_AVERSE1 = 1 if RISK1_a == 1 & RISK1_b == 1
+label define RISK1 4 "High risk aversion" 3 "Moderate risk aversion" 2 "Low risk aversion" 1 "Lowest risk aversion"
+label values RISK_AVERSE1 RISK1
+
+* Run MLE to generate gamma - coefficient of relative risk aversion 
+* ASSUMPTION: 
+* 1. risk attitudes vary from year to year (since there is only one type of question, cannot elicit status quo bias (Kimball, 2008, 2009))
+* 2. individuals have constant relative  risk preference (CRRA)
+do risk_mle.do
+
 *save NLSY79_long.dta, replace
 
 /* INACCURATE UNDERLYING THEORY
@@ -816,14 +831,6 @@ save POOL_long.dta, replace
 /*==========================================*/
 use POOL_long.dta, clear
 
-/* Generate a categorical variable for risk aversion based on 1993-2006 questions*/
-gen RISK_AVERSE1 = .
-replace RISK_AVERSE1 = 4 if RISK1_a == 0 & RISK1_c == 0
-replace RISK_AVERSE1 = 3 if RISK1_a == 0 & RISK1_c == 1
-replace RISK_AVERSE1 = 2 if RISK1_a == 1 & RISK1_b == 0
-replace RISK_AVERSE1 = 1 if RISK1_a == 1 & RISK1_b == 1
-label define RISK1 4 "High risk aversion" 3 "Moderate risk aversion" 2 "Low risk aversion" 1 "Lowest risk aversion"
-label values RISK_AVERSE1 RISK1
 
 /* Using the same categorical variable for risk aversion based on 2010-2014 questions */ 
 * THIS PART NEEDS FURTHER CONSIDERATION
@@ -854,11 +861,6 @@ by R0000100: replace NO_SIB = NO_SIB[_N] - 1
 /* Generate variable for age at first birth */
 by R0000100: egen AGE_FIRST_BIRTH = min(C0007000)
 
-* Run MLE to generate gamma - coefficient of relative risk aversion 
-* ASSUMPTION: 
-* 1. risk attitudes vary from year to year (since there is only one type of question, cannot elicit status quo bias (Kimball, 2008, 2009))
-* 2. individuals have constant relative  risk preference (CRRA)
-do risk_mle.do
 
 **# Bookmark #11 Summary table
 /*==============================================================*/
@@ -944,8 +946,8 @@ quietly foreach i of varlist COG_SCORE EMO_SCORE {
 
 
 forvalues i = 1/5 {
-	if `i' == 1 esttab model_`i'*, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum sfmt(%12.3f)
-	if `i' > 1 esttab model_`i'*, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum sfmt(%12.3f)
+	if `i' == 1 esttab model_`i'*, keep(gamma) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum sfmt(%12.3f)
+	if `i' > 1 esttab model_`i'*, keep(gamma) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum sfmt(%12.3f)
 }
 
 /*
@@ -962,22 +964,22 @@ forvalues i = 1/5 {
 /*========== WITHOUT INTERACTION TERM ==========*/
 local identifier = 1
 quietly foreach i of varlist INV_ALL GOODS_ALL TIME_ALL {
-	reghdfe `i' i.RISK_AVERSE1 ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP != ., absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' i.RISK_AVERSE1 ln_INCOME R0618300 i.C00054 i.C00053 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP != ., absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo robust_`identifier'
 	
 	forval j = 0/3 {
-		reghdfe `i' i.RISK_AVERSE1 ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP == `j', absorb(year AGE_CAT) vce(cluster R0000100)
+		reghdfe `i' i.RISK_AVERSE1 ln_INCOME R0618300 i.C00054 i.C00053 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP == `j', absorb(year AGE_CAT) vce(cluster R0000100)
 		eststo robust_`identifier'_`j'
 	}
 	local ++identifier
 }
 
 quietly foreach i of varlist COG_SCORE EMO_SCORE {
-	reghdfe `i' i.RISK_AVERSE1 ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & `i' >= 0 & (DEGREE_SEP != .), absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' i.RISK_AVERSE1 ln_INCOME R0618300 i.C00054 i.C00053 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & R0006500 >= 0 & R0007900 >= 0 & `i' >= 0 & (DEGREE_SEP != .), absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo robust_`identifier'
 	
 	forval j = 0/3 {
-		reghdfe `i' i.RISK_AVERSE1 ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP == `j' & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
+		reghdfe `i' i.RISK_AVERSE1 ln_INCOME R0618300 i.C00054 i.C00053 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP == `j' & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
 		eststo robust_`identifier'_`j'
 	}
 	
