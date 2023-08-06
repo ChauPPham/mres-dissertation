@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.8)  6 AUG 2023 18:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.8)  6 AUG 2023 22:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -768,37 +768,15 @@ Overfull \vbox (1.99994pt too high) detected at line 5
  []
 
 ) (Tables/table-3-risk-imputed.tex) [4] (Tables/table-4-HOME.tex)
-(../../NLSY79/tex/summary.tex
-Overfull \hbox (22.05826pt too wide) in alignment at lines 1--1
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (22.05826pt too wide) in alignment at lines 1--1
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (22.05826pt too wide) in alignment at lines 1--1
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (22.05826pt too wide) in alignment at lines 1--1
- [] [] [] [] [] [] 
- []
-
-LaTeX Font Info:    Trying to load font information for TS1+qpl on input line 6
+(Tables/table-5-summary.tex
+LaTeX Font Info:    Trying to load font information for TS1+qpl on input line 5
 2.
+
 (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/tex-gyre\ts1qpl.fd
 File: ts1qpl.fd 2009/09/25 v1.2 font definition file for TS1/qpl
-)
-Overfull \hbox (22.05826pt too wide) in alignment at lines 1--66
- [] [] [] [] [] [] 
- []
-
-[5]) [6{C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q
--ts1.enc}] (First draft.bbl [7] [8]) [9] (First draft.aux)
+))
+[5] (First draft.bbl [6] [7{C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/
+enc/dvips/tex-gyre/q-ts1.enc}] [8]) [9] (First draft.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
@@ -807,13 +785,13 @@ Package rerunfilecheck Info: File `"First draft".out' has not changed.
 (rerunfilecheck)             Checksum: 8CF9865F163BFE75FCE19A636B99BBE3;1015.
  ) 
 Here is how much of TeX's memory you used:
- 17172 strings out of 475551
- 289540 string characters out of 5762555
- 1962238 words of memory out of 5000000
- 38016 multiletter control sequences out of 15000+600000
- 610600 words of font info for 91 fonts, out of 8000000 for 9000
+ 17158 strings out of 475551
+ 289256 string characters out of 5762555
+ 1966238 words of memory out of 5000000
+ 38005 multiletter control sequences out of 15000+600000
+ 604652 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,25n,80p,2215b,702s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 63i,25n,68p,2215b,702s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\hoang\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbold/dpi600\bbo
 ld10.pk><C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmex10.pfb><C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -829,7 +807,7 @@ b><C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qpl
 b.pfb><C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre
 /qplr.pfb><C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-
 gyre/qplri.pfb>
-Output written on "First draft.pdf" (9 pages, 316792 bytes).
+Output written on "First draft.pdf" (9 pages, 314760 bytes).
 PDF statistics:
  296 PDF objects out of 1000 (max. 8388607)
  65 named destinations out of 1000 (max. 500000)

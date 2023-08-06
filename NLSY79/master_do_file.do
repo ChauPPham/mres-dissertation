@@ -901,12 +901,12 @@ gen DEGREE_SEP = .
 replace DEGREE_SEP = 0 if DEGREE_CAT <= 1
 replace DEGREE_SEP = 1 if DEGREE_CAT == 2
 replace DEGREE_SEP = 2 if DEGREE_CAT >= 3 & DEGREE_CAT != .
-label define DEGREE_SEP 0 "\thead{high school\\\\dropout}" 1 "\thead{High school}" 2 "\thead{College}" /* Need to manually change to two lines in tex */
+label define DEGREE_SEP 0 "\thead{High school\\\\dropout}" 1 "\thead{High school}" 2 "\thead{College}" /* Need to manually change to two lines in tex */
 label values DEGREE_SEP DEGREE_SEP
 
-qui estpost tabstat gamma INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE SEX2 RACE1 RACE2 RACE3 C000700 AGE_FIRST_BIRTH NO_SIB R0618300 R0006500 R0007900 HH_INCOME if RISK_AVERSE1 != . & NO_UNDER_18 >= 0 & R0618300 >= 0 & R0006500 >= 0 & R0007900 >= 0, by(DEGREE_SEP) statistics(mean sd) columns(statistics)
-*esttab . using tex/summary.tex, main(mean %12.2f) aux(sd %12.2f) noobs nostar unstack nonote label replace booktabs nonum long title("Summary statistics \label{table:3}")
-esttab ., main(mean %12.2f) aux(sd %12.2f) nostar nonote label unstack nonum long title("Summary statistics") noobs
+qui estpost tabstat gamma INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE SEX2 RACE1 RACE2 RACE3 C000700 AGE_FIRST_BIRTH NO_SIB R0618300 R0006500 R0007900 HH_INCOME if RISK_AVERSE1 != . & NO_UNDER_18 >= 0 & R0618300 >= 0 & R0006500 >= 0 & R0007900 >= 0, by(DEGREE_SEP) statistics(mean sd n) columns(statistics)
+*esttab . using tex/summary.tex, main(mean %12.2f) aux(sd %12.2f) noobs nostar unstack nonote label replace booktabs nonum title("Summary statistics \label{table:5-summary}")
+esttab ., main(mean %12.2f n) aux(sd %12.2f) nostar nonote label unstack nonum long title("Summary statistics") noobs
 
 
 **# Bookmark #13 Regression table

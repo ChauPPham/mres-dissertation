@@ -1,0 +1,3313 @@
+R00001.00    [CASEID]                                       Survey Year: 1979
+  PRIMARY VARIABLE
+
+ 
+             IDENTIFICATION CODE
+ 
+ORIGINAL QUESTION NAME: CASEID
+ 
+NOTE: THIS NUMBER WAS ASSIGNED ACCORDING TO THE RECORD NUMBER OF EACH RESPONDENT
+ON THE TAPE. THE FIRST RESPONDENT WAS ASSIGNED ID#1, THE SECOND WAS ASSIGNED 
+ID#2, ETC.
+ 
+ACTUAL NUMBER
+ 
+UNIVERSE: All
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12686   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:          12686        Mean:              6343.5
+ 
+Lead In: None.
+Default Next Question: R00001.49
+--------------------------------------------------------------------------------
+R00005.00    [Q1-3_A~Y]                                     Survey Year: 1979
+  PRIMARY VARIABLE
+
+ 
+             DATE OF BIRTH - YEAR
+ 
+ORIGINAL QUESTION NAME: S01Q01A
+ 
+SEE R(3.)
+ 
+ACTUAL YEAR
+ 
+UNIVERSE: All
+ 
+    1680          57
+    1677          58
+    1722          59
+    1662          60
+    1530          61
+    1600          62
+    1550          63
+    1265          64
+  -------
+   12686
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12686   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:             57        Max:             64        Mean:               60.34
+ 
+Lead In: R00003.00[Default]
+Default Next Question: R00006.00
+--------------------------------------------------------------------------------
+R00006.00    [FAM-1B]                                       Survey Year: 1979
+  PRIMARY VARIABLE
+
+ 
+             AGE OF R
+ 
+ORIGINAL QUESTION NAME: S01Q01B
+ 
+AND THAT MAKES YOU (R'S AGE ON HOUSEHOLD ENUMERATION). IS THAT CORRECT ? (IF 
+NECESSARY CORRECT HOUSEHOLD ENUMERATION.)
+ 
+ACTUAL AGE
+ 
+UNIVERSE: All
+ 
+     950          14
+    1563          15
+    1561          16
+    1508          17
+    1634          18
+    1677          19
+    1666          20
+    1690          21
+     437          22
+  -------
+   12686
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12686   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:             14        Max:             22        Mean:                17.9
+ 
+Lead In: R00005.00[Default]
+Default Next Question: R00007.00
+--------------------------------------------------------------------------------
+R00019.00    [FAM-7]                                        Survey Year: 1979
+  PRIMARY VARIABLE
+
+ 
+             WITH WHOM DID R LIVE AT AGE 14?
+ 
+ORIGINAL QUESTION NAME: S01Q07
+ 
+(HAND CARD B.) PLEASE TAKE A LOOK AT THIS CARD AND TELL ME WITH WHOM YOU 
+(ARE/WERE) LIVING (WHEN YOU WERE 14 YEARS OLD). (CODE ONE CATEGORY FOR 'ADULT 
+WOMAN' AND ONE CATEGORY FOR 'ADULT MAN'. PROBE IF NECESSARY: AND WHICH LETTER IN
+BOX (1 OR 2) BEST DESCRIBES WHO YOU (ARE/WERE) LIVING WITH (THEN?)
+ 
+UNIVERSE: All
+ 
+    8570      11 FATHER-MOTHER
+     191      12 FATHER-STEPMOTHER
+      30      13 FATHER-OTHER WOMAN RELATIVE
+       9      14 FATHER-OTHER WOMAN
+     146      15 FATHER-NO WOMAN
+       6      19 FATHER-MISSING WOMAN
+     841      21 STEPFATHER-MOTHER
+      14      22 STEPFATHER-STEPMOTHER
+       2      23 STEPFATHER-WOMAN RELATIVE
+       2      24 STEPFATHER-OTHER WOMAN
+       2      25 STEPFATHER-NO WOMAN
+     102      31 MAN RELATIVE-MOTHER
+       2      32 MAN RELATIVE-STEPMOTHER
+     235      33 MAN RELATIVE-WOMAN RELATIVE
+       1      34 MAN RELATIVE-OTHER WOMAN
+      17      35 MAN RELATIVE-NO WOMAN
+      54      41 OTHER MAN-MOTHER
+       1      42 OTHER MAN-STEPMOTHER
+       9      43 OTHER MAN-WOMAN RELATIVE
+      57      44 OTHER MAN-OTHER WOMAN
+       6      45 OTHER MAN-NO WOMAN
+    2124      51 NO MAN-MOTHER
+       1      52 NO MAN-STEPMOTHER
+     138      53 NO MAN-WOMAN RELATIVE
+      18      54 NO MAN-OTHER WOMAN
+       3      55 NO MAN-NO WOMAN
+      22      80 OTHER ARRANGEMENT
+       3      90 ON MY OWN
+      60      91 MISSING MAN-MOTHER
+       1      93 MISSING MAN-WOMAN RELATIVE
+  -------
+   12667
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      19
+TOTAL =========>   12686   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:             11        Max:             93        Mean:               20.44
+ 
+Lead In: R00018.00[Default]
+Default Next Question: R00020.00
+--------------------------------------------------------------------------------
+R01736.00    [SAMPLE_ID]                                    Survey Year: 1979
+  PRIMARY VARIABLE
+
+ 
+             SAMPLE IDENTIFICATION CODE
+ 
+ORIGINAL QUESTION NAME: S24Q01
+ 
+UNIVERSE: Entire Sample
+ 
+    2236       1 CROSS MALE WHITE
+     203       2 CROSS MALE WH. POOR
+     346       3 CROSS MALE BLACK
+     218       4 CROSS MALE HISPANIC
+    2279       5 CROSS FEMALE WHITE
+     198       6 CROSS FEMALE WH POOR
+     405       7 CROSS FEMALE BLACK
+     226       8 CROSS FEMALE HISPANIC
+     742       9 SUP MALE WH POOR
+    1105      10 SUP MALE BLACK
+     729      11 SUP MALE HISPANIC
+     901      12 SUP FEM WH POOR
+    1067      13 SUP FEMALE BLACK
+     751      14 SUP FEMALE HISPANIC
+     609      15 MIL MALE WHITE
+     162      16 MIL MALE BLACK
+      53      17 MIL MALE HISPANIC
+     342      18 MIL FEMALE WHITE
+      89      19 MIL FEMALE BLACK
+      25      20 MIL FEMALE HISPANIC
+  -------
+   12686
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12686   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:             20        Mean:                8.17
+ 
+
+
+NOTE: MARCH 1, 1986  NORC
+ 
+SEX CODE CHANGED ON 42 CASES
+ 
+Lead In: R01735.19[Default]
+Default Next Question: R01737.00
+--------------------------------------------------------------------------------
+R02147.00    [SAMPLE_RACE]                                  Survey Year: 78SCRN
+  PRIMARY VARIABLE
+
+ 
+             R'S RACIAL/ETHNIC COHORT FROM SCREENER
+ 
+UNIVERSE: Entire Sample
+ 
+    2002       1 HISPANIC
+    3174       2 BLACK
+    7510       3 NON-BLACK, NON-HISPANIC
+  -------
+   12686
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12686   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:              3        Mean:                2.43
+ 
+
+
+NOTE: AUGUST 26, 1980  DENNIS GREY
+ 
+DESCRIPTION:
+COHORT=3;
+IF R(1736.)=4 ! R(1736.)=8 ! R(1736.)=11 ! R(1736.)=14 THEN COHORT=1;
+IF R(1736.)=17 ! R(1736.)=20 THEN COHORT=1;
+IF R(1736.)=3 ! R(1736.)=7 ! R(1736.)=10 ! R(1736.)=13 THEN COHORT=2;
+IF R(1736.)=16 ! R(1736.)=19 THEN COHORT=2;
+R(2147.)=COHORT;
+ 
+Lead In: R02146.00[Default]
+Default Next Question: R02148.00
+--------------------------------------------------------------------------------
+R02148.00    [SAMPLE_SEX]                                   Survey Year: 1979
+  PRIMARY VARIABLE
+
+ 
+             SEX OF R
+ 
+UNIVERSE: Entire sample
+ 
+    6403       1 MALE
+    6283       2 FEMALE
+  -------
+   12686
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12686   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:              2        Mean:                 1.5
+ 
+
+
+NOTE: AUGUST 26, 1980  DENNIS GREY
+MARCH 1, 1986  NORC
+ 
+DESCRIPTION:
+IF (R(1736.)>0 & R(1736.)<=4) ! (R(1736.)>=9 & R(1736.)<=11) THEN SEX=1;
+IF R(1736.)>=15 & R(1736.)<=17 THEN SEX=1;
+IF (R(1736.)>=5 & R(1736.)<=8) ! (R(1736.)>=12 & R(1736.)<=14) THEN SEX=
+IF R(1736.)>=18 & R(1736.)<=20 THEN SEX=2;
+R(2148.)=SEX;
+SEX CODE CHANGED ON 42 CASES
+ 
+Lead In: R02147.00[Default]
+Default Next Question: R02149.00
+--------------------------------------------------------------------------------
+R02149.01    [ESR_COL]                                      Survey Year: 1979
+  PRIMARY VARIABLE
+
+ 
+             EMPLOYMENT STATUS RECODE (COLLAPSED)
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS RECODE
+ 
+UNIVERSE: Entire Sample
+ 
+    5161       1 EMPLOYED
+    1867       2 UNEMPLOYED
+    4440       3 OUT OF LABOR FORCE
+    1217       4 IN ACTIVE FORCES
+  -------
+   12685
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       1
+TOTAL =========>   12686   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:              4        Mean:                2.14
+ 
+Lead In: R02149.00[Default]
+Default Next Question: R02151.00
+--------------------------------------------------------------------------------
+R02175.00    [MARSTAT-COL]                                  Survey Year: 1979
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+UNIVERSE: Entire Sample
+ 
+   11117       1 NEVER MARRIED
+    1302       2 MARRIED, SPOUSE PRESENT
+     265       3 OTHER
+  -------
+   12684
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12684   VALID SKIP(-4)       2     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:              3        Mean:                1.14
+ 
+
+
+NOTE: AUGUST 26, 1980  DENNIS GREY
+ 
+DESCRIPTION:
+MAR=-4;
+IF R(106.)=5 THEN MAR=1;
+ELSE IF R(106.)>=2 & R(106.)<=4 THEN MAR=3;
+ELSE IF R(106.)=1 THEN DO;
+   IF R(1749.)=1 ! R(1758.)=1 ! R(1767.)=1 ! R(1776.)=1 !
+      R(1785.)=1 ! R(1794.)=1 ! R(1803.)=1 ! XN1637)=1 !
+      R(1821.)=1 ! R(1830.)=1 ! R(1839.)=1 ! R(1848.)=1 !
+      R(1857.)=1 ! XN1691)=1 ! R(1875.)=1 THEN MAR=2;
+   ELSE MAR=3;
+END;
+R(2175.)=MAR;
+ 
+Lead In: R02167.01[Default]
+Default Next Question: R02175.01
+--------------------------------------------------------------------------------
+R02175.02    [FAMSIZE]                                      Survey Year: 1979
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: VARIABLE CREATION PROCEDURE IS COMPARABLE TO COMPUTATION OF "FAMILY SIZE" 
+USED TO DETERMINE "FAMILY POVERY STATUS". SEE APPENDIX 2: TOTAL NET FAMILY 
+INCOME.
+ 
+ACTUAL NUMBER
+ 
+UNIVERSE: Entire Sample
+ 
+    1843           1
+    1194           2
+    1901           3
+    2233           4
+    2117           5
+    1466           6
+     845           7
+     477           8
+     249           9
+     200          10
+      98          11
+      19          12
+      17          13
+       6          14
+      21          15
+  -------
+   12686
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12686   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:             15        Mean:                4.27
+ 
+Lead In: R02175.01[Default]
+Default Next Question: R02179.00
+--------------------------------------------------------------------------------
+R04052.10    [FAMSIZE]                                      Survey Year: 1980
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: VARIABLE CREATION PROCEDURE IS COMPARABLE TO COMPUTATION OF
+"FAMILY SIZE" USED TO DETERMINE "FAMILY POVERY STATUS". SEE APPENDIX
+2: TOTAL NET FAMILY INCOME.
+ 
+ACTUAL NUMBER
+ 
+UNIVERSE: All
+ 
+       0           0: < 1
+    1808           1
+    1382           2
+    2102           3
+    2100           4
+    1926           5
+    1230           6
+     694           7
+     383           8
+     230           9
+     129          10
+      92          11
+      23          12
+      19          13
+      15          14
+       8          15
+       0          16
+       0          17 TO 99999: 17+
+  -------
+   12141
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12141   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     545
+ 
+Min:              1        Max:             15        Mean:                4.07
+ 
+Lead In: R04052.01[Default]
+Default Next Question: R04056.00
+--------------------------------------------------------------------------------
+R04056.00    [MARSTAT-COL]                                  Survey Year: 1980
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+UNIVERSE: All
+ 
+   10025       1 NEVER MARRIED
+    1745       2 MARRIED, SPOUSE PRESENT
+     369       3 OTHER
+  -------
+   12139
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>   12141   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     545
+ 
+Min:              1        Max:              3        Mean:                 1.2
+ 
+Lead In: R04052.10[Default]
+Default Next Question: R04056.01
+--------------------------------------------------------------------------------
+R04063.01    [ESR_COL]                                      Survey Year: 1980
+  PRIMARY VARIABLE
+
+ 
+             EMPLOYMENT STATUS RECODE (COLLAPSED)
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS RECODE
+ 
+UNIVERSE: All
+ 
+    5733       1 EMPLOYED
+    1766       2 UNEMPLOYED
+    3648       3 OUT OF LABOR FORCE
+     994       4 IN ACTIVE FORCES
+  -------
+   12141
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12141   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     545
+ 
+Min:              1        Max:              4        Mean:                1.99
+ 
+Lead In: R04063.00[Default]
+Default Next Question: R04063.10
+--------------------------------------------------------------------------------
+R06186.00    [MARSTAT-COL]                                  Survey Year: 1981
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+UNIVERSE: All
+ 
+    9354       1 NEVER MARRIED
+    2362       2 MARRIED, SPOUSE PRESENT
+     479       3 OTHER
+  -------
+   12195
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12195   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     491
+ 
+Min:              1        Max:              3        Mean:                1.27
+ 
+Lead In: R06185.10[Default]
+Default Next Question: R06186.01
+--------------------------------------------------------------------------------
+R06188.01    [ESR_COL]                                      Survey Year: 1981
+  PRIMARY VARIABLE
+
+ 
+             EMPLOYMENT STATUS RECODE (COLLAPSED)
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS RECODE
+ 
+UNIVERSE: All
+ 
+    6334       1 EMPLOYED
+    1770       2 UNEMPLOYED
+    3236       3 OUT OF LABOR FORCE
+     855       4 IN ACTIVE FORCES
+  -------
+   12195
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12195   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     491
+ 
+Min:              1        Max:              4        Mean:                1.89
+ 
+Lead In: R06188.00[Default]
+Default Next Question: R06188.10
+--------------------------------------------------------------------------------
+R06471.03    [FAMSIZE]                                      Survey Year: 1981
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: VARIABLE CREATION PROCEDURE IS COMPARABLE TO COMPUTATION OF
+"FAMILY SIZE" USED TO DETERMINE "FAMILY POVERY STATUS". SEE APPENDIX
+2: TOTAL NET FAMILY INCOME.
+ 
+ACTUAL NUMBER
+ 
+UNIVERSE: All
+ 
+       0           0: < 1
+    1937           1
+    1716           2
+    2201           3
+    2146           4
+    1722           5
+    1060           6
+     616           7
+     336           8
+     188           9
+     138          10
+      86          11
+      15          12
+      20          13
+       8          14
+       6          15
+       0          16
+       0          17 TO 99999: 17+
+  -------
+   12195
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12195   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     491
+ 
+Min:              1        Max:             15        Mean:                3.87
+ 
+Lead In: R06471.02[Default]
+Default Next Question: 
+--------------------------------------------------------------------------------
+R07803.00    [Q12-3]                                        Survey Year: 1982
+  PRIMARY VARIABLE
+
+ 
+             ALCOHOL USE - HAD ANY ALCOHOLIC BEVERAGES IN LAST MONTH?
+ 
+ORIGINAL QUESTION NAME: S13D4273
+ 
+HAVE YOU HAD ANY ALCOHOLIC BEVERAGES, INCLUDING BEER, WINE, OR LIQUOR, DURING 
+THE LAST 30 DAYS?
+ 
+UNIVERSE: R has drunk alcohol
+ 
+    7886       1 YES
+    3243       0 NO
+  -------
+   11129
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>   11131   VALID SKIP(-4)     992     NON-INTERVIEW(-5)     563
+ 
+Min:              0        Max:              1        Mean:                 .71
+ 
+Lead In: R07802.00[Default]
+Default Next Question: R07804.00
+--------------------------------------------------------------------------------
+R08967.10    [FAMSIZE]                                      Survey Year: 1982
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: VARIABLE CREATION PROCEDURE IS COMPARABLE TO COMPUTATION OF
+"FAMILY SIZE" USED TO DETERMINE "FAMILY POVERY STATUS". SEE APPENDIX
+2: TOTAL NET FAMILY INCOME.
+ 
+ACTUAL NUMBER
+ 
+       0           0: < 1
+    2077           1
+    1929           2
+    2352           3
+    2115           4
+    1542           5
+     915           6
+     526           7
+     300           8
+     164           9
+     105          10
+      41          11
+      31          12
+      14          13
+       6          14
+       6          15
+       0          16
+       0          17 TO 99999: 17+
+  -------
+   12123
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12123   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     563
+ 
+Min:              1        Max:             15        Mean:                3.67
+ 
+Lead In: R08967.01[Default]
+Default Next Question: R08967.11
+--------------------------------------------------------------------------------
+R08984.00    [MARSTAT-COL]                                  Survey Year: 1982
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+UNIVERSE: All
+ 
+    8549       1 NEVER MARRIED
+    2947       2 MARRIED, SPOUSE PRESENT
+     623       3 OTHER
+  -------
+   12119
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       4
+TOTAL =========>   12123   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     563
+ 
+Min:              1        Max:              3        Mean:                1.35
+ 
+Lead In: R08983.10[Default]
+Default Next Question: R08984.01
+--------------------------------------------------------------------------------
+R08985.01    [ESR_COL]                                      Survey Year: 1982
+  PRIMARY VARIABLE
+
+ 
+             EMPLOYMENT STATUS RECODE (COLLAPSED)
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS RECODE
+ 
+UNIVERSE: All
+ 
+    6593       1 EMPLOYED
+    1698       2 UNEMPLOYED
+    3007       3 OUT OF LABOR FORCE
+     825       4 IN ACTIVE FORCES
+  -------
+   12123
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12123   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     563
+ 
+Min:              1        Max:              4        Mean:                1.84
+ 
+Lead In: R08985.00[Default]
+Default Next Question: R08985.10
+--------------------------------------------------------------------------------
+R10219.00    [Q12-3]                                        Survey Year: 1983
+  PRIMARY VARIABLE
+
+ 
+             ALCOHOL USE - HAD ANY ALCOHOLIC BEVERAGES IN LAST MONTH?
+ 
+ORIGINAL QUESTION NAME: Q3824
+ 
+HAVE YOU HAD ANY ALCOHOLIC BEVERAGES, INCLUDING BEER, WINE, OR LIQUOR, DURING 
+THE LAST 30 DAYS?
+ 
+    8066       1 YES
+    3351       0 NO
+  -------
+   11417
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+Invalid Skip(-3)       6
+TOTAL =========>   11424   VALID SKIP(-4)     797     NON-INTERVIEW(-5)     465
+ 
+Min:              0        Max:              1        Mean:                 .71
+ 
+Lead In: R10218.00[Default]
+Default Next Question: R10220.00
+--------------------------------------------------------------------------------
+R11444.10    [FAMSIZE]                                      Survey Year: 1983
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: VARIABLE CREATION PROCEDURE IS COMPARABLE TO COMPUTATION OF
+"FAMILY SIZE" USED TO DETERMINE "FAMILY POVERY STATUS". SEE APPENDIX
+2: TOTAL NET FAMILY INCOME.
+ 
+ACTUAL NUMBER
+ 
+       0           0: < 1
+    2229           1
+    2133           2
+    2494           3
+    2149           4
+    1402           5
+     782           6
+     408           7
+     262           8
+     155           9
+      92          10
+      50          11
+      31          12
+      18          13
+       4          14
+      12          15
+       0          16
+       0          17 TO 99999: 17+
+  -------
+   12221
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12221   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     465
+ 
+Min:              1        Max:             15        Mean:                3.51
+ 
+Lead In: R11444.01[Default]
+Default Next Question: R11445.00
+--------------------------------------------------------------------------------
+R11447.01    [ESR_COL]                                      Survey Year: 1983
+  PRIMARY VARIABLE
+
+ 
+             EMPLOYMENT STATUS RECODE (COLLAPSED)
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS RECODE
+ 
+    6956       1 EMPLOYED
+    1735       2 UNEMPLOYED
+    2750       3 OUT OF LABOR FORCE
+     780       4 IN ACTIVE FORCES
+  -------
+   12221
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12221   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     465
+ 
+Min:              1        Max:              4        Mean:                1.78
+ 
+Lead In: R11447.00[Default]
+Default Next Question: R11447.10
+--------------------------------------------------------------------------------
+R11449.00    [MARSTAT-COL]                                  Survey Year: 1983
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+    7840       1 NEVER MARRIED
+    3605       2 MARRIED, SPOUSE PRESENT
+     774       3 OTHER
+  -------
+   12219
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>   12221   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     465
+ 
+Min:              1        Max:              3        Mean:                1.42
+ 
+Lead In: R11448.00[Default]
+Default Next Question: R11449.01
+--------------------------------------------------------------------------------
+R13910.00    [Q12-3]                                        Survey Year: 1984
+  PRIMARY VARIABLE
+
+ 
+             ALCOHOL USE - HAD ANY ALCOHOLIC BEVERAGES IN LAST MONTH?
+ 
+ORIGINAL QUESTION NAME: Q5242
+ 
+HAVE YOU HAD ANY ALCOHOLIC BEVERAGES, INCLUDING BEER, WINE, OR
+LIQUOR, DURING THE LAST 30 DAYS?
+ 
+UNIVERSE: R has drunk alcohol
+ 
+    8297       1 YES
+    3132       0 NO
+  -------
+   11429
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+Invalid Skip(-3)       7
+TOTAL =========>   11437   VALID SKIP(-4)     632     NON-INTERVIEW(-5)     617
+ 
+Min:              0        Max:              1        Mean:                 .73
+ 
+Lead In: R13909.00[Default]
+Default Next Question: R13911.00
+--------------------------------------------------------------------------------
+R13957.00    [DS-11]                                        Survey Year: 1984
+  PRIMARY VARIABLE
+
+ 
+             DRUG USE - # OF TIMES USED MARIJUANA OR HASHISH IN PAST 30 DAYS
+ 
+ORIGINAL QUESTION NAME: Q5338
+ 
+(HAND CARD NN) DURING THE PAST 30 DAYS, ON HOW MANY OCCASIONS HAVE YOU USED 
+MARIJUANA OR HASHISH?
+ 
+     287       0 NONE
+     650       1 1-2 OCCASIONS
+     448       2 3-5 OCCASIONS
+     330       3 6-9 OCCASIONS
+     397       4 10-19 OCCASIONS
+     271       5 20-39 OCCASIONS
+     210       6 40 OR MORE OCCASIONS
+  -------
+    2593
+ 
+Refusal(-1)            2
+Don't Know(-2)         3
+Invalid Skip(-3)      72
+TOTAL =========>    2670   VALID SKIP(-4)    9399     NON-INTERVIEW(-5)     617
+ 
+Min:              0        Max:              6        Mean:                 2.6
+ 
+Lead In: R13956.00[Default]
+Default Next Question: R13960.00
+--------------------------------------------------------------------------------
+R14041.00    [DS-12]                                        Survey Year: 1984
+  PRIMARY VARIABLE
+
+ 
+             DRUG USE - # OF TIMES USED COCAINE IN LIFETIME
+ 
+ORIGINAL QUESTION NAME: Q5459
+ 
+SEE R(14029.) COCAINE
+ 
+       0       0 NEVER USED
+     994       1 1-9 OCCASIONS
+     489       2 10-39 OCCASIONS
+     240       3 40-99 OCCASIONS
+     173       4 100-999 OCCASIONS
+      67       5 1,000 OR MORE OCCASIONS
+  -------
+    1963
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+Invalid Skip(-3)      58
+TOTAL =========>    2022   VALID SKIP(-4)   10047     NON-INTERVIEW(-5)     617
+ 
+Min:              1        Max:              5        Mean:                1.89
+ 
+Lead In: R14040.00[Default]
+Default Next Question: R14042.00
+--------------------------------------------------------------------------------
+R14047.00    [DRUG-27]                                      Survey Year: 1984
+  PRIMARY VARIABLE
+
+ 
+             DRUG USE - # OF TIMES EVER USED OTHER NARCOTICS
+ 
+ORIGINAL QUESTION NAME: Q5467
+ 
+SEE R(14029.) OTHER NARCOTICS
+ 
+       0       0 NEVER USED
+     348       1 1-9 OCCASIONS
+     120       2 10-39 OCCASIONS
+      52       3 40-99 OCCASIONS
+      37       4 100-999 OCCASIONS
+      16       5 1,000 OR MORE OCCASIONS
+  -------
+     573
+ 
+Refusal(-1)            2
+Don't Know(-2)         0
+Invalid Skip(-3)      57
+TOTAL =========>     632   VALID SKIP(-4)   11437     NON-INTERVIEW(-5)     617
+ 
+Min:              1        Max:              5        Mean:                 1.7
+ 
+Lead In: R14046.00[Default]
+Default Next Question: R14048.00
+--------------------------------------------------------------------------------
+R14053.00    [DRUG-33]                                      Survey Year: 1984
+  PRIMARY VARIABLE
+
+ 
+             DRUG USE - # OF TIMES EVER USED OTHER DRUGS
+ 
+ORIGINAL QUESTION NAME: Q5475
+ 
+SEE R(14029.) OTHER
+ 
+       0       0 NEVER USED
+      57       1 1-9 OCCASIONS
+      14       2 10-39 OCCASIONS
+       7       3 40-99 OCCASIONS
+       7       4 100-999 OCCASIONS
+       4       5 1,000 OR MORE OCCASIONS
+  -------
+      89
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      80
+TOTAL =========>     169   VALID SKIP(-4)   11900     NON-INTERVIEW(-5)     617
+ 
+Min:              1        Max:              5        Mean:                1.73
+ 
+Lead In: R14052.00[Default]
+Default Next Question: R14054.00
+--------------------------------------------------------------------------------
+R15196.10    [FAMSIZE]                                      Survey Year: 1984
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: VARIABLE CREATION PROCEDURE IS COMPARABLE TO COMPUTATION OF
+"FAMILY SIZE" USED TO DETERMINE "FAMILY POVERY STATUS". SEE APPENDIX
+2: TOTAL NET FAMILY INCOME.
+ 
+ACTUAL NUMBER
+ 
+       0           0: < 1
+    2382           1
+    2226           2
+    2610           3
+    2108           4
+    1235           5
+     641           6
+     345           7
+     243           8
+     128           9
+      64          10
+      40          11
+      22          12
+      17          13
+       6          14
+       2          15
+       0          16
+       0          17 TO 99999: 17+
+  -------
+   12069
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12069   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     617
+ 
+Min:              1        Max:             15        Mean:                3.34
+ 
+Lead In: R15196.01[Default]
+Default Next Question: R15197.00
+--------------------------------------------------------------------------------
+R15199.01    [ESR_COL]                                      Survey Year: 1984
+  PRIMARY VARIABLE
+
+ 
+             EMPLOYMENT STATUS RECODE (COLLAPSED)
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS RECODE
+ 
+    7562       1 EMPLOYED
+    1394       2 UNEMPLOYED
+    2406       3 OUT OF LABOR FORCE
+     707       4 IN ACTIVE FORCES
+  -------
+   12069
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12069   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     617
+ 
+Min:              1        Max:              4        Mean:                1.69
+ 
+Lead In: R15199.00[Default]
+Default Next Question: R15199.10
+--------------------------------------------------------------------------------
+R15201.00    [MARSTAT-COL]                                  Survey Year: 1984
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+    7093       1 NEVER MARRIED
+    4026       2 MARRIED, SPOUSE PRESENT
+     949       3 OTHER
+  -------
+   12068
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       1
+TOTAL =========>   12069   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     617
+ 
+Min:              1        Max:              3        Mean:                1.49
+ 
+Lead In: R15200.00[Default]
+Default Next Question: R15201.01
+--------------------------------------------------------------------------------
+R17746.00    [Q12-3]                                        Survey Year: 1985
+  PRIMARY VARIABLE
+
+ 
+             ALCOHOL USE - HAD ANY ALCOHOLIC BEVERAGES IN LAST MONTH?
+ 
+ORIGINAL QUESTION NAME: Q4761
+ 
+HAVE YOU HAD ANY ALCOHOLIC BEVERAGES, INCLUDING BEER, WINE, OR LIQUOR,
+DURING THE LAST 30 DAYS?
+ 
+UNIVERSE: R has had drink
+ 
+    7208       1 YES
+    3083       0 NO
+  -------
+   10291
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+Invalid Skip(-3)       1
+TOTAL =========>   10293   VALID SKIP(-4)     601     NON-INTERVIEW(-5)    1792
+ 
+Min:              0        Max:              1        Mean:                  .7
+ 
+Lead In: R17745.00[Default]
+Default Next Question: R17747.00
+--------------------------------------------------------------------------------
+R18902.10    [FAMSIZE]                                      Survey Year: 1985
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: VARIABLE CREATION PROCEDURE IS COMPARABLE TO COMPUTATION OF
+"FAMILY SIZE" USED TO DETERMINE "FAMILY POVERY STATUS". SEE APPENDIX
+2: TOTAL NET FAMILY INCOME.
+ 
+ACTUAL NUMBER
+ 
+       0           0: < 1
+    2232           1
+    2063           2
+    2400           3
+    1917           4
+    1079           5
+     543           6
+     255           7
+     181           8
+     103           9
+      54          10
+      29          11
+      14          12
+      21          13
+       0          14
+       3          15
+       0          16
+       0          17 TO 99999: 17+
+  -------
+   10894
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10894   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1792
+ 
+Min:              1        Max:             15        Mean:                3.25
+ 
+Lead In: R18902.01[Default]
+Default Next Question: R18903.00
+--------------------------------------------------------------------------------
+R18906.01    [ESR_COL]                                      Survey Year: 1985
+  PRIMARY VARIABLE
+
+ 
+             EMPLOYMENT STATUS RECODE (COLLAPSED)
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS RECODE
+ 
+    7341       1 EMPLOYED
+    1124       2 UNEMPLOYED
+    2029       3 OUT OF LABOR FORCE
+     400       4 IN ACTIVE FORCES
+  -------
+   10894
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10894   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1792
+ 
+Min:              1        Max:              4        Mean:                1.59
+ 
+Lead In: R18906.00[Default]
+Default Next Question: R18907.00
+--------------------------------------------------------------------------------
+R18908.00    [MARSTAT-COL]                                  Survey Year: 1985
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+    6058       1 NEVER MARRIED
+    3851       2 MARRIED, SPOUSE PRESENT
+     984       3 OTHER
+  -------
+   10893
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       1
+TOTAL =========>   10894   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1792
+ 
+Min:              1        Max:              3        Mean:                1.53
+ 
+Lead In: R18907.00[Default]
+Default Next Question: R18908.01
+--------------------------------------------------------------------------------
+R22574.10    [FAMSIZE]                                      Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: VARIABLE CREATION PROCEDURE IS COMPARABLE TO COMPUTATION OF
+"FAMILY SIZE" USED TO DETERMINE "FAMILY POVERY STATUS". SEE APPENDIX
+2: TOTAL NET FAMILY INCOME.
+ 
+ACTUAL NUMBER
+ 
+       0           0: < 1
+    2163           1
+    2135           2
+    2433           3
+    2028           4
+     929           5
+     495           6
+     187           7
+     133           8
+      67           9
+      31          10
+      23          11
+      14          12
+      13          13
+       2          14
+       2          15
+       0          16
+       0          17 TO 99999: 17+
+  -------
+   10655
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10655   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2031
+ 
+Min:              1        Max:             15        Mean:                3.13
+ 
+Lead In: R22574.00[Default]
+Default Next Question: R22575.00
+--------------------------------------------------------------------------------
+R22577.01    [ESR_COL]                                      Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             EMPLOYMENT STATUS RECODE (COLLAPSED)
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS RECODE
+ 
+    7533       1 EMPLOYED
+     948       2 UNEMPLOYED
+    1846       3 OUT OF LABOR FORCE
+     328       4 IN ACTIVE FORCES
+  -------
+   10655
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10655   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2031
+ 
+Min:              1        Max:              4        Mean:                1.53
+ 
+Lead In: R22577.00[Default]
+Default Next Question: R22578.00
+--------------------------------------------------------------------------------
+R22579.00    [MARSTAT-COL]                                  Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+    5319       1 NEVER MARRIED
+    4276       2 MARRIED, SPOUSE PRESENT
+    1060       3 OTHER
+  -------
+   10655
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10655   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2031
+ 
+Min:              1        Max:              3        Mean:                 1.6
+ 
+Lead In: R22578.00[Default]
+Default Next Question: R22579.01
+--------------------------------------------------------------------------------
+R24446.10    [FAMSIZE]                                      Survey Year: 1987
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: VARIABLE CREATION PROCEDURE IS COMPARABLE TO COMPUTATION OF
+"FAMILY SIZE" USED TO DETERMINE "FAMILY POVERY STATUS". SEE APPENDIX
+2: TOTAL NET FAMILY INCOME.
+ 
+ACTUAL NUMBER
+ 
+       0           0: < 1
+    2121           1
+    2159           2
+    2422           3
+    2037           4
+     926           5
+     425           6
+     189           7
+      92           8
+      58           9
+      23          10
+      11          11
+       9          12
+      10          13
+       3          14
+       0          15
+       0          16
+       0          17 TO 99999: 17+
+  -------
+   10485
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10485   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2201
+ 
+Min:              1        Max:             14        Mean:                3.08
+ 
+Lead In: R24446.00[Default]
+Default Next Question: R24447.00
+--------------------------------------------------------------------------------
+R24451.01    [ESR_COL]                                      Survey Year: 1987
+  PRIMARY VARIABLE
+
+ 
+             EMPLOYMENT STATUS RECODE (COLLAPSED)
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS RECODE
+ 
+    7673       1 EMPLOYED
+     730       2 UNEMPLOYED
+    1780       3 OUT OF LABOR FORCE
+     302       4 IN ACTIVE FORCES
+  -------
+   10485
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10485   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2201
+ 
+Min:              1        Max:              4        Mean:                 1.5
+ 
+Lead In: R24451.00[Default]
+Default Next Question: R24452.00
+--------------------------------------------------------------------------------
+R24453.00    [MARSTAT-COL]                                  Survey Year: 1987
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+    4629       1 NEVER MARRIED
+    4596       2 MARRIED, SPOUSE PRESENT
+    1260       3 OTHER
+  -------
+   10485
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10485   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2201
+ 
+Min:              1        Max:              3        Mean:                1.68
+ 
+Lead In: R24452.00[Default]
+Default Next Question: R24453.01
+--------------------------------------------------------------------------------
+R27166.00    [Q12-3]                                        Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             ALCOHOL USE - HAD ANY ALCOHOLIC BEVERAGES IN LAST MONTH?
+ 
+ORIGINAL QUESTION NAME: Q13.2
+ 
+HAVE YOU HAD ANY ALCOHOLIC BEVERAGES, INCLUDING BEER, WINE, OR LIQUOR,
+DURING THE LAST 30 DAYS?
+ 
+UNIVERSE: R has had drink
+ 
+    6989       1 YES
+    2977       0 NO
+  -------
+    9966
+ 
+Refusal(-1)            5
+Don't Know(-2)         0
+Invalid Skip(-3)       3
+TOTAL =========>    9974   VALID SKIP(-4)     491     NON-INTERVIEW(-5)    2221
+ 
+Min:              0        Max:              1        Mean:                  .7
+ 
+Lead In: R27165.00[Default]
+Default Next Question: R27167.00
+--------------------------------------------------------------------------------
+R27211.00    [DS-11]                                        Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             DRUG USE - # OF TIMES USED MARIJUANA IN PAST 30 DAYS
+ 
+ORIGINAL QUESTION NAME: QDS.4
+ 
+(HAND CARD II) DURING THE PAST 30 DAYS, ON HOW MANY OCCASIONS HAVE YOU
+USED MARIJUANA OR HASHISH?
+ 
+UNIVERSE: R has used marijuana/hasish; has used marijuana/hasish within past 30 
+days
+ 
+       0       0 NONE
+     334       1 1-2 OCCASIONS
+     257       2 3-5 OCCASIONS
+     164       3 6-9 OCCASIONS
+     194       4 10-19 OCCASIONS
+     125       5 20-39 OCCASIONS
+     108       6 40 OR MORE OCCASIONS
+  -------
+    1182
+ 
+Refusal(-1)           33
+Don't Know(-2)         1
+Invalid Skip(-3)     184
+TOTAL =========>    1400   VALID SKIP(-4)    9065     NON-INTERVIEW(-5)    2221
+ 
+Min:              1        Max:              6        Mean:                2.87
+ 
+Lead In: R27210.00[Default]
+Default Next Question: R27212.00
+--------------------------------------------------------------------------------
+R27212.00    [DS-12]                                        Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             DRUG USE - # OF TIMES USED COCAINE IN LIFETIME
+ 
+ORIGINAL QUESTION NAME: QDS.5
+ 
+(HAND CARD GG) IN YOUR LIFETIME, ON HOW MANY OCCASIONS HAVE YOU USED
+COCAINE?
+ 
+UNIVERSE: All
+ 
+    7411       0 NEVER
+     981       1 1 TO 2 OCCASIONS
+     678       2 3 TO 9 OCCASIONS
+     636       3 10 TO 39 OCCASIONS
+     270       4 40 TO 99 OCCASIONS
+     273       5 100 OR MORE OCCASIONS
+  -------
+   10249
+ 
+Refusal(-1)           33
+Don't Know(-2)         1
+Invalid Skip(-3)     182
+TOTAL =========>   10465   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2221
+ 
+Min:              0        Max:              5        Mean:                 .65
+ 
+Lead In: R27211.00[Default]
+Default Next Question: R27213.00
+--------------------------------------------------------------------------------
+R28701.10    [FAMSIZE]                                      Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: VARIABLE CREATION PROCEDURE IS COMPARABLE TO COMPUTATION OF
+"FAMILY SIZE" USED TO DETERMINE "FAMILY POVERY STATUS". SEE APPENDIX
+2: TOTAL NET FAMILY INCOME.
+ 
+ACTUAL NUMBER
+ 
+       0           0: < 1
+    2083           1
+    2183           2
+    2394           3
+    2107           4
+     979           5
+     365           6
+     182           7
+      93           8
+      39           9
+      16          10
+      13          11
+       5          12
+       1          13
+       4          14
+       1          15
+       0          16
+       0          17 TO 99999: 17+
+  -------
+   10465
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10465   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2221
+ 
+Min:              1        Max:             15        Mean:                3.05
+ 
+Lead In: R28701.00[Default]
+Default Next Question: R28702.00
+--------------------------------------------------------------------------------
+R28707.00    [ESR_COL]                                      Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             EMPLOYMENT STATUS RECODE (COLLAPSED)
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS RECODE
+(ESR)
+ 
+    7869       1 EMPLOYED
+     630       2 UNEMPLOYED
+    1712       3 OUT OF LABOR FORCE
+     254       4 IN ACTIVE FORCES
+  -------
+   10465
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10465   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2221
+ 
+Min:              1        Max:              4        Mean:                1.46
+ 
+Lead In: R28706.00[Default]
+Default Next Question: R28708.00
+--------------------------------------------------------------------------------
+R28709.00    [MARSTAT-COL]                                  Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+    4038       1 NEVER MARRIED
+    4966       2 MARRIED, SPOUSE PRESENT
+    1457       3 OTHER
+  -------
+   10461
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       4
+TOTAL =========>   10465   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2221
+ 
+Min:              1        Max:              3        Mean:                1.75
+ 
+Lead In: R28708.00[Default]
+Default Next Question: R28710.00
+--------------------------------------------------------------------------------
+R29682.00    [Q12-3]                                        Survey Year: 1989
+  PRIMARY VARIABLE
+
+ 
+             ALCOHOL USE - HAD ANY ALCOHOLIC BEVERAGES IN LAST MONTH?
+ 
+ORIGINAL QUESTION NAME: Q2159
+ 
+HAVE YOU HAD ANY ALCOHOLIC BEVERAGES, INCLUDING BEER, WINE, OR LIQUOR
+DURING THE LAST 30 DAYS?
+ 
+UNIVERSE: R has had drink
+ 
+    6648       1 YES
+    3381       0 NO
+  -------
+   10029
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+Invalid Skip(-3)       1
+TOTAL =========>   10031   VALID SKIP(-4)     574     NON-INTERVIEW(-5)    2081
+ 
+Min:              0        Max:              1        Mean:                 .66
+ 
+Lead In: R29681.00[Default]
+Default Next Question: R29683.00
+--------------------------------------------------------------------------------
+R30739.10    [FAMSIZE]                                      Survey Year: 1989
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: VARIABLE CREATION PROCEDURE IS COMPARABLE TO COMPUTATION OF
+"FAMILY SIZE" USED TO DETERMINE "FAMILY POVERY STATUS". SEE APPENDIX
+2: TOTAL NET FAMILY INCOME.
+ 
+ACTUAL NUMBER
+ 
+       0           0: < 1
+    2088           1
+    2151           2
+    2379           3
+    2240           4
+    1026           5
+     402           6
+     161           7
+      86           8
+      31           9
+      13          10
+      11          11
+       6          12
+       2          13
+       8          14
+       1          15
+       0          16
+       0          17 TO 99999: 17+
+  -------
+   10605
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10605   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2081
+ 
+Min:              1        Max:             15        Mean:                3.07
+ 
+Lead In: R30739.00[Default]
+Default Next Question: R30740.00
+--------------------------------------------------------------------------------
+R30744.00    [ESR_COL]                                      Survey Year: 1989
+  PRIMARY VARIABLE
+
+ 
+             EMPLOYMENT STATUS RECODE (COLLAPSED)
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS
+RECODE (ESR)
+ 
+    7942       1 EMPLOYED
+     632       2 UNEMPLOYED
+    1782       3 OUT OF LABOR FORCE
+     249       4 IN ACTIVE FORCES
+  -------
+   10605
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10605   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2081
+ 
+Min:              1        Max:              4        Mean:                1.47
+ 
+Lead In: R30743.00[Default]
+Default Next Question: R30745.00
+--------------------------------------------------------------------------------
+R30746.00    [MARSTAT-COL]                                  Survey Year: 1989
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+    3734       1 NEVER MARRIED
+    5282       2 MARRIED, SPOUSE PRESENT
+    1589       3 OTHER
+  -------
+   10605
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10605   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2081
+ 
+Min:              1        Max:              3        Mean:                 1.8
+ 
+Lead In: R30745.00[Default]
+Default Next Question: R30747.00
+--------------------------------------------------------------------------------
+R34006.00    [FAMSIZE]                                      Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: VARIABLE CREATION PROCEDURE IS COMPARABLE TO COMPUTATION OF "FAMILY SIZE" 
+USED TO DETERMINE "FAMILY POVERY STATUS". SEE APPENDIX 2: TOTAL NET FAMILY 
+INCOME.
+ 
+       0           0: < 1
+    1995           1
+    2083           2
+    2318           3
+    2275           4
+    1053           5
+     390           6
+     180           7
+      76           8
+      26           9
+      15          10
+       7          11
+      10          12
+       7          13
+       0          14
+       1          15
+       0          16
+       0          17 TO 99999: 17+
+  -------
+   10436
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10436   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2250
+ 
+Min:              1        Max:             15        Mean:                 3.1
+ 
+Lead In: R34005.00[Default]
+Default Next Question: R34007.00
+--------------------------------------------------------------------------------
+R34011.00    [ESR_COL]                                      Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             EMPLOYMENT STATUS RECODE (COLLAPSED)
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS
+RECODE (ESR)
+ 
+    7953       1 EMPLOYED
+     542       2 UNEMPLOYED
+    1730       3 OUT OF LABOR FORCE
+     211       4 IN ACTIVE FORCES
+  -------
+   10436
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10436   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2250
+ 
+Min:              1        Max:              4        Mean:                1.44
+ 
+Lead In: R34010.00[Default]
+Default Next Question: R34012.00
+--------------------------------------------------------------------------------
+R34013.00    [MARSTAT-COL]                                  Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+    3376       1 NEVER MARRIED
+    5384       2 MARRIED, SPOUSE PRESENT
+    1675       3 OTHER
+  -------
+   10435
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       1
+TOTAL =========>   10436   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2250
+ 
+Min:              1        Max:              3        Mean:                1.84
+ 
+Lead In: R34012.00[Default]
+Default Next Question: R34014.00
+--------------------------------------------------------------------------------
+R36560.00    [FAMSIZE]                                      Survey Year: 1991
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: VARIABLE CREATION PROCEDURE IS COMPARABLE TO COMPUTATION OF
+"FAMILY SIZE" USED TO DETERMINE "FAMILY POVERTY STATUS". SEE APPENDIX
+2: TOTAL NET FAMILY INCOME.
+ 
+       0           0: < 1
+    1694           1
+    1733           2
+    1950           3
+    2016           4
+     971           5
+     406           6
+     137           7
+      59           8
+      21           9
+      11          10
+       6          11
+      11          12
+       3          13
+       0          14
+       0          15
+       0          16
+       0          17 TO 99999: 17+
+  -------
+    9018
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    9018   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    3668
+ 
+Min:              1        Max:             13        Mean:                3.14
+ 
+Lead In: R36559.00[Default]
+Default Next Question: R36561.00
+--------------------------------------------------------------------------------
+R36565.00    [ESR_COL]                                      Survey Year: 1991
+  PRIMARY VARIABLE
+
+ 
+             EMPLOYMENT STATUS RECODE (COLLAPSED)
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS
+RECODE (ESR)
+ 
+    6738       1 EMPLOYED
+     594       2 UNEMPLOYED
+    1502       3 OUT OF LABOR FORCE
+     184       4 IN ACTIVE FORCES
+  -------
+    9018
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    9018   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    3668
+ 
+Min:              1        Max:              4        Mean:                1.46
+ 
+Lead In: R36564.00[Default]
+Default Next Question: R36566.00
+--------------------------------------------------------------------------------
+R36567.00    [MARSTAT-COL]                                  Survey Year: 1991
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+    2867       1 NEVER MARRIED
+    4698       2 MARRIED, SPOUSE PRESENT
+    1453       3 OTHER
+  -------
+    9018
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    9018   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    3668
+ 
+Min:              1        Max:              3        Mean:                1.84
+ 
+Lead In: R36566.00[Default]
+Default Next Question: R36568.00
+--------------------------------------------------------------------------------
+R39153.00    [DS-11]                                        Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             DRUG USE - # OF TIMES USED MARIJUANA IN PAST 30 DAYS
+ 
+ORIGINAL QUESTION NAME: Q7335
+ 
+DURING THE LAST 30 DAYS, HOW OFTEN DID YOU USE MARIJUANA ON
+AVERAGE?
+ 
+UNIVERSE: R did not refuse drug supplement; has smoked marijuana; has smoked in 
+past 30 days
+ 
+     239       5 EVERY DAY
+     160       4 5-6 DAYS PER WEEK
+      99       3 3-4 DAYS PER WEEK
+      51       2 1-2 DAYS PER WEEK
+      60       1 LESS OFTEN THAN ONCE PER WEEK
+  -------
+     609
+ 
+Refusal(-1)           19
+Don't Know(-2)         0
+Invalid Skip(-3)      23
+TOTAL =========>     651   VALID SKIP(-4)    8365     NON-INTERVIEW(-5)    3670
+ 
+Min:              1        Max:              5        Mean:                3.77
+ 
+Lead In: R39152.00[Default]
+Default Next Question: R39154.00
+--------------------------------------------------------------------------------
+R39154.00    [DS-12]                                        Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             DRUG USE - # OF TIMES USED COCAINE IN LIFETIME
+ 
+ORIGINAL QUESTION NAME: Q7337
+ 
+IN YOUR LIFETIME, ON HOW MANY OCCASIONS HAVE YOU USED COCAINE OTHER
+THAN "CRACK"?
+ 
+UNIVERSE: R did not refuse drug supplement
+ 
+     583       6 100 OR MORE TIMES
+     329       5 50 TO 99 TIMES
+     297       4 11 TO 49 TIMES
+     428       3 6 TO 10 TIMES
+     219       2 3 TO 5 TIMES
+     255       1 1 OR 2 TIMES
+    6333       0 NEVER
+  -------
+    8444
+ 
+Refusal(-1)          455
+Don't Know(-2)         3
+Invalid Skip(-3)      11
+TOTAL =========>    8913   VALID SKIP(-4)     103     NON-INTERVIEW(-5)    3670
+ 
+Min:              0        Max:              6        Mean:                 .98
+ 
+Lead In: R39153.00[Default]
+Default Next Question: R39155.00
+--------------------------------------------------------------------------------
+R39158.00    [DS-16]                                        Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             DRUG USE - # OF TIMES USED CRACK COCAINE IN LIFETIME
+ 
+ORIGINAL QUESTION NAME: Q7345
+ 
+IN YOUR LIFETIME, ON HOW MANY OCCASIONS HAVE YOU USED "CRACK"
+("ROCK") COCAINE?
+ 
+UNIVERSE: R did not refuse drug supplement
+ 
+     152       6 100 OR MORE TIMES
+      55       5 50 TO 99 TIMES
+      54       4 11 TO 49 TIMES
+      76       3 6 TO 10 TIMES
+      47       2 3 TO 5 TIMES
+     100       1 1 OR 2 TIMES
+    7904       0 NEVER
+  -------
+    8388
+ 
+Refusal(-1)          512
+Don't Know(-2)         2
+Invalid Skip(-3)      11
+TOTAL =========>    8913   VALID SKIP(-4)     103     NON-INTERVIEW(-5)    3670
+ 
+Min:              0        Max:              6        Mean:                 .22
+ 
+Lead In: R39157.00[Default]
+Default Next Question: R39159.00
+--------------------------------------------------------------------------------
+R40065.00    [FAMSIZE]                                      Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: VARIABLE CREATION PROCEDURE IS COMPARABLE TO COMPUTATION OF
+"FAMILY SIZE" USED TO DETERMINE "FAMILY POVERTY STATUS". SEE APPENDIX
+2: TOTAL NET FAMILY INCOME.
+ 
+       0           0: < 1
+    1602           1
+    1709           2
+    1864           3
+    2150           4
+    1018           5
+     432           6
+     126           7
+      43           8
+      38           9
+      13          10
+       8          11
+       6          12
+       6          13
+       1          14
+       0          15
+       0          16
+       0          17 TO 99999: 17+
+  -------
+    9016
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    9016   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    3670
+ 
+Min:              1        Max:             14        Mean:                 3.2
+ 
+Lead In: R40064.00[Default]
+Default Next Question: R40066.00
+--------------------------------------------------------------------------------
+R40070.00    [ESR_COL]                                      Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             EMPLOYMENT STATUS RECODE (COLLAPSED)
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS
+RECODE (ESR)
+ 
+    6775       1 EMPLOYED
+     602       2 UNEMPLOYED
+    1476       3 OUT OF LABOR FORCE
+     163       4 IN ACTIVE FORCES
+  -------
+    9016
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    9016   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    3670
+ 
+Min:              1        Max:              4        Mean:                1.45
+ 
+Lead In: R40069.00[Default]
+Default Next Question: R40071.00
+--------------------------------------------------------------------------------
+R40072.00    [MARSTAT-COL]                                  Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+    2667       1 NEVER MARRIED
+    4802       2 MARRIED, SPOUSE PRESENT
+    1547       3 OTHER
+  -------
+    9016
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    9016   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    3670
+ 
+Min:              1        Max:              3        Mean:                1.88
+ 
+Lead In: R40071.00[Default]
+Default Next Question: R40073.00
+--------------------------------------------------------------------------------
+R44176.00    [FAMSIZE]                                      Survey Year: 1993
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+ORIGINAL QUESTION NAME: FAMSIZE
+ 
+COMMENT: Family Size
+ 
+       0           0
+    1549           1
+    1627           2
+    1865           3
+    2217           4
+    1080           5
+     425           6
+     148           7
+      49           8
+      30           9
+       7          10
+       6          11
+       2          12
+       6          13
+       0          14
+       0          15
+       0          16 TO 99999: 16+
+  -------
+    9011
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    9011   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    3675
+ 
+Min:              1        Max:             13        Mean:                3.24
+ 
+Lead In: R44175.00[Default]
+Default Next Question: R44177.00
+--------------------------------------------------------------------------------
+R44181.00    [ESR_COL]                                      Survey Year: 1993
+  PRIMARY VARIABLE
+
+ 
+             EMPLOYMENT STATUS RECODE (COLLAPSED)
+ 
+ORIGINAL QUESTION NAME: ESR-COL
+ 
+COMMENT: Employment Status Recode - Collapsed
+ 
+    6699       1 EMPLOYED
+     520       2 UNEMPLOYED
+    1555       3 OUT OF LABOR FORCE
+     237       4 IN ACTIVE FORCES
+  -------
+    9011
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    9011   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    3675
+ 
+Min:              1        Max:              4        Mean:                1.48
+ 
+
+
+NOTE: FOR VARIABLE CREATION SEE APPENDIX 1: EMPLOYMENT STATUS RECODE (ESR)
+ 
+Lead In: R44180.00[Default]
+Default Next Question: R44182.00
+--------------------------------------------------------------------------------
+R44183.00    [MARSTAT-COL]                                  Survey Year: 1993
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+ORIGINAL QUESTION NAME: MARSTAT-COL
+ 
+COMMENT: Marital Status (Collapsed)
+ 
+    2521       1 NEVER MARRIED
+    4863       2 MARRIED, SPOUSE PRESENT
+    1627       3 OTHER
+  -------
+    9011
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    9011   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    3675
+ 
+Min:              1        Max:              3        Mean:                 1.9
+ 
+Lead In: R44182.00[Default]
+Default Next Question: R44184.00
+--------------------------------------------------------------------------------
+R49792.00    [Q12-3]                                        Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             ALCOHOL USE - HAD ANY ALCOHOLIC BEVERAGES IN LAST MONTH?
+ 
+Have you had any alcoholic beverages, including beer, wine, or liquor, during 
+the last 30 days?
+ 
+    5306       1 YES   (Go To R49793.00)
+    1895       0 NO
+  -------
+    7201
+ 
+Refusal(-1)            5
+Don't Know(-2)         0
+TOTAL =========>    7206   VALID SKIP(-4)    1685     NON-INTERVIEW(-5)    3795
+ 
+Min:              0        Max:              1        Mean:                 .74
+ 
+Lead In: R49791.00[1:1]
+Default Next Question: R49821.00
+--------------------------------------------------------------------------------
+R50534.00    [DS-11]                                        Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             DRUG USE - # OF TIMES USED MARIJUANA IN PAST 30 DAYS
+ 
+During the last 30 days, how often did you use marijuana on average?
+ 
+(PRESS <DN-ARROW> TO TURN ON SCREEN, AND TO HIGHLIGHT AN ANSWER.  THEN PRESS
+<ENTER> TO CONTINUE.)
+(PRESS <F6> FOR DON'T KNOW AND <F5> FOR DO NOT WISH TO ANSWER.)
+ 
+     115       5 EVERY DAY
+      59       4 5-6 DAYS PER WEEK
+      96       3 3-4 DAYS PER WEEK
+     185       2 1-2 DAYS PER WEEK
+     291       1 LESS OFTEN THAN ONCE A WEEK
+  -------
+     746
+ 
+Refusal(-1)            5
+Don't Know(-2)         1
+TOTAL =========>     752   VALID SKIP(-4)    8139     NON-INTERVIEW(-5)    3795
+ 
+Min:              1        Max:              5        Mean:                2.36
+ 
+Lead In: R50533.00[0:0]
+Default Next Question: R50535.00
+--------------------------------------------------------------------------------
+R50535.00    [DS-12]                                        Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             DRUG USE - # OF TIMES USED COCAINE IN LIFETIME
+ 
+In your lifetime, on how many occasions have you used cocaine OTHER than
+"crack"?
+(PRESS <DN-ARROW> TO TURN ON SCREEN, AND TO HIGHLIGHT AN ANSWER.  THEN PRESS
+<ENTER> TO CONTINUE.)
+(PRESS <F6> FOR DON'T KNOW AND <F5> FOR DO NOT WISH TO ANSWER.)
+ 
+     315       6 100 OR MORE TIMES
+     186       5 50 TO 99 TIMES
+     404       4 11 TO 49 TIMES
+     272       3 6 TO 10 TIMES
+     323       2 3 TO 5 TIMES
+     605       1 1 OR 2 TIMES
+    6678       0 NEVER   (Go To R50539.00)
+  -------
+    8783
+ 
+Refusal(-1)           86
+Don't Know(-2)        19
+TOTAL =========>    8888   VALID SKIP(-4)       3     NON-INTERVIEW(-5)    3795
+ 
+Min:              0        Max:              6        Mean:                 .74
+ 
+Lead In: R50533.00[Default] R50534.00[Default]  R50531.00[0:0]
+Default Next Question: R50536.00
+--------------------------------------------------------------------------------
+R50539.00    [DS-16]                                        Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             DRUG USE - # OF TIMES USED CRACK COCAINE IN LIFETIME
+ 
+In your lifetime, on how many occasions have you used "crack" ("rock")
+cocaine?
+(PRESS <DN-ARROW> TO TURN ON SCREEN, AND TO HIGHLIGHT AN ANSWER.  THEN PRESS
+<ENTER> TO CONTINUE.)
+(PRESS <F6> FOR DON'T KNOW AND <F5> FOR DO NOT WISH TO ANSWER.)
+ 
+     141       6 100 OR MORE TIMES
+      51       5 50 TO 99 TIMES
+      78       4 11 TO 49 TIMES
+      74       3 6 TO 10 TIMES
+      77       2 3 TO 5 TIMES
+     191       1 1 OR 2 TIMES
+    8184       0 NEVER   (Go To R50543.00)
+  -------
+    8796
+ 
+Refusal(-1)           77
+Don't Know(-2)        15
+TOTAL =========>    8888   VALID SKIP(-4)       3     NON-INTERVIEW(-5)    3795
+ 
+Min:              0        Max:              6        Mean:                 .23
+ 
+Lead In: R50537.00[Default] R50538.00[Default]  R50535.00[0:0]
+Default Next Question: R50540.00
+--------------------------------------------------------------------------------
+R50806.00    [FAMSIZE]                                      Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+COMMENT: Family Size
+ 
+       0           0
+    1549           1
+    1531           2
+    1827           3
+    2209           4
+    1119           5
+     420           6
+     146           7
+      49           8
+      21           9
+      18          10 TO 999: 10+
+  -------
+    8889
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>    8891   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    3795
+ 
+Min:              1        Max:             14        Mean:                3.25
+ 
+Lead In: R50805.00[Default]
+Default Next Question: R50807.00
+--------------------------------------------------------------------------------
+R50811.00    [ESR_COL]                                      Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             EMPLOYMENT STATUS RECODE (COLLAPSED)
+ 
+COMMENT: Employment Status Recode - Collapsed
+ 
+NOTE: FOR VARIABLE CREATION SEE APPENDIX 1: EMPLOYMENT STATUS RECODE (ESR)
+ 
+    6794           1: 1  EMPLOYED
+     477           2: 2  UNEMPLOYED
+    1487           3: 3  OUT OF LABOR FORCE
+     131           4: 4  IN ACTIVE FORCES
+  -------
+    8889
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>    8891   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    3795
+ 
+Min:              1        Max:              4        Mean:                1.43
+ 
+Lead In: R50810.00[Default]
+Default Next Question: R50812.00
+--------------------------------------------------------------------------------
+R50813.00    [MARSTAT-COL]                                  Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+COMMENT: Marital Status (Collapsed)
+ 
+    2327           1: 1  NEVER MARRIED
+    4804           2: 2  MARRIED, SPOUSE PRESENT
+    1753           3: 3  OTHER
+  -------
+    8884
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       7
+TOTAL =========>    8891   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    3795
+ 
+Min:              1        Max:              3        Mean:                1.94
+ 
+Lead In: R50812.00[Default]
+Default Next Question: R50814.00
+--------------------------------------------------------------------------------
+R51659.00    [FAMSIZE]                                      Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+COMMENT: Family Size
+ 
+       0           0
+    1477           1
+    1422           2
+    1717           3
+    2195           4
+    1141           5
+     430           6
+     153           7
+      56           8
+      26           9
+      19          10 TO 999: 10+
+  -------
+    8636
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8636   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    4050
+ 
+Min:              1        Max:             13        Mean:                 3.3
+ 
+Lead In: R51658.00[Default]
+Default Next Question: R51660.00
+--------------------------------------------------------------------------------
+R51664.00    [ESR_COL]                                      Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             EMPLOYMENT STATUS RECODE (COLLAPSED)
+ 
+COMMENT: Employment Status Recode - Collapsed
+ 
+NOTE: FOR VARIABLE CREATION SEE APPENDIX 1: EMPLOYMENT STATUS RECODE (ESR)
+ 
+    6729           1: EMPLOYED
+     406           2: UNEMPLOYED
+    1394           3: OUT OF LABOR FORCE
+     107           4: IN ACTIVE FORCES
+  -------
+    8636
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8636   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    4050
+ 
+Min:              1        Max:              4        Mean:                1.41
+ 
+Lead In: R51663.00[Default]
+Default Next Question: R51665.00
+--------------------------------------------------------------------------------
+R51666.00    [MARSTAT-COL]                                  Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+COMMENT: Marital Status (Collapsed)
+ 
+    2062           1: NEVER MARRIED
+    4736           2: MARRIED, SPOUSE PRESENT
+    1838           3: OTHER
+  -------
+    8636
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8636   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    4050
+ 
+Min:              1        Max:              3        Mean:                1.97
+ 
+Lead In: R51665.00[Default]
+Default Next Question: R51667.00
+--------------------------------------------------------------------------------
+R64307.00    [DS-11]                                        Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             DRUG USE - # OF TIMES USED MARIJUANA IN PAST 30 DAYS
+ 
+During the last 30 days, how often did you use marijuana on average?  (PRESS 
+"DOWN ARROW" KEY TO TURN ON SCREEN AND TO HIGHLIGHT AN ANSWER. THEN PRESS 
+<ENTER> TO CONTINUE.)  (PRESS <F6> FOR DON'T KNOW AND <F5> FOR DO NOT WISH TO 
+ANSWER.)
+ 
+UNIVERSE: R has used marijuana
+ 
+     104       5 EVERY DAY
+      42       4 5-6 DAYS PER WEEK
+      71       3 3-4 DAYS PER WEEK
+      89       2 1-2 DAYS PER WEEK
+     160       1 LESS OFTEN THAN ONCE A WEEK
+  -------
+     466
+ 
+Refusal(-1)            1
+Don't Know(-2)         1
+TOTAL =========>     468   VALID SKIP(-4)    7931     NON-INTERVIEW(-5)    4287
+ 
+Min:              1        Max:              5        Mean:                2.66
+ 
+Lead In: R64306.00[0:0]
+Default Next Question: R64308.00
+--------------------------------------------------------------------------------
+R64308.00    [DS-12]                                        Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             DRUG USE - # OF TIMES USED COCAINE IN LIFETIME
+ 
+In your lifetime, on how many occasions have you used cocaine OTHER than 
+"crack"?  (PRESS "DOWN ARROW' KEY TO TURN ON SCREEN AND TO HIGHLIGHT AN ANSWER. 
+THEN PRESS <ENTER> TO CONTINUE.)  (PRESS <F6> FOR DON'T KNOW AND <F5> FOR DO NOT
+WISH TO ANSWER.)
+ 
+UNIVERSE: All
+ 
+     294       6 100 OR MORE TIMES
+     206       5 50 TO 99 TIMES
+     402       4 11 TO 49 TIMES
+     248       3 6 TO 10 TIMES
+     275       2 3 TO 5 TIMES
+     506       1 1 OR 2 TIMES
+    6360       0 NEVER   (Go To R64312.00)
+  -------
+    8291
+ 
+Refusal(-1)           89   (Go To R64312.00)
+Don't Know(-2)        10   (Go To R64312.00)
+TOTAL =========>    8390   VALID SKIP(-4)       9     NON-INTERVIEW(-5)    4287
+ 
+Min:              0        Max:              6        Mean:                 .75
+ 
+Lead In: R64306.00[Default] R64307.00[Default]  R64304.00[-2:-1] R64304.00[0:0]
+Default Next Question: R64309.00
+--------------------------------------------------------------------------------
+R64312.00    [DS-16]                                        Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             DRUG USE - # OF TIMES USED CRACK COCAINE IN LIFETIME
+ 
+In your lifetime, on how many occasions have you used "crack" ("rock") cocaine? 
+(PRESS "DOWN ARROW" KEY TO TURN ON SCREEN AND TO HIGHLIGHT AN ANSWER. THEN PRESS
+<ENTER> TO CONTINUE.)  (PRESS <F6> FOR DON'T KNOW AND <F5> FOR DO NOT WISH TO 
+ANSWER.)
+ 
+UNIVERSE: All
+ 
+     146       6 100 OR MORE TIMES
+      64       5 50 TO 99 TIMES
+      97       4 11 TO 49 TIMES
+      52       3 6 TO 10 TIMES
+      55       2 3 TO 5 TIMES
+     158       1 1 OR 2 TIMES
+    7724       0 NEVER   (Go To R64316.00)
+  -------
+    8296
+ 
+Refusal(-1)           83   (Go To R64316.00)
+Don't Know(-2)        11   (Go To R64316.00)
+TOTAL =========>    8390   VALID SKIP(-4)       9     NON-INTERVIEW(-5)    4287
+ 
+Min:              0        Max:              6        Mean:                 .24
+ 
+Lead In: R64310.00[Default] R64311.00[Default]  R64308.00[-2:-1] R64308.00[0:0]
+Default Next Question: R64313.00
+--------------------------------------------------------------------------------
+R64786.00    [FAMSIZE]                                      Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+COMMENT: Family Size
+ 
+       0           0
+    1364           1
+    1369           2
+    1615           3
+    2222           4
+    1143           5
+     448           6
+     152           7
+      48           8
+      17           9
+      21          10 TO 999: 10+
+  -------
+    8399
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8399   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    4287
+ 
+Min:              1        Max:             15        Mean:                3.34
+ 
+Lead In: R64785.00[Default]
+Default Next Question: R64787.00
+--------------------------------------------------------------------------------
+R64790.00    [ESR_COL]                                      Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             EMPLOYMENT STATUS RECODE (COLLAPSED)
+ 
+COMMENT: Employment Status Recode - Collapsed
+ 
+NOTE: FOR VARIABLE CREATION SEE APPENDIX 1: EMPLOYMENT STATUS RECODE (ESR)
+ 
+    6712           1: 1  EMPLOYED
+     331           2: 2  UNEMPLOYED
+    1264           3: 3  OUT OF LABOR FORCE
+      92           4: 4  IN ACTIVE FORCES
+  -------
+    8399
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8399   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    4287
+ 
+Min:              1        Max:              4        Mean:                1.37
+ 
+Lead In: R64789.00[Default]
+Default Next Question: R64791.00
+--------------------------------------------------------------------------------
+R64792.00    [MARSTAT-COL]                                  Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+COMMENT: Marital Status (Collapsed)
+ 
+    1778           1: 1  NEVER MARRIED
+    4678           2: 2  MARRIED, SPOUSE PRESENT
+    1943           3: 3  OTHER
+  -------
+    8399
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8399   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    4287
+ 
+Min:              1        Max:              3        Mean:                2.02
+ 
+Lead In: R64791.00[Default]
+Default Next Question: R64793.00
+--------------------------------------------------------------------------------
+R70064.00    [FAMSIZE]                                      Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+COMMENT: Family Size
+ 
+       0           0
+    1396           1
+    1372           2
+    1505           3
+    2136           4
+    1025           5
+     389           6
+     120           7
+      41           8
+      25           9
+      23          10 TO 999: 10+
+  -------
+    8032
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8032   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    4654
+ 
+Min:              1        Max:             18        Mean:                3.27
+ 
+Lead In: R70063.00[Default]
+Default Next Question: R70065.00
+--------------------------------------------------------------------------------
+R70069.00    [MARSTAT-COL]                                  Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+COMMENT: Marital Status (Collapsed)
+ 
+    1578           1: 1  NEVER MARRIED
+    4479           2: 2  MARRIED, SPOUSE PRESENT
+    1973           3: 3  OTHER
+  -------
+    8030
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>    8032   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    4654
+ 
+Min:              1        Max:              3        Mean:                2.05
+ 
+Lead In: R70068.00[Default]
+Default Next Question: R70070.00
+--------------------------------------------------------------------------------
+R76064.00    [Q12-3]                                        Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             ALCOHOL USE - HAD ANY ALCOHOLIC BEVERAGES IN LAST MONTH?
+ 
+Have you had any alcoholic beverages, including beer, wine, or liquor, during 
+the last 30 days?
+ 
+    4146       1 Yes   (Go To R76065.00)
+    3570       0 No
+  -------
+    7716
+ 
+Refusal(-1)            5
+Don't Know(-2)         2
+TOTAL =========>    7723   VALID SKIP(-4)       1     NON-INTERVIEW(-5)    4962
+ 
+Min:              0        Max:              1        Mean:                 .54
+ 
+Lead In: R76036.00[Default] R76047.00[Default] R76053.00[Default] 
+         R76056.00[Default] R76058.00[Default] R76059.00[Default] 
+         R76060.00[Default] R76061.00[Default]
+Default Next Question: R76068.00
+--------------------------------------------------------------------------------
+R77036.00    [FAMSIZE]                                      Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+COMMENT: Family Size
+ 
+       0           0
+    1337           1
+    1416           2
+    1512           3
+    1981           4
+     958           5
+     343           6
+     102           7
+      38           8
+      16           9
+      21          10 TO 999: 10+
+  -------
+    7724
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7724   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    4962
+ 
+Min:              1        Max:             15        Mean:                3.22
+ 
+Lead In: R77035.00[Default]
+Default Next Question: R77037.00
+--------------------------------------------------------------------------------
+R77042.00    [MARSTAT-COL]                                  Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+COMMENT: Marital Status (Collapsed)
+ 
+    1439           1: 1  NEVER MARRIED
+    4350           2: 2  MARRIED, SPOUSE PRESENT
+    1930           3: 3  OTHER
+  -------
+    7719
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       5
+TOTAL =========>    7724   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    4962
+ 
+Min:              1        Max:              3        Mean:                2.06
+ 
+Lead In: R77041.00[Default]
+Default Next Question: R77043.00
+--------------------------------------------------------------------------------
+R84960.00    [FAMSIZE]                                      Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+COMMENT: Family Size
+ 
+       0           0
+    1417           1
+    1573           2
+    1563           3
+    1813           4
+     840           5
+     310           6
+      82           7
+      31           8
+      16           9
+      16          10 TO 999: 10+
+  -------
+    7661
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7661   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5025
+ 
+Min:              1        Max:             15        Mean:                3.09
+ 
+Lead In: R84959.00[Default]
+Default Next Question: R84961.00
+--------------------------------------------------------------------------------
+R84966.00    [MARSTAT-COL]                                  Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+COMMENT: Marital Status (Collapsed)
+ 
+    1352           1: 1  NEVER MARRIED
+    4289           2: 2  MARRIED, SPOUSE PRESENT
+    2018           3: 3  OTHER
+  -------
+    7659
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>    7661   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5025
+ 
+Min:              1        Max:              3        Mean:                2.09
+ 
+Lead In: R84965.00[Default]
+Default Next Question: R84967.00
+--------------------------------------------------------------------------------
+R99098.00    [FL1M1B]                                       Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             FLAG TO INDICATE WHETHER 1ST MARRIAGE OCCURRED BEFORE 1ST BIRTH
+ 
+ 
+ 
+NOTE:  SEE APPENDIX 5: SUPPLEMENTAL FERTILITY FILE VARIABLES
+ 
+     256        -999: MISSING DATE
+    3320        -998: NO CHILDREN
+     874        -997: NEVER MARRIED
+    6316           1: 1ST MARRIAGE BEFORE 1ST BIRTH
+    1920           0: 1ST MARRIAGE AFTER 1ST BIRTH
+  -------
+   12686
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12686   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:           -999        Max:              1        Mean:             -349.53
+ 
+Lead In: R99097.00[Default]
+Default Next Question: R99099.00
+--------------------------------------------------------------------------------
+T09111.00    [Q12-3]                                        Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             R CONSUMED ALCOHOL IN LAST 30 DAYS?
+ 
+Have you had any alcoholic beverages, including beer, wine, or liquor, during 
+the last 30 days?
+ 
+    3925       1 Yes
+    3640       0 No   (Go To T09115.00)
+  -------
+    7565
+ 
+Refusal(-1)            9
+Don't Know(-2)         1
+TOTAL =========>    7575   VALID SKIP(-4)      78     NON-INTERVIEW(-5)    5033
+ 
+Min:              0        Max:              1        Mean:                 .52
+ 
+Lead In: None.
+Default Next Question: T09112.00
+--------------------------------------------------------------------------------
+T09876.00    [FAMSIZE]                                      Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+COMMENT: Family Size
+ 
+       0           0
+    1544           1
+    1684           2
+    1619           3
+    1679           4
+     719           5
+     283           6
+      74           7
+      26           8
+      10           9
+      15          10 TO 999: 10+
+  -------
+    7653
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7653   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5033
+ 
+Min:              1        Max:             13        Mean:                2.97
+ 
+Lead In: T09875.00[Default]
+Default Next Question: T09878.00
+--------------------------------------------------------------------------------
+T09882.00    [ESR_COL]                                      Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             EMPLOYMENT STATUS RECODE (COLLAPSED)
+ 
+COMMENT: Employment Status Recode - Collapsed
+ 
+NOTE: FOR VARIABLE CREATION SEE APPENDIX 1: EMPLOYMENT STATUS RECODE (ESR)
+ 
+    6046           1: EMPLOYED
+     332           2: UNEMPLOYED
+    1253           3: OUT OF LABOR FORCE
+      22           4: IN ACTIVE FORCES
+  -------
+    7653
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7653   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5033
+ 
+Min:              1        Max:              4        Mean:                1.38
+ 
+Lead In: T09881.00[Default]
+Default Next Question: T09883.00
+--------------------------------------------------------------------------------
+T09884.00    [MARSTAT-COL]                                  Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+COMMENT: Marital Status (Collapsed)
+ 
+    1351           1: 1  NEVER MARRIED
+    4195           2: 2  MARRIED, SPOUSE PRESENT
+    2106           3: 3  OTHER
+  -------
+    7652
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       1
+TOTAL =========>    7653   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5033
+ 
+Min:              1        Max:              3        Mean:                 2.1
+ 
+Lead In: T09883.00[Default]
+Default Next Question: T09885.00
+--------------------------------------------------------------------------------
+T20754.00    [Q12-3]                                        Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             R CONSUMED ALCOHOL IN LAST 30 DAYS?
+ 
+Have you had any alcoholic beverages, including beer, wine, or liquor, during 
+the last 30 days?
+ 
+    4216       1 Yes
+    3462       0 No   (Go To T20758.00)
+  -------
+    7678
+ 
+Refusal(-1)            7
+Don't Know(-2)         1
+TOTAL =========>    7686   VALID SKIP(-4)      71     NON-INTERVIEW(-5)    4929
+ 
+Min:              0        Max:              1        Mean:                 .55
+ 
+Lead In: T20753.00[0:0]
+Default Next Question: T20755.00
+--------------------------------------------------------------------------------
+T22099.00    [FAMSIZE]                                      Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+COMMENT: Family Size
+ 
+    1680           1
+    1928           2
+    1622           3
+    1546           4
+     633           5
+     237           6
+      69           7
+      26           8
+       7           9
+       9          10 TO 999: 10+
+  -------
+    7757
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7757   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    4929
+ 
+Min:              1        Max:             12        Mean:                2.84
+ 
+Lead In: T22098.00[Default]
+Default Next Question: T22100.00
+--------------------------------------------------------------------------------
+T22104.00    [MARSTAT-COL]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+COMMENT: Marital Status (Collapsed)
+ 
+    1323           1: NEVER MARRIED
+    4159           2: MARRIED, SPOUSE PRESENT
+    2275           3: OTHER
+  -------
+    7757
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7757   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    4929
+ 
+Min:              1        Max:              3        Mean:                2.12
+ 
+Lead In: T22103.00[Default]
+Default Next Question: T22105.00
+--------------------------------------------------------------------------------
+T30440.00    [Q12-3]                                        Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             R CONSUMED ALCOHOL IN LAST 30 DAYS?
+ 
+Have you had any alcoholic beverages, including beer, wine, or liquor, during 
+the last 30 days?
+ 
+    4165       1 Yes
+    3336       0 No   (Go To T30444.00)
+  -------
+    7501
+ 
+Refusal(-1)            4
+Don't Know(-2)         1
+TOTAL =========>    7506   VALID SKIP(-4)      59     NON-INTERVIEW(-5)    5121
+ 
+Min:              0        Max:              1        Mean:                 .56
+ 
+Lead In: T30439.00[0:0]
+Default Next Question: T30441.00
+--------------------------------------------------------------------------------
+T31077.00    [FAMSIZE]                                      Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+COMMENT: Family Size
+ 
+    1723           1
+    2017           2
+    1562           3
+    1365           4
+     580           5
+     206           6
+      69           7
+      22           8
+      13           9
+       8          10 TO 999: 10+
+  -------
+    7565
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7565   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5121
+ 
+Min:              1        Max:             12        Mean:                2.76
+ 
+Lead In: T31076.00[Default]
+Default Next Question: T31078.00
+--------------------------------------------------------------------------------
+T31083.00    [MARSTAT-COL]                                  Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+COMMENT: Marital Status (Collapsed)
+ 
+    1264           1: NEVER MARRIED
+    4037           2: MARRIED, SPOUSE PRESENT
+    2261           3: OTHER
+  -------
+    7562
+ 
+Refusal(-1)            0
+Don't Know(-2)         3
+TOTAL =========>    7565   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5121
+ 
+Min:              1        Max:              3        Mean:                2.13
+ 
+Lead In: T31082.00[Default]
+Default Next Question: T31084.00
+--------------------------------------------------------------------------------
+T39762.00    [Q12-3]                                        Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             R CONSUMED ALCOHOL IN LAST 30 DAYS?
+ 
+Have you had any alcoholic beverages, including beer, wine, or liquor, during 
+the last 30 days?
+ 
+    3978       1 Yes
+    3283       0 No   (Go To T39766.00)
+  -------
+    7261
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    7262   VALID SKIP(-4)      38     NON-INTERVIEW(-5)    5386
+ 
+Min:              0        Max:              1        Mean:                 .55
+ 
+Lead In: T39761.00[0:0]
+Default Next Question: T39763.00
+--------------------------------------------------------------------------------
+T41122.00    [FAMSIZE]                                      Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+COMMENT: Family Size
+ 
+       0           0
+    1756           1
+    2219           2
+    1540           3
+    1093           4
+     462           5
+     143           6
+      51           7
+      19           8
+       7           9
+      10          10 TO 999: 10+
+  -------
+    7300
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7300   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5386
+ 
+Min:              1        Max:             16        Mean:                2.61
+ 
+Lead In: T41121.00[Default]
+Default Next Question: T41123.00
+--------------------------------------------------------------------------------
+T41128.00    [MARSTAT-COL]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+COMMENT: Marital Status (Collapsed)
+ 
+    1190           1: NEVER MARRIED
+    3823           2: MARRIED, SPOUSE PRESENT
+    2285           3: OTHER
+  -------
+    7298
+ 
+Refusal(-1)            1
+Don't Know(-2)         1
+TOTAL =========>    7300   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5386
+ 
+Min:              1        Max:              3        Mean:                2.15
+ 
+Lead In: T41127.00[Default]
+Default Next Question: T41129.00
+--------------------------------------------------------------------------------
+T49145.00    [Q12-3]                                        Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             R CONSUMED ALCOHOL IN LAST 30 DAYS?
+ 
+Have you had any alcoholic beverages, including beer, wine, or liquor, during 
+the last 30 days?
+ 
+    3909       1 Yes
+    3125       0 No   (Go To T49149.00)
+  -------
+    7034
+ 
+Refusal(-1)            5
+Don't Know(-2)         1
+Invalid Skip(-3)       1
+TOTAL =========>    7041   VALID SKIP(-4)      29     NON-INTERVIEW(-5)    5616
+ 
+Min:              0        Max:              1        Mean:                 .56
+ 
+Lead In: T49144.00[0:0]
+Default Next Question: T49146.00
+--------------------------------------------------------------------------------
+T50225.00    [FAMSIZE]                                      Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+COMMENT: Family Size
+ 
+    1894           1
+    2385           2
+    1344           3
+     920           4
+     343           5
+     119           6
+      34           7
+      16           8
+       7           9
+       8          10 TO 999: 10+
+  -------
+    7070
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7070   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5616
+ 
+Min:              1        Max:             15        Mean:                2.45
+ 
+Lead In: T50223.00[Default]
+Default Next Question: T50226.00
+--------------------------------------------------------------------------------
+T50232.00    [MARSTAT-COL]                                  Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+COMMENT: Marital Status (Collapsed)
+ 
+    1124           1: NEVER MARRIED
+    3715           2: MARRIED, SPOUSE PRESENT
+    2231           3: OTHER
+  -------
+    7070
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7070   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5616
+ 
+Min:              1        Max:              3        Mean:                2.16
+ 
+Lead In: T50231.00[Default]
+Default Next Question: T50233.00
+--------------------------------------------------------------------------------
+T57707.00    [FAMSIZE]                                      Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+COMMENT: Family Size
+ 
+    1887           1
+    2519           2
+    1275           3
+     751           4
+     305           5
+     104           6
+      41           7
+      20           8
+       4           9
+       6          10 TO 999: 10+
+  -------
+    6912
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    6912   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5774
+ 
+Min:              1        Max:             13        Mean:                2.38
+ 
+Lead In: T57706.00[Default]
+Default Next Question: T57708.00
+--------------------------------------------------------------------------------
+T57711.00    [MARSTAT-COL]                                  Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+COMMENT: Marital Status (Collapsed)
+ 
+    1050           1: NEVER MARRIED
+    3610           2: MARRIED, SPOUSE PRESENT
+    2252           3: OTHER
+  -------
+    6912
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    6912   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5774
+ 
+Min:              1        Max:              3        Mean:                2.17
+ 
+Lead In: T57710.00[Default]
+Default Next Question: T57712.00
+--------------------------------------------------------------------------------
+T82186.00    [FAMSIZE]                                      Survey Year: 2018
+  PRIMARY VARIABLE
+
+ 
+             FAMILY SIZE
+ 
+COMMENT: Family Size
+ 
+    1993           1
+    2687           2
+    1177           3
+     623           4
+     251           5
+      87           6
+      30           7
+      17           8
+       8           9
+       5          10 TO 999: 10+
+  -------
+    6878
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    6878   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5808
+ 
+Min:              1        Max:             11        Mean:                2.27
+ 
+Lead In: T82185.00[Default]
+Default Next Question: T82187.00
+--------------------------------------------------------------------------------
+T82192.00    [MARSTAT-COL]                                  Survey Year: 2018
+  PRIMARY VARIABLE
+
+ 
+             MARITAL STATUS (COLLAPSED)
+ 
+COMMENT: Marital Status (Collapsed)
+ 
+    1016           1: NEVER MARRIED
+    3571           2: MARRIED, SPOUSE PRESENT
+    2291           3: OTHER
+  -------
+    6878
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    6878   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5808
+ 
+Min:              1        Max:              3        Mean:                2.19
+ 
+Lead In: T82191.00[Default]
+Default Next Question: T82193.00
