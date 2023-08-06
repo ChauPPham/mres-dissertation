@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.8)  5 AUG 2023 08:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.8)  6 AUG 2023 11:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -748,21 +748,17 @@ g/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-rm.enc}]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[2]
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 88.
+(amsmath)                 on input line 90.
 
-[2]
 LaTeX Font Info:    Trying to load font information for U+bbold on input line 9
-2.
- (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ubbold.fd
+4.
+(C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ubbold.fd
 File: ubbold.fd 1996/01/01 Blackboard Bold Font Definition File (jk)
 )
-
-LaTeX Warning: Reference `table:3-imputed-risk' on page 1 undefined on input li
-ne 96.
-
 (Tables/table-2-risk-coefficient.tex
 Overfull \vbox (1.99994pt too high) detected at line 5
  []
@@ -772,6 +768,10 @@ Overfull \vbox (1.99994pt too high) detected at line 5
  []
 
 )
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(Tables/table-3-risk-imputed.tex)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -804,27 +804,23 @@ Overfull \hbox (22.05826pt too wide) in alignment at lines 1--66
  [] [] [] [] [] [] 
  []
 
-[4]) [5{C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q
--ts1.enc}] [6] [7] (First draft.bbl) [8] (First draft.aux)
+[4] [5] [6]) [7{C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/te
+x-gyre/q-ts1.enc}] (First draft.bbl) [8] (First draft.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `"First draft".out' has not changed.
 (rerunfilecheck)             Checksum: 8CF9865F163BFE75FCE19A636B99BBE3;1015.
  ) 
 Here is how much of TeX's memory you used:
- 17111 strings out of 475551
- 287930 string characters out of 5762555
- 1966238 words of memory out of 5000000
- 37974 multiletter control sequences out of 15000+600000
+ 17122 strings out of 475551
+ 288309 string characters out of 5762555
+ 1969238 words of memory out of 5000000
+ 37980 multiletter control sequences out of 15000+600000
  610600 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,20n,80p,2183b,648s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 63i,25n,80p,2215b,702s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\hoang\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbold/dpi600\bbo
 ld10.pk><C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmex10.pfb><C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -840,9 +836,9 @@ b><C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qpl
 b.pfb><C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre
 /qplr.pfb><C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-
 gyre/qplri.pfb>
-Output written on "First draft.pdf" (8 pages, 301118 bytes).
+Output written on "First draft.pdf" (8 pages, 304289 bytes).
 PDF statistics:
- 243 PDF objects out of 1000 (max. 8388607)
- 49 named destinations out of 1000 (max. 500000)
+ 247 PDF objects out of 1000 (max. 8388607)
+ 51 named destinations out of 1000 (max. 500000)
  65 words of extra memory for PDF output out of 10000 (max. 10000000)
 

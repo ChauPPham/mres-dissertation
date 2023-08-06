@@ -892,19 +892,21 @@ label var RACE2 "Black"
 label var RACE3 "Non-Black, non-Hispanic"
 
 tab RISK_AVERSE1, gen(RISK_AVERSION)
-label var RISK_AVERSION1 "Weakly risk averse"
-label var RISK_AVERSION2 "Moderately risk averse"
-label var RISK_AVERSION3 "Strongly risk averse"
-label var RISK_AVERSION4 "Very strongly risk averse"
+label var RISK_AVERSION1 "Lowest risk aversion"
+label var RISK_AVERSION2 "Low risk aversion"
+label var RISK_AVERSION3 "Moderate risk aversion"
+label var RISK_AVERSION4 "High risk aversion"
 
-gen DEGREE_SEP = DEGREE_CAT
-replace DEGREE_SEP = 3 if DEGREE_CAT > 3
-label define DEGREE_SEP 0 "\thead{No \\high school}" 1 "\thead{Some \\high school}" 2 "\thead{High school}" 3 "\thead{College\\ and above}"	/* Need to manually change to two lines in tex */
+gen DEGREE_SEP = .
+replace DEGREE_SEP = 0 if DEGREE_CAT <= 1
+replace DEGREE_SEP = 1 if DEGREE_CAT == 2
+replace DEGREE_SEP = 2 if DEGREE_CAT >= 3 & DEGREE_CAT != .
+label define DEGREE_SEP 0 "\thead{high school\\\\dropout}" 1 "\thead{High school}" 2 "\thead{College}" /* Need to manually change to two lines in tex */
 label values DEGREE_SEP DEGREE_SEP
 
-qui estpost tabstat gamma RISK_AVERSION1 RISK_AVERSION2 RISK_AVERSION3 RISK_AVERSION4 INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE SEX2 RACE1 RACE2 RACE3 C000700 AGE_FIRST_BIRTH NO_SIB NO_UNDER_18 R0618300 R0006500 R0007900 HH_INCOME if RISK_AVERSE1 != . & NO_UNDER_18 >= 0 & R0618300 >= 0 & R0006500 >= 0 & R0007900 >= 0, by(DEGREE_SEP) statistics(mean sd) columns(statistics)
+qui estpost tabstat gamma INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE SEX2 RACE1 RACE2 RACE3 C000700 AGE_FIRST_BIRTH NO_SIB R0618300 R0006500 R0007900 HH_INCOME if RISK_AVERSE1 != . & NO_UNDER_18 >= 0 & R0618300 >= 0 & R0006500 >= 0 & R0007900 >= 0, by(DEGREE_SEP) statistics(mean sd) columns(statistics)
 *esttab . using tex/summary.tex, main(mean %12.2f) aux(sd %12.2f) noobs nostar unstack nonote label replace booktabs nonum long title("Summary statistics \label{table:3}")
-esttab ., main(mean %12.2f) aux(sd %12.2f) nostar nonote label unstack nonum long title("Summary statistics")
+esttab ., main(mean %12.2f) aux(sd %12.2f) nostar nonote label unstack nonum long title("Summary statistics") noobs
 
 
 **# Bookmark #13 Regression table
@@ -925,7 +927,7 @@ quietly foreach i of varlist INV_ALL GOODS_ALL TIME_ALL {
 	reghdfe `i' gamma c.gamma#year ln_INCOME R0618301 i.C00054 i.C00053 NO_SIB C000700 R0006500 R0007900 if R0618301 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP != ., absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo model_`identifier'
 	
-	forval j = 0/3 {
+	forval j = 0/2 {
 		reghdfe `i' gamma c.gamma#year ln_INCOME R0618301 i.C00054 i.C00053 NO_SIB C000700 R0006500 R0007900 if R0618301 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP == `j', absorb(year AGE_CAT) vce(cluster R0000100)
 		eststo model_`identifier'_`j'
 	}
@@ -936,7 +938,7 @@ quietly foreach i of varlist COG_SCORE EMO_SCORE {
 	reghdfe `i' gamma c.gamma#year ln_INCOME R0618301 i.C00054 i.C00053 NO_SIB C000700 R0006500 R0007900 if R0618301 >= 0 & R0006500 >= 0 & R0007900 >= 0 & `i' >= 0 & (DEGREE_SEP != .), absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo model_`identifier'
 	
-	forval j = 0/3 {
+	forval j = 0/2 {
 		reghdfe `i' gamma c.gamma#year ln_INCOME R0618301 i.C00054 i.C00053 NO_SIB C000700 R0006500 R0007900 if R0618301 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP == `j' & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
 		eststo model_`identifier'_`j'
 	}
@@ -946,8 +948,8 @@ quietly foreach i of varlist COG_SCORE EMO_SCORE {
 
 
 forvalues i = 1/5 {
-	if `i' == 1 esttab model_`i'*, keep(gamma) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum sfmt(%12.3f)
-	if `i' > 1 esttab model_`i'*, keep(gamma) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum sfmt(%12.3f)
+	if `i' == 1 esttab model_`i'*, keep(gamma) mtitle("All" "HS dropout" "High School" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum sfmt(%12.3f)
+	if `i' > 1 esttab model_`i'*, keep(gamma) mtitle("All" "HS dropout" "High Sschool" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum sfmt(%12.3f)
 }
 
 /*

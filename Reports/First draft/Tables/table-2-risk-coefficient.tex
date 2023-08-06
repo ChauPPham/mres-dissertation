@@ -2,16 +2,19 @@
 \begin{threeparttable}
 	\begin{tabular}{c c c c c c c}
 		\toprule
-		\multirow{2}{*}{\thead{Response\\ category}}&\multirow{2}{*}{\thead{Percent of \\respondents}} & \multicolumn{2}{c}{\thead{Downside risk of\\ risky jobs}} & & \multicolumn{2}{c}{\thead{Bounds on \\risk tolerance}} \\
+		\multirow{2}{*}{\thead{Response\\ category}}&\multirow{2}{*}{\thead{Percent of \\responses}} & \multicolumn{2}{c}{\thead{Downside risk of\\ risky jobs}} & & \multicolumn{2}{c}{\thead{Bounds on \\risk tolerance}} \\
 		\cmidrule{3-4} \cmidrule{6-7}
 		 & & Accepted & Rejected & & Lower & Upper \\
 		\hline
-		1 & 53.12 & None & 20\% && 0 & 0.27 \\
+		1 & 53.12 & None & 20\% && 0\tnote{a} & 0.27 \\
 		2 & 13.58 & 20\% & 1/3 && 0.27 & 0.5 \\
 		3 & 15.70 & 1/3 & 1/2 && 0.5 & 1 \\
-		4 & 17.61 & 1/2 & None && 1 & $\infty$ \\
+		4 & 17.61 & 1/2 & None && 1 & $\infty$\tnote{a} \\
 		\bottomrule
 	\end{tabular}
+	\begin{tablenotes}
+		\item[a] For computational convenience, 0 will be recoded as $10^{-9}$ and $\infty$ as $10^9$
+	\end{tablenotes}
 \end{threeparttable}
 
 }
