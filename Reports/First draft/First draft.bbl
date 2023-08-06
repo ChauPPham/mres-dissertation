@@ -1,5 +1,16 @@
 \begin{thebibliography}{}
 
+\bibitem[Altman and Werner, 2013]{altman2013home}
+Altman, I. and Werner, C.~M. (2013).
+\newblock {\em Home environments}, volume~8.
+\newblock Springer Science \& Business Media.
+
+\bibitem[Barsky et~al., 1997]{barsky1997preference}
+Barsky, R.~B., Juster, F.~T., Kimball, M.~S., and Shapiro, M.~D. (1997).
+\newblock Preference parameters and behavioral heterogeneity: An experimental
+  approach in the health and retirement study.
+\newblock {\em The Quarterly Journal of Economics}, 112(2):537--579.
+
 \bibitem[Becker, 2009]{becker2009human}
 Becker, G.~S. (2009).
 \newblock {\em Human capital: A theoretical and empirical analysis, with
@@ -11,11 +22,38 @@ Bezerra, M.~E., Kassouf, A.~L., and Arends-Kuenning, M. (2009).
 \newblock The impact of child labor and school quality on academic achievement
   in brazil.
 
+\bibitem[Binswanger, 1981]{binswanger1981attitudes}
+Binswanger, H.~P. (1981).
+\newblock Attitudes toward risk: Theoretical implications of an experiment in
+  rural india.
+\newblock {\em The Economic Journal}, 91(364):867--890.
+
+\bibitem[Bono et~al., 2016]{bono2016early}
+Bono, E.~D., Francesconi, M., Kelly, Y., and Sacker, A. (2016).
+\newblock Early maternal time investment and early child outcomes.
+\newblock {\em The Economic Journal}, 126(596):F96--F135.
+
 \bibitem[Brown et~al., 2012]{brown2012parental}
 Brown, S., Ortiz-Nu{\~n}ez, A., and Taylor, K. (2012).
 \newblock Parental risk attitudes and children's academic test scores: Evidence
   from the us panel study of income dynamics.
 \newblock {\em Scottish Journal of Political Economy}, 59(1):47--70.
+
+\bibitem[Camerer and Hogarth, 1999]{camerer1999effects}
+Camerer, C.~F. and Hogarth, R.~M. (1999).
+\newblock The effects of financial incentives in experiments: A review and
+  capital-labor-production framework.
+\newblock {\em Journal of risk and uncertainty}, 19:7--42.
+
+\bibitem[Carneiro and Ginja, 2016]{carneiro2016partial}
+Carneiro, P. and Ginja, R. (2016).
+\newblock Partial insurance and investments in children.
+\newblock {\em The Economic Journal}, 126(596):F66--F95.
+
+\bibitem[Charness et~al., 2013]{charness2013experimental}
+Charness, G., Gneezy, U., and Imas, A. (2013).
+\newblock Experimental methods: Eliciting risk preferences.
+\newblock {\em Journal of economic behavior \& organization}, 87:43--51.
 
 \bibitem[Checchi et~al., 2014]{checchi2014parents}
 Checchi, D., Fiorio, C.~V., and Leonardi, M. (2014).
@@ -26,6 +64,11 @@ Checchi, D., Fiorio, C.~V., and Leonardi, M. (2014).
 Currie, J. (2001).
 \newblock Early childhood education programs.
 \newblock {\em Journal of Economic Perspectives}, 15(2):213--238.
+
+\bibitem[Del~Boca et~al., 2016]{del2016transfers}
+Del~Boca, D., Flinn, C., and Wiswall, M. (2016).
+\newblock Transfers to households with children and child development.
+\newblock {\em The Economic Journal}, 126(596):F136--F183.
 
 \bibitem[Dohmen et~al., 2017]{dohmen2017risk}
 Dohmen, T., Falk, A., Golsteyn, B. H.~H., Huffman, D., and Sunde, U. (2017).
@@ -38,6 +81,18 @@ Dohmen, T., Falk, A., Huffman, D., Sunde, U., Schupp, J., and Wagner, G.~G.
 \newblock Individual risk attitudes: Measurement, determinants, and behavioral
   consequences.
 \newblock {\em Journal of the european economic association}, 9(3):522--550.
+
+\bibitem[Dohmen et~al., 2005]{dohmen2005individual}
+Dohmen, T.~J., Falk, A., Huffman, D., Sunde, U., Schupp, J., and Wagner, G.~G.
+  (2005).
+\newblock Individual risk attitudes: New evidence from a large, representative,
+  experimentally-validated survey.
+
+\bibitem[Eckel and Grossman, 2002]{eckel2002sex}
+Eckel, C.~C. and Grossman, P.~J. (2002).
+\newblock Sex differences and statistical stereotyping in attitudes toward
+  financial risk.
+\newblock {\em Evolution and human behavior}, 23(4):281--295.
 
 \bibitem[Frempong and Stadelmann, 2021]{frempong2021risk}
 Frempong, R.~B. and Stadelmann, D. (2021).
@@ -53,6 +108,16 @@ Hartarto, R.~B., Aravena, C., and Bhattacharjee, A. (2023).
 Heady, C. (2003).
 \newblock The effect of child labor on learning achievement.
 \newblock {\em World Development}, 31(2):385--398.
+
+\bibitem[Heckman and Mosso, 2014]{heckman2014economics}
+Heckman, J.~J. and Mosso, S. (2014).
+\newblock The economics of human development and social mobility.
+\newblock {\em Annu. Rev. Econ.}, 6(1):689--733.
+
+\bibitem[Iverson and Walberg, 1982]{iverson1982home}
+Iverson, B.~K. and Walberg, H.~J. (1982).
+\newblock Home environment and school learning: A quantitative synthesis.
+\newblock {\em The Journal of Experimental Education}, 50(3):144--151.
 
 \bibitem[Kimball et~al., 2008]{kimball2008imputing}
 Kimball, M.~S., Sahm, C.~R., and Shapiro, M.~D. (2008).

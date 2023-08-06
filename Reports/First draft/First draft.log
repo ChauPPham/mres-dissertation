@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.8)  6 AUG 2023 11:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.8)  6 AUG 2023 18:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -604,7 +604,7 @@ Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
 )
 LaTeX Font Info:    Trying to load font information for OT1+qpl on input line 4
-9.
+8.
  (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/tex-gyre\ot1qpl.fd
 File: ot1qpl.fd 2009/09/25 v1.2 font definition file for OT1/qpl
 )
@@ -616,24 +616,24 @@ File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 ) (First draft.aux)
 \openout1 = `"First draft.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
 
 (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
@@ -684,7 +684,7 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 49.
+Package hyperref Info: Link coloring ON on input line 48.
 (First draft.out) (First draft.out)
 \@outlinefile=\write3
 \openout3 = `"First draft.out"'.
@@ -723,18 +723,18 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 52.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 51.
 
  (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 52.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 51.
 
 
 (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 52
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 51
 .
 
 (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
@@ -752,14 +752,14 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 90.
+(amsmath)                 on input line 89.
 
 LaTeX Font Info:    Trying to load font information for U+bbold on input line 9
-4.
+3.
 (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ubbold.fd
 File: ubbold.fd 1996/01/01 Blackboard Bold Font Definition File (jk)
 )
-(Tables/table-2-risk-coefficient.tex
+[3] (Tables/table-2-risk-coefficient.tex
 Overfull \vbox (1.99994pt too high) detected at line 5
  []
 
@@ -767,15 +767,8 @@ Overfull \vbox (1.99994pt too high) detected at line 5
 Overfull \vbox (1.99994pt too high) detected at line 5
  []
 
-)
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-(Tables/table-3-risk-imputed.tex)
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[3] (Tables/table-2-HOME.tex) (../../NLSY79/tex/summary.tex
+) (Tables/table-3-risk-imputed.tex) [4] (Tables/table-4-HOME.tex)
+(../../NLSY79/tex/summary.tex
 Overfull \hbox (22.05826pt too wide) in alignment at lines 1--1
  [] [] [] [] [] [] 
  []
@@ -804,8 +797,8 @@ Overfull \hbox (22.05826pt too wide) in alignment at lines 1--66
  [] [] [] [] [] [] 
  []
 
-[4] [5] [6]) [7{C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/te
-x-gyre/q-ts1.enc}] (First draft.bbl) [8] (First draft.aux)
+[5]) [6{C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q
+-ts1.enc}] (First draft.bbl [7] [8]) [9] (First draft.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
@@ -814,10 +807,10 @@ Package rerunfilecheck Info: File `"First draft".out' has not changed.
 (rerunfilecheck)             Checksum: 8CF9865F163BFE75FCE19A636B99BBE3;1015.
  ) 
 Here is how much of TeX's memory you used:
- 17122 strings out of 475551
- 288309 string characters out of 5762555
- 1969238 words of memory out of 5000000
- 37980 multiletter control sequences out of 15000+600000
+ 17172 strings out of 475551
+ 289540 string characters out of 5762555
+ 1962238 words of memory out of 5000000
+ 38016 multiletter control sequences out of 15000+600000
  610600 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,25n,80p,2215b,702s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -836,9 +829,9 @@ b><C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qpl
 b.pfb><C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre
 /qplr.pfb><C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-
 gyre/qplri.pfb>
-Output written on "First draft.pdf" (8 pages, 304289 bytes).
+Output written on "First draft.pdf" (9 pages, 316792 bytes).
 PDF statistics:
- 247 PDF objects out of 1000 (max. 8388607)
- 51 named destinations out of 1000 (max. 500000)
+ 296 PDF objects out of 1000 (max. 8388607)
+ 65 named destinations out of 1000 (max. 500000)
  65 words of extra memory for PDF output out of 10000 (max. 10000000)
 

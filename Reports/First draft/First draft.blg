@@ -6,46 +6,47 @@ The style file: apalike.bst
 Reallocating 'name_of_file' (item size: 1) to 17 items.
 Database file #1: bibliography.bib
 Warning--empty journal in bezerra2009impact
+Warning--empty journal in dohmen2005individual
 Warning--empty journal in schultz1971investment
-You've used 18 entries,
+You've used 30 entries,
             1935 wiz_defined-function locations,
-            599 strings with 6797 characters,
-and the built_in function-call counts, 7189 in all, are:
-= -- 713
-> -- 257
-< -- 12
-+ -- 90
-- -- 84
-* -- 623
-:= -- 1240
-add.period$ -- 53
-call.type$ -- 18
-change.case$ -- 131
-chr.to.int$ -- 18
-cite$ -- 20
-duplicate$ -- 264
-empty$ -- 521
-format.name$ -- 108
-if$ -- 1402
+            674 strings with 8861 characters,
+and the built_in function-call counts, 12080 in all, are:
+= -- 1200
+> -- 457
+< -- 20
++ -- 160
+- -- 150
+* -- 1069
+:= -- 2086
+add.period$ -- 88
+call.type$ -- 30
+change.case$ -- 223
+chr.to.int$ -- 30
+cite$ -- 33
+duplicate$ -- 431
+empty$ -- 860
+format.name$ -- 198
+if$ -- 2339
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 19
-newline$ -- 92
-num.names$ -- 54
-pop$ -- 102
+missing$ -- 32
+newline$ -- 151
+num.names$ -- 90
+pop$ -- 172
 preamble$ -- 1
-purify$ -- 132
+purify$ -- 225
 quote$ -- 0
-skip$ -- 208
+skip$ -- 335
 stack$ -- 0
-substring$ -- 591
-swap$ -- 30
-text.length$ -- 2
+substring$ -- 983
+swap$ -- 42
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 106
-warning$ -- 2
-while$ -- 64
+type$ -- 176
+warning$ -- 3
+while$ -- 108
 width$ -- 0
-write$ -- 231
-(There were 2 warnings)
+write$ -- 384
+(There were 3 warnings)

@@ -83,7 +83,7 @@ Depending on respondents' answers to this question, survey participants were ask
 	\label{table:1-risk-category}
 \end{table}
 
-COMMENT ON VALIDITY OF THIS QUESTION AS A PROXY FOR RISK AVERSION
+A valid concern over the use of this series of questions as a measure of risk preference is how well it predicts true risk attitudes. The question wordings and structure of the NLSY79 are the same as those in the Health and Retirement Study (HRS) as well as the Panel Study of Income Dynamics (PSID). While the method of eliciting risk preference using lifetime income is uncommon and most other methods fall into the category of self-evaluated risk willingness/tolerance employing Likert scale, gamble choice \citep{eckel2002sex}, or multiple price list (MPL),\footnote{For a comprehensive review on methods of elicitation of risk preference, see \citet{charness2013experimental}} \citet{barsky1997preference} showed that this measure does predict an array of risk behaviours including drinking, smoking, holding risky assets, etc. Furthermore, gamble on hypothetical choice in general has been shown to perform relatively well compared to its counterpart which offer real monetary rewards \citep{binswanger1981attitudes, camerer1999effects, dohmen2005individual}. 
 
 Using the series of questions on risk attitudes, following \citet{kimball2008imputing} and \citet{kimball2009risk}, under the assumption that respondents have constant relative risk aversion (CRRA) and risk tolerance are log-normally distributed, I calculated and imputed values of CRRA coefficient for each respondent. The procedure is as follows. First, assuming that CRRA well approximates individuals' utility over lifetime income,
 \[U(W)={W^{1-{1/\theta}}\over 1-{1/\theta}}\]
@@ -96,7 +96,7 @@ where $\theta$ is the coefficient of relative risk tolerance and its reciprocal,
 
 where $\mu$ and $\sigma_x$ are respectively the mean and standard deviation of log risk tolerance for a certain wave of response. $\bar \theta_j$ and $\underline{\theta}_j$ are upper and lower bounds on the coefficient of risk tolerance. $b$ denotes status quo bias and $\sigma_\xi$ standard deviation of response error which take values of -0.21 and 1.3 respectively. \footnote{These values are computed for the Health and Retirement Study (HRS) capitalizing on the difference in responses to two different versions of the risk preference questions. For more information, see \citet{kimball2009risk} and their accompanying appendix available at https://www.aeaweb.org/articles?id=10.1257/aer.99.2.363.} Imputed values of $\gamma$ are shown in \Cref{table:3-imputed-risk}.
 
-\begin{table}[!h]
+\begin{table}[!t]
 	\centering
 	\setlength{\extrarowheight}{0.3em}
 	\caption{Risk tolerance response category}	
@@ -105,7 +105,7 @@ where $\mu$ and $\sigma_x$ are respectively the mean and standard deviation of l
 \end{table}
 
 
-\begin{table}[!h]
+\begin{table}[!b]
 	\centering
 	\setlength{\extrarowheight}{0.3em}
 	\caption{Imputed coefficient of risk aversion ($\gamma$)}	
@@ -119,16 +119,18 @@ where $\mu$ and $\sigma_x$ are respectively the mean and standard deviation of l
 
 
 \subsection{Investment data}
-Investment in children can be captured by parental inputs measured by HOME indices. HOME (Short Form) comprises of primary measures of the quality of a child's home environment included in the NLSY79 Child survey. Various components of the HOME evaluate the cognitive stimulation and emotional support children below 15 years old receive from the home environment. Items that made up the HOME score are grouped into goods input and time input. These are reported in \Cref{table:2}. Apart from measures of HOME section, several items included in the self-administered questions for children between 10-14 are also present and have the (NH) prefix.  
+Traditionally, investment is often associated with monetary expenditures or goods investment \citep{heckman2014economics}. Only in recent studies such as \citet{carneiro2016partial}, \citet{bono2016early} and \citet{del2016transfers} has time input received more attention as a component of parental input. Aside time input, a nurturing home environment has also been proven conducive to early cognitive development \citep{altman2013home, iverson1982home}. 
 
-For each age group, to generate the generic investment index, indicators of all items in \Cref{table:2} for the corresponding age are totalled then normalised to have a mean zero and one standard deviation. A similar procedure is also applied to goods investment index and time investment index. Other assessments of cognitive stimulation and emotional support constitute cognitive stimulation index and emotional support index. Both of which are measured in percentages.
+Following \citet{carneiro2016partial}, parental inputs are captured by various elements of HOME. HOME (Short Form) comprises of primary measures of the quality of a child's home environment included in the NLSY79 Child survey. Various components of the HOME evaluate the cognitive stimulation and emotional support children below 15 years old receive from the home environment. Items that made up the HOME score are grouped into goods input and time input. These are reported in \Cref{table:4-HOME}. Apart from measures of HOME section, several items included in the self-administered questions for children between 10-14 are also present and have the (NH) prefix.  
 
-\begin{table}
+For each age group, to generate the generic investment index, indicators of all items in \Cref{table:4-HOME} for the corresponding age are totalled then normalised to have a mean zero and one standard deviation. A similar procedure is also applied to goods investment index and time investment index. Other assessments of cognitive stimulation and emotional support constitute cognitive stimulation index and emotional support index. Both of which are measured in percentages.
+
+\begin{table}[!t]
 	\centering
 	\setlength{\extrarowheight}{0.2em}
 	\caption{Components of HOME index}	
-	\input{Tables/table-2-HOME}
-	\label{table:2}
+	\input{Tables/table-4-HOME}
+	\label{table:4-HOME}
 \end{table}  
 
 \subsection{Summary statistics}
