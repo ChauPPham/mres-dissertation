@@ -269,34 +269,46 @@ SEX CODE CHANGED ON 42 CASES
 Lead In: R02147.00[Default]
 Default Next Question: R02149.00
 --------------------------------------------------------------------------------
-R02149.01    [ESR_COL]                                      Survey Year: 1979
+R02157.00    [WKSWK-PCY]                                    Survey Year: 1979
   PRIMARY VARIABLE
 
  
-             EMPLOYMENT STATUS RECODE (COLLAPSED)
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
  
 ORIGINAL QUESTION NAME: *CREATED
  
-NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS RECODE
+ACTUAL WEEKS
  
-UNIVERSE: Entire Sample
+UNIVERSE: R >= 16
  
-    5161       1 EMPLOYED
-    1867       2 UNEMPLOYED
-    4440       3 OUT OF LABOR FORCE
-    1217       4 IN ACTIVE FORCES
+    3125           0
+    1624           1 TO 13
+    1473          14 TO 26
+    1309          27 TO 39
+     756          40 TO 48
+     370          49 TO 51
+    1507          52
   -------
-   12685
+   10164
  
 Refusal(-1)            0
 Don't Know(-2)         0
-Invalid Skip(-3)       1
-TOTAL =========>   12686   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+Invalid Skip(-3)      10
+TOTAL =========>   10174   VALID SKIP(-4)    2512     NON-INTERVIEW(-5)       0
  
-Min:              1        Max:              4        Mean:                2.14
+Min:              0        Max:             52        Mean:               21.19
  
-Lead In: R02149.00[Default]
-Default Next Question: R02151.00
+
+
+NOTE: AUGUST 1983  DENNIS GREY
+ 
+NOTE: THIS KEY VARIABLE CONTAINS A VALID CODE FOR EACH RESPONDENT EVEN
+IF ALL TIME CANNOT BE ACCOUNTED FOR. IT SHOULD BE USED IN CONCERT WITH
+VARIABLE R02157.01 THAT TELLS WHAT PERCENTAGE OF TIME IS MISSING FOR
+EACH RESPONDENT.
+ 
+Lead In: R02156.00[Default]
+Default Next Question: R02157.01
 --------------------------------------------------------------------------------
 R02175.00    [MARSTAT-COL]                                  Survey Year: 1979
   PRIMARY VARIABLE
@@ -451,33 +463,48 @@ Min:              1        Max:              3        Mean:                 1.2
 Lead In: R04052.10[Default]
 Default Next Question: R04056.01
 --------------------------------------------------------------------------------
-R04063.01    [ESR_COL]                                      Survey Year: 1980
+R04072.00    [WKSWK-PCY]                                    Survey Year: 1980
   PRIMARY VARIABLE
 
  
-             EMPLOYMENT STATUS RECODE (COLLAPSED)
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
  
 ORIGINAL QUESTION NAME: *CREATED
  
-NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS RECODE
+ACTUAL WEEKS
  
-UNIVERSE: All
+UNIVERSE: R >= 16; interviewed in prior survey
  
-    5733       1 EMPLOYED
-    1766       2 UNEMPLOYED
-    3648       3 OUT OF LABOR FORCE
-     994       4 IN ACTIVE FORCES
+    2377           0
+    1250           1 TO 13
+    1360          14 TO 26
+    1422          27 TO 39
+    1060          40 TO 48
+     587          49 TO 51
+    1633          52
+       1          53 TO 9999999: > 52
   -------
-   12141
+    9690
  
 Refusal(-1)            0
 Don't Know(-2)         0
-TOTAL =========>   12141   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     545
+Invalid Skip(-3)       2
+TOTAL =========>    9692   VALID SKIP(-4)    2449     NON-INTERVIEW(-5)     545
  
-Min:              1        Max:              4        Mean:                1.99
+Min:              0        Max:             57        Mean:               25.31
  
-Lead In: R04063.00[Default]
-Default Next Question: R04063.10
+
+
+NOTE: AUGUST 1983  DENNIS GREY
+ 
+COMMENTS:
+NOTE: THIS KEY VARIABLE CONTAINS A VALID CODE FOR EACH RESPONDENT EVEN
+IF ALL TIME CANNOT BE ACCOUNTED FOR. IT SHOULD BE USED IN CONCERT WITH
+VARIABLE R(4072.01) THAT TELLS WHAT PERCENTAGE OF TIME IS MISSING FOR
+EACH RESPONDENT.
+ 
+Lead In: R04071.10[Default]
+Default Next Question: R04072.01
 --------------------------------------------------------------------------------
 R06186.00    [MARSTAT-COL]                                  Survey Year: 1981
   PRIMARY VARIABLE
@@ -502,33 +529,47 @@ Min:              1        Max:              3        Mean:                1.27
 Lead In: R06185.10[Default]
 Default Next Question: R06186.01
 --------------------------------------------------------------------------------
-R06188.01    [ESR_COL]                                      Survey Year: 1981
+R06463.00    [WKSWK-PCY]                                    Survey Year: 1981
   PRIMARY VARIABLE
 
  
-             EMPLOYMENT STATUS RECODE (COLLAPSED)
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
  
 ORIGINAL QUESTION NAME: *CREATED
  
-NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS RECODE
+ACTUAL WEEKS
  
-UNIVERSE: All
+UNIVERSE: R >= 16
  
-    6334       1 EMPLOYED
-    1770       2 UNEMPLOYED
-    3236       3 OUT OF LABOR FORCE
-     855       4 IN ACTIVE FORCES
+    2627           0
+    1420           1 TO 13
+    1468          14 TO 26
+    1542          27 TO 39
+    1248          40 TO 48
+     697          49 TO 51
+    2236          52
+       0          53 TO 9999999: > 52
   -------
-   12195
+   11238
  
 Refusal(-1)            0
 Don't Know(-2)         0
-TOTAL =========>   12195   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     491
+TOTAL =========>   11238   VALID SKIP(-4)     957     NON-INTERVIEW(-5)     491
  
-Min:              1        Max:              4        Mean:                1.89
+Min:              0        Max:             52        Mean:               26.51
  
-Lead In: R06188.00[Default]
-Default Next Question: R06188.10
+
+
+NOTE: AUGUST 1983  DENNIS GREY
+ 
+COMMENTS:
+NOTE: THIS KEY VARIABLE CONTAINS A VALID CODE FOR EACH RESPONDENT EVEN
+IF ALL TIME CANNOT BE ACCOUNTED FOR. IT SHOULD BE USED IN CONCERT WITH
+VARIABLE R(6463.01) THAT TELLS WHAT PERCENTAGE OF TIME IS MISSING FOR
+EACH RESPONDENT.
+ 
+Lead In: R06462.00[Default]
+Default Next Question: R06463.01
 --------------------------------------------------------------------------------
 R06471.03    [FAMSIZE]                                      Survey Year: 1981
   PRIMARY VARIABLE
@@ -648,6 +689,46 @@ Min:              1        Max:             15        Mean:                3.67
 Lead In: R08967.01[Default]
 Default Next Question: R08967.11
 --------------------------------------------------------------------------------
+R08969.00    [WKSWK-PCY]                                    Survey Year: 1982
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+ACTUAL WEEKS
+ 
+    2615           0
+    1506           1 TO 13
+    1495          14 TO 26
+    1511          27 TO 39
+    1368          40 TO 48
+     730          49 TO 51
+    2898          52
+       0          53 TO 9999999: > 52
+  -------
+   12123
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12123   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     563
+ 
+Min:              0        Max:             52        Mean:               27.99
+ 
+
+
+NOTE: AUGUST 1983  DENNIS GREY
+ 
+COMMENTS:
+NOTE: THIS KEY VARIABLE CONTAINS A VALID CODE FOR EACH RESPONDENT EVEN
+IF ALL TIME CANNOT BE ACCOUNTED FOR. IT SHOULD BE USED IN CONCERT WITH
+VARIABLE R(8969.01) THAT TELLS WHAT PERCENTAGE OF TIME IS MISSING FOR
+EACH RESPONDENT.
+ 
+Lead In: R08968.00[Default]
+Default Next Question: R08969.01
+--------------------------------------------------------------------------------
 R08984.00    [MARSTAT-COL]                                  Survey Year: 1982
   PRIMARY VARIABLE
 
@@ -671,34 +752,6 @@ Min:              1        Max:              3        Mean:                1.35
  
 Lead In: R08983.10[Default]
 Default Next Question: R08984.01
---------------------------------------------------------------------------------
-R08985.01    [ESR_COL]                                      Survey Year: 1982
-  PRIMARY VARIABLE
-
- 
-             EMPLOYMENT STATUS RECODE (COLLAPSED)
- 
-ORIGINAL QUESTION NAME: *CREATED
- 
-NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS RECODE
- 
-UNIVERSE: All
- 
-    6593       1 EMPLOYED
-    1698       2 UNEMPLOYED
-    3007       3 OUT OF LABOR FORCE
-     825       4 IN ACTIVE FORCES
-  -------
-   12123
- 
-Refusal(-1)            0
-Don't Know(-2)         0
-TOTAL =========>   12123   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     563
- 
-Min:              1        Max:              4        Mean:                1.84
- 
-Lead In: R08985.00[Default]
-Default Next Question: R08985.10
 --------------------------------------------------------------------------------
 R10219.00    [Q12-3]                                        Survey Year: 1983
   PRIMARY VARIABLE
@@ -770,32 +823,6 @@ Min:              1        Max:             15        Mean:                3.51
 Lead In: R11444.01[Default]
 Default Next Question: R11445.00
 --------------------------------------------------------------------------------
-R11447.01    [ESR_COL]                                      Survey Year: 1983
-  PRIMARY VARIABLE
-
- 
-             EMPLOYMENT STATUS RECODE (COLLAPSED)
- 
-ORIGINAL QUESTION NAME: *CREATED
- 
-NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS RECODE
- 
-    6956       1 EMPLOYED
-    1735       2 UNEMPLOYED
-    2750       3 OUT OF LABOR FORCE
-     780       4 IN ACTIVE FORCES
-  -------
-   12221
- 
-Refusal(-1)            0
-Don't Know(-2)         0
-TOTAL =========>   12221   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     465
- 
-Min:              1        Max:              4        Mean:                1.78
- 
-Lead In: R11447.00[Default]
-Default Next Question: R11447.10
---------------------------------------------------------------------------------
 R11449.00    [MARSTAT-COL]                                  Survey Year: 1983
   PRIMARY VARIABLE
 
@@ -817,6 +844,40 @@ Min:              1        Max:              3        Mean:                1.42
  
 Lead In: R11448.00[Default]
 Default Next Question: R11449.01
+--------------------------------------------------------------------------------
+R11453.00    [WKSWK-PCY]                                    Survey Year: 1983
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: THIS KEY VARIABLE CONTAINS A VALID CODE FOR EACH RESPONDENT EVEN IF ALL 
+TIME CANNOT BE ACCOUNTED FOR. IT SHOULD BE USED IN CONCERT WITH VARIABLE 
+R(11456.) THAT TELLS WHAT PERCENTAGE OF TIME IS MISSING FOR EACH RESPONDENT.  
+ACTUAL WEEKS
+ 
+    2657           0
+    1349           1 TO 13
+    1332          14 TO 26
+    1517          27 TO 39
+    1387          40 TO 48
+     697          49 TO 51
+    3281          52
+       0          53 TO 9999999: > 52
+  -------
+   12220
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       1
+TOTAL =========>   12221   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     465
+ 
+Min:              0        Max:             52        Mean:               28.92
+ 
+Lead In: R11452.00[Default]
+Default Next Question: R11454.00
 --------------------------------------------------------------------------------
 R13910.00    [Q12-3]                                        Survey Year: 1984
   PRIMARY VARIABLE
@@ -1008,32 +1069,6 @@ Min:              1        Max:             15        Mean:                3.34
 Lead In: R15196.01[Default]
 Default Next Question: R15197.00
 --------------------------------------------------------------------------------
-R15199.01    [ESR_COL]                                      Survey Year: 1984
-  PRIMARY VARIABLE
-
- 
-             EMPLOYMENT STATUS RECODE (COLLAPSED)
- 
-ORIGINAL QUESTION NAME: *CREATED
- 
-NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS RECODE
- 
-    7562       1 EMPLOYED
-    1394       2 UNEMPLOYED
-    2406       3 OUT OF LABOR FORCE
-     707       4 IN ACTIVE FORCES
-  -------
-   12069
- 
-Refusal(-1)            0
-Don't Know(-2)         0
-TOTAL =========>   12069   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     617
- 
-Min:              1        Max:              4        Mean:                1.69
- 
-Lead In: R15199.00[Default]
-Default Next Question: R15199.10
---------------------------------------------------------------------------------
 R15201.00    [MARSTAT-COL]                                  Survey Year: 1984
   PRIMARY VARIABLE
 
@@ -1055,6 +1090,39 @@ Min:              1        Max:              3        Mean:                1.49
  
 Lead In: R15200.00[Default]
 Default Next Question: R15201.01
+--------------------------------------------------------------------------------
+R15205.00    [WKSWK-PCY]                                    Survey Year: 1984
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: THIS KEY VARIABLE CONTAINS A VALID CODE FOR EACH RESPONDENT EVEN IF ALL 
+TIME CANNOT BE ACCOUNTED FOR. IT SHOULD BE USED IN CONCERT WITH VARIABLE 
+R(15208.) THAT TELLS WHAT PERCENTAGE OF TIME IS MISSING FOR EACH RESPONDENT.  
+ACTUAL WEEKS
+ 
+    2481           0
+    1152           1 TO 13
+    1235          14 TO 26
+    1374          27 TO 39
+    1372          40 TO 48
+     721          49 TO 51
+    3734          52
+       0          53 TO 9999999: > 52
+  -------
+   12069
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12069   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     617
+ 
+Min:              0        Max:             52        Mean:               30.63
+ 
+Lead In: R15204.00[Default]
+Default Next Question: R15206.00
 --------------------------------------------------------------------------------
 R17746.00    [Q12-3]                                        Survey Year: 1985
   PRIMARY VARIABLE
@@ -1128,32 +1196,6 @@ Min:              1        Max:             15        Mean:                3.25
 Lead In: R18902.01[Default]
 Default Next Question: R18903.00
 --------------------------------------------------------------------------------
-R18906.01    [ESR_COL]                                      Survey Year: 1985
-  PRIMARY VARIABLE
-
- 
-             EMPLOYMENT STATUS RECODE (COLLAPSED)
- 
-ORIGINAL QUESTION NAME: *CREATED
- 
-NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS RECODE
- 
-    7341       1 EMPLOYED
-    1124       2 UNEMPLOYED
-    2029       3 OUT OF LABOR FORCE
-     400       4 IN ACTIVE FORCES
-  -------
-   10894
- 
-Refusal(-1)            0
-Don't Know(-2)         0
-TOTAL =========>   10894   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1792
- 
-Min:              1        Max:              4        Mean:                1.59
- 
-Lead In: R18906.00[Default]
-Default Next Question: R18907.00
---------------------------------------------------------------------------------
 R18908.00    [MARSTAT-COL]                                  Survey Year: 1985
   PRIMARY VARIABLE
 
@@ -1175,6 +1217,39 @@ Min:              1        Max:              3        Mean:                1.53
  
 Lead In: R18907.00[Default]
 Default Next Question: R18908.01
+--------------------------------------------------------------------------------
+R18912.00    [WKSWK-PCY]                                    Survey Year: 1985
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: THIS KEY VARIABLE CONTAINS A VALID CODE FOR EACH RESPONDENT EVEN IF ALL 
+TIME CANNOT BE ACCOUNTED FOR. IT SHOULD BE USED IN CONCERT WITH VARIABLE 
+R(18915.) THAT TELLS WHAT PERCENTAGE OF TIME IS MISSING FOR EACH RESPONDENT.  
+ACTUAL WEEKS
+ 
+    1849           0
+     838           1 TO 13
+     994          14 TO 26
+    1215          27 TO 39
+    1224          40 TO 48
+     728          49 TO 51
+    4046          52
+       0          53 TO 9999999: > 52
+  -------
+   10894
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10894   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1792
+ 
+Min:              0        Max:             52        Mean:               33.77
+ 
+Lead In: R18911.00[Default]
+Default Next Question: R18913.00
 --------------------------------------------------------------------------------
 R22574.10    [FAMSIZE]                                      Survey Year: 1986
   PRIMARY VARIABLE
@@ -1220,32 +1295,6 @@ Min:              1        Max:             15        Mean:                3.13
 Lead In: R22574.00[Default]
 Default Next Question: R22575.00
 --------------------------------------------------------------------------------
-R22577.01    [ESR_COL]                                      Survey Year: 1986
-  PRIMARY VARIABLE
-
- 
-             EMPLOYMENT STATUS RECODE (COLLAPSED)
- 
-ORIGINAL QUESTION NAME: *CREATED
- 
-NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS RECODE
- 
-    7533       1 EMPLOYED
-     948       2 UNEMPLOYED
-    1846       3 OUT OF LABOR FORCE
-     328       4 IN ACTIVE FORCES
-  -------
-   10655
- 
-Refusal(-1)            0
-Don't Know(-2)         0
-TOTAL =========>   10655   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2031
- 
-Min:              1        Max:              4        Mean:                1.53
- 
-Lead In: R22577.00[Default]
-Default Next Question: R22578.00
---------------------------------------------------------------------------------
 R22579.00    [MARSTAT-COL]                                  Survey Year: 1986
   PRIMARY VARIABLE
 
@@ -1266,6 +1315,39 @@ Min:              1        Max:              3        Mean:                 1.6
  
 Lead In: R22578.00[Default]
 Default Next Question: R22579.01
+--------------------------------------------------------------------------------
+R22583.00    [WKSWK-PCY]                                    Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: THIS KEY VARIABLE CONTAINS A VALID CODE FOR EACH RESPONDENT EVEN IF ALL 
+TIME CANNOT BE ACCOUNTED FOR. IT SHOULD BE USED IN CONCERT WITH VARIABLE 
+R(22586.) THAT TELLS WHAT PERCENTAGE OF TIME IS MISSING FOR EACH RESPONDENT.  
+ACTUAL WEEKS
+ 
+    1737           0
+     691           1 TO 13
+     830          14 TO 26
+    1075          27 TO 39
+    1198          40 TO 48
+     695          49 TO 51
+    4429          52
+       0          53 TO 9999999: > 52
+  -------
+   10655
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10655   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2031
+ 
+Min:              0        Max:             52        Mean:                35.3
+ 
+Lead In: R22582.00[Default]
+Default Next Question: R22584.00
 --------------------------------------------------------------------------------
 R24446.10    [FAMSIZE]                                      Survey Year: 1987
   PRIMARY VARIABLE
@@ -1311,32 +1393,6 @@ Min:              1        Max:             14        Mean:                3.08
 Lead In: R24446.00[Default]
 Default Next Question: R24447.00
 --------------------------------------------------------------------------------
-R24451.01    [ESR_COL]                                      Survey Year: 1987
-  PRIMARY VARIABLE
-
- 
-             EMPLOYMENT STATUS RECODE (COLLAPSED)
- 
-ORIGINAL QUESTION NAME: *CREATED
- 
-NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS RECODE
- 
-    7673       1 EMPLOYED
-     730       2 UNEMPLOYED
-    1780       3 OUT OF LABOR FORCE
-     302       4 IN ACTIVE FORCES
-  -------
-   10485
- 
-Refusal(-1)            0
-Don't Know(-2)         0
-TOTAL =========>   10485   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2201
- 
-Min:              1        Max:              4        Mean:                 1.5
- 
-Lead In: R24451.00[Default]
-Default Next Question: R24452.00
---------------------------------------------------------------------------------
 R24453.00    [MARSTAT-COL]                                  Survey Year: 1987
   PRIMARY VARIABLE
 
@@ -1357,6 +1413,39 @@ Min:              1        Max:              3        Mean:                1.68
  
 Lead In: R24452.00[Default]
 Default Next Question: R24453.01
+--------------------------------------------------------------------------------
+R24457.00    [WKSWK-PCY]                                    Survey Year: 1987
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: THIS KEY VARIABLE CONTAINS A VALID CODE FOR EACH RESPONDENT EVEN IF ALL 
+TIME CANNOT BE ACCOUNTED FOR. IT SHOULD BE USED IN CONCERT WITH VARIABLE 
+R(24460.) THAT TELLS WHAT PERCENTAGE OF TIME IS MISSING FOR EACH RESPONDENT.  
+ACTUAL WEEKS
+ 
+    1704           0
+     572           1 TO 13
+     699          14 TO 26
+     935          27 TO 39
+    1103          40 TO 48
+     658          49 TO 51
+    4814          52
+       0          53 TO 9999999: > 52
+  -------
+   10485
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10485   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2201
+ 
+Min:              0        Max:             52        Mean:               36.41
+ 
+Lead In: R24456.00[Default]
+Default Next Question: R24458.00
 --------------------------------------------------------------------------------
 R27166.00    [Q12-3]                                        Survey Year: 1988
   PRIMARY VARIABLE
@@ -1496,33 +1585,6 @@ Min:              1        Max:             15        Mean:                3.05
 Lead In: R28701.00[Default]
 Default Next Question: R28702.00
 --------------------------------------------------------------------------------
-R28707.00    [ESR_COL]                                      Survey Year: 1988
-  PRIMARY VARIABLE
-
- 
-             EMPLOYMENT STATUS RECODE (COLLAPSED)
- 
-ORIGINAL QUESTION NAME: *CREATED
- 
-NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS RECODE
-(ESR)
- 
-    7869       1 EMPLOYED
-     630       2 UNEMPLOYED
-    1712       3 OUT OF LABOR FORCE
-     254       4 IN ACTIVE FORCES
-  -------
-   10465
- 
-Refusal(-1)            0
-Don't Know(-2)         0
-TOTAL =========>   10465   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2221
- 
-Min:              1        Max:              4        Mean:                1.46
- 
-Lead In: R28706.00[Default]
-Default Next Question: R28708.00
---------------------------------------------------------------------------------
 R28709.00    [MARSTAT-COL]                                  Survey Year: 1988
   PRIMARY VARIABLE
 
@@ -1544,6 +1606,39 @@ Min:              1        Max:              3        Mean:                1.75
  
 Lead In: R28708.00[Default]
 Default Next Question: R28710.00
+--------------------------------------------------------------------------------
+R28715.00    [WKSWK-PCY]                                    Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: THIS KEY VARIABLE CONTAINS A VALID CODE FOR EACH RESPONDENT EVEN IF ALL 
+TIME CANNOT BE ACCOUNTED FOR. IT SHOULD BE USED IN CONCERT WITH VARIABLE 
+R(28718.) THAT TELLS WHAT PERCENTAGE OF TIME IS MISSING FOR EACH RESPONDENT.  
+ACTUAL WEEKS
+ 
+    1543           0
+     476           1 TO 13
+     730          14 TO 26
+     945          27 TO 39
+    1034          40 TO 48
+     639          49 TO 51
+    5097          52
+       1          53 TO 9999999: > 52
+  -------
+   10465
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10465   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2221
+ 
+Min:              0        Max:             53        Mean:               37.52
+ 
+Lead In: R28714.00[Default]
+Default Next Question: R28716.00
 --------------------------------------------------------------------------------
 R29682.00    [Q12-3]                                        Survey Year: 1989
   PRIMARY VARIABLE
@@ -1617,33 +1712,6 @@ Min:              1        Max:             15        Mean:                3.07
 Lead In: R30739.00[Default]
 Default Next Question: R30740.00
 --------------------------------------------------------------------------------
-R30744.00    [ESR_COL]                                      Survey Year: 1989
-  PRIMARY VARIABLE
-
- 
-             EMPLOYMENT STATUS RECODE (COLLAPSED)
- 
-ORIGINAL QUESTION NAME: *CREATED
- 
-NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS
-RECODE (ESR)
- 
-    7942       1 EMPLOYED
-     632       2 UNEMPLOYED
-    1782       3 OUT OF LABOR FORCE
-     249       4 IN ACTIVE FORCES
-  -------
-   10605
- 
-Refusal(-1)            0
-Don't Know(-2)         0
-TOTAL =========>   10605   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2081
- 
-Min:              1        Max:              4        Mean:                1.47
- 
-Lead In: R30743.00[Default]
-Default Next Question: R30745.00
---------------------------------------------------------------------------------
 R30746.00    [MARSTAT-COL]                                  Survey Year: 1989
   PRIMARY VARIABLE
 
@@ -1664,6 +1732,41 @@ Min:              1        Max:              3        Mean:                 1.8
  
 Lead In: R30745.00[Default]
 Default Next Question: R30747.00
+--------------------------------------------------------------------------------
+R30752.00    [WKSWK-PCY]                                    Survey Year: 1989
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: THIS KEY VARIABLE CONTAINS A VALID CODE FOR EACH RESPONDENT EVEN
+IF ALL TIME CANNOT BE ACCOUNTED FOR. IT SHOULD BE USED IN CONCERT WITH
+VARIABLE R(30755.) THAT TELLS WHAT PERCENTAGE OF TIME IS MISSING FOR
+EACH RESPONDENT.
+ 
+ACTUAL WEEKS
+ 
+    1488           0
+     487           1 TO 13
+     649          14 TO 26
+     857          27 TO 39
+    1033          40 TO 48
+     678          49 TO 51
+    5413          52
+       0          53 TO 9999999: > 52
+  -------
+   10605
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10605   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2081
+ 
+Min:              0        Max:             52        Mean:               38.31
+ 
+Lead In: R30751.00[Default]
+Default Next Question: R30753.00
 --------------------------------------------------------------------------------
 R34006.00    [FAMSIZE]                                      Survey Year: 1990
   PRIMARY VARIABLE
@@ -1707,33 +1810,6 @@ Min:              1        Max:             15        Mean:                 3.1
 Lead In: R34005.00[Default]
 Default Next Question: R34007.00
 --------------------------------------------------------------------------------
-R34011.00    [ESR_COL]                                      Survey Year: 1990
-  PRIMARY VARIABLE
-
- 
-             EMPLOYMENT STATUS RECODE (COLLAPSED)
- 
-ORIGINAL QUESTION NAME: *CREATED
- 
-NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS
-RECODE (ESR)
- 
-    7953       1 EMPLOYED
-     542       2 UNEMPLOYED
-    1730       3 OUT OF LABOR FORCE
-     211       4 IN ACTIVE FORCES
-  -------
-   10436
- 
-Refusal(-1)            0
-Don't Know(-2)         0
-TOTAL =========>   10436   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2250
- 
-Min:              1        Max:              4        Mean:                1.44
- 
-Lead In: R34010.00[Default]
-Default Next Question: R34012.00
---------------------------------------------------------------------------------
 R34013.00    [MARSTAT-COL]                                  Survey Year: 1990
   PRIMARY VARIABLE
 
@@ -1755,6 +1831,40 @@ Min:              1        Max:              3        Mean:                1.84
  
 Lead In: R34012.00[Default]
 Default Next Question: R34014.00
+--------------------------------------------------------------------------------
+R34019.00    [WKSWK-PCY]                                    Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: THIS KEY VARIABLE CONTAINS A VALID CODE FOR EACH RESPONDENT EVEN IF ALL 
+TIME CANNOT BE ACCOUNTED FOR. IT SHOULD BE USED IN CONCERT WITH VARIABLE 
+R(34022.) THAT TELLS WHAT PERCENTAGE OF TIME IS MISSING FOR EACH RESPONDENT.
+ 
+ACTUAL WEEKS
+ 
+    1449           0
+     440           1 TO 13
+     650          14 TO 26
+     858          27 TO 39
+     927          40 TO 48
+     615          49 TO 51
+    5480          52
+      17          53 TO 9999999: > 52
+  -------
+   10436
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10436   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2250
+ 
+Min:              0        Max:             55        Mean:               38.58
+ 
+Lead In: R34018.00[Default]
+Default Next Question: R34020.00
 --------------------------------------------------------------------------------
 R36560.00    [FAMSIZE]                                      Survey Year: 1991
   PRIMARY VARIABLE
@@ -1798,33 +1908,6 @@ Min:              1        Max:             13        Mean:                3.14
 Lead In: R36559.00[Default]
 Default Next Question: R36561.00
 --------------------------------------------------------------------------------
-R36565.00    [ESR_COL]                                      Survey Year: 1991
-  PRIMARY VARIABLE
-
- 
-             EMPLOYMENT STATUS RECODE (COLLAPSED)
- 
-ORIGINAL QUESTION NAME: *CREATED
- 
-NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS
-RECODE (ESR)
- 
-    6738       1 EMPLOYED
-     594       2 UNEMPLOYED
-    1502       3 OUT OF LABOR FORCE
-     184       4 IN ACTIVE FORCES
-  -------
-    9018
- 
-Refusal(-1)            0
-Don't Know(-2)         0
-TOTAL =========>    9018   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    3668
- 
-Min:              1        Max:              4        Mean:                1.46
- 
-Lead In: R36564.00[Default]
-Default Next Question: R36566.00
---------------------------------------------------------------------------------
 R36567.00    [MARSTAT-COL]                                  Survey Year: 1991
   PRIMARY VARIABLE
 
@@ -1845,6 +1928,41 @@ Min:              1        Max:              3        Mean:                1.84
  
 Lead In: R36566.00[Default]
 Default Next Question: R36568.00
+--------------------------------------------------------------------------------
+R36573.00    [WKSWK-PCY]                                    Survey Year: 1991
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: THIS KEY VARIABLE CONTAINS A VALID CODE FOR EACH RESPONDENT EVEN
+IF ALL TIME CANNOT BE ACCOUNTED FOR. IT SHOULD BE USED IN CONCERT WITH
+VARIABLE R(36576.) THAT TELLS WHAT PERCENTAGE OF TIME IS MISSING FOR
+EACH RESPONDENT.
+ 
+ACTUAL WEEKS
+ 
+    1253           0
+     399           1 TO 13
+     521          14 TO 26
+     692          27 TO 39
+     828          40 TO 48
+     497          49 TO 51
+    4828          52
+       0          53 TO 9999999: > 52
+  -------
+    9018
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    9018   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    3668
+ 
+Min:              0        Max:             52        Mean:               38.74
+ 
+Lead In: R36572.00[Default]
+Default Next Question: R36574.00
 --------------------------------------------------------------------------------
 R39153.00    [DS-11]                                        Survey Year: 1992
   PRIMARY VARIABLE
@@ -1986,33 +2104,6 @@ Min:              1        Max:             14        Mean:                 3.2
 Lead In: R40064.00[Default]
 Default Next Question: R40066.00
 --------------------------------------------------------------------------------
-R40070.00    [ESR_COL]                                      Survey Year: 1992
-  PRIMARY VARIABLE
-
- 
-             EMPLOYMENT STATUS RECODE (COLLAPSED)
- 
-ORIGINAL QUESTION NAME: *CREATED
- 
-NOTE: FOR VARIABLE CREATION, SEE APPENDIX 1: EMPLOYMENT STATUS
-RECODE (ESR)
- 
-    6775       1 EMPLOYED
-     602       2 UNEMPLOYED
-    1476       3 OUT OF LABOR FORCE
-     163       4 IN ACTIVE FORCES
-  -------
-    9016
- 
-Refusal(-1)            0
-Don't Know(-2)         0
-TOTAL =========>    9016   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    3670
- 
-Min:              1        Max:              4        Mean:                1.45
- 
-Lead In: R40069.00[Default]
-Default Next Question: R40071.00
---------------------------------------------------------------------------------
 R40072.00    [MARSTAT-COL]                                  Survey Year: 1992
   PRIMARY VARIABLE
 
@@ -2033,6 +2124,41 @@ Min:              1        Max:              3        Mean:                1.88
  
 Lead In: R40071.00[Default]
 Default Next Question: R40073.00
+--------------------------------------------------------------------------------
+R40078.00    [WKSWK-PCY]                                    Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: THIS KEY VARIABLE CONTAINS A VALID CODE FOR EACH RESPONDENT EVEN
+IF ALL TIME CANNOT BE ACCOUNTED FOR. IT SHOULD BE USED IN CONCERT WITH
+VARIABLE R(40081.) THAT TELLS WHAT PERCENTAGE OF TIME IS MISSING FOR
+EACH RESPONDENT.
+ 
+ACTUAL WEEKS
+ 
+    1343           0
+     355           1 TO 13
+     538          14 TO 26
+     694          27 TO 39
+     771          40 TO 48
+     440          49 TO 51
+    4875          52
+       0          53 TO 9999999: > 52
+  -------
+    9016
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    9016   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    3670
+ 
+Min:              0        Max:             52        Mean:               38.42
+ 
+Lead In: R40077.00[Default]
+Default Next Question: R40079.00
 --------------------------------------------------------------------------------
 R44176.00    [FAMSIZE]                                      Survey Year: 1993
   PRIMARY VARIABLE
@@ -2073,36 +2199,6 @@ Min:              1        Max:             13        Mean:                3.24
 Lead In: R44175.00[Default]
 Default Next Question: R44177.00
 --------------------------------------------------------------------------------
-R44181.00    [ESR_COL]                                      Survey Year: 1993
-  PRIMARY VARIABLE
-
- 
-             EMPLOYMENT STATUS RECODE (COLLAPSED)
- 
-ORIGINAL QUESTION NAME: ESR-COL
- 
-COMMENT: Employment Status Recode - Collapsed
- 
-    6699       1 EMPLOYED
-     520       2 UNEMPLOYED
-    1555       3 OUT OF LABOR FORCE
-     237       4 IN ACTIVE FORCES
-  -------
-    9011
- 
-Refusal(-1)            0
-Don't Know(-2)         0
-TOTAL =========>    9011   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    3675
- 
-Min:              1        Max:              4        Mean:                1.48
- 
-
-
-NOTE: FOR VARIABLE CREATION SEE APPENDIX 1: EMPLOYMENT STATUS RECODE (ESR)
- 
-Lead In: R44180.00[Default]
-Default Next Question: R44182.00
---------------------------------------------------------------------------------
 R44183.00    [MARSTAT-COL]                                  Survey Year: 1993
   PRIMARY VARIABLE
 
@@ -2127,6 +2223,42 @@ Min:              1        Max:              3        Mean:                 1.9
  
 Lead In: R44182.00[Default]
 Default Next Question: R44184.00
+--------------------------------------------------------------------------------
+R44189.00    [WKSWK-PCY]                                    Survey Year: 1993
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
+ 
+ORIGINAL QUESTION NAME: WKSWK-PCY
+ 
+NOTE: THIS KEY VARIABLE CONTAINS A VALID CODE FOR EACH RESPONDENT EVEN IF ALL 
+TIME CANNOT BE ACCOUNTED FOR. IT SHOULD BE USED IN CONCERT WITH VARIABLE 
+R(44192.) THAT TELLS WHAT PERCENTAGE OF TIME IS MISSING FOR EACH RESPONDENT.
+ 
+ACTUAL WEEKS
+ 
+COMMENT: Weeks worked in past calendar year
+ 
+    1396           0
+     369           1 TO 13
+     442          14 TO 26
+     626          27 TO 39
+     692          40 TO 48
+     440          49 TO 51
+    5046          52
+       0          53 TO 9999999: > 52
+  -------
+    9011
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    9011   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    3675
+ 
+Min:              0        Max:             52        Mean:               38.58
+ 
+Lead In: R44188.00[Default]
+Default Next Question: R44190.00
 --------------------------------------------------------------------------------
 R49792.00    [Q12-3]                                        Survey Year: 1994
   PRIMARY VARIABLE
@@ -2274,33 +2406,6 @@ Min:              1        Max:             14        Mean:                3.25
 Lead In: R50805.00[Default]
 Default Next Question: R50807.00
 --------------------------------------------------------------------------------
-R50811.00    [ESR_COL]                                      Survey Year: 1994
-  PRIMARY VARIABLE
-
- 
-             EMPLOYMENT STATUS RECODE (COLLAPSED)
- 
-COMMENT: Employment Status Recode - Collapsed
- 
-NOTE: FOR VARIABLE CREATION SEE APPENDIX 1: EMPLOYMENT STATUS RECODE (ESR)
- 
-    6794           1: 1  EMPLOYED
-     477           2: 2  UNEMPLOYED
-    1487           3: 3  OUT OF LABOR FORCE
-     131           4: 4  IN ACTIVE FORCES
-  -------
-    8889
- 
-Refusal(-1)            0
-Don't Know(-2)         0
-Invalid Skip(-3)       2
-TOTAL =========>    8891   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    3795
- 
-Min:              1        Max:              4        Mean:                1.43
- 
-Lead In: R50810.00[Default]
-Default Next Question: R50812.00
---------------------------------------------------------------------------------
 R50813.00    [MARSTAT-COL]                                  Survey Year: 1994
   PRIMARY VARIABLE
 
@@ -2324,6 +2429,42 @@ Min:              1        Max:              3        Mean:                1.94
  
 Lead In: R50812.00[Default]
 Default Next Question: R50814.00
+--------------------------------------------------------------------------------
+R50819.00    [WKSWK-PCY]                                    Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
+ 
+NOTE: THIS KEY VARIABLE CONTAINS A VALID CODE FOR EACH RESPONDENT EVEN
+IF ALL TIME CANNOT BE ACCOUNTED FOR. IT SHOULD BE USED IN CONCERT WITH
+VARIABLE R(50822.) THAT TELLS WHAT PERCENTAGE OF TIME IS MISSING FOR
+EACH RESPONDENT.
+ 
+ACTUAL WEEKS
+ 
+COMMENT: Weeks worked in past calendar year
+ 
+    1364           0
+     344           1 TO 13
+     424          14 TO 26
+     610          27 TO 39
+     700          40 TO 48
+     456          49 TO 51
+    4991          52
+       0          53 TO 99999999: > 52
+  -------
+    8889
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>    8891   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    3795
+ 
+Min:              0        Max:             52        Mean:               38.81
+ 
+Lead In: R50818.00[Default]
+Default Next Question: R50820.00
 --------------------------------------------------------------------------------
 R51659.00    [FAMSIZE]                                      Survey Year: 1996
   PRIMARY VARIABLE
@@ -2356,32 +2497,6 @@ Min:              1        Max:             13        Mean:                 3.3
 Lead In: R51658.00[Default]
 Default Next Question: R51660.00
 --------------------------------------------------------------------------------
-R51664.00    [ESR_COL]                                      Survey Year: 1996
-  PRIMARY VARIABLE
-
- 
-             EMPLOYMENT STATUS RECODE (COLLAPSED)
- 
-COMMENT: Employment Status Recode - Collapsed
- 
-NOTE: FOR VARIABLE CREATION SEE APPENDIX 1: EMPLOYMENT STATUS RECODE (ESR)
- 
-    6729           1: EMPLOYED
-     406           2: UNEMPLOYED
-    1394           3: OUT OF LABOR FORCE
-     107           4: IN ACTIVE FORCES
-  -------
-    8636
- 
-Refusal(-1)            0
-Don't Know(-2)         0
-TOTAL =========>    8636   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    4050
- 
-Min:              1        Max:              4        Mean:                1.41
- 
-Lead In: R51663.00[Default]
-Default Next Question: R51665.00
---------------------------------------------------------------------------------
 R51666.00    [MARSTAT-COL]                                  Survey Year: 1996
   PRIMARY VARIABLE
 
@@ -2404,6 +2519,43 @@ Min:              1        Max:              3        Mean:                1.97
  
 Lead In: R51665.00[Default]
 Default Next Question: R51667.00
+--------------------------------------------------------------------------------
+R51672.00    [WKSWK-PCY]                                    Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
+ 
+NOTE: THIS KEY VARIABLE CONTAINS A VALID CODE FOR EACH RESPONDENT EVEN
+IF ALL TIME CANNOT BE ACCOUNTED FOR. IT SHOULD BE USED IN CONCERT WITH
+VARIABLE R(51675.) THAT TELLS WHAT PERCENTAGE OF TIME IS MISSING FOR
+EACH RESPONDENT.
+ 
+ACTUAL WEEKS
+ 
+COMMENT: Weeks worked in past calendar year
+ 
+NOTE: ACTUAL WEEKS
+ 
+    1296           0
+     265           1 TO 13
+     350          14 TO 26
+     452          27 TO 39
+     568          40 TO 48
+     372          49 TO 51
+    5333          52
+       0          53 TO 99999999: > 52
+  -------
+    8636
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8636   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    4050
+ 
+Min:              0        Max:             52        Mean:               39.98
+ 
+Lead In: R51671.00[Default]
+Default Next Question: R51673.00
 --------------------------------------------------------------------------------
 R64307.00    [DS-11]                                        Survey Year: 1998
   PRIMARY VARIABLE
@@ -2530,32 +2682,6 @@ Min:              1        Max:             15        Mean:                3.34
 Lead In: R64785.00[Default]
 Default Next Question: R64787.00
 --------------------------------------------------------------------------------
-R64790.00    [ESR_COL]                                      Survey Year: 1998
-  PRIMARY VARIABLE
-
- 
-             EMPLOYMENT STATUS RECODE (COLLAPSED)
- 
-COMMENT: Employment Status Recode - Collapsed
- 
-NOTE: FOR VARIABLE CREATION SEE APPENDIX 1: EMPLOYMENT STATUS RECODE (ESR)
- 
-    6712           1: 1  EMPLOYED
-     331           2: 2  UNEMPLOYED
-    1264           3: 3  OUT OF LABOR FORCE
-      92           4: 4  IN ACTIVE FORCES
-  -------
-    8399
- 
-Refusal(-1)            0
-Don't Know(-2)         0
-TOTAL =========>    8399   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    4287
- 
-Min:              1        Max:              4        Mean:                1.37
- 
-Lead In: R64789.00[Default]
-Default Next Question: R64791.00
---------------------------------------------------------------------------------
 R64792.00    [MARSTAT-COL]                                  Survey Year: 1998
   PRIMARY VARIABLE
 
@@ -2578,6 +2704,41 @@ Min:              1        Max:              3        Mean:                2.02
  
 Lead In: R64791.00[Default]
 Default Next Question: R64793.00
+--------------------------------------------------------------------------------
+R64800.00    [WKSWK-PCY]                                    Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
+ 
+NOTE: THIS KEY VARIABLE CONTAINS A VALID CODE FOR EACH RESPONDENT EVEN
+IF ALL TIME CANNOT BE ACCOUNTED FOR. IT SHOULD BE USED IN CONCERT WITH
+VARIABLE R(64803.) THAT TELLS WHAT PERCENTAGE OF TIME IS MISSING FOR
+EACH RESPONDENT.
+ 
+ACTUAL WEEKS
+ 
+COMMENT: Weeks worked in past calendar year
+ 
+    1176           0
+     218           1 TO 13
+     322          14 TO 26
+     368          27 TO 39
+     446          40 TO 48
+     319          49 TO 51
+    5550          52
+       0          53 TO 99999999: > 52
+  -------
+    8399
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8399   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    4287
+ 
+Min:              0        Max:             52        Mean:               41.05
+ 
+Lead In: R64799.00[Default]
+Default Next Question: R64801.00
 --------------------------------------------------------------------------------
 R70064.00    [FAMSIZE]                                      Survey Year: 2000
   PRIMARY VARIABLE
@@ -2633,6 +2794,41 @@ Min:              1        Max:              3        Mean:                2.05
  
 Lead In: R70068.00[Default]
 Default Next Question: R70070.00
+--------------------------------------------------------------------------------
+R70077.00    [WKSWK-PCY]                                    Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
+ 
+NOTE: THIS KEY VARIABLE CONTAINS A VALID CODE FOR EACH RESPONDENT EVEN
+IF ALL TIME CANNOT BE ACCOUNTED FOR. IT SHOULD BE USED IN CONCERT WITH
+VARIABLE R(70080.) THAT TELLS WHAT PERCENTAGE OF TIME IS MISSING FOR
+EACH RESPONDENT.
+ 
+ACTUAL WEEKS
+ 
+COMMENT: Weeks worked in past calendar year
+ 
+    1088           0
+     176           1 TO 13
+     243          14 TO 26
+     305          27 TO 39
+     396          40 TO 48
+     238          49 TO 51
+    5586          52
+       0          53 TO 99999999: > 52
+  -------
+    8032
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8032   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    4654
+ 
+Min:              0        Max:             52        Mean:                41.9
+ 
+Lead In: R70076.00[Default]
+Default Next Question: R70078.00
 --------------------------------------------------------------------------------
 R76064.00    [Q12-3]                                        Survey Year: 2002
   PRIMARY VARIABLE
@@ -2714,6 +2910,42 @@ Min:              1        Max:              3        Mean:                2.06
 Lead In: R77041.00[Default]
 Default Next Question: R77043.00
 --------------------------------------------------------------------------------
+R77050.00    [WKSWK-PCY]                                    Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
+ 
+NOTE: THIS KEY VARIABLE CONTAINS A VALID CODE FOR EACH RESPONDENT EVEN
+IF ALL TIME CANNOT BE ACCOUNTED FOR. IT SHOULD BE USED IN CONCERT WITH
+VARIABLE R(77053.) THAT TELLS WHAT PERCENTAGE OF TIME IS MISSING FOR
+EACH RESPONDENT.
+ 
+ACTUAL WEEKS
+ 
+COMMENT: Weeks worked in past calendar year
+ 
+    1065           0
+     189           1 TO 13
+     229          14 TO 26
+     344          27 TO 39
+     419          40 TO 48
+     223          49 TO 51
+    5253          52
+       0          53 TO 99999999: > 52
+  -------
+    7722
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>    7724   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    4962
+ 
+Min:              0        Max:             52        Mean:               41.55
+ 
+Lead In: R77049.00[Default]
+Default Next Question: R77051.00
+--------------------------------------------------------------------------------
 R84960.00    [FAMSIZE]                                      Survey Year: 2004
   PRIMARY VARIABLE
 
@@ -2768,6 +3000,41 @@ Min:              1        Max:              3        Mean:                2.09
  
 Lead In: R84965.00[Default]
 Default Next Question: R84967.00
+--------------------------------------------------------------------------------
+R84974.00    [WKSWK-PCY]                                    Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
+ 
+NOTE: THIS KEY VARIABLE CONTAINS A VALID CODE FOR EACH RESPONDENT EVEN
+IF ALL TIME CANNOT BE ACCOUNTED FOR. IT SHOULD BE USED IN CONCERT WITH
+VARIABLE R(84977.) THAT TELLS WHAT PERCENTAGE OF TIME IS MISSING FOR
+EACH RESPONDENT.
+ 
+ACTUAL WEEKS
+ 
+COMMENT: Weeks worked in past calendar year
+ 
+    1279           0
+     181           1 TO 13
+     226          14 TO 26
+     285          27 TO 39
+     376          40 TO 48
+     198          49 TO 51
+    5116          52
+       0          53 TO 99999999: > 52
+  -------
+    7661
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7661   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5025
+ 
+Min:              0        Max:             52        Mean:               40.22
+ 
+Lead In: R84973.00[Default]
+Default Next Question: R84975.00
 --------------------------------------------------------------------------------
 R99098.00    [FL1M1B]                                       Survey Year: XRND
   PRIMARY VARIABLE
@@ -2850,32 +3117,6 @@ Min:              1        Max:             13        Mean:                2.97
 Lead In: T09875.00[Default]
 Default Next Question: T09878.00
 --------------------------------------------------------------------------------
-T09882.00    [ESR_COL]                                      Survey Year: 2006
-  PRIMARY VARIABLE
-
- 
-             EMPLOYMENT STATUS RECODE (COLLAPSED)
- 
-COMMENT: Employment Status Recode - Collapsed
- 
-NOTE: FOR VARIABLE CREATION SEE APPENDIX 1: EMPLOYMENT STATUS RECODE (ESR)
- 
-    6046           1: EMPLOYED
-     332           2: UNEMPLOYED
-    1253           3: OUT OF LABOR FORCE
-      22           4: IN ACTIVE FORCES
-  -------
-    7653
- 
-Refusal(-1)            0
-Don't Know(-2)         0
-TOTAL =========>    7653   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5033
- 
-Min:              1        Max:              4        Mean:                1.38
- 
-Lead In: T09881.00[Default]
-Default Next Question: T09883.00
---------------------------------------------------------------------------------
 T09884.00    [MARSTAT-COL]                                  Survey Year: 2006
   PRIMARY VARIABLE
 
@@ -2899,6 +3140,41 @@ Min:              1        Max:              3        Mean:                 2.1
  
 Lead In: T09883.00[Default]
 Default Next Question: T09885.00
+--------------------------------------------------------------------------------
+T09892.00    [WKSWK-PCY]                                    Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
+ 
+NOTE: THIS KEY VARIABLE CONTAINS A VALID CODE FOR EACH RESPONDENT EVEN
+IF ALL TIME CANNOT BE ACCOUNTED FOR. IT SHOULD BE USED IN CONCERT WITH
+VARIABLE T(09895.) THAT TELLS WHAT PERCENTAGE OF TIME IS MISSING FOR
+EACH RESPONDENT.
+ 
+ACTUAL WEEKS
+ 
+COMMENT: Weeks worked in past calendar year
+ 
+    1258           0
+     167           1 TO 13
+     221          14 TO 26
+     300          27 TO 39
+     401          40 TO 48
+     185          49 TO 51
+    5121          52
+       0          53 TO 99999999: > 52
+  -------
+    7653
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7653   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5033
+ 
+Min:              0        Max:             52        Mean:               40.41
+ 
+Lead In: T09891.00[Default]
+Default Next Question: T09893.00
 --------------------------------------------------------------------------------
 T20754.00    [Q12-3]                                        Survey Year: 2008
   PRIMARY VARIABLE
@@ -2976,6 +3252,33 @@ Min:              1        Max:              3        Mean:                2.12
 Lead In: T22103.00[Default]
 Default Next Question: T22105.00
 --------------------------------------------------------------------------------
+T22110.00    [WKSWK-PCY]                                    Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
+ 
+COMMENT: Weeks worked in past calendar year
+ 
+    1268           0
+     199           1 TO 13
+     224          14 TO 26
+     287          27 TO 39
+     404          40 TO 48
+     244          49 TO 51
+    5131          52
+  -------
+    7757
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7757   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    4929
+ 
+Min:              0        Max:             52        Mean:               40.29
+ 
+Lead In: T22109.00[Default]
+Default Next Question: T22111.00
+--------------------------------------------------------------------------------
 T30440.00    [Q12-3]                                        Survey Year: 2010
   PRIMARY VARIABLE
 
@@ -3051,6 +3354,33 @@ Min:              1        Max:              3        Mean:                2.13
  
 Lead In: T31082.00[Default]
 Default Next Question: T31084.00
+--------------------------------------------------------------------------------
+T31089.00    [WKSWK-PCY]                                    Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
+ 
+COMMENT: Weeks worked in past calendar year
+ 
+    1511           0
+     193           1 TO 13
+     245          14 TO 26
+     293          27 TO 39
+     511          40 TO 48
+     481          49 TO 51
+    4331          52
+  -------
+    7565
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7565   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5121
+ 
+Min:              0        Max:             52        Mean:               38.13
+ 
+Lead In: T31088.00[Default]
+Default Next Question: T31090.00
 --------------------------------------------------------------------------------
 T39762.00    [Q12-3]                                        Survey Year: 2012
   PRIMARY VARIABLE
@@ -3129,6 +3459,34 @@ Min:              1        Max:              3        Mean:                2.15
 Lead In: T41127.00[Default]
 Default Next Question: T41129.00
 --------------------------------------------------------------------------------
+T41134.00    [WKSWK-PCY]                                    Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
+ 
+COMMENT: Weeks worked in past calendar year
+ 
+    1648           0
+     124           1 TO 13
+     142          14 TO 26
+     231          27 TO 39
+     298          40 TO 48
+     138          49 TO 51
+    4719          52
+       0          53 TO 99999999: > 52
+  -------
+    7300
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7300   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5386
+ 
+Min:              0        Max:             52        Mean:               37.97
+ 
+Lead In: T41133.00[Default]
+Default Next Question: T41135.00
+--------------------------------------------------------------------------------
 T49145.00    [Q12-3]                                        Survey Year: 2014
   PRIMARY VARIABLE
 
@@ -3206,6 +3564,35 @@ Min:              1        Max:              3        Mean:                2.16
 Lead In: T50231.00[Default]
 Default Next Question: T50233.00
 --------------------------------------------------------------------------------
+T50248.00    [WKSWK-PCY]                                    Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
+ 
+COMMENT: Weeks worked in past calendar year
+ 
+    1701           0
+     130           1 TO 13
+     160          14 TO 26
+     244          27 TO 39
+     263          40 TO 48
+     141          49 TO 51
+    4429          52
+       1          53 TO 99999999: > 52
+  -------
+    7069
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       1
+TOTAL =========>    7070   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5616
+ 
+Min:              0        Max:             53        Mean:                  37
+ 
+Lead In: T50247.00[Default]
+Default Next Question: T50249.00
+--------------------------------------------------------------------------------
 T57707.00    [FAMSIZE]                                      Survey Year: 2016
   PRIMARY VARIABLE
 
@@ -3259,6 +3646,33 @@ Min:              1        Max:              3        Mean:                2.17
 Lead In: T57710.00[Default]
 Default Next Question: T57712.00
 --------------------------------------------------------------------------------
+T57728.00    [WKSWK-PCY]                                    Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
+ 
+COMMENT: Weeks worked in past calendar year
+ 
+    1716           0
+     130           1 TO 13
+     160          14 TO 26
+     206          27 TO 39
+     283          40 TO 48
+     171          49 TO 51
+    4246          52
+  -------
+    6912
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    6912   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5774
+ 
+Min:              0        Max:             52        Mean:               36.62
+ 
+Lead In: T57727.00[Default]
+Default Next Question: T57729.00
+--------------------------------------------------------------------------------
 T82186.00    [FAMSIZE]                                      Survey Year: 2018
   PRIMARY VARIABLE
 
@@ -3311,3 +3725,30 @@ Min:              1        Max:              3        Mean:                2.19
  
 Lead In: T82191.00[Default]
 Default Next Question: T82193.00
+--------------------------------------------------------------------------------
+T82200.00    [WKSWK-PCY]                                    Survey Year: 2018
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*
+ 
+COMMENT: Weeks worked in past calendar year
+ 
+    1821           0
+     129           1 TO 13
+     173          14 TO 26
+     200          27 TO 39
+     292          40 TO 48
+     154          49 TO 51
+    4109          52
+  -------
+    6878
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    6878   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5808
+ 
+Min:              0        Max:             52        Mean:               35.69
+ 
+Lead In: T82199.00[Default]
+Default Next Question: T82201.00

@@ -10,107 +10,116 @@ R00019.00  1979    WITH WHOM DID R LIVE AT AGE 14?                              
 R01736.00  1979    SAMPLE IDENTIFICATION CODE                                       SAMPLE_ID      
 R02147.00  78SCRN  R'S RACIAL/ETHNIC COHORT FROM SCREENER                           SAMPLE_RACE    
 R02148.00  1979    SEX OF R                                                         SAMPLE_SEX     
-R02149.01  1979    EMPLOYMENT STATUS RECODE (COLLAPSED)                             ESR_COL        
+R02157.00  1979    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      
 R02175.00  1979    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
 R02175.02  1979    FAMILY SIZE                                                      FAMSIZE        
 R04052.10  1980    FAMILY SIZE                                                      FAMSIZE        
 R04056.00  1980    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
-R04063.01  1980    EMPLOYMENT STATUS RECODE (COLLAPSED)                             ESR_COL        
+R04072.00  1980    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      
 R06186.00  1981    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
-R06188.01  1981    EMPLOYMENT STATUS RECODE (COLLAPSED)                             ESR_COL        
+R06463.00  1981    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      
 R06471.03  1981    FAMILY SIZE                                                      FAMSIZE        
 R07803.00  1982    ALCOHOL USE - HAD ANY ALCOHOLIC BEVERAGES IN LAST MONTH?         Q12-3          
 R08967.10  1982    FAMILY SIZE                                                      FAMSIZE        
+R08969.00  1982    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      
 R08984.00  1982    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
-R08985.01  1982    EMPLOYMENT STATUS RECODE (COLLAPSED)                             ESR_COL        
 R10219.00  1983    ALCOHOL USE - HAD ANY ALCOHOLIC BEVERAGES IN LAST MONTH?         Q12-3          
 R11444.10  1983    FAMILY SIZE                                                      FAMSIZE        
-R11447.01  1983    EMPLOYMENT STATUS RECODE (COLLAPSED)                             ESR_COL        
 R11449.00  1983    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
+R11453.00  1983    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      
 R13910.00  1984    ALCOHOL USE - HAD ANY ALCOHOLIC BEVERAGES IN LAST MONTH?         Q12-3          
 R13957.00  1984    DRUG USE - # OF TIMES USED MARIJUANA OR HASHISH IN PAST 30 DAYS  DS-11          
 R14041.00  1984    DRUG USE - # OF TIMES USED COCAINE IN LIFETIME                   DS-12          
 R14047.00  1984    DRUG USE - # OF TIMES EVER USED OTHER NARCOTICS                  DRUG-27        
 R14053.00  1984    DRUG USE - # OF TIMES EVER USED OTHER DRUGS                      DRUG-33        
 R15196.10  1984    FAMILY SIZE                                                      FAMSIZE        
-R15199.01  1984    EMPLOYMENT STATUS RECODE (COLLAPSED)                             ESR_COL        
 R15201.00  1984    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
+R15205.00  1984    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      
 R17746.00  1985    ALCOHOL USE - HAD ANY ALCOHOLIC BEVERAGES IN LAST MONTH?         Q12-3          
 R18902.10  1985    FAMILY SIZE                                                      FAMSIZE        
-R18906.01  1985    EMPLOYMENT STATUS RECODE (COLLAPSED)                             ESR_COL        
 R18908.00  1985    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
+R18912.00  1985    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      
 R22574.10  1986    FAMILY SIZE                                                      FAMSIZE        
-R22577.01  1986    EMPLOYMENT STATUS RECODE (COLLAPSED)                             ESR_COL        
 R22579.00  1986    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
+R22583.00  1986    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      
 R24446.10  1987    FAMILY SIZE                                                      FAMSIZE        
-R24451.01  1987    EMPLOYMENT STATUS RECODE (COLLAPSED)                             ESR_COL        
 R24453.00  1987    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
+R24457.00  1987    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      
 R27166.00  1988    ALCOHOL USE - HAD ANY ALCOHOLIC BEVERAGES IN LAST MONTH?         Q12-3          
 R27211.00  1988    DRUG USE - # OF TIMES USED MARIJUANA IN PAST 30 DAYS             DS-11          
 R27212.00  1988    DRUG USE - # OF TIMES USED COCAINE IN LIFETIME                   DS-12          
 R28701.10  1988    FAMILY SIZE                                                      FAMSIZE        
-R28707.00  1988    EMPLOYMENT STATUS RECODE (COLLAPSED)                             ESR_COL        
 R28709.00  1988    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
+R28715.00  1988    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      
 R29682.00  1989    ALCOHOL USE - HAD ANY ALCOHOLIC BEVERAGES IN LAST MONTH?         Q12-3          
 R30739.10  1989    FAMILY SIZE                                                      FAMSIZE        
-R30744.00  1989    EMPLOYMENT STATUS RECODE (COLLAPSED)                             ESR_COL        
 R30746.00  1989    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
+R30752.00  1989    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      
 R34006.00  1990    FAMILY SIZE                                                      FAMSIZE        
-R34011.00  1990    EMPLOYMENT STATUS RECODE (COLLAPSED)                             ESR_COL        
 R34013.00  1990    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
+R34019.00  1990    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      
 R36560.00  1991    FAMILY SIZE                                                      FAMSIZE        
-R36565.00  1991    EMPLOYMENT STATUS RECODE (COLLAPSED)                             ESR_COL        
 R36567.00  1991    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
+R36573.00  1991    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      
 R39153.00  1992    DRUG USE - # OF TIMES USED MARIJUANA IN PAST 30 DAYS             DS-11          
 R39154.00  1992    DRUG USE - # OF TIMES USED COCAINE IN LIFETIME                   DS-12          
 R39158.00  1992    DRUG USE - # OF TIMES USED CRACK COCAINE IN LIFETIME             DS-16          
 R40065.00  1992    FAMILY SIZE                                                      FAMSIZE        
-R40070.00  1992    EMPLOYMENT STATUS RECODE (COLLAPSED)                             ESR_COL        
 R40072.00  1992    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
+R40078.00  1992    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      
 R44176.00  1993    FAMILY SIZE                                                      FAMSIZE        
-R44181.00  1993    EMPLOYMENT STATUS RECODE (COLLAPSED)                             ESR_COL        
 R44183.00  1993    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
+R44189.00  1993    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      
 R49792.00  1994    ALCOHOL USE - HAD ANY ALCOHOLIC BEVERAGES IN LAST MONTH?         Q12-3          
 R50534.00  1994    DRUG USE - # OF TIMES USED MARIJUANA IN PAST 30 DAYS             DS-11          
 R50535.00  1994    DRUG USE - # OF TIMES USED COCAINE IN LIFETIME                   DS-12          
 R50539.00  1994    DRUG USE - # OF TIMES USED CRACK COCAINE IN LIFETIME             DS-16          
 R50806.00  1994    FAMILY SIZE                                                      FAMSIZE        
-R50811.00  1994    EMPLOYMENT STATUS RECODE (COLLAPSED)                             ESR_COL        
 R50813.00  1994    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
+R50819.00  1994    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      
 R51659.00  1996    FAMILY SIZE                                                      FAMSIZE        
-R51664.00  1996    EMPLOYMENT STATUS RECODE (COLLAPSED)                             ESR_COL        
 R51666.00  1996    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
+R51672.00  1996    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      
 R64307.00  1998    DRUG USE - # OF TIMES USED MARIJUANA IN PAST 30 DAYS             DS-11          
 R64308.00  1998    DRUG USE - # OF TIMES USED COCAINE IN LIFETIME                   DS-12          
 R64312.00  1998    DRUG USE - # OF TIMES USED CRACK COCAINE IN LIFETIME             DS-16          
 R64786.00  1998    FAMILY SIZE                                                      FAMSIZE        
-R64790.00  1998    EMPLOYMENT STATUS RECODE (COLLAPSED)                             ESR_COL        
 R64792.00  1998    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
+R64800.00  1998    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      
 R70064.00  2000    FAMILY SIZE                                                      FAMSIZE        
 R70069.00  2000    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
+R70077.00  2000    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      
 R76064.00  2002    ALCOHOL USE - HAD ANY ALCOHOLIC BEVERAGES IN LAST MONTH?         Q12-3          
 R77036.00  2002    FAMILY SIZE                                                      FAMSIZE        
 R77042.00  2002    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
+R77050.00  2002    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      
 R84960.00  2004    FAMILY SIZE                                                      FAMSIZE        
 R84966.00  2004    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
+R84974.00  2004    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      
 R99098.00  XRND    FLAG TO INDICATE WHETHER 1ST MARRIAGE OCCURRED BEFORE 1ST BIRTH  FL1M1B         
 T09111.00  2006    R CONSUMED ALCOHOL IN LAST 30 DAYS?                              Q12-3          
 T09876.00  2006    FAMILY SIZE                                                      FAMSIZE        
-T09882.00  2006    EMPLOYMENT STATUS RECODE (COLLAPSED)                             ESR_COL        
 T09884.00  2006    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
+T09892.00  2006    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      
 T20754.00  2008    R CONSUMED ALCOHOL IN LAST 30 DAYS?                              Q12-3          
 T22099.00  2008    FAMILY SIZE                                                      FAMSIZE        
 T22104.00  2008    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
+T22110.00  2008    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      
 T30440.00  2010    R CONSUMED ALCOHOL IN LAST 30 DAYS?                              Q12-3          
 T31077.00  2010    FAMILY SIZE                                                      FAMSIZE        
 T31083.00  2010    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
+T31089.00  2010    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      
 T39762.00  2012    R CONSUMED ALCOHOL IN LAST 30 DAYS?                              Q12-3          
 T41122.00  2012    FAMILY SIZE                                                      FAMSIZE        
 T41128.00  2012    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
+T41134.00  2012    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      
 T49145.00  2014    R CONSUMED ALCOHOL IN LAST 30 DAYS?                              Q12-3          
 T50225.00  2014    FAMILY SIZE                                                      FAMSIZE        
 T50232.00  2014    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
+T50248.00  2014    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      
 T57707.00  2016    FAMILY SIZE                                                      FAMSIZE        
 T57711.00  2016    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
+T57728.00  2016    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      
 T82186.00  2018    FAMILY SIZE                                                      FAMSIZE        
 T82192.00  2018    MARITAL STATUS (COLLAPSED)                                       MARSTAT-COL    
+T82200.00  2018    NUMBER OF WEEKS WORKED IN PAST CALENDAR YEAR *KEY*               WKSWK-PCY      

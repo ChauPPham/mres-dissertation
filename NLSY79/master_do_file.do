@@ -847,6 +847,12 @@ replace NEW = 1 if year >= 2010
 
 gen ln_INCOME = log(HH_INCOME)
 
+replace WKS_WORKED = . if WKS_WORKED < 0
+
+/* Mom characteristics: Dummy for mother living with both biological parents at age 14 */	
+gen AGE_14 = 0 if R0001900 >= 0		
+replace AGE_14 = 1 if R0001900 == 11
+
 /*Drop duplicate values
 bys C0000100 year: gen dup = cond(_N==1, 0, _n)
 tabulate dup
@@ -876,12 +882,17 @@ label var C0005300 "Race"
 label var C0007000 "Age of mother at child's birth"
 label var AGE_FIRST_BIRTH "Age of mother at first birth"
 label var NO_SIB "Number of siblings"
-label var NO_UNDER_18 "$\#$ members under 18 in mother's HH"
+label var FAM_SIZE "Family size"
 label var DEGREE_CAT "Mother's education"
 label var R0618300 "Mother's AFQT score (1981)"
 label var R0006500 "Mother's mother's years of schooling"
 label var R0007900 "Mother's father's years of schooling"
-label var HH_INCOME "Net household income (\$)"
+label var HH_INCOME "Net household income (\\$)"
+label var WKS_WORKED "$\#$ weeks worked last year"
+label var AGE_14 "Mother lives with both biological parents at age 14"
+label var gamma "$gamma$"
+label var R9909800 "Marriage before first birth"
+label var MARITAL_STAT "Marital status"
 
 tab C0005400, gen(SEX)
 label var SEX2 "Female"
@@ -904,7 +915,7 @@ replace DEGREE_SEP = 2 if DEGREE_CAT >= 3 & DEGREE_CAT != .
 label define DEGREE_SEP 0 "\thead{High school\\\\dropout}" 1 "\thead{High school}" 2 "\thead{College}" /* Need to manually change to two lines in tex */
 label values DEGREE_SEP DEGREE_SEP
 
-qui estpost tabstat gamma INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE SEX2 RACE1 RACE2 RACE3 C000700 AGE_FIRST_BIRTH NO_SIB R0618300 R0006500 R0007900 HH_INCOME if RISK_AVERSE1 != . & NO_UNDER_18 >= 0 & R0618300 >= 0 & R0006500 >= 0 & R0007900 >= 0, by(DEGREE_SEP) statistics(mean sd n) columns(statistics)
+qui estpost tabstat gamma INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE SEX2 RACE1 RACE2 RACE3 C000700 AGE_FIRST_BIRTH NO_SIB R0618300 AGE_14 R0006500 R0007900 WKS_WORKED HH_INCOME if RISK_AVERSE1 != . & NO_UNDER_18 >= 0 & R0618300 >= 0 & R0006500 >= 0 & R0007900 >= 0, by(DEGREE_SEP) statistics(mean sd n) columns(statistics)
 *esttab . using tex/summary.tex, main(mean %12.2f) aux(sd %12.2f) noobs nostar unstack nonote label replace booktabs nonum title("Summary statistics \label{table:5-summary}")
 esttab ., main(mean %12.2f n) aux(sd %12.2f) nostar nonote label unstack nonum long title("Summary statistics") noobs
 
