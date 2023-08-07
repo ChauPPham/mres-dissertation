@@ -45,6 +45,8 @@
 %\captionsetup[figure]{labelfont=bf}
 \captionsetup[table]{labelfont=bf}
 
+\interfootnotelinepenalty=10000
+
 \begin{document}
 
 \maketitle
@@ -94,9 +96,7 @@ where $\theta$ is the coefficient of relative risk tolerance and its reciprocal,
 	\label{eq:1-conditional-expectation}
 \end{equation}
 
-where $\mu$ and $\sigma_x$ are respectively the mean and standard deviation of log risk tolerance for a certain wave of response. $\bar \theta_j$ and $\underline{\theta}_j$ are upper and lower bounds on the coefficient of risk tolerance. $b$ denotes status quo bias and $\sigma_\xi$ standard deviation of response error which take values of -0.21 and 1.3 respectively. \footnote{These values are computed for the Health and Retirement Study (HRS) capitalizing on the difference in responses to two different versions of the risk preference questions. For more information, see \citet{kimball2009risk} and their accompanying appendix available at https://www.aeaweb.org/articles?id=10.1257/aer.99.2.363.} Imputed values of $\gamma$ are shown in \Cref{table:3-imputed-risk}.
-
-Imputed values of $\gamma$ are somewhat similar across the year except for 2004
+where $\mu$ and $\sigma_x$ are respectively the mean and standard deviation of log risk tolerance for a certain wave of response. $\bar \theta_j$ and $\underline{\theta}_j$ are upper and lower bounds on the coefficient of risk tolerance. $b$ denotes status quo bias and $\sigma_\xi$ standard deviation of response error which take values of -0.21 and 1.3 respectively. \footnote{These values are computed for the Health and Retirement Study (HRS) capitalizing on the difference in responses to two different versions of the risk preference questions. For more information, see \citet{kimball2009risk} and their accompanying appendix available at https://www.aeaweb.org/articles?id=10.1257/aer.99.2.363.} \Cref{table:3-imputed-risk} reports the imputed values of CRRA coefficient for all NLSY79 respondents with valid answers along with the mean, standard deviation and number observation segregated by year.\footnote{For clarity, I only include those who responded to both questions in the risk preference series and exclude those who provide answers only to the first question.} 
 
 \begin{table}[!t]
 	\centering
@@ -106,7 +106,6 @@ Imputed values of $\gamma$ are somewhat similar across the year except for 2004
 	\label{table:2-risk-bound}
 \end{table}
 
-
 \begin{table}[!b]
 	\centering
 	\setlength{\extrarowheight}{0.3em}
@@ -114,6 +113,13 @@ Imputed values of $\gamma$ are somewhat similar across the year except for 2004
 	\input{Tables/table-3-risk-imputed}
 	\label{table:3-imputed-risk}
 \end{table}
+
+A mild trend of increasing risk aversion can be observed from \Cref{table:2-risk-bound} wherein 46.47\% of respondents are categorized as "High risk aversion" in 1994 whereas more than 50\% of respondents belong to this category in all subsequent years. The majority of participants display a high degree of risk aversion with respect to gamble on lifetime earning although there is substantial heterogeneity across the distributions of responses across year. From \Cref{table:3-imputed-risk}, imputed values of $\gamma$ are similar across years with the exception of 2004. The difference stems from the noticeably reduced variance in response in 2004 which can be observed in the third column of \Cref{table:2-risk-bound}. As variance plays a large role in determining the overall level of imputation following \eqref{eq:1-conditional-expectation}, the lower variance brings about significant changes to the imputed values. This should not be a concern as the interaction term between $\gamma$ and year is be included in the analysis but results obtained with the exclusion of 2004 are presented in Section 5 for robustness check.
+
+
+
+
+
 
 
 
@@ -123,7 +129,7 @@ Imputed values of $\gamma$ are somewhat similar across the year except for 2004
 \subsection{Investment data}
 Traditionally, investment is often associated with monetary expenditures or goods investment \citep{heckman2014economics}. Only in recent studies such as \citet{carneiro2016partial}, \citet{bono2016early} and \citet{del2016transfers} has time input received more attention as a component of parental input. Aside time input, a nurturing home environment has also been proven conducive to early cognitive development \citep{altman2013home, iverson1982home}. 
 
-\begin{table}[!b]
+\begin{table}[!t]
 	\centering
 	\setlength{\extrarowheight}{0.2em}
 	\caption{Components of HOME index}	
@@ -131,26 +137,32 @@ Traditionally, investment is often associated with monetary expenditures or good
 	\label{table:4-HOME}
 \end{table} 
 
-Following \citet{carneiro2016partial}, parental inputs are captured by various elements of HOME. HOME (Short Form) comprises of primary measures of the quality of a child's home environment included in the NLSY79 Child survey. Various components of the HOME evaluate the cognitive stimulation and emotional support children below 15 years old receive from the home environment. Items that made up the HOME score are grouped into goods input and time input. These are reported in \Cref{table:4-HOME}. Apart from measures of HOME section, several items included in the self-administered questions for children between 10-14 are also present and have the (NH) prefix.  
+Following \citet{carneiro2016partial}, parental inputs are captured by various elements of HOME. HOME (Short Form) comprises of primary measures of the quality of a child's home environment included in the NLSY79 Child survey. Various components of the HOME evaluate the cognitive stimulation and emotional support children below 15 years old receive from the home environment. Items that made up the HOME score are grouped into goods input and time input. These are reported in \Cref{table:4-HOME}. Apart from measures of HOME section, several items included in the self-administered questions indicating parent-child interaction for children between 10-14 are also present and have the (NH) prefix.  
  
 
-For each age group, to generate the generic investment index (HOME index), indicators of all items in \Cref{table:4-HOME} for the corresponding age are totalled then normalised to have a mean zero and unit standard deviation.  A similar procedure is also applied to goods investment index and time investment index. Other assessments of cognitive stimulation and emotional support constitute cognitive stimulation index and emotional support index. Both of which are measured in percentages.
+For each age group, to generate the generic investment index (HOME index), indicators of all items in \Cref{table:4-HOME} for the corresponding age are totalled then normalised to have a mean zero and unit standard deviation.\footnote{The recoding of items follow the procedure used by Bureau of Labor Statistics (BLS) when constructing HOME score (See \citet{center2004nlsy79})} A similar procedure is also applied to items denoting goods related investment and time related investment to generate indices representing the respective type of parental inputs. Other assessments of cognitive stimulation and emotional support are aggregated into percentile score for the respective quality of home. Unlike previous indices, the percentile scores for cognitive  stimulation and emotional support are taken from the NLSY79 CYA dataset.
 
 
 
 
 \subsection{Summary statistics}
-Descriptive statistics of variables used in analysis are shown in \Cref{table:5-summary}. The table reports the mean and standard deviations of numerical variables and only frequency for categorical variables for the total sample and 3 subgroups based on mother's level of education (High school dropout, high school and college).   Mean and standard deviations of imputed $\gamma$ are reported  
-
+Descriptive statistics of variables used in analysis are shown in \Cref{table:5-summary}. The sample is restricted to observations in the year 1994, 2002, 2004 and 2006 to include a measure of risk aversion and which have valid responses (non-missing and non-negative) to child's characteristics and mother's characteristics. This leaves us with 9,282 observations. The table reports the mean and standard deviations of numerical variables and only frequency for categorical variables for the total sample and 3 subgroups based on mother's level of education (High school dropout, high school and college). The table is organised into three panels: (1) parental inputs which include various indices described above (HOME, Goods, Time, Cognitive Stimulation, and Emotional Support); (2) Child's characteristics which include sex, race, age of mother at birth of child, number of siblings and family size; and (3) Mother's characteristics which include Mother's AFQT score (2006 revised edition), age of mother at first birth, an indicator variable showing whether mother lived with both biological parents at age 14, years of schooling of mother's parents, number of weeks worked in the previous calendar year, and net household income in the previous calendar year.
 
 \input{Tables/table-5-summary}
 
+The average HOME score in our sample is 0.15 which is higher than the average HOME score for the nationally representative sample. A potential cause for this is the restriction on the years in which data chosen, namely 1994, 2002, 2004, and 2006. By the mentioned years, mothers are typically older than the average age of mothers in NLSY79 CYA. Especially for those years after 2000, mothers were between the age of 37-49 while the average age of mothers in NLSY79 CYA is 34.6.
 
 
 
 \section{Results}
+I estimate a simple OLS model of the relationship between mother's risk aversion, proxied by the CRRA coefficient $\gamma$ and investments in children, measured by various indices of parental inputs. The empirical specification is as follows:
+\begin{equation}
+	I_{it} = \alpha \times \gamma_{it} + \beta{\boldmath Z_{it}} + \theta_t + AGE\_GRP_{it} + \varepsilon_{it}
+	\label{eq:2-empirical-specification}
+\end{equation}
+where $I_{it}$ denotes the investment for child $i$ at time $t$, measured by various indices present under the first panel of \Cref{table:5-summary}. $\gamma_{it}$ is the imputed CRRA coefficient of child $i$'s mother at time $t$. $Z_{it}$ is a vector of controls containing both child's characteristics and maternal characteristics as described in the second and third panel of \Cref{table:5-summary}. $AGE\_GRP_t$ and $\theta_t$ indicate age-group fixed effect and time fixed effect. The reason age-group fixed effect is introduced is due to the manner in which indices of parental inputs are constructed, i.e., totalled and normalised for each age group. The coefficient of $\gamma$, i.e., $\alpha$ shows the effect of maternal risk aversion on child investment.
 
-
+I present results of \eqref{eq:2-empirical-specification} in Table ... as the main results of the paper. 
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.9.11)  7 AUG 2023 15:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.9.11)  7 AUG 2023 20:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -703,21 +703,21 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 ) (./First draft.aux)
 \openout1 = `"First draft.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Try loading font information for OT1+qpl on input line 48.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Try loading font information for OT1+qpl on input line 50.
 
 (c:/ProgramData/App-V/0D40C871-6F2E-40F5-A035-626F9F937690/1E442B07-C9D7-442D-9
 EAA-344AD89302B8/Root/texlive/2018/texmf-dist/tex/latex/tex-gyre/ot1qpl.fd
@@ -776,7 +776,7 @@ Package graphics Info: Driver file: pdftex.def on input line 99.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box39
-Package hyperref Info: Link coloring ON on input line 48.
+Package hyperref Info: Link coloring ON on input line 50.
 
 (c:/ProgramData/App-V/0D40C871-6F2E-40F5-A035-626F9F937690/1E442B07-C9D7-442D-9
 EAA-344AD89302B8/Root/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -789,9 +789,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count145
 )
-LaTeX Info: Redefining \ref on input line 48.
-LaTeX Info: Redefining \pageref on input line 48.
-LaTeX Info: Redefining \nameref on input line 48.
+LaTeX Info: Redefining \ref on input line 50.
+LaTeX Info: Redefining \pageref on input line 50.
+LaTeX Info: Redefining \nameref on input line 50.
  (./First draft.out) (./First draft.out)
 \@outlinefile=\write3
 \openout3 = `"First draft.out"'.
@@ -844,285 +844,149 @@ s.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 51.
+LaTeX Font Info:    Try loading font information for U+msa on input line 53.
 
 (c:/ProgramData/App-V/0D40C871-6F2E-40F5-A035-626F9F937690/1E442B07-C9D7-442D-9
 EAA-344AD89302B8/Root/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 51.
+LaTeX Font Info:    Try loading font information for U+msb on input line 53.
 
 (c:/ProgramData/App-V/0D40C871-6F2E-40F5-A035-626F9F937690/1E442B07-C9D7-442D-9
 EAA-344AD89302B8/Root/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 51.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 53.
 
 (c:/ProgramData/App-V/0D40C871-6F2E-40F5-A035-626F9F937690/1E442B07-C9D7-442D-9
 EAA-344AD89302B8/Root/texlive/2018/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-
-Package natbib Warning: Citation `becker2009human' on page 1 undefined on input
- line 54.
-
-
-Package natbib Warning: Citation `levhari1974effect' on page 1 undefined on inp
-ut line 54.
-
-
-Package natbib Warning: Citation `schultz1971investment' on page 1 undefined on
- input line 54.
-
-
-Package natbib Warning: Citation `Currie2001' on page 1 undefined on input line
- 54.
-
-
-Package natbib Warning: Citation `NORES2010' on page 1 undefined on input line 
-54.
-
-
-Package natbib Warning: Citation `sovero2018risk' on page 1 undefined on input 
-line 56.
-
-
-Package natbib Warning: Citation `tabetando2019parental' on page 1 undefined on
- input line 56.
-
-
-Package natbib Warning: Citation `leonardi2007parents' on page 1 undefined on i
-nput line 58.
-
-
-Package natbib Warning: Citation `brown2012parental' on page 1 undefined on inp
-ut line 58.
-
-
-Package natbib Warning: Citation `checchi2014parents' on page 1 undefined on in
-put line 58.
-
-
-Package natbib Warning: Citation `hartarto2023parental' on page 1 undefined on 
-input line 58.
-
-
-Package natbib Warning: Citation `frempong2021risk' on page 1 undefined on inpu
-t line 58.
-
-
-Package natbib Warning: Citation `HEADY2003385' on page 1 undefined on input li
-ne 58.
-
-
-Package natbib Warning: Citation `bezerra2009impact' on page 1 undefined on inp
-ut line 58.
-
 [1
 
 {c:/ProgramData/App-V/0D40C871-6F2E-40F5-A035-626F9F937690/1E442B07-C9D7-442D-9
 EAA-344AD89302B8/Root/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-}]
-
-LaTeX Warning: Reference `table:1-risk-category' on page 1 undefined on input l
-ine 76.
-
-(./Tables/table-1-risk-category.tex)
+}] (./Tables/table-1-risk-category.tex)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Package natbib Warning: Citation `eckel2002sex' on page 2 undefined on input li
-ne 86.
-
-
-Package natbib Warning: Citation `charness2013experimental' on page 2 undefined
- on input line 86.
-
-
-Package natbib Warning: Citation `barsky1997preference' on page 2 undefined on 
-input line 86.
-
-
-Package natbib Warning: Citation `binswanger1981attitudes' on page 2 undefined 
-on input line 86.
-
-
-Package natbib Warning: Citation `camerer1999effects' on page 2 undefined on in
-put line 86.
-
-
-Package natbib Warning: Citation `dohmen2005individual' on page 2 undefined on 
-input line 86.
-
 [2]
-
-Package natbib Warning: Citation `kimball2008imputing' on page 3 undefined on i
-nput line 88.
-
-
-Package natbib Warning: Citation `kimball2009risk' on page 3 undefined on input
- line 88.
-
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 89.
+(amsmath)                 on input line 91.
 
-
-LaTeX Warning: Reference `table:2-risk-bound' on page 1 undefined on input line
- 90.
-
-
-Package natbib Warning: Citation `kimball2008imputing' on page 3 undefined on i
-nput line 90.
-
-
-Package natbib Warning: Citation `kimball2009risk' on page 3 undefined on input
- line 90.
-
-
-Package natbib Warning: Citation `dohmen2011individual' on page 3 undefined on 
-input line 90.
-
-
-Package natbib Warning: Citation `dohmen2017risk' on page 3 undefined on input 
-line 90.
-
-
-Package natbib Warning: Citation `kimball2009risk' on page 3 undefined on input
- line 90.
-
-
-Package natbib Warning: Citation `kimball2008imputing' on page 3 undefined on i
-nput line 90.
-
-LaTeX Font Info:    Try loading font information for U+bbold on input line 93.
+LaTeX Font Info:    Try loading font information for U+bbold on input line 95.
 
 (c:/ProgramData/App-V/0D40C871-6F2E-40F5-A035-626F9F937690/1E442B07-C9D7-442D-9
 EAA-344AD89302B8/Root/texlive/2018/texmf-dist/tex/latex/bbold/Ubbold.fd)
-
-Package natbib Warning: Citation `kimball2009risk' on page 3 undefined on input
- line 97.
-
-
-LaTeX Warning: Reference `table:3-imputed-risk' on page 1 undefined on input li
-ne 97.
-
 [3] (./Tables/table-2-risk-coefficient.tex
 Overfull \vbox (1.99994pt too high) detected at line 5
  []
 
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.5 ...}{c}{\thead{Percent of response\\by year}}}
-                                                   & & \multicolumn{2}{c}{\t...
-I'm guessing that you meant to end an alignment here.
+) (./Tables/table-3-risk-imputed.tex) [4] (./Tables/table-4-HOME.tex) [5]
+(./Tables/table-5-summary.tex
+Overfull \hbox (12.06477pt too wide) in paragraph at lines 3--74
+[]
+ []
 
-! Misplaced alignment tab character &.
-l.5 ...c}{\thead{Percent of response\\by year}}} &
-                                                   & \multicolumn{2}{c}{\the...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+) [6]
 
-! Misplaced alignment tab character &.
-l.5 ...{\thead{Percent of response\\by year}}} & &
-                                                   \multicolumn{2}{c}{\thead...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+LaTeX Warning: Text page 7 contains only floats.
 
-! Misplaced \omit.
-\multispan ->\omit 
-                   \@multispan 
-l.5 ...}{c}{\thead{Downside risk of\\ risky jobs}}
-                                                   & & \multicolumn{2}{c}{\t...
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
+[7]
 
-! Misplaced \span.
-\sp@n ->\span 
-              \omit \advance \@multicnt \m@ne 
-l.5 ...}{c}{\thead{Downside risk of\\ risky jobs}}
-                                                   & & \multicolumn{2}{c}{\t...
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 160.
 
-! Misplaced \omit.
-\sp@n ->\span \omit 
-                    \advance \@multicnt \m@ne 
-l.5 ...}{c}{\thead{Downside risk of\\ risky jobs}}
-                                                   & & \multicolumn{2}{c}{\t...
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
 
-! Misplaced alignment tab character &.
-l.5 ...c}{\thead{Downside risk of\\ risky jobs}} &
-                                                   & \multicolumn{2}{c}{\the...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 160
+.
 
-! Misplaced alignment tab character &.
-l.5 ...{\thead{Downside risk of\\ risky jobs}} & &
-                                                   \multicolumn{2}{c}{\thead...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+[8] (./First draft.bbl [9])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 182.
+ [10]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 182.
+ (./First draft.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 182.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 182.
+Package rerunfilecheck Info: File `"First draft".out' has not changed.
+(rerunfilecheck)             Checksum: A71FEC4F1173C2B58F00B786209CC030;446.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 182.
+ ) 
+Here is how much of TeX's memory you used:
+ 12865 strings out of 492649
+ 222746 string characters out of 6119168
+ 357479 words of memory out of 5000000
+ 16392 multiletter control sequences out of 15000+600000
+ 52681 words of font info for 66 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 38i,25n,77p,2211b,633s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exi
+st, replaced by a fixed one
 
-! Misplaced \omit.
-\multispan ->\omit 
-                   \@multispan 
-l.5 ...n{2}{c}{\thead{Bounds on \\risk tolerance}}
-                                                   \\
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
+pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist
+, replaced by a fixed one
 
-! Misplaced \span.
-\sp@n ->\span 
-              \omit \advance \@multicnt \m@ne 
-l.5 ...n{2}{c}{\thead{Bounds on \\risk tolerance}}
-                                                   \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist
+, replaced by a fixed one
 
-! Misplaced \omit.
-\sp@n ->\span \omit 
-                    \advance \@multicnt \m@ne 
-l.5 ...n{2}{c}{\thead{Bounds on \\risk tolerance}}
-                                                   \\
-I expect to see \omit only after tab marks or the \cr of
-an alignment. Proceed, and I'll ignore this case.
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
+, replaced by a fixed one
 
-! Misplaced \cr.
-\reserved@c ->\ifnum 0=`{}\fi \cr 
-                                  
-l.6 		\cmidrule
-               {4-5} \cmidrule{7-8}
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist
+, replaced by a fixed one
 
-! Misplaced \noa
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
+, replaced by a fixed one
+
+{c:/ProgramData/App-V/0D40C871-6F2E-40F5-A035-626F9F937690/1E442B07-C9D7-442D-9
+EAA-344AD89302B8/Root/texlive/2018/texmf-dist/fonts/enc/dvips/tex-gyre/q-rm.enc
+}<c:/ProgramData/App-V/0D40C871-6F2E-40F5-A035-626F9F937690/1E442B07-C9D7-442D-
+9EAA-344AD89302B8/Root/texlive/2018/texmf-dist/fonts/type1/public/bbold-type1/b
+bold10.pfb><c:/ProgramData/App-V/0D40C871-6F2E-40F5-A035-626F9F937690/1E442B07-
+C9D7-442D-9EAA-344AD89302B8/Root/texlive/2018/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmex10.pfb><c:/ProgramData/App-V/0D40C871-6F2E-40F5-A035-626F9F937690/
+1E442B07-C9D7-442D-9EAA-344AD89302B8/Root/texlive/2018/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi10.pfb><c:/ProgramData/App-V/0D40C871-6F2E-40F5-A035-626F
+9F937690/1E442B07-C9D7-442D-9EAA-344AD89302B8/Root/texlive/2018/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi5.pfb><c:/ProgramData/App-V/0D40C871-6F2E-40F5-A
+035-626F9F937690/1E442B07-C9D7-442D-9EAA-344AD89302B8/Root/texlive/2018/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/ProgramData/App-V/0D40C871-6F2
+E-40F5-A035-626F9F937690/1E442B07-C9D7-442D-9EAA-344AD89302B8/Root/texlive/2018
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/ProgramData/App-V/0D40
+C871-6F2E-40F5-A035-626F9F937690/1E442B07-C9D7-442D-9EAA-344AD89302B8/Root/texl
+ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/ProgramData/App
+-V/0D40C871-6F2E-40F5-A035-626F9F937690/1E442B07-C9D7-442D-9EAA-344AD89302B8/Ro
+ot/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/ProgramD
+ata/App-V/0D40C871-6F2E-40F5-A035-626F9F937690/1E442B07-C9D7-442D-9EAA-344AD893
+02B8/Root/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/P
+rogramData/App-V/0D40C871-6F2E-40F5-A035-626F9F937690/1E442B07-C9D7-442D-9EAA-3
+44AD89302B8/Root/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pf
+b><c:/ProgramData/App-V/0D40C871-6F2E-40F5-A035-626F9F937690/1E442B07-C9D7-442D
+-9EAA-344AD89302B8/Root/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb><c:/ProgramData/App-V/0D40C871-6F2E-40F5-A035-626F9F937690/1E442B07-
+C9D7-442D-9EAA-344AD89302B8/Root/texlive/2018/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy6.pfb><c:/ProgramData/App-V/0D40C871-6F2E-40F5-A035-626F9F937690/1
+E442B07-C9D7-442D-9EAA-344AD89302B8/Root/texlive/2018/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy7.pfb><c:/ProgramData/App-V/0D40C871-6F2E-40F5-A035-626F9F
+937690/1E442B07-C9D7-442D-9EAA-344AD89302B8/Root/texlive/2018/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy8.pfb><c:/ProgramData/App-V/0D40C871-6F2E-40F5-A03
+5-626F9F937690/1E442B07-C9D7-442D-9EAA-344AD89302B8/Root/texlive/2018/texmf-dis
+t/fonts/type1/public/tex-gyre/qplb.pfb><c:/ProgramData/App-V/0D40C871-6F2E-40F5
+-A035-626F9F937690/1E442B07-C9D7-442D-9EAA-344AD89302B8/Root/texlive/2018/texmf
+-dist/fonts/type1/public/tex-gyre/qplr.pfb><c:/ProgramData/App-V/0D40C871-6F2E-
+40F5-A035-626F9F937690/1E442B07-C9D7-442D-9EAA-344AD89302B8/Root/texlive/2018/t
+exmf-dist/fonts/type1/public/tex-gyre/qplri.pfb>
+Output written on "First draft.pdf" (10 pages, 232596 bytes).
+PDF statistics:
+ 321 PDF objects out of 1000 (max. 8388607)
+ 289 compressed objects within 3 object streams
+ 71 named destinations out of 1000 (max. 500000)
+ 65 words of extra memory for PDF output out of 10000 (max. 10000000)
+

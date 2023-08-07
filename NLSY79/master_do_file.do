@@ -867,6 +867,7 @@ by R0000100: replace NO_SIB = NO_SIB[_N] - 1
 /* Generate variable for age at first birth */
 by R0000100: egen AGE_FIRST_BIRTH = min(C0007000)
 
+replace R0618301 = R0618301/1000
 
 **# Bookmark #11 Summary table
 /*==============================================================*/
@@ -884,7 +885,7 @@ label var AGE_FIRST_BIRTH "Age of mother at first birth"
 label var NO_SIB "Number of siblings"
 label var FAM_SIZE "Family size"
 label var DEGREE_CAT "Mother's education"
-label var R0618300 "Mother's AFQT score (1981)"
+label var R0618301 "Mother's AFQT score (2006)"
 label var R0006500 "Mother's mother's years of schooling"
 label var R0007900 "Mother's father's years of schooling"
 label var HH_INCOME "Net household income (\\$)"
@@ -915,7 +916,7 @@ replace DEGREE_SEP = 2 if DEGREE_CAT >= 3 & DEGREE_CAT != .
 label define DEGREE_SEP 0 "\thead{High school\\\\dropout}" 1 "\thead{High school}" 2 "\thead{College}" /* Need to manually change to two lines in tex */
 label values DEGREE_SEP DEGREE_SEP
 
-qui estpost tabstat gamma INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE SEX2 RACE1 RACE2 RACE3 C000700 AGE_FIRST_BIRTH NO_SIB R0618300 AGE_14 R0006500 R0007900 WKS_WORKED HH_INCOME if RISK_AVERSE1 != . & NO_UNDER_18 >= 0 & R0618300 >= 0 & R0006500 >= 0 & R0007900 >= 0, by(DEGREE_SEP) statistics(mean sd n) columns(statistics)
+qui estpost tabstat gamma INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE SEX2 RACE1 RACE2 RACE3 C000700 NO_SIB FAM_SIZE AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED HH_INCOME if gamma != . & R0618301 >= 0 & R0618301 != . & R0006500 >= 0 & R0006500 != .& R0007900 >= 0 & R0007900 !=. & FAM_SIZE >= 0 & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & HH_INCOME >= 0 & AGE_14 != ., by(DEGREE_SEP) statistics(mean sd) columns(statistics)
 *esttab . using tex/summary.tex, main(mean %12.2f) aux(sd %12.2f) noobs nostar unstack nonote label replace booktabs nonum title("Summary statistics \label{table:5-summary}")
 esttab ., main(mean %12.2f n) aux(sd %12.2f) nostar nonote label unstack nonum long title("Summary statistics") noobs
 
@@ -970,7 +971,37 @@ forvalues i = 1/5 {
 }
 */
 
+/* Simple OLS
+local identifier = 1
+foreach i of varlist INV_ALL GOODS_ALL TIME_ALL {
+	reghdfe `i' gamma ln_INCOME if DEGREE_SEP!= ., absorb(C0000100) vce(cluster R0000100)
+	
+	forval j = 0/2 {
+		reghdfe `i' gamma ln_INCOME if DEGREE_SEP== `j', absorb(C0000100) vce(cluster R0000100)
+		eststo model_`identifier'_`j'
+	}
+	local ++identifier
+}
 
+foreach i of varlist COG_SCORE EMO_SCORE {
+	reghdfe `i' gamma ln_INCOME if DEGREE_SEP!= . & `i' >= 0, absorb(C0000100) vce(cluster R0000100)
+	eststo model_`identifier'
+	
+	forval j = 0/2 {
+		reghdfe `i' gamma ln_INCOME if DEGREE_SEP== `j' & `i' >= 0, absorb(C0000100) vce(cluster R0000100)
+		eststo model_`identifier'_`j'
+	}
+	
+	local ++identifier
+}
+
+
+forvalues i = 1/5 {
+	if `i' == 1 esttab model_`i'*, keep(gamma) mtitle("All" "HS dropout" "High School" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum sfmt(%12.3f)
+	if `i' > 1 esttab model_`i'*, keep(gamma) mtitle("All" "HS dropout" "High Sschool" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum sfmt(%12.3f)
+}
+
+*/
 
 
 *==================== RISK AS CATEGORICAL VARIABLE ===========================*
