@@ -2,10 +2,13 @@
 \providecommand\hyper@newdestlabel[2]{}
 \providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
 \HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
 \global\let\oldnewlabel\newlabel
 \gdef\newlabel#1#2{\newlabelxx{#1}#2}
 \gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
 \AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
 \let\newlabel\oldnewlabel
 \fi}
 \fi}
@@ -25,13 +28,13 @@
 \citation{hartarto2023parental}
 \citation{frempong2021risk}
 \citation{HEADY2003385,bezerra2009impact}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}}
 \citation{eckel2002sex}
 \citation{charness2013experimental}
 \citation{barsky1997preference}
 \citation{binswanger1981attitudes,camerer1999effects,dohmen2005individual}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Data \& methodology}{2}{section.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Mothers' risk preference}{2}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Data \& methodology}{2}{section.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Mothers' risk preference}{2}{subsection.2.1}}
 \citation{kimball2008imputing}
 \citation{kimball2009risk}
 \citation{kimball2008imputing}
@@ -40,17 +43,17 @@
 \citation{dohmen2017risk}
 \citation{kimball2009risk}
 \citation{kimball2008imputing}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Category of risk attitudes\relax }}{3}{table.caption.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Category of risk attitudes\relax }}{3}{table.caption.1}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{table:1-risk-category}{{1}{3}{Category of risk attitudes\relax }{table.caption.2}{}}
 \newlabel{table:1-risk-category@cref}{{[table][1][]1}{[1][2][]3}}
 \citation{kimball2009risk}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Risk tolerance response category\relax }}{4}{table.caption.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Risk tolerance response category\relax }}{4}{table.caption.3}}
 \newlabel{table:2-risk-bound}{{2}{4}{Risk tolerance response category\relax }{table.caption.4}{}}
 \newlabel{table:2-risk-bound@cref}{{[table][2][]2}{[1][4][]4}}
 \newlabel{eq:1-conditional-expectation}{{1}{4}{Mothers' risk preference}{equation.2.1}{}}
-\newlabel{eq:1-conditional-expectation@cref}{{[equation][1][]1}{[1][3][]4}}
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Imputed coefficient of risk aversion ($\gamma $)\relax }}{4}{table.caption.5}\protected@file@percent }
+\newlabel{eq:1-conditional-expectation@cref}{{[equation][1][]1}{[1][4][]4}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Imputed coefficient of risk aversion ($\gamma $)\relax }}{4}{table.caption.5}}
 \newlabel{table:3-imputed-risk}{{3}{4}{Imputed coefficient of risk aversion ($\gamma $)\relax }{table.caption.6}{}}
 \newlabel{table:3-imputed-risk@cref}{{[table][3][]3}{[1][4][]4}}
 \citation{heckman2014economics}
@@ -60,20 +63,24 @@
 \citation{altman2013home,iverson1982home}
 \citation{carneiro2016partial}
 \citation{center2004nlsy79}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Investment data}{5}{subsection.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Summary statistics}{5}{subsection.2.3}\protected@file@percent }
-\citation{carneiro2016partial}
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Components of HOME index\relax }}{6}{table.caption.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Investment data}{5}{subsection.2.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Summary statistics}{5}{subsection.2.3}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Components of HOME index\relax }}{6}{table.caption.7}}
 \newlabel{table:4-HOME}{{4}{6}{Components of HOME index\relax }{table.caption.8}{}}
 \newlabel{table:4-HOME@cref}{{[table][4][]4}{[1][5][]6}}
-\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Summary statistics \relax }}{7}{table.caption.9}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Summary statistics \relax }}{7}{table.caption.9}}
 \newlabel{table:5-summary}{{5}{7}{Summary statistics \relax }{table.caption.9}{}}
-\newlabel{table:5-summary@cref}{{[table][5][]5}{[1][6][]7}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Results}{8}{section.3}\protected@file@percent }
+\newlabel{table:5-summary@cref}{{[table][5][]5}{[1][5][]7}}
+\citation{carneiro2016partial}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Results}{8}{section.3}}
 \newlabel{eq:2-empirical-specification}{{2}{8}{Results}{equation.3.2}{}}
 \newlabel{eq:2-empirical-specification@cref}{{[equation][2][]2}{[1][8][]8}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Robustness checks}{8}{section.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{8}{section.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces OLS estimates of risk aversion on Parental inputs\relax }}{9}{table.caption.12}}
+\newlabel{table:6-main-result}{{6}{9}{Results}{table.caption.12}{}}
+\newlabel{table:6-main-result@cref}{{[table][6][]6}{[1][8][]9}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Robustness checks}{10}{section.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}title}{10}{subsection.4.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{10}{section.5}}
 \bibstyle{apalike}
 \bibdata{bibliography.bib}
 \bibcite{altman2013home}{{1}{2013}{{Altman and Werner}}{{}}}
@@ -107,4 +114,3 @@
 \bibcite{schultz1971investment}{{29}{1971}{{Schultz}}{{}}}
 \bibcite{sovero2018risk}{{30}{2018}{{Sovero}}{{}}}
 \bibcite{tabetando2019parental}{{31}{2019}{{Tabetando}}{{}}}
-\gdef \@abspage@last{10}
