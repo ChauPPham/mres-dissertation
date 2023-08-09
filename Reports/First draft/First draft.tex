@@ -172,7 +172,7 @@ I estimate a simple OLS model of the relationship between mother's risk aversion
 \end{equation}
 where $I_{it}$ denotes the investment for child $i$ at time $t$, measured by various indices present under the first panel of \Cref{table:5-summary}. $\gamma_{it}$ is the imputed CRRA coefficient of child $i$'s mother at time $t$. $Z_{it}$ is a vector of controls containing both child's characteristics and maternal characteristics as described in the second and third panel of \Cref{table:5-summary}. $AGE\_GRP_t$ and $\theta_t$ indicate age-group fixed effect and time fixed effect. The reason age-group fixed effect is introduced is due to the manner in which indices of parental inputs are constructed, i.e., totalled and normalised for each age group. The coefficient of $\gamma$, i.e., $\alpha$ shows the effect of maternal risk aversion on child investment. 
 
-As mentioned in the previous section, due to the large change in variance as well as distribution of risk attitudes in the sample, \eqref{eq:2-empirical-specification} will be augmented with interaction terms between year and $\gamma$ to capture for changes of risk preference occuring in a specific year. Standard errors are clustered by mothers to allow for correlation among children of the same mother. 
+As mentioned in the previous section, due to the large change in variance as well as distribution of risk attitudes in the sample, \eqref{eq:2-empirical-specification} will be augmented with interaction terms between year and $\gamma$ to capture for changes of risk preference occurring in a specific year. Standard errors are clustered by mothers to allow for correlation among children of the same mother. 
 
 I present the OLS estimates of $\gamma$ in \eqref{eq:2-empirical-specification} \Cref{table:6-main-result} as the main results of the paper. \Cref{table:6-main-result} is organised into 5 panels of each measures of parental inputs, namely HOME index, Goods index, Time index, Cognitive stimulation score (\%) and Emotional support score (\%). For each panel, the first two lines report point estimates and standard deviation of $\alpha$ in \eqref{eq:2-empirical-specification} for the whole sample and three sub-sample characterised by mother's level of education including High school dropout (not rewarded High school diploma), High school (rewarded High school diploma but no further education) and College or above (attended college regardless of awards). The next two lines also report point estimates and standard deviation of $\alpha$ but when models are augmented with interaction terms between $\gamma$ and year to account for year-specific changes in risk preference. All models include a full set of controls of child's characteristics (sex, race, age of mother at child's birth, number of siblings, family size) and mother's characteristics (age of mother at first birth, mother's AFQT score, an indicator of whether mother lived with both biological parents at age 14, education levels of mother's parents, number of weeks worked and log of household income in the previous calendar year) as described in \Cref{table:5-summary}.
 
@@ -184,7 +184,7 @@ I present the OLS estimates of $\gamma$ in \eqref{eq:2-empirical-specification} 
 		\input{Tables/table-6-main-result}
 		\label{table:6-main-result}
 		\begin{tablenotes}[flushleft] \footnotesize
-			\item \textit{Note:} The table present OLS estimates of risk aversion on parental inputs. For every panel, the first two lines report point estimates and standard errors of $\gamma$ in models without interaction between risk aversion and year, whereas the next two lines report the same figures but for models with such interaction. The set of controls included in the table but omitted here due to space constraints and ease of representation consist of child characteristics (sex, age of mother at child's birth, number of siblings, family size) and maternal characteristics (age of mother at first birth, AFQT score, indicator of whether mother lived with both biological parents at age 14, educational level of mother's parents, number of weeks worked last year and log of household income last year). All models are augmented with year and age-category fixed effect. Standard errors are clustered by mother and shown in parentheses.
+			\item \textit{Note:} The table present OLS estimates of risk aversion on parental inputs. For every panel, the first two lines report point estimates and standard errors of $\gamma$ in models without interaction between risk aversion and year, whereas the next two lines report the same figures but for models with year interaction (year 1994 is treated as baseline). The set of controls included in the table but omitted here due to space constraints and ease of representation consist of child characteristics (sex, age of mother at child's birth, number of siblings, family size) and maternal characteristics (age of mother at first birth, AFQT score, indicator of whether mother lived with both biological parents at age 14, educational level of mother's parents, number of weeks worked last year and log of household income last year). All models are augmented with year and age-category fixed effect. Standard errors are clustered by mother and shown in parentheses.
 			\item Significant levels are as follows: \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\).
 		\end{tablenotes}
 	\end{threeparttable}
@@ -192,7 +192,7 @@ I present the OLS estimates of $\gamma$ in \eqref{eq:2-empirical-specification} 
 
 We observe an overall positive effect of risk aversion on parental inputs notwithstanding the substantial heterogeneity of effects size across groups. When considering sub-samples, the effects are found only for the sample of child whose mothers never attended high school or are high school dropouts. For these children, maternal risk aversion exhibits significant and positive effects throughout all panels of parental input except for cognitive stimulation. One point increase in CRRA coefficient of mothers drive an increase of 0.038 which is slightly more than one third of the standard deviation of HOME index for this sub-sample. The effect size on goods and time inputs are similarly high, at 0.027 and 0.032 respectively, which correspond to about 25\% and 1/3 of the standard deviations for these inputs. Lastly, for a unit increase in $\gamma$, emotional support percentile increases by 0.489 percentage points. For the whole sample, positive and significant effect size is found for generic HOME index, Time index and Emotional support score (\%) when accounting for year-specific changes in risk preference of mothers. However, these positive results for the whole sample might be driven by results in the sample of mothers who are high school dropouts. 
 
-At this point, it is hard to identify the channels through which risk attitudes influence parental investment. Nonetheless, it is possible to speculate a few things about the mechanism of propagation.    
+At this point, it is hard to identify the channels through which risk attitudes influence parental investment. Nonetheless, it is possible to speculate a few things about the mechanism of propagation.    ADD SOMETHING LATER
 
 
 
@@ -202,7 +202,52 @@ At this point, it is hard to identify the channels through which risk attitudes 
 %===================================================================================================================
 
 \section{Robustness checks}
-\subsection{title}
+In this section, various specifications are used to check for robustness of our model. These include re-estimating the model excluding the year 2004 (due to the discussed substantial change in variance of log risk tolerance), using a categorical variable of risk preference, using other measures of risk preference.
+
+\subsection{Large swing in risk preference}
+As mentioned in Section 2, in the year 2004, the distribution of responses to the series of questions on risk preference changed drastically. In particular, the second response category, which groups respondents who answered "First job" in the first question and "Second job" in the second question, expanded substantially compared to other years, accounting for almost 16\% of responses compared to under 12\% in other years. To put these figures into perspective, in 1994, the year with the second highest proportion of "Group 2" respondents, 1027 out of 8945 participants were classified into the second response category. For 2004, 1133 out of 7176 participants belong to the second category based on their responses. Taking the other three years as baseline (1994, 2002, and 2006), the year 2004 is characterised by a large movement of concentration in terms of mass towards the ``least popular" second category even overtaking the third response category. Even though the drastic change in risk preference is puzzling, OLS estimates of \eqref{eq:2-empirical-specification} without observations in 2004, presented in \Cref{table:7-robust-1}, are almost identical to those in \Cref{table:6-main-result}. 
+
+\begin{table}[!h]
+	\centering
+	\begin{threeparttable}
+		\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+		\caption{OLS estimates with restricted sample}	
+		\input{Tables/table-7-robust-1}
+		\label{table:7-robust-1}
+		\begin{tablenotes}[flushleft] \footnotesize
+			\item \textit{Note:} The table present OLS estimates of risk aversion on parental inputs excluding observations in 2004. Other details are the same as \Cref{table:6-main-result}.
+			\item Significant levels are as follows: \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\).
+		\end{tablenotes}
+	\end{threeparttable}
+\end{table}
+
+The exclusion of 2004 brings the total number of observations down to 7399 from 9134 for the HOME index, an omission of 1735 observations. Similarly, the restriction excludes 1679 observations on Goods and Time indices, 1552 observations on Cognitive Stimulation score, and 1387 observations on Emotional Support score. Nevertheless, most point estimates remain the same while there are a slight increases in the point estimates of the effect of $\gamma$ on emotional support score. This shows that our original specification is robust to the shift in the risk preference of the population and point estimates along with standard error are very precisely estimated. 
+
+
+
+\subsection{Risk as category}
+Now we focus on the treatment of the variable that acts as a surrogate for risk preference, i.e., how we incorporate responses to the sequence of risk preference in our model. As has been done thus far, one way is to impute and turn these responses into a single cardinal variable which aids in interpretation. In so doing, however, we impose several identifying restrictions crucial to the imputation process as noted in Section 2. Another approach which relaxes these restrictions is to group respondents into different categories depending on their answers. \Cref{table:8-robust-2} present OLS estimates of \eqref{eq:2-empirical-specification} when the cardinal variable $\gamma$ representing CRRA coefficient is replaced by a 4-level categorical variable segregating participants by their sequence of choices.
+
+
+\begin{table}[!h]
+	\centering
+	\begin{threeparttable}
+		\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+		\setlength{\extrarowheight}{0.2em}
+		\caption{OLS estimates with restricted sample}	
+		\input{Tables/table-8-robust-2}
+		\label{table:8-robust-2}
+		\begin{tablenotes}[flushleft] \footnotesize
+			\item \textit{Note:} The table present OLS estimates of risk aversion on parental inputs excluding observations in 2004. Other details are the same as \Cref{table:6-main-result}.
+			\item Significant levels are as follows: \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\).
+		\end{tablenotes}
+	\end{threeparttable}
+\end{table}
+
+
+
+
+\subsection{Other measures of risk preference}
 
 
 

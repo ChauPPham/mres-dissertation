@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.9.11)  8 AUG 2023 20:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.9.11)  9 AUG 2023 17:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -912,25 +912,40 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: Text page 9 contains only floats.
 
-[9] [10] (./First draft.bbl [11])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 220.
- [12]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 220.
+
+Overfull \vbox (4.16176pt too high) has occurred while \output is active []
+
+
+[9] (./Tables/table-7-robust-1.tex)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[10] [11] (./Tables/table-8-robust-2.tex)
+
+LaTeX Warning: Float too large for page by 155.68129pt on input line 245.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[12] (./First draft.bbl [13])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 265.
+ [14] [15]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 265.
  (./First draft.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 220.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 220.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 265.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 265.
 Package rerunfilecheck Info: File `"First draft".out' has not changed.
-(rerunfilecheck)             Checksum: 24A23939A40BD590AC1A074298BD524C;500.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 220.
+(rerunfilecheck)             Checksum: 434144305E66E76EC44FE6C4360F795F;674.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 265.
  ) 
 Here is how much of TeX's memory you used:
- 12878 strings out of 492649
- 222967 string characters out of 6119168
- 358547 words of memory out of 5000000
- 16397 multiletter control sequences out of 15000+600000
+ 12899 strings out of 492649
+ 223338 string characters out of 6119168
+ 358715 words of memory out of 5000000
+ 16403 multiletter control sequences out of 15000+600000
  55555 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,25n,79p,2211b,633s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,25n,79p,2211b,633s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -995,10 +1010,10 @@ F2E-40F5-A035-626F9F937690/1E442B07-C9D7-442D-9EAA-344AD89302B8/Root/texlive/20
 18/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb><c:/ProgramData/App-V/0D40C8
 71-6F2E-40F5-A035-626F9F937690/1E442B07-C9D7-442D-9EAA-344AD89302B8/Root/texliv
 e/2018/texmf-dist/fonts/type1/public/tex-gyre/qplri.pfb>
-Output written on "First draft.pdf" (12 pages, 248999 bytes).
+Output written on "First draft.pdf" (15 pages, 257124 bytes).
 PDF statistics:
- 349 PDF objects out of 1000 (max. 8388607)
- 313 compressed objects within 4 object streams
- 76 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 383 PDF objects out of 1000 (max. 8388607)
+ 344 compressed objects within 4 object streams
+ 85 named destinations out of 1000 (max. 500000)
+ 89 words of extra memory for PDF output out of 10000 (max. 10000000)
 
