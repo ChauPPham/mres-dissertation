@@ -11,11 +11,10 @@ Barsky, R.~B., Juster, F.~T., Kimball, M.~S., and Shapiro, M.~D. (1997).
   approach in the health and retirement study.
 \newblock {\em The Quarterly Journal of Economics}, 112(2):537--579.
 
-\bibitem[Becker, 2009]{becker2009human}
-Becker, G.~S. (2009).
-\newblock {\em Human capital: A theoretical and empirical analysis, with
-  special reference to education}.
-\newblock University of Chicago press.
+\bibitem[Becker, 1962]{becker1962investment}
+Becker, G.~S. (1962).
+\newblock Investment in human capital: A theoretical analysis.
+\newblock {\em Journal of political economy}, 70(5, Part 2):9--49.
 
 \bibitem[Bezerra et~al., 2009]{bezerra2009impact}
 Bezerra, M.~E., Kassouf, A.~L., and Arends-Kuenning, M. (2009).
@@ -88,6 +87,11 @@ Dohmen, T.~J., Falk, A., Huffman, D., Sunde, U., Schupp, J., and Wagner, G.~G.
 \newblock Individual risk attitudes: New evidence from a large, representative,
   experimentally-validated survey.
 
+\bibitem[Duflo and Banerjee, 2011]{duflo2011poor}
+Duflo, E. and Banerjee, A. (2011).
+\newblock {\em Poor economics}, volume 619.
+\newblock PublicAffairs New York, NY, USA.
+
 \bibitem[Eckel and Grossman, 2002]{eckel2002sex}
 Eckel, C.~C. and Grossman, P.~J. (2002).
 \newblock Sex differences and statistical stereotyping in attitudes toward
@@ -122,6 +126,10 @@ Heckman, J.~J. and Mosso, S. (2014).
 Iverson, B.~K. and Walberg, H.~J. (1982).
 \newblock Home environment and school learning: A quantitative synthesis.
 \newblock {\em The Journal of Experimental Education}, 50(3):144--151.
+
+\bibitem[Jacob and Ludwig, 2008]{jacob2008improving}
+Jacob, B. and Ludwig, J. (2008).
+\newblock Improving educational outcomes for poor children.
 
 \bibitem[Kimball et~al., 2008]{kimball2008imputing}
 Kimball, M.~S., Sahm, C.~R., and Shapiro, M.~D. (2008).
