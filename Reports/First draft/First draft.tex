@@ -226,23 +226,19 @@ The exclusion of 2004 brings the total number of observations down to 7399 from 
 
 
 \subsection{Risk as category}
-Now we focus on the treatment of the variable that acts as a surrogate for risk preference, i.e., how we incorporate responses to the sequence of risk preference in our model. As has been done thus far, one way is to impute and turn these responses into a single cardinal variable which aids in interpretation. In so doing, however, we impose several identifying restrictions crucial to the imputation process as noted in Section 2. Another approach which relaxes these restrictions is to group respondents into different categories depending on their answers. \Cref{table:8-robust-2} present OLS estimates of \eqref{eq:2-empirical-specification} when the cardinal variable $\gamma$ representing CRRA coefficient is replaced by a 4-level categorical variable segregating participants by their sequence of choices.
+Now we focus on the treatment of the variable that acts as a surrogate for risk preference, i.e., how we incorporate responses to the sequence of risk preference in our model. As has been done thus far, one way is to impute and turn these responses into a single cardinal variable which aids in interpretation. In so doing, however, we impose several identifying restrictions crucial to the imputation process as noted in Section 2. Another approach which relaxes these restrictions is to group respondents into different categories depending on their answers. \Cref{table:8-robust-2} present OLS estimates of \eqref{eq:2-empirical-specification} when the cardinal variable $\gamma$ representing CRRA coefficient is replaced by a 4-level categorical variable segregating participants by their answers.
 
 
-\begin{table}[!h]
+
+\begin{ThreePartTable}
 	\centering
-	\begin{threeparttable}
-		\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
-		\setlength{\extrarowheight}{0.2em}
-		\caption{OLS estimates with restricted sample}	
-		\input{Tables/table-8-robust-2}
-		\label{table:8-robust-2}
-		\begin{tablenotes}[flushleft] \footnotesize
-			\item \textit{Note:} The table present OLS estimates of risk aversion on parental inputs excluding observations in 2004. Other details are the same as \Cref{table:6-main-result}.
-			\item Significant levels are as follows: \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\).
-		\end{tablenotes}
-	\end{threeparttable}
-\end{table}
+	\setlength{\extrarowheight}{0.2em}
+	\begin{TableNotes}[flushleft]\footnotesize
+		\item \textit{Note:} The table present OLS estimates of risk aversion on parental inputs using a 4-level categorical variable segregating respondents by their answers to the sequence of questions on lifetime gamble. Category 4 (least risk averse) is treated as the baseline. Other details are the same as \Cref{table:6-main-result}.
+		\item Significant levels are as follows: \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\).
+	\end{TableNotes}
+	\input{Tables/table-8-robust-2}
+\end{ThreePartTable}
 
 
 
