@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.8)  10 AUG 2023 19:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.8)  11 AUG 2023 11:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -752,11 +752,11 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 98.
+(amsmath)                 on input line 99.
 
 [3]
 LaTeX Font Info:    Trying to load font information for U+bbold on input line 1
-02.
+03.
  (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ubbold.fd
 File: ubbold.fd 1996/01/01 Blackboard Bold Font Definition File (jk)
 ) (Tables/table-2-risk-coefficient.tex
@@ -782,10 +782,10 @@ LaTeX Warning: Text page 7 contains only floats.
 [7{C:/Users/hoang/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ts1.
 enc}]
 
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 172.
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 173.
 
 
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 172
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 173
 .
 
 (Tables/table-6-main-result.tex)
@@ -804,7 +804,7 @@ Overfull \vbox (4.16176pt too high) has occurred while \output is active []
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[10] [11] (Tables/table-8-robust-2.tex [12] [13]) [14] [15] (First draft.bbl
+[10] [11] [12] (Tables/table-8-robust-2.tex [13]) [14] [15] (First draft.bbl
 [16]) [17] (First draft.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
@@ -841,9 +841,9 @@ onts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/hoang/AppData/Local/Programs/
 MiKTeX/fonts/type1/public/tex-gyre/qplb.pfb><C:/Users/hoang/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb><C:/Users/hoang/AppData/Local/P
 rograms/MiKTeX/fonts/type1/public/tex-gyre/qplri.pfb>
-Output written on "First draft.pdf" (17 pages, 397964 bytes).
+Output written on "First draft.pdf" (17 pages, 399799 bytes).
 PDF statistics:
- 414 PDF objects out of 1000 (max. 8388607)
+ 421 PDF objects out of 1000 (max. 8388607)
  88 named destinations out of 1000 (max. 500000)
  89 words of extra memory for PDF output out of 10000 (max. 10000000)
 

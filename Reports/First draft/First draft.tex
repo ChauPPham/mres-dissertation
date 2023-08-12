@@ -63,6 +63,7 @@ In general, the literature on parental risk aversion is scarce whilst results ar
 
 Other works involving risk preference of parents focus on educational outcomes. With the exception of \citet{leonardi2007parents} which found no effect of risk aversion on secondary school track choice for the Italian sample, the majority reported negative effects of risk aversion on educational outcomes including test scores in the US \citep{brown2012parental}, college enrollment in Italy \citep{checchi2014parents}, cognitive outcomes in Indonesia \citep{hartarto2023parental}. Furthermore, \citet{frempong2021risk} found a positive association between risk aversion and child labour while there is evidence that increased child labour impedes learning \citep{HEADY2003385, bezerra2009impact}.  
 
+Using NLSY79 ... -> EXPLAINS ABOUT THE PAPER
 
 
 %===================================================================================================================================================================
@@ -92,7 +93,7 @@ Depending on respondents' answers to this question, survey participants were ask
 	\label{table:1-risk-category}
 \end{table}
 
-A valid concern over the use of this series of questions as a measure of risk preference is how well it predicts true risk attitudes. The question wordings and structure of the NLSY79 are the same as those in the Health and Retirement Study (HRS) as well as the Panel Study of Income Dynamics (PSID). While the method of eliciting risk preference using lifetime income is uncommon and most other methods fall into the category of self-evaluated risk willingness/tolerance employing Likert scale, gamble choice \citep{eckel2002sex}, or multiple price list (MPL),\footnote{For a comprehensive review on methods of elicitation of risk preference, see \citet{charness2013experimental}} \citet{barsky1997preference} showed that this measure does predict an array of risk behaviours including drinking, smoking, holding risky assets, etc. Furthermore, gamble on hypothetical choice in general has been shown to perform relatively well compared to its counterpart which offer real monetary rewards \citep{binswanger1981attitudes, camerer1999effects, dohmen2005individual}. Consequently, our use of responses to this series of question to proxy for risk preference is appropriate to the extent that risk attitudes captured by gamble on lifetime income reflect the risk attitudes mothers exhibit when investing in her child.
+A valid concern over the use of this series of questions as a measure of risk preference is how well it predicts true risk attitudes. The question wordings and structure of the NLSY79 are the same as those in the Health and Retirement Study (HRS) as well as the Panel Study of Income Dynamics (PSID). While the method of eliciting risk preference using lifetime income is uncommon and most other methods fall into the category of self-evaluated risk willingness/tolerance employing Likert scale, gamble choice \citep{eckel2002sex}, or multiple price list (MPL),\footnote{For a comprehensive review on methods of elicitation of risk preference, see \citet{charness2013experimental}} \citet{barsky1997preference} showed that this measure does predict an array of risk behaviours including drinking, smoking, holding risky assets, etc. Furthermore, gamble on hypothetical choice in general has been shown to perform relatively well compared to its counterpart which offer real monetary rewards \citep{binswanger1981attitudes, camerer1999effects, dohmen2005individual}. Consequently, our use of responses to this series of question to proxy for risk preference is appropriate to the extent that risk attitudes captured by gamble on lifetime income reflect the risk attitudes mothers hold when investing in her child.
 
 Using the series of questions on risk attitudes, following \citet{kimball2008imputing} and \citet{kimball2009risk}, under the assumption that respondents have constant relative risk aversion (CRRA) and risk tolerance are log-normally distributed, I calculated and imputed values of CRRA coefficient for each respondent. The procedure is as follows. First, assuming that CRRA well approximates individuals' utility over lifetime income,
 \[U(W)={W^{1-{1/\theta}}\over 1-{1/\theta}}\]
@@ -155,7 +156,7 @@ For each age group, to generate the generic investment index (HOME index), indic
 \subsection{Summary statistics}
 \input{Tables/table-5-summary}
 
-Descriptive statistics of variables used in analysis are shown in \Cref{table:5-summary}. The sample is restricted to observations in the year 1994, 2002, 2004 and 2006 to include a measure of risk aversion and which have valid responses (non-missing and non-negative) to child's characteristics and mother's characteristics. This leaves us with 9,282 observations. The table reports the mean and standard deviations of numerical variables and only frequency for categorical variables for the total sample and 3 subgroups based on mother's level of education (High school dropout, high school and college). The table is organised into three panels: (1) parental inputs which include various indices described above (HOME, Goods, Time, Cognitive Stimulation, and Emotional Support); (2) Child's characteristics which include sex, race, age of mother at birth of child, number of siblings and family size; and (3) Mother's characteristics which include Mother's AFQT score (2006 revised edition), age of mother at first birth, an indicator variable showing whether mother lived with both biological parents at age 14, years of schooling of mother's parents, number of weeks worked in the previous calendar year, and net household income in the previous calendar year.
+Descriptive statistics of variables used in analysis are shown in \Cref{table:5-summary}. The sample is restricted to observations in the year 1994, 2002, 2004 and 2006 to include a measure of risk aversion and which have valid responses (non-missing and non-negative) to child's characteristics, mother's characteristics, and parental inputs. This leaves us with 9,134 observations. The table reports the mean and standard deviations of numerical variables and only frequency for categorical variables for the total sample and 3 subgroups based on mother's level of education (High school dropout, high school and college). The table is organised into three panels: (1) parental inputs which include various indices described above (HOME, Goods, Time, Cognitive Stimulation, and Emotional Support); (2) Child's characteristics which include sex, race, age of mother at birth of child, number of siblings and family size; and (3) Mother's characteristics which include Mother's AFQT score (2006 revised edition), age of mother at first birth, an indicator variable showing whether mother lived with both biological parents at age 14, years of schooling of mother's parents, number of weeks worked in the previous calendar year, and net household income in the previous calendar year.
 
 
 The average HOME score in our sample is 0.15 which is higher than the average HOME score for the nationally representative sample. A potential cause for this is the restriction on the years in which data chosen, namely 1994, 2002, 2004, and 2006. By the mentioned years, mothers are typically older than the average age of mothers in NLSY79 CYA. This is apparent in the high mean age of mother at child's birth, which is over 27 in our sample compared to around 25 in the whole sample as reported in \citet{carneiro2016partial}. Higher age also correlates with higher earnings and experience, thus affecting our measures of parental inputs. 
@@ -196,8 +197,10 @@ We observe an overall positive effect of risk aversion on parental inputs notwit
 
 At this point, it is hard to identify the channels through which risk attitudes influence parental investment. Nonetheless, it is possible to speculate a few things about the mechanism of propagation.    ADD SOMETHING LATER
 
+HOW TO ADDRESS REVERSE CAUSALITY AND ENDOGENEITY?
 
 
+ADD POSSIBLE MECHANISM: RISK AVERSION AND CREDIT CONSTRAINTS?
 
 
 
@@ -226,12 +229,12 @@ As mentioned in Section 2, in the year 2004, the distribution of responses to th
 
 The exclusion of 2004 brings the total number of observations down to 7399 from 9134 for the HOME index, an omission of 1735 observations. Similarly, the restriction excludes 1679 observations on Goods and Time indices, 1552 observations on Cognitive Stimulation score, and 1387 observations on Emotional Support score. Nevertheless, most point estimates remain the same while there are a slight increases in the point estimates of the effect of $\gamma$ on emotional support score. This shows that our original specification is robust to the shift in the risk preference of the population and point estimates along with standard error are very precisely estimated. 
 
-\pagebreak
+
 
 \subsection{Risk as category}
 Now we focus on the treatment of the variable that acts as a surrogate for risk preference, i.e., how we incorporate responses to the sequence of risk preference in our model. As has been done thus far, one way is to impute and turn these responses into a single cardinal variable which aids in interpretation. In so doing, however, we impose several identifying restrictions crucial to the imputation process as noted in Section 2. Another approach which relaxes these restrictions is to group respondents into different categories depending on their answers. \Cref{table:8-robust-2} present OLS estimates of \eqref{eq:2-empirical-specification} when the cardinal variable $\gamma$ representing CRRA coefficient is replaced by a 4-level categorical variable segregating participants by their answers.
 
-
+\pagebreak
 
 \begin{ThreePartTable}
 	\centering
