@@ -1,0 +1,1025 @@
+C00001.00    [CPUBID]                                       Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             ID CODE OF CHILD
+ 
+PUBLIC IDENTIFICATION CODE OF CHILD
+ 
+UNIVERSE: All biological children of NLSY79 mothers, regardless of age.
+ 
+   11551           1 TO 9999999: See Min & Max values below for range as of this
+                          release
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:            201        Max:        1267501        Mean:           600544.28
+ 
+Lead In: None.
+Default Next Question: C00002.00
+--------------------------------------------------------------------------------
+C00002.00    [MPUBID]                                       Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             ID CODE OF MOTHER OF CHILD
+ 
+PUBLIC IDENTIFICATION CODE OF MOTHER OF CHILD
+ 
+UNIVERSE: All biological children of NLSY79 mothers, regardless of age.
+ 
+NOTE: SEE YOUTH REFERENCE NUMBER R(    1.)
+ 
+   11551           1 TO 12686: NLSY79 Public ID
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:              2        Max:          12675        Mean:             6005.42
+ 
+Lead In: C00001.00[Default]
+Default Next Question: C00003.00
+--------------------------------------------------------------------------------
+C00038.00    [AGECH1979]                                    Survey Year: 1979
+  PRIMARY VARIABLE
+
+ 
+             AGE OF CHILD (IN MONTHS) AT 1979 INTERVIEW DATE OF MOTHER
+ 
+AGE OF CHILD (IN MONTHS) AT 1979 INTERVIEW DATE OF MOTHER 79 INT
+ 
+UNIVERSE: UNIVERSE: All children, regardless of age, reported in the current 
+survey by interviewed mothers.
+ 
+     411           0 TO 11: 0-11 MONTHS
+     330          12 TO 23: 12-23 MONTHS
+     232          24 TO 35: 24-35 MONTHS
+     197          36 TO 47: 36-47 MONTHS
+      88          48 TO 59: 48-59 MONTHS
+      51          60 TO 71: 60-71 MONTHS
+      17          72 TO 83: 72-83 MONTHS
+       4          84 TO 95: 84-95 MONTHS
+       1          96 TO 107: 96-107 MONTHS
+  -------
+    1331
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>    1333      MISSING(-7)   10218
+ 
+Min:              0        Max:            100        Mean:               24.28
+ 
+Lead In: None.
+Default Next Question: C00071.00
+--------------------------------------------------------------------------------
+C00039.00    [AGECH1980]                                    Survey Year: 1980
+  PRIMARY VARIABLE
+
+ 
+             AGE OF CHILD (IN MONTHS) AT 1980 INTERVIEW DATE OF MOTHER
+ 
+AGE OF CHILD (IN MONTHS) AT 1980 INTERVIEW DATE OF MOTHER  80 INT
+ 
+UNIVERSE: UNIVERSE: All children, regardless of age, reported in the current 
+survey by interviewed mothers.
+ 
+     531           0 TO 11: 0-11 MONTHS
+     398          12 TO 23: 12-23 MONTHS
+     300          24 TO 35: 24-35 MONTHS
+     229          36 TO 47: 36-47 MONTHS
+     171          48 TO 59: 48-59 MONTHS
+      84          60 TO 71: 60-71 MONTHS
+      38          72 TO 83: 72-83 MONTHS
+      15          84 TO 95: 84-95 MONTHS
+       3          96 TO 107: 96-107 MONTHS
+       1         108 TO 119: 108-119 MONTHS
+  -------
+    1770
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>    1772      MISSING(-7)    9779
+ 
+Min:              0        Max:            111        Mean:               26.49
+ 
+Lead In: None.
+Default Next Question: C00072.00
+--------------------------------------------------------------------------------
+C00040.00    [AGECH1981]                                    Survey Year: 1981
+  PRIMARY VARIABLE
+
+ 
+             AGE OF CHILD (IN MONTHS) AT 1981 INTERVIEW DATE OF MOTHER
+ 
+AGE OF CHILD (IN MONTHS) AT 1981 INTERVIEW DATE OF MOTHER 81 INT
+ 
+UNIVERSE: UNIVERSE: All children, regardless of age, reported in the current 
+survey by interviewed mothers.
+ 
+     584           0 TO 11: 0-11 MONTHS
+     529          12 TO 23: 12-23 MONTHS
+     390          24 TO 35: 24-35 MONTHS
+     307          36 TO 47: 36-47 MONTHS
+     226          48 TO 59: 48-59 MONTHS
+     182          60 TO 71: 60-71 MONTHS
+      82          72 TO 83: 72-83 MONTHS
+      44          84 TO 95: 84-95 MONTHS
+      14          96 TO 107: 96-107 MONTHS
+       4         108 TO 119: 108-119 MONTHS
+       1         120 TO 131: 120-131 MONTHS
+  -------
+    2363
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>    2365      MISSING(-7)    9186
+ 
+Min:              0        Max:            124        Mean:               30.58
+ 
+Lead In: None.
+Default Next Question: C00073.00
+--------------------------------------------------------------------------------
+C00041.00    [AGECH1982]                                    Survey Year: 1982
+  PRIMARY VARIABLE
+
+ 
+             AGE OF CHILD (IN MONTHS) AT 1982 INTERVIEW DATE OF MOTHER
+ 
+AGE OF CHILD (IN MONTHS) AT 1982 INTERVIEW DATE OF MOTHER  82 INT
+ 
+UNIVERSE: UNIVERSE: All children, regardless of age, reported in the current 
+survey by interviewed mothers.
+ 
+     701           0 TO 11: 0-11 MONTHS
+     573          12 TO 23: 12-23 MONTHS
+     540          24 TO 35: 24-35 MONTHS
+     384          36 TO 47: 36-47 MONTHS
+     308          48 TO 59: 48-59 MONTHS
+     234          60 TO 71: 60-71 MONTHS
+     175          72 TO 83: 72-83 MONTHS
+      83          84 TO 95: 84-95 MONTHS
+      39          96 TO 107: 96-107 MONTHS
+      19         108 TO 119: 108-119 MONTHS
+       4         120 TO 131: 120-131 MONTHS
+       1         132 TO 143: 132-143 MONTHS
+  -------
+    3061
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>    3063      MISSING(-7)    8488
+ 
+Min:              0        Max:            135        Mean:               34.22
+ 
+Lead In: None.
+Default Next Question: C00048.00
+--------------------------------------------------------------------------------
+C00042.00    [AGECH1983]                                    Survey Year: 1983
+  PRIMARY VARIABLE
+
+ 
+             AGE OF CHILD (IN MONTHS) AT 1983 INTERVIEW DATE OF MOTHER
+ 
+AGE OF CHILD (IN MONTHS) AT 1983 INTERVIEW DATE OF MOTHER  83 INT
+ 
+UNIVERSE: UNIVERSE: All children, regardless of age, reported in the current 
+survey by interviewed mothers.
+ 
+     711           0 TO 11: 0-11 MONTHS
+     701          12 TO 23: 12-23 MONTHS
+     592          24 TO 35: 24-35 MONTHS
+     526          36 TO 47: 36-47 MONTHS
+     394          48 TO 59: 48-59 MONTHS
+     318          60 TO 71: 60-71 MONTHS
+     223          72 TO 83: 72-83 MONTHS
+     179          84 TO 95: 84-95 MONTHS
+      78          96 TO 107: 96-107 MONTHS
+      41         108 TO 119: 108-119 MONTHS
+      17         120 TO 131: 120-131 MONTHS
+       4         132 TO 143: 132-143 MONTHS
+       1         144 TO 155: 144-155 MONTHS
+  -------
+    3785
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>    3787      MISSING(-7)    7764
+ 
+Min:              0        Max:            146        Mean:               38.37
+ 
+Lead In: None.
+Default Next Question: C00049.00
+--------------------------------------------------------------------------------
+C00043.00    [AGECH1984]                                    Survey Year: 1984
+  PRIMARY VARIABLE
+
+ 
+             AGE OF CHILD (IN MONTHS) AT 1984 INTERVIEW DATE OF MOTHER
+ 
+AGE OF CHILD (IN MONTHS) AT 1984 INTERVIEW DATE OF MOTHER 84 INT
+ 
+UNIVERSE: UNIVERSE: All children, regardless of age, reported in the current 
+survey by interviewed mothers.
+ 
+     692           0 TO 11: 0-11 MONTHS
+     705          12 TO 23: 12-23 MONTHS
+     695          24 TO 35: 24-35 MONTHS
+     598          36 TO 47: 36-47 MONTHS
+     521          48 TO 59: 48-59 MONTHS
+     385          60 TO 71: 60-71 MONTHS
+     315          72 TO 83: 72-83 MONTHS
+     224          84 TO 95: 84-95 MONTHS
+     180          96 TO 107: 96-107 MONTHS
+      83         108 TO 119: 108-119 MONTHS
+      43         120 TO 131: 120-131 MONTHS
+      15         132 TO 143: 132-143 MONTHS
+       4         144 TO 155: 144-155 MONTHS
+       1         156 TO 167: 156-167 MONTHS
+  -------
+    4461
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>    4463      MISSING(-7)    7088
+ 
+Min:              0        Max:            158        Mean:               43.54
+ 
+Lead In: None.
+Default Next Question: C00050.00
+--------------------------------------------------------------------------------
+C00044.00    [AGECH1985]                                    Survey Year: 1985
+  PRIMARY VARIABLE
+
+ 
+             AGE OF CHILD (IN MONTHS) AT 1985 INTERVIEW DATE OF MOTHER
+ 
+AGE OF CHILD (IN MONTHS) AT 1985 INTERVIEW DATE OF MOTHER 85 INT
+ 
+UNIVERSE: UNIVERSE: All children, regardless of age, reported in the current 
+survey by interviewed mothers.
+ 
+     651           0 TO 11: 0-11 MONTHS
+     625          12 TO 23: 12-23 MONTHS
+     635          24 TO 35: 24-35 MONTHS
+     617          36 TO 47: 36-47 MONTHS
+     514          48 TO 59: 48-59 MONTHS
+     462          60 TO 71: 60-71 MONTHS
+     348          72 TO 83: 72-83 MONTHS
+     300          84 TO 95: 84-95 MONTHS
+     219          96 TO 107: 96-107 MONTHS
+     172         108 TO 119: 108-119 MONTHS
+      75         120 TO 131: 120-131 MONTHS
+      42         132 TO 143: 132-143 MONTHS
+      14         144 TO 155: 144-155 MONTHS
+       4         156 TO 167: 156-167 MONTHS
+       1         168 TO 179: 168-179 MONTHS
+  -------
+    4679
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>    4681      MISSING(-7)    6870
+ 
+Min:              0        Max:            171        Mean:               49.06
+ 
+Lead In: None.
+Default Next Question: C00051.00
+--------------------------------------------------------------------------------
+C00045.00    [AGECH1986]                                    Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             AGE OF CHILD (IN MONTHS) AT 1986 INTERVIEW DATE OF MOTHER
+ 
+AGE OF CHILD (IN MONTHS) AT 1986 INTERVIEW DATE OF MOTHER 86 INT
+ 
+UNIVERSE: UNIVERSE: All children, regardless of age, reported in the current 
+survey by interviewed mothers.
+ 
+     607           0 TO 11: 0-11 MONTHS
+     634          12 TO 23: 12-23 MONTHS
+     614          24 TO 35: 24-35 MONTHS
+     619          36 TO 47: 36-47 MONTHS
+     618          48 TO 59: 48-59 MONTHS
+     511          60 TO 71: 60-71 MONTHS
+     471          72 TO 83: 72-83 MONTHS
+     350          84 TO 95: 84-95 MONTHS
+     297          96 TO 107: 96-107 MONTHS
+     214         108 TO 119: 108-119 MONTHS
+     168         120 TO 131: 120-131 MONTHS
+      90         132 TO 143: 132-143 MONTHS
+      39         144 TO 155: 144-155 MONTHS
+      17         156 TO 167: 156-167 MONTHS
+       4         168 TO 179: 168-179 MONTHS
+       1         180 TO 999: 180 + MONTHS
+  -------
+    5254
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>    5256      MISSING(-7)    6295
+ 
+Min:              0        Max:            183        Mean:               55.09
+ 
+Lead In: None.
+Default Next Question: C00065.00
+--------------------------------------------------------------------------------
+C00046.00    [AGECH1987]                                    Survey Year: 1987
+  PRIMARY VARIABLE
+
+ 
+             AGE OF CHILD (IN MONTHS) AT 1987 INTERVIEW DATE OF MOTHER
+ 
+AGE OF CHILD (IN MONTHS) AT 1987 INTERVIEW DATE OF MOTHER  87 INT
+ 
+UNIVERSE: UNIVERSE: All children, regardless of age, reported in the current 
+survey by interviewed mothers.
+ 
+     572           0 TO 11: 0-11 MONTHS
+     615          12 TO 23: 12-23 MONTHS
+     639          24 TO 35: 24-35 MONTHS
+     586          36 TO 47: 36-47 MONTHS
+     627          48 TO 59: 48-59 MONTHS
+     612          60 TO 71: 60-71 MONTHS
+     504          72 TO 83: 72-83 MONTHS
+     495          84 TO 95: 84-95 MONTHS
+     347          96 TO 107: 96-107 MONTHS
+     304         108 TO 119: 108-119 MONTHS
+     225         120 TO 131: 120-131 MONTHS
+     180         132 TO 143: 132-143 MONTHS
+      96         144 TO 155: 144-155 MONTHS
+      48         156 TO 167: 156-167 MONTHS
+      20         168 TO 179: 168-179 MONTHS
+       7         180 TO 999: 180 + MONTHS
+  -------
+    5877
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>    5879      MISSING(-7)    5672
+ 
+Min:              0        Max:            198        Mean:               61.87
+ 
+Lead In: None.
+Default Next Question: C00079.00
+--------------------------------------------------------------------------------
+C00047.00    [AGECH1988]                                    Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             AGE OF CHILD (IN MONTHS) AT 1988 INTERVIEW DATE OF MOTHER
+ 
+AGE OF CHILD (IN MONTHS) AT 1988 INTERVIEW DATE OF MOTHER 88 INT
+ 
+UNIVERSE: UNIVERSE: All children, regardless of age, reported in the current 
+survey by interviewed mothers.
+ 
+     588           0 TO 11: 0-11 MONTHS
+     552          12 TO 23: 12-23 MONTHS
+     598          24 TO 35: 24-35 MONTHS
+     656          36 TO 47: 36-47 MONTHS
+     585          48 TO 59: 48-59 MONTHS
+     618          60 TO 71: 60-71 MONTHS
+     603          72 TO 83: 72-83 MONTHS
+     555          84 TO 95: 84-95 MONTHS
+     503          96 TO 107: 96-107 MONTHS
+     360         108 TO 119: 108-119 MONTHS
+     309         120 TO 131: 120-131 MONTHS
+     233         132 TO 143: 132-143 MONTHS
+     194         144 TO 155: 144-155 MONTHS
+     120         156 TO 167: 156-167 MONTHS
+      55         168 TO 179: 168-179 MONTHS
+      34         180 TO 999: 180 + MONTHS
+  -------
+    6563
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>    6565      MISSING(-7)    4986
+ 
+Min:              0        Max:            212        Mean:               68.87
+ 
+Lead In: None.
+Default Next Question: C00068.00
+--------------------------------------------------------------------------------
+C00047.10    [AGECH1989]                                    Survey Year: 1989
+  PRIMARY VARIABLE
+
+ 
+             AGE OF CHILD (IN MONTHS) AT 1989 INTERVIEW DATE OF MOTHER
+ 
+AGE OF CHILD (IN MONTHS) AT 1989 INTERVIEW DATE OF MOTHER  89 INT
+ 
+UNIVERSE: UNIVERSE: All children, regardless of age, reported in the current 
+survey by interviewed mothers.
+ 
+     562           0 TO 11: 0-11 MONTHS
+     591          12 TO 23: 12-23 MONTHS
+     571          24 TO 35: 24-35 MONTHS
+     619          36 TO 47: 36-47 MONTHS
+     669          48 TO 59: 48-59 MONTHS
+     594          60 TO 71: 60-71 MONTHS
+     634          72 TO 83: 72-83 MONTHS
+     599          84 TO 95: 84-95 MONTHS
+     555          96 TO 107: 96-107 MONTHS
+     506         108 TO 119: 108-119 MONTHS
+     365         120 TO 131: 120-131 MONTHS
+     305         132 TO 143: 132-143 MONTHS
+     257         144 TO 155: 144-155 MONTHS
+     188         156 TO 167: 156-167 MONTHS
+     107         168 TO 179: 168-179 MONTHS
+      86         180 TO 999: 180 + MONTHS
+  -------
+    7208
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>    7210      MISSING(-7)    4341
+ 
+Min:              0        Max:            223        Mean:               74.76
+ 
+Lead In: None.
+Default Next Question: C00080.10
+--------------------------------------------------------------------------------
+C00047.20    [AGECH1990]                                    Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             AGE OF CHILD (IN MONTHS) AT 1990 INTERVIEW DATE OF MOTHER
+ 
+AGE OF CHILD (IN MONTHS) AT 1990 INTERVIEW DATE OF MOTHER 90 INT
+ 
+UNIVERSE: UNIVERSE: All children, regardless of age, reported in the current 
+survey by interviewed mothers.
+ 
+     505           0 TO 11: 0-11 MONTHS
+     562          12 TO 23: 12-23 MONTHS
+     585          24 TO 35: 24-35 MONTHS
+     553          36 TO 47: 36-47 MONTHS
+     588          48 TO 59: 48-59 MONTHS
+     673          60 TO 71: 60-71 MONTHS
+     585          72 TO 83: 72-83 MONTHS
+     615          84 TO 95: 84-95 MONTHS
+     612          96 TO 107: 96-107 MONTHS
+     543         108 TO 119: 108-119 MONTHS
+     514         120 TO 131: 120-131 MONTHS
+     359         132 TO 143: 132-143 MONTHS
+     315         144 TO 155: 144-155 MONTHS
+     253         156 TO 167: 156-167 MONTHS
+     192         168 TO 179: 168-179 MONTHS
+     217         180 TO 999: 180 + MONTHS
+  -------
+    7671
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>    7673      MISSING(-7)    3878
+ 
+Min:              0        Max:            237        Mean:               81.96
+ 
+Lead In: None.
+Default Next Question: C00070.10
+--------------------------------------------------------------------------------
+C00047.30    [AGECH1991]                                    Survey Year: 1991
+  PRIMARY VARIABLE
+
+ 
+             AGE OF CHILD (IN MONTHS) AT 1991 INTERVIEW DATE OF MOTHER
+ 
+AGE OF CHILD (IN MONTHS) AT 1991 INTERVIEW DATE OF MOTHER  91 INT
+ 
+UNIVERSE: UNIVERSE: All children, regardless of age, reported in the current 
+survey by interviewed mothers.
+ 
+     427           0 TO 11: 0-11 MONTHS
+     478          12 TO 23: 12-23 MONTHS
+     473          24 TO 35: 24-35 MONTHS
+     501          36 TO 47: 36-47 MONTHS
+     475          48 TO 59: 48-59 MONTHS
+     504          60 TO 71: 60-71 MONTHS
+     567          72 TO 83: 72-83 MONTHS
+     499          84 TO 95: 84-95 MONTHS
+     513          96 TO 107: 96-107 MONTHS
+     514         108 TO 119: 108-119 MONTHS
+     445         120 TO 131: 120-131 MONTHS
+     418         132 TO 143: 132-143 MONTHS
+     311         144 TO 155: 144-155 MONTHS
+     248         156 TO 167: 156-167 MONTHS
+     197         168 TO 179: 168-179 MONTHS
+     317         180 TO 999: 180 + MONTHS
+  -------
+    6887
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>    6889      MISSING(-7)    4662
+ 
+Min:              0        Max:            246        Mean:                  87
+ 
+Lead In: None.
+Default Next Question: C00080.30
+--------------------------------------------------------------------------------
+C00047.40    [AGECH1992]                                    Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             AGE OF CHILD (IN MONTHS) AT 1992 INTERVIEW DATE OF MOTHER
+ 
+AGE OF CHILD (IN MONTHS) AT 1992 INTERVIEW DATE OF MOTHER  92 INT
+ 
+UNIVERSE: UNIVERSE: All children, regardless of age, reported in the current 
+survey by interviewed mothers.
+ 
+     364           0 TO 11: 0-11 MONTHS
+     435          12 TO 23: 12-23 MONTHS
+     470          24 TO 35: 24-35 MONTHS
+     469          36 TO 47: 36-47 MONTHS
+     495          48 TO 59: 48-59 MONTHS
+     481          60 TO 71: 60-71 MONTHS
+     504          72 TO 83: 72-83 MONTHS
+     547          84 TO 95: 84-95 MONTHS
+     501          96 TO 107: 96-107 MONTHS
+     502         108 TO 119: 108-119 MONTHS
+     517         120 TO 131: 120-131 MONTHS
+     456         132 TO 143: 132-143 MONTHS
+     423         144 TO 155: 144-155 MONTHS
+     307         156 TO 167: 156-167 MONTHS
+     261         168 TO 179: 168-179 MONTHS
+     514         180 TO 999: 180 + MONTHS
+  -------
+    7246
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>    7248      MISSING(-7)    4303
+ 
+Min:              0        Max:            259        Mean:               94.52
+ 
+Lead In: None.
+Default Next Question: C00070.30
+--------------------------------------------------------------------------------
+C00047.41    [AGECH1993]                                    Survey Year: 1993
+  PRIMARY VARIABLE
+
+ 
+             AGE OF CHILD (IN MONTHS) AT 1993 INTERVIEW DATE OF MOTHER
+ 
+AGE OF CHILD (IN MONTHS) AT 1993 INTERVIEW DATE OF MOTHER 93 INT
+ 
+UNIVERSE: UNIVERSE: All children, regardless of age, reported in the current 
+survey by interviewed mothers.
+ 
+     381           0 TO 11: 0-11 MONTHS
+     370          12 TO 23: 12-23 MONTHS
+     439          24 TO 35: 24-35 MONTHS
+     480          36 TO 47: 36-47 MONTHS
+     464          48 TO 59: 48-59 MONTHS
+     493          60 TO 71: 60-71 MONTHS
+     482          72 TO 83: 72-83 MONTHS
+     529          84 TO 95: 84-95 MONTHS
+     540          96 TO 107: 96-107 MONTHS
+     481         108 TO 119: 108-119 MONTHS
+     539         120 TO 131: 120-131 MONTHS
+     493         132 TO 143: 132-143 MONTHS
+     448         144 TO 155: 144-155 MONTHS
+     423         156 TO 167: 156-167 MONTHS
+     315         168 TO 179: 168-179 MONTHS
+     749         180 TO 999: 180 + MONTHS
+  -------
+    7626
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       3
+TOTAL =========>    7629      MISSING(-7)    3922
+ 
+Min:              0        Max:            269        Mean:              101.02
+ 
+Lead In: None.
+Default Next Question: C00111.10
+--------------------------------------------------------------------------------
+C00047.42    [AGECH1994]                                    Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             AGE OF CHILD (IN MONTHS) AT 1994 INTERVIEW DATE OF MOTHER
+ 
+AGE OF CHILD (IN MONTHS) AT 1994 INTERVIEW DATE OF MOTHER 94 INT
+ 
+UNIVERSE: UNIVERSE: All children, regardless of age, reported in the current 
+survey by interviewed mothers.
+ 
+     290           0 TO 11: 0-11 MONTHS
+     367          12 TO 23: 12-23 MONTHS
+     367          24 TO 35: 24-35 MONTHS
+     436          36 TO 47: 36-47 MONTHS
+     456          48 TO 59: 48-59 MONTHS
+     476          60 TO 71: 60-71 MONTHS
+     484          72 TO 83: 72-83 MONTHS
+     463          84 TO 95: 84-95 MONTHS
+     510          96 TO 107: 96-107 MONTHS
+     550         108 TO 119: 108-119 MONTHS
+     495         120 TO 131: 120-131 MONTHS
+     499         132 TO 143: 132-143 MONTHS
+     506         144 TO 155: 144-155 MONTHS
+     451         156 TO 167: 156-167 MONTHS
+     419         168 TO 179: 168-179 MONTHS
+    1089         180 TO 999: 180 + MONTHS
+  -------
+    7858
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       3
+TOTAL =========>    7861      MISSING(-7)    3690
+ 
+Min:              0        Max:            282        Mean:              109.71
+ 
+Lead In: None.
+Default Next Question: C00070.41
+--------------------------------------------------------------------------------
+C00047.43    [AGECH1996]                                    Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             AGE OF CHILD (IN MONTHS) AT 1996 INTERVIEW DATE OF MOTHER
+ 
+AGE OF CHILD (IN MONTHS) AT 1996 INTERVIEW DATE OF MOTHER
+ 
+UNIVERSE: UNIVERSE: All children, regardless of age, reported in the current 
+survey by interviewed mothers.
+ 
+     223           0 TO 11: 0-11 MONTHS
+     258          12 TO 23: 12-23 MONTHS
+     314          24 TO 35: 24-35 MONTHS
+     355          36 TO 47: 36-47 MONTHS
+     342          48 TO 59: 48-59 MONTHS
+     429          60 TO 71: 60-71 MONTHS
+     453          72 TO 83: 72-83 MONTHS
+     453          84 TO 95: 84-95 MONTHS
+     465          96 TO 107: 96-107 MONTHS
+     467         108 TO 119: 108-119 MONTHS
+     503         120 TO 131: 120-131 MONTHS
+     545         132 TO 143: 132-143 MONTHS
+     462         144 TO 155: 144-155 MONTHS
+     514         156 TO 167: 156-167 MONTHS
+     481         168 TO 179: 168-179 MONTHS
+    1856         180 TO 999: 180+ MONTHS
+  -------
+    8120
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>    8122      MISSING(-7)    3429
+ 
+Min:              0        Max:            304        Mean:              125.72
+ 
+Lead In: None.
+Default Next Question: C00070.43
+--------------------------------------------------------------------------------
+C00047.44    [AGECH1998]                                    Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             AGE OF CHILD (IN MONTHS) AT 1998 INTERVIEW DATE OF MOTHER
+ 
+AGE OF CHILD (IN MONTHS) AT INTERVIEW DATE OF MOTHER
+ 
+UNIVERSE: UNIVERSE: All children, regardless of age, reported in the current 
+survey by interviewed mothers.
+ 
+     188           0 TO 11: 0-11 MONTHS
+     196          12 TO 23: 12-23 MONTHS
+     212          24 TO 35: 24-35 MONTHS
+     271          36 TO 47: 36-47 MONTHS
+     301          48 TO 59: 48-59 MONTHS
+     346          60 TO 71: 60-71 MONTHS
+     351          72 TO 83: 72-83 MONTHS
+     426          84 TO 95: 84-95 MONTHS
+     444          96 TO 107: 96-107 MONTHS
+     457         108 TO 119: 108-119 MONTHS
+     474         120 TO 131: 120-131 MONTHS
+     474         132 TO 143: 132-143 MONTHS
+     487         144 TO 155: 144-155 MONTHS
+     513         156 TO 167: 156-167 MONTHS
+     460         168 TO 179: 168-179 MONTHS
+    2791         180 TO 999: 180 + MONTHS
+  -------
+    8391
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>    8393      MISSING(-7)    3158
+ 
+Min:              0        Max:            328        Mean:              142.83
+ 
+Lead In: C00112.05[Default]
+Default Next Question: C00070.45
+--------------------------------------------------------------------------------
+C00047.45    [AGECH2000]                                    Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             AGE OF CHILD (IN MONTHS) AT 2000 INTERVIEW DATE OF MOTHER
+ 
+AGE OF CHILD (IN MONTHS) AT INTERVIEW DATE OF MOTHER
+ 
+UNIVERSE: UNIVERSE: All children, regardless of age, reported in the current 
+survey by interviewed mothers.
+ 
+     113           0 TO 11: 0-11 MONTHS
+     122          12 TO 23: 12-23 MONTHS
+     179          24 TO 35: 24-35 MONTHS
+     178          36 TO 47: 36-47 MONTHS
+     211          48 TO 59: 48-59 MONTHS
+     252          60 TO 71: 60-71 MONTHS
+     269          72 TO 83: 72-83 MONTHS
+     352          84 TO 95: 84-95 MONTHS
+     322          96 TO 107: 96-107 MONTHS
+     405         108 TO 119: 108-119 MONTHS
+     434         120 TO 131: 120-131 MONTHS
+     433         132 TO 143: 132-143 MONTHS
+     431         144 TO 155: 144-155 MONTHS
+     440         156 TO 167: 156-167 MONTHS
+     440         168 TO 179: 168-179 MONTHS
+    3739         180 TO 999: 180 + MONTHS
+  -------
+    8320
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8320      MISSING(-7)    3231
+ 
+Min:              0        Max:            356        Mean:              164.23
+ 
+Lead In: C00112.07[Default]
+Default Next Question: C00070.47
+--------------------------------------------------------------------------------
+C00047.46    [AGECH2002]                                    Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             AGE OF CHILD (IN MONTHS) AT 2002 INTERVIEW DATE OF MOTHER
+ 
+AGE OF CHILD (IN MONTHS) AT INTERVIEW DATE OF MOTHER
+ 
+UNIVERSE: UNIVERSE: All children, regardless of age, reported in the current 
+survey by interviewed mothers.
+ 
+      49           0 TO 11: 0-11 MONTHS
+      72          12 TO 23: 12-23 MONTHS
+     115          24 TO 35: 24-35 MONTHS
+     111          36 TO 47: 36-47 MONTHS
+     186          48 TO 59: 48-59 MONTHS
+     176          60 TO 71: 60-71 MONTHS
+     189          72 TO 83: 72-83 MONTHS
+     237          84 TO 95: 84-95 MONTHS
+     271          96 TO 107: 96-107 MONTHS
+     324         108 TO 119: 108-119 MONTHS
+     330         120 TO 131: 120-131 MONTHS
+     380         132 TO 143: 132-143 MONTHS
+     410         144 TO 155: 144-155 MONTHS
+     414         156 TO 167: 156-167 MONTHS
+     436         168 TO 179: 168-179 MONTHS
+    4397         180 TO 999: 180 + MONTHS
+  -------
+    8097
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8097      MISSING(-7)    3454
+ 
+Min:              0        Max:            377        Mean:              184.76
+ 
+Lead In: C00112.09[Default]
+Default Next Question: C00080.46
+--------------------------------------------------------------------------------
+C00047.47    [AGECH2004]                                    Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             AGE OF CHILD (IN MONTHS) AT 2004 INTERVIEW DATE OF MOTHER
+ 
+AGE OF CHILD (IN MONTHS) AT INTERVIEW DATE OF MOTHER
+ 
+UNIVERSE: UNIVERSE: All children, regardless of age, reported in the current 
+survey by interviewed mothers.
+ 
+      22           0 TO 11: 0-11 MONTHS
+      45          12 TO 23: 12-23 MONTHS
+      52          24 TO 35: 24-35 MONTHS
+      75          36 TO 47: 36-47 MONTHS
+     117          48 TO 59: 48-59 MONTHS
+     123          60 TO 71: 60-71 MONTHS
+     174          72 TO 83: 72-83 MONTHS
+     187          84 TO 95: 84-95 MONTHS
+     194          96 TO 107: 96-107 MONTHS
+     240         108 TO 119: 108-119 MONTHS
+     288         120 TO 131: 120-131 MONTHS
+     321         132 TO 143: 132-143 MONTHS
+     333         144 TO 155: 144-155 MONTHS
+     386         156 TO 167: 156-167 MONTHS
+     460         168 TO 179: 168-179 MONTHS
+    5246         180 TO 999: 180 + MONTHS
+  -------
+    8263
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       1
+TOTAL =========>    8264      MISSING(-7)    3287
+ 
+Min:              0        Max:            399        Mean:              205.94
+ 
+Lead In: C00112.11[Default]
+Default Next Question: C00080.47
+--------------------------------------------------------------------------------
+C00047.48    [AGECH2006]                                    Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             AGE OF CHILD (IN MONTHS) AT 2006 INTERVIEW DATE OF MOTHER
+ 
+AGE OF CHILD (IN MONTHS) AT INTERVIEW DATE OF MOTHER
+ 
+UNIVERSE: UNIVERSE: All children, regardless of age, reported in the current 
+survey by interviewed mothers.
+ 
+      11           0 TO 11: 0-11 MONTHS
+      21          12 TO 23: 12-23 MONTHS
+      20          24 TO 35: 24-35 MONTHS
+      46          36 TO 47: 36-47 MONTHS
+      53          48 TO 59: 48-59 MONTHS
+      80          60 TO 71: 60-71 MONTHS
+     109          72 TO 83: 72-83 MONTHS
+     126          84 TO 95: 84-95 MONTHS
+     180          96 TO 107: 96-107 MONTHS
+     168         108 TO 119: 108-119 MONTHS
+     215         120 TO 131: 120-131 MONTHS
+     216         132 TO 143: 132-143 MONTHS
+     293         144 TO 155: 144-155 MONTHS
+     323         156 TO 167: 156-167 MONTHS
+     338         168 TO 179: 168-179 MONTHS
+    5929         180 TO 999: 180 + MONTHS
+  -------
+    8128
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8128      MISSING(-7)    3423
+ 
+Min:              3        Max:            422        Mean:              228.29
+ 
+Lead In: C00112.13[Default]
+Default Next Question: C00080.48
+--------------------------------------------------------------------------------
+C00053.00    [CRACE]                                        Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             RACE OF CHILD (MOTHER'S RACIAL/ETHNIC COHORT FROM SCREENER)
+ 
+RACE OF CHILD (MOTHER'S RACIAL/ETHNIC COHORT FROM SCREENER)
+ 
+NOTE: Child race/ethnicity is based on the report of the mother. See NLSY79 main
+Youth Reference Number R( 2147.)
+ 
+    2224       1 HISPANIC
+    3196       2 BLACK
+    6131       3 NON-BLACK, NON-HISPANIC
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:              1        Max:              3        Mean:                2.34
+ 
+Lead In: C00052.00[Default]
+Default Next Question: C00054.00
+--------------------------------------------------------------------------------
+C00054.00    [CSEX]                                         Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             SEX OF CHILD
+ 
+SEX OF CHILD
+ 
+    5898       1 MALE
+    5651       2 FEMALE
+  -------
+   11549
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:              1        Max:              2        Mean:                1.49
+ 
+Lead In: C00053.00[Default]
+Default Next Question: C00055.00
+--------------------------------------------------------------------------------
+C00057.00    [CYRB]                                         Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             DATE OF BIRTH OF CHILD - YEAR
+ 
+DATE OF BIRTH OF CHILD - YEAR
+ 
+    1223        1970 TO 1978: < before 1979
+     528        1979
+     607        1980
+     714        1981
+     703        1982
+     715        1983
+     657        1984
+     676        1985
+     618        1986
+     621        1987
+     585        1988
+     629        1989
+     495        1990
+     424        1991
+     402        1992
+     348        1993
+     303        1994
+     245        1995
+     229        1996
+     216        1997
+     156        1998
+     129        1999
+     100        2000
+      81        2001
+      48        2002
+      34        2003
+      24        2004
+      15        2005
+      11        2006
+       4        2007
+       3        2008
+       3        2009
+       2        2010
+       2        2011
+       1        2014
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:           1970        Max:           2014        Mean:              1986.1
+ 
+Lead In: C00055.00[Default]
+Default Next Question: C00057.01
+--------------------------------------------------------------------------------
+Y22670.00    [VERSION_R29]                                  Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             VERSION_R29 CHILD/YOUNG ADULT
+ 
+This variable identifies the release version of the current NLSY79 Child/Young 
+Adult data set, This information allows User Services to identify the release 
+version used by a researcher who is asking a question and to access past 
+versions of the data if necessary.
+ 
+   11551         532
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:            532        Max:            532        Mean:                 532
+ 
+Lead In: Y12053.00[Default]
+Default Next Question: Y12054.00

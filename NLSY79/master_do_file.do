@@ -527,8 +527,8 @@ use NLSY79CYA_supplement.dta, clear
 local year = 1991
 quietly foreach i of varlist C0127410 C0127610 C0127810 C0127910 C0128010 C1987300 C2493300 C2521100 C2791600 C3101100 C3603400 C3983400 C5527300 C5803600 {
 	rename `i' NO_UNDER_18_`year'
-	if `year' < 1994 local year = `year' + 1
 	if `year' >= 1994 local year = `year' + 2
+	if `year' < 1994 local year = `year' + 1
 }
 
 local year 1986
