@@ -1,0 +1,116 @@
+\documentclass[]{article}
+
+%opening
+\title{Identification of risk preference}
+\author{Chau Pham}
+%\date{} for no date shown
+\usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools, mathrsfs}
+\usepackage[margin = 1.0in]{geometry}
+\usepackage{bbold, soul}
+\usepackage{tgpagella}
+\usepackage{braket, setspace, parskip, enumitem}
+\usepackage[colorlinks, citecolor = blue]{hyperref}
+\usepackage[nameinlink, noabbrev]{cleveref}	% Use \Cref always 
+\usepackage{caption}
+\usepackage{threeparttable, makecell, cellspace, multirow, booktabs, diagbox, tabularx, longtable, threeparttablex}
+\usepackage{verbatim}
+\usepackage{natbib}
+\usepackage[bottom]{footmisc}	% keep footnotes at end of the page
+\usepackage{xcolor}
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+\renewcommand\theadalign{bc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
+
+%---- Simple table template
+\begin{comment} 
+	\begin{table}[!htbp]\centering
+		\begin{threeparttable}
+			\setlength{\extrarowheight}{0.2em}
+			\begin{tabular}
+				content...
+			\end{tabular}
+			%\caption{text}
+			%\label{key}
+		\end{threeparttable}
+	\end{table}
+\end{comment}
+
+%\setlist[enumerate]{label=(\roman*)}
+
+%\setlength{\parindent}{0pt}
+
+%\captionsetup[figure]{labelfont=bf}
+%\captionsetup[table]{labelfont=bf}
+
+\begin{document}
+\onehalfspacing
+\maketitle
+
+\section{Questions on risk preference}
+The method was first applied to the Health and Retirement Study (HRS) in \citet{barsky1997preference} and \citet{kimball2008imputing} then to the Panel Study of Income Dynamics (PSID) \citep{kimball2009risk}. For the HRS, questions on risk preference are presented to participants in 1992, 1994, 1998, 2000 and 2002. In the first two years, the following version of question was used:
+
+\begin{center}
+	\begin{minipage}[!h]{.9\linewidth}\small
+		``...Suppose that you are the only income earner in the family, and you have a good job guaranteed to give you your current (family) income every year for life. You are given the opportunity to take a new and equally good job, with a 50-50 chance that it will double your (family) income and a 50-50 chance that it will cut your (family) income by a third. Would you take the new job?"
+	\end{minipage}
+\end{center}
+Depending on the responses the this question, participants are further asked a similar question with varying portion of income cut. If participants responded "The first job" in this question, they are presented with another question wherein the income cut of the risky job reduces to 20\% whereas the income cut is increased to 50\% should they choose "The second job." After 1994, the following modified version of question was administered to participants:
+\begin{center}
+	\begin{minipage}[!h]{.9\linewidth}\small
+		``Suppose that you are the only income earner in the family. Your doctor recommends that you move because of allergies, and you have to choose between two possible jobs. The first would guarantee your current total family income for life. The second is possibly better paying, but the income is also less certain. There is a 50-50 chance the second job would double your total lifetime income and a 50-50 chance that it would cut it by a third. Which job would you take-the first job or the second job?"
+	\end{minipage}
+\end{center}
+
+The difference in the two versions lies in the framing of situations. As noted by \citet{kimball2008imputing}, respondents to the original version might be affected by the status-quo bias and, at the same time, responses to both versions are contaminated by measurement errors. Having multiple responses across waves and versions allow them to separate variation in measurement error from variation in cross-sectional true risk preference. The original version of question is the same as one used in National Longitudinal of Youth 1979 (NLSY79) before 2010 in exact wordings. In 2010, 2012 and 2014, participants of NLSY79 were also asked a version of the status-quo bias free question as follows:
+
+\begin{center}
+	\begin{minipage}{.9\linewidth}\small
+		``Suppose that you are the only income earner in the family, and that you have to choose between two new jobs. The first job would guarantee your current total family income for life. The second job is possibly better paying, but the income is also less certain. There is a 50-50 chance the second job would increase your total lifetime income by 20 percent and a 50-50 change that is would cut it by 10 percent."
+	\end{minipage}
+\end{center} 
+
+The similarity in question framing and design allows the method applied to HRS to also be applied to NLSY79.
+	
+\section{Risk imputation}
+The method of creating a cardinal measure of risk follows \citet{barsky1997preference} and \citet{kimball2008imputing, kimball2009risk}. The advantages of this method are two-fold. First, it provides a unidimensional, quantitative measure of risk tolerance/aversion that allows meaningful interpersonal comparison. Second, in many settings, such as demand for risky assets, economic theory makes predictions that link risk preference parameters quantitatively to economic decisions. Third, having a quantitative measure makes the correction of measurement error associated with survey responses more transparent.
+
+\subsection{Accounting for status-quo bias}
+
+The imputation procedure is as follows. Respondents are categorized into different groups by their sequence of responses. Under the assumption of \textbf{CRRA utility} (that is, an individual accepts the risky job when its expected utility exceeds the utility from the certain job) and \textbf{constant true risk preference}, we calculate the bounds for the coefficient of relative risk tolerance. For individuals who respond in only one wave, the likelihood of being in category $j$ is 
+\begin{equation}
+	P(c=j)=P(\log\underline{\theta}_j<x<\log\bar{\theta}_j)=\Phi\Big({\log(\bar{\theta}_j)-\mu-b\over\sqrt{\sigma_x^2+\sigma_{eq}^2+\sigma_{\kappa q}^2}}\Big)-\Phi\Big({\log(\underline{\theta}_j)-\mu-b\over\sqrt{\sigma_x^2+\sigma_{eq}^2+\sigma_{\kappa q}^2}}\Big)
+	\label{eq:1-likelihood-function}
+\end{equation} 
+where $\mu$ and $\sigma_x$ are respectively the mean and standard deviation of true log risk tolerance. $\sigma_{eq}^2$ is variance in individual's transitory response error for a particular wave and question type $q$ while $\sigma_{\kappa q}^2$ is variance in individual's persistent response error for question type $q$. $\bar \theta_j$ and $\underline{\theta}_j$ are upper and lower bounds on the coefficient of risk tolerance. $b$ denotes status quo bias (common bias across individuals) and $\sigma_e$ standard deviation of transitory response error, assumed to be purely random and independent of an individual's true risk tolerance or any other attributes. If an individuals responded to the questions more than one time, the likelihood function employs a more complicated form of multivariate normal cumulative distribution function.
+
+All parameters (except for bounds on risk tolerance which are calculated from respondents' choices) can be estimated using maximum likelihood. The estimated values are then used to impute the coefficient of risk aversion for individuals in response category $c$ via conditional expectation,
+
+\begin{equation}
+	\mathbb E[\theta|c]=\exp\Big(-\mu+{\sigma_x^2\over 2}\Big){\Phi\Big({\log(\bar{\theta}_j)-\mu-b+\sigma_x^2\over \sqrt{\sigma_x^2+\sigma_{eq}^2+\sigma_{\kappa q}^2}}\Big)-\Phi\Big({\log(\underline{\theta}_j)-\mu-b+\sigma_x^2\over \sqrt{\sigma_x^2+\sigma_{eq}^2+\sigma_{\kappa q}^2}}\Big)\over \Phi\Big({\log(\bar{\theta}_j)-\mu-b\over \sqrt{\sigma_x^2+\sigma_{eq}^2+\sigma_{\kappa q}^2}}\Big)-\Phi\Big({\log(\underline{\theta}_j)-\mu-b\over \sqrt{\sigma_x^2+\sigma_{eq}^2+\sigma_{\kappa q}^2}}\Big)}
+	\label{eq:2-conditional-expectation}
+\end{equation}
+
+
+\subsection{Allowing for time-varying risk preference}	
+\citet{ahn2010attitudes} adopted the approach to analyse risk preference and selection into self-employment in the NLSY79 but modified to allow for dependence of risk preference on other determinants. The bounds of risk tolerance are modelled as
+ 	\begin{equation}
+ 		\log \theta_{it}=\beta X_{it} + \delta_i+\nu_{it}
+ 		\label{eq:3-time-varying}
+ 	\end{equation}
+where $X_{it}$ is a vector of variables that contains age, personal net assets, demographic characteristics, job characteristics, and environmental factors. $\delta_i$ represents unobserved, time-invariant individual effect, assumed to be distributed according to $\delta_i\sim N(\mu, \sigma^2_\delta)$ while $\nu_{it}\sim (0,\sigma^2_\nu)$ reflects idiosyncratic measurement error. This specification \eqref{eq:3-time-varying} allows relative risk tolerance to vary with the covariates that potentially affect self-employment decision. When imputed values of risk tolerance/risk aversion are used as proxy for risk preference, separating the effect of pure risk preference by accounting for correlation between risk tolerance/risk aversion and other regressors are necessary to assess the effect of risk tolerance/risk aversion. 
+	
+	
+	
+	
+	
+
+	
+\pagebreak
+\bibliographystyle{apalike}
+\bibliography{bibliography}	
+
+\end{document}
