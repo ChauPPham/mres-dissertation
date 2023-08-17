@@ -51,11 +51,11 @@
 \maketitle
 
 \section{Questions on risk preference}
-The method was first applied to the Health and Retirement Study (HRS) in \citet{barsky1997preference} and \citet{kimball2008imputing} then to the Panel Study of Income Dynamics (PSID) \citep{kimball2009risk}. For the HRS, questions on risk preference are presented to participants in 1992, 1994, 1998, 2000 and 2002. In the first two years, the following version of question was used:
+The following sequence of questions in the Health and Retirement Study (HRS) have been used to study risk preference in \citet{barsky1997preference} and \citet{kimball2008imputing} then to the Panel Study of Income Dynamics (PSID) \citep{kimball2009risk}. For the HRS, questions on risk preference are presented to participants in 1992, 1994, 1998, 2000 and 2002. In the first two years, the following version of question was used:
 
 \begin{center}
 	\begin{minipage}[!h]{.9\linewidth}\small
-		``...Suppose that you are the only income earner in the family, and you have a good job guaranteed to give you your current (family) income every year for life. You are given the opportunity to take a new and equally good job, with a 50-50 chance that it will double your (family) income and a 50-50 chance that it will cut your (family) income by a third. Would you take the new job?"
+		``Suppose that you are the only income earner in the family, and you have a good job guaranteed to give you your current (family) income every year for life. You are given the opportunity to take a new and equally good job, with a 50-50 chance that it will double your (family) income and a 50-50 chance that it will cut your (family) income by a third. Would you take the new job?"
 	\end{minipage}
 \end{center}
 Depending on the responses the this question, participants are further asked a similar question with varying portion of income cut. If participants responded "The first job" in this question, they are presented with another question wherein the income cut of the risky job reduces to 20\% whereas the income cut is increased to 50\% should they choose "The second job." After 1994, the following modified version of question was administered to participants:
@@ -94,7 +94,12 @@ All parameters (except for bounds on risk tolerance which are calculated from re
 	\label{eq:2-conditional-expectation}
 \end{equation}
 
-It is further shown that the use of such a proxy in a univariate OLS would provide consistent estimates. However, in the multivariate setting, OLS estimator using the proxy is unlikely to provide consistent estimates of the population parameters as regressors that correlate with true risk tolerance (risk aversion) would also correlate with expectation error, defined as $\theta-\mathbb E[\theta|c]$. To obtain consistent estimates of parameters in the multivariate settings, \citet{kimball2008imputing} further assume linearity of other covariates in risk tolerance to derive two sets of orthogonality moment conditions that identify the model. Estimates of parameters can then be obtained via Generalised Methods of Moments (GMM).
+It is further shown that the use of such a proxy in a univariate OLS would provide consistent estimates. However, in the multivariate setting, OLS estimator using the proxy is unlikely to provide consistent estimates of the population parameters as regressors that correlate with true risk tolerance (risk aversion) would also correlate with expectation error, defined as $u\equiv\theta-\mathbb E[\theta|c]$, which in turn correlates with the true risk preference $\theta$. To obtain consistent estimates of parameters in the multivariate settings, \citet{kimball2008imputing} further assume linearity of other covariates in risk tolerance to derive two sets of orthogonality moment conditions that identify the model: 
+\begin{align}
+\mathbb E[h\eta]&=\mathbb [h(y-h\delta_\theta-z\delta_z)]=0\\
+\mathbb E[z'\omega]&=\mathbb E[z'(y-\lambda h\delta_\theta-z\delta_z)]=0
+\end{align}
+where $h$ is the conditional expectation of the true risk tolerance $h\equiv \mathbb E[\theta|c]$, $y$ denotes the dependent variable in the multivariate setting, $z$ is a vector of regressors. $\eta$ is the composite error term which subsume both expectation error $u$ and structural error $\nu$, $\lambda\equiv \mathbb E[\theta^2]/\mathbb E[h^2]$ denotes the true-to-proxy ratio, and $\omega=(\theta-\lambda h)\delta_\theta+\nu$. The second orthogonality condition effectively multiplies the covariance of $z$ with the proxy $h$ by the variance ratio $\lambda$ to get the implied covariance of $z$ with $\theta$. Estimates of parameters can then be obtained via Generalised Methods of Moments (GMM).
 
 \subsection{Allowing for time-varying risk preference}	
 \citet{ahn2010attitudes} adopted the approach to analyse risk preference and selection into self-employment in the NLSY79 but modified to allow for dependence of risk preference on other determinants. More specifically, she took survey responses in two years, 1993 and 2002 to calculate the true risk preference. The bounds of risk tolerance are modelled as
@@ -108,21 +113,42 @@ where $X_{it}$ is a vector of variables that contains age, personal net assets, 
 	\label{eq:4-likelihood-varying}
 \end{equation} 
 
-When imputed values of risk tolerance (risk aversion) are used as proxy for risk preference, separating the effect of pure risk preference by accounting for correlation between risk tolerance (risk aversion) and other regressors are necessary to assess the effect of risk tolerance (risk aversion). Maximum likelihood is then used to compute estimates of $\mu, \sigma_\delta, \sigma_\nu$, and $\beta$. Having obtained estimates for these parameters, the predicted relative risk tolerance $\hat\theta_{it}$ is calculated for each individual using the category of risk she is in and covariates used in the ML estimation. 
+When imputed values of risk tolerance (risk aversion) are used as proxy for risk preference, separating the effect of pure risk preference by accounting for correlation between risk tolerance (risk aversion) and other regressors are necessary to assess the effect of risk tolerance (risk aversion). Maximum likelihood is then used to compute estimates of $\mu, \sigma_\delta, \sigma_\nu$, and $\beta$. Having obtained estimates for these parameters, the predicted relative risk tolerance $\hat\theta_{it}$ is calculated for each individual using the category of risk she is in and covariates. An inherent drawback of this approach is the inability to correctly identify risk preference in the existence of unobserved heterogeneity. While the measure of risk is corrected for potential correlation with aging and other covariates, omitted variable is always a concern. 
 	
 	
 \subsection{Tentative application: combining both methods}	
-As noted by \citet{sahm2012much}, while systematic differences in risk tolerance across individuals over time exist and stem from time-invariant characteristics such as gender or ethnicity, more than 20\% in the variation of risk tolerance originates from aging and changes in macroeconomic conditions (albeit short-lived). It is thus reasonable to abstract from the assumption of constant true risk preference that underlies \citet{kimball2008imputing, kimball2009risk} method. Their method is clearly still valuable for the separation of measurement error and status quo bias from survey data. \citet{ahn2010attitudes}, on the other hand, abstracts from the assumption of constant true risk preference and allows risk preference to vary based on several characteristics conditioned on being in a category $j$. Her method, however, fails to account for the existence of status-quo bias present which could potentially affect the results found. 
+As noted by \citet{sahm2012much}, while systematic differences in risk tolerance across individuals over time exist and stem from time-invariant characteristics such as gender or ethnicity, more than 20\% in the variation of risk tolerance originates from aging and changes in macroeconomic conditions (albeit short-lived). It is thus reasonable to abstract from the assumption of constant true risk preference that underlies \citet{kimball2008imputing, kimball2009risk} method. Their method is clearly still valuable for the separation of measurement error and status quo bias from survey data. \citet{ahn2010attitudes}, on the other hand, abstracts from the assumption of constant true risk preference and allows risk preference to vary based on several characteristics conditioned on being in a category $j$. His method, however, fails to account for the existence of status-quo bias as well as potential omitted variable bias which could potentially affect the results found. 
 
 Since the NLSY79 has multiple waves of responses as well as different versions of questions, it is possible to separate true risk preference from measurement error, status-quo bias as well as the effects of aging and other determinants thereof. This can potentially achieved by augmenting \eqref{eq:3-time-varying} to allow for status-quo bias:
 \begin{equation}
 	\log \theta_{it}=\beta X_{it} + \delta_i+ b +\nu_{it}
-	\label{eq:5-all-encompassing}
+	\label{eq:5-ahn-bias}
 \end{equation} 
-I may then follow \citet{ahn2010attitudes} and estimates parameters for the series of responses contaminated by status-quo bias. The difference between the predicted values obtained by extrapolating estimates from the original series and those obtained by estimating directly on the new series highlights status-quo bias. 	
+I may then follow \citet{ahn2010attitudes} and estimates parameters for the series of responses contaminated by status-quo bias. The difference between the predicted values obtained by extrapolating estimates from the original series and those obtained by estimating directly on the new series highlights status-quo bias. 
 
-	
+This specification explicitly corrects for the effect of aging along with covariates influencing risk preference. An alternative specification that follows \citet{kimball2008imputing} closely but allow for the effect of aging can take the augmented form of \eqref{eq:1-likelihood-constant}
 
+\begin{equation}
+	P(c=j)=P(\log\underline{\theta}_j<x<\log\bar{\theta}_j)=\Phi\Big({\log(\bar{\theta}_j)-\mu-b-\alpha t\over\sqrt{\sigma_x^2+\sigma_{eq}^2+\sigma_{\kappa q}^2}}\Big)-\Phi\Big({\log(\underline{\theta}_j)-\mu-b-\alpha t\over\sqrt{\sigma_x^2+\sigma_{eq}^2+\sigma_{\kappa q}^2}}\Big)
+	\label{eq:6-kimball-age}
+\end{equation} 	
+
+where $t$ denotes age and $\alpha$ is the parameter governing the effect of aging to be estimated along with other parameters. In  \eqref{eq:6-kimball-age} lies two implicit assumptions: (1) aging has a linear effect on log risk tolerance; and (2) the effect of aging on risk preference is homogeneous across individuals. The first assumption follows evidence found by \citet{dohmen2017} that willingness to take risk decreases linearly over the life course until approximately 65, after which the slope becomes flatter. As all mothers in our sample are younger than 60, it is reasonable to assume the linear effect of age on risk preference. It is also possible to include higher-order term in \eqref{eq:6-kimball-age} to account for potential non-linearities. The second assumption is more debatable and heuristic.  
+
+\subsection{Other applications in literature}
+Most studies adopt \citet{kimball2008imputing} approach and include an extensive set of controls or restrict the sample to deal with omitted variable bias and endogeneity while unable to claim causality of risk preference. These include \citet{light2010divorce, brown2011self, brown2012parental, brown2013household} and \citet{yilmazer2015portfolio}. Two works that stand out from the rest in taking extra steps to ensure identification of risk preference are \citet{neelakantan2010gender} and \citet{cho2021endogenous}.
+
+In \citet{neelakantan2010gender}, they use HRS to study gender differences in wealth when controlling for risk preference. Their empirical specification is a simple quantile regression with covariates:
+\begin{equation*}
+	W_i=\theta_i\delta_\theta+z_i\delta'_z+\epsilon_i
+\end{equation*}
+where $W_i$ denotes wealth of the $i$-th household, $\theta$ measure of risk tolerance following \citet{kimball2008imputing} and $z_i$ a vector of covariates. To test for gender differences, they construct counterfactual density of women's wealth if their risk preferences were the same as male and compare with the actual density obtained from data under the assumption that conditional density does not dependend on socio-economic attributes. The construction of counterfactual essentially gives a female individual the same socio-economic attributes and risk preference as a male individual with the difference being their sex. The difference between the counterfactuals and actual density then implies gender differences. Results indicate that gender differences persist even after levelling risk preference.
+
+\citet{cho2021endogenous} use the NLSY79 to study the effect of risk preference on firm survival. They explicitly correct for endogeneity issue arising from the influence of macroeconomic conditions on risk attitudes, and sample selection stemming from the influence of past success or failure of firm on risk attitudes. To correct for both issues, they restrict the sample to firms starting between 1994-2002 and use the most recent risk measure before the year of entry, i.e., 1993. They also mention that risk attitudes might be driven by intention to become self-employed and proceed to use parental entrepreneurship as an instrument for risk attitudes. This, however, hinges on the assumption that parental entrepreneurship experience does not directly affects the probability of businesses' exits. I find this assumption very questionable for two reasons. First, if parents own firms, they may help their children' firms through various means including financial aid, cross-shareholding. Second, having parents who have experience with firms management helps immensely in understanding how firms operate which directly affects exit probability. 
+
+Aside from the method mentioned in section 2.3, I have not been able to think of any definitive way to ensure identification of risk preference. Other methods that deal with the nature of dynamic panel including Arellano-Bond 2 steps GMM, or estimate OLS in first-difference mitigate bias and attenuation to some extent but likely will not help much in identification. For robustness, I can try testing out the model under different assumption of risk preference, i.e., whether time-variant or not, with different use of risk preference variable (as ordinal categorical variables rather than cardinal proxy), or with different proxy for risk preference (possible substitutes are alcolhol, marijuana, and cocaine consumption although the availability of these variables may greatly alter the sample under study).  
+
+\pagebreak
 \bibliographystyle{apalike}
 \bibliography{bibliography}	
 
