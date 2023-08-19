@@ -1,0 +1,39 @@
+Model 0
+Error at iteration 1 = 1.96e-03
+26-Jul-2007 17:18:09
+                 estimate          t-stat            step 
+Mean               -1.982         -74.550       -0.032080 
+Std. dev.           1.762          57.004        0.001961 
+
+Log-likelihood   -12074.6
+Error at iteration 2 = 6.67e-04
+26-Jul-2007 17:18:10
+                 estimate          t-stat            step 
+Mean               -1.982         -73.475       -0.000214 
+Std. dev.           1.763          57.014        0.000667 
+
+Log-likelihood   -12073.4
+Error at iteration 3 = 4.42e-06
+26-Jul-2007 17:18:10
+                 estimate          t-stat            step 
+Mean               -1.982         -73.452        0.000004 
+Std. dev.           1.763          56.983       -0.000016 
+
+Log-likelihood   -12073.4
+Error at iteration 4 = 3.87e-07
+26-Jul-2007 17:18:11
+                 estimate          t-stat            step 
+Mean               -1.982         -73.453       -0.000000 
+Std. dev.           1.763          56.984        0.000000 
+
+Log-likelihood   -12073.4
+Estimates of Model 0.0
+26-Jul-2007 17:18:11
+Sample size 11616
+Number of iterations = 4
+Error at last iteration = 3.87e-07
+                 estimate      std. error          t-stat 
+Mean               -1.982           0.027         -73.453 
+Std. dev.           1.763           0.031          56.984 
+
+Log-likelihood   -12073.4

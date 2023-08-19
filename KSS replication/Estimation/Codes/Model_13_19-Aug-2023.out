@@ -1,0 +1,367 @@
+Model 13
+Error at iteration 1 = 6.43e-01
+Undefined function 'DATESTR' for input arguments of type
+'double'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('EstimateRisk_KSS', '\\ad.ucl.ac.uk\homep\uctpcpp\DesktopSettings\Desktop\KSS replication\Estimation\Codes\EstimateRisk_KSS.m', 209)" style="font-weight:bold">EstimateRisk_KSS</a> (<a href="matlab: opentoline('\\ad.ucl.ac.uk\homep\uctpcpp\DesktopSettings\Desktop\KSS replication\Estimation\Codes\EstimateRisk_KSS.m',209,0)">line 209</a>)
+        disp(DATESTR(itertime,0));
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ImputeRisk_KSS', '\\ad.ucl.ac.uk\homep\uctpcpp\DesktopSettings\Desktop\KSS replication\Estimation\Codes\ImputeRisk_KSS.m', 292)" style="font-weight:bold">ImputeRisk_KSS</a> (<a href="matlab: opentoline('\\ad.ucl.ac.uk\homep\uctpcpp\DesktopSettings\Desktop\KSS replication\Estimation\Codes\ImputeRisk_KSS.m',292,0)">line 292</a>)
+EstimateRisk_KSS(c92,c94,c98,c00,c02,[W92 ,ones(N,1)],[W94
+,ones(N,1)],...
+
+19-Aug-2023 17:25:09
+Model 13
+Error at iteration 1 = 6.43e-01
+19-Aug-2023 17:25:33
+                                   estimate          t-stat            step 
+Constant                             -0.207          -0.611        0.642800 
+1931-41 Cohorts                       0.178           2.780       -0.071841 
+1942+ Cohorts                         0.145           1.552       -0.104574 
+Black                                -0.186          -4.989        0.064024 
+Hispanic                             -0.009          -0.185        0.041486 
+Couple                                0.196           0.994        0.246488 
+Spouse 1931-41                        0.084           1.544        0.033515 
+Spouse 1942+                          0.119           1.608        0.068647 
+South                                -0.210          -6.001        0.040225 
+East                                 -0.054          -1.241       -0.003697 
+West                                  0.023           0.525        0.073161 
+Age / 10                             -0.190          -4.556       -0.040476 
+Spouse Age / 10                      -0.107          -3.719        0.043459 
+Unemployement Rate                   -0.080          -3.270       -0.019794 
+Status Quo Bias                      -0.122          -1.558       -0.021870 
+Std Dev                               0.496          15.023       -0.229494 
+Original Persistent Std Dev           0.726           8.618       -0.023971 
+SQB-Free Persistent Std Dev           0.699          10.768       -0.050543 
+Original Transitory Std Dev           1.413          31.878        0.013383 
+SQB-Free Transitory Std Dev           1.406          46.772        0.005979 
+
+Log-likelihood   -22807.0
+Error at iteration 2 = 2.50e-01
+19-Aug-2023 17:25:58
+                                   estimate          t-stat            step 
+Constant                              0.043           0.120        0.249914 
+1931-41 Cohorts                      -0.003          -0.042       -0.181111 
+1942+ Cohorts                        -0.068          -0.676       -0.213457 
+Black                                -0.102          -2.598        0.084171 
+Hispanic                              0.049           1.001        0.057675 
+Couple                                0.356           1.753        0.159762 
+Spouse 1931-41                        0.048           0.829       -0.035344 
+Spouse 1942+                          0.117           1.517       -0.001202 
+South                                -0.129          -3.533        0.080423 
+East                                 -0.031          -0.679        0.022959 
+West                                  0.097           2.061        0.073391 
+Age / 10                             -0.228          -5.139       -0.037495 
+Spouse Age / 10                      -0.079          -2.668        0.027603 
+Unemployement Rate                   -0.072          -2.846        0.007679 
+Status Quo Bias                      -0.146          -1.921       -0.023985 
+Std Dev                               0.628          13.354        0.132598 
+Original Persistent Std Dev           0.701           7.718       -0.024703 
+SQB-Free Persistent Std Dev           0.608           8.766       -0.091898 
+Original Transitory Std Dev           1.404          29.935       -0.008985 
+SQB-Free Transitory Std Dev           1.413          45.914        0.007495 
+
+Log-likelihood   -21395.0
+Error at iteration 3 = 2.10e-01
+19-Aug-2023 17:26:23
+                                   estimate          t-stat            step 
+Constant                              0.252           0.665        0.209703 
+1931-41 Cohorts                      -0.136          -1.769       -0.132655 
+1942+ Cohorts                        -0.209          -1.904       -0.141382 
+Black                                -0.055          -1.296        0.046765 
+Hispanic                              0.074           1.399        0.025009 
+Couple                                0.350           1.646       -0.006669 
+Spouse 1931-41                        0.019           0.305       -0.029081 
+Spouse 1942+                          0.123           1.491        0.005559 
+South                                -0.090          -2.299        0.038913 
+East                                 -0.021          -0.440        0.009325 
+West                                  0.119           2.363        0.022764 
+Age / 10                             -0.246          -5.153       -0.017753 
+Spouse Age / 10                      -0.063          -2.031        0.015987 
+Unemployement Rate                   -0.076          -2.931       -0.004213 
+Status Quo Bias                      -0.147          -1.890       -0.001015 
+Std Dev                               0.707          17.388        0.079222 
+Original Persistent Std Dev           0.709           7.136        0.008152 
+SQB-Free Persistent Std Dev           0.592           7.277       -0.015197 
+Original Transitory Std Dev           1.397          28.536       -0.007333 
+SQB-Free Transitory Std Dev           1.415          44.598        0.001699 
+
+Log-likelihood   -21175.4
+Error at iteration 4 = 2.63e-02
+19-Aug-2023 17:26:48
+                                   estimate          t-stat            step 
+Constant                              0.279           0.708        0.026280 
+1931-41 Cohorts                      -0.160          -1.996       -0.024635 
+1942+ Cohorts                        -0.235          -2.044       -0.025821 
+Black                                -0.042          -0.944        0.013158 
+Hispanic                              0.080           1.445        0.005552 
+Couple                                0.331           1.523       -0.018190 
+Spouse 1931-41                        0.016           0.243       -0.003308 
+Spouse 1942+                          0.129           1.511        0.005936 
+South                                -0.086          -2.104        0.004167 
+East                                 -0.024          -0.468       -0.002290 
+West                                  0.121           2.302        0.001760 
+Age / 10                             -0.244          -4.928        0.001325 
+Spouse Age / 10                      -0.058          -1.834        0.004657 
+Unemployement Rate                   -0.080          -3.018       -0.003723 
+Status Quo Bias                      -0.136          -1.720        0.010466 
+Std Dev                               0.713          18.506        0.005874 
+Original Persistent Std Dev           0.713           7.068        0.003704 
+SQB-Free Persistent Std Dev           0.618           7.196        0.025571 
+Original Transitory Std Dev           1.397          28.137       -0.000394 
+SQB-Free Transitory Std Dev           1.415          43.887       -0.000223 
+
+Log-likelihood   -21158.7
+Error at iteration 5 = 6.31e-03
+19-Aug-2023 17:27:13
+                                   estimate          t-stat            step 
+Constant                              0.281           0.711        0.002678 
+1931-41 Cohorts                      -0.163          -2.010       -0.002288 
+1942+ Cohorts                        -0.237          -2.045       -0.001707 
+Black                                -0.040          -0.893        0.001971 
+Hispanic                              0.081           1.466        0.001672 
+Couple                                0.328           1.504       -0.002930 
+Spouse 1931-41                        0.016           0.238       -0.000229 
+Spouse 1942+                          0.130           1.510        0.000694 
+South                                -0.086          -2.094       -0.000166 
+East                                 -0.025          -0.483       -0.000932 
+West                                  0.121           2.284       -0.000139 
+Age / 10                             -0.244          -4.892        0.000347 
+Spouse Age / 10                      -0.058          -1.809        0.000525 
+Unemployement Rate                   -0.081          -3.019       -0.000566 
+Status Quo Bias                      -0.135          -1.695        0.001231 
+Std Dev                               0.714          18.392        0.000786 
+Original Persistent Std Dev           0.714           7.072        0.000430 
+SQB-Free Persistent Std Dev           0.624           7.446        0.006306 
+Original Transitory Std Dev           1.397          28.096        0.000575 
+SQB-Free Transitory Std Dev           1.416          43.682        0.000894 
+
+Log-likelihood   -21158.2
+Error at iteration 6 = 1.19e-03
+19-Aug-2023 17:27:39
+                                   estimate          t-stat            step 
+Constant                              0.282           0.711        0.000450 
+1931-41 Cohorts                      -0.163          -2.010       -0.000261 
+1942+ Cohorts                        -0.237          -2.043       -0.000224 
+Black                                -0.040          -0.884        0.000330 
+Hispanic                              0.082           1.472        0.000467 
+Couple                                0.328           1.501       -0.000230 
+Spouse 1931-41                        0.015           0.236       -0.000076 
+Spouse 1942+                          0.130           1.508        0.000006 
+South                                -0.087          -2.095       -0.000161 
+East                                 -0.025          -0.488       -0.000274 
+West                                  0.121           2.278       -0.000156 
+Age / 10                             -0.244          -4.884        0.000054 
+Spouse Age / 10                      -0.058          -1.806        0.000029 
+Unemployement Rate                   -0.081          -3.016       -0.000080 
+Status Quo Bias                      -0.135          -1.691        0.000173 
+Std Dev                               0.714          18.342        0.000172 
+Original Persistent Std Dev           0.713           7.063       -0.000115 
+SQB-Free Persistent Std Dev           0.625           7.494        0.001189 
+Original Transitory Std Dev           1.397          28.074        0.000144 
+SQB-Free Transitory Std Dev           1.416          43.597        0.000621 
+
+Log-likelihood   -21158.1
+Error at iteration 7 = 2.73e-04
+19-Aug-2023 17:28:04
+                                   estimate          t-stat            step 
+Constant                              0.282           0.710        0.000104 
+1931-41 Cohorts                      -0.163          -2.010       -0.000040 
+1942+ Cohorts                        -0.237          -2.043       -0.000027 
+Black                                -0.040          -0.883        0.000062 
+Hispanic                              0.082           1.474        0.000130 
+Couple                                0.328           1.500       -0.000017 
+Spouse 1931-41                        0.015           0.236       -0.000026 
+Spouse 1942+                          0.130           1.507       -0.000024 
+South                                -0.087          -2.095       -0.000053 
+East                                 -0.025          -0.489       -0.000069 
+West                                  0.121           2.276       -0.000047 
+Age / 10                             -0.244          -4.882        0.000013 
+Spouse Age / 10                      -0.058          -1.805       -0.000003 
+Unemployement Rate                   -0.081          -3.015       -0.000016 
+Status Quo Bias                      -0.135          -1.689        0.000026 
+Std Dev                               0.714          18.328        0.000045 
+Original Persistent Std Dev           0.713           7.059       -0.000038 
+SQB-Free Persistent Std Dev           0.626           7.498        0.000189 
+Original Transitory Std Dev           1.397          28.070        0.000040 
+SQB-Free Transitory Std Dev           1.417          43.561        0.000273 
+
+Log-likelihood   -21158.1
+Error at iteration 8 = 1.05e-04
+19-Aug-2023 17:28:29
+                                   estimate          t-stat            step 
+Constant                              0.282           0.710        0.000014 
+1931-41 Cohorts                      -0.163          -2.010       -0.000007 
+1942+ Cohorts                        -0.237          -2.043       -0.000004 
+Black                                -0.040          -0.882        0.000015 
+Hispanic                              0.082           1.474        0.000038 
+Couple                                0.328           1.500       -0.000002 
+Spouse 1931-41                        0.015           0.236       -0.000008 
+Spouse 1942+                          0.130           1.507       -0.000010 
+South                                -0.087          -2.095       -0.000017 
+East                                 -0.025          -0.489       -0.000019 
+West                                  0.121           2.275       -0.000014 
+Age / 10                             -0.244          -4.882        0.000005 
+Spouse Age / 10                      -0.058          -1.805       -0.000002 
+Unemployement Rate                   -0.081          -3.014       -0.000004 
+Status Quo Bias                      -0.135          -1.689        0.000007 
+Std Dev                               0.714          18.325        0.000010 
+Original Persistent Std Dev           0.713           7.057       -0.000010 
+SQB-Free Persistent Std Dev           0.626           7.497        0.000024 
+Original Transitory Std Dev           1.397          28.069        0.000011 
+SQB-Free Transitory Std Dev           1.417          43.547        0.000105 
+
+Log-likelihood   -21158.1
+Error at iteration 9 = 3.78e-05
+19-Aug-2023 17:28:54
+                                   estimate          t-stat            step 
+Constant                              0.282           0.710        0.000000 
+1931-41 Cohorts                      -0.163          -2.010       -0.000001 
+1942+ Cohorts                        -0.237          -2.043       -0.000000 
+Black                                -0.040          -0.882        0.000004 
+Hispanic                              0.082           1.474        0.000012 
+Couple                                0.328           1.500       -0.000001 
+Spouse 1931-41                        0.015           0.236       -0.000003 
+Spouse 1942+                          0.130           1.507       -0.000003 
+South                                -0.087          -2.096       -0.000005 
+East                                 -0.025          -0.489       -0.000005 
+West                                  0.121           2.275       -0.000004 
+Age / 10                             -0.244          -4.882        0.000002 
+Spouse Age / 10                      -0.058          -1.805       -0.000001 
+Unemployement Rate                   -0.081          -3.014       -0.000001 
+Status Quo Bias                      -0.135          -1.689        0.000002 
+Std Dev                               0.714          18.323        0.000003 
+Original Persistent Std Dev           0.713           7.057       -0.000002 
+SQB-Free Persistent Std Dev           0.626           7.496       -0.000000 
+Original Transitory Std Dev           1.397          28.069        0.000004 
+SQB-Free Transitory Std Dev           1.417          43.542        0.000038 
+
+Log-likelihood   -21158.1
+Error at iteration 10 = 1.33e-05
+19-Aug-2023 17:29:20
+                                   estimate          t-stat            step 
+Constant                              0.282           0.710       -0.000001 
+1931-41 Cohorts                      -0.163          -2.010       -0.000000 
+1942+ Cohorts                        -0.237          -2.043        0.000000 
+Black                                -0.039          -0.882        0.000001 
+Hispanic                              0.082           1.474        0.000004 
+Couple                                0.328           1.500       -0.000001 
+Spouse 1931-41                        0.015           0.236       -0.000001 
+Spouse 1942+                          0.130           1.507       -0.000001 
+South                                -0.087          -2.096       -0.000002 
+East                                 -0.025          -0.489       -0.000001 
+West                                  0.121           2.275       -0.000001 
+Age / 10                             -0.244          -4.882        0.000001 
+Spouse Age / 10                      -0.058          -1.805       -0.000000 
+Unemployement Rate                   -0.081          -3.014       -0.000000 
+Status Quo Bias                      -0.135          -1.689        0.000001 
+Std Dev                               0.714          18.323        0.000001 
+Original Persistent Std Dev           0.713           7.057       -0.000000 
+SQB-Free Persistent Std Dev           0.626           7.495       -0.000002 
+Original Transitory Std Dev           1.397          28.069        0.000001 
+SQB-Free Transitory Std Dev           1.417          43.540        0.000013 
+
+Log-likelihood   -21158.1
+Error at iteration 11 = 4.57e-06
+19-Aug-2023 17:29:45
+                                   estimate          t-stat            step 
+Constant                              0.282           0.710       -0.000001 
+1931-41 Cohorts                      -0.163          -2.010       -0.000000 
+1942+ Cohorts                        -0.237          -2.043        0.000000 
+Black                                -0.039          -0.882        0.000000 
+Hispanic                              0.082           1.474        0.000001 
+Couple                                0.328           1.500       -0.000000 
+Spouse 1931-41                        0.015           0.236       -0.000000 
+Spouse 1942+                          0.130           1.507       -0.000000 
+South                                -0.087          -2.096       -0.000000 
+East                                 -0.025          -0.489       -0.000000 
+West                                  0.121           2.275       -0.000000 
+Age / 10                             -0.244          -4.882        0.000000 
+Spouse Age / 10                      -0.058          -1.805       -0.000000 
+Unemployement Rate                   -0.081          -3.014       -0.000000 
+Status Quo Bias                      -0.135          -1.689        0.000000 
+Std Dev                               0.714          18.323        0.000000 
+Original Persistent Std Dev           0.713           7.057       -0.000000 
+SQB-Free Persistent Std Dev           0.626           7.495       -0.000001 
+Original Transitory Std Dev           1.397          28.069        0.000000 
+SQB-Free Transitory Std Dev           1.417          43.540        0.000005 
+
+Log-likelihood   -21158.1
+Error at iteration 12 = 1.56e-06
+19-Aug-2023 17:30:10
+                                   estimate          t-stat            step 
+Constant                              0.282           0.710       -0.000000 
+1931-41 Cohorts                      -0.163          -2.010       -0.000000 
+1942+ Cohorts                        -0.237          -2.043        0.000000 
+Black                                -0.039          -0.882        0.000000 
+Hispanic                              0.082           1.474        0.000000 
+Couple                                0.328           1.500       -0.000000 
+Spouse 1931-41                        0.015           0.236       -0.000000 
+Spouse 1942+                          0.130           1.507       -0.000000 
+South                                -0.087          -2.096       -0.000000 
+East                                 -0.025          -0.489       -0.000000 
+West                                  0.121           2.275       -0.000000 
+Age / 10                             -0.244          -4.882        0.000000 
+Spouse Age / 10                      -0.058          -1.805       -0.000000 
+Unemployement Rate                   -0.081          -3.014       -0.000000 
+Status Quo Bias                      -0.135          -1.689        0.000000 
+Std Dev                               0.714          18.323        0.000000 
+Original Persistent Std Dev           0.713           7.057       -0.000000 
+SQB-Free Persistent Std Dev           0.626           7.495       -0.000000 
+Original Transitory Std Dev           1.397          28.069        0.000000 
+SQB-Free Transitory Std Dev           1.417          43.540        0.000002 
+
+Log-likelihood   -21158.1
+Error at iteration 13 = 5.31e-07
+19-Aug-2023 17:30:36
+                                   estimate          t-stat            step 
+Constant                              0.282           0.710       -0.000000 
+1931-41 Cohorts                      -0.163          -2.010       -0.000000 
+1942+ Cohorts                        -0.237          -2.043        0.000000 
+Black                                -0.039          -0.882        0.000000 
+Hispanic                              0.082           1.474        0.000000 
+Couple                                0.328           1.500       -0.000000 
+Spouse 1931-41                        0.015           0.236       -0.000000 
+Spouse 1942+                          0.130           1.507       -0.000000 
+South                                -0.087          -2.096       -0.000000 
+East                                 -0.025          -0.489       -0.000000 
+West                                  0.121           2.275       -0.000000 
+Age / 10                             -0.244          -4.882        0.000000 
+Spouse Age / 10                      -0.058          -1.805       -0.000000 
+Unemployement Rate                   -0.081          -3.014       -0.000000 
+Status Quo Bias                      -0.135          -1.689        0.000000 
+Std Dev                               0.714          18.323        0.000000 
+Original Persistent Std Dev           0.713           7.057       -0.000000 
+SQB-Free Persistent Std Dev           0.626           7.495       -0.000000 
+Original Transitory Std Dev           1.397          28.069        0.000000 
+SQB-Free Transitory Std Dev           1.417          43.540        0.000001 
+
+Log-likelihood   -21158.1
+Estimates of Model 13.0
+19-Aug-2023 17:30:36
+Sample size 11616
+Number of iterations = 13
+Error at last iteration = 5.31e-07
+                                   estimate      std. error          t-stat 
+Constant                              0.282           0.397           0.710 
+1931-41 Cohorts                      -0.163           0.081          -2.010 
+1942+ Cohorts                        -0.237           0.116          -2.043 
+Black                                -0.039           0.045          -0.882 
+Hispanic                              0.082           0.056           1.474 
+Couple                                0.328           0.219           1.500 
+Spouse 1931-41                        0.015           0.065           0.236 
+Spouse 1942+                          0.130           0.086           1.507 
+South                                -0.087           0.041          -2.096 
+East                                 -0.025           0.051          -0.489 
+West                                  0.121           0.053           2.275 
+Age / 10                             -0.244           0.050          -4.882 
+Spouse Age / 10                      -0.058           0.032          -1.805 
+Unemployement Rate                   -0.081           0.027          -3.014 
+Status Quo Bias                      -0.135           0.080          -1.689 
+Std Dev                               0.714           0.039          18.323 
+Original Persistent Std Dev           0.713           0.101           7.057 
+SQB-Free Persistent Std Dev           0.626           0.083           7.495 
+Original Transitory Std Dev           1.397           0.050          28.069 
+SQB-Free Transitory Std Dev           1.417           0.033          43.540 
+
+Log-likelihood   -21158.1
