@@ -1,0 +1,2274 @@
+C00001.00    [CPUBID]                                       Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             ID CODE OF CHILD
+ 
+PUBLIC IDENTIFICATION CODE OF CHILD
+ 
+UNIVERSE: All biological children of NLSY79 mothers, regardless of age.
+ 
+   11551           1 TO 9999999: See Min & Max values below for range as of this
+                          release
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:            201        Max:        1267501        Mean:           600544.28
+ 
+Lead In: None.
+Default Next Question: C00002.00
+--------------------------------------------------------------------------------
+C00002.00    [MPUBID]                                       Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             ID CODE OF MOTHER OF CHILD
+ 
+PUBLIC IDENTIFICATION CODE OF MOTHER OF CHILD
+ 
+UNIVERSE: All biological children of NLSY79 mothers, regardless of age.
+ 
+NOTE: SEE YOUTH REFERENCE NUMBER R(    1.)
+ 
+   11551           1 TO 12686: NLSY79 Public ID
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:              2        Max:          12675        Mean:             6005.42
+ 
+Lead In: C00001.00[Default]
+Default Next Question: C00003.00
+--------------------------------------------------------------------------------
+C00053.00    [CRACE]                                        Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             RACE OF CHILD (MOTHER'S RACIAL/ETHNIC COHORT FROM SCREENER)
+ 
+RACE OF CHILD (MOTHER'S RACIAL/ETHNIC COHORT FROM SCREENER)
+ 
+NOTE: Child race/ethnicity is based on the report of the mother. See NLSY79 main
+Youth Reference Number R( 2147.)
+ 
+    2224       1 HISPANIC
+    3196       2 BLACK
+    6131       3 NON-BLACK, NON-HISPANIC
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:              1        Max:              3        Mean:                2.34
+ 
+Lead In: C00052.00[Default]
+Default Next Question: C00054.00
+--------------------------------------------------------------------------------
+C00054.00    [CSEX]                                         Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             SEX OF CHILD
+ 
+SEX OF CHILD
+ 
+    5898       1 MALE
+    5651       2 FEMALE
+  -------
+   11549
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:              1        Max:              2        Mean:                1.49
+ 
+Lead In: C00053.00[Default]
+Default Next Question: C00055.00
+--------------------------------------------------------------------------------
+C00057.00    [CYRB]                                         Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             DATE OF BIRTH OF CHILD - YEAR
+ 
+DATE OF BIRTH OF CHILD - YEAR
+ 
+    1223        1970 TO 1978: < before 1979
+     528        1979
+     607        1980
+     714        1981
+     703        1982
+     715        1983
+     657        1984
+     676        1985
+     618        1986
+     621        1987
+     585        1988
+     629        1989
+     495        1990
+     424        1991
+     402        1992
+     348        1993
+     303        1994
+     245        1995
+     229        1996
+     216        1997
+     156        1998
+     129        1999
+     100        2000
+      81        2001
+      48        2002
+      34        2003
+      24        2004
+      15        2005
+      11        2006
+       4        2007
+       3        2008
+       3        2009
+       2        2010
+       2        2011
+       1        2014
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:           1970        Max:           2014        Mean:              1986.1
+ 
+Lead In: C00055.00[Default]
+Default Next Question: C00057.01
+--------------------------------------------------------------------------------
+C05740.00    [BPIP1986]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL 86 INT
+ 
+ACTUAL SCORE (1 DECIMAL PLACE IMPLIED.)
+ 
+      44           1 TO 99: 00.1 - 09.9
+      93         100 TO 199: 10.0 - 19.9
+     112         200 TO 299: 20.0 - 29.9
+     166         300 TO 399: 30.0 - 39.9
+     195         400 TO 499: 40.0 - 49.9
+     295         500 TO 599: 50.0 - 59.9
+     266         600 TO 699: 60.0 - 69.9
+     358         700 TO 799: 70.0 - 79.9
+     355         800 TO 899: 80.0 - 89.9
+     569         900 TO 999: 90.0 - 99.9
+       7        1000: 100.0
+  -------
+    2460
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     121
+TOTAL =========>    2581      MISSING(-7)    8970
+ 
+Min:             30        Max:           1000        Mean:              665.88
+ 
+Lead In: C05739.00[Default]
+Default Next Question: C05741.00
+--------------------------------------------------------------------------------
+C05754.00    [BPIPX1986]                                    Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX 86 INT
+ 
+ACTUAL SCORE (1 DECIMAL PLACE IMPLIED.)
+ 
+      47           1 TO 99: 00.1 - 09.9
+      86         100 TO 199: 10.0 - 19.9
+     133         200 TO 299: 20.0 - 29.9
+     181         300 TO 399: 30.0 - 39.9
+     203         400 TO 499: 40.0 - 49.9
+     223         500 TO 599: 50.0 - 59.9
+     307         600 TO 699: 60.0 - 69.9
+     354         700 TO 799: 70.0 - 79.9
+     374         800 TO 899: 80.0 - 89.9
+     551         900 TO 999: 90.0 - 99.9
+       1        1000: 100.0
+  -------
+    2460
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     121
+TOTAL =========>    2581      MISSING(-7)    8970
+ 
+Min:             17        Max:           1000        Mean:              666.11
+ 
+Lead In: C05753.00[Default]
+Default Next Question: C05755.00
+--------------------------------------------------------------------------------
+C05767.02    [BPTOTP1986]                                   Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+NOTE: 1 implied decimal place
+ 
+     144         100 TO 199: 10.0 - 19.9
+     236         200 TO 299: 20.0 - 29.9
+     263         300 TO 399: 30.0 - 39.9
+     214         400 TO 499: 40.0 - 49.9
+     246         500 TO 599: 50.0 - 59.9
+     278         600 TO 699: 60.0 - 69.9
+     299         700 TO 799: 70.0 - 79.9
+     257         800 TO 899: 80.0 - 89.9
+     521         900 TO 999: 90.0 - 99.9
+      38        1000: 100.0
+  -------
+    2496
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     101
+TOTAL =========>    2597      MISSING(-7)    8954
+ 
+Min:            120        Max:           1000        Mean:              630.36
+ 
+Lead In: C05767.01[Default]
+Default Next Question: C05767.03
+--------------------------------------------------------------------------------
+C05811.00    [PPVTP1986]                                    Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT):  TOTAL 
+             PERCENTILE SCORE
+ 
+PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT): TOTAL PERCENTILE SCORE 86
+INT
+ 
+     961           1 TO 9
+     398          10 TO 19
+     230          20 TO 29
+     282          30 TO 39
+     184          40 TO 49
+     210          50 TO 59
+     178          60 TO 69
+     158          70 TO 79
+     106          80 TO 89
+      91          90 TO 99
+  -------
+    2798
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     423
+TOTAL =========>    3221      MISSING(-7)    8330
+ 
+Min:              1        Max:             99        Mean:               30.15
+ 
+Lead In: C05810.00[Default]
+Default Next Question: C05812.00
+--------------------------------------------------------------------------------
+C07944.00    [BPIP1988]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL  88 INT
+ 
+ACTUAL SCORE  (1 DECIMAL PLACE IMPLIED.)
+ 
+      81           1 TO 99: 00.1 - 09.9
+     105         100 TO 199: 10.0 - 19.9
+     184         200 TO 299: 20.0 - 29.9
+     213         300 TO 399: 30.0 - 39.9
+     336         400 TO 499: 40.0 - 49.9
+     379         500 TO 599: 50.0 - 59.9
+     447         600 TO 699: 60.0 - 69.9
+     501         700 TO 799: 70.0 - 79.9
+     564         800 TO 899: 80.0 - 89.9
+     804         900 TO 999: 90.0 - 99.9
+      23        1000: 100.0
+  -------
+    3637
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     316
+TOTAL =========>    3953      MISSING(-7)    7598
+ 
+Min:             30        Max:           1000        Mean:              668.07
+ 
+Lead In: C07943.00[Default]
+Default Next Question: C07945.00
+--------------------------------------------------------------------------------
+C07958.00    [BPIPX1988]                                    Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX 88 INT
+ 
+ACTUAL SCORE (1 DECIMAL PLACE IMPLIED.)
+ 
+      87           1 TO 99: 00.1 - 09.9
+      98         100 TO 199: 10.0 - 19.9
+     211         200 TO 299: 20.0 - 29.9
+     211         300 TO 399: 30.0 - 39.9
+     303         400 TO 499: 40.0 - 49.9
+     373         500 TO 599: 50.0 - 59.9
+     461         600 TO 699: 60.0 - 69.9
+     485         700 TO 799: 70.0 - 79.9
+     561         800 TO 899: 80.0 - 89.9
+     822         900 TO 999: 90.0 - 99.9
+       3        1000: 100.0
+  -------
+    3615
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     316
+TOTAL =========>    3931      MISSING(-7)    7620
+ 
+Min:             17        Max:           1000        Mean:              668.84
+ 
+Lead In: C07957.00[Default]
+Default Next Question: C07959.00
+--------------------------------------------------------------------------------
+C07971.02    [BPTOTP1988]                                   Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+NOTE: 1 implied decimal place
+ 
+     200         100 TO 199: 10.0 - 19.9
+     336         200 TO 299: 20.0 - 29.9
+     383         300 TO 399: 30.0 - 39.9
+     370         400 TO 499: 40.0 - 49.9
+     398         500 TO 599: 50.0 - 59.9
+     379         600 TO 699: 60.0 - 69.9
+     417         700 TO 799: 70.0 - 79.9
+     397         800 TO 899: 80.0 - 89.9
+     728         900 TO 999: 90.0 - 99.9
+      89        1000: 100.0
+  -------
+    3697
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     254
+TOTAL =========>    3951      MISSING(-7)    7600
+ 
+Min:            120        Max:           1000        Mean:              629.83
+ 
+Lead In: C07971.01[Default]
+Default Next Question: C07971.03
+--------------------------------------------------------------------------------
+C08006.00    [PPVTP1988]                                    Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT):  TOTAL 
+             PERCENTILE SCORE
+ 
+PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT): TOTAL PERCENTILE SCORE 88
+INT
+ 
+     726           1 TO 9
+     310          10 TO 19
+     183          20 TO 29
+     243          30 TO 39
+     116          40 TO 49
+     144          50 TO 59
+     133          60 TO 69
+     101          70 TO 79
+      89          80 TO 89
+      71          90 TO 99
+  -------
+    2116
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     280
+TOTAL =========>    2396      MISSING(-7)    9155
+ 
+Min:              1        Max:             99        Mean:               29.75
+ 
+Lead In: C08005.00[Default]
+Default Next Question: C08007.00
+--------------------------------------------------------------------------------
+C09944.00    [BPIP1990]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL  90 INT
+ 
+NOTE: 1 IMPLIED DECIMAL PLACE
+ 
+     165           1 TO 99: 00.1 - 09.9
+     148         100 TO 199: 10.0 - 19.9
+     249         200 TO 299: 20.0 - 29.9
+     279         300 TO 399: 30.0 - 39.9
+     365         400 TO 499: 40.0 - 49.9
+     423         500 TO 599: 50.0 - 59.9
+     483         600 TO 699: 60.0 - 69.9
+     482         700 TO 799: 70.0 - 79.9
+     538         800 TO 899: 80.0 - 89.9
+     676         900 TO 999: 90.0 - 99.9
+      21        1000: 100.0
+  -------
+    3829
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     208
+TOTAL =========>    4037      MISSING(-7)    7514
+ 
+Min:             30        Max:           1000        Mean:              619.94
+ 
+Lead In: C09943.00[Default]
+Default Next Question: C09945.00
+--------------------------------------------------------------------------------
+C09958.00    [BPIPX1990]                                    Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX 90 INT
+ 
+NOTE: 1 IMPLIED DECIMAL PLACE
+ 
+     169           1 TO 99: 00.1 - 09.9
+     138         100 TO 199: 10.0 - 19.9
+     278         200 TO 299: 20.0 - 29.9
+     289         300 TO 399: 30.0 - 39.9
+     352         400 TO 499: 40.0 - 49.9
+     380         500 TO 599: 50.0 - 59.9
+     487         600 TO 699: 60.0 - 69.9
+     476         700 TO 799: 70.0 - 79.9
+     512         800 TO 899: 80.0 - 89.9
+     698         900 TO 999: 90.0 - 99.9
+       1        1000: 100.0
+  -------
+    3780
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     208
+TOTAL =========>    3988      MISSING(-7)    7563
+ 
+Min:             17        Max:           1000        Mean:                 620
+ 
+Lead In: C09957.00[Default]
+Default Next Question: C09959.00
+--------------------------------------------------------------------------------
+C09971.02    [BPTOTP1990]                                   Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+NOTE: 1 implied decimal place
+ 
+     333         100 TO 199: 10.0 - 19.9
+     473         200 TO 299: 20.0 - 29.9
+     416         300 TO 399: 30.0 - 39.9
+     376         400 TO 499: 40.0 - 49.9
+     448         500 TO 599: 50.0 - 59.9
+     367         600 TO 699: 60.0 - 69.9
+     388         700 TO 799: 70.0 - 79.9
+     339         800 TO 899: 80.0 - 89.9
+     645         900 TO 999: 90.0 - 99.9
+      60        1000: 100.0
+  -------
+    3845
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     195
+TOTAL =========>    4040      MISSING(-7)    7511
+ 
+Min:            120        Max:           1000        Mean:              580.03
+ 
+Lead In: C09971.01[Default]
+Default Next Question: C09971.03
+--------------------------------------------------------------------------------
+C09998.00    [PPVTP1990]                                    Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT):  TOTAL 
+             PERCENTILE SCORE
+ 
+PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT): TOTAL PERCENTILE SCORE 90
+INT
+ 
+     114           0
+     275           1 TO 9
+     155          10 TO 19
+     108          20 TO 29
+     141          30 TO 39
+      75          40 TO 49
+      79          50 TO 59
+      79          60 TO 69
+      62          70 TO 79
+      28          80 TO 89
+      39          90 TO 99
+  -------
+    1155
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     196
+TOTAL =========>    1351      MISSING(-7)   10200
+ 
+Min:              0        Max:             99        Mean:               29.54
+ 
+Lead In: C09997.00[Default]
+Default Next Question: C09999.00
+--------------------------------------------------------------------------------
+C11947.00    [BPIP1992]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN  92 INT
+ 
+1 IMPLIED DECIMAL PLACE
+ 
+     192           1 TO 99: 00.1 - 09.9
+     187         100 TO 199: 10.0 - 19.9
+     302         200 TO 299: 20.0 - 29.9
+     345         300 TO 399: 30.0 - 39.9
+     517         400 TO 499: 40.0 - 49.9
+     526         500 TO 599: 50.0 - 59.9
+     509         600 TO 699: 60.0 - 69.9
+     586         700 TO 799: 70.0 - 79.9
+     629         800 TO 899: 80.0 - 89.9
+     862         900 TO 999: 90.0 - 99.9
+      31        1000: 100.0
+  -------
+    4686
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     178
+TOTAL =========>    4864      MISSING(-7)    6687
+ 
+Min:             30        Max:           1000        Mean:              619.74
+ 
+Lead In: C11946.00[Default]
+Default Next Question: C11948.00
+--------------------------------------------------------------------------------
+C11961.00    [BPIPX1992]                                    Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX  92 INT
+ 
+1 IMPLIED DECIMAL PLACE
+ 
+     193           1 TO 99: 00.1 - 09.9
+     195         100 TO 199: 10.0 - 19.9
+     340         200 TO 299: 20.0 - 29.9
+     326         300 TO 399: 30.0 - 39.9
+     531         400 TO 499: 40.0 - 49.9
+     453         500 TO 599: 50.0 - 59.9
+     532         600 TO 699: 60.0 - 69.9
+     564         700 TO 799: 70.0 - 79.9
+     606         800 TO 899: 80.0 - 89.9
+     923         900 TO 999: 90.0 - 99.9
+       1        1000: 100.0
+  -------
+    4664
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     178
+TOTAL =========>    4842      MISSING(-7)    6709
+ 
+Min:             17        Max:           1000        Mean:              619.88
+ 
+Lead In: C11960.00[Default]
+Default Next Question: C11962.00
+--------------------------------------------------------------------------------
+C11974.12    [BPTOTP1992]                                   Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+NOTE: 1 implied decimal place
+ 
+     372         100 TO 199: 10.0 - 19.9
+     617         200 TO 299: 20.0 - 29.9
+     520         300 TO 399: 30.0 - 39.9
+     445         400 TO 499: 40.0 - 49.9
+     458         500 TO 599: 50.0 - 59.9
+     450         600 TO 699: 60.0 - 69.9
+     432         700 TO 799: 70.0 - 79.9
+     400         800 TO 899: 80.0 - 89.9
+     800         900 TO 999: 90.0 - 99.9
+      83        1000: 100.0
+  -------
+    4577
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     290
+TOTAL =========>    4867      MISSING(-7)    6684
+ 
+Min:            120        Max:           1000        Mean:              581.74
+ 
+Lead In: C11974.11[Default]
+Default Next Question: C11974.13
+--------------------------------------------------------------------------------
+C11998.00    [PPVTP1992]                                    Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT): TOTAL 
+             PERCENTILE SCORE
+ 
+PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT): TOTAL PERCENTILE SCORE 92
+INT
+ 
+     270           0
+    1146           1 TO 9
+     707          10 TO 19
+     420          20 TO 29
+     539          30 TO 39
+     263          40 TO 49
+     371          50 TO 59
+     266          60 TO 69
+     286          70 TO 79
+     236          80 TO 89
+     254          90 TO 99
+  -------
+    4758
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     544
+TOTAL =========>    5302      MISSING(-7)    6249
+ 
+Min:              0        Max:             99        Mean:               33.19
+ 
+Lead In: C11997.00[Default]
+Default Next Question: C11999.00
+--------------------------------------------------------------------------------
+C15025.00    [BPIP1994]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN  94 INT
+ 
+NOTE: 1 implied decimal place
+ 
+     223           1 TO 99: 00.1 - 09.9
+     189         100 TO 199: 10.0 - 19.9
+     302         200 TO 299: 20.0 - 29.9
+     359         300 TO 399: 30.0 - 39.9
+     399         400 TO 499: 40.0 - 49.9
+     468         500 TO 599: 50.0 - 59.9
+     526         600 TO 699: 60.0 - 69.9
+     524         700 TO 799: 70.0 - 79.9
+     618         800 TO 899: 80.0 - 89.9
+     803         900 TO 999: 90.0 - 99.9
+      27        1000: 100.0
+  -------
+    4438
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     270
+TOTAL =========>    4708      MISSING(-7)    6843
+ 
+Min:             30        Max:           1000        Mean:              614.36
+ 
+Lead In: C15024.00[Default]
+Default Next Question: C15026.00
+--------------------------------------------------------------------------------
+C15039.00    [BPIPX1994]                                    Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX  94 INT
+ 
+NOTE: 1 implied decimal place
+ 
+     214           1 TO 99: 00.1 - 09.9
+     203         100 TO 199: 10.0 - 19.9
+     351         200 TO 299: 20.0 - 29.9
+     343         300 TO 399: 30.0 - 39.9
+     361         400 TO 499: 40.0 - 49.9
+     446         500 TO 599: 50.0 - 59.9
+     536         600 TO 699: 60.0 - 69.9
+     542         700 TO 799: 70.0 - 79.9
+     586         800 TO 899: 80.0 - 89.9
+     856         900 TO 999: 90.0 - 99.9
+  -------
+    4438
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     270
+TOTAL =========>    4708      MISSING(-7)    6843
+ 
+Min:             17        Max:            999        Mean:              614.88
+ 
+Lead In: C15038.00[Default]
+Default Next Question: C15040.00
+--------------------------------------------------------------------------------
+C15054.00    [BPTOTP1994]                                   Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS 94 INT
+ 
+NOTE: 1 implied decimal place
+ 
+     412         100 TO 199: 10.0 - 19.9
+     604         200 TO 299: 20.0 - 29.9
+     504         300 TO 399: 30.0 - 39.9
+     446         400 TO 499: 40.0 - 49.9
+     469         500 TO 599: 50.0 - 59.9
+     418         600 TO 699: 60.0 - 69.9
+     409         700 TO 799: 70.0 - 79.9
+     385         800 TO 899: 80.0 - 89.9
+     712         900 TO 999: 90.0 - 99.9
+      82        1000: 100.0
+  -------
+    4441
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     271
+TOTAL =========>    4712      MISSING(-7)    6839
+ 
+Min:            120        Max:           1000        Mean:              568.91
+ 
+Lead In: C15053.00[Default]
+Default Next Question: C15055.00
+--------------------------------------------------------------------------------
+C15088.00    [PPVTP1994]                                    Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT): TOTAL 
+             PERCENTILE SCORE
+ 
+PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT): TOTAL PERCENTILE SCORE  
+94 INT
+ 
+     135           0
+     397           1 TO 9
+     246          10 TO 19
+     138          20 TO 29
+     227          30 TO 39
+     111          40 TO 49
+     143          50 TO 59
+     137          60 TO 69
+     123          70 TO 79
+      86          80 TO 89
+      82          90 TO 99
+  -------
+    1825
+ 
+Refusal(-1)            8
+Don't Know(-2)         0
+Invalid Skip(-3)     308
+TOTAL =========>    2141      MISSING(-7)    9410
+ 
+Min:              0        Max:             99        Mean:               34.06
+ 
+Lead In: C15087.00[Default]
+Default Next Question: C15089.00
+--------------------------------------------------------------------------------
+C15594.00    [BPIP1996]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN
+ 
+NOTE: 1 implied decimal place
+ 
+     236           1 TO 99: 00.1 - 09.9
+     185         100 TO 199: 10.0 - 19.9
+     269         200 TO 299: 20.0 - 29.9
+     364         300 TO 399: 30.0 - 39.9
+     383         400 TO 499: 40.0 - 49.9
+     449         500 TO 599: 50.0 - 59.9
+     431         600 TO 699: 60.0 - 69.9
+     539         700 TO 799: 70.0 - 79.9
+     470         800 TO 899: 80.0 - 89.9
+     673         900 TO 999: 90.0 - 99.9
+      25        1000: 100.0
+  -------
+    4024
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     314
+TOTAL =========>    4338      MISSING(-7)    7213
+ 
+Min:             30        Max:           1000        Mean:              596.61
+ 
+Lead In: C15593.00[Default]
+Default Next Question: C15595.00
+--------------------------------------------------------------------------------
+C15608.00    [BPIPX1996]                                    Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX
+ 
+NOTE: 1 implied decimal place
+ 
+     228           1 TO 99: 00.1 - 09.9
+     189         100 TO 199: 10.0 - 19.9
+     326         200 TO 299: 20.0 - 29.9
+     342         300 TO 399: 30.0 - 39.9
+     369         400 TO 499: 40.0 - 49.9
+     397         500 TO 599: 50.0 - 59.9
+     466         600 TO 699: 60.0 - 69.9
+     523         700 TO 799: 70.0 - 79.9
+     482         800 TO 899: 80.0 - 89.9
+     699         900 TO 999: 90.0 - 99.9
+       3        1000: 100.0
+  -------
+    4024
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     314
+TOTAL =========>    4338      MISSING(-7)    7213
+ 
+Min:             17        Max:           1000        Mean:              597.25
+ 
+Lead In: C15607.00[Default]
+Default Next Question: C15609.00
+--------------------------------------------------------------------------------
+C15623.00    [BPTOTP1996]                                   Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+NOTE: 1 implied decimal place
+ 
+     397         100 TO 199: 10.0 - 19.9
+     591         200 TO 299: 20.0 - 29.9
+     496         300 TO 399: 30.0 - 39.9
+     382         400 TO 499: 40.0 - 49.9
+     399         500 TO 599: 50.0 - 59.9
+     404         600 TO 699: 60.0 - 69.9
+     355         700 TO 799: 70.0 - 79.9
+     321         800 TO 899: 80.0 - 89.9
+     562         900 TO 999: 90.0 - 99.9
+      57        1000: 100.0
+  -------
+    3964
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     397
+TOTAL =========>    4361      MISSING(-7)    7190
+ 
+Min:            120        Max:           1000        Mean:              549.73
+ 
+Lead In: C15622.00[Default]
+Default Next Question: C15624.00
+--------------------------------------------------------------------------------
+C15657.00    [PPVTP1996]                                    Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT): TOTAL 
+             PERCENTILE SCORE
+ 
+PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT): TOTAL PERCENTILE SCORE
+ 
+     626           1 TO 9
+     320          10 TO 19
+     186          20 TO 29
+     266          30 TO 39
+     170          40 TO 49
+     196          50 TO 59
+     191          60 TO 69
+     182          70 TO 79
+     156          80 TO 89
+     159          90 TO 99
+  -------
+    2452
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     303
+TOTAL =========>    2755      MISSING(-7)    8796
+ 
+Min:              1        Max:             99        Mean:               37.89
+ 
+Lead In: C15656.00[Default]
+Default Next Question: C15658.00
+--------------------------------------------------------------------------------
+C17951.00    [BPIP1998]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN
+ 
+NOTE: 1 implied decimal place
+ 
+     252           1 TO 99: 00.1 - 09.9
+     235         100 TO 199: 10.0 - 19.9
+     278         200 TO 299: 20.0 - 29.9
+     347         300 TO 399: 30.0 - 39.9
+     353         400 TO 499: 40.0 - 49.9
+     419         500 TO 599: 50.0 - 59.9
+     398         600 TO 699: 60.0 - 69.9
+     437         700 TO 799: 70.0 - 79.9
+     478         800 TO 899: 80.0 - 89.9
+     553         900 TO 999: 90.0 - 99.9
+      35        1000: 100.0
+  -------
+    3785
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     305
+TOTAL =========>    4090      MISSING(-7)    7461
+ 
+Min:             30        Max:           1000        Mean:              575.55
+ 
+Lead In: C17950.00[Default]
+Default Next Question: C17952.00
+--------------------------------------------------------------------------------
+C17965.00    [BPIPX1998]                                    Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX
+ 
+NOTE: 1 implied decimal place
+ 
+     240           1 TO 99: 00.1 - 09.9
+     236         100 TO 199: 10.0 - 19.9
+     358         200 TO 299: 20.0 - 29.9
+     306         300 TO 399: 30.0 - 39.9
+     351         400 TO 499: 40.0 - 49.9
+     374         500 TO 599: 50.0 - 59.9
+     420         600 TO 699: 60.0 - 69.9
+     427         700 TO 799: 70.0 - 79.9
+     435         800 TO 899: 80.0 - 89.9
+     637         900 TO 999: 90.0 - 99.9
+       1        1000: 100.0
+  -------
+    3785
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     305
+TOTAL =========>    4090      MISSING(-7)    7461
+ 
+Min:             17        Max:           1000        Mean:              575.83
+ 
+Lead In: C17964.00[Default]
+Default Next Question: C17966.00
+--------------------------------------------------------------------------------
+C17980.00    [BPTOTP1998]                                   Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+NOTE: 1 implied decimal place
+ 
+     445         100 TO 199: 10.0 - 19.9
+     593         200 TO 299: 20.0 - 29.9
+     451         300 TO 399: 30.0 - 39.9
+     376         400 TO 499: 40.0 - 49.9
+     359         500 TO 599: 50.0 - 59.9
+     339         600 TO 699: 60.0 - 69.9
+     306         700 TO 799: 70.0 - 79.9
+     275         800 TO 899: 80.0 - 89.9
+     519         900 TO 999: 90.0 - 99.9
+      40        1000: 100.0
+  -------
+    3703
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     396
+TOTAL =========>    4099      MISSING(-7)    7452
+ 
+Min:            120        Max:           1000        Mean:              531.24
+ 
+Lead In: C17979.00[Default]
+Default Next Question: C17981.00
+--------------------------------------------------------------------------------
+C18011.00    [PPVTP1998]                                    Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT): TOTAL 
+             PERCENTILE SCORE
+ 
+PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT): TOTAL PERCENTILE SCORE
+ 
+     317           1 TO 9
+     150          10 TO 19
+      96          20 TO 29
+     162          30 TO 39
+      88          40 TO 49
+      93          50 TO 59
+      82          60 TO 69
+      93          70 TO 79
+      77          80 TO 89
+     113          90 TO 99
+  -------
+    1271
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     208
+TOTAL =========>    1479      MISSING(-7)   10072
+ 
+Min:              1        Max:             99        Mean:               39.04
+ 
+Lead In: C18010.00[Default]
+Default Next Question: C18012.00
+--------------------------------------------------------------------------------
+C24958.00    [BPIPX2000]                                    Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX
+ 
+NOTE: 1 implied decimal place
+ 
+     252           1 TO 99: 00.1 - 09.9
+     186         100 TO 199: 10.0 - 19.9
+     237         200 TO 299: 20.0 - 29.9
+     236         300 TO 399: 30.0 - 39.9
+     262         400 TO 499: 40.0 - 49.9
+     292         500 TO 599: 50.0 - 59.9
+     289         600 TO 699: 60.0 - 69.9
+     248         700 TO 799: 70.0 - 79.9
+     283         800 TO 899: 80.0 - 89.9
+     309         900 TO 999: 90.0 - 99.9
+       1        1000: 100.0
+  -------
+    2595
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     243
+TOTAL =========>    2838      MISSING(-7)    8713
+ 
+Min:             17        Max:           1000        Mean:              528.98
+ 
+Lead In: C24957.00[Default]
+Default Next Question: C24959.00
+--------------------------------------------------------------------------------
+C24959.00    [BPIP2000]                                     Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN
+ 
+NOTE: 1 implied decimal place
+ 
+     273           1 TO 99: 00.1 - 09.9
+     160         100 TO 199: 10.0 - 19.9
+     204         200 TO 299: 20.0 - 29.9
+     244         300 TO 399: 30.0 - 39.9
+     272         400 TO 499: 40.0 - 49.9
+     308         500 TO 599: 50.0 - 59.9
+     286         600 TO 699: 60.0 - 69.9
+     257         700 TO 799: 70.0 - 79.9
+     288         800 TO 899: 80.0 - 89.9
+     295         900 TO 999: 90.0 - 99.9
+       8        1000: 100.0
+  -------
+    2595
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     243
+TOTAL =========>    2838      MISSING(-7)    8713
+ 
+Min:             30        Max:           1000        Mean:              529.16
+ 
+Lead In: C24958.00[Default]
+Default Next Question: C24960.00
+--------------------------------------------------------------------------------
+C24963.00    [BPTOTP2000]                                   Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+NOTE: 1 implied decimal place
+ 
+     410         100 TO 199: 10.0 - 19.9
+     436         200 TO 299: 20.0 - 29.9
+     361         300 TO 399: 30.0 - 39.9
+     293         400 TO 499: 40.0 - 49.9
+     231         500 TO 599: 50.0 - 59.9
+     182         600 TO 699: 60.0 - 69.9
+     184         700 TO 799: 70.0 - 79.9
+     171         800 TO 899: 80.0 - 89.9
+     264         900 TO 999: 90.0 - 99.9
+      19        1000: 100.0
+  -------
+    2551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     300
+TOTAL =========>    2851      MISSING(-7)    8700
+ 
+Min:            120        Max:           1000        Mean:               483.8
+ 
+Lead In: C24962.00[Default]
+Default Next Question: C24964.00
+--------------------------------------------------------------------------------
+C25045.00    [PPVTP2000]                                    Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT): TOTAL 
+             PERCENTILE SCORE
+ 
+PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT): TOTAL PERCENTILE SCORE
+ 
+     184           1 TO 9
+      87          10 TO 19
+      68          20 TO 29
+     121          30 TO 39
+      72          40 TO 49
+      81          50 TO 59
+      90          60 TO 69
+      71          70 TO 79
+      73          80 TO 89
+      97          90 TO 99
+  -------
+     944
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      88
+TOTAL =========>    1032      MISSING(-7)   10519
+ 
+Min:              1        Max:             99        Mean:               44.38
+ 
+Lead In: C25044.00[Default]
+Default Next Question: C25046.00
+--------------------------------------------------------------------------------
+C25243.00    [BPIPX2002]                                    Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX
+ 
+NOTE: 1 implied decimal place
+ 
+     261           1 TO 99: 00.1 - 09.9
+     183         100 TO 199: 10.0 - 19.9
+     296         200 TO 299: 20.0 - 29.9
+     275         300 TO 399: 30.0 - 39.9
+     244         400 TO 499: 40.0 - 49.9
+     301         500 TO 599: 50.0 - 59.9
+     315         600 TO 699: 60.0 - 69.9
+     321         700 TO 799: 70.0 - 79.9
+     282         800 TO 899: 80.0 - 89.9
+     361         900 TO 999: 90.0 - 99.9
+  -------
+    2839
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      25
+TOTAL =========>    2864      MISSING(-7)    8687
+ 
+Min:             17        Max:            999        Mean:              533.55
+ 
+Lead In: C25242.00[Default]
+Default Next Question: C25244.00
+--------------------------------------------------------------------------------
+C25244.00    [BPIP2002]                                     Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN
+ 
+NOTE: 1 implied decimal place
+ 
+     289           1 TO 99: 00.1 - 09.9
+     166         100 TO 199: 10.0 - 19.9
+     239         200 TO 299: 20.0 - 29.9
+     283         300 TO 399: 30.0 - 39.9
+     290         400 TO 499: 40.0 - 49.9
+     315         500 TO 599: 50.0 - 59.9
+     300         600 TO 699: 60.0 - 69.9
+     314         700 TO 799: 70.0 - 79.9
+     298         800 TO 899: 80.0 - 89.9
+     334         900 TO 999: 90.0 - 99.9
+      11        1000: 100.0
+  -------
+    2839
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      25
+TOTAL =========>    2864      MISSING(-7)    8687
+ 
+Min:             30        Max:           1000        Mean:              533.02
+ 
+Lead In: C25243.00[Default]
+Default Next Question: C25245.00
+--------------------------------------------------------------------------------
+C25248.00    [BPTOTP2002]                                   Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+NOTE: 1 implied decimal place
+ 
+     404         100 TO 199: 10.0 - 19.9
+     530         200 TO 299: 20.0 - 29.9
+     377         300 TO 399: 30.0 - 39.9
+     286         400 TO 499: 40.0 - 49.9
+     283         500 TO 599: 50.0 - 59.9
+     218         600 TO 699: 60.0 - 69.9
+     217         700 TO 799: 70.0 - 79.9
+     173         800 TO 899: 80.0 - 89.9
+     305         900 TO 999: 90.0 - 99.9
+      27        1000: 100.0
+  -------
+    2820
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      71
+TOTAL =========>    2891      MISSING(-7)    8660
+ 
+Min:            120        Max:           1000        Mean:              491.01
+ 
+Lead In: C25247.00[Default]
+Default Next Question: C25249.00
+--------------------------------------------------------------------------------
+C25330.00    [PPVTP2002]                                    Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT): TOTAL 
+             PERCENTILE SCORE
+ 
+PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT): TOTAL PERCENTILE SCORE
+ 
+     168           1 TO 9
+      81          10 TO 19
+      84          20 TO 29
+     107          30 TO 39
+      52          40 TO 49
+      71          50 TO 59
+      72          60 TO 69
+      75          70 TO 79
+      53          80 TO 89
+     116          90 TO 99
+  -------
+     879
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      93
+TOTAL =========>     972      MISSING(-7)   10579
+ 
+Min:              1        Max:             99        Mean:               44.57
+ 
+Lead In: C25329.00[Default]
+Default Next Question: C25331.00
+--------------------------------------------------------------------------------
+C27956.00    [BPIPX2004]                                    Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX
+ 
+NOTE: 1 implied decimal place
+ 
+     190           1 TO 99: 00.1 - 09.9
+     162         100 TO 199: 10.0 - 19.9
+     243         200 TO 299: 20.0 - 29.9
+     188         300 TO 399: 30.0 - 39.9
+     202         400 TO 499: 40.0 - 49.9
+     237         500 TO 599: 50.0 - 59.9
+     252         600 TO 699: 60.0 - 69.9
+     256         700 TO 799: 70.0 - 79.9
+     250         800 TO 899: 80.0 - 89.9
+     290         900 TO 999: 90.0 - 99.9
+       1        1000: 100.0
+  -------
+    2271
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      51
+TOTAL =========>    2322      MISSING(-7)    9229
+ 
+Min:             28        Max:           1000        Mean:              540.54
+ 
+Lead In: C27955.00[Default]
+Default Next Question: C27957.00
+--------------------------------------------------------------------------------
+C27957.00    [BPIP2004]                                     Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN
+ 
+NOTE: 1 implied decimal place
+ 
+     219           1 TO 99: 00.1 - 09.9
+     123         100 TO 199: 10.0 - 19.9
+     221         200 TO 299: 20.0 - 29.9
+     203         300 TO 399: 30.0 - 39.9
+     217         400 TO 499: 40.0 - 49.9
+     235         500 TO 599: 50.0 - 59.9
+     277         600 TO 699: 60.0 - 69.9
+     240         700 TO 799: 70.0 - 79.9
+     262         800 TO 899: 80.0 - 89.9
+     267         900 TO 999: 90.0 - 99.9
+       7        1000: 100.0
+  -------
+    2271
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      51
+TOTAL =========>    2322      MISSING(-7)    9229
+ 
+Min:             30        Max:           1000        Mean:              539.73
+ 
+Lead In: C27956.00[Default]
+Default Next Question: C27958.00
+--------------------------------------------------------------------------------
+C27961.00    [BPTOTP2004]                                   Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+NOTE: 1 implied decimal place
+ 
+     289         100 TO 199: 10.0 - 19.9
+     419         200 TO 299: 20.0 - 29.9
+     290         300 TO 399: 30.0 - 39.9
+     212         400 TO 499: 40.0 - 49.9
+     246         500 TO 599: 50.0 - 59.9
+     161         600 TO 699: 60.0 - 69.9
+     166         700 TO 799: 70.0 - 79.9
+     158         800 TO 899: 80.0 - 89.9
+     216         900 TO 999: 90.0 - 99.9
+      17        1000: 100.0
+  -------
+    2174
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     166
+TOTAL =========>    2340      MISSING(-7)    9211
+ 
+Min:            120        Max:           1000        Mean:               492.2
+ 
+Lead In: C27960.00[Default]
+Default Next Question: C27962.00
+--------------------------------------------------------------------------------
+C28038.00    [PPVTP2004]                                    Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT): TOTAL 
+             PERCENTILE SCORE
+ 
+PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT): TOTAL PERCENTILE SCORE
+ 
+     178           1 TO 9
+      96          10 TO 19
+      56          20 TO 29
+      70          30 TO 39
+      62          40 TO 49
+      67          50 TO 59
+      67          60 TO 69
+      60          70 TO 79
+      57          80 TO 89
+     117          90 TO 99
+  -------
+     830
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      97
+TOTAL =========>     927      MISSING(-7)   10624
+ 
+Min:              1        Max:             99        Mean:               44.44
+ 
+Lead In: C28037.00[Default]
+Default Next Question: C28039.00
+--------------------------------------------------------------------------------
+C31036.00    [BPIPX2006]                                    Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX
+ 
+NOTE: 1 implied decimal place
+ 
+     212           1 TO 99: 00.1 - 09.9
+     153         100 TO 199: 10.0 - 19.9
+     175         200 TO 299: 20.0 - 29.9
+     173         300 TO 399: 30.0 - 39.9
+     149         400 TO 499: 40.0 - 49.9
+     161         500 TO 599: 50.0 - 59.9
+     206         600 TO 699: 60.0 - 69.9
+     192         700 TO 799: 70.0 - 79.9
+     162         800 TO 899: 80.0 - 89.9
+     176         900 TO 999: 90.0 - 99.9
+       2        1000: 100.0
+  -------
+    1761
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      92
+TOTAL =========>    1853      MISSING(-7)    9698
+ 
+Min:             17        Max:           1000        Mean:              499.81
+ 
+Lead In: C31035.00[Default]
+Default Next Question: C31037.00
+--------------------------------------------------------------------------------
+C31037.00    [BPIP2006]                                     Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN
+ 
+NOTE: 1 implied decimal place
+ 
+     240           1 TO 99: 00.1 - 09.9
+     112         100 TO 199: 10.0 - 19.9
+     160         200 TO 299: 20.0 - 29.9
+     184         300 TO 399: 30.0 - 39.9
+     174         400 TO 499: 40.0 - 49.9
+     164         500 TO 599: 50.0 - 59.9
+     200         600 TO 699: 60.0 - 69.9
+     186         700 TO 799: 70.0 - 79.9
+     172         800 TO 899: 80.0 - 89.9
+     163         900 TO 999: 90.0 - 99.9
+       6        1000: 100.0
+  -------
+    1761
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      92
+TOTAL =========>    1853      MISSING(-7)    9698
+ 
+Min:             30        Max:           1000        Mean:              498.87
+ 
+Lead In: C31036.00[Default]
+Default Next Question: C31038.00
+--------------------------------------------------------------------------------
+C31041.00    [BPTOTP2006]                                   Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+NOTE: 1 implied decimal place
+ 
+     308         100 TO 199: 10.0 - 19.9
+     339         200 TO 299: 20.0 - 29.9
+     237         300 TO 399: 30.0 - 39.9
+     156         400 TO 499: 40.0 - 49.9
+     157         500 TO 599: 50.0 - 59.9
+     128         600 TO 699: 60.0 - 69.9
+     127         700 TO 799: 70.0 - 79.9
+      97         800 TO 899: 80.0 - 89.9
+     149         900 TO 999: 90.0 - 99.9
+      17        1000: 100.0
+  -------
+    1715
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     155
+TOTAL =========>    1870      MISSING(-7)    9681
+ 
+Min:            120        Max:           1000        Mean:               461.8
+ 
+Lead In: C31040.00[Default]
+Default Next Question: C31042.00
+--------------------------------------------------------------------------------
+C31123.00    [PPVTP2006]                                    Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT): TOTAL 
+             PERCENTILE SCORE
+ 
+PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT): TOTAL PERCENTILE SCORE
+ 
+      87           1 TO 9
+      47          10 TO 19
+      39          20 TO 29
+      55          30 TO 39
+      37          40 TO 49
+      44          50 TO 59
+      40          60 TO 69
+      42          70 TO 79
+      44          80 TO 89
+      82          90 TO 99
+  -------
+     517
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      69
+TOTAL =========>     586      MISSING(-7)   10965
+ 
+Min:              1        Max:             99        Mean:                48.6
+ 
+Lead In: C31122.00[Default]
+Default Next Question: C31124.00
+--------------------------------------------------------------------------------
+C36073.00    [BPIPX2008]                                    Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX
+ 
+NOTE: 1 implied decimal place
+ 
+     154           1 TO 99: 00.1 - 09.9
+      87         100 TO 199: 10.0 - 19.9
+     154         200 TO 299: 20.0 - 29.9
+     115         300 TO 399: 30.0 - 39.9
+     102         400 TO 499: 40.0 - 49.9
+     124         500 TO 599: 50.0 - 59.9
+     138         600 TO 699: 60.0 - 69.9
+     105         700 TO 799: 70.0 - 79.9
+     119         800 TO 899: 80.0 - 89.9
+     149         900 TO 999: 90.0 - 99.9
+  -------
+    1247
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      30
+TOTAL =========>    1277      MISSING(-7)   10274
+ 
+Min:             17        Max:            999        Mean:              502.25
+ 
+Lead In: C36072.00[Default]
+Default Next Question: C36074.00
+--------------------------------------------------------------------------------
+C36074.00    [BPIP2008]                                     Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN
+ 
+NOTE: 1 implied decimal place
+ 
+     167           1 TO 99: 00.1 - 09.9
+      72         100 TO 199: 10.0 - 19.9
+     128         200 TO 299: 20.0 - 29.9
+     132         300 TO 399: 30.0 - 39.9
+     118         400 TO 499: 40.0 - 49.9
+     128         500 TO 599: 50.0 - 59.9
+     125         600 TO 699: 60.0 - 69.9
+     114         700 TO 799: 70.0 - 79.9
+     125         800 TO 899: 80.0 - 89.9
+     134         900 TO 999: 90.0 - 99.9
+       4        1000: 100.0
+  -------
+    1247
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      30
+TOTAL =========>    1277      MISSING(-7)   10274
+ 
+Min:             30        Max:           1000        Mean:              501.57
+ 
+Lead In: C36073.00[Default]
+Default Next Question: C36075.00
+--------------------------------------------------------------------------------
+C36078.00    [BPTOTP2008]                                   Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+NOTE: 1 implied decimal place
+ 
+     216         100 TO 199: 10.0 - 19.9
+     253         200 TO 299: 20.0 - 29.9
+     158         300 TO 399: 30.0 - 39.9
+     128         400 TO 499: 40.0 - 49.9
+      92         500 TO 599: 50.0 - 59.9
+      98         600 TO 699: 60.0 - 69.9
+      63         700 TO 799: 70.0 - 79.9
+      70         800 TO 899: 80.0 - 89.9
+     114         900 TO 999: 90.0 - 99.9
+      11        1000: 100.0
+  -------
+    1203
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      66
+TOTAL =========>    1269      MISSING(-7)   10282
+ 
+Min:            120        Max:           1000        Mean:              458.83
+ 
+Lead In: C36077.00[Default]
+Default Next Question: C36079.00
+--------------------------------------------------------------------------------
+C36160.00    [PPVTP2008]                                    Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT): TOTAL 
+             PERCENTILE SCORE
+ 
+PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT): TOTAL PERCENTILE SCORE
+ 
+      48           1 TO 9
+      32          10 TO 19
+      22          20 TO 29
+      39          30 TO 39
+      15          40 TO 49
+      20          50 TO 59
+      24          60 TO 69
+      31          70 TO 79
+      31          80 TO 89
+      79          90 TO 99
+  -------
+     341
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      65
+TOTAL =========>     406      MISSING(-7)   11145
+ 
+Min:              1        Max:             99        Mean:               53.55
+ 
+Lead In: C36159.00[Default]
+Default Next Question: C36161.00
+--------------------------------------------------------------------------------
+C39859.00    [BPIPX2010]                                    Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX
+ 
+NOTE: 1 implied decimal place
+ 
+     110           1 TO 99: 00.1 - 09.9
+      63         100 TO 199: 10.0 - 19.9
+      92         200 TO 299: 20.0 - 29.9
+      82         300 TO 399: 30.0 - 39.9
+      65         400 TO 499: 40.0 - 49.9
+      76         500 TO 599: 50.0 - 59.9
+      94         600 TO 699: 60.0 - 69.9
+      92         700 TO 799: 70.0 - 79.9
+      69         800 TO 899: 80.0 - 89.9
+      92         900 TO 999: 90.0 - 99.9
+  -------
+     835
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      34
+TOTAL =========>     869      MISSING(-7)   10682
+ 
+Min:             32        Max:            999        Mean:              497.64
+ 
+Lead In: C39858.00[Default]
+Default Next Question: C39860.00
+--------------------------------------------------------------------------------
+C39860.00    [BPIP2010]                                     Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN
+ 
+NOTE: 1 implied decimal place
+ 
+     127           1 TO 99: 00.1 - 09.9
+      43         100 TO 199: 10.0 - 19.9
+      82         200 TO 299: 20.0 - 29.9
+      83         300 TO 399: 30.0 - 39.9
+      78         400 TO 499: 40.0 - 49.9
+      74         500 TO 599: 50.0 - 59.9
+     103         600 TO 699: 60.0 - 69.9
+      79         700 TO 799: 70.0 - 79.9
+      79         800 TO 899: 80.0 - 89.9
+      85         900 TO 999: 90.0 - 99.9
+       2        1000: 100.0
+  -------
+     835
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      34
+TOTAL =========>     869      MISSING(-7)   10682
+ 
+Min:             30        Max:           1000        Mean:              497.14
+ 
+Lead In: C39859.00[Default]
+Default Next Question: C39861.00
+--------------------------------------------------------------------------------
+C39864.00    [BPTOTP2010]                                   Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+NOTE: 1 implied decimal place
+ 
+     154         100 TO 199: 10.0 - 19.9
+     174         200 TO 299: 20.0 - 29.9
+      88         300 TO 399: 30.0 - 39.9
+      82         400 TO 499: 40.0 - 49.9
+      87         500 TO 599: 50.0 - 59.9
+      54         600 TO 699: 60.0 - 69.9
+      54         700 TO 799: 70.0 - 79.9
+      44         800 TO 899: 80.0 - 89.9
+      70         900 TO 999: 90.0 - 99.9
+      11        1000: 100.0
+  -------
+     818
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      58
+TOTAL =========>     876      MISSING(-7)   10675
+ 
+Min:            125        Max:           1000        Mean:              457.12
+ 
+Lead In: C39863.00[Default]
+Default Next Question: C39865.00
+--------------------------------------------------------------------------------
+C39946.00    [PPVTP2010]                                    Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT): TOTAL 
+             PERCENTILE SCORE
+ 
+PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT): TOTAL PERCENTILE SCORE
+ 
+      35           1 TO 9
+      19          10 TO 19
+      15          20 TO 29
+      22          30 TO 39
+      16          40 TO 49
+      28          50 TO 59
+      20          60 TO 69
+      18          70 TO 79
+      19          80 TO 89
+      32          90 TO 99
+  -------
+     224
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      52
+TOTAL =========>     276      MISSING(-7)   11275
+ 
+Min:              1        Max:             99        Mean:               49.21
+ 
+Lead In: C39945.00[Default]
+Default Next Question: C39947.00
+--------------------------------------------------------------------------------
+C55299.00    [BPIPX2012]                                    Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX
+ 
+NOTE: 1 implied decimal place
+ 
+      51           1 TO 99: 00.1 - 09.9
+      48         100 TO 199: 10.0 - 19.9
+      69         200 TO 299: 20.0 - 29.9
+      49         300 TO 399: 30.0 - 39.9
+      40         400 TO 499: 40.0 - 49.9
+      53         500 TO 599: 50.0 - 59.9
+      43         600 TO 699: 60.0 - 69.9
+      35         700 TO 799: 70.0 - 79.9
+      53         800 TO 899: 80.0 - 89.9
+      42         900 TO 999: 90.0 - 99.9
+  -------
+     483
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      25
+TOTAL =========>     508      MISSING(-7)   11043
+ 
+Min:             17        Max:            999        Mean:              478.12
+ 
+Lead In: C55298.00[Default]
+Default Next Question: C55300.00
+--------------------------------------------------------------------------------
+C55300.00    [BPIP2012]                                     Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN
+ 
+NOTE: 1 implied decimal place
+ 
+      71           1 TO 99: 00.1 - 09.9
+      26         100 TO 199: 10.0 - 19.9
+      60         200 TO 299: 20.0 - 29.9
+      56         300 TO 399: 30.0 - 39.9
+      45         400 TO 499: 40.0 - 49.9
+      47         500 TO 599: 50.0 - 59.9
+      48         600 TO 699: 60.0 - 69.9
+      35         700 TO 799: 70.0 - 79.9
+      49         800 TO 899: 80.0 - 89.9
+      44         900 TO 999: 90.0 - 99.9
+       2        1000: 100.0
+  -------
+     483
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      25
+TOTAL =========>     508      MISSING(-7)   11043
+ 
+Min:             42        Max:           1000        Mean:              479.99
+ 
+Lead In: C55299.00[Default]
+Default Next Question: C55301.00
+--------------------------------------------------------------------------------
+C55304.00    [BPTOTP2012]                                   Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+NOTE: 1 implied decimal place
+ 
+      87         100 TO 199: 10.0 - 19.9
+     118         200 TO 299: 20.0 - 29.9
+      60         300 TO 399: 30.0 - 39.9
+      49         400 TO 499: 40.0 - 49.9
+      32         500 TO 599: 50.0 - 59.9
+      33         600 TO 699: 60.0 - 69.9
+      29         700 TO 799: 70.0 - 79.9
+      29         800 TO 899: 80.0 - 89.9
+      33         900 TO 999: 90.0 - 99.9
+       6        1000: 100.0
+  -------
+     476
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      34
+TOTAL =========>     510      MISSING(-7)   11041
+ 
+Min:            120        Max:           1000        Mean:              439.82
+ 
+Lead In: C55303.00[Default]
+Default Next Question: C55305.00
+--------------------------------------------------------------------------------
+C55386.00    [PPVTP2012]                                    Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT): TOTAL 
+             PERCENTILE SCORE
+ 
+PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT): TOTAL PERCENTILE SCORE
+ 
+      11           1 TO 9
+       7          10 TO 19
+       6          20 TO 29
+      15          30 TO 39
+       6          40 TO 49
+       6          50 TO 59
+      10          60 TO 69
+       7          70 TO 79
+      11          80 TO 89
+      25          90 TO 99
+  -------
+     104
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      23
+TOTAL =========>     127      MISSING(-7)   11424
+ 
+Min:              1        Max:             99        Mean:               56.65
+ 
+Lead In: C55385.00[Default]
+Default Next Question: C55387.00
+--------------------------------------------------------------------------------
+C58061.00    [BPIPX2014]                                    Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX
+ 
+NOTE: 1 implied decimal place
+ 
+      25           1 TO 99: 00.1 - 09.9
+      29         100 TO 199: 10.0 - 19.9
+      29         200 TO 299: 20.0 - 29.9
+      16         300 TO 399: 30.0 - 39.9
+      22         400 TO 499: 40.0 - 49.9
+      24         500 TO 599: 50.0 - 59.9
+      29         600 TO 699: 60.0 - 69.9
+      21         700 TO 799: 70.0 - 79.9
+      27         800 TO 899: 80.0 - 89.9
+      27         900 TO 999: 90.0 - 99.9
+       1        1000: 100.0
+  -------
+     250
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      24
+TOTAL =========>     274      MISSING(-7)   11277
+ 
+Min:             46        Max:           1000        Mean:              501.16
+ 
+Lead In: C58060.00[Default]
+Default Next Question: C58062.00
+--------------------------------------------------------------------------------
+C58062.00    [BPIP2014]                                     Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN
+ 
+NOTE: 1 implied decimal place
+ 
+      41           1 TO 99: 00.1 - 09.9
+      11         100 TO 199: 10.0 - 19.9
+      25         200 TO 299: 20.0 - 29.9
+      23         300 TO 399: 30.0 - 39.9
+      20         400 TO 499: 40.0 - 49.9
+      30         500 TO 599: 50.0 - 59.9
+      22         600 TO 699: 60.0 - 69.9
+      27         700 TO 799: 70.0 - 79.9
+      25         800 TO 899: 80.0 - 89.9
+      25         900 TO 999: 90.0 - 99.9
+       1        1000: 100.0
+  -------
+     250
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      24
+TOTAL =========>     274      MISSING(-7)   11277
+ 
+Min:             54        Max:           1000        Mean:              501.42
+ 
+Lead In: C58061.00[Default]
+Default Next Question: C58063.00
+--------------------------------------------------------------------------------
+C58066.00    [BPTOTP2014]                                   Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+NOTE: 1 implied decimal place
+ 
+      43         100 TO 199: 10.0 - 19.9
+      53         200 TO 299: 20.0 - 29.9
+      27         300 TO 399: 30.0 - 39.9
+      26         400 TO 499: 40.0 - 49.9
+      19         500 TO 599: 50.0 - 59.9
+      23         600 TO 699: 60.0 - 69.9
+      14         700 TO 799: 70.0 - 79.9
+      16         800 TO 899: 80.0 - 89.9
+      17         900 TO 999: 90.0 - 99.9
+       3        1000: 100.0
+  -------
+     241
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      33
+TOTAL =========>     274      MISSING(-7)   11277
+ 
+Min:            144        Max:           1000        Mean:              457.99
+ 
+Lead In: C58065.00[Default]
+Default Next Question: C58067.00
+--------------------------------------------------------------------------------
+C58144.00    [PPVTP2014]                                    Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT): TOTAL 
+             PERCENTILE SCORE
+ 
+PEABODY PICTURE VOCABULARY TEST-REVISED FORM L (PPVT): TOTAL PERCENTILE SCORE
+ 
+       5           1 TO 9
+       1          10 TO 19
+       2          20 TO 29
+       4          30 TO 39
+       6          40 TO 49
+       3          50 TO 59
+       4          60 TO 69
+       2          70 TO 79
+       1          80 TO 89
+      11          90 TO 99
+  -------
+      39
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       8
+TOTAL =========>      47      MISSING(-7)   11504
+ 
+Min:              1        Max:             99        Mean:               55.72
+ 
+Lead In: C58143.00[Default]
+Default Next Question: C58145.00
+--------------------------------------------------------------------------------
+C60519.00    [BPIPX2016]                                    Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - SAME SEX
+ 
+NOTE: 1 implied decimal place
+ 
+       9           1 TO 99: 00.1 - 09.9
+       4         100 TO 199: 10.0 - 19.9
+      10         200 TO 299: 20.0 - 29.9
+      10         300 TO 399: 30.0 - 39.9
+       7         400 TO 499: 40.0 - 49.9
+       4         500 TO 599: 50.0 - 59.9
+       9         600 TO 699: 60.0 - 69.9
+      11         700 TO 799: 70.0 - 79.9
+       8         800 TO 899: 80.0 - 89.9
+       9         900 TO 999: 90.0 - 99.9
+  -------
+      81
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       3
+TOTAL =========>      84      MISSING(-7)   11467
+ 
+Min:             50        Max:            999        Mean:              517.35
+ 
+Lead In: C60518.00[Default]
+Default Next Question: C60520.00
+--------------------------------------------------------------------------------
+C60520.00    [BPIP2016]                                     Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE - ALL CHILDREN
+ 
+NOTE: 1 implied decimal place
+ 
+       9           1 TO 99: 00.1 - 09.9
+       3         100 TO 199: 10.0 - 19.9
+       8         200 TO 299: 20.0 - 29.9
+      11         300 TO 399: 30.0 - 39.9
+       8         400 TO 499: 40.0 - 49.9
+       6         500 TO 599: 50.0 - 59.9
+      11         600 TO 699: 60.0 - 69.9
+       8         700 TO 799: 70.0 - 79.9
+      10         800 TO 899: 80.0 - 89.9
+       6         900 TO 999: 90.0 - 99.9
+       1        1000: 100.0
+  -------
+      81
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       3
+TOTAL =========>      84      MISSING(-7)   11467
+ 
+Min:             62        Max:           1000        Mean:                 520
+ 
+Lead In: C60519.00[Default]
+Default Next Question: C60521.00
+--------------------------------------------------------------------------------
+C60524.00    [BPTOTP2016]                                   Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+BEHAVIOR PROBLEMS INDEX: TOTAL PERCENTILE SCORE TRICHOTOMOUS ITEMS
+ 
+NOTE: 1 implied decimal place
+ 
+       9         100 TO 199: 10.0 - 19.9
+      22         200 TO 299: 20.0 - 29.9
+       8         300 TO 399: 30.0 - 39.9
+       7         400 TO 499: 40.0 - 49.9
+      10         500 TO 599: 50.0 - 59.9
+       6         600 TO 699: 60.0 - 69.9
+       8         700 TO 799: 70.0 - 79.9
+       5         800 TO 899: 80.0 - 89.9
+       5         900 TO 999: 90.0 - 99.9
+       1        1000: 100.0
+  -------
+      81
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       3
+TOTAL =========>      84      MISSING(-7)   11467
+ 
+Min:            166        Max:           1000        Mean:              476.14
+ 
+Lead In: C60523.00[Default]
+Default Next Question: C60525.00
+--------------------------------------------------------------------------------
+Y22670.00    [VERSION_R29]                                  Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             VERSION_R29 CHILD/YOUNG ADULT
+ 
+This variable identifies the release version of the current NLSY79 Child/Young 
+Adult data set, This information allows User Services to identify the release 
+version used by a researcher who is asking a question and to access past 
+versions of the data if necessary.
+ 
+   11551         532
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:            532        Max:            532        Mean:                 532
+ 
+Lead In: Y12053.00[Default]
+Default Next Question: Y12054.00

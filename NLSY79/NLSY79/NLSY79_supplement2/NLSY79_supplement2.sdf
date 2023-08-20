@@ -1,0 +1,95 @@
+
+
+Reference
+Number     Year    Variable Description                                                Question Name  
+--------------------------------------------------------------------------------------------------------
+R00001.00  1979    IDENTIFICATION CODE                                                 CASEID         
+R01725.00  1979    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+R01736.00  1979    SAMPLE IDENTIFICATION CODE                                          SAMPLE_ID      
+R02147.00  78SCRN  R'S RACIAL/ETHNIC COHORT FROM SCREENER                              SAMPLE_RACE    
+R02148.00  1979    SEX OF R                                                            SAMPLE_SEX     
+R02164.00  1979    REGION OF CURRENT RESIDENCE                                         REGION         
+R02261.00  1980    NUMBER OF WEEKS WORKED BY SPOUSE IN 1979                            Q2-15A         
+R03292.00  1980    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+R04057.00  1980    REGION OF CURRENT RESIDENCE                                         REGION         
+R04137.00  1981    NUMBER OF WEEKS WORKED BY SPOUSE IN 1980                            Q2-15A         
+R05307.00  1981    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+R06028.10  1981    REGION OF CURRENT RESIDENCE                                         REGION         
+R06596.00  1982    NUMBER OF WEEKS WORKED BY SPOUSE IN 1981                            Q2-15A         
+R08099.00  1982    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+R08979.10  1982    REGION OF CURRENT RESIDENCE                                         REGION         
+R09029.00  1983    NUMBER OF WEEKS WORKED BY SPOUSE IN 1982                            Q2-15A         
+R10457.00  1983    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+R11448.00  1983    REGION OF CURRENT RESIDENCE                                         REGION         
+R12027.00  1984    NUMBER OF WEEKS WORKED BY SPOUSE IN 1983                            Q2-15A         
+R14275.00  1984    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+R15200.00  1984    REGION OF CURRENT RESIDENCE                                         REGION         
+R16020.00  1985    NUMBER OF WEEKS WORKED BY SPOUSE IN 1984                            Q2-15A         
+R17946.00  1985    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+R18907.00  1985    REGION OF CURRENT RESIDENCE                                         REGION         
+R19020.00  1986    NUMBER OF WEEKS WORKED BY SPOUSE IN 1985                            Q2-15A         
+R21562.00  1986    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+R22578.00  1986    REGION OF CURRENT RESIDENCE                                         REGION         
+R23020.00  1987    NUMBER OF WEEKS WORKED BY SPOUSE IN 1986                            Q2-15A         
+R23657.00  1987    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+R24452.00  1987    REGION OF CURRENT RESIDENCE                                         REGION         
+R25031.00  1988    NUMBER OF WEEKS WORKED BY SPOUSE IN 1987                            Q2-15A         
+R27425.00  1988    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+R28708.00  1988    REGION OF CURRENT RESIDENCE                                         REGION         
+R29031.00  1989    NUMBER OF WEEKS WORKED BY SPOUSE IN 1988                            Q2-15A         
+R29861.00  1989    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+R30745.00  1989    REGION OF CURRENT RESIDENCE                                         REGION         
+R31045.00  1990    NUMBER OF WEEKS WORKED BY SPOUSE IN 1989                            Q2-15A         
+R33025.00  1990    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+R34012.00  1990    REGION OF CURRENT RESIDENCE                                         REGION         
+R35045.00  1991    NUMBER OF WEEKS WORKED BY SPOUSE IN 1990                            Q2-15A         
+R35734.00  1991    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+R36566.00  1991    REGION OF CURRENT RESIDENCE                                         REGION         
+R37045.00  1992    NUMBER OF WEEKS WORKED BY SPOUSE IN 1991                            Q2-15A         
+R39176.00  1992    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+R40071.00  1992    REGION OF CURRENT RESIDENCE                                         REGION         
+R41002.00  1993    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+R41232.00  1993    NUMBER OF WEEKS WORKED BY SPOUSE IN 1992                            Q2-15A         
+R44182.00  1993    REGION OF CURRENT RESIDENCE                                         REGION         
+R45002.01  1994    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+R45192.00  1994    NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN 1993                    Q2-15A         
+R50812.00  1994    REGION OF CURRENT RESIDENCE                                         REGION         
+R51665.00  1996    REGION OF CURRENT RESIDENCE                                         REGION         
+R52002.01  1996    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+R52182.00  1996    NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN 1995                    Q2-15A         
+R58177.00  1998    NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN 1997                    Q2-15A         
+R64353.01  1998    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+R64791.00  1998    REGION OF CURRENT RESIDENCE                                         REGION         
+R67497.00  2000    NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN 1999                    Q2-15A         
+R69633.01  2000    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+R70068.00  2000    REGION OF CURRENT RESIDENCE                                         REGION         
+R73969.00  2002    NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN 2001                    Q2-15A         
+R76563.01  2002    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+R77041.00  2002    REGION OF CURRENT RESIDENCE                                         REGION         
+R78005.01  2004    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+R80902.00  2004    NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN 2003                    Q2-15A         
+R84965.00  2004    REGION OF CURRENT RESIDENCE                                         REGION         
+T00009.01  2006    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+T03217.00  2006    NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN 2005                    Q2-15A         
+T09883.00  2006    REGION OF CURRENT RESIDENCE                                         REGION         
+T12007.01  2008    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+T14713.00  2008    NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN 2007                    Q2-15A         
+T22103.00  2008    REGION OF CURRENT RESIDENCE                                         REGION         
+T22606.01  2010    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+T25202.00  2010    NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN 2009                    Q2-15A         
+T31082.00  2010    REGION OF CURRENT RESIDENCE                                         REGION         
+T31956.01  2012    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+T35065.00  2012    NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN 2011                    Q2-15A         
+T41127.00  2012    REGION OF CURRENT RESIDENCE                                         REGION         
+T41811.01  2014    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+T44782.00  2014    NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN PREVIOUS CALENDAR YEAR  Q2-15A         
+T50231.00  2014    REGION OF CURRENT RESIDENCE                                         REGION         
+T51500.01  2016    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+T54241.00  2016    NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN PREVIOUS CALENDAR YEAR  Q2-15A         
+T57710.00  2016    REGION OF CURRENT RESIDENCE                                         REGION         
+T77200.01  2018    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+T79799.00  2018    NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN PREVIOUS CALENDAR YEAR  Q2-15A         
+T82191.00  2018    REGION OF CURRENT RESIDENCE                                         REGION         
+T83300.01  2020    DATE OF INTERVIEW - MONTH                                           CURDATE~M      
+T85846.00  2020    NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN PREVIOUS CALENDAR YEAR  Q2-15A         
+T87883.00  2020    REGION OF CURRENT RESIDENCE                                         REGION         
