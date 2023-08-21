@@ -1,13 +1,13 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% ImputeRisk_KSS.m
+% ImputeRisk.m
 % Based on code by Claudia R. Sahm (claudia.r.sahm@frb.gov)
 % for "Imputing Risk Tolerance from Survey Responses" Kimball, Sahm, Shapiro, in JASA
 %
 % Modified for MRes dissertation
 % Author: Chau Pham
-% Updated July 26, 2007
+% Updated August 21, 2023
 %
 % Calls Matlab codes from toolbox by James P. LeSage
 %
@@ -18,104 +18,115 @@ clear all;
 delete('../Output/ImputeRisk.out')
 diary('../Output/ImputeRisk.out');
 
-disp('Output from ImputeRisk.m - August 20 2023');
+disp('Output from ImputeRisk.m - August 21 2023');
 disp('  ');
 
 %% Input NLSY79 data %%
 % input all variables including indicator dummy (instead of categorical
 % variable)
 
-[birthyr, schlyrs, male, couple_1992, couple_1994, couple_1998, couple_2000, couple_2002, ...
-	finr, southov, otherov, hhidpn, fwealth_1992, lfwealth_1992, zfwealth_1992, ltotinc_1992, ...	
-	ztotinc_1992, stocksh_1992, lfwealth_1994, zfwealth_1994, ltotinc_1994, ztotinc_1994, ...
-	lfwealth_1998, zfwealth_1998, ltotinc_1998, ztotinc_1998, lfwealth_2000, zfwealth_2000, ...
-	ltotinc_2000, ztotinc_2000, lfwealth_2002, zfwealth_2002, ltotinc_2002,	ztotinc_2002, ....
-	black_1992, hispanic_1992, sbc3141_1992, sbc4280_1992, east_1992, south_1992, west_1992, ...
-	black_1994, hispanic_1994, sbc3141_1994, sbc4280_1994, east_1994, south_1994, west_1994,...
-	black_1998, hispanic_1998, sbc3141_1998, sbc4280_1998, east_1998, south_1998, west_1998,...
-	black_2000, hispanic_2000, sbc3141_2000, sbc4280_2000, east_2000, south_2000, west_2000,...
-	black_2002, hispanic_2002, sbc3141_2002, sbc4280_2002, east_2002, south_2002, west_2002,...
-	bc3141, bc4280, c92, c94, c98, c00, c02, iwyr_1992, iwyr_1994, iwyr_1998, iwyr_2000, iwyr_2002, ...
-	iwmo_1992, iwmo_1994, iwmo_1998, iwmo_2000, iwmo_2002, wgt_1992, wgt_1994, wgt_1998, ...
-	wgt_2000, wgt_2002, age_1992, age_1994, age_1998, age_2000, age_2002, sage_1992, sage_1994, ...
-	sage_1998, sage_2000, sage_2002, ngambles, original, biasfree, dropout, higrad, smcoll, pscoll] = ...
-textread('../DataInput/hrs_kss.dat','%u %u %u %u %u %u %u %u %u %u %u %u %u %f %u %f %u %f %f %u %f %u %f %u %f %u %f %u %f %u %f %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %f %f %f %f %f %u %u %u %u %u %u %u %u %u %u %u %u',-1);
+[ID, INCOME_1993, RISK1_1993, INTERVIEW_MONTH_1993, WKS_WORKED_1993, WKS_WORKED_SPS_1993, RISK2_1993, ...
+    EAST_1993, SOUTH_1993, WEST_1993, MARRIED_1993, OTHER_1993, HS_1993, COLLEGE_1993, AGE_1993, ...
+    INCOME_2002, RISK1_2002, INTERVIEW_MONTH_2002, WKS_WORKED_2002, WKS_WORKED_SPS_2002, RISK2_2002, ...
+    EAST_2002, SOUTH_2002, WEST_2002, MARRIED_2002, OTHER_2002, HS_2002, COLLEGE_2002, AGE_2002, ...
+    INCOME_2004, RISK1_2004, INTERVIEW_MONTH_2004, WKS_WORKED_2004, WKS_WORKED_SPS_2004, RISK2_2004, ...
+    EAST_2004, SOUTH_2004, WEST_2004, MARRIED_2004, OTHER_2004, HS_2004, COLLEGE_2004, AGE_2004, ...
+    INCOME_2006, RISK1_2006, INTERVIEW_MONTH_2006, WKS_WORKED_2006, WKS_WORKED_SPS_2006, RISK2_2006, ...
+    EAST_2006, SOUTH_2006, WEST_2006, MARRIED_2006, OTHER_2006, HS_2006, COLLEGE_2006, AGE_2006, ...
+    INCOME_2010, RISK1_2010, INTERVIEW_MONTH_2010, WKS_WORKED_2010, WKS_WORKED_SPS_2010, RISK2_2010, ...
+    EAST_2010, SOUTH_2010, WEST_2010, MARRIED_2010, OTHER_2010, HS_2010, COLLEGE_2010, AGE_2010, ...
+    INCOME_2012, RISK1_2012, INTERVIEW_MONTH_2012, WKS_WORKED_2012, WKS_WORKED_SPS_2012, RISK2_2012, ...
+    EAST_2012, SOUTH_2012, WEST_2012, MARRIED_2012, OTHER_2012, HS_2012, COLLEGE_2012, AGE_2012, ...
+    INCOME_2014, RISK1_2014, INTERVIEW_MONTH_2014, WKS_WORKED_2014, WKS_WORKED_SPS_2014, RISK2_2014, ...
+    EAST_2014, SOUTH_2014, WEST_2014, MARRIED_2014, OTHER_2014, HS_2014, COLLEGE_2014, AGE_2014, ...
+    MOM_HGC, DAD_HGC, AFQT_2006, HISPANIC, BLACK, FEMALE, AGE_14] = ...
+textread('../Input/MATLAB_INPUT.txt','%u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u', -1, 'delimiter', '\t', 'emptyvalue', Inf);
 
-N = size(hhidpn,1);
+N = size(ID,1);
 
 %% Input Aggregate Data %%
-[ayear, amonth, aICS, aUrate] = textread('../DataInput/aggdataKSS.dat','%u %u %f %f',-1);  
+[amonth, ayear, ICS, URATE] = textread('../Input/AGGREGATE_MACRO.txt','%u %u %f %f');  
 
 %% Create Measures of Aggregate Conditions in Interview Month %%
 % ICS stands for Index of Consumer Sentiment 
 % ICS and unemployment rate are used as controll for aggregate
 % macroeconomic conditions that might effect holding of financial assets
 
-ICS_1992 = zeros(N,1); ICS_1994 = zeros(N,1); ICS_1998 = zeros(N,1); ICS_2000 = zeros(N,1); ICS_2002 = zeros(N,1);
-Urate_1992 = zeros(N,1); Urate_1994 = zeros(N,1); Urate_1998 = zeros(N,1); Urate_2000 = zeros(N,1); Urate_2002 = zeros(N,1);
+ICS_1993 = zeros(N,1); ICS_2002 = zeros(N,1); ICS_2004 = zeros(N,1); ICS_2006 = zeros(N,1); ICS_2010 = zeros(N,1); ICS_2012 = zeros(N,1); ICS_2014 = zeros(N,1);
+URATE_1993 = zeros(N,1); URATE_2002 = zeros(N,1); URATE_2004 = zeros(N,1); URATE_2006 = zeros(N,1); URATE_2010 = zeros(N,1); URATE_2012 = zeros(N,1); URATE_2014 = zeros(N,1);
 
-%% 1992 HRS
-for yr = 1992:1993;
-    for mn = 1:12;
-    ii = find(iwyr_1992 == yr & iwmo_1992 == mn);
-        if size(ii,1) > 0 
-            aa = find(ayear == yr & amonth == mn);
-            ICS_1992(ii,1) = aICS(aa,1)/10; % Index of Consumer Sentiment / 10 in interview month
-            Urate_1992(ii,1) = aUrate(aa,1)*100; % Unemployment rate in interview month
-        end
+%% 1993 NLSY79
+for mn = 1:12
+ii = find(INTERVIEW_MONTH_1993 == mn);
+    if size(ii,1) > 0 
+        aa = find(ayear == 1993 & amonth == mn);
+        ICS_1993(ii,1) = ICS(aa,1)/10; % Index of Consumer Sentiment / 10 in interview month
+        URATE_1993(ii,1) = URATE(aa,1)*100; % Unemployment rate in interview month
     end
-end    
+end   
 
-%% 1994 HRS
-for yr = 1994:1995;
-    for mn = 1:12;
-    ii = find(iwyr_1994 == yr & iwmo_1994 == mn);
-        if size(ii,1) > 0 
-            aa = find(ayear == 1994 & amonth == mn);
-            ICS_1994(ii,1) = aICS(aa,1)/10; % Index of Consumer Sentiment / 10 in interview month 
-            Urate_1994(ii,1) = aUrate(aa,1)*100; % Unemployment rate in interview month
-        end
+%% 2002 NLSY79
+for mn = 1:12
+ii = find(INTERVIEW_MONTH_2002 == mn);
+    if size(ii,1) > 0 
+        aa = find(ayear == 2002 & amonth == mn);
+        ICS_2002(ii,1) = ICS(aa,1)/10; % Index of Consumer Sentiment / 10 in interview month
+        URATE_2002(ii,1) = URATE(aa,1)*100; % Unemployment rate in interview month
     end
-end     
+end
 
-%% 1998 HRS
-for yr = 1998:1999;
-    for mn = 1:12;
-    ii = find(iwyr_1998 == yr & iwmo_1998 == mn);
-        if size(ii,1) > 0 
-            aa = find(ayear == yr & amonth  == mn);
-            ICS_1998(ii,1) = aICS(aa,1)/10; % Index of Consumer Sentiment / 10 in interview month 
-            Urate_1998(ii,1) = aUrate(aa,1)*100; % Unemployment rate in interview month
-        end
+%% 2004 NLSY79
+for mn = 1:12
+ii = find(INTERVIEW_MONTH_2004 == mn);
+    if size(ii,1) > 0 
+        aa = find(ayear == 2004 & amonth == mn);
+        ICS_2004(ii,1) = ICS(aa,1)/10; % Index of Consumer Sentiment / 10 in interview month
+        URATE_2004(ii,1) = URATE(aa,1)*100; % Unemployment rate in interview month
     end
-end    
+end
 
-%% 2000 HRS
-    for mn = 1:12;
-    ii = find(iwyr_2000 == 2000 & iwmo_2000 == mn);
-        if size(ii,1) > 0 
-            aa = find(ayear == 2000 & amonth == mn);
-            ICS_2000(ii,1) = aICS(aa,1)/10; % Index of Consumer Sentiment / 10 in interview month  
-            Urate_2000(ii,1) = aUrate(aa,1)*100; % Unemployment rate in interview month
-        end
-        
+%% 2006 NLSY79
+for mn = 1:12
+ii = find(INTERVIEW_MONTH_2006 == mn);
+    if size(ii,1) > 0 
+        aa = find(ayear == 2006 & amonth == mn);
+        ICS_2006(ii,1) = ICS(aa,1)/10; % Index of Consumer Sentiment / 10 in interview month
+        URATE_2006(ii,1) = URATE(aa,1)*100; % Unemployment rate in interview month
     end
+end
 
-%% 2002 HRS  
-for yr = 2002:2003;
-    for mn = 1:12;
-    ii = find(iwyr_2002 == yr & iwmo_2002 == mn);
-        if size(ii,1) > 0 
-            aa = find(ayear == yr & amonth == mn);
-            ICS_2002(ii,1) = aICS(aa,1)/10; % Index of Consumer Sentiment / 10 in interview month   
-            Urate_2002(ii,1) = aUrate(aa,1)*100; % Unemployment rate in interview month
-       
-        end
+%% 2010 NLSY79
+for mn = 1:12
+ii = find(INTERVIEW_MONTH_2010 == mn);
+    if size(ii,1) > 0 
+        aa = find(ayear == 2010 & amonth == mn);
+        ICS_2010(ii,1) = ICS(aa,1)/10; % Index of Consumer Sentiment / 10 in interview month
+        URATE_2010(ii,1) = URATE(aa,1)*100; % Unemployment rate in interview month
     end
-end     
+end
+
+%% 2012 NLSY79
+for mn = 1:12
+ii = find(INTERVIEW_MONTH_2012 == mn);
+    if size(ii,1) > 0 
+        aa = find(ayear == 2012 & amonth == mn);
+        ICS_2012(ii,1) = ICS(aa,1)/10; % Index of Consumer Sentiment / 10 in interview month
+        URATE_2012(ii,1) = URATE(aa,1)*100; % Unemployment rate in interview month
+    end
+end
+
+%% 2014 NLSY79
+for mn = 1:12
+ii = find(INTERVIEW_MONTH_2014 == mn);
+    if size(ii,1) > 0 
+        aa = find(ayear == 2014 & amonth == mn);
+        ICS_2014(ii,1) = ICS(aa,1)/10; % Index of Consumer Sentiment / 10 in interview month
+        URATE_2014(ii,1) = URATE(aa,1)*100; % Unemployment rate in interview month
+    end
+end
 
 %% Variable Matrices for Baseline Estimation %%    
-X92 = repmat(0,N,13); X94 = repmat(0,N,13); X98 = repmat(0,N,13); X00 = repmat(0,N,13); X02 = repmat(0,N,13);
+X92 = zeros(N,13); X94 = zeros(N,13); X98 = zeros(N,13); X00 = zeros(N,13); X02 = zeros(N,13);
 
 ii = find(iwyr_1992 > 0);
 X92(ii,:) = [ones(size(ii)), black_1992(ii), hispanic_1992(ii),male(ii),dropout(ii), smcoll(ii), pscoll(ii),... 
@@ -140,7 +151,7 @@ X02(ii,:) = [ones(size(ii)), black_2002(ii), hispanic_2002(ii),male(ii),dropout(
 X92 = sparse(X92); X94 = sparse(X94); X98 = sparse(X98); X00 = sparse(X00); X02 = sparse(X02);
 
 %% Variable Matrices for Sampling Sensitivity Check %%
-W92 = repmat(0,N,14); W94 = repmat(0,N,14); W98 = repmat(0,N,14); W00 = repmat(0,N,14); W02 = repmat(0,N,14);
+W92 = zeros(N,14); W94 = zeros(N,14); W98 = zeros(N,14); W00 = zeros(N,14); W02 = zeros(N,14);
 
 ii = find(iwyr_1992 > 0);
     W92(ii,:) = [ones(size(ii)), bc3141(ii),bc4280(ii),black_1992(ii), hispanic_1992(ii),...

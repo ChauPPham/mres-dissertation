@@ -1,4 +1,4 @@
-function [fval,fjac] = dutility(gamma,dfrac);
+function [fval,fjac] = dutility_old(gamma,dfrac)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % dutility
 % Used to find the cut points on gamble categories
