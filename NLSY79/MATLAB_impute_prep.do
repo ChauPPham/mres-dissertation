@@ -58,4 +58,14 @@ foreach i of varlist HH_INCOME INTERVIEW_MONTH EAST SOUTH WEST MARRIED OTHER HIG
 
 reshape wide HH_INCOME INTERVIEW_MONTH EAST SOUTH WEST MARRIED OTHER HIGHSCHOOL COLLEGE RISK_AVERSE1 RISK_AVERSE2 WEEKS_WORKED_ WEEKS_WORKED_SPS AGE_, i(R0000100) j(year)
 
+* Generate indicator variable for being asked question about risks in a certain year
+local year = 1993
+foreach i of varlist INTERVIEW_MONTH_* {
+	gen INTERVIEW_`year' = cond(`i' != ., 1, 0)
+	if `year' >= 2010 local year = `year' + 2
+	if `year' == 2006 local year = 2010
+	if (`year' >= 2002 & `year' < 2006) local year = `year' + 2
+	if `year' == 1993 local year = 2002
+}
+
 *export delimited using "MATLAB_INPUT.txt", delimiter(tab) novarnames nolabel replace
