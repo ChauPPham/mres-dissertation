@@ -577,6 +577,31 @@ label values AGE_CAT AGE_CAT
 drop source
 sort C0000100 year
 merge m:m C0000100 year C0000200 C0005300 C0005400 C0005700 Y2267000 using NLSY79CYA_supplement, keep(match) nogen
+merge m:m C0000100 year C0000200 C0005300 C0005400 C0005700 Y2267000 using NLSY79CYA_supplement2, keep(match) nogen
+merge m:m C0000100 year C0000200 C0005300 C0005400 C0005700 Y2267000 using NLSY79CYA_MONTH_AGE, keep(match) nogen
+
+* since there are multiple entries in a single year for some individuals
+* exclude duplicated years depending on the AGE (MONTH) of child DURING MOTHER'S SUPPLEMENT
+* MOTHER SUPPLEMENT is when data on investment is collected
+
+bys C0000100 year: gen dup = cond(_N==1, 0, _n)
+
+gen AGE_FLOOR = .
+replace AGE_FLOOR = 0 if AGE_CAT == 0
+replace AGE_FLOOR = 36 if AGE_CAT == 1
+replace AGE_FLOOR = 72 if AGE_CAT == 2
+replace AGE_FLOOR = 120 if AGE_CAT == 3
+
+gen AGE_CEIL = .
+replace AGE_CEIL = 35 if AGE_CAT == 0
+replace AGE_CEIL = 71 if AGE_CAT == 1
+replace AGE_CEIL = 119 if AGE_CAT == 2
+replace AGE_CEIL = 179 if AGE_CAT == 3
+
+drop if dup != 0 & (AGE_MONTH > AGE_CEIL | AGE_MONTH < AGE_FLOOR)
+
+drop AGE_FLOOR AGE_CEIL dup
+
 save MERGE_CHILD.dta, replace
 
 **# Bookmark #7 Reshape NLSY79 data
