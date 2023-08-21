@@ -804,6 +804,13 @@ replace RISK_AVERSE1 = 1 if RISK1_a == 1 & RISK1_b == 1
 label define RISK1 4 "High risk aversion" 3 "Moderate risk aversion" 2 "Low risk aversion" 1 "Lowest risk aversion"
 label values RISK_AVERSE1 RISK1
 
+gen RISK_AVERSE2 = .
+replace RISK_AVERSE2 = 4 if RISK2_a == 1 & RISK2_c == 1
+replace RISK_AVERSE2 = 3 if RISK2_a == 1 & RISK2_c == 2
+replace RISK_AVERSE2 = 2 if RISK2_a == 2 & RISK2_b == 1
+replace RISK_AVERSE2 = 1 if RISK2_a == 2 & RISK2_b == 2
+label values RISK_AVERSE2 RISK1
+
 * Run MLE to generate gamma - coefficient of relative risk aversion 
 * ASSUMPTION: 
 * 1. risk attitudes vary from year to year (since there is only one type of question, cannot elicit status quo bias (Kimball, 2008, 2009))
