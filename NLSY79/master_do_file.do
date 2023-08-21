@@ -602,6 +602,16 @@ drop if dup != 0 & (AGE_MONTH > AGE_CEIL | AGE_MONTH < AGE_FLOOR)
 
 drop AGE_FLOOR AGE_CEIL dup
 
+/* Counting the number of siblings one has by year */
+by C0000200 C0000100 (year), sort: gen NO_SIB = _n == 1
+sort C0000200 year
+by C0000200: replace NO_SIB = sum(NO_SIB)
+replace NO_SIB = NO_SIB - 1
+bys C0000200 year: egen max_temp = max(NO_SIB)
+replace NO_SIB = max_temp
+drop max_temp
+sort C0000100 year
+
 save MERGE_CHILD.dta, replace
 
 **# Bookmark #7 Reshape NLSY79 data
@@ -880,16 +890,6 @@ gen MOM_AGE = year - R0000500 - 1900
 gen AGE_14 = 0 if R0001900 >= 0		
 replace AGE_14 = 1 if R0001900 == 11
 
-/*Drop duplicate values
-bys C0000100 year: gen dup = cond(_N==1, 0, _n)
-tabulate dup
-drop if dup > 1
-*/
-
-/* Count the number of siblings one has */
-by R0000100 C0000100, sort: gen NO_SIB = _n == 1
-by R0000100: replace NO_SIB = sum(NO_SIB)
-by R0000100: replace NO_SIB = NO_SIB[_N] - 1
 
 /* Generate variable for age at first birth */
 by R0000100: egen AGE_FIRST_BIRTH = min(C0007000)
