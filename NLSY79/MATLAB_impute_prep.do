@@ -73,4 +73,6 @@ foreach i in 1993 2002 2004 2006 2010 2012 2014 {
 }
 
 
+drop if INTERVIEW_1993 == 0 & INTERVIEW_2002 == 0 & INTERVIEW_2004 == 0 & INTERVIEW_2006 == 0 & INTERVIEW_2010 == 0 & INTERVIEW_2012 == 0 & INTERVIEW_2014 == 0
+
 *export delimited using "MATLAB_INPUT.txt", delimiter(tab) novarnames nolabel replace

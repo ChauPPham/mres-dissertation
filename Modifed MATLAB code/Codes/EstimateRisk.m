@@ -62,11 +62,11 @@ elseif model == 12
         b(4,1) =  0.20; % Female
         b(5,1) = -0.05; % High school
         b(6,1) = 0.20; % Some College
-        b(7,1) = 0.35; % Age  
-        b(8,1) = -0.20; % Log Income  
+        b(7,1) = 0.35; % Age/10  
+        b(8,1) = -0.20; % Log Income/10  
         b(9,1) = -0.05; % Zero Income   
-        b(10,1) = -0.05; % Weeks worked in 2001       
-        b(11,1) = -0.10; % Weeks spouse worked in 2001
+        b(10,1) = -0.05; % # weeks worked in 2001       
+        b(11,1) = -0.10; % # weeks spouse worked in 2001
         b(12,1) = 0.10; % Unemployment Rate  
         b(13,1) = 0.10; % ICS
         b(14,1) = -0.10; % SQB
@@ -137,10 +137,10 @@ end
 		'Original Persistent Std Dev','SQB-Free Persistent Std Dev',...
 		'Original Transitory Std Dev','SQB-Free Transitory Std Dev');   
         elseif model == 12
-            info.rnames = strvcat(' ','Constant','Black','Hispanic','Male',...
-		'Lt 12 Yrs Ed','13-16 Yrs Ed','Gt 16 Yrs Ed','Age / 10',...
-		'Log Total Income / 10', 'Zero Total Income','Log Financial Assets / 10',...
-		'Non-Positive Assets','Unemployement Rate','Status Quo Bias','Std Dev',...
+            info.rnames = strvcat(' ','Constant','Black','Hispanic','Female',...
+		'High school','College','Age','Log income',...
+		'Zero income', '# weeks worked last year','# weeks spouse worked last year',...
+		'Unemployment rate','ICS','Status Quo Bias','Std Dev',...
 		'Original Persistent Std Dev','SQB-Free Persistent Std Dev',...
 		'Original Transitory Std Dev','SQB-Free Transitory Std Dev');   
         elseif model == 13
@@ -169,8 +169,8 @@ end
     si = zeros(N,size(b,1));
     si = sparse(si);
     while (iter < maxit) && err >= tol 
-        lik = likelihood(b,c93,c02,c04,c06,c10, c12,c14,X93,X02,X04,X06,X10,X12,X14);
-        si = fdjac('likelihood',b,c93,c02,c04,c06,c10, c12,c14,X93,X02,X04,X06,X10,X12,X14);
+        lik = likelihood(b,c93,c02,c04,c06,c10,c12,c14,X93,X02,X04,X06,X10,X12,X14);
+        si = fdjac('likelihood',b,c93,c02,c04,c06,c10,c12,c14,X93,X02,X04,X06,X10,X12,X14);
         
         L = sum(lik);
         d = inv(si'*si)*si'*ones(N,1);

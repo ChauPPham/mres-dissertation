@@ -54,10 +54,12 @@ LiF = ones(N,Nodes);
     for j = 1:Nodes
 
     Li93 = ones(N,Nodes);
-    Li94 = ones(N,Nodes);
-    Li98 = ones(N,Nodes);
-    Li00 = ones(N,Nodes);
     Li02 = ones(N,Nodes);
+    Li04 = ones(N,Nodes);
+    Li06 = ones(N,Nodes);
+    Li10 = ones(N,Nodes);
+    Li12 = ones(N,Nodes);
+    Li14 = ones(N,Nodes);
 
     % NLSY 1993 ONLY 
     i = find(c93>0); 
@@ -72,7 +74,7 @@ LiF = ones(N,Nodes);
     i = find(c02>0); 
         if size(i,1) > 0 
             for k = 1:Nodes
-                Li94(i,k) = norm_cdf((cpt_old(c02(i)+1)-muX02(i)-xU(j)-xKo(k))./sigmae02(i)) - ...
+                Li10(i,k) = norm_cdf((cpt_old(c02(i)+1)-muX02(i)-xU(j)-xKo(k))./sigmae02(i)) - ...
                     norm_cdf((cpt_old(c02(i))-muX02(i)-xU(j)-xKo(k))./sigmae02(i));
             end     
         end        
@@ -81,7 +83,7 @@ LiF = ones(N,Nodes);
     i = find(c04>0); 
         if size(i,1) > 0 
             for k = 1:Nodes
-                Li98(i,k) = norm_cdf((cpt_old(c04(i)+1)-muX04(i)-xU(j)-xKf(k))./sigmae04(i)) - ...
+                Li04(i,k) = norm_cdf((cpt_old(c04(i)+1)-muX04(i)-xU(j)-xKf(k))./sigmae04(i)) - ...
                     norm_cdf((cpt_old(c04(i))-muX04(i)-xU(j)-xKf(k))./sigmae04(i));
             end
         end        
@@ -90,8 +92,8 @@ LiF = ones(N,Nodes);
     i = find(c06>0); 
         if size(i,1) > 0 
             for k = 1:Nodes
-                Li00(i,k) = norm_cdf((cpt_old(c06(i)+1)-muX06(i)-xU(j)-xKf(k))./sigmae06(i)) - ...
-                    norm_cdf((cpt_new(c06(i))-muX06(i)-xU(j)-xKf(k))./sigmae06(i));
+                Li06(i,k) = norm_cdf((cpt_old(c06(i)+1)-muX06(i)-xU(j)-xKf(k))./sigmae06(i)) - ...
+                    norm_cdf((cpt_old(c06(i))-muX06(i)-xU(j)-xKf(k))./sigmae06(i));
             end
         end
 
@@ -99,13 +101,31 @@ LiF = ones(N,Nodes);
     i = find(c10>0); 
         if size(i,1) > 0 
             for k = 1:Nodes
-                Li02(i,k) = norm_cdf((cpt_new(c10(i)+1)-muX10(i)-xU(j)-xKf(k))./sigmae10(i)) - ...
+                Li10(i,k) = norm_cdf((cpt_new(c10(i)+1)-muX10(i)-xU(j)-xKf(k))./sigmae10(i)) - ...
                     norm_cdf((cpt_new(c10(i))-muX10(i)-xU(j)-xKf(k))./sigmae10(i));
             end
         end   
+
+    % NLSY 2012 ONLY
+    i = find(c12>0); 
+        if size(i,1) > 0 
+            for k = 1:Nodes
+                Li12(i,k) = norm_cdf((cpt_new(c12(i)+1)-muX12(i)-xU(j)-xKf(k))./sigmae12(i)) - ...
+                    norm_cdf((cpt_new(c12(i))-muX12(i)-xU(j)-xKf(k))./sigmae12(i));
+            end
+        end  
+
+    % NLSY 2014 ONLY
+    i = find(c14>0); 
+        if size(i,1) > 0 
+            for k = 1:Nodes
+                Li14(i,k) = norm_cdf((cpt_new(c14(i)+1)-muX14(i)-xU(j)-xKf(k))./sigmae14(i)) - ...
+                    norm_cdf((cpt_new(c14(i))-muX14(i)-xU(j)-xKf(k))./sigmae14(i));
+            end
+        end  
     
-    LiO(:,j) = (Li93.*Li94)*pKo;
-    LiF(:,j) = (Li98.*Li00.*Li02)*pKf;
+    LiO(:,j) = (Li93.*Li02.*Li04.*Li06)*pKo;
+    LiF(:,j) = (Li10.*Li12.*Li14)*pKf;
     
     end    
     
@@ -114,10 +134,6 @@ end
 %% Log-likelihood of individual's risk categories
 %% across all waves answered
 
-if model == 0 
-   Li = log((Li93.*Li94.*Li98.*Li00.*Li02));  
-elseif model >=1 & model < 10 
-   Li = log((Li93.*Li94.*Li98.*Li00.*Li02)*pU);
-elseif model >= 10
+if model >= 10
    Li = log((LiO.*LiF)*pU);
 end

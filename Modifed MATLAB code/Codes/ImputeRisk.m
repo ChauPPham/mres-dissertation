@@ -41,12 +41,14 @@ disp('  ');
     EAST_2014, SOUTH_2014, WEST_2014, MARRIED_2014, OTHER_2014, HS_2014, COLLEGE_2014, RISK_2014, AGE_2014, ...
     MOM_HGC, DAD_HGC, AFQT_2006, HISPANIC, BLACK, FEMALE, AGE_14, ...
     INTERVIEW_1993, INTERVIEW_2002, INTERVIEW_2004, INTERVIEW_2006, INTERVIEW_2010, INTERVIEW_2012, INTERVIEW_2014] = ...
-textread('../Input/MATLAB_INPUT.txt','%u %f %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u', -1, 'delimiter', '\t', 'emptyvalue', NaN);
+textread('../Input/MATLAB_INPUT.txt','%u %f %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u', -1, 'delimiter', '\t', 'emptyvalue', 0);
 
 N = size(ID,1);
 
-lINCOME_1993 = log(INCOME_1993); lINCOME_2002 = log(INCOME_2002); lINCOME_2004 = log(INCOME_2004); lINCOME_2006 = log(INCOME_2006); lINCOME_2010 = log(INCOME_2010); lINCOME_2012 = log(INCOME_2012); lINCOME_2014 = log(INCOME_2014); 
+lINCOME_1993 = log(INCOME_1993)/10; lINCOME_2002 = log(INCOME_2002)/10; lINCOME_2004 = log(INCOME_2004)/10; lINCOME_2006 = log(INCOME_2006)/10; lINCOME_2010 = log(INCOME_2010)/10; lINCOME_2012 = log(INCOME_2012)/10; lINCOME_2014 = log(INCOME_2014)/10; 
 zINCOME_1993 = INCOME_1993(:) == 0; zINCOME_2002 = INCOME_2002(:) == 0; zINCOME_2004 = INCOME_2004(:) == 0; zINCOME_2006 = INCOME_2006(:) == 0; zINCOME_2010 = INCOME_2010(:) == 0; zINCOME_2012 = INCOME_2012(:) == 0; zINCOME_2014 = INCOME_2014(:) == 0;  
+lINCOME_1993(zINCOME_1993 == 1) = 0; lINCOME_2002(zINCOME_2002 == 1) = 0; lINCOME_2004(zINCOME_2004 == 1) = 0; lINCOME_2006(zINCOME_2006 == 1) = 0; lINCOME_2010(zINCOME_2010 == 1) = 0; lINCOME_2012(zINCOME_2012 == 1) = 0; lINCOME_2014(zINCOME_2014 == 1) = 0;
+AGE_1993 = AGE_1993/10; AGE_2002 = AGE_2002/10; AGE_2004 = AGE_2004/10; AGE_2006 = AGE_2006/10; AGE_2010 = AGE_2010/10; AGE_2012 = AGE_2012/10; AGE_2014 = AGE_2014/10;
 
 %% Input Aggregate Data %%
 [amonth, ayear, ICS, URATE] = textread('../Input/AGGREGATE_MACRO.txt','%u %u %f %f');  
@@ -65,7 +67,7 @@ ii = find(INTERVIEW_MONTH_1993 == mn);
     if size(ii,1) > 0 
         aa = find(ayear == 1993 & amonth == mn);
         ICS_1993(ii,1) = ICS(aa,1)/10; % Index of Consumer Sentiment / 10 in interview month
-        URATE_1993(ii,1) = URATE(aa,1)*100; % Unemployment rate in interview month
+        URATE_1993(ii,1) = URATE(aa,1); % Unemployment rate in interview month
     end
 end   
 
@@ -75,7 +77,7 @@ ii = find(INTERVIEW_MONTH_2002 == mn);
     if size(ii,1) > 0 
         aa = find(ayear == 2002 & amonth == mn);
         ICS_2002(ii,1) = ICS(aa,1)/10; % Index of Consumer Sentiment / 10 in interview month
-        URATE_2002(ii,1) = URATE(aa,1)*100; % Unemployment rate in interview month
+        URATE_2002(ii,1) = URATE(aa,1); % Unemployment rate in interview month
     end
 end
 
@@ -85,7 +87,7 @@ ii = find(INTERVIEW_MONTH_2004 == mn);
     if size(ii,1) > 0 
         aa = find(ayear == 2004 & amonth == mn);
         ICS_2004(ii,1) = ICS(aa,1)/10; % Index of Consumer Sentiment / 10 in interview month
-        URATE_2004(ii,1) = URATE(aa,1)*100; % Unemployment rate in interview month
+        URATE_2004(ii,1) = URATE(aa,1); % Unemployment rate in interview month
     end
 end
 
@@ -95,7 +97,7 @@ ii = find(INTERVIEW_MONTH_2006 == mn);
     if size(ii,1) > 0 
         aa = find(ayear == 2006 & amonth == mn);
         ICS_2006(ii,1) = ICS(aa,1)/10; % Index of Consumer Sentiment / 10 in interview month
-        URATE_2006(ii,1) = URATE(aa,1)*100; % Unemployment rate in interview month
+        URATE_2006(ii,1) = URATE(aa,1); % Unemployment rate in interview month
     end
 end
 
@@ -105,7 +107,7 @@ ii = find(INTERVIEW_MONTH_2010 == mn);
     if size(ii,1) > 0 
         aa = find(ayear == 2010 & amonth == mn);
         ICS_2010(ii,1) = ICS(aa,1)/10; % Index of Consumer Sentiment / 10 in interview month
-        URATE_2010(ii,1) = URATE(aa,1)*100; % Unemployment rate in interview month
+        URATE_2010(ii,1) = URATE(aa,1); % Unemployment rate in interview month
     end
 end
 
@@ -115,7 +117,7 @@ ii = find(INTERVIEW_MONTH_2012 == mn);
     if size(ii,1) > 0 
         aa = find(ayear == 2012 & amonth == mn);
         ICS_2012(ii,1) = ICS(aa,1)/10; % Index of Consumer Sentiment / 10 in interview month
-        URATE_2012(ii,1) = URATE(aa,1)*100; % Unemployment rate in interview month
+        URATE_2012(ii,1) = URATE(aa,1); % Unemployment rate in interview month
     end
 end
 
@@ -125,7 +127,7 @@ ii = find(INTERVIEW_MONTH_2014 == mn);
     if size(ii,1) > 0 
         aa = find(ayear == 2014 & amonth == mn);
         ICS_2014(ii,1) = ICS(aa,1)/10; % Index of Consumer Sentiment / 10 in interview month
-        URATE_2014(ii,1) = URATE(aa,1)*100; % Unemployment rate in interview month
+        URATE_2014(ii,1) = URATE(aa,1); % Unemployment rate in interview month
     end
 end
 
@@ -164,41 +166,41 @@ X14(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), FEMALE(ii), HS_2014(ii), C
 X93 = sparse(X93); X02 = sparse(X02); X04 = sparse(X04); X06 = sparse(X06); X10 = sparse(X10); X12 = sparse(X12); X14 = sparse(X14);
 
 %% Variable Matrices for Sampling Sensitivity Check %%
-W93 = zeros(N,11); W02 = zeros(N,11); W04 = zeros(N,11); W06 = zeros(N,11); W10 = zeros(N,11); W12 = zeros(N,11); W14 = zeros(N,11);
+W93 = zeros(N,15); W02 = zeros(N,15); W04 = zeros(N,15); W06 = zeros(N,15); W10 = zeros(N,15); W12 = zeros(N,15); W14 = zeros(N,15);
 
 ii = find(INTERVIEW_1993 > 0);
     W93(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), EAST_1993(ii), SOUTH_1993(ii), WEST_1993(ii), ...
-        MARRIED_1993(ii), OTHER_1993(ii), AGE_1993(ii), URATE_1993(ii), ICS_1993(ii)];  
+        MARRIED_1993(ii), OTHER_1993(ii), AGE_1993(ii), URATE_1993(ii), ICS_1993(ii), MOM_HGC(ii), DAD_HGC(ii), AGE_14(ii), AFQT_2006(ii)];  
 
 ii = find(INTERVIEW_2002 > 0);
     W02(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), EAST_2002(ii), SOUTH_2002(ii), WEST_2002(ii), ...
-        MARRIED_2002(ii), OTHER_2002(ii), AGE_2002(ii), URATE_2002(ii), ICS_2002(ii)];     
+        MARRIED_2002(ii), OTHER_2002(ii), AGE_2002(ii), URATE_2002(ii), ICS_2002(ii), MOM_HGC(ii), DAD_HGC(ii), AGE_14(ii), AFQT_2006(ii)];     
 
 ii = find(INTERVIEW_2004 > 0);
     W04(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), EAST_2004(ii), SOUTH_2004(ii), WEST_2004(ii), ...
-        MARRIED_2004(ii), OTHER_2004(ii), AGE_2004(ii), URATE_2004(ii), ICS_2004(ii)];      
+        MARRIED_2004(ii), OTHER_2004(ii), AGE_2004(ii), URATE_2004(ii), ICS_2004(ii), MOM_HGC(ii), DAD_HGC(ii), AGE_14(ii), AFQT_2006(ii)];      
 
 ii = find(INTERVIEW_2006 > 0);
     W06(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), EAST_2006(ii), SOUTH_2006(ii), WEST_2006(ii), ...
-        MARRIED_2006(ii), OTHER_2006(ii), AGE_2006(ii), URATE_2006(ii), ICS_2006(ii)];   
+        MARRIED_2006(ii), OTHER_2006(ii), AGE_2006(ii), URATE_2006(ii), ICS_2006(ii), MOM_HGC(ii), DAD_HGC(ii), AGE_14(ii), AFQT_2006(ii)];   
 
 ii = find(INTERVIEW_2010 > 0);
     W10(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), EAST_2010(ii), SOUTH_2010(ii), WEST_2010(ii), ...
-        MARRIED_2010(ii), OTHER_2010(ii), AGE_2010(ii), URATE_2010(ii), ICS_2010(ii)];     
+        MARRIED_2010(ii), OTHER_2010(ii), AGE_2010(ii), URATE_2010(ii), ICS_2010(ii), MOM_HGC(ii), DAD_HGC(ii), AGE_14(ii), AFQT_2006(ii)];     
 
 ii = find(INTERVIEW_2012 > 0);
     W10(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), EAST_2012(ii), SOUTH_2012(ii), WEST_2012(ii), ...
-        MARRIED_2012(ii), OTHER_2012(ii), AGE_2012(ii), URATE_2012(ii), ICS_2012(ii)];  
+        MARRIED_2012(ii), OTHER_2012(ii), AGE_2012(ii), URATE_2012(ii), ICS_2012(ii), MOM_HGC(ii), DAD_HGC(ii), AGE_14(ii), AFQT_2006(ii)];  
 
 ii = find(INTERVIEW_2014 > 0);
     W10(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), EAST_2014(ii), SOUTH_2014(ii), WEST_2014(ii), ...
-    MARRIED_2014(ii), OTHER_2014(ii), AGE_2014(ii), URATE_2014(ii), ICS_2014(ii)];  
+    MARRIED_2014(ii), OTHER_2014(ii), AGE_2014(ii), URATE_2014(ii), ICS_2014(ii), MOM_HGC(ii), DAD_HGC(ii), AGE_14(ii), AFQT_2006(ii)];  
 
 W93 = sparse(W93); W02 = sparse(W02); W04 = sparse(W04); W06 = sparse(W06); W10 = sparse(W10); W12 = sparse(W12); W14 = sparse(W14);
 
 %% Variable Matrices for Sampling Sensitivity Check (Plus Second-Step Covariates) %%
 
-XW93 = zeros(N,18); XW02 = zeros(N,18); XW04 = zeros(N,18); XW06 = zeros(N,18); XW10 = zeros(N,18); XW12 = zeros(N,18); XW14 = zeros(N,18);
+XW93 = zeros(N,22); XW02 = zeros(N,22); XW04 = zeros(N,22); XW06 = zeros(N,22); XW10 = zeros(N,22); XW12 = zeros(N,22); XW14 = zeros(N,22);
 
 ii = find(INTERVIEW_1993 > 0);
 XW93(ii,:) = [W93(ii,:), FEMALE(ii), HS_1993(ii), COLLEGE_1993(ii), lINCOME_1993(ii), ... 

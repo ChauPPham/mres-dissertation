@@ -12,7 +12,7 @@
 %   x         : evaluation point
 %   P1,P2,... : additional arguments for f (optional)
 % OUTPUT
-%   fjac      : finite differnce Jacobian
+%   fjac      : finite difference Jacobian
 
 % Copyright (c) 1997-2002, Paul L. Fackler & Mario J. Miranda
 % paul_fackler@ncsu.edu, miranda.4@osu.edu
@@ -26,7 +26,7 @@ xh1=x+h; xh0=x-h;
 h=xh1-xh0;
 
 fdjac = zeros(1,size(x,1));
-for j=1:length(x);
+for j=1:length(x)
    xx = x; 
    xx(j) = xh1(j); f1=feval(f,xx,varargin{:});
    xx(j) = xh0(j); f0=feval(f,xx,varargin{:});
