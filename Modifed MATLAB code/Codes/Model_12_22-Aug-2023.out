@@ -1,0 +1,36 @@
+disp('Model 12')
+Model 12
+% one here indicates those that have status quo bias in them
+% zero indicates new version without status quo bias
+EstimateRisk_KSS(RISK_1993, RISK_2002, RISK_2004, RISK_2006, RISK_2010, RISK_2012, RISK_2014,[X93 ,ones(N,1)],[X02 ,ones(N,1)], [X04 ,ones(N,1)],[X06, ones(N,1)], ...
+    [X10, zeros(N,1)], [X12, zeros(N,1)], [X14, zeros(N,1)]);
+{Unrecognized function or variable 'RISK_1993'.
+} 
+clear all;
+load ../Output/MATLAB_sample; 
+global model
+model = 12;
+itertime = clock;
+disp(datestr(itertime,0));
+22-Aug-2023 16:55:35
+dfile = ['Model_',int2str(model),'_',datestr(clock,1),'.out'];
+diary(dfile);
+disp('Model 12')
+Model 12
+% one here indicates those that have status quo bias in them
+% zero indicates new version without status quo bias
+EstimateRisk_KSS(RISK_1993, RISK_2002, RISK_2004, RISK_2006, RISK_2010, RISK_2012, RISK_2014,[X93 ,ones(N,1)],[X02 ,ones(N,1)], [X04 ,ones(N,1)],[X06, ones(N,1)], ...
+    [X10, zeros(N,1)], [X12, zeros(N,1)], [X14, zeros(N,1)]);
+{Unrecognized function or variable 'EstimateRisk_KSS'.
+} 
+clear all;
+load ../Output/MATLAB_sample; 
+global model
+model = 12;
+itertime = clock;
+disp(datestr(itertime,0));
+22-Aug-2023 16:55:43
+dfile = ['Model_',int2str(model),'_',datestr(clock,1),'.out'];
+diary(dfile);
+disp('Model 12')
+Model 12

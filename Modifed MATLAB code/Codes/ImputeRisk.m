@@ -25,23 +25,23 @@ disp('  ');
 % input all variables including indicator dummy (instead of categorical
 % variable)
 
-[ID, INCOME_1993, RISK1_1993, INTERVIEW_MONTH_1993, WKS_WORKED_1993, WKS_WORKED_SPS_1993, RISK2_1993, ...
-    EAST_1993, SOUTH_1993, WEST_1993, MARRIED_1993, OTHER_1993, HS_1993, COLLEGE_1993, AGE_1993, ...
-    INCOME_2002, RISK1_2002, INTERVIEW_MONTH_2002, WKS_WORKED_2002, WKS_WORKED_SPS_2002, RISK2_2002, ...
-    EAST_2002, SOUTH_2002, WEST_2002, MARRIED_2002, OTHER_2002, HS_2002, COLLEGE_2002, AGE_2002, ...
-    INCOME_2004, RISK1_2004, INTERVIEW_MONTH_2004, WKS_WORKED_2004, WKS_WORKED_SPS_2004, RISK2_2004, ...
-    EAST_2004, SOUTH_2004, WEST_2004, MARRIED_2004, OTHER_2004, HS_2004, COLLEGE_2004, AGE_2004, ...
-    INCOME_2006, RISK1_2006, INTERVIEW_MONTH_2006, WKS_WORKED_2006, WKS_WORKED_SPS_2006, RISK2_2006, ...
-    EAST_2006, SOUTH_2006, WEST_2006, MARRIED_2006, OTHER_2006, HS_2006, COLLEGE_2006, AGE_2006, ...
-    INCOME_2010, RISK1_2010, INTERVIEW_MONTH_2010, WKS_WORKED_2010, WKS_WORKED_SPS_2010, RISK2_2010, ...
-    EAST_2010, SOUTH_2010, WEST_2010, MARRIED_2010, OTHER_2010, HS_2010, COLLEGE_2010, AGE_2010, ...
-    INCOME_2012, RISK1_2012, INTERVIEW_MONTH_2012, WKS_WORKED_2012, WKS_WORKED_SPS_2012, RISK2_2012, ...
-    EAST_2012, SOUTH_2012, WEST_2012, MARRIED_2012, OTHER_2012, HS_2012, COLLEGE_2012, AGE_2012, ...
-    INCOME_2014, RISK1_2014, INTERVIEW_MONTH_2014, WKS_WORKED_2014, WKS_WORKED_SPS_2014, RISK2_2014, ...
-    EAST_2014, SOUTH_2014, WEST_2014, MARRIED_2014, OTHER_2014, HS_2014, COLLEGE_2014, AGE_2014, ...
+[ID, INCOME_1993, INTERVIEW_MONTH_1993, WKS_WORKED_SPS_1993, WKS_WORKED_1993, ...
+    EAST_1993, SOUTH_1993, WEST_1993, MARRIED_1993, OTHER_1993, HS_1993, COLLEGE_1993, RISK_1993, AGE_1993, ...
+    INCOME_2002, INTERVIEW_MONTH_2002, WKS_WORKED_SPS_2002, WKS_WORKED_2002, ...
+    EAST_2002, SOUTH_2002, WEST_2002, MARRIED_2002, OTHER_2002, HS_2002, COLLEGE_2002, RISK_2002, AGE_2002, ...
+    INCOME_2004, INTERVIEW_MONTH_2004, WKS_WORKED_SPS_2004, WKS_WORKED_2004, ...
+    EAST_2004, SOUTH_2004, WEST_2004, MARRIED_2004, OTHER_2004, HS_2004, COLLEGE_2004, RISK_2004, AGE_2004, ...
+    INCOME_2006, INTERVIEW_MONTH_2006, WKS_WORKED_SPS_2006, WKS_WORKED_2006, ...
+    EAST_2006, SOUTH_2006, WEST_2006, MARRIED_2006, OTHER_2006, HS_2006, COLLEGE_2006, RISK_2006, AGE_2006, ...
+    INCOME_2010, INTERVIEW_MONTH_2010, WKS_WORKED_SPS_2010, WKS_WORKED_2010, ...
+    EAST_2010, SOUTH_2010, WEST_2010, MARRIED_2010, OTHER_2010, HS_2010, COLLEGE_2010, RISK_2010, AGE_2010, ...
+    INCOME_2012, INTERVIEW_MONTH_2012, WKS_WORKED_SPS_2012, WKS_WORKED_2012, ...
+    EAST_2012, SOUTH_2012, WEST_2012, MARRIED_2012, OTHER_2012, HS_2012, COLLEGE_2012, RISK_2012, AGE_2012, ...
+    INCOME_2014, INTERVIEW_MONTH_2014, WKS_WORKED_SPS_2014, WKS_WORKED_2014, ...
+    EAST_2014, SOUTH_2014, WEST_2014, MARRIED_2014, OTHER_2014, HS_2014, COLLEGE_2014, RISK_2014, AGE_2014, ...
     MOM_HGC, DAD_HGC, AFQT_2006, HISPANIC, BLACK, FEMALE, AGE_14, ...
     INTERVIEW_1993, INTERVIEW_2002, INTERVIEW_2004, INTERVIEW_2006, INTERVIEW_2010, INTERVIEW_2012, INTERVIEW_2014] = ...
-textread('../Input/MATLAB_INPUT.txt','%u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u', -1, 'delimiter', '\t', 'emptyvalue', Inf);
+textread('../Input/MATLAB_INPUT.txt','%u %f %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u', -1, 'delimiter', '\t', 'emptyvalue', NaN);
 
 N = size(ID,1);
 
@@ -170,27 +170,27 @@ ii = find(INTERVIEW_1993 > 0);
     W93(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), EAST_1993(ii), SOUTH_1993(ii), WEST_1993(ii), ...
         MARRIED_1993(ii), OTHER_1993(ii), AGE_1993(ii), URATE_1993(ii), ICS_1993(ii)];  
 
-ii = find(iwyr_2002 > 0);
+ii = find(INTERVIEW_2002 > 0);
     W02(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), EAST_2002(ii), SOUTH_2002(ii), WEST_2002(ii), ...
         MARRIED_2002(ii), OTHER_2002(ii), AGE_2002(ii), URATE_2002(ii), ICS_2002(ii)];     
 
-ii = find(iwyr_2004 > 0);
+ii = find(INTERVIEW_2004 > 0);
     W04(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), EAST_2004(ii), SOUTH_2004(ii), WEST_2004(ii), ...
         MARRIED_2004(ii), OTHER_2004(ii), AGE_2004(ii), URATE_2004(ii), ICS_2004(ii)];      
 
-ii = find(iwyr_2006 > 0);
+ii = find(INTERVIEW_2006 > 0);
     W06(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), EAST_2006(ii), SOUTH_2006(ii), WEST_2006(ii), ...
         MARRIED_2006(ii), OTHER_2006(ii), AGE_2006(ii), URATE_2006(ii), ICS_2006(ii)];   
 
-ii = find(iwyr_2010 > 0);
+ii = find(INTERVIEW_2010 > 0);
     W10(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), EAST_2010(ii), SOUTH_2010(ii), WEST_2010(ii), ...
         MARRIED_2010(ii), OTHER_2010(ii), AGE_2010(ii), URATE_2010(ii), ICS_2010(ii)];     
 
-ii = find(iwyr_2012 > 0);
+ii = find(INTERVIEW_2012 > 0);
     W10(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), EAST_2012(ii), SOUTH_2012(ii), WEST_2012(ii), ...
         MARRIED_2012(ii), OTHER_2012(ii), AGE_2012(ii), URATE_2012(ii), ICS_2012(ii)];  
 
-ii = find(iwyr_2014 > 0);
+ii = find(INTERVIEW_2014 > 0);
     W10(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), EAST_2014(ii), SOUTH_2014(ii), WEST_2014(ii), ...
     MARRIED_2014(ii), OTHER_2014(ii), AGE_2014(ii), URATE_2014(ii), ICS_2014(ii)];  
 
@@ -232,7 +232,7 @@ XW14(ii,:) = [W14(ii,:), FEMALE(ii), HS_2014(ii), COLLEGE_2014(ii), lINCOME_2014
 XW93 = sparse(XW93); XW02 = sparse(XW02); XW04 = sparse(XW04); XW06 = sparse(XW06); XW10 = sparse(XW10); XW12 = sparse(XW12); XW14 = sparse(XW14);
 
 %% Save Matlab Data set %%
-save MATLAB_sample ID X* W* N HS* COLLEGE* FEMALE* RISK* lINCOME* zINCOME* BLACK HISPANIC WKS* MARRIED* OTHER* AGE*
+save ../Output/MATLAB_sample ID X* W* N HS* COLLEGE* FEMALE* RISK* lINCOME* zINCOME* BLACK HISPANIC WKS* MARRIED* OTHER* AGE*
 diary off;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -241,7 +241,7 @@ diary off;
 
 %% MODEL 11: No Covariates, Transitory Response Error, Persistent Response Error
 clear all;
-load KSSsample;
+load ../Output/MATLAB_sample;
 global model 
 model = 11;
 itertime = clock;
@@ -249,12 +249,12 @@ disp(datestr(itertime,0));
 dfile = ['Model_',int2str(model),'_',datestr(clock,1),'.out'];
 diary(dfile);
 disp('Model 11')
-EstimateRisk_KSS(c92,c94,c98,c00,c02,[X93(:,1),ones(N,1)],[X02(:,1),ones(N,1)],[X04(:,1),zeros(N,1)],[X06(:,1),zeros(N,1)],[X02(:,1),zeros(N,1)]);
+EstimateRisk(RISK_1993, RISK_2002, RISK_2004, RISK_2006, RISK_2010, RISK_2012, RISK_2014,[X93(:,1),ones(N,1)],[X02(:,1),ones(N,1)],[X04(:,1),ones(N,1)],[X06(:,1),ones(N,1)],[X10(:,1),zeros(N,1)],[X12(:,1),zeros(N,1)],[X14(:,1),zeros(N,1)]);
 diary off;
 
 %% MODEL 12: Second-Step Covariates, Transitory Response Error, Persistent Response Error
 clear all;
-load KSSsample; 
+load ../Output/MATLAB_sample; 
 global model
 model = 12;
 itertime = clock;
@@ -262,13 +262,15 @@ disp(datestr(itertime,0));
 dfile = ['Model_',int2str(model),'_',datestr(clock,1),'.out'];
 diary(dfile);
 disp('Model 12')
-EstimateRisk_KSS(c92,c94,c98,c00,c02,[X93 ,ones(N,1)],[X02 ,ones(N,1)],...
-    [X04 ,zeros(N,1)],[X06, zeros(N,1)],[X02, zeros(N,1)]);
+% one here indicates those that have status quo bias in them
+% zero indicates new version without status quo bias
+EstimateRisk(RISK_1993, RISK_2002, RISK_2004, RISK_2006, RISK_2010, RISK_2012, RISK_2014,[X93 ,ones(N,1)],[X02 ,ones(N,1)], [X04 ,ones(N,1)],[X06, ones(N,1)], ...
+    [X10, zeros(N,1)], [X12, zeros(N,1)], [X14, zeros(N,1)]);
 diary off;
 
 %% MODEL 13: Sampling Covariates, Transitory Response Error, Persistent Response Error
 clear all;
-load KSSsample; 
+load ../Output/MATLAB_sample;
 global model
 model = 13;
 itertime = clock;
@@ -282,7 +284,7 @@ diary off;
 
 %% MODEL 14: Sampling plus Second-Step Covariates, Transitory Response Error, Persistent Response Error
 clear all;
-load KSSsample; 
+load ../Output/MATLAB_sample; 
 global model
 model = 14;
 itertime = clock;

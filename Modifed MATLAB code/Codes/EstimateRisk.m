@@ -1,14 +1,16 @@
-function EstimateRisk_KSS(c92,c94,c98,c00,c02,X92,X94,X98,X00,X02);
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% EstimateRisk_KSS.m
+function EstimateRisk(c93,c02,c04,c06,c10,c12,c14,X93,X02,X04,X06,X10,X12,X14)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EstimateRisk.m
 % First-Step MLE
-% Updated July 26, 2007
-% Claudia R. Sahm (claudia.r.sahm@frb.gov)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Based on EstimateRisk_KSS BY Claudia R. Sahm (claudia.r.sahm@frb.gov)
+%
+% Author: Chau Pham (chau.pham.22@ucl.ac.uk)
+% Updated August 22, 2023
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 global cpt_old cpt_new model  
 
-N = size(X92,1);
+N = size(X93,1);
 maxit = 200;
 tol = 1.0e-6; 
 
@@ -43,33 +45,7 @@ cpt_new = [-1.0e+77; log(cutoff_new)'; 1.0e+77]; % new bounds
 tic;
 
 % Initial parameter guess;
-if model == 0 %  
-        b = zeros(2,1);
-        b(1,1) = -1.95; % Constant
-        b(2,1) = 1.76; % Std. dev. 
-elseif model == 1  
-        b = zeros(3,1);
-        b(1,1) = -0.85; % Constant         
-        b(2,1) = 0.75; % True Std Dev
-        b(3,1) = 1.40; % Transitory Error - Constant                  
-elseif model == 2   
-        b = zeros(15,1); 
-        b(1,1) = 0.50; % Constant         
-        b(2,1) = -0.20; % Black
-        b(3,1) =  0.05; % Hispanic 
-        b(4,1) =  0.20; % Male
-        b(5,1) = -0.05; % Drop Out
-        b(6,1) = 0.20; % Some College
-        b(7,1) = 0.35; % Post College  
-        b(8,1) = -0.20; % Age / 10   
-        b(9,1) = -0.05; % Log Income / 10    
-        b(10,1) = -0.05; % Zero Income        
-        b(11,1) = -0.10; % Log Wealth / 10 
-        b(12,1) = 0.10; % Negative Wealth        
-        b(13,1) = 0.10; % U Rate       
-        b(14,1) = 0.75; % True Std Dev
-        b(15,1) = 1.40; % Transitory Error             
-elseif model == 11   
+if model == 11   
         b = zeros(7,1);
         b(1,1) = -1.80; % Constant         
         b(2,1) = -0.10; % SQB
@@ -83,16 +59,16 @@ elseif model == 12
         b(1,1) = -0.85; % Constant         
         b(2,1) = -0.20; % Black
         b(3,1) =  0.05; % Hispanic 
-        b(4,1) =  0.20; % Male
-        b(5,1) = -0.05; % Drop Out
+        b(4,1) =  0.20; % Female
+        b(5,1) = -0.05; % High school
         b(6,1) = 0.20; % Some College
-        b(7,1) = 0.35; % Post College  
-        b(8,1) = -0.20; % Age / 10   
-        b(9,1) = -0.05; % Log Income / 10    
-        b(10,1) = -0.05; % Zero Income        
-        b(11,1) = -0.10; % Log Wealth / 10 
-        b(12,1) = 0.10; % Negative Wealth    
-        b(13,1) = 0.10; % Unemployment Rate   
+        b(7,1) = 0.35; % Age  
+        b(8,1) = -0.20; % Log Income  
+        b(9,1) = -0.05; % Zero Income   
+        b(10,1) = -0.05; % Weeks worked in 2001       
+        b(11,1) = -0.10; % Weeks spouse worked in 2001
+        b(12,1) = 0.10; % Unemployment Rate  
+        b(13,1) = 0.10; % ICS
         b(14,1) = -0.10; % SQB
         b(15,1) = 0.725; % True Std Dev
         b(16,1) = 0.75; % Persistent Original
@@ -156,16 +132,7 @@ end
  info.cnames = strvcat('estimate','t-stat','step');
     info.fmt=strvcat('%15.3f','%15.3f','%15.6f');
      
-        if model == 0
-          info.rnames = strvcat(' ','Mean','Std. dev.');    
-        elseif model == 1 
-            info.rnames = strvcat(' ','Mean','Std Dev','Error Std Dev');              
-        elseif model == 2
-            info.rnames = strvcat(' ','Constant','Black','Hispanic','Male',...
-		'Lt 12 Yrs Ed','13-16 Yrs Ed','Gt 16 Yrs Ed','Age / 10',...
-		'Log Total Income / 10', 'Zero Total Income','Log Financial Assets / 10',...
-		'Non-Positive Assets','Unemployement Rate','Std Dev','Error Std Dev');                    
-        elseif model == 11
+        if model == 11
             info.rnames = strvcat(' ','Constant','Status Quo Bias','Std Dev',...
 		'Original Persistent Std Dev','SQB-Free Persistent Std Dev',...
 		'Original Transitory Std Dev','SQB-Free Transitory Std Dev');   
@@ -201,9 +168,9 @@ end
     lik = zeros(N,1);
     si = zeros(N,size(b,1));
     si = sparse(si);
-    while (iter < maxit) & err >= tol 
-        lik = like_KSS(b,c92,c94,c98,c00,c02,X92,X94,X98,X00,X02);
-        si = fdjac('like_KSS',b,c92,c94,c98,c00,c02,X92,X94,X98,X00,X02);
+    while (iter < maxit) && err >= tol 
+        lik = likelihood(b,c93,c02,c04,c06,c10, c12,c14,X93,X02,X04,X06,X10,X12,X14);
+        si = fdjac('likelihood',b,c93,c02,c04,c06,c10, c12,c14,X93,X02,X04,X06,X10,X12,X14);
         
         L = sum(lik);
         d = inv(si'*si)*si'*ones(N,1);
