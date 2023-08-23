@@ -454,3 +454,69 @@ XW93 = sparse(XW93); XW02 = sparse(XW02); XW04 = sparse(XW04); XW06 = sparse(XW0
 %% Save Matlab Data set %%
 save ../Output/MATLAB_sample ID X* W* N HS* COLLEGE* FEMALE* RISK* lINCOME* zINCOME* BLACK HISPANIC WKS* MARRIED* OTHER* AGE*
 diary off;
+23-Aug-2023 20:47:19
+   
+Table 6. True-to-Proxy Variance Ratio Lambda
+Model 11, Transitory and Persistent Response Error
+Unrecognized function or variable 'va_11'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ImputeRisk', 'E:\GitHub\mres-dissertation\Modifed MATLAB code\Codes\ImputeRisk.m', 336)" style="font-weight:bold">ImputeRisk</a> (<a href="matlab: opentoline('E:\GitHub\mres-dissertation\Modifed MATLAB code\Codes\ImputeRisk.m',336,0)">line 336</a>)
+mprint([va_11,Vtheta_11,Vgamma_11;var(Elntheta_11),var(Etheta_11),var(Egamma_11);lambdalnP,lambdaP,Vgamma_11/var(Egamma_11)],info);
+
+Array indices must be positive integers or logical values.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Elntheta', 'E:\GitHub\mres-dissertation\Modifed MATLAB code\Codes\Elntheta.m', 168)" style="font-weight:bold">Elntheta</a> (<a href="matlab: opentoline('E:\GitHub\mres-dissertation\Modifed MATLAB code\Codes\Elntheta.m',168,0)">line 168</a>)
+                N10(i,k) = sigmae12(i).*( norm_pdf((cpt_new(c10(i))-muX12(i)-xU(j)-xKf(k))./sigmae12(i)) ...
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ImputeRisk', 'E:\GitHub\mres-dissertation\Modifed MATLAB code\Codes\ImputeRisk.m', 315)" style="font-weight:bold">ImputeRisk</a> (<a href="matlab: opentoline('E:\GitHub\mres-dissertation\Modifed MATLAB code\Codes\ImputeRisk.m',315,0)">line 315</a>)
+[Elntheta_11] = Elntheta(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,RISK_2012,RISK_2014, ...
+
+   
+Table 6. True-to-Proxy Variance Ratio Lambda
+Model 11, Transitory and Persistent Response Error
+Unrecognized function or variable 'va_11'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ImputeRisk', 'E:\GitHub\mres-dissertation\Modifed MATLAB code\Codes\ImputeRisk.m', 336)" style="font-weight:bold">ImputeRisk</a> (<a href="matlab: opentoline('E:\GitHub\mres-dissertation\Modifed MATLAB code\Codes\ImputeRisk.m',336,0)">line 336</a>)
+mprint([va_11,Vtheta_11,Vgamma_11;var(Elntheta_11),var(Etheta_11),var(Egamma_11);lambdalnP,lambdaP,Vgamma_11/var(Egamma_11)],info);
+
+Array indices must be positive integers or logical values.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Elntheta', 'E:\GitHub\mres-dissertation\Modifed MATLAB code\Codes\Elntheta.m', 168)" style="font-weight:bold">Elntheta</a> (<a href="matlab: opentoline('E:\GitHub\mres-dissertation\Modifed MATLAB code\Codes\Elntheta.m',168,0)">line 168</a>)
+                N10(i,k) = sigmae12(i).*( norm_pdf((cpt_new(c10(i))-muX12(i)-xU(j)-xKf(k))./sigmae12(i)) ...
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ImputeRisk', 'E:\GitHub\mres-dissertation\Modifed MATLAB code\Codes\ImputeRisk.m', 315)" style="font-weight:bold">ImputeRisk</a> (<a href="matlab: opentoline('E:\GitHub\mres-dissertation\Modifed MATLAB code\Codes\ImputeRisk.m',315,0)">line 315</a>)
+[Elntheta_11] = Elntheta(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,RISK_2012,RISK_2014, ...
+
+   
+Table 6. True-to-Proxy Variance Ratio Lambda
+Model 11, Transitory and Persistent Response Error
+            Log Theta      Theta      Gamma 
+Var. True       0.799      2.465      2.998 
+Var. Proxy      0.467      0.848      1.033 
+Ratio           1.710      2.907      2.902 
+
+Undefined function 'Tables_Model_11' for input arguments of type 'double'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ImputeRisk', 'E:\GitHub\mres-dissertation\Modifed MATLAB code\Codes\ImputeRisk.m', 339)" style="font-weight:bold">ImputeRisk</a> (<a href="matlab: opentoline('E:\GitHub\mres-dissertation\Modifed MATLAB code\Codes\ImputeRisk.m',339,0)">line 339</a>)
+Tables_Model_11(b,V);    
+
+Not enough input arguments.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Etheta', 'E:\GitHub\mres-dissertation\Modifed MATLAB code\Codes\Etheta.m', 56)" style="font-weight:bold">Etheta</a> (<a href="matlab: opentoline('E:\GitHub\mres-dissertation\Modifed MATLAB code\Codes\Etheta.m',56,0)">line 56</a>)
+muX06 = X06*b(1:K,1); % mean of log risk tolerance in 2006
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ImputeRisk', 'E:\GitHub\mres-dissertation\Modifed MATLAB code\Codes\ImputeRisk.m', 344)" style="font-weight:bold">ImputeRisk</a> (<a href="matlab: opentoline('E:\GitHub\mres-dissertation\Modifed MATLAB code\Codes\ImputeRisk.m',344,0)">line 344</a>)
+[Etheta_12]  =
+Etheta(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,[X93,ones(N,1)],[X02,ones(N,1)],[X04,zeros(N,1)],[X06,zeros(N,1)],[X02,zeros(N,1)]);
+
+Not enough input arguments.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Etheta', 'E:\GitHub\mres-dissertation\Modifed MATLAB code\Codes\Etheta.m', 58)" style="font-weight:bold">Etheta</a> (<a href="matlab: opentoline('E:\GitHub\mres-dissertation\Modifed MATLAB code\Codes\Etheta.m',58,0)">line 58</a>)
+muX12 = X12*b(1:K,1); % mean of log risk tolerance in 2012
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ImputeRisk', 'E:\GitHub\mres-dissertation\Modifed MATLAB code\Codes\ImputeRisk.m', 344)" style="font-weight:bold">ImputeRisk</a> (<a href="matlab: opentoline('E:\GitHub\mres-dissertation\Modifed MATLAB code\Codes\ImputeRisk.m',344,0)">line 344</a>)
+[Etheta_12]  =
+Etheta(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,[X93,ones(N,1)],[X02,ones(N,1)],[X04,zeros(N,1)],[X06,zeros(N,1)],[X10,zeros(N,1)],[X12,zeros(N,1)],[X14,zeros(N,1)]);
+
+Model 12: Log Risk Tolerance Mean = -0.238 (0.168) Std Dev = 0.898 (0.021)
+Model 12: Risk Tolerance Mean = 1.180 Std Dev = 1.314

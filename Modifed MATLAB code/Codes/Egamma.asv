@@ -1,4 +1,4 @@
-function [Egamma92] = Egamma(b,c93,c02,c04,c06,c10,c12,c14,X93,X02,X04,X06,X10,X12,X14)
+function [Egamma93] = Egamma(b,c93,c02,c04,c06,c10,c12,c14,X93,X02,X04,X06,X10,X12,X14)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Egamma.m
 % Computes the E(gamma|c,X)
@@ -117,10 +117,10 @@ numF = ones(N,Nodes);
     i = find(c02>0); 
         if size(i,1) > 0 
             for k = 1:Nodes
-                num02(i,k) = norm_cdf((cpt_new(c02(i)+1)-muX02(i)-xU(j)-xKo(k)+sigmau^2)./sigmae02	(i)) - ...
-                    norm_cdf((cpt_new(c02(i))-muX02(i)-xU(j)-xKo(k)+sigmau^2)./sigmae02	(i));
-                den02(i,k) = norm_cdf((cpt_new(c02(i)+1)-muX02(i)-xU(j)-xKo(k))./sigmae02	(i)) - ...
-                    norm_cdf((cpt_new(c02(i))-muX02(i)-xU(j)-xKo(k))./sigmae02	(i));                
+                num02(i,k) = norm_cdf((cpt_old(c02(i)+1)-muX02(i)-xU(j)-xKo(k)+sigmau^2)./sigmae02	(i)) - ...
+                    norm_cdf((cpt_old(c02(i))-muX02(i)-xU(j)-xKo(k)+sigmau^2)./sigmae02	(i));
+                den02(i,k) = norm_cdf((cpt_old(c02(i)+1)-muX02(i)-xU(j)-xKo(k))./sigmae02	(i)) - ...
+                    norm_cdf((cpt_old(c02(i))-muX02(i)-xU(j)-xKo(k))./sigmae02	(i));                
             end     
         end        
 
@@ -128,10 +128,10 @@ numF = ones(N,Nodes);
     i = find(c04>0); 
         if size(i,1) > 0 
             for k = 1:Nodes
-                num04(i,k) = norm_cdf((cpt_new(c04(i)+1)-muX04(i)-xU(j)-xKf(k)+sigmau^2)./sigmae04(i)) - ...
-                    norm_cdf((cpt_new(c04(i))-muX04(i)-xU(j)-xKf(k)+sigmau^2)./sigmae04(i));
-                den04(i,k) = norm_cdf((cpt_new(c04(i)+1)-muX04(i)-xU(j)-xKf(k))./sigmae04(i)) - ...
-                    norm_cdf((cpt_new(c04(i))-muX04(i)-xU(j)-xKf(k))./sigmae04(i));
+                num04(i,k) = norm_cdf((cpt_old(c04(i)+1)-muX04(i)-xU(j)-xKf(k)+sigmau^2)./sigmae04(i)) - ...
+                    norm_cdf((cpt_old(c04(i))-muX04(i)-xU(j)-xKf(k)+sigmau^2)./sigmae04(i));
+                den04(i,k) = norm_cdf((cpt_old(c04(i)+1)-muX04(i)-xU(j)-xKf(k))./sigmae04(i)) - ...
+                    norm_cdf((cpt_old(c04(i))-muX04(i)-xU(j)-xKf(k))./sigmae04(i));
             end
         end        
 
@@ -139,10 +139,10 @@ numF = ones(N,Nodes);
     i = find(c06>0); 
         if size(i,1) > 0 
             for k = 1:Nodes
-                num06(i,k) = norm_cdf((cpt_new(c06(i)+1)-muX06(i)-xU(j)-xKf(k)+sigmau^2)./sigmae06(i)) - ...
-                    norm_cdf((cpt_new(c06(i))-muX06(i)-xU(j)-xKf(k)+sigmau^2)./sigmae06(i));
-                den06(i,k) = norm_cdf((cpt_new(c06(i)+1)-muX06(i)-xU(j)-xKf(k))./sigmae06(i)) - ...
-                    norm_cdf((cpt_new(c06(i))-muX06(i)-xU(j)-xKf(k))./sigmae06(i));                
+                num06(i,k) = norm_cdf((cpt_old(c06(i)+1)-muX06(i)-xU(j)-xKf(k)+sigmau^2)./sigmae06(i)) - ...
+                    norm_cdf((cpt_old(c06(i))-muX06(i)-xU(j)-xKf(k)+sigmau^2)./sigmae06(i));
+                den06(i,k) = norm_cdf((cpt_old(c06(i)+1)-muX06(i)-xU(j)-xKf(k))./sigmae06(i)) - ...
+                    norm_cdf((cpt_old(c06(i))-muX06(i)-xU(j)-xKf(k))./sigmae06(i));                
             end
         end
 
@@ -168,21 +168,21 @@ numF = ones(N,Nodes);
             end
         end 
 
-    % NLSY79 2012 ONLY
-    i = find(c10>0); 
+    % NLSY79 2014 ONLY
+    i = find(c14>0); 
         if size(i,1) > 0 
             for k = 1:Nodes
-                num10(i,k) = norm_cdf((cpt_new(c10(i)+1)-muX10(i)-xU(j)-xKf(k)+sigmau^2)./sigmae10(i)) - ...
-                    norm_cdf((cpt_new(c10(i))-muX10(i)-xU(j)-xKf(k)+sigmau^2)./sigmae10(i));
-                den10(i,k) = norm_cdf((cpt_new(c10(i)+1)-muX10(i)-xU(j)-xKf(k))./sigmae10(i)) - ...
-                    norm_cdf((cpt_new(c10(i))-muX10(i)-xU(j)-xKf(k))./sigmae10(i));
+                num14(i,k) = norm_cdf((cpt_new(c14(i)+1)-muX14(i)-xU(j)-xKf(k)+sigmau^2)./sigmae14(i)) - ...
+                    norm_cdf((cpt_new(c14(i))-muX14(i)-xU(j)-xKf(k)+sigmau^2)./sigmae14(i));
+                den14(i,k) = norm_cdf((cpt_new(c14(i)+1)-muX14(i)-xU(j)-xKf(k))./sigmae14(i)) - ...
+                    norm_cdf((cpt_new(c14(i))-muX14(i)-xU(j)-xKf(k))./sigmae14(i));
             end
         end 
     
-    numO(:,j) = (num93.*num02)*pKo;
-    denO(:,j) = (den93.*den02)*pKo;
-    numF(:,j) = (num04.*num06.*num10)*pKf;
-    denF(:,j) = (den04.*den06.*den10)*pKf;
+    numO(:,j) = (num93.*num02.*num04.*num06)*pKo;
+    denO(:,j) = (den93.*den02.*den04.*den06)*pKo;
+    numF(:,j) = (num10.*num12.*num14)*pKf;
+    denF(:,j) = (den10.*den12.*den14)*pKf;
     
     end    
     
@@ -194,10 +194,10 @@ end
 %% Proxy
 
 if model < 10 
-    Egamma92 = exp(-muX93+sigmau^2/2).*(num./den);
+    Egamma93 = exp(-muX93+sigmau^2/2).*(num./den);
 elseif model >= 10    
-    Egamma92 = exp(-X93(:,1:end-1)*b(1:K-1)+sigmau^2/2).*(num./den);
+    Egamma93 = exp(-X93(:,1:end-1)*b(1:K-1)+sigmau^2/2).*(num./den);
 end
 
 
-Eexpu92 =  exp(sigmau^2/2).*(num./den);
+Eexpu93 =  exp(sigmau^2/2).*(num./den);

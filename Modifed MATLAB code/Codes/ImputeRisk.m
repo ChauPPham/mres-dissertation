@@ -136,31 +136,31 @@ X93 = zeros(N,13); X02 = zeros(N,13); X04 = zeros(N,13); X06 = zeros(N,13); X10 
 
 ii = find(INTERVIEW_1993 > 0);
 X93(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), FEMALE(ii), HS_1993(ii), COLLEGE_1993(ii), AGE_1993(ii), ...
-     lINCOME_1993(ii), zINCOME_1993(ii), WKS_WORKED_1993(ii), WKS_WORKED_SPS_1993(ii), URATE_1993(ii), ICS_1993(ii)];  
+     lINCOME_1993(ii), zINCOME_1993(ii), WKS_WORKED_1993(ii)/10, WKS_WORKED_SPS_1993(ii)/10, URATE_1993(ii), ICS_1993(ii)];  
 
 ii = find(INTERVIEW_2002 > 0);
 X02(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), FEMALE(ii), HS_2002(ii), COLLEGE_2002(ii), AGE_2002(ii), ...
-    lINCOME_2002(ii), zINCOME_2002(ii), WKS_WORKED_2002(ii), WKS_WORKED_SPS_2002(ii), URATE_2002(ii), ICS_2002(ii)];  
+    lINCOME_2002(ii), zINCOME_2002(ii), WKS_WORKED_2002(ii)/10, WKS_WORKED_SPS_2002(ii)/10, URATE_2002(ii), ICS_2002(ii)];  
 
 ii = find(INTERVIEW_2004 > 0);
 X04(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), FEMALE(ii), HS_2004(ii), COLLEGE_2004(ii), AGE_2004(ii), ...
-    lINCOME_2004(ii), zINCOME_2004(ii), WKS_WORKED_2004(ii), WKS_WORKED_SPS_2004(ii), URATE_2004(ii), ICS_2004(ii)];
+    lINCOME_2004(ii), zINCOME_2004(ii), WKS_WORKED_2004(ii)/10, WKS_WORKED_SPS_2004(ii)/10, URATE_2004(ii), ICS_2004(ii)];
 
 ii = find(INTERVIEW_2006 > 0);
 X06(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), FEMALE(ii), HS_2006(ii), COLLEGE_2006(ii), AGE_2006(ii), ...
-    lINCOME_2006(ii), zINCOME_2006(ii), WKS_WORKED_2006(ii), WKS_WORKED_SPS_2006(ii), URATE_2006(ii), ICS_2006(ii)]; 
+    lINCOME_2006(ii), zINCOME_2006(ii), WKS_WORKED_2006(ii)/10, WKS_WORKED_SPS_2006(ii)/10, URATE_2006(ii), ICS_2006(ii)]; 
 
 ii = find(INTERVIEW_2010 > 0);
 X10(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), FEMALE(ii), HS_2010(ii), COLLEGE_2010(ii), AGE_2010(ii), ...
-    lINCOME_2010(ii), zINCOME_2010(ii), WKS_WORKED_2010(ii), WKS_WORKED_SPS_2010(ii), URATE_2010(ii), ICS_2010(ii)]; 
+    lINCOME_2010(ii), zINCOME_2010(ii), WKS_WORKED_2010(ii)/10, WKS_WORKED_SPS_2010(ii)/10, URATE_2010(ii), ICS_2010(ii)]; 
 
 ii = find(INTERVIEW_2012 > 0);
 X12(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), FEMALE(ii), HS_2012(ii), COLLEGE_2012(ii), AGE_2012(ii), ...
-    lINCOME_2012(ii), zINCOME_2012(ii), WKS_WORKED_2012(ii), WKS_WORKED_SPS_2012(ii), URATE_2012(ii), ICS_2012(ii)]; 
+    lINCOME_2012(ii), zINCOME_2012(ii), WKS_WORKED_2012(ii)/10, WKS_WORKED_SPS_2012(ii)/10, URATE_2012(ii), ICS_2012(ii)]; 
 
 ii = find(INTERVIEW_2014 > 0);
 X14(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), FEMALE(ii), HS_2014(ii), COLLEGE_2014(ii), AGE_2014(ii), ...
-    lINCOME_2014(ii), zINCOME_2014(ii), WKS_WORKED_2014(ii), WKS_WORKED_SPS_2014(ii), URATE_2014(ii), ICS_2014(ii)];  
+    lINCOME_2014(ii), zINCOME_2014(ii), WKS_WORKED_2014(ii)/10, WKS_WORKED_SPS_2014(ii)/10, URATE_2014(ii), ICS_2014(ii)];  
 
 
 X93 = sparse(X93); X02 = sparse(X02); X04 = sparse(X04); X06 = sparse(X06); X10 = sparse(X10); X12 = sparse(X12); X14 = sparse(X14);
@@ -170,31 +170,31 @@ W93 = zeros(N,15); W02 = zeros(N,15); W04 = zeros(N,15); W06 = zeros(N,15); W10 
 
 ii = find(INTERVIEW_1993 > 0);
     W93(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), EAST_1993(ii), SOUTH_1993(ii), WEST_1993(ii), ...
-        MARRIED_1993(ii), OTHER_1993(ii), AGE_1993(ii), URATE_1993(ii), ICS_1993(ii), MOM_HGC(ii), DAD_HGC(ii), AGE_14(ii), AFQT_2006(ii)];  
+        MARRIED_1993(ii), OTHER_1993(ii), AGE_1993(ii), URATE_1993(ii), ICS_1993(ii), MOM_HGC(ii), DAD_HGC(ii), AGE_14(ii), AFQT_2006(ii)/10000];  
 
 ii = find(INTERVIEW_2002 > 0);
     W02(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), EAST_2002(ii), SOUTH_2002(ii), WEST_2002(ii), ...
-        MARRIED_2002(ii), OTHER_2002(ii), AGE_2002(ii), URATE_2002(ii), ICS_2002(ii), MOM_HGC(ii), DAD_HGC(ii), AGE_14(ii), AFQT_2006(ii)];     
+        MARRIED_2002(ii), OTHER_2002(ii), AGE_2002(ii), URATE_2002(ii), ICS_2002(ii), MOM_HGC(ii), DAD_HGC(ii), AGE_14(ii), AFQT_2006(ii)/10000];     
 
 ii = find(INTERVIEW_2004 > 0);
     W04(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), EAST_2004(ii), SOUTH_2004(ii), WEST_2004(ii), ...
-        MARRIED_2004(ii), OTHER_2004(ii), AGE_2004(ii), URATE_2004(ii), ICS_2004(ii), MOM_HGC(ii), DAD_HGC(ii), AGE_14(ii), AFQT_2006(ii)];      
+        MARRIED_2004(ii), OTHER_2004(ii), AGE_2004(ii), URATE_2004(ii), ICS_2004(ii), MOM_HGC(ii), DAD_HGC(ii), AGE_14(ii), AFQT_2006(ii)/10000];      
 
 ii = find(INTERVIEW_2006 > 0);
     W06(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), EAST_2006(ii), SOUTH_2006(ii), WEST_2006(ii), ...
-        MARRIED_2006(ii), OTHER_2006(ii), AGE_2006(ii), URATE_2006(ii), ICS_2006(ii), MOM_HGC(ii), DAD_HGC(ii), AGE_14(ii), AFQT_2006(ii)];   
+        MARRIED_2006(ii), OTHER_2006(ii), AGE_2006(ii), URATE_2006(ii), ICS_2006(ii), MOM_HGC(ii), DAD_HGC(ii), AGE_14(ii), AFQT_2006(ii)/10000];   
 
 ii = find(INTERVIEW_2010 > 0);
     W10(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), EAST_2010(ii), SOUTH_2010(ii), WEST_2010(ii), ...
-        MARRIED_2010(ii), OTHER_2010(ii), AGE_2010(ii), URATE_2010(ii), ICS_2010(ii), MOM_HGC(ii), DAD_HGC(ii), AGE_14(ii), AFQT_2006(ii)];     
+        MARRIED_2010(ii), OTHER_2010(ii), AGE_2010(ii), URATE_2010(ii), ICS_2010(ii), MOM_HGC(ii), DAD_HGC(ii), AGE_14(ii), AFQT_2006(ii)/10000];     
 
 ii = find(INTERVIEW_2012 > 0);
     W10(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), EAST_2012(ii), SOUTH_2012(ii), WEST_2012(ii), ...
-        MARRIED_2012(ii), OTHER_2012(ii), AGE_2012(ii), URATE_2012(ii), ICS_2012(ii), MOM_HGC(ii), DAD_HGC(ii), AGE_14(ii), AFQT_2006(ii)];  
+        MARRIED_2012(ii), OTHER_2012(ii), AGE_2012(ii), URATE_2012(ii), ICS_2012(ii), MOM_HGC(ii), DAD_HGC(ii), AGE_14(ii), AFQT_2006(ii)/10000];  
 
 ii = find(INTERVIEW_2014 > 0);
     W10(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), EAST_2014(ii), SOUTH_2014(ii), WEST_2014(ii), ...
-    MARRIED_2014(ii), OTHER_2014(ii), AGE_2014(ii), URATE_2014(ii), ICS_2014(ii), MOM_HGC(ii), DAD_HGC(ii), AGE_14(ii), AFQT_2006(ii)];  
+        MARRIED_2014(ii), OTHER_2014(ii), AGE_2014(ii), URATE_2014(ii), ICS_2014(ii), MOM_HGC(ii), DAD_HGC(ii), AGE_14(ii), AFQT_2006(ii)/10000];  
 
 W93 = sparse(W93); W02 = sparse(W02); W04 = sparse(W04); W06 = sparse(W06); W10 = sparse(W10); W12 = sparse(W12); W14 = sparse(W14);
 
@@ -204,7 +204,7 @@ XW93 = zeros(N,22); XW02 = zeros(N,22); XW04 = zeros(N,22); XW06 = zeros(N,22); 
 
 ii = find(INTERVIEW_1993 > 0);
 XW93(ii,:) = [W93(ii,:), FEMALE(ii), HS_1993(ii), COLLEGE_1993(ii), lINCOME_1993(ii), ... 
-    zINCOME_1993(ii), WKS_WORKED_1993(ii), WKS_WORKED_SPS_1993(ii)];  
+    zINCOME_1993(ii), WKS_WORKED_1993(ii)/10, WKS_WORKED_SPS_1993(ii)/10];  
 
 ii = find(INTERVIEW_2002 > 0);
 XW02(ii,:) = [W02(ii,:), FEMALE(ii), HS_2002(ii), COLLEGE_2002(ii), lINCOME_2002(ii), ... 
@@ -212,23 +212,23 @@ XW02(ii,:) = [W02(ii,:), FEMALE(ii), HS_2002(ii), COLLEGE_2002(ii), lINCOME_2002
 
 ii = find(INTERVIEW_2004 > 0);
 XW04(ii,:) = [W04(ii,:), FEMALE(ii), HS_2004(ii), COLLEGE_2004(ii), lINCOME_2004(ii), ... 
-    zINCOME_2004(ii), WKS_WORKED_2004(ii), WKS_WORKED_SPS_2004(ii)];  
+    zINCOME_2004(ii), WKS_WORKED_2004(ii)/10, WKS_WORKED_SPS_2004(ii)/10];  
 
 ii = find(INTERVIEW_2006 > 0);
 XW06(ii,:) = [W06(ii,:), FEMALE(ii), HS_2006(ii), COLLEGE_2006(ii), lINCOME_2006(ii), ... 
-    zINCOME_2006(ii), WKS_WORKED_2006(ii), WKS_WORKED_SPS_2006(ii)]; 
+    zINCOME_2006(ii), WKS_WORKED_2006(ii)/10, WKS_WORKED_SPS_2006(ii)/10]; 
 
 ii = find(INTERVIEW_2010 > 0);
 XW10(ii,:) = [W10(ii,:), FEMALE(ii), HS_2010(ii), COLLEGE_2010(ii), lINCOME_2010(ii), ... 
-    zINCOME_2010(ii), WKS_WORKED_2010(ii), WKS_WORKED_SPS_2010(ii)];   
+    zINCOME_2010(ii), WKS_WORKED_2010(ii)/10, WKS_WORKED_SPS_2010(ii)/10];   
 
 ii = find(INTERVIEW_2012 > 0);
 XW12(ii,:) = [W12(ii,:), FEMALE(ii), HS_2012(ii), COLLEGE_2012(ii), lINCOME_2012(ii), ... 
-    zINCOME_2012(ii), WKS_WORKED_2012(ii), WKS_WORKED_SPS_2012(ii)];   
+    zINCOME_2012(ii), WKS_WORKED_2012(ii)/10, WKS_WORKED_SPS_2012(ii)/10];   
 
 ii = find(INTERVIEW_2014 > 0);
 XW14(ii,:) = [W14(ii,:), FEMALE(ii), HS_2014(ii), COLLEGE_2014(ii), lINCOME_2014(ii), ... 
-    zINCOME_2014(ii), WKS_WORKED_2014(ii), WKS_WORKED_SPS_2014(ii)];   
+    zINCOME_2014(ii), WKS_WORKED_2014(ii)/10, WKS_WORKED_SPS_2014(ii)/10];   
 
 
 XW93 = sparse(XW93); XW02 = sparse(XW02); XW04 = sparse(XW04); XW06 = sparse(XW06); XW10 = sparse(XW10); XW12 = sparse(XW12); XW14 = sparse(XW14);
@@ -305,17 +305,17 @@ diary('../Output/ImputeRisk.out');
 % Impute Proxy Values for Risk Tolerance
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-load KSSsample
+load ../Output/MATLAB_sample;
 global model
 
 %% Imputations from Model 11 %%
-load results_final_11
-[Etheta_11] = Etheta(b,c92,c94,c98,c00,c02,[X93(:,1),ones(N,1)],[X02(:,1),ones(N,1)],...
-	[X04(:,1),zeros(N,1)],[X06(:,1),zeros(N,1)],[X02(:,1),zeros(N,1)]);
-[Elntheta_11] = Elntheta(b,c92,c94,c98,c00,c02,[X93(:,1),ones(N,1)],[X02(:,1),ones(N,1)],...
-	[X04(:,1),zeros(N,1)],[X06(:,1),zeros(N,1)],[X02(:,1),zeros(N,1)]); 
-[Egamma_11]  = Egamma(b,c92,c94,c98,c00,c02,[X93(:,1),ones(N,1)],[X02(:,1),ones(N,1)],...
-	[X04(:,1),zeros(N,1)],[X06(:,1),zeros(N,1)],[X02(:,1),zeros(N,1)]);
+load ../Output/results_final_11
+[Etheta_11] = Etheta(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,RISK_2012,RISK_2014, ...
+    [X93(:,1),ones(N,1)],[X02(:,1),ones(N,1)],[X04(:,1),ones(N,1)],[X06(:,1),ones(N,1)],[X10(:,1),zeros(N,1)],[X12(:,1),zeros(N,1)],[X14(:,1),zeros(N,1)]);
+[Elntheta_11] = Elntheta(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,RISK_2012,RISK_2014, ...
+    [X93(:,1),ones(N,1)],[X02(:,1),ones(N,1)],[X04(:,1),ones(N,1)],[X06(:,1),ones(N,1)],[X10(:,1),zeros(N,1)],[X12(:,1),zeros(N,1)],[X14(:,1),zeros(N,1)]);
+[Egamma_11] = Egamma(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,RISK_2012,RISK_2014, ...
+    [X93(:,1),ones(N,1)],[X02(:,1),ones(N,1)],[X04(:,1),ones(N,1)],[X06(:,1),ones(N,1)],[X10(:,1),zeros(N,1)],[X12(:,1),zeros(N,1)],[X14(:,1),zeros(N,1)]);
     se = full(se); b = full(b); X93 = full(X93);
     sigmau = abs(b(3));
     xb_11 = X93(:,1)*b(1);
@@ -338,29 +338,13 @@ mprint([va_11,Vtheta_11,Vgamma_11;var(Elntheta_11),var(Etheta_11),var(Egamma_11)
 %% Sub-routine with Tables from Model 11 (Main Specification in Paper) %%
 Tables_Model_11(b,V);    
 
-%% PSID Imputations for Users Guide %%
-%% Distribution from Online PSID Webpage %%
-pc96 = [ ]; 
-pc96 = [pc96;repmat(1,1741,1)]; 
-pc96 = [pc96;repmat(2,1009,1)]; 
-pc96 = [pc96;repmat(3,861,1)]; 
-pc96 = [pc96;repmat(4,829,1)]; 
-pc96 = [pc96;repmat(5,760,1)]; 
-pc96 = [pc96;repmat(6,365,1)]; 
-PN = size(pc96,1);
-[Etheta_PSID]  = Etheta_KSS(b,zeros(PN,1),pc96,zeros(PN,1),zeros(PN,1),zeros(PN,1),ones(PN,2),ones(PN,2),...
-    [ones(PN,1),zeros(PN,1)],[ones(PN,1),zeros(PN,1)],[ones(PN,1),zeros(PN,1)]);
-[Elntheta_PSID] = Elntheta_KSS(b,zeros(PN,1),pc96,zeros(PN,1),zeros(PN,1),zeros(PN,1),ones(PN,2),ones(PN,2),...
-    [ones(PN,1),zeros(PN,1)],[ones(PN,1),zeros(PN,1)],[ones(PN,1),zeros(PN,1)]);
-[Egamma_PSID]  = Egamma_KSS(b,zeros(PN,1),pc96,zeros(PN,1),zeros(PN,1),zeros(PN,1),ones(PN,2),ones(PN,2),...
-    [ones(PN,1),zeros(PN,1)],[ones(PN,1),zeros(PN,1)],[ones(PN,1),zeros(PN,1)]);
-
-disp(sprintf('Variance of PSID Proxies Log RT = %1.3f RT = %1.3f Gamma = %1.3f', var(Elntheta_PSID), var(Etheta_PSID),var(Egamma_PSID) ));
 
 %% Imputations from Model 12 %%  
-load results_final_12
-[Etheta_12]  = Etheta_KSS(b,c92,c94,c98,c00,c02,[X93,ones(N,1)],[X02,ones(N,1)],[X04,zeros(N,1)],[X06,zeros(N,1)],[X02,zeros(N,1)]);
-[Elntheta_12] = Elntheta_KSS(b,c92,c94,c98,c00,c02,[X93,ones(N,1)],[X02,ones(N,1)],[X04,zeros(N,1)],[X06,zeros(N,1)],[X02,zeros(N,1)]);  
+load ../Output/results_final_12
+[Etheta_12]  = Etheta(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,RISK_2012,RISK_2014,[X93,ones(N,1)],[X02,ones(N,1)],[X04,zeros(N,1)],[X06,zeros(N,1)],[X10,zeros(N,1)],[X12,zeros(N,1)],[X14,zeros(N,1)]);
+[Elntheta_12] = Elntheta(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,RISK_2012,RISK_2014,[X93,ones(N,1)],[X02,ones(N,1)],[X04,zeros(N,1)],[X06,zeros(N,1)],[X10,zeros(N,1)],[X12,zeros(N,1)],[X14,zeros(N,1)]);  
+[Egamma_12]  = Egamma(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,RISK_2012,RISK_2014,[X93,ones(N,1)],[X02,ones(N,1)],[X04,zeros(N,1)],[X06,zeros(N,1)],[X10,zeros(N,1)],[X12,zeros(N,1)],[X14,zeros(N,1)]);
+
 se = full(se); b = full(b); X93 = full(X93);
     K = size(X93,2);    
     sigmau = abs(b(15));
@@ -381,14 +365,14 @@ se = full(se); b = full(b); X93 = full(X93);
     g(K+2) = va_12^-.5*sigmau;
     se_va12 = (g'*V*g)^0.5;     
 
-disp(sprintf('Model 12: Log Risk Tolerance Mean = %1.3f (%1.3f) Std Dev = %1.3f (%1.3f)', mu_12, se_mu12,va_12^.5, se_va12 ));
-disp(sprintf('Model 12: Risk Tolerance Mean = %1.3f Std Dev = %1.3f', exp(mu_12 + va_12/2), Vtheta_12^.5 ));
+fprintf('Model 12: Log Risk Tolerance Mean = %1.3f (%1.3f) Std Dev = %1.3f (%1.3f)\n', mu_12, se_mu12,va_12^.5, se_va12 );
+fprintf('Model 12: Risk Tolerance Mean = %1.3f Std Dev = %1.3f\n', exp(mu_12 + va_12/2), Vtheta_12^.5 );
 
 %% Imputations from Model 13 %%    
-load results_final_13
-[Etheta_13]  = Etheta_KSS(b,c92,c94,c98,c00,c02,[W92 ,ones(N,1)],[W94 ,ones(N,1)],...
+load ../Output/results_final_13
+[Etheta_13]  = Etheta_KSS(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,[W92 ,ones(N,1)],[W94 ,ones(N,1)],...
     [W98 ,zeros(N,1)],[W00, zeros(N,1)],[W02, zeros(N,1)]);
-[Elntheta_13] = Elntheta_KSS(b,c92,c94,c98,c00,c02,[W92 ,ones(N,1)],[W94 ,ones(N,1)],...
+[Elntheta_13] = Elntheta_KSS(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,[W92 ,ones(N,1)],[W94 ,ones(N,1)],...
     [W98 ,zeros(N,1)],[W00, zeros(N,1)],[W02, zeros(N,1)]);
 se = full(se); b = full(b); W92 = full(W92);
     K = size(W92,2);    
@@ -409,8 +393,8 @@ se = full(se); b = full(b); W92 = full(W92);
     g(K+2) = va_13^-.5*sigmau;
     se_va13 = (g'*V*g)^0.5;     
 
-disp(sprintf('Model 13: Log Risk Tolerance Mean = %1.3f (%1.3f) Std Dev = %1.3f (%1.3f)', mu_13, se_mu13,va_13^.5, se_va13 ));
-disp(sprintf('Model 13: Risk Tolerance Mean = %1.3f Std Dev = %1.3f', exp(mu_13 + va_13/2), Vtheta_13^.5 ));
+fprintf('Model 13: Log Risk Tolerance Mean = %1.3f (%1.3f) Std Dev = %1.3f (%1.3f)\n', mu_13, se_mu13,va_13^.5, se_va13 );
+fprintf('Model 13: Risk Tolerance Mean = %1.3f Std Dev = %1.3f\n', exp(mu_13 + va_13/2), Vtheta_13^.5 );
     
 %% Table R-4 Weighted and Unweighted    
 i = find(wgt_1992 >0);
@@ -458,17 +442,17 @@ N = size(i,1);
 %% Columns 2,3 of Table R-4 %%
 disp('Table R-4: Descriptive Statistics (Weighting Sensitivity Check) Columns 2, 3');
 disp('Model 13, Unweighted, Sampling Covariates');
-disp(sprintf(' Mean Log(RT) = %1.3f (%1.3f) Median RT = %1.3f (%1.3f) Mean RT = %1.3f (%1.3f)', ...
-	mu_13u, se_mu13u, exp(mu_13u), se_md13u, mn_13u, se_mn13u )); 
+fprintf(' Mean Log(RT) = %1.3f (%1.3f) Median RT = %1.3f (%1.3f) Mean RT = %1.3f (%1.3f)\n', ...
+	mu_13u, se_mu13u, exp(mu_13u), se_md13u, mn_13u, se_mn13u ); 
 disp('Model 13, Weighted, Sampling Covariates');
-disp(sprintf(' Mean Log(RT) = %1.3f (%1.3f) Median RT = %1.3f (%1.3f) Mean RT = %1.3f (%1.3f)', ...
-	mu_13w, se_mu13w, exp(mu_13w), se_md13w, mn_13w, se_mn13w )); 
+fprintf(' Mean Log(RT) = %1.3f (%1.3f) Median RT = %1.3f (%1.3f) Mean RT = %1.3f (%1.3f)\n', ...
+	mu_13w, se_mu13w, exp(mu_13w), se_md13w, mn_13w, se_mn13w ); 
     
 %% Imputations from Model 14 %%
-load results_final_14
-[Etheta_14]  = Etheta_KSS(b,c92,c94,c98,c00,c02,[XW93,ones(N,1)],[XW02 ,ones(N,1)],...
+load ../Output/results_final_14
+[Etheta_14]  = Etheta_KSS(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,[XW93,ones(N,1)],[XW02 ,ones(N,1)],...
     [XW04 ,zeros(N,1)],[XW06, zeros(N,1)],[XW02, zeros(N,1)]);
-[Elntheta_14] = Elntheta_KSS(b,c92,c94,c98,c00,c02,[XW93,ones(N,1)],[XW02 ,ones(N,1)],...
+[Elntheta_14] = Elntheta_KSS(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,[XW93,ones(N,1)],[XW02 ,ones(N,1)],...
     [XW04 ,zeros(N,1)],[XW06, zeros(N,1)],[XW02, zeros(N,1)]);
     se = full(se); b = full(b); W92 = full(W92);
     K = size(XW93,2);  
@@ -487,16 +471,16 @@ disp(sprintf('Model 14: Risk Tolerance Mean = %1.3f Std Dev = %1.3f', exp(mu_14 
 
 %% Indicator of Response Category (for first response) %%
 risk1 = zeros(N,1);
-    index = find(c92==1 | ((c94 == 1 | c94 ==2) & c92 == 0));
+    index = find(c92==1 | ((RISK_2002 == 1 | RISK_2002 ==2) & c92 == 0));
     risk1(index,1) = 1;
 risk2 = zeros(N,1);
-    index = find(c92==2 | (c94 == 3 & c92 == 0));
+    index = find(c92==2 | (RISK_2002 == 3 & c92 == 0));
     risk2(index,1) = 1;
 risk3 = zeros(N,1);
-    index = find(c92==3 | (c94 == 4 & c92 == 0));
+    index = find(c92==3 | (RISK_2002 == 4 & c92 == 0));
     risk3(index,1) = 1;
 risk4 = zeros(N,1);
-    index = find(c92==4 | ((c94 == 5 | c94 ==6) & c92 == 0));
+    index = find(c92==4 | ((RISK_2002 == 5 | RISK_2002 ==6) & c92 == 0));
     risk4(index,1) = 1;    
   
 %% Z: Explanatory Variables -- Created Above %%    
@@ -624,10 +608,10 @@ diary off;
 delete('ProxyHRS.out');
 diary('ProxyHRS.out');
 display('Proxy Values of Risk Preference -- Model 11');
-display('Columns: c92, c94, c98, c00, c02, Risk Tol., Risk Aver.');
+display('Columns: c92, RISK_2002, RISK_2004, RISK_2006, RISK_2010, Risk Tol., Risk Aver.');
 clear info;
 info.fmt = strvcat('%15.0f','%2.0f','%2.0f','%2.0f','%2.0f','%2.0f','%10.3f','%10.3f','%10.1f');
-mprint([hhidpn, c92, c94, c98, c00, c02, Elntheta_11, Etheta_11, Egamma_11],info)
+mprint([hhidpn, c92, RISK_2002, RISK_2004, RISK_2006, RISK_2010, Elntheta_11, Etheta_11, Egamma_11],info)
 diary off;
 
 %% Output Table of Imputed Values %%

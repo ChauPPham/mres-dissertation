@@ -366,3 +366,267 @@ Original Transitory Std Dev           1.304           0.019          66.914
 SQB-Free Transitory Std Dev           2.021           0.038          53.128 
 
 Log-likelihood   -37728.4
+Model 11
+Error at iteration 1 = 7.45e-02
+23-Aug-2023 14:41:03
+                                   estimate          t-stat            step 
+Constant                             -0.051          -1.430        0.000331 
+Status Quo Bias                       0.114           3.160        0.000126 
+Std Dev                               0.894          45.542       -0.000292 
+Original Persistent Std Dev           1.141          20.557        0.000006 
+SQB-Free Persistent Std Dev           0.038           1.057        0.074524 
+Original Transitory Std Dev           1.304          66.905       -0.000035 
+SQB-Free Transitory Std Dev           2.021          53.138        0.000231 
+
+Log-likelihood   -37728.4
+Error at iteration 2 = 2.37e-04
+23-Aug-2023 14:41:24
+                                   estimate          t-stat            step 
+Constant                             -0.051          -1.433       -0.000107 
+Status Quo Bias                       0.114           3.162        0.000105 
+Std Dev                               0.894          45.536       -0.000004 
+Original Persistent Std Dev           1.141          20.567        0.000237 
+SQB-Free Persistent Std Dev          -0.037          -1.052       -0.074865 
+Original Transitory Std Dev           1.304          66.917        0.000016 
+SQB-Free Transitory Std Dev           2.021          53.125       -0.000073 
+
+Log-likelihood   -37728.5
+Error at iteration 3 = 7.47e-02
+23-Aug-2023 14:41:45
+                                   estimate          t-stat            step 
+Constant                             -0.051          -1.433        0.000019 
+Status Quo Bias                       0.114           3.162       -0.000006 
+Std Dev                               0.894          45.540        0.000006 
+Original Persistent Std Dev           1.141          20.567       -0.000024 
+SQB-Free Persistent Std Dev           0.037           1.053        0.074724 
+Original Transitory Std Dev           1.304          66.915        0.000006 
+SQB-Free Transitory Std Dev           2.021          53.129        0.000004 
+
+Log-likelihood   -37728.4
+Error at iteration 4 = 9.41e-06
+23-Aug-2023 14:42:09
+                                   estimate          t-stat            step 
+Constant                             -0.051          -1.433       -0.000002 
+Status Quo Bias                       0.114           3.162        0.000001 
+Std Dev                               0.894          45.539       -0.000002 
+Original Persistent Std Dev           1.141          20.567        0.000009 
+SQB-Free Persistent Std Dev          -0.037          -1.053       -0.074757 
+Original Transitory Std Dev           1.304          66.915       -0.000000 
+SQB-Free Transitory Std Dev           2.021          53.128        0.000001 
+
+Log-likelihood   -37728.4
+Error at iteration 5 = 7.47e-02
+23-Aug-2023 14:42:39
+                                   estimate          t-stat            step 
+Constant                             -0.051          -1.433        0.000001 
+Status Quo Bias                       0.114           3.162       -0.000000 
+Std Dev                               0.894          45.539        0.000001 
+Original Persistent Std Dev           1.141          20.567       -0.000002 
+SQB-Free Persistent Std Dev           0.037           1.053        0.074749 
+Original Transitory Std Dev           1.304          66.914        0.000000 
+SQB-Free Transitory Std Dev           2.021          53.128       -0.000000 
+
+Log-likelihood   -37728.4
+Error at iteration 6 = 4.47e-07
+23-Aug-2023 14:43:06
+                                   estimate          t-stat            step 
+Constant                             -0.051          -1.433       -0.000000 
+Status Quo Bias                       0.114           3.162       -0.000000 
+Std Dev                               0.894          45.539       -0.000000 
+Original Persistent Std Dev           1.141          20.567        0.000000 
+SQB-Free Persistent Std Dev          -0.037          -1.053       -0.074751 
+Original Transitory Std Dev           1.304          66.914       -0.000000 
+SQB-Free Transitory Std Dev           2.021          53.128        0.000000 
+
+Log-likelihood   -37728.4
+Estimates of Model 11.0
+23-Aug-2023 14:43:06
+Sample size 9279
+Number of iterations = 6
+Error at last iteration = 4.47e-07
+                                   estimate      std. error          t-stat 
+Constant                             -0.051           0.035          -1.433 
+Status Quo Bias                       0.114           0.036           3.162 
+Std Dev                               0.894           0.020          45.539 
+Original Persistent Std Dev           1.141           0.055          20.567 
+SQB-Free Persistent Std Dev          -0.037           0.035          -1.053 
+Original Transitory Std Dev           1.304           0.019          66.914 
+SQB-Free Transitory Std Dev           2.021           0.038          53.128 
+
+Log-likelihood   -37728.4
+Model 11
+Error at iteration 1 = 7.45e-02
+23-Aug-2023 14:49:34
+                                   estimate          t-stat            step 
+Constant                             -0.051          -1.430        0.000331 
+Status Quo Bias                       0.114           3.160        0.000126 
+Std Dev                               0.894          45.542       -0.000292 
+Original Persistent Std Dev           1.141          20.557        0.000006 
+SQB-Free Persistent Std Dev           0.038           1.057        0.074524 
+Original Transitory Std Dev           1.304          66.905       -0.000035 
+SQB-Free Transitory Std Dev           2.021          53.138        0.000231 
+
+Log-likelihood   -37728.4
+Error at iteration 2 = 2.37e-04
+23-Aug-2023 14:50:01
+                                   estimate          t-stat            step 
+Constant                             -0.051          -1.433       -0.000107 
+Status Quo Bias                       0.114           3.162        0.000105 
+Std Dev                               0.894          45.536       -0.000004 
+Original Persistent Std Dev           1.141          20.567        0.000237 
+SQB-Free Persistent Std Dev          -0.037          -1.052       -0.074865 
+Original Transitory Std Dev           1.304          66.917        0.000016 
+SQB-Free Transitory Std Dev           2.021          53.125       -0.000073 
+
+Log-likelihood   -37728.5
+Error at iteration 3 = 7.47e-02
+23-Aug-2023 14:50:30
+                                   estimate          t-stat            step 
+Constant                             -0.051          -1.433        0.000019 
+Status Quo Bias                       0.114           3.162       -0.000006 
+Std Dev                               0.894          45.540        0.000006 
+Original Persistent Std Dev           1.141          20.567       -0.000024 
+SQB-Free Persistent Std Dev           0.037           1.053        0.074724 
+Original Transitory Std Dev           1.304          66.915        0.000006 
+SQB-Free Transitory Std Dev           2.021          53.129        0.000004 
+
+Log-likelihood   -37728.4
+Error at iteration 4 = 9.41e-06
+23-Aug-2023 14:51:00
+                                   estimate          t-stat            step 
+Constant                             -0.051          -1.433       -0.000002 
+Status Quo Bias                       0.114           3.162        0.000001 
+Std Dev                               0.894          45.539       -0.000002 
+Original Persistent Std Dev           1.141          20.567        0.000009 
+SQB-Free Persistent Std Dev          -0.037          -1.053       -0.074757 
+Original Transitory Std Dev           1.304          66.915       -0.000000 
+SQB-Free Transitory Std Dev           2.021          53.128        0.000001 
+
+Log-likelihood   -37728.4
+Error at iteration 5 = 7.47e-02
+23-Aug-2023 14:51:24
+                                   estimate          t-stat            step 
+Constant                             -0.051          -1.433        0.000001 
+Status Quo Bias                       0.114           3.162       -0.000000 
+Std Dev                               0.894          45.539        0.000001 
+Original Persistent Std Dev           1.141          20.567       -0.000002 
+SQB-Free Persistent Std Dev           0.037           1.053        0.074749 
+Original Transitory Std Dev           1.304          66.914        0.000000 
+SQB-Free Transitory Std Dev           2.021          53.128       -0.000000 
+
+Log-likelihood   -37728.4
+Error at iteration 6 = 4.47e-07
+23-Aug-2023 14:51:45
+                                   estimate          t-stat            step 
+Constant                             -0.051          -1.433       -0.000000 
+Status Quo Bias                       0.114           3.162       -0.000000 
+Std Dev                               0.894          45.539       -0.000000 
+Original Persistent Std Dev           1.141          20.567        0.000000 
+SQB-Free Persistent Std Dev          -0.037          -1.053       -0.074751 
+Original Transitory Std Dev           1.304          66.914       -0.000000 
+SQB-Free Transitory Std Dev           2.021          53.128        0.000000 
+
+Log-likelihood   -37728.4
+Estimates of Model 11.0
+23-Aug-2023 14:51:45
+Sample size 9279
+Number of iterations = 6
+Error at last iteration = 4.47e-07
+                                   estimate      std. error          t-stat 
+Constant                             -0.051           0.035          -1.433 
+Status Quo Bias                       0.114           0.036           3.162 
+Std Dev                               0.894           0.020          45.539 
+Original Persistent Std Dev           1.141           0.055          20.567 
+SQB-Free Persistent Std Dev          -0.037           0.035          -1.053 
+Original Transitory Std Dev           1.304           0.019          66.914 
+SQB-Free Transitory Std Dev           2.021           0.038          53.128 
+
+Log-likelihood   -37728.4
+Model 11
+Error at iteration 1 = 7.45e-02
+23-Aug-2023 18:04:12
+                                   estimate          t-stat            step 
+Constant                             -0.051          -1.430        0.000331 
+Status Quo Bias                       0.114           3.160        0.000126 
+Std Dev                               0.894          45.542       -0.000292 
+Original Persistent Std Dev           1.141          20.557        0.000006 
+SQB-Free Persistent Std Dev           0.038           1.057        0.074524 
+Original Transitory Std Dev           1.304          66.905       -0.000035 
+SQB-Free Transitory Std Dev           2.021          53.138        0.000231 
+
+Log-likelihood   -37728.4
+Error at iteration 2 = 2.37e-04
+23-Aug-2023 18:04:36
+                                   estimate          t-stat            step 
+Constant                             -0.051          -1.433       -0.000107 
+Status Quo Bias                       0.114           3.162        0.000105 
+Std Dev                               0.894          45.536       -0.000004 
+Original Persistent Std Dev           1.141          20.567        0.000237 
+SQB-Free Persistent Std Dev          -0.037          -1.052       -0.074865 
+Original Transitory Std Dev           1.304          66.917        0.000016 
+SQB-Free Transitory Std Dev           2.021          53.125       -0.000073 
+
+Log-likelihood   -37728.5
+Error at iteration 3 = 7.47e-02
+23-Aug-2023 18:05:05
+                                   estimate          t-stat            step 
+Constant                             -0.051          -1.433        0.000019 
+Status Quo Bias                       0.114           3.162       -0.000006 
+Std Dev                               0.894          45.540        0.000006 
+Original Persistent Std Dev           1.141          20.567       -0.000024 
+SQB-Free Persistent Std Dev           0.037           1.053        0.074724 
+Original Transitory Std Dev           1.304          66.915        0.000006 
+SQB-Free Transitory Std Dev           2.021          53.129        0.000004 
+
+Log-likelihood   -37728.4
+Error at iteration 4 = 9.41e-06
+23-Aug-2023 18:05:31
+                                   estimate          t-stat            step 
+Constant                             -0.051          -1.433       -0.000002 
+Status Quo Bias                       0.114           3.162        0.000001 
+Std Dev                               0.894          45.539       -0.000002 
+Original Persistent Std Dev           1.141          20.567        0.000009 
+SQB-Free Persistent Std Dev          -0.037          -1.053       -0.074757 
+Original Transitory Std Dev           1.304          66.915       -0.000000 
+SQB-Free Transitory Std Dev           2.021          53.128        0.000001 
+
+Log-likelihood   -37728.4
+Error at iteration 5 = 7.47e-02
+23-Aug-2023 18:05:56
+                                   estimate          t-stat            step 
+Constant                             -0.051          -1.433        0.000001 
+Status Quo Bias                       0.114           3.162       -0.000000 
+Std Dev                               0.894          45.539        0.000001 
+Original Persistent Std Dev           1.141          20.567       -0.000002 
+SQB-Free Persistent Std Dev           0.037           1.053        0.074749 
+Original Transitory Std Dev           1.304          66.914        0.000000 
+SQB-Free Transitory Std Dev           2.021          53.128       -0.000000 
+
+Log-likelihood   -37728.4
+Error at iteration 6 = 4.47e-07
+23-Aug-2023 18:06:22
+                                   estimate          t-stat            step 
+Constant                             -0.051          -1.433       -0.000000 
+Status Quo Bias                       0.114           3.162       -0.000000 
+Std Dev                               0.894          45.539       -0.000000 
+Original Persistent Std Dev           1.141          20.567        0.000000 
+SQB-Free Persistent Std Dev          -0.037          -1.053       -0.074751 
+Original Transitory Std Dev           1.304          66.914       -0.000000 
+SQB-Free Transitory Std Dev           2.021          53.128        0.000000 
+
+Log-likelihood   -37728.4
+Estimates of Model 11.0
+23-Aug-2023 18:06:22
+Sample size 9279
+Number of iterations = 6
+Error at last iteration = 4.47e-07
+                                   estimate      std. error          t-stat 
+Constant                             -0.051           0.035          -1.433 
+Status Quo Bias                       0.114           0.036           3.162 
+Std Dev                               0.894           0.020          45.539 
+Original Persistent Std Dev           1.141           0.055          20.567 
+SQB-Free Persistent Std Dev          -0.037           0.035          -1.053 
+Original Transitory Std Dev           1.304           0.019          66.914 
+SQB-Free Transitory Std Dev           2.021           0.038          53.128 
+
+Log-likelihood   -37728.4

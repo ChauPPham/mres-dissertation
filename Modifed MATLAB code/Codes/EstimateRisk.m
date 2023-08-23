@@ -51,7 +51,7 @@ if model == 11
         b(2,1) =  0.114; % SQB
         b(3,1) =  0.894; % True Std Dev
         b(4,1) =  1.141; % Persistent Original
-        b(5,1) = -0.037; % Persistent SQB-Free
+        b(5,1) = -0.037; % Persistent SQB-Free (imprecisely estimated)
         b(6,1) =  1.304; % Transitory Error Original        
         b(7,1) =  2.021; % Transitory Error SQB-Free              
 elseif model == 12   
@@ -65,8 +65,8 @@ elseif model == 12
         b(7,1) =   0.171; % Age/10  
         b(8,1) =   0.615; % Log Income/10  
         b(9,1) =   0.617; % Zero Income   
-        b(10,1) =  0.003; % # weeks worked in 2001       
-        b(11,1) =  0.001; % # weeks spouse worked in 2001
+        b(10,1) =  0.026; % # weeks worked in 2001/10       
+        b(11,1) =  0.010; % # weeks spouse worked in 2001/10
         b(12,1) = -0.028; % Unemployment Rate  
         b(13,1) =  0.058; % ICS
         b(14,1) =  0.065; % SQB
@@ -77,57 +77,57 @@ elseif model == 12
         b(19,1) =  2.039; % Transitory Error SQB-Free  
 elseif model == 13  
         b = zeros(21,1);
-        b(1,1) = -0.85; % Constant
-        b(2,1) =  0.25; % Black
-        b(3,1) =  0.25; % Hispanic
-        b(4,1) = -0.25; % East
-        b(5,1) = -0.05; % South   
-        b(6,1) = -0.05; % West
-        b(7,1) =  0.05; % Married (spouse present)
-        b(8,1) =  0.05; % Other marital status
-        b(9,1) = -0.25; % Age 
-        b(10,1) = -0.05; % Unemployment rate
-        b(11,1) = -0.05; % ICS      
-        b(12,1) = -0.15; % Mother's years of schooling   
-        b(13,1) = -0.15; % Father's years of schooling  
-        b(14,1) = -0.06; % Living with both biological parents at age 14?
-        b(15,1) = -0.05; % AFQT score in 1981 (2006 version)
-        b(16,1) = -0.10; % SQB
-        b(17,1) = 0.725; % True Std Dev
-        b(18,1) = 0.75; % Persistent Original
-        b(19,1) = 0.75; % Persistent SQB-Free
-        b(20,1) = 1.40; % Transitory Error Original        
-        b(21,1) = 1.40; % Transitory Error SQB-Free         
+        b(1,1) =  -0.765; % Constant
+        b(2,1) =  -0.094; % Black
+        b(3,1) =  -0.119; % Hispanic
+        b(4,1) =   0.018; % East
+        b(5,1) =  -0.029; % South   
+        b(6,1) =  -0.150; % West
+        b(7,1) =   0.372; % Married (spouse present)
+        b(8,1) =   0.221; % Other marital status
+        b(9,1) =   0.138; % Age/10 
+        b(10,1) = -0.072; % Unemployment rate
+        b(11,1) =  0.089; % ICS      
+        b(12,1) =  0.003; % Mother's years of schooling   
+        b(13,1) = -0.012; % Father's years of schooling  
+        b(14,1) =  0.030; % Living with both biological parents at age 14?
+        b(15,1) = -0.014; % AFQT score in 1981 (2006 version)
+        b(16,1) = -0.136; % SQB
+        b(17,1) =  0.852; % True Std Dev
+        b(18,1) = -0.051; % Persistent Original (imprecisely estimated)
+        b(19,1) =  0.492; % Persistent SQB-Free
+        b(20,1) =  1.430; % Transitory Error Original        
+        b(21,1) =  1.941; % Transitory Error SQB-Free         
  elseif model == 14  
         b = zeros(28,1);
-        b(1,1) = -0.85; % Constant
-        b(2,1) =  0.25; % Black
-        b(3,1) =  0.25; % Hispanic
-        b(4,1) = -0.25; % East
-        b(5,1) = -0.05; % South   
-        b(6,1) = -0.05; % West
-        b(7,1) =  0.05; % Married (spouse present)
-        b(8,1) =  0.05; % Other marital status
-        b(9,1) = -0.25; % Age 
-        b(10,1) = -0.05; % Unemployment rate
-        b(11,1) = -0.05; % ICS      
-        b(12,1) = -0.15; % Mother's years of schooling   
-        b(13,1) = -0.15; % Father's years of schooling  
-        b(14,1) = -0.06; % Living with both biological parents at age 14?
-        b(15,1) = -0.05; % AFQT score in 1981 (2006 version)
-        b(16,1) = -0.05; % Female
-        b(17,1) = 0.20; % High school
-        b(18,1) = 0.35; % College 
-        b(19,1) = -0.05; % Log Income / 10 
-        b(20,1) = -0.05; % Zero income
-        b(21,1) = -0.05; % # weeks worked in previous year        
-        b(22,1) = -0.10; % # weeks spouse worked in previous year       
-        b(23,1) = -0.10; % SQB
-        b(24,1) = 0.725; % True Std Dev
-        b(25,1) = 0.75; % Persistent Original
-        b(26,1) = 0.75; % Persistent SQB-Free
-        b(27,1) = 1.40; % Transitory Error Original        
-        b(28,1) = 1.40; % Transitory Error SQB-Free               
+        b(1,1) =  -1.198; % Constant
+        b(2,1) =  -0.086; % Black
+        b(3,1) =  -0.109; % Hispanic
+        b(4,1) =   0.021; % East
+        b(5,1) =  -0.029; % South   
+        b(6,1) =  -0.147; % West
+        b(7,1) =   0.341; % Married (spouse present)
+        b(8,1) =   0.177; % Other marital status
+        b(9,1) =   0.150; % Age 
+        b(10,1) = -0.065; % Unemployment rate
+        b(11,1) =  0.079; % ICS      
+        b(12,1) =  0.002; % Mother's years of schooling   
+        b(13,1) = -0.010; % Father's years of schooling  
+        b(14,1) =  0.029; % Living with both biological parents at age 14?
+        b(15,1) = -0.008; % AFQT score in 1981 (2006 version)
+        b(16,1) =  0.267; % Female
+        b(17,1) =  0.127; % High school
+        b(18,1) = -0.083; % College 
+        b(19,1) =  0.170; % Log Income / 10 
+        b(20,1) =  0.154; % Zero income
+        b(21,1) =  0.005; % # weeks worked in previous year        
+        b(22,1) = -0.002; % # weeks spouse worked in previous year       
+        b(23,1) = -0.090; % SQB
+        b(24,1) = -0.839; % True Std Dev
+        b(25,1) =  0.051; % Persistent Original
+        b(26,1) =  0.485; % Persistent SQB-Free
+        b(27,1) =  1.431; % Transitory Error Original        
+        b(28,1) =  1.956; % Transitory Error SQB-Free               
 end
 
  info.cnames = strvcat('estimate','t-stat','step');
@@ -148,7 +148,7 @@ end
             info.rnames = strvcat(' ','Constant','Black','Hispanic',...
 		'East','South','West','Married (spouse present)','Other marital status',...
                 'Age/10','Unemployment rate','ICS',"Mother's years of schooling","Father's years of schooling",...
-                'Living with both biological parents at 14?','Status Quo Bias','Std Dev',...
+                'Living with both biological parents at 14?', 'AFQT score (2006 version)', 'Status Quo Bias','Std Dev',...
 		'Original Persistent Std Dev','SQB-Free Persistent Std Dev',...
 		'Original Transitory Std Dev','SQB-Free Transitory Std Dev');  
         elseif model == 14
@@ -192,7 +192,7 @@ end
         mprint([b,b./se,d],info)
         fprintf('Log-likelihood %10.1f\n', L);
       
-        save results_im b iter se err sumsi d lik si L  N model itertime ;
+        save ../Output/results_im b iter se err sumsi d lik si L  N model itertime ;
     end    
 
     L = sum(lik);

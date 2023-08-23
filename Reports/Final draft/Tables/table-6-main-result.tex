@@ -1,0 +1,69 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabularx}{0.85\linewidth}{l *{4}{Y}}
+\toprule
+                 &\multicolumn{1}{c}{\thead{All}} & \multicolumn{1}{c}{\thead{High school\\ dropout}} & \multicolumn{1}{c}{\thead{High school}} & \multicolumn{1}{c}{\thead{College\\ \& above}} \\
+\midrule
+\addlinespace
+\multicolumn{5}{l}{\textit{Panel A: HOME index}} \\
+\addlinespace
+$\gamma$    &    0.001   &    0.017\sym{**} &   -0.001   &   -0.005  \\
+            &  (0.003)  &  (0.007)   &  (0.004)  &  (0.005)  \\
+\addlinespace
+With Year $\times\gamma$ interaction & 0.013\sym{***}  &  0.038\sym{***} & 0.006 &  0.006 \\
+		 &  (0.005) &  (0.011)  &  (0.006)  &  (0.010) \\
+       
+\midrule
+Observations    &     9134         &     1671 &     4976 &     2487         \\
+
+\midrule
+\addlinespace
+\multicolumn{5}{l}{\textit{Panel B: Goods index}} \\
+\addlinespace
+$\gamma$        &    0.003     &    0.013\sym{*} &   -0.001  &    0.002  \\
+                &  (0.003)  &  (0.007)       &  (0.004)          &  (0.004)      \\
+\addlinespace
+With Year $\times\gamma$ interaction &  0.004  &  0.027\sym{**} &   -0.001   &   -0.011   \\
+    &  (0.005)         &  (0.011)           &  (0.006)          &  (0.009)        \\ 
+\midrule
+Observations    &    8902       &     1643   &     4851 &     2408         \\
+
+\midrule
+\addlinespace
+\multicolumn{5}{l}{\textit{Panel C: Time index}} \\
+\addlinespace
+$\gamma$        &    0.002  &  0.014\sym{**}&    0.001     &   -0.003      \\
+                &  (0.003)  &  (0.007)    &  (0.004)     &  (0.005)         \\
+\addlinespace
+ With Year $\times\gamma$ interaction & 0.014\sym{***}  & 0.032\sym{***}  &    0.008   & 0.015   \\
+         &  (0.005)         &  (0.012)     &  (0.007)  &  (0.011)    \\
+\midrule
+Observations    &     8902    &     1643   &     4851     &     2408         \\
+
+\midrule
+\addlinespace
+\multicolumn{5}{l}{\textit{Panel D: Cognitive stimulation score (\%)}} \\
+\addlinespace
+$\gamma$        &   -0.057 &    0.293   &   -0.096     &   -0.225       \\
+                &  (0.089)    &  (0.221)      &  (0.123)     &  (0.148)  \\
+\addlinespace
+  With Year $\times\gamma$ interaction   &    0.033    &   0.213    &  -0.085    &   0.078   \\
+       &  (0.151)     &  (0.381)     &  (0.195)    &  (0.298)      \\
+\midrule
+Observations   &     8227  &     1494 &     4514  &     2219         \\
+
+\midrule
+\addlinespace
+\multicolumn{5}{l}{\textit{Panel E: Emotional support score (\%)}} \\
+\addlinespace
+$\gamma$        &    0.189\sym{*}  &    0.489\sym{**} &    0.094    &  0.128  \\
+                &  (0.098)  &  (0.230)   &  (0.133)     &  (0.186)        \\
+\addlinespace
+ With Year $\times\gamma$ interaction  &  0.325\sym{*} &  0.513 &  0.294  &  0.114         \\
+        &  (0.168)      &  (0.412)    &  (0.210)      &  (0.360)   \\
+\midrule
+Observations   &     7641  &     1375 &     4215 &     2051         \\
+\bottomrule
+
+\end{tabularx}
+}
