@@ -248,7 +248,7 @@ global model
 model = 11;
 itertime = clock;
 disp(datestr(itertime,0));
-dfile = ['Model_',int2str(model),'_',datestr(clock,1),'.out'];
+dfile = ['../Output/Model_',int2str(model),'_',datestr(clock,1),'.out'];
 diary(dfile);
 disp('Model 11')
 EstimateRisk(RISK_1993, RISK_2002, RISK_2004, RISK_2006, RISK_2010, RISK_2012, RISK_2014,[X93(:,1),ones(N,1)],[X02(:,1),ones(N,1)],[X04(:,1),ones(N,1)],[X06(:,1),ones(N,1)],[X10(:,1),zeros(N,1)],[X12(:,1),zeros(N,1)],[X14(:,1),zeros(N,1)]);
@@ -261,7 +261,7 @@ global model
 model = 12;
 itertime = clock;
 disp(datestr(itertime,0));
-dfile = ['Model_',int2str(model),'_',datestr(clock,1),'.out'];
+dfile = ['../Output/Model_',int2str(model),'_',datestr(clock,1),'.out'];
 diary(dfile);
 disp('Model 12')
 % one here indicates those that have status quo bias in them
@@ -277,11 +277,11 @@ global model
 model = 13;
 itertime = clock;
 disp(datestr(itertime,0));
-dfile = ['Model_',int2str(model),'_',datestr(clock,1),'.out'];
+dfile = ['../Output/Model_',int2str(model),'_',datestr(clock,1),'.out'];
 diary(dfile);
 disp('Model 13')
-EstimateRisk_KSS(c92,c94,c98,c00,c02,[W92 ,ones(N,1)],[W94 ,ones(N,1)],...
-    [W98 ,zeros(N,1)],[W00, zeros(N,1)],[W02, zeros(N,1)]);
+EstimateRisk(RISK_1993, RISK_2002, RISK_2004, RISK_2006, RISK_2010, RISK_2012, RISK_2014,[W93 ,ones(N,1)],[W02 ,ones(N,1)], [W04 ,ones(N,1)],[W06, ones(N,1)], ...
+    [W10, zeros(N,1)], [W12, zeros(N,1)], [W14, zeros(N,1)]);
 diary off;
 
 %% MODEL 14: Sampling plus Second-Step Covariates, Transitory Response Error, Persistent Response Error
@@ -291,15 +291,15 @@ global model
 model = 14;
 itertime = clock;
 disp(datestr(itertime,0));
-dfile = ['Model_',int2str(model),'_',datestr(clock,1),'.out'];
+dfile = ['../Output/Model_',int2str(model),'_',datestr(clock,1),'.out'];
 diary(dfile);
 disp('Model 14')
-EstimateRisk_KSS(c92,c94,c98,c00,c02,[XW93,ones(N,1)],[XW02 ,ones(N,1)],...
-    [XW04 ,zeros(N,1)],[XW06, zeros(N,1)],[XW02, zeros(N,1)]);
+EstimateRisk(RISK_1993, RISK_2002, RISK_2004, RISK_2006, RISK_2010, RISK_2012, RISK_2014,[XW93 ,ones(N,1)],[XW02 ,ones(N,1)], [XW04 ,ones(N,1)],[XW06, ones(N,1)], ...
+    [XW10, zeros(N,1)], [XW12, zeros(N,1)], [XW14, zeros(N,1)]);
 diary off;
 clear all;
 
-diary('ImputeRisk_KSS.out');
+diary('../Output/ImputeRisk.out');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Impute Proxy Values for Risk Tolerance
@@ -308,84 +308,13 @@ diary('ImputeRisk_KSS.out');
 load KSSsample
 global model
 
-%% Imputations from Model 0 %%
-load results_final_00
-[Elntheta_00] = Elntheta_KSS(b,c92_1,c94_1,zeros(N,1),zeros(N,1),zeros(N,1),X93(:,1),X02(:,1),X04(:,1),X06(:,1),X02(:,1));
-[Etheta_00] = Etheta_KSS(b,c92_1,c94_1,zeros(N,1),zeros(N,1),zeros(N,1),X93(:,1),X02(:,1),X04(:,1),X06(:,1),X02(:,1));
-
-i = find(c92==1);
-    h0_1 = unique(Elntheta_00(i));
-i = find(c92==2);
-    h0_2 = unique(Elntheta_00(i));
-i = find(c92==3);
-    h0_3 = unique(Elntheta_00(i));
-i = find(c92==4);
-    h0_4 = unique(Elntheta_00(i));
-disp('Proxy Values Log Risk Tolerance --- Model 0');
-    disp([h0_1,h0_2,h0_3,h0_4]);
-
-i = find(c92==1);
-    h0_1 = unique(Etheta_00(i));
-i = find(c92==2);
-    h0_2 = unique(Etheta_00(i));
-i = find(c92==3);
-    h0_3 = unique(Etheta_00(i));
-i = find(c92==4);
-    h0_4 = unique(Etheta_00(i));
-disp('Proxy Values Log Risk Tolerance --- Model 0');
-    disp([h0_1,h0_2,h0_3,h0_4] );
-      
-%% Imputations from Model 1 %%
-load results_final_01
-[Elntheta_01] = Elntheta_KSS(b,c92,c94,c98,c00,c02,X93(:,1),X02(:,1),X04(:,1),X06(:,1),X02(:,1));
-[Etheta_01] = Etheta_KSS(b,c92,c94,c98,c00,c02,X93(:,1),X02(:,1),X04(:,1),X06(:,1),X02(:,1));
-    se = full(se); b = full(b); X93 = full(X93);
-    sigmau = abs(b(2));
-    xb_01 = X93(:,1)*b(1);
-    mu_01 = mean(xb_01);
-    va_01 = var(xb_01)+sigmau^2;
-    Vtheta_01  = exp(2*mu_01+va_01)*(exp(va_01)-1);
-    lambda  = Vtheta_01 / var(Etheta_01);
-    
-disp(sprintf('Model 1: Log Risk Tolerance Mean = %1.3f (%1.3f) Std Dev = %1.3f (%1.3f)', mu_01, se(1), va_01^.5, se(2) ));
-disp(sprintf('Model 1: Risk Tolerance Mean = %1.3f Std Dev = %1.3f', exp(mu_01 + va_01/2), Vtheta_01^.5 ));
-
-%% Imputations from Model 2 %%
-load results_final_02
-[Elntheta_02] = Elntheta_KSS(b,c92,c94,c98,c00,c02,X93,X02,X04,X06,X02);
-[Etheta_02] = Etheta_KSS(b,c92,c94,c98,c00,c02,X93,X02,X04,X06,X02);
-    se = full(se); b = full(b); X93 = full(X93);
-    K = size(X93,2);
-    N = size(X93,1);
-    sigmau = abs(b(14));
-    xb_02 = X93(:,1:K)*b(1:K);
-    mu_02 = mean(xb_02);
-    va_02 = var(xb_02)+sigmau^2;
-    ez_02 = b(end);
-    Vtheta_02  = exp(2*mu_02+va_02)*(exp(va_02)-1);
-    
-    X93 = full(X93);
-    B = size(b,1);
-    g = zeros(B,1);
-    g(1:K,1) = mean(X93)';
-    se_mu02 = (g'*V*g)^0.5;    
-    
-    X = X93 - repmat(mean(X93),N,1);
-    g = zeros(B,1);
-    g(1:K,1) = va_02^-.5*(X'*X)*b(1:K)/N;
-    g(K+1) = va_02^-.5*sigmau;
-    se_va02 = (g'*V*g)^0.5; 
-
-disp(sprintf('Model 2: Log Risk Tolerance Mean = %1.3f (%1.3f) Std Dev = %1.3f (%1.3f)', mu_02, se_mu02,va_02, se_va02 ));
-disp(sprintf('Model 2: Risk Tolerance Mean = %1.3f Std Dev = %1.3f', exp(mu_02 + va_02/2), Vtheta_02^.5 ));
-
 %% Imputations from Model 11 %%
 load results_final_11
-[Etheta_11] = Etheta_KSS(b,c92,c94,c98,c00,c02,[X93(:,1),ones(N,1)],[X02(:,1),ones(N,1)],...
+[Etheta_11] = Etheta(b,c92,c94,c98,c00,c02,[X93(:,1),ones(N,1)],[X02(:,1),ones(N,1)],...
 	[X04(:,1),zeros(N,1)],[X06(:,1),zeros(N,1)],[X02(:,1),zeros(N,1)]);
-[Elntheta_11] = Elntheta_KSS(b,c92,c94,c98,c00,c02,[X93(:,1),ones(N,1)],[X02(:,1),ones(N,1)],...
+[Elntheta_11] = Elntheta(b,c92,c94,c98,c00,c02,[X93(:,1),ones(N,1)],[X02(:,1),ones(N,1)],...
 	[X04(:,1),zeros(N,1)],[X06(:,1),zeros(N,1)],[X02(:,1),zeros(N,1)]); 
-[Egamma_11]  = Egamma_KSS(b,c92,c94,c98,c00,c02,[X93(:,1),ones(N,1)],[X02(:,1),ones(N,1)],...
+[Egamma_11]  = Egamma(b,c92,c94,c98,c00,c02,[X93(:,1),ones(N,1)],[X02(:,1),ones(N,1)],...
 	[X04(:,1),zeros(N,1)],[X06(:,1),zeros(N,1)],[X02(:,1),zeros(N,1)]);
     se = full(se); b = full(b); X93 = full(X93);
     sigmau = abs(b(3));

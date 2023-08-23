@@ -27,7 +27,7 @@ muX10 = X10*b(1:K,1); % mean of log risk tolerance in 2010
 muX12 = X12*b(1:K,1); % mean of log risk tolerance in 2012
 muX14 = X14*b(1:K,1); % mean of log risk tolerance in 2014
 
-if model == 11 | model == 12 | model == 13 | model == 14
+if model > 10
     sigmau =  b(K+1,1);
     sigmako = b(K+2,1);
     sigmakf = b(K+3,1);

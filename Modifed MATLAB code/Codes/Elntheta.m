@@ -1,4 +1,4 @@
-function [Elntheta92] = Elntheta_KSS(b,c92,c94,c98,c00,c02,X92,X94,X98,X00,X02);
+function [Elntheta92] = Elntheta(b,c92,c94,c98,c00,c02,X92,X94,X98,X00,X02);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Elntheta.m
 % Computes the E(ln(theta)|c,X)

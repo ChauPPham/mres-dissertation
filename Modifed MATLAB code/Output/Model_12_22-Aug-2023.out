@@ -2,324 +2,10 @@ disp('Model 12')
 Model 12
 % one here indicates those that have status quo bias in them
 % zero indicates new version without status quo bias
-EstimateRisk_KSS(RISK_1993, RISK_2002, RISK_2004, RISK_2006, RISK_2010, RISK_2012, RISK_2014,[X93 ,ones(N,1)],[X02 ,ones(N,1)], [X04 ,ones(N,1)],[X06, ones(N,1)], ...
-    [X10, zeros(N,1)], [X12, zeros(N,1)], [X14, zeros(N,1)]);
-{Unrecognized function or variable 'RISK_1993'.
-} 
-clear all;
-load ../Output/MATLAB_sample; 
-global model
-model = 12;
-itertime = clock;
-disp(datestr(itertime,0));
-22-Aug-2023 16:55:35
-dfile = ['Model_',int2str(model),'_',datestr(clock,1),'.out'];
-diary(dfile);
-disp('Model 12')
-Model 12
-% one here indicates those that have status quo bias in them
-% zero indicates new version without status quo bias
-EstimateRisk_KSS(RISK_1993, RISK_2002, RISK_2004, RISK_2006, RISK_2010, RISK_2012, RISK_2014,[X93 ,ones(N,1)],[X02 ,ones(N,1)], [X04 ,ones(N,1)],[X06, ones(N,1)], ...
-    [X10, zeros(N,1)], [X12, zeros(N,1)], [X14, zeros(N,1)]);
-{Unrecognized function or variable 'EstimateRisk_KSS'.
-} 
-clear all;
-load ../Output/MATLAB_sample; 
-global model
-model = 12;
-itertime = clock;
-disp(datestr(itertime,0));
-22-Aug-2023 16:55:43
-dfile = ['Model_',int2str(model),'_',datestr(clock,1),'.out'];
-diary(dfile);
-disp('Model 12')
-Model 12
-% one here indicates those that have status quo bias in them
-% zero indicates new version without status quo bias
-EstimateRisk(RISK_1993, RISK_2002, RISK_2004, RISK_2006, RISK_2010, RISK_2012, RISK_2014,[X93 ,ones(N,1)],[X02 ,ones(N,1)], [X04 ,ones(N,1)],[X06, ones(N,1)], ...
-    [X10, zeros(N,1)], [X12, zeros(N,1)], [X14, zeros(N,1)]);
-[Warning: Matrix is singular, close to singular or badly scaled. Results may be
-inaccurate. RCOND = NaN.] 
-[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('EstimateRisk', 'C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\EstimateRisk.m', 176)" style="font-weight:bold">EstimateRisk</a> (<a href="matlab: opentoline('C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\EstimateRisk.m',176,0)">line 176</a>)
-] 
-[Warning: Matrix is singular, close to singular or badly scaled. Results may be
-inaccurate. RCOND = NaN.] 
-[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('EstimateRisk', 'C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\EstimateRisk.m', 183)" style="font-weight:bold">EstimateRisk</a> (<a href="matlab: opentoline('C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\EstimateRisk.m',183,0)">line 183</a>)
-] 
-Error at iteration 1 = NaN
-22-Aug-2023 16:56:29
-                                   estimate          t-stat            step 
-Constant                                NaN             NaN             NaN 
-Black                                   NaN             NaN             NaN 
-Hispanic                                NaN             NaN             NaN 
-Male                                    NaN             NaN             NaN 
-Lt 12 Yrs Ed                            NaN             NaN             NaN 
-13-16 Yrs Ed                            NaN             NaN             NaN 
-Gt 16 Yrs Ed                            NaN             NaN             NaN 
-Age / 10                                NaN             NaN             NaN 
-Log Total Income / 10                   NaN             NaN             NaN 
-Zero Total Income                       NaN             NaN             NaN 
-Log Financial Assets / 10               NaN             NaN             NaN 
-Non-Positive Assets                     NaN             NaN             NaN 
-Unemployement Rate                      NaN             NaN             NaN 
-Status Quo Bias                         NaN             NaN             NaN 
-Std Dev                                 NaN             NaN             NaN 
-Original Persistent Std Dev             NaN             NaN             NaN 
-SQB-Free Persistent Std Dev             NaN             NaN             NaN 
-Original Transitory Std Dev             NaN             NaN             NaN 
-SQB-Free Transitory Std Dev             NaN             NaN             NaN 
-
-Log-likelihood        NaN
-[Warning: Matrix is singular, close to singular or badly scaled. Results may be
-inaccurate. RCOND = NaN.] 
-[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('EstimateRisk', 'C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\EstimateRisk.m', 199)" style="font-weight:bold">EstimateRisk</a> (<a href="matlab: opentoline('C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\EstimateRisk.m',199,0)">line 199</a>)
-] 
-Estimates of Model 12.0
-22-Aug-2023 16:56:29
-Sample size 12686
-Number of iterations = 1
-Error at last iteration = NaN
-                                   estimate      std. error          t-stat 
-Constant                                NaN             NaN             NaN 
-Black                                   NaN             NaN             NaN 
-Hispanic                                NaN             NaN             NaN 
-Male                                    NaN             NaN             NaN 
-Lt 12 Yrs Ed                            NaN             NaN             NaN 
-13-16 Yrs Ed                            NaN             NaN             NaN 
-Gt 16 Yrs Ed                            NaN             NaN             NaN 
-Age / 10                                NaN             NaN             NaN 
-Log Total Income / 10                   NaN             NaN             NaN 
-Zero Total Income                       NaN             NaN             NaN 
-Log Financial Assets / 10               NaN             NaN             NaN 
-Non-Positive Assets                     NaN             NaN             NaN 
-Unemployement Rate                      NaN             NaN             NaN 
-Status Quo Bias                         NaN             NaN             NaN 
-Std Dev                                 NaN             NaN             NaN 
-Original Persistent Std Dev             NaN             NaN             NaN 
-SQB-Free Persistent Std Dev             NaN             NaN             NaN 
-Original Transitory Std Dev             NaN             NaN             NaN 
-SQB-Free Transitory Std Dev             NaN             NaN             NaN 
-
-Log-likelihood        NaN
-diary off;
-disp('Model 12')
-Model 12
-% one here indicates those that have status quo bias in them
-% zero indicates new version without status quo bias
-EstimateRisk(RISK_1993, RISK_2002, RISK_2004, RISK_2006, RISK_2010, RISK_2012, RISK_2014,[X93 ,ones(N,1)],[X02 ,ones(N,1)], [X04 ,ones(N,1)],[X06, ones(N,1)], ...
-    [X10, zeros(N,1)], [X12, zeros(N,1)], [X14, zeros(N,1)]);
-[Warning: Matrix is singular, close to singular or badly scaled. Results may be
-inaccurate. RCOND = NaN.] 
-[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('EstimateRisk', 'C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\EstimateRisk.m', 176)" style="font-weight:bold">EstimateRisk</a> (<a href="matlab: opentoline('C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\EstimateRisk.m',176,0)">line 176</a>)
-] 
-[Warning: Matrix is singular, close to singular or badly scaled. Results may be
-inaccurate. RCOND = NaN.] 
-[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('EstimateRisk', 'C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\EstimateRisk.m', 183)" style="font-weight:bold">EstimateRisk</a> (<a href="matlab: opentoline('C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\EstimateRisk.m',183,0)">line 183</a>)
-] 
-Error at iteration 1 = NaN
-22-Aug-2023 18:15:34
-                                       estimate          t-stat            step 
-Constant                                    NaN             NaN             NaN 
-Black                                       NaN             NaN             NaN 
-Hispanic                                    NaN             NaN             NaN 
-Female                                      NaN             NaN             NaN 
-High school                                 NaN             NaN             NaN 
-College                                     NaN             NaN             NaN 
-Age                                         NaN             NaN             NaN 
-Log income                                  NaN             NaN             NaN 
-Zero income                                 NaN             NaN             NaN 
-# weeks worked last year                    NaN             NaN             NaN 
-# weeks spouse worked last year             NaN             NaN             NaN 
-Unemployment rate                           NaN             NaN             NaN 
-ICS                                         NaN             NaN             NaN 
-Status Quo Bias                             NaN             NaN             NaN 
-Std Dev                                     NaN             NaN             NaN 
-Original Persistent Std Dev                 NaN             NaN             NaN 
-SQB-Free Persistent Std Dev                 NaN             NaN             NaN 
-Original Transitory Std Dev                 NaN             NaN             NaN 
-SQB-Free Transitory Std Dev                 NaN             NaN             NaN 
-
-Log-likelihood       -Inf
-[Warning: Matrix is singular, close to singular or badly scaled. Results may be
-inaccurate. RCOND = NaN.] 
-[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('EstimateRisk', 'C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\EstimateRisk.m', 199)" style="font-weight:bold">EstimateRisk</a> (<a href="matlab: opentoline('C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\EstimateRisk.m',199,0)">line 199</a>)
-] 
-Estimates of Model 12.0
-22-Aug-2023 18:15:34
-Sample size 12686
-Number of iterations = 1
-Error at last iteration = NaN
-                                       estimate      std. error          t-stat 
-Constant                                    NaN             NaN             NaN 
-Black                                       NaN             NaN             NaN 
-Hispanic                                    NaN             NaN             NaN 
-Female                                      NaN             NaN             NaN 
-High school                                 NaN             NaN             NaN 
-College                                     NaN             NaN             NaN 
-Age                                         NaN             NaN             NaN 
-Log income                                  NaN             NaN             NaN 
-Zero income                                 NaN             NaN             NaN 
-# weeks worked last year                    NaN             NaN             NaN 
-# weeks spouse worked last year             NaN             NaN             NaN 
-Unemployment rate                           NaN             NaN             NaN 
-ICS                                         NaN             NaN             NaN 
-Status Quo Bias                             NaN             NaN             NaN 
-Std Dev                                     NaN             NaN             NaN 
-Original Persistent Std Dev                 NaN             NaN             NaN 
-SQB-Free Persistent Std Dev                 NaN             NaN             NaN 
-Original Transitory Std Dev                 NaN             NaN             NaN 
-SQB-Free Transitory Std Dev                 NaN             NaN             NaN 
-
-Log-likelihood       -Inf
-diary off;
-disp('Model 12')
-Model 12
-% one here indicates those that have status quo bias in them
-% zero indicates new version without status quo bias
-EstimateRisk(RISK_1993, RISK_2002, RISK_2004, RISK_2006, RISK_2010, RISK_2012, RISK_2014,[X93 ,ones(N,1)],[X02 ,ones(N,1)], [X04 ,ones(N,1)],[X06, ones(N,1)], ...
-    [X10, zeros(N,1)], [X12, zeros(N,1)], [X14, zeros(N,1)]);
-[Warning: Matrix is singular, close to singular or badly scaled. Results may
-be inaccurate. RCOND = NaN.] 
-[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('EstimateRisk', 'C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\EstimateRisk.m', 176)" style="font-weight:bold">EstimateRisk</a> (<a href="matlab: opentoline('C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\EstimateRisk.m',176,0)">line 176</a>)
-] 
-[Warning: Matrix is singular, close to singular or badly scaled. Results may
-be inaccurate. RCOND = NaN.] 
-[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('EstimateRisk', 'C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\EstimateRisk.m', 183)" style="font-weight:bold">EstimateRisk</a> (<a href="matlab: opentoline('C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\EstimateRisk.m',183,0)">line 183</a>)
-] 
-Error at iteration 1 = NaN
-22-Aug-2023 19:22:24
-                                       estimate          t-stat            step 
-Constant                                    NaN             NaN             NaN 
-Black                                       NaN             NaN             NaN 
-Hispanic                                    NaN             NaN             NaN 
-Female                                      NaN             NaN             NaN 
-High school                                 NaN             NaN             NaN 
-College                                     NaN             NaN             NaN 
-Age                                         NaN             NaN             NaN 
-Log income                                  NaN             NaN             NaN 
-Zero income                                 NaN             NaN             NaN 
-# weeks worked last year                    NaN             NaN             NaN 
-# weeks spouse worked last year             NaN             NaN             NaN 
-Unemployment rate                           NaN             NaN             NaN 
-ICS                                         NaN             NaN             NaN 
-Status Quo Bias                             NaN             NaN             NaN 
-Std Dev                                     NaN             NaN             NaN 
-Original Persistent Std Dev                 NaN             NaN             NaN 
-SQB-Free Persistent Std Dev                 NaN             NaN             NaN 
-Original Transitory Std Dev                 NaN             NaN             NaN 
-SQB-Free Transitory Std Dev                 NaN             NaN             NaN 
-
-Log-likelihood       -Inf
-[Warning: Matrix is singular, close to singular or badly scaled. Results may
-be inaccurate. RCOND = NaN.] 
-[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('EstimateRisk', 'C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\EstimateRisk.m', 199)" style="font-weight:bold">EstimateRisk</a> (<a href="matlab: opentoline('C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\EstimateRisk.m',199,0)">line 199</a>)
-] 
-Estimates of Model 12.0
-22-Aug-2023 19:22:24
-Sample size 12686
-Number of iterations = 1
-Error at last iteration = NaN
-                                       estimate      std. error          t-stat 
-Constant                                    NaN             NaN             NaN 
-Black                                       NaN             NaN             NaN 
-Hispanic                                    NaN             NaN             NaN 
-Female                                      NaN             NaN             NaN 
-High school                                 NaN             NaN             NaN 
-College                                     NaN             NaN             NaN 
-Age                                         NaN             NaN             NaN 
-Log income                                  NaN             NaN             NaN 
-Zero income                                 NaN             NaN             NaN 
-# weeks worked last year                    NaN             NaN             NaN 
-# weeks spouse worked last year             NaN             NaN             NaN 
-Unemployment rate                           NaN             NaN             NaN 
-ICS                                         NaN             NaN             NaN 
-Status Quo Bias                             NaN             NaN             NaN 
-Std Dev                                     NaN             NaN             NaN 
-Original Persistent Std Dev                 NaN             NaN             NaN 
-SQB-Free Persistent Std Dev                 NaN             NaN             NaN 
-Original Transitory Std Dev                 NaN             NaN             NaN 
-SQB-Free Transitory Std Dev                 NaN             NaN             NaN 
-
-Log-likelihood       -Inf
-diary off;
-disp('Model 12')
-Model 12
-% one here indicates those that have status quo bias in them
-% zero indicates new version without status quo bias
-EstimateRisk(RISK_1993, RISK_2002, RISK_2004, RISK_2006, RISK_2010, RISK_2012, RISK_2014,[X93 ,ones(N,1)],[X02 ,ones(N,1)], [X04 ,ones(N,1)],[X06, ones(N,1)], ...
-    [X10, zeros(N,1)], [X12, zeros(N,1)], [X14, zeros(N,1)]);
-[Warning: Matrix is singular, close to singular or badly scaled. Results may
-be inaccurate. RCOND = NaN.] 
-[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('EstimateRisk', 'C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\EstimateRisk.m', 176)" style="font-weight:bold">EstimateRisk</a> (<a href="matlab: opentoline('C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\EstimateRisk.m',176,0)">line 176</a>)
-] 
-[Warning: Matrix is singular, close to singular or badly scaled. Results may
-be inaccurate. RCOND = NaN.] 
-[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('EstimateRisk', 'C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\EstimateRisk.m', 183)" style="font-weight:bold">EstimateRisk</a> (<a href="matlab: opentoline('C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\EstimateRisk.m',183,0)">line 183</a>)
-] 
-Error at iteration 1 = NaN
-22-Aug-2023 19:29:00
-                                       estimate          t-stat            step 
-Constant                                    NaN             NaN             NaN 
-Black                                       NaN             NaN             NaN 
-Hispanic                                    NaN             NaN             NaN 
-Female                                      NaN             NaN             NaN 
-High school                                 NaN             NaN             NaN 
-College                                     NaN             NaN             NaN 
-Age                                         NaN             NaN             NaN 
-Log income                                  NaN             NaN             NaN 
-Zero income                                 NaN             NaN             NaN 
-# weeks worked last year                    NaN             NaN             NaN 
-# weeks spouse worked last year             NaN             NaN             NaN 
-Unemployment rate                           NaN             NaN             NaN 
-ICS                                         NaN             NaN             NaN 
-Status Quo Bias                             NaN             NaN             NaN 
-Std Dev                                     NaN             NaN             NaN 
-Original Persistent Std Dev                 NaN             NaN             NaN 
-SQB-Free Persistent Std Dev                 NaN             NaN             NaN 
-Original Transitory Std Dev                 NaN             NaN             NaN 
-SQB-Free Transitory Std Dev                 NaN             NaN             NaN 
-
-Log-likelihood       -Inf
-[Warning: Matrix is singular, close to singular or badly scaled. Results may
-be inaccurate. RCOND = NaN.] 
-[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('EstimateRisk', 'C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\EstimateRisk.m', 199)" style="font-weight:bold">EstimateRisk</a> (<a href="matlab: opentoline('C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\EstimateRisk.m',199,0)">line 199</a>)
-] 
-Estimates of Model 12.0
-22-Aug-2023 19:29:00
-Sample size 9279
-Number of iterations = 1
-Error at last iteration = NaN
-                                       estimate      std. error          t-stat 
-Constant                                    NaN             NaN             NaN 
-Black                                       NaN             NaN             NaN 
-Hispanic                                    NaN             NaN             NaN 
-Female                                      NaN             NaN             NaN 
-High school                                 NaN             NaN             NaN 
-College                                     NaN             NaN             NaN 
-Age                                         NaN             NaN             NaN 
-Log income                                  NaN             NaN             NaN 
-Zero income                                 NaN             NaN             NaN 
-# weeks worked last year                    NaN             NaN             NaN 
-# weeks spouse worked last year             NaN             NaN             NaN 
-Unemployment rate                           NaN             NaN             NaN 
-ICS                                         NaN             NaN             NaN 
-Status Quo Bias                             NaN             NaN             NaN 
-Std Dev                                     NaN             NaN             NaN 
-Original Persistent Std Dev                 NaN             NaN             NaN 
-SQB-Free Persistent Std Dev                 NaN             NaN             NaN 
-Original Transitory Std Dev                 NaN             NaN             NaN 
-SQB-Free Transitory Std Dev                 NaN             NaN             NaN 
-
-Log-likelihood       -Inf
-diary off;
-disp('Model 12')
-Model 12
-% one here indicates those that have status quo bias in them
-% zero indicates new version without status quo bias
 EstimateRisk(RISK_1993, RISK_2002, RISK_2004, RISK_2006, RISK_2010, RISK_2012, RISK_2014,[X93 ,ones(N,1)],[X02 ,ones(N,1)], [X04 ,ones(N,1)],[X06, ones(N,1)], ...
     [X10, zeros(N,1)], [X12, zeros(N,1)], [X14, zeros(N,1)]);
 Error at iteration 1 = 2.20e-01
-22-Aug-2023 20:00:28
+22-Aug-2023 21:43:41
                                        estimate          t-stat            step 
 Constant                                 -0.630          -2.794        0.220464 
 Black                                    -0.218         -18.212       -0.018361 
@@ -343,7 +29,7 @@ SQB-Free Transitory Std Dev               1.495         115.762        0.094987
 
 Log-likelihood   -83283.7
 Error at iteration 2 = 1.39e-01
-22-Aug-2023 20:01:18
+22-Aug-2023 21:44:26
                                        estimate          t-stat            step 
 Constant                                 -0.490          -2.074        0.139385 
 Black                                    -0.236         -19.027       -0.017584 
@@ -367,7 +53,7 @@ SQB-Free Transitory Std Dev               1.590         111.885        0.095508
 
 Log-likelihood   -78030.2
 Error at iteration 3 = 1.02e-01
-22-Aug-2023 20:02:08
+22-Aug-2023 21:45:18
                                        estimate          t-stat            step 
 Constant                                 -0.418          -1.686        0.071743 
 Black                                    -0.252         -19.610       -0.015883 
@@ -391,7 +77,7 @@ SQB-Free Transitory Std Dev               1.690         106.750        0.099534
 
 Log-likelihood   -72850.7
 Error at iteration 4 = 1.06e-01
-22-Aug-2023 20:02:58
+22-Aug-2023 21:46:03
                                        estimate          t-stat            step 
 Constant                                 -0.406          -1.556        0.012023 
 Black                                    -0.265         -19.891       -0.013141 
@@ -415,7 +101,7 @@ SQB-Free Transitory Std Dev               1.796         100.470        0.105852
 
 Log-likelihood   -67727.5
 Error at iteration 5 = 1.11e-01
-22-Aug-2023 20:03:48
+22-Aug-2023 21:46:49
                                        estimate          t-stat            step 
 Constant                                 -0.449          -1.628       -0.042549 
 Black                                    -0.274         -19.776       -0.009154 
@@ -439,7 +125,7 @@ SQB-Free Transitory Std Dev               1.907          93.106        0.111492
 
 Log-likelihood   -62653.8
 Error at iteration 6 = 1.10e-01
-22-Aug-2023 20:04:37
+22-Aug-2023 21:47:34
                                        estimate          t-stat            step 
 Constant                                 -0.543          -1.856       -0.094520 
 Black                                    -0.278         -19.107       -0.003670 
@@ -463,7 +149,7 @@ SQB-Free Transitory Std Dev               2.017          84.793        0.109981
 
 Log-likelihood   -57614.8
 Error at iteration 7 = 1.04e-01
-22-Aug-2023 20:05:26
+22-Aug-2023 21:48:22
                                        estimate          t-stat            step 
 Constant                                 -0.693          -2.192       -0.149147 
 Black                                    -0.274         -17.497        0.003692 
@@ -487,7 +173,7 @@ SQB-Free Transitory Std Dev               2.107          75.457        0.089720
 
 Log-likelihood   -52504.3
 Error at iteration 8 = 2.00e-01
-22-Aug-2023 20:06:16
+22-Aug-2023 21:49:10
                                        estimate          t-stat            step 
 Constant                                 -0.817          -1.868       -0.124805 
 Black                                    -0.266         -10.014        0.007937 
@@ -511,7 +197,7 @@ SQB-Free Transitory Std Dev               2.135          55.585        0.027994
 
 Log-likelihood   -44800.5
 Error at iteration 9 = 5.78e-02
-22-Aug-2023 20:07:05
+22-Aug-2023 21:49:58
                                        estimate          t-stat            step 
 Constant                                 -1.199          -2.659       -0.381110 
 Black                                    -0.234          -8.507        0.032513 
@@ -535,7 +221,7 @@ SQB-Free Transitory Std Dev               2.105          51.621       -0.030006
 
 Log-likelihood   -40948.2
 Error at iteration 10 = 7.07e-02
-22-Aug-2023 20:07:54
+22-Aug-2023 21:50:46
                                        estimate          t-stat            step 
 Constant                                 -1.736          -3.767       -0.537834 
 Black                                    -0.163          -5.679        0.070706 
@@ -559,7 +245,7 @@ SQB-Free Transitory Std Dev               2.023          49.002       -0.081659
 
 Log-likelihood   -38486.4
 Error at iteration 11 = 6.23e-02
-22-Aug-2023 20:08:43
+22-Aug-2023 21:51:37
                                        estimate          t-stat            step 
 Constant                                 -1.994          -4.117       -0.257554 
 Black                                    -0.101          -3.152        0.062313 
@@ -583,7 +269,7 @@ SQB-Free Transitory Std Dev               2.025          50.710        0.001236
 
 Log-likelihood   -37632.4
 Error at iteration 12 = 4.38e-02
-22-Aug-2023 20:09:32
+22-Aug-2023 21:52:25
                                        estimate          t-stat            step 
 Constant                                 -1.950          -3.913        0.043809 
 Black                                    -0.091          -2.725        0.009289 
@@ -607,7 +293,7 @@ SQB-Free Transitory Std Dev               2.039          52.889        0.014282
 
 Log-likelihood   -37538.7
 Error at iteration 13 = 1.61e-01
-22-Aug-2023 20:10:22
+22-Aug-2023 21:53:13
                                        estimate          t-stat            step 
 Constant                                 -1.943          -3.896        0.007025 
 Black                                    -0.091          -2.692        0.000156 
@@ -631,7 +317,7 @@ SQB-Free Transitory Std Dev               2.039          52.351        0.000576
 
 Log-likelihood   -37540.0
 Error at iteration 14 = 2.33e-03
-22-Aug-2023 20:11:12
+22-Aug-2023 21:54:02
                                        estimate          t-stat            step 
 Constant                                 -1.944          -3.899       -0.000466 
 Black                                    -0.091          -2.692        0.000075 
@@ -655,7 +341,7 @@ SQB-Free Transitory Std Dev               2.039          52.489       -0.000084
 
 Log-likelihood   -37539.3
 Error at iteration 15 = 1.59e-01
-22-Aug-2023 20:12:01
+22-Aug-2023 21:54:50
                                        estimate          t-stat            step 
 Constant                                 -1.943          -3.897        0.000950 
 Black                                    -0.091          -2.687        0.000086 
@@ -679,7 +365,7 @@ SQB-Free Transitory Std Dev               2.040          52.403        0.000097
 
 Log-likelihood   -37540.1
 Error at iteration 16 = 5.20e-04
-22-Aug-2023 20:12:50
+22-Aug-2023 21:55:38
                                        estimate          t-stat            step 
 Constant                                 -1.943          -3.899       -0.000603 
 Black                                    -0.091          -2.691       -0.000051 
@@ -703,7 +389,7 @@ SQB-Free Transitory Std Dev               2.039          52.454       -0.000137
 
 Log-likelihood   -37539.7
 Error at iteration 17 = 1.58e-01
-22-Aug-2023 20:13:41
+22-Aug-2023 21:56:27
                                        estimate          t-stat            step 
 Constant                                 -1.943          -3.898        0.000395 
 Black                                    -0.091          -2.688        0.000034 
@@ -727,7 +413,7 @@ SQB-Free Transitory Std Dev               2.039          52.429        0.000065
 
 Log-likelihood   -37539.9
 Error at iteration 18 = 1.50e-04
-22-Aug-2023 20:14:31
+22-Aug-2023 21:57:19
                                        estimate          t-stat            step 
 Constant                                 -1.943          -3.899       -0.000219 
 Black                                    -0.091          -2.690       -0.000019 
@@ -751,7 +437,7 @@ SQB-Free Transitory Std Dev               2.039          52.443       -0.000044
 
 Log-likelihood   -37539.8
 Error at iteration 19 = 1.58e-01
-22-Aug-2023 20:15:20
+22-Aug-2023 21:58:09
                                        estimate          t-stat            step 
 Constant                                 -1.943          -3.898        0.000127 
 Black                                    -0.091          -2.689        0.000011 
@@ -775,7 +461,7 @@ SQB-Free Transitory Std Dev               2.039          52.436        0.000023
 
 Log-likelihood   -37539.9
 Error at iteration 20 = 4.54e-05
-22-Aug-2023 20:16:10
+22-Aug-2023 21:58:59
                                        estimate          t-stat            step 
 Constant                                 -1.943          -3.899       -0.000070 
 Black                                    -0.091          -2.689       -0.000006 
@@ -799,7 +485,7 @@ SQB-Free Transitory Std Dev               2.039          52.440       -0.000013
 
 Log-likelihood   -37539.8
 Estimates of Model 12.0
-22-Aug-2023 20:16:10
+22-Aug-2023 21:58:59
 Sample size 9279
 Number of iterations = 20
 Error at last iteration = 4.54e-05

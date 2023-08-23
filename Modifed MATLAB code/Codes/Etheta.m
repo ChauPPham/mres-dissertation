@@ -1,4 +1,4 @@
-function [Etheta92] = Etheta_KSS(b,c92,c94,c98,c00,c02,X92,X94,X98,X00,X02);
+function [Etheta92] = Etheta(b,c92,c94,c98,c00,c02,X92,X94,X98,X00,X02);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Etheta.m
 % Computes the E(theta|c,X)
@@ -104,7 +104,7 @@ den02 = ones(N,Nodes);
 % HRS 1992 ONLY 
 i = find(c92>0); 
     if size(i,1) > 0 
-        for j = 1:Nodes;
+        for j = 1:Nodes
              num92(i,j) = norm_cdf((cpt4(c92(i)+1)-muX92(i)-xU(j)-sigmau^2)./sigmae92(i)) - ...
                     norm_cdf((cpt4(c92(i))-muX92(i)-xU(j)-sigmau^2)./sigmae92(i));
              den92(i,j) = norm_cdf((cpt4(c92(i)+1)-muX92(i)-xU(j))./sigmae92(i)) - ...
@@ -115,7 +115,7 @@ i = find(c92>0);
 % HRS 1994 ONLY 
 i = find(c94>0); 
     if size(i,1) > 0 
-        for j = 1:Nodes;
+        for j = 1:Nodes
             num94(i,j) = norm_cdf((cpt6(c94(i)+1)-muX94(i)-xU(j)-sigmau^2)./sigmae94(i)) - ...
                     norm_cdf((cpt6(c94(i))-muX94(i)-xU(j)-sigmau^2)./sigmae94(i));
             den94(i,j) = norm_cdf((cpt6(c94(i)+1)-muX94(i)-xU(j))./sigmae94(i)) - ...
@@ -126,7 +126,7 @@ i = find(c94>0);
 % HRS 1998 ONLY 
 i = find(c98>0); 
     if size(i,1) > 0 
-        for j = 1:Nodes;
+        for j = 1:Nodes
             num98(i,j) = norm_cdf((cpt6(c98(i)+1)-muX98(i)-xU(j)-sigmau^2)./sigmae98(i)) - ...
                     norm_cdf((cpt6(c98(i))-muX98(i)-xU(j)-sigmau^2)./sigmae98(i));
             den98(i,j) = norm_cdf((cpt6(c98(i)+1)-muX98(i)-xU(j))./sigmae98(i)) - ...
@@ -137,7 +137,7 @@ i = find(c98>0);
 % HRS 2000 ONLY 
 i = find(c00>0); 
     if size(i,1) > 0 
-        for j = 1:Nodes;
+        for j = 1:Nodes
             num00(i,j) = norm_cdf((cpt6(c00(i)+1)-muX00(i)-xU(j)-sigmau^2)./sigmae00(i)) - ...
                     norm_cdf((cpt6(c00(i))-muX00(i)-xU(j)-sigmau^2)./sigmae00(i));
             den00(i,j) = norm_cdf((cpt6(c00(i)+1)-muX00(i)-xU(j))./sigmae00(i)) - ...
