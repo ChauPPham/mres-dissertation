@@ -962,34 +962,34 @@ eststo clear
 /* TIME-INVARIANT RISK PREFERENCE */
 local identifier = 1
 qui foreach i of varlist INV_ALL GOODS_ALL TIME_ALL {
-	reghdfe `i' gamma i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 >= 0 & R0618301 != . & R0006500 >= 0 & R0006500 != .& R0007900 >= 0 & R0007900 !=. & FAM_SIZE >= 0 & FAM_SIZE !=. & HH_INCOME != . & HH_INCOME >= 0 & AGE_14 != . & DEGREE_SEP != ., absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' gamma i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP != ., absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo model_`identifier'
 	
-	reghdfe `i' gamma c.gamma#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 >= 0 & R0618301 != . & R0006500 >= 0 & R0006500 != .& R0007900 >= 0 & R0007900 !=. & FAM_SIZE >= 0 & FAM_SIZE !=. & HH_INCOME != . & HH_INCOME >= 0 & AGE_14 != . & DEGREE_SEP != ., absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' gamma c.gamma#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP != ., absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo model_`identifier'_a
 	
 	forval j = 0/2 {
-		reghdfe `i' gamma i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 >= 0 & R0618301 != . & R0006500 >= 0 & R0006500 != .& R0007900 >= 0 & R0007900 !=. & FAM_SIZE >= 0 & FAM_SIZE !=. & HH_INCOME != . & HH_INCOME >= 0 & AGE_14 != . & DEGREE_SEP == `j', absorb(year AGE_CAT) vce(cluster R0000100)
+		reghdfe `i' gamma i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP == `j', absorb(year AGE_CAT) vce(cluster R0000100)
 		eststo model_`identifier'_`j'
 		
-		reghdfe `i' gamma c.gamma#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 >= 0 & R0618301 != . & R0006500 >= 0 & R0006500 != .& R0007900 >= 0 & R0007900 !=. & FAM_SIZE >= 0 & FAM_SIZE !=. & HH_INCOME != . & HH_INCOME >= 0 & AGE_14 != . & DEGREE_SEP == `j', absorb(year AGE_CAT) vce(cluster R0000100)
+		reghdfe `i' gamma c.gamma#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP == `j', absorb(year AGE_CAT) vce(cluster R0000100)
 		eststo model_`identifier'_`j'_a
 	}
 	local ++identifier
 }
 
 qui foreach i of varlist COG_SCORE EMO_SCORE {
-	reghdfe `i' gamma i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 >= 0 & R0618301 != . & R0006500 >= 0 & R0006500 != .& R0007900 >= 0 & R0007900 !=. & FAM_SIZE >= 0 & FAM_SIZE !=. & HH_INCOME != . & HH_INCOME >= 0 & AGE_14 != . & DEGREE_SEP != . & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' gamma i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP != . & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo model_`identifier'
 	
-	reghdfe `i' gamma c.gamma#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 >= 0 & R0618301 != . & R0006500 >= 0 & R0006500 != .& R0007900 >= 0 & R0007900 !=. & FAM_SIZE >= 0 & FAM_SIZE !=. & HH_INCOME != . & HH_INCOME >= 0 & AGE_14 != . & DEGREE_SEP != . & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' gamma c.gamma#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP != . & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo model_`identifier'_a
 	
 	forval j = 0/2 {
-		reghdfe `i' gamma i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 >= 0 & R0618301 != . & R0006500 >= 0 & R0006500 != .& R0007900 >= 0 & R0007900 !=. & FAM_SIZE >= 0 & FAM_SIZE !=. & HH_INCOME != . & HH_INCOME >= 0 & AGE_14 != . & DEGREE_SEP == `j' & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
+		reghdfe `i' gamma i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP == `j' & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
 		eststo model_`identifier'_`j'
 		
-		reghdfe `i' gamma c.gamma#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 >= 0 & R0618301 != . & R0006500 >= 0 & R0006500 != .& R0007900 >= 0 & R0007900 !=. & FAM_SIZE >= 0 & FAM_SIZE !=. & HH_INCOME != . & HH_INCOME >= 0 & AGE_14 != . & DEGREE_SEP == `j' & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
+		reghdfe `i' gamma c.gamma#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP == `j' & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
 		eststo model_`identifier'_`j'_a
 	}
 	local ++identifier
@@ -1011,34 +1011,34 @@ forvalues i = 1/5 {
 *========= EXCLUDING YEAR 2004 (LARGE VARIANCE IN LOG RISK TOLERANCE) =========*
 local identifier = 1
 qui foreach i of varlist INV_ALL GOODS_ALL TIME_ALL {
-	reghdfe `i' gamma i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 >= 0 & R0618301 != . & R0006500 >= 0 & R0006500 != .& R0007900 >= 0 & R0007900 !=. & FAM_SIZE >= 0 & FAM_SIZE !=. & HH_INCOME != . & HH_INCOME >= 0 & AGE_14 != . & DEGREE_SEP != . & year != 2004, absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' gamma i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP != . & year != 2004, absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo robust1_`identifier'
 	
-	reghdfe `i' gamma c.gamma#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 >= 0 & R0618301 != . & R0006500 >= 0 & R0006500 != .& R0007900 >= 0 & R0007900 !=. & FAM_SIZE >= 0 & FAM_SIZE !=. & HH_INCOME != . & HH_INCOME >= 0 & AGE_14 != . & DEGREE_SEP != . & year != 2004, absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' gamma c.gamma#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP != . & year != 2004, absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo robust1_`identifier'_a
 	
 	forval j = 0/2 {
-		reghdfe `i' gamma i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 >= 0 & R0618301 != . & R0006500 >= 0 & R0006500 != .& R0007900 >= 0 & R0007900 !=. & FAM_SIZE >= 0 & FAM_SIZE !=. & HH_INCOME != . & HH_INCOME >= 0 & AGE_14 != . & DEGREE_SEP == `j' & year != 2004, absorb(year AGE_CAT) vce(cluster R0000100)
+		reghdfe `i' gamma i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP == `j' & year != 2004, absorb(year AGE_CAT) vce(cluster R0000100)
 		eststo robust1_`identifier'_`j'
 		
-		reghdfe `i' gamma c.gamma#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 >= 0 & R0618301 != . & R0006500 >= 0 & R0006500 != .& R0007900 >= 0 & R0007900 !=. & FAM_SIZE >= 0 & FAM_SIZE !=. & HH_INCOME != . & HH_INCOME >= 0 & AGE_14 != . & DEGREE_SEP == `j' & year != 2004, absorb(year AGE_CAT) vce(cluster R0000100)
+		reghdfe `i' gamma c.gamma#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP == `j' & year != 2004, absorb(year AGE_CAT) vce(cluster R0000100)
 		eststo robust1_`identifier'_`j'_a
 	}
 	local ++identifier
 }
 
 qui foreach i of varlist COG_SCORE EMO_SCORE {
-	reghdfe `i' gamma i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 >= 0 & R0618301 != . & R0006500 >= 0 & R0006500 != .& R0007900 >= 0 & R0007900 !=. & FAM_SIZE >= 0 & FAM_SIZE !=. & HH_INCOME != . & HH_INCOME >= 0 & AGE_14 != . & DEGREE_SEP != . & `i' >= 0 & year != 2004, absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' gamma i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP != . & `i' >= 0 & year != 2004, absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo robust1_`identifier'
 	
-	reghdfe `i' gamma c.gamma#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 >= 0 & R0618301 != . & R0006500 >= 0 & R0006500 != .& R0007900 >= 0 & R0007900 !=. & FAM_SIZE >= 0 & FAM_SIZE !=. & HH_INCOME != . & HH_INCOME >= 0 & AGE_14 != . & DEGREE_SEP != . & `i' >= 0 & year != 2004, absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' gamma c.gamma#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP != . & `i' >= 0 & year != 2004, absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo robust1_`identifier'_a
 	
 	forval j = 0/2 {
-		reghdfe `i' gamma i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 >= 0 & R0618301 != . & R0006500 >= 0 & R0006500 != .& R0007900 >= 0 & R0007900 !=. & FAM_SIZE >= 0 & FAM_SIZE !=. & HH_INCOME != . & HH_INCOME >= 0 & AGE_14 != . & DEGREE_SEP == `j' & `i' >= 0 & year != 2004, absorb(year AGE_CAT) vce(cluster R0000100)
+		reghdfe `i' gamma i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP == `j' & `i' >= 0 & year != 2004, absorb(year AGE_CAT) vce(cluster R0000100)
 		eststo robust1_`identifier'_`j'
 		
-		reghdfe `i' gamma c.gamma#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 >= 0 & R0618301 != . & R0006500 >= 0 & R0006500 != .& R0007900 >= 0 & R0007900 !=. & FAM_SIZE >= 0 & FAM_SIZE !=. & HH_INCOME != . & HH_INCOME >= 0 & AGE_14 != . & DEGREE_SEP == `j' & `i' >= 0 & year != 2004, absorb(year AGE_CAT) vce(cluster R0000100)
+		reghdfe `i' gamma c.gamma#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP == `j' & `i' >= 0 & year != 2004, absorb(year AGE_CAT) vce(cluster R0000100)
 		eststo robust1_`identifier'_`j'_a
 	}
 	local ++identifier
@@ -1064,34 +1064,34 @@ forvalues i = 1/5 {
 
 local identifier = 1
 qui foreach i of varlist INV_ALL GOODS_ALL TIME_ALL {
-	reghdfe `i' i.RISK_AVERSE1 i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 >= 0 & R0618301 != . & R0006500 >= 0 & R0006500 != .& R0007900 >= 0 & R0007900 !=. & FAM_SIZE >= 0 & FAM_SIZE !=. & HH_INCOME != . & HH_INCOME >= 0 & AGE_14 != . & DEGREE_SEP != ., absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' i.RISK_AVERSE1 i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP != ., absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo robust2_`identifier'
 	
-	reghdfe `i' i.RISK_AVERSE1 i.RISK_AVERSE1#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 >= 0 & R0618301 != . & R0006500 >= 0 & R0006500 != .& R0007900 >= 0 & R0007900 !=. & FAM_SIZE >= 0 & FAM_SIZE !=. & HH_INCOME != . & HH_INCOME >= 0 & AGE_14 != . & DEGREE_SEP != ., absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' i.RISK_AVERSE1 i.RISK_AVERSE1#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP != ., absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo robust2_`identifier'_a
 	
 	forval j = 0/2 {
-		reghdfe `i' i.RISK_AVERSE1 i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 >= 0 & R0618301 != . & R0006500 >= 0 & R0006500 != .& R0007900 >= 0 & R0007900 !=. & FAM_SIZE >= 0 & FAM_SIZE !=. & HH_INCOME != . & HH_INCOME >= 0 & AGE_14 != . & DEGREE_SEP == `j', absorb(year AGE_CAT) vce(cluster R0000100)
+		reghdfe `i' i.RISK_AVERSE1 i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP == `j', absorb(year AGE_CAT) vce(cluster R0000100)
 		eststo robust2_`identifier'_`j'
 		
-		reghdfe `i' i.RISK_AVERSE1 i.RISK_AVERSE1#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 >= 0 & R0618301 != . & R0006500 >= 0 & R0006500 != .& R0007900 >= 0 & R0007900 !=. & FAM_SIZE >= 0 & FAM_SIZE !=. & HH_INCOME != . & HH_INCOME >= 0 & AGE_14 != . & DEGREE_SEP == `j', absorb(year AGE_CAT) vce(cluster R0000100)
+		reghdfe `i' i.RISK_AVERSE1 i.RISK_AVERSE1#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP == `j', absorb(year AGE_CAT) vce(cluster R0000100)
 		eststo robust2_`identifier'_`j'_a
 	}
 	local ++identifier
 }
 
 qui foreach i of varlist COG_SCORE EMO_SCORE {
-	reghdfe `i' i.RISK_AVERSE1 i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 >= 0 & R0618301 != . & R0006500 >= 0 & R0006500 != .& R0007900 >= 0 & R0007900 !=. & FAM_SIZE >= 0 & FAM_SIZE !=. & HH_INCOME != . & HH_INCOME >= 0 & AGE_14 != . & DEGREE_SEP != . & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' i.RISK_AVERSE1 i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP != . & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo robust2_`identifier'
 	
-	reghdfe `i' i.RISK_AVERSE1 i.RISK_AVERSE1#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 >= 0 & R0618301 != . & R0006500 >= 0 & R0006500 != .& R0007900 >= 0 & R0007900 !=. & FAM_SIZE >= 0 & FAM_SIZE !=. & HH_INCOME != . & HH_INCOME >= 0 & AGE_14 != . & DEGREE_SEP != . & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
+	reghdfe `i' i.RISK_AVERSE1 i.RISK_AVERSE1#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP != . & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
 	eststo robust2_`identifier'_a
 	
 	forval j = 0/2 {
-		reghdfe `i' i.RISK_AVERSE1 i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 >= 0 & R0618301 != . & R0006500 >= 0 & R0006500 != .& R0007900 >= 0 & R0007900 !=. & FAM_SIZE >= 0 & FAM_SIZE !=. & HH_INCOME != . & HH_INCOME >= 0 & AGE_14 != . & DEGREE_SEP == `j' & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
+		reghdfe `i' i.RISK_AVERSE1 i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP == `j' & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
 		eststo robust2_`identifier'_`j'
 		
-		reghdfe `i' i.RISK_AVERSE1 i.RISK_AVERSE1#year  i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 >= 0 & R0618301 != . & R0006500 >= 0 & R0006500 != .& R0007900 >= 0 & R0007900 !=. & FAM_SIZE >= 0 & FAM_SIZE !=. & HH_INCOME != . & HH_INCOME >= 0 & AGE_14 != . & DEGREE_SEP == `j' & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
+		reghdfe `i' i.RISK_AVERSE1 i.RISK_AVERSE1#year  i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP == `j' & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
 		eststo robust2_`identifier'_`j'_a
 	}
 	
