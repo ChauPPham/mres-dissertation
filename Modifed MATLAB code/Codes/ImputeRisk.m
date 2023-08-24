@@ -330,7 +330,7 @@ se = full(se); b = full(b); X93 = full(X93);
     lambdaP  = Vtheta_11 / var(Etheta_11);
     lambdalnP  = va_11 / var(Elntheta_11);
 
-  writematrix(Egamma1, '../Output/RISK1.csv')
+% writematrix(Egamma1, '../Output/RISK1.csv')
 
 %% TABLE 6 %%		    
 disp('   ');
@@ -353,7 +353,7 @@ load ../Output/results_final_12
 
 Egamma2 = [ID,Egamma2_93, Egamma2_02,Egamma2_04,Egamma2_06,Egamma2_10,Egamma2_12,Egamma2_14];
 
- writematrix(Egamma2, '../Output/RISK2.csv')
+% writematrix(Egamma2, '../Output/RISK2.csv')
 
 se = full(se); b = full(b); X93 = full(X93);
     K = size(X93,2);    
@@ -390,7 +390,7 @@ load ../Output/results_final_13
 
 Egamma3 = [ID,Egamma3_93, Egamma3_02,Egamma3_04,Egamma3_06,Egamma3_10,Egamma3_12,Egamma3_14];
 
- writematrix(Egamma3, '../Output/RISK3.csv')
+% writematrix(Egamma3, '../Output/RISK3.csv')
 
 se = full(se); b = full(b); W93 = full(W93);
     K = size(W93,2);    
@@ -434,7 +434,7 @@ load ../Output/results_final_14
 
 Egamma4 = [ID,Egamma4_93, Egamma4_02,Egamma4_04,Egamma4_06,Egamma4_10,Egamma4_12,Egamma4_14];
 
- writematrix(Egamma4, '../Output/RISK4.csv')
+% writematrix(Egamma4, '../Output/RISK4.csv')
 
 fprintf('Model 14: Log Risk Tolerance Mean = %1.3f Std Dev = %1.3f\n', mu_14, va_14^.5 );
 fprintf('Model 14: Risk Tolerance Mean = %1.3f Std Dev = %1.3f\n', exp(mu_14 + va_14/2), Vtheta_14^.5 );

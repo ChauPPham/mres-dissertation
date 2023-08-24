@@ -1,0 +1,972 @@
+Model 13
+Error at iteration 1 = 3.48e+00
+24-Aug-2023 19:55:07
+                                                  estimate          t-stat            step 
+Constant                                            -0.818          -1.589       -0.052810 
+Black                                               -0.098          -2.632       -0.004111 
+Hispanic                                            -0.122          -2.922       -0.002910 
+East                                                 0.015           0.332       -0.003475 
+South                                               -0.028          -0.798        0.001006 
+West                                                -0.151          -3.565       -0.000694 
+Married (spouse present)                             0.368          10.844       -0.003518 
+Other marital status                                 0.219           5.794       -0.001679 
+Age/10                                               0.141           2.517        0.002827 
+Unemployment rate                                   -0.065          -2.065        0.007280 
+ICS                                                  0.083           3.366       -0.005858 
+Mother's years of schooling                          0.003           0.634       -0.000361 
+Father's years of schooling                         -0.012          -3.515        0.000445 
+Living with both biological parents at 14?           0.032           1.021        0.001623 
+AFQT score (2006 version)                           -0.014          -2.484       -0.000121 
+Status Quo Bias                                     -0.083          -0.440        0.052931 
+Std Dev                                              0.830          37.212       -0.021822 
+Original Persistent Std Dev                         -1.102          -2.755       -1.050731 
+SQB-Free Persistent Std Dev                        -13.334          -2.094      -13.825926 
+Original Transitory Std Dev                          1.454          92.937        0.024373 
+SQB-Free Transitory Std Dev                          5.423           3.370        3.482235 
+
+Log-likelihood   -37576.7
+Error at iteration 2 = 1.29e+01
+24-Aug-2023 19:56:03
+                                                  estimate          t-stat            step 
+Constant                                             7.867          10.483        8.684425 
+Black                                               -0.114          -2.021       -0.015771 
+Hispanic                                            -0.174          -2.758       -0.051798 
+East                                                 0.021           0.334        0.006509 
+South                                               -0.059          -1.167       -0.030547 
+West                                                -0.172          -2.856       -0.021179 
+Married (spouse present)                             0.413           9.107        0.044372 
+Other marital status                                 0.247           4.865        0.028125 
+Age/10                                               0.181           2.205        0.040136 
+Unemployment rate                                   -0.042          -0.951        0.023190 
+ICS                                                  0.078           2.622       -0.005036 
+Mother's years of schooling                         -0.000          -0.062       -0.003029 
+Father's years of schooling                         -0.011          -2.259        0.000264 
+Living with both biological parents at 14?           0.034           0.713        0.001938 
+AFQT score (2006 version)                           -0.015          -1.702       -0.000574 
+Status Quo Bias                                     -9.004         -24.256       -8.921294 
+Std Dev                                              1.397          15.887        0.566514 
+Original Persistent Std Dev                         -0.322          -4.508        0.779539 
+SQB-Free Persistent Std Dev                         -0.394          -0.359       12.939682 
+Original Transitory Std Dev                          1.487          92.478        0.032730 
+SQB-Free Transitory Std Dev                          3.437           0.927       -1.985986 
+
+Log-likelihood   -41066.1
+Error at iteration 3 = 2.26e+00
+24-Aug-2023 19:56:57
+                                                  estimate          t-stat            step 
+Constant                                             5.733           8.483       -2.133346 
+Black                                               -0.057          -1.016        0.057075 
+Hispanic                                            -0.117          -1.860        0.056244 
+East                                                 0.018           0.289       -0.003200 
+South                                               -0.046          -0.951        0.012368 
+West                                                -0.202          -3.416       -0.029896 
+Married (spouse present)                             0.462          10.450        0.049423 
+Other marital status                                 0.274           5.674        0.026673 
+Age/10                                               0.146           1.912       -0.034701 
+Unemployment rate                                   -0.065          -1.592       -0.023218 
+ICS                                                  0.100           3.445        0.021922 
+Mother's years of schooling                          0.006           0.894        0.005976 
+Father's years of schooling                         -0.012          -2.352       -0.000300 
+Living with both biological parents at 14?           0.038           0.813        0.004412 
+AFQT score (2006 version)                            0.018           2.152        0.033080 
+Status Quo Bias                                     -6.741         -23.078        2.263107 
+Std Dev                                              1.293          52.653       -0.104158 
+Original Persistent Std Dev                          0.735           7.229        1.057625 
+SQB-Free Persistent Std Dev                          0.045           0.024        0.439190 
+Original Transitory Std Dev                          1.557          95.154        0.069459 
+SQB-Free Transitory Std Dev                          3.088          14.259       -0.348896 
+
+Log-likelihood   -50183.9
+Error at iteration 4 = 1.88e+00
+24-Aug-2023 19:57:52
+                                                  estimate          t-stat            step 
+Constant                                             3.686           5.618       -2.046877 
+Black                                               -0.055          -1.049        0.001672 
+Hispanic                                            -0.123          -2.061       -0.005152 
+East                                                 0.027           0.459        0.008971 
+South                                               -0.033          -0.716        0.012870 
+West                                                -0.204          -3.606       -0.001940 
+Married (spouse present)                             0.481          10.847        0.018455 
+Other marital status                                 0.279           5.757        0.004428 
+Age/10                                               0.155           2.098        0.008804 
+Unemployment rate                                   -0.065          -1.628       -0.000001 
+ICS                                                  0.102           3.467        0.002455 
+Mother's years of schooling                          0.007           1.202        0.001485 
+Father's years of schooling                         -0.012          -2.581       -0.000268 
+Living with both biological parents at 14?           0.041           0.945        0.003442 
+AFQT score (2006 version)                            0.025           3.172        0.006654 
+Status Quo Bias                                     -4.858         -17.948        1.883253 
+Std Dev                                              1.126          43.156       -0.166495 
+Original Persistent Std Dev                          0.201           3.640       -0.534730 
+SQB-Free Persistent Std Dev                         -0.572          -0.701       -0.617354 
+Original Transitory Std Dev                          1.585          89.712        0.028387 
+SQB-Free Transitory Std Dev                          2.792          51.702       -0.296802 
+
+Log-likelihood   -46738.0
+Error at iteration 5 = 1.97e+00
+24-Aug-2023 19:58:47
+                                                  estimate          t-stat            step 
+Constant                                             1.621           2.698       -2.065035 
+Black                                               -0.057          -1.273       -0.002237 
+Hispanic                                            -0.115          -2.255        0.007698 
+East                                                 0.031           0.600        0.004128 
+South                                               -0.019          -0.457        0.014355 
+West                                                -0.194          -3.864        0.009936 
+Married (spouse present)                             0.469          11.599       -0.011318 
+Other marital status                                 0.265           5.939       -0.014009 
+Age/10                                               0.168           2.554        0.013124 
+Unemployment rate                                   -0.061          -1.673        0.003839 
+ICS                                                  0.097           3.402       -0.005428 
+Mother's years of schooling                          0.008           1.649        0.001260 
+Father's years of schooling                         -0.012          -3.046       -0.000182 
+Living with both biological parents at 14?           0.038           1.013       -0.003407 
+AFQT score (2006 version)                            0.026           3.827        0.000892 
+Status Quo Bias                                     -2.890         -12.182        1.967728 
+Std Dev                                              1.051          44.793       -0.074695 
+Original Persistent Std Dev                         -0.137          -0.924       -0.337345 
+SQB-Free Persistent Std Dev                          0.339           0.140        0.911020 
+Original Transitory Std Dev                          1.590          87.731        0.005215 
+SQB-Free Transitory Std Dev                          2.579           5.190       -0.212705 
+
+Log-likelihood   -43252.8
+Error at iteration 6 = 1.76e+00
+24-Aug-2023 19:59:44
+                                                  estimate          t-stat            step 
+Constant                                            -0.143          -0.241       -1.764743 
+Black                                               -0.070          -1.584       -0.012387 
+Hispanic                                            -0.115          -2.316       -0.000209 
+East                                                 0.034           0.666        0.002907 
+South                                               -0.011          -0.265        0.008104 
+West                                                -0.180          -3.636        0.014118 
+Married (spouse present)                             0.450          11.243       -0.019845 
+Other marital status                                 0.253           5.707       -0.011723 
+Age/10                                               0.170           2.609        0.001817 
+Unemployment rate                                   -0.057          -1.568        0.004086 
+ICS                                                  0.092           3.226       -0.005029 
+Mother's years of schooling                          0.008           1.595       -0.000441 
+Father's years of schooling                         -0.012          -3.086        0.000097 
+Living with both biological parents at 14?           0.030           0.830       -0.007576 
+AFQT score (2006 version)                            0.020           3.079       -0.005488 
+Status Quo Bias                                     -1.133          -4.994        1.757352 
+Std Dev                                              0.980          39.789       -0.071404 
+Original Persistent Std Dev                          0.029           0.136        0.165220 
+SQB-Free Persistent Std Dev                         -1.269          -0.399       -1.607636 
+Original Transitory Std Dev                          1.573          86.242       -0.017188 
+SQB-Free Transitory Std Dev                          2.381           5.691       -0.197607 
+
+Log-likelihood   -40087.4
+Error at iteration 7 = 6.91e+01
+24-Aug-2023 20:00:41
+                                                  estimate          t-stat            step 
+Constant                                            -1.044          -1.754       -0.900553 
+Black                                               -0.091          -2.094       -0.020800 
+Hispanic                                            -0.125          -2.574       -0.010047 
+East                                                 0.030           0.594       -0.003915 
+South                                               -0.017          -0.413       -0.005919 
+West                                                -0.156          -3.195        0.023596 
+Married (spouse present)                             0.404          10.254       -0.045674 
+Other marital status                                 0.236           5.353       -0.017203 
+Age/10                                               0.151           2.326       -0.018932 
+Unemployment rate                                   -0.059          -1.631       -0.002274 
+ICS                                                  0.088           3.115       -0.003982 
+Mother's years of schooling                          0.005           1.010       -0.002986 
+Father's years of schooling                         -0.012          -3.031        0.000379 
+Living with both biological parents at 14?           0.028           0.768       -0.002816 
+AFQT score (2006 version)                            0.001           0.173       -0.019311 
+Status Quo Bias                                     -0.047          -0.212        1.085924 
+Std Dev                                              0.875          30.846       -0.105155 
+Original Persistent Std Dev                          1.452           1.397        1.423364 
+SQB-Free Persistent Std Dev                         67.800           1.416       69.068787 
+Original Transitory Std Dev                          1.522          84.679       -0.051358 
+SQB-Free Transitory Std Dev                         38.545           1.511       36.164153 
+
+Log-likelihood   -37960.5
+Error at iteration 8 = 5.49e+01
+24-Aug-2023 20:01:36
+                                                  estimate          t-stat            step 
+Constant                                            53.813          33.003       54.857384 
+Black                                               -0.120          -1.721       -0.029903 
+Hispanic                                            -0.199          -2.538       -0.073706 
+East                                                 0.033           0.432        0.002712 
+South                                               -0.067          -1.116       -0.049956 
+West                                                -0.189          -2.640       -0.033296 
+Married (spouse present)                             0.444           8.477        0.040165 
+Other marital status                                 0.269           4.591        0.033865 
+Age/10                                               0.196           1.986        0.045036 
+Unemployment rate                                   -0.033          -0.638        0.026053 
+ICS                                                  0.080           2.375       -0.007738 
+Mother's years of schooling                         -0.002          -0.198       -0.006459 
+Father's years of schooling                         -0.011          -1.751        0.000646 
+Living with both biological parents at 14?           0.036           0.617        0.008562 
+AFQT score (2006 version)                           -0.015          -1.407       -0.016239 
+Status Quo Bias                                    -55.009         -38.110      -54.961582 
+Std Dev                                              1.406          11.409        0.531636 
+Original Persistent Std Dev                          0.549           6.852       -0.903223 
+SQB-Free Persistent Std Dev                         -3.041          -0.396      -70.840393 
+Original Transitory Std Dev                          1.528          89.051        0.006020 
+SQB-Free Transitory Std Dev                         19.768           1.485      -18.777337 
+
+Log-likelihood   -45124.8
+Error at iteration 9 = 1.43e+01
+24-Aug-2023 20:02:32
+                                                  estimate          t-stat            step 
+Constant                                            39.567          23.117      -14.246160 
+Black                                               -0.047          -0.733        0.073474 
+Hispanic                                            -0.110          -1.525        0.088629 
+East                                                 0.029           0.404       -0.004046 
+South                                               -0.031          -0.559        0.035365 
+West                                                -0.201          -2.968       -0.011694 
+Married (spouse present)                             0.477           9.522        0.032910 
+Other marital status                                 0.278           4.957        0.008062 
+Age/10                                               0.147           1.603       -0.049322 
+Unemployment rate                                   -0.060          -1.243       -0.027203 
+ICS                                                  0.103           3.167        0.022428 
+Mother's years of schooling                          0.008           1.124        0.009621 
+Father's years of schooling                         -0.013          -2.208       -0.001673 
+Living with both biological parents at 14?           0.034           0.638       -0.001862 
+AFQT score (2006 version)                            0.024           2.404        0.038768 
+Status Quo Bias                                    -40.714         -26.097       14.294580 
+Std Dev                                              1.105          22.975       -0.300998 
+Original Persistent Std Dev                          0.131           1.162       -0.417313 
+SQB-Free Persistent Std Dev                         -3.707          -0.503       -0.666214 
+Original Transitory Std Dev                          1.562          90.399        0.034540 
+SQB-Free Transitory Std Dev                         16.615          13.067       -3.153294 
+
+Log-likelihood   -52819.4
+Error at iteration 10 = 1.34e+01
+24-Aug-2023 20:03:27
+                                                  estimate          t-stat            step 
+Constant                                            26.047          20.576      -13.520315 
+Black                                               -0.046          -0.959        0.000987 
+Hispanic                                            -0.107          -1.982        0.003097 
+East                                                 0.027           0.490       -0.001452 
+South                                               -0.015          -0.333        0.016536 
+West                                                -0.192          -3.588        0.009006 
+Married (spouse present)                             0.465          10.957       -0.011655 
+Other marital status                                 0.258           5.424       -0.019156 
+Age/10                                               0.167           2.315        0.019759 
+Unemployment rate                                   -0.061          -1.532       -0.000310 
+ICS                                                  0.097           3.311       -0.005954 
+Mother's years of schooling                          0.009           1.713        0.001134 
+Father's years of schooling                         -0.013          -2.961        0.000044 
+Living with both biological parents at 14?           0.041           1.020        0.006419 
+AFQT score (2006 version)                            0.027           3.782        0.003701 
+Status Quo Bias                                    -27.284         -24.296       13.429702 
+Std Dev                                              1.006          22.589       -0.099468 
+Original Persistent Std Dev                          0.091           0.247       -0.039912 
+SQB-Free Persistent Std Dev                        -12.746          -0.498       -9.039328 
+Original Transitory Std Dev                          1.582          88.461        0.020190 
+SQB-Free Transitory Std Dev                         11.407           1.991       -5.207731 
+
+Log-likelihood   -49253.9
+Error at iteration 11 = 1.68e+01
+24-Aug-2023 20:04:22
+                                                  estimate          t-stat            step 
+Constant                                             9.271          10.108      -16.775886 
+Black                                               -0.051          -1.132       -0.004985 
+Hispanic                                            -0.109          -2.146       -0.001711 
+East                                                 0.025           0.471       -0.002440 
+South                                               -0.010          -0.234        0.004940 
+West                                                -0.186          -3.657        0.006473 
+Married (spouse present)                             0.459          11.244       -0.006635 
+Other marital status                                 0.251           5.478       -0.007152 
+Age/10                                               0.173           2.534        0.006323 
+Unemployment rate                                   -0.061          -1.612       -0.000647 
+ICS                                                  0.094           3.243       -0.003169 
+Mother's years of schooling                          0.009           1.834        0.000049 
+Father's years of schooling                         -0.013          -3.158       -0.000017 
+Living with both biological parents at 14?           0.042           1.128        0.001528 
+AFQT score (2006 version)                            0.027           4.003       -0.000203 
+Status Quo Bias                                    -10.511         -14.625       16.773590 
+Std Dev                                              0.996          20.545       -0.010229 
+Original Persistent Std Dev                         -0.222          -0.413       -0.313370 
+SQB-Free Persistent Std Dev                        -55.607          -0.696      -42.860816 
+Original Transitory Std Dev                          1.591          87.301        0.008334 
+SQB-Free Transitory Std Dev                        -45.691          -0.512      -57.098510 
+
+Log-likelihood   -43955.0
+Error at iteration 12 = 7.40e+01
+24-Aug-2023 20:05:18
+                                                  estimate          t-stat            step 
+Constant                                            49.693          33.535       40.421457 
+Black                                               -0.086          -1.873       -0.034939 
+Hispanic                                            -0.172          -3.335       -0.063359 
+East                                                 0.008           0.153       -0.016542 
+South                                               -0.048          -1.115       -0.038056 
+West                                                -0.178          -3.446        0.007861 
+Married (spouse present)                             0.464          11.228        0.005656 
+Other marital status                                 0.272           5.834        0.020291 
+Age/10                                               0.211           3.037        0.038165 
+Unemployment rate                                   -0.039          -1.008        0.022308 
+ICS                                                  0.082           2.816       -0.011503 
+Mother's years of schooling                          0.004           0.805       -0.005115 
+Father's years of schooling                         -0.013          -3.250       -0.000625 
+Living with both biological parents at 14?           0.047           1.238        0.005022 
+AFQT score (2006 version)                           -0.001          -0.182       -0.028414 
+Status Quo Bias                                    -51.053         -37.418      -40.542594 
+Std Dev                                              1.024          19.262        0.027968 
+Original Persistent Std Dev                         -0.161          -0.682        0.060863 
+SQB-Free Persistent Std Dev                        -15.985          -0.198       39.622287 
+Original Transitory Std Dev                          1.589          86.664       -0.001718 
+SQB-Free Transitory Std Dev                         28.277           0.289       73.968165 
+
+Log-likelihood   -44139.0
+Error at iteration 13 = 3.34e+01
+24-Aug-2023 20:06:15
+                                                  estimate          t-stat            step 
+Constant                                            16.402          11.426      -33.290546 
+Black                                               -0.060          -1.274        0.026224 
+Hispanic                                            -0.120          -2.279        0.052041 
+East                                                 0.019           0.349        0.010973 
+South                                               -0.021          -0.469        0.027328 
+West                                                -0.182          -3.458       -0.004626 
+Married (spouse present)                             0.460          10.965       -0.004669 
+Other marital status                                 0.259           5.505       -0.012149 
+Age/10                                               0.170           2.396       -0.040827 
+Unemployment rate                                   -0.057          -1.444       -0.017894 
+ICS                                                  0.095           3.212        0.012735 
+Mother's years of schooling                          0.008           1.493        0.003679 
+Father's years of schooling                         -0.013          -3.074        0.000428 
+Living with both biological parents at 14?           0.042           1.070       -0.005498 
+AFQT score (2006 version)                            0.016           2.287        0.017526 
+Status Quo Bias                                    -17.642         -13.469       33.411325 
+Std Dev                                              1.017          19.789       -0.006866 
+Original Persistent Std Dev                          0.125           0.386        0.285974 
+SQB-Free Persistent Std Dev                        -40.717          -0.855      -24.732164 
+Original Transitory Std Dev                          1.581          86.317       -0.007592 
+SQB-Free Transitory Std Dev                         -0.826          -0.031      -29.102466 
+
+Log-likelihood   -44994.0
+Error at iteration 14 = 8.83e-01
+24-Aug-2023 20:07:08
+                                                  estimate          t-stat            step 
+Constant                                            15.548          46.430       -0.853798 
+Black                                               -0.073          -3.118       -0.013288 
+Hispanic                                            -0.139          -5.218       -0.018322 
+East                                                 0.009           0.327       -0.010464 
+South                                               -0.025          -1.196       -0.004376 
+West                                                -0.181          -7.233        0.001014 
+Married (spouse present)                             0.473          21.505        0.013302 
+Other marital status                                 0.268          11.279        0.008150 
+Age/10                                               0.186           5.824        0.015435 
+Unemployment rate                                   -0.050          -2.637        0.006475 
+ICS                                                  0.096           5.125        0.001260 
+Mother's years of schooling                          0.008           3.042        0.000275 
+Father's years of schooling                         -0.014          -6.777       -0.001207 
+Living with both biological parents at 14?           0.047           2.415        0.005556 
+AFQT score (2006 version)                            0.014           4.152       -0.001851 
+Status Quo Bias                                    -16.919        -110.615        0.722982 
+Std Dev                                              1.026         110.543        0.009642 
+Original Persistent Std Dev                          0.050           0.729       -0.074601 
+SQB-Free Persistent Std Dev                        -39.834        -165.317        0.882807 
+Original Transitory Std Dev                          1.617         110.155        0.035331 
+SQB-Free Transitory Std Dev                         -0.778         -70.118        0.048118 
+
+Log-likelihood   -61062.8
+Error at iteration 15 = 1.14e+00
+24-Aug-2023 20:08:00
+                                                  estimate          t-stat            step 
+Constant                                            14.603          42.110       -0.944935 
+Black                                               -0.090          -3.706       -0.016653 
+Hispanic                                            -0.158          -5.759       -0.019631 
+East                                                -0.004          -0.139       -0.012463 
+South                                               -0.035          -1.600       -0.009544 
+West                                                -0.183          -7.058       -0.001733 
+Married (spouse present)                             0.484          21.212        0.011392 
+Other marital status                                 0.275          11.165        0.007373 
+Age/10                                               0.195           5.917        0.009649 
+Unemployment rate                                   -0.040          -2.022        0.010456 
+ICS                                                  0.097           4.990        0.000518 
+Mother's years of schooling                          0.008           3.045        0.000299 
+Father's years of schooling                         -0.015          -7.004       -0.000997 
+Living with both biological parents at 14?           0.054           2.638        0.006217 
+AFQT score (2006 version)                            0.013           3.727       -0.001031 
+Status Quo Bias                                    -16.102        -101.245        0.816673 
+Std Dev                                              1.010         101.703       -0.016756 
+Original Persistent Std Dev                         -0.076          -0.567       -0.125903 
+SQB-Free Persistent Std Dev                        -38.690        -147.828        1.143936 
+Original Transitory Std Dev                          1.602         100.244       -0.014578 
+SQB-Free Transitory Std Dev                         -0.746         -87.349        0.031741 
+
+Log-likelihood   -58840.1
+Error at iteration 16 = 5.54e-01
+24-Aug-2023 20:08:57
+                                                  estimate          t-stat            step 
+Constant                                            13.985          41.526       -0.617883 
+Black                                               -0.106          -4.311       -0.016515 
+Hispanic                                            -0.181          -6.472       -0.023214 
+East                                                -0.008          -0.282       -0.004102 
+South                                               -0.041          -1.865       -0.006644 
+West                                                -0.184          -6.945       -0.001064 
+Married (spouse present)                             0.502          21.579        0.017388 
+Other marital status                                 0.286          11.340        0.011187 
+Age/10                                               0.207           6.130        0.011766 
+Unemployment rate                                   -0.032          -1.601        0.007601 
+ICS                                                  0.096           4.861       -0.001108 
+Mother's years of schooling                          0.009           3.074        0.000289 
+Father's years of schooling                         -0.016          -7.519       -0.001415 
+Living with both biological parents at 14?           0.057           2.747        0.003513 
+AFQT score (2006 version)                            0.012           3.370       -0.001042 
+Status Quo Bias                                    -15.549        -129.017        0.553559 
+Std Dev                                              1.027         136.396        0.017099 
+Original Persistent Std Dev                         -0.063          -0.606        0.012376 
+SQB-Free Persistent Std Dev                        -38.226        -462.050        0.464163 
+Original Transitory Std Dev                          1.620         103.745        0.017825 
+SQB-Free Transitory Std Dev                         -0.715         -81.971        0.031121 
+
+Log-likelihood   -56627.5
+Error at iteration 17 = 1.80e+00
+24-Aug-2023 20:09:52
+                                                  estimate          t-stat            step 
+Constant                                            12.887          35.362       -1.097893 
+Black                                               -0.110          -4.238       -0.003492 
+Hispanic                                            -0.188          -6.353       -0.006529 
+East                                                -0.002          -0.065        0.005999 
+South                                               -0.039          -1.664        0.002629 
+West                                                -0.193          -6.948       -0.008710 
+Married (spouse present)                             0.507          20.699        0.005099 
+Other marital status                                 0.289          10.852        0.002417 
+Age/10                                               0.209           5.890        0.001873 
+Unemployment rate                                   -0.032          -1.504        0.000538 
+ICS                                                  0.096           4.707        0.000306 
+Mother's years of schooling                          0.007           2.522       -0.001191 
+Father's years of schooling                         -0.016          -6.970        0.000298 
+Living with both biological parents at 14?           0.054           2.481       -0.002982 
+AFQT score (2006 version)                            0.013           3.353        0.000497 
+Status Quo Bias                                    -14.473         -89.643        1.075869 
+Std Dev                                              1.016          99.340       -0.011223 
+Original Persistent Std Dev                         -0.060          -0.491        0.003435 
+SQB-Free Persistent Std Dev                        -36.424        -134.341        1.801905 
+Original Transitory Std Dev                          1.631         101.040        0.010864 
+SQB-Free Transitory Std Dev                         -0.651         -57.623        0.064219 
+
+Log-likelihood   -54540.9
+Error at iteration 18 = 2.79e+00
+24-Aug-2023 20:10:47
+                                                  estimate          t-stat            step 
+Constant                                            11.393          30.183       -1.494904 
+Black                                               -0.110          -4.145       -0.000033 
+Hispanic                                            -0.183          -5.992        0.005234 
+East                                                 0.000           0.011        0.002238 
+South                                               -0.038          -1.585        0.000840 
+West                                                -0.199          -6.958       -0.006050 
+Married (spouse present)                             0.498          19.666       -0.008513 
+Other marital status                                 0.283          10.306       -0.005158 
+Age/10                                               0.205           5.624       -0.003840 
+Unemployment rate                                   -0.032          -1.476       -0.000258 
+ICS                                                  0.094           4.515       -0.001403 
+Mother's years of schooling                          0.006           2.129       -0.001008 
+Father's years of schooling                         -0.015          -6.376        0.000957 
+Living with both biological parents at 14?           0.050           2.218       -0.004423 
+AFQT score (2006 version)                            0.013           3.239       -0.000176 
+Status Quo Bias                                    -12.942         -73.703        1.530532 
+Std Dev                                              0.990         101.668       -0.025942 
+Original Persistent Std Dev                         -0.144          -1.130       -0.084545 
+SQB-Free Persistent Std Dev                        -33.632        -111.210        2.792207 
+Original Transitory Std Dev                          1.617          97.227       -0.013666 
+SQB-Free Transitory Std Dev                         -0.532         -36.465        0.118737 
+
+Log-likelihood   -52305.1
+Error at iteration 19 = 2.32e+00
+24-Aug-2023 20:11:44
+                                                  estimate          t-stat            step 
+Constant                                            10.126          26.734       -1.267012 
+Black                                               -0.114          -4.420       -0.003915 
+Hispanic                                            -0.183          -6.105       -0.000609 
+East                                                 0.011           0.375        0.010935 
+South                                               -0.031          -1.317        0.006595 
+West                                                -0.206          -7.437       -0.006868 
+Married (spouse present)                             0.500          20.182        0.001541 
+Other marital status                                 0.287          10.518        0.003728 
+Age/10                                               0.200           5.514       -0.004969 
+Unemployment rate                                   -0.031          -1.446        0.000622 
+ICS                                                  0.092           4.419       -0.002657 
+Mother's years of schooling                          0.005           1.737       -0.001266 
+Father's years of schooling                         -0.015          -6.704        0.000373 
+Living with both biological parents at 14?           0.047           2.139       -0.002835 
+AFQT score (2006 version)                            0.013           3.360        0.000324 
+Status Quo Bias                                    -11.665         -68.599        1.277539 
+Std Dev                                              0.959         103.491       -0.031093 
+Original Persistent Std Dev                         -0.169          -2.726       -0.024889 
+SQB-Free Persistent Std Dev                        -31.313        -109.400        2.318939 
+Original Transitory Std Dev                          1.590          97.418       -0.026950 
+SQB-Free Transitory Std Dev                         -0.439         -30.807        0.092940 
+
+Log-likelihood   -50074.1
+Error at iteration 20 = 2.42e+00
+24-Aug-2023 20:12:38
+                                                  estimate          t-stat            step 
+Constant                                             8.796          22.837       -1.329926 
+Black                                               -0.124          -4.764       -0.010464 
+Hispanic                                            -0.192          -6.309       -0.008686 
+East                                                 0.010           0.318       -0.001494 
+South                                               -0.040          -1.666       -0.008975 
+West                                                -0.198          -6.992        0.007388 
+Married (spouse present)                             0.486          19.142       -0.013989 
+Other marital status                                 0.281           9.986       -0.005921 
+Age/10                                               0.200           5.397        0.000257 
+Unemployment rate                                   -0.027          -1.234        0.003964 
+ICS                                                  0.088           4.203       -0.003731 
+Mother's years of schooling                          0.005           1.687       -0.000039 
+Father's years of schooling                         -0.015          -6.471        0.000231 
+Living with both biological parents at 14?           0.037           1.675       -0.009541 
+AFQT score (2006 version)                            0.011           2.777       -0.002061 
+Status Quo Bias                                    -10.317         -61.364        1.347737 
+Std Dev                                              0.933         122.156       -0.025063 
+Original Persistent Std Dev                         -0.199          -3.549       -0.030157 
+SQB-Free Persistent Std Dev                        -28.891        -108.387        2.422091 
+Original Transitory Std Dev                          1.560         100.502       -0.030011 
+SQB-Free Transitory Std Dev                         -0.313         -18.008        0.126079 
+
+Log-likelihood   -47964.5
+Error at iteration 21 = 2.34e+00
+24-Aug-2023 20:13:33
+                                                  estimate          t-stat            step 
+Constant                                             7.610          19.445       -1.185686 
+Black                                               -0.123          -4.672        0.000831 
+Hispanic                                            -0.190          -6.124        0.001693 
+East                                                 0.010           0.325        0.000474 
+South                                               -0.041          -1.690       -0.001238 
+West                                                -0.196          -6.890        0.002046 
+Married (spouse present)                             0.473          18.557       -0.012702 
+Other marital status                                 0.270           9.398       -0.010921 
+Age/10                                               0.196           5.129       -0.004662 
+Unemployment rate                                   -0.030          -1.340       -0.003046 
+ICS                                                  0.086           4.110       -0.001837 
+Mother's years of schooling                          0.004           1.378       -0.000843 
+Father's years of schooling                         -0.014          -6.069        0.000765 
+Living with both biological parents at 14?           0.027           1.199       -0.010315 
+AFQT score (2006 version)                            0.008           1.927       -0.003224 
+Status Quo Bias                                     -9.069         -55.482        1.247828 
+Std Dev                                              0.922         106.039       -0.011268 
+Original Persistent Std Dev                         -0.205          -5.263       -0.005404 
+SQB-Free Persistent Std Dev                        -26.552        -106.328        2.339051 
+Original Transitory Std Dev                          1.542         107.965       -0.017938 
+SQB-Free Transitory Std Dev                         -0.155          -8.007        0.157672 
+
+Log-likelihood   -46025.6
+Error at iteration 22 = 1.54e+00
+24-Aug-2023 20:14:26
+                                                  estimate          t-stat            step 
+Constant                                             7.004          19.040       -0.606286 
+Black                                               -0.122          -4.936        0.001699 
+Hispanic                                            -0.187          -6.608        0.002773 
+East                                                 0.015           0.509        0.004305 
+South                                               -0.039          -1.705        0.002322 
+West                                                -0.200          -7.509       -0.003458 
+Married (spouse present)                             0.438          18.182       -0.034861 
+Other marital status                                 0.234           8.390       -0.036131 
+Age/10                                               0.169           4.728       -0.027187 
+Unemployment rate                                   -0.040          -1.826       -0.009283 
+ICS                                                  0.092           4.421        0.005640 
+Mother's years of schooling                          0.002           0.814       -0.002016 
+Father's years of schooling                         -0.012          -5.842        0.001325 
+Living with both biological parents at 14?           0.039           1.880        0.012185 
+AFQT score (2006 version)                            0.009           2.584        0.001764 
+Status Quo Bias                                     -8.266         -57.781        0.803251 
+Std Dev                                              0.875         126.003       -0.047368 
+Original Persistent Std Dev                         -0.197          -5.657        0.008173 
+SQB-Free Persistent Std Dev                        -25.013        -111.555        1.538918 
+Original Transitory Std Dev                          1.487         112.294       -0.055226 
+SQB-Free Transitory Std Dev                         -0.118          -8.695        0.037421 
+
+Log-likelihood   -44378.0
+Error at iteration 23 = 3.65e-01
+24-Aug-2023 20:15:19
+                                                  estimate          t-stat            step 
+Constant                                             6.866          19.711       -0.137292 
+Black                                               -0.117          -4.979        0.004495 
+Hispanic                                            -0.159          -5.750        0.028948 
+East                                                 0.010           0.413       -0.004073 
+South                                               -0.033          -1.551        0.006384 
+West                                                -0.169          -6.592        0.030499 
+Married (spouse present)                             0.388          18.465       -0.050095 
+Other marital status                                 0.207           8.170       -0.026786 
+Age/10                                               0.176           5.263        0.007293 
+Unemployment rate                                   -0.047          -2.269       -0.007122 
+ICS                                                  0.076           3.838       -0.015457 
+Mother's years of schooling                          0.003           1.152        0.000632 
+Father's years of schooling                         -0.012          -6.268        0.000405 
+Living with both biological parents at 14?           0.017           0.861       -0.022487 
+AFQT score (2006 version)                            0.006           1.715       -0.003764 
+Status Quo Bias                                     -7.951         -63.332        0.315361 
+Std Dev                                              0.859         138.601       -0.015669 
+Original Persistent Std Dev                         -0.209          -6.261       -0.012587 
+SQB-Free Persistent Std Dev                        -24.648        -157.016        0.365199 
+Original Transitory Std Dev                          1.466         121.094       -0.020769 
+SQB-Free Transitory Std Dev                         -0.122         -11.201       -0.004560 
+
+Log-likelihood   -43445.6
+Error at iteration 24 = 5.16e-01
+24-Aug-2023 20:16:13
+                                                  estimate          t-stat            step 
+Constant                                             6.451          16.932       -0.415539 
+Black                                               -0.076          -3.153        0.041459 
+Hispanic                                            -0.117          -4.248        0.041343 
+East                                                -0.002          -0.050       -0.012121 
+South                                               -0.027          -1.124        0.005969 
+West                                                -0.152          -5.765        0.017518 
+Married (spouse present)                             0.403          16.576        0.014716 
+Other marital status                                 0.259           9.634        0.051701 
+Age/10                                               0.163           4.324       -0.013221 
+Unemployment rate                                   -0.050          -2.204       -0.003234 
+ICS                                                  0.084           4.100        0.007344 
+Mother's years of schooling                          0.004           1.408        0.001095 
+Father's years of schooling                         -0.010          -4.970        0.001859 
+Living with both biological parents at 14?           0.027           1.299        0.009969 
+AFQT score (2006 version)                            0.005           1.261       -0.000993 
+Status Quo Bias                                     -7.614         -54.717        0.336993 
+Std Dev                                              0.840         121.615       -0.019364 
+Original Persistent Std Dev                         -0.235          -7.527       -0.026331 
+SQB-Free Persistent Std Dev                        -24.132        -162.102        0.515840 
+Original Transitory Std Dev                          1.435         115.757       -0.031432 
+SQB-Free Transitory Std Dev                         -0.120         -10.036        0.002093 
+
+Log-likelihood   -42937.6
+Error at iteration 25 = 2.28e-01
+24-Aug-2023 20:17:09
+                                                  estimate          t-stat            step 
+Constant                                             6.081          16.710       -0.370026 
+Black                                               -0.112          -4.653       -0.036756 
+Hispanic                                            -0.156          -5.596       -0.039272 
+East                                                -0.010          -0.335       -0.008060 
+South                                               -0.041          -1.809       -0.014160 
+West                                                -0.170          -6.434       -0.018456 
+Married (spouse present)                             0.342          14.009       -0.060469 
+Other marital status                                 0.167           5.809       -0.091823 
+Age/10                                               0.181           5.031        0.017984 
+Unemployment rate                                   -0.030          -1.372        0.020192 
+ICS                                                  0.086           4.341        0.002357 
+Mother's years of schooling                          0.003           1.015       -0.001102 
+Father's years of schooling                         -0.012          -5.781       -0.002222 
+Living with both biological parents at 14?           0.033           1.586        0.006085 
+AFQT score (2006 version)                            0.004           1.015       -0.001018 
+Status Quo Bias                                     -7.386         -56.689        0.227903 
+Std Dev                                              0.808         121.984       -0.031929 
+Original Persistent Std Dev                         -0.210          -7.779        0.025204 
+SQB-Free Persistent Std Dev                        -23.943        -163.696        0.188864 
+Original Transitory Std Dev                          1.397         116.934       -0.037426 
+SQB-Free Transitory Std Dev                         -0.183         -15.317       -0.063281 
+
+Log-likelihood   -42600.3
+Error at iteration 26 = 2.73e-01
+24-Aug-2023 20:18:04
+                                                  estimate          t-stat            step 
+Constant                                             6.085          14.725        0.004227 
+Black                                               -0.092          -3.331        0.020552 
+Hispanic                                            -0.118          -3.693        0.038341 
+East                                                -0.015          -0.421       -0.004990 
+South                                               -0.021          -0.790        0.019581 
+West                                                -0.129          -4.304        0.040987 
+Married (spouse present)                             0.314          12.374       -0.028155 
+Other marital status                                 0.169           5.553        0.001978 
+Age/10                                               0.164           3.932       -0.016436 
+Unemployment rate                                   -0.042          -1.720       -0.012451 
+ICS                                                  0.081           3.918       -0.005176 
+Mother's years of schooling                          0.003           0.872       -0.000079 
+Father's years of schooling                         -0.010          -4.439        0.001925 
+Living with both biological parents at 14?           0.021           0.874       -0.012216 
+AFQT score (2006 version)                           -0.003          -0.813       -0.007141 
+Status Quo Bias                                     -7.231         -46.202        0.154256 
+Std Dev                                              0.810          98.267        0.001802 
+Original Persistent Std Dev                         -0.222          -7.529       -0.012175 
+SQB-Free Persistent Std Dev                        -23.670        -115.782        0.272718 
+Original Transitory Std Dev                          1.400         108.337        0.002919 
+SQB-Free Transitory Std Dev                         -0.162          -6.883        0.021664 
+
+Log-likelihood   -42405.5
+Error at iteration 27 = 3.54e-01
+24-Aug-2023 20:18:58
+                                                  estimate          t-stat            step 
+Constant                                             6.145          14.405        0.059781 
+Black                                               -0.065          -2.309        0.027134 
+Hispanic                                            -0.078          -2.422        0.039670 
+East                                                -0.005          -0.129        0.009937 
+South                                               -0.012          -0.430        0.009237 
+West                                                -0.100          -3.261        0.029316 
+Married (spouse present)                             0.303          12.026       -0.011167 
+Other marital status                                 0.160           5.407       -0.009016 
+Age/10                                               0.143           3.307       -0.020765 
+Unemployment rate                                   -0.056          -2.211       -0.013905 
+ICS                                                  0.081           3.860        0.000123 
+Mother's years of schooling                          0.004           1.298        0.001479 
+Father's years of schooling                         -0.009          -3.731        0.001535 
+Living with both biological parents at 14?           0.025           1.034        0.004124 
+AFQT score (2006 version)                           -0.005          -1.151       -0.001581 
+Status Quo Bias                                     -7.152         -44.971        0.079030 
+Std Dev                                              0.814          96.316        0.003878 
+Original Persistent Std Dev                         -0.264          -9.305       -0.041607 
+SQB-Free Persistent Std Dev                        -23.316        -130.670        0.354412 
+Original Transitory Std Dev                          1.408         107.261        0.008060 
+SQB-Free Transitory Std Dev                         -0.122          -6.422        0.040265 
+
+Log-likelihood   -42250.4
+Error at iteration 28 = 2.44e-01
+24-Aug-2023 20:19:51
+                                                  estimate          t-stat            step 
+Constant                                             6.253          14.847        0.108489 
+Black                                               -0.044          -1.621        0.020228 
+Hispanic                                            -0.059          -1.861        0.019790 
+East                                                 0.001           0.022        0.005531 
+South                                               -0.013          -0.471       -0.000890 
+West                                                -0.090          -2.992        0.010363 
+Married (spouse present)                             0.301          12.089       -0.002618 
+Other marital status                                 0.145           5.095       -0.015436 
+Age/10                                               0.125           2.935       -0.018400 
+Unemployment rate                                   -0.068          -2.710       -0.011970 
+ICS                                                  0.082           3.921        0.001260 
+Mother's years of schooling                          0.005           1.498        0.000482 
+Father's years of schooling                         -0.008          -3.447        0.000909 
+Living with both biological parents at 14?           0.025           1.064       -0.000055 
+AFQT score (2006 version)                           -0.004          -0.856        0.001407 
+Status Quo Bias                                     -7.144         -46.051        0.008768 
+Std Dev                                              0.815          99.385        0.001041 
+Original Persistent Std Dev                         -0.295         -11.941       -0.030486 
+SQB-Free Persistent Std Dev                        -23.072        -144.271        0.244259 
+Original Transitory Std Dev                          1.413         107.748        0.004197 
+SQB-Free Transitory Std Dev                         -0.097          -6.892        0.024075 
+
+Log-likelihood   -42133.6
+Error at iteration 29 = 2.23e-01
+24-Aug-2023 20:20:48
+                                                  estimate          t-stat            step 
+Constant                                             6.320          15.210        0.066489 
+Black                                               -0.024          -0.917        0.019982 
+Hispanic                                            -0.044          -1.441        0.015024 
+East                                                -0.000          -0.013       -0.001238 
+South                                               -0.014          -0.541       -0.001517 
+West                                                -0.086          -2.946        0.003991 
+Married (spouse present)                             0.292          11.978       -0.008693 
+Other marital status                                 0.134           4.802       -0.010345 
+Age/10                                               0.109           2.616       -0.016215 
+Unemployment rate                                   -0.077          -3.117       -0.009014 
+ICS                                                  0.086           4.120        0.003600 
+Mother's years of schooling                          0.003           1.117       -0.001410 
+Father's years of schooling                         -0.007          -3.114        0.001084 
+Living with both biological parents at 14?           0.018           0.829       -0.006101 
+AFQT score (2006 version)                           -0.002          -0.561        0.001343 
+Status Quo Bias                                     -7.121         -46.491        0.022631 
+Std Dev                                              0.817          99.133        0.001893 
+Original Persistent Std Dev                         -0.319         -14.021       -0.024080 
+SQB-Free Persistent Std Dev                        -22.849        -144.419        0.222540 
+Original Transitory Std Dev                          1.417         106.991        0.004437 
+SQB-Free Transitory Std Dev                         -0.068          -5.516        0.029028 
+
+Log-likelihood   -42027.9
+Error at iteration 30 = 1.41e-01
+24-Aug-2023 20:21:46
+                                                  estimate          t-stat            step 
+Constant                                             6.352          15.699        0.032276 
+Black                                               -0.012          -0.483        0.012378 
+Hispanic                                            -0.029          -1.027        0.014743 
+East                                                 0.007           0.206        0.006979 
+South                                               -0.019          -0.747       -0.004449 
+West                                                -0.090          -3.293       -0.004286 
+Married (spouse present)                             0.307          12.825        0.014808 
+Other marital status                                 0.140           5.314        0.005687 
+Age/10                                               0.100           2.521       -0.008367 
+Unemployment rate                                   -0.083          -3.424       -0.005404 
+ICS                                                  0.088           4.325        0.002182 
+Mother's years of schooling                          0.003           1.142       -0.000277 
+Father's years of schooling                         -0.007          -3.321        0.000071 
+Living with both biological parents at 14?           0.017           0.839       -0.001161 
+AFQT score (2006 version)                            0.001           0.265        0.003269 
+Status Quo Bias                                     -7.126         -47.556       -0.005055 
+Std Dev                                              0.818          98.809        0.001390 
+Original Persistent Std Dev                         -0.343         -15.952       -0.024639 
+SQB-Free Persistent Std Dev                        -22.708        -137.426        0.140744 
+Original Transitory Std Dev                          1.422         105.639        0.004491 
+SQB-Free Transitory Std Dev                         -0.048          -4.578        0.020198 
+
+Log-likelihood   -41915.8
+Error at iteration 31 = 2.18e-01
+24-Aug-2023 20:22:42
+                                                  estimate          t-stat            step 
+Constant                                             6.183          15.998       -0.168763 
+Black                                               -0.015          -0.638       -0.003147 
+Hispanic                                            -0.022          -0.814        0.007139 
+East                                                -0.002          -0.058       -0.008278 
+South                                               -0.019          -0.772        0.000159 
+West                                                -0.074          -2.862        0.015859 
+Married (spouse present)                             0.288          12.985       -0.018330 
+Other marital status                                 0.127           4.919       -0.012908 
+Age/10                                               0.101           2.714        0.000600 
+Unemployment rate                                   -0.079          -3.454        0.003595 
+ICS                                                  0.095           4.768        0.006603 
+Mother's years of schooling                          0.002           0.948       -0.000800 
+Father's years of schooling                         -0.006          -3.464        0.000531 
+Living with both biological parents at 14?           0.032           1.658        0.014679 
+AFQT score (2006 version)                            0.000           0.006       -0.000972 
+Status Quo Bias                                     -7.030         -48.530        0.096260 
+Std Dev                                              0.815          97.252       -0.003266 
+Original Persistent Std Dev                         -0.360         -17.525       -0.016460 
+SQB-Free Persistent Std Dev                        -22.490        -125.699        0.218373 
+Original Transitory Std Dev                          1.424         104.111        0.002148 
+SQB-Free Transitory Std Dev                         -0.022          -2.067        0.025920 
+
+Log-likelihood   -41812.2
+Error at iteration 32 = 5.72e-02
+24-Aug-2023 20:23:38
+                                                  estimate          t-stat            step 
+Constant                                             5.734          16.417       -0.449024 
+Black                                               -0.033          -1.550       -0.017530 
+Hispanic                                            -0.051          -2.373       -0.029316 
+East                                                 0.019           0.661        0.021059 
+South                                               -0.022          -0.941       -0.002984 
+West                                                -0.093          -3.891       -0.018939 
+Married (spouse present)                             0.345          14.484        0.056293 
+Other marital status                                 0.166           6.700        0.038368 
+Age/10                                               0.158           4.828        0.057207 
+Unemployment rate                                   -0.046          -2.208        0.032746 
+ICS                                                  0.093           5.181       -0.001447 
+Mother's years of schooling                          0.004           2.155        0.002063 
+Father's years of schooling                         -0.008          -4.909       -0.002150 
+Living with both biological parents at 14?           0.043           2.677        0.011479 
+AFQT score (2006 version)                           -0.000          -0.038       -0.000131 
+Status Quo Bias                                     -7.015         -53.223        0.014684 
+Std Dev                                              0.827          95.780        0.012161 
+Original Persistent Std Dev                         -0.391         -19.542       -0.031734 
+SQB-Free Persistent Std Dev                        -22.725        -120.934       -0.234771 
+Original Transitory Std Dev                          1.449         105.275        0.025045 
+SQB-Free Transitory Std Dev                         -0.039          -3.519       -0.016798 
+
+Log-likelihood   -41701.7
+Error at iteration 33 = 8.93e-01
+24-Aug-2023 20:24:34
+                                                  estimate          t-stat            step 
+Constant                                             5.152          18.190       -0.582106 
+Black                                               -0.059          -3.341       -0.025774 
+Hispanic                                            -0.083          -4.013       -0.031710 
+East                                                 0.003           0.197       -0.015935 
+South                                               -0.023          -1.486       -0.001023 
+West                                                -0.087          -4.118        0.006202 
+Married (spouse present)                             0.285          14.694       -0.060075 
+Other marital status                                 0.126           4.379       -0.039626 
+Age/10                                               0.198           7.773        0.039315 
+Unemployment rate                                   -0.024          -1.443        0.022367 
+ICS                                                  0.081           4.485       -0.012422 
+Mother's years of schooling                          0.004           2.024       -0.000486 
+Father's years of schooling                         -0.010          -6.693       -0.001594 
+Living with both biological parents at 14?           0.044           2.984        0.000925 
+AFQT score (2006 version)                           -0.004          -1.877       -0.004284 
+Status Quo Bias                                     -6.531         -65.096        0.484576 
+Std Dev                                              0.790         114.624       -0.036989 
+Original Persistent Std Dev                         -0.368         -19.307        0.023389 
+SQB-Free Persistent Std Dev                        -21.832        -148.235        0.893100 
+Original Transitory Std Dev                          1.418         112.370       -0.030742 
+SQB-Free Transitory Std Dev                         -0.045          -5.432       -0.005653 
+
+Log-likelihood   -41717.2
+Error at iteration 34 = 3.80e-01
+24-Aug-2023 20:25:28
+                                                  estimate          t-stat            step 
+Constant                                             5.361          14.544        0.208415 
+Black                                               -0.059          -2.577       -0.000649 
+Hispanic                                            -0.091          -3.475       -0.008548 
+East                                                -0.017          -0.640       -0.020122 
+South                                               -0.014          -0.613        0.009170 
+West                                                -0.089          -3.434       -0.002723 
+Married (spouse present)                             0.271          12.440       -0.013067 
+Other marital status                                 0.113           4.034       -0.013091 
+Age/10                                               0.155           4.391       -0.042660 
+Unemployment rate                                   -0.044          -2.022       -0.019637 
+ICS                                                  0.088           4.426        0.007394 
+Mother's years of schooling                          0.002           0.804       -0.001962 
+Father's years of schooling                         -0.008          -4.400        0.002031 
+Living with both biological parents at 14?           0.038           1.941       -0.006446 
+AFQT score (2006 version)                           -0.004          -1.211        0.000424 
+Status Quo Bias                                     -6.506         -47.468        0.024654 
+Std Dev                                              0.778         104.427       -0.012259 
+Original Persistent Std Dev                         -0.377         -19.081       -0.009014 
+SQB-Free Persistent Std Dev                        -21.451        -133.631        0.380122 
+Original Transitory Std Dev                          1.415         109.784       -0.003050 
+SQB-Free Transitory Std Dev                         -0.015          -1.076        0.029474 
+
+Log-likelihood   -41584.8
+Error at iteration 35 = 5.39e+03
+24-Aug-2023 20:26:23
+                                                  estimate          t-stat            step 
+Constant                                         -1864.191          -3.614    -1869.551953 
+Black                                               -0.069          -2.914       -0.009876 
+Hispanic                                            -0.064          -2.966        0.026937 
+East                                                 0.035           1.227        0.051409 
+South                                                0.019           0.886        0.032032 
+West                                                -0.057          -2.482        0.032005 
+Married (spouse present)                             0.302          14.160        0.030758 
+Other marital status                                 0.143           5.083        0.030154 
+Age/10                                               0.139           4.076       -0.015846 
+Unemployment rate                                   -0.048          -2.312       -0.004884 
+ICS                                                  0.103           5.352        0.014536 
+Mother's years of schooling                          0.002           0.944        0.000038 
+Father's years of schooling                         -0.006          -3.674        0.002317 
+Living with both biological parents at 14?           0.044           2.738        0.006169 
+AFQT score (2006 version)                           -0.007          -2.388       -0.002613 
+Status Quo Bias                                   1862.952           3.611     1869.457964 
+Std Dev                                              0.792         109.305        0.014036 
+Original Persistent Std Dev                         -0.416         -21.438       -0.038982 
+SQB-Free Persistent Std Dev                       5366.786           3.609     5388.237197 
+Original Transitory Std Dev                          1.442         111.062        0.026797 
+SQB-Free Transitory Std Dev                          0.029           2.361        0.044745 
+
+Log-likelihood   -41512.8
+[Warning: Matrix is singular, close to singular or badly scaled. Results may be
+inaccurate. RCOND = NaN.] 
+[Warning: Matrix is singular, close to singular or badly scaled. Results may be
+inaccurate. RCOND = NaN.] 
+Error at iteration 36 = NaN
+24-Aug-2023 20:27:18
+                                                  estimate          t-stat            step 
+Constant                                               NaN             NaN             NaN 
+Black                                                  NaN             NaN             NaN 
+Hispanic                                               NaN             NaN             NaN 
+East                                                   NaN             NaN             NaN 
+South                                                  NaN             NaN             NaN 
+West                                                   NaN             NaN             NaN 
+Married (spouse present)                               NaN             NaN             NaN 
+Other marital status                                   NaN             NaN             NaN 
+Age/10                                                 NaN             NaN             NaN 
+Unemployment rate                                      NaN             NaN             NaN 
+ICS                                                    NaN             NaN             NaN 
+Mother's years of schooling                            NaN             NaN             NaN 
+Father's years of schooling                            NaN             NaN             NaN 
+Living with both biological parents at 14?             NaN             NaN             NaN 
+AFQT score (2006 version)                              NaN             NaN             NaN 
+Status Quo Bias                                        NaN             NaN             NaN 
+Std Dev                                                NaN             NaN             NaN 
+Original Persistent Std Dev                            NaN             NaN             NaN 
+SQB-Free Persistent Std Dev                            NaN             NaN             NaN 
+Original Transitory Std Dev                            NaN             NaN             NaN 
+SQB-Free Transitory Std Dev                            NaN             NaN             NaN 
+
+Log-likelihood       -Inf
+[Warning: Matrix is singular, close to singular or badly scaled. Results may be
+inaccurate. RCOND = NaN.] 
+Estimates of Model 13.0
+24-Aug-2023 20:27:18
+Sample size 9279
+Number of iterations = 36
+Error at last iteration = NaN
+                                                  estimate      std. error          t-stat 
+Constant                                               NaN             NaN             NaN 
+Black                                                  NaN             NaN             NaN 
+Hispanic                                               NaN             NaN             NaN 
+East                                                   NaN             NaN             NaN 
+South                                                  NaN             NaN             NaN 
+West                                                   NaN             NaN             NaN 
+Married (spouse present)                               NaN             NaN             NaN 
+Other marital status                                   NaN             NaN             NaN 
+Age/10                                                 NaN             NaN             NaN 
+Unemployment rate                                      NaN             NaN             NaN 
+ICS                                                    NaN             NaN             NaN 
+Mother's years of schooling                            NaN             NaN             NaN 
+Father's years of schooling                            NaN             NaN             NaN 
+Living with both biological parents at 14?             NaN             NaN             NaN 
+AFQT score (2006 version)                              NaN             NaN             NaN 
+Status Quo Bias                                        NaN             NaN             NaN 
+Std Dev                                                NaN             NaN             NaN 
+Original Persistent Std Dev                            NaN             NaN             NaN 
+SQB-Free Persistent Std Dev                            NaN             NaN             NaN 
+Original Transitory Std Dev                            NaN             NaN             NaN 
+SQB-Free Transitory Std Dev                            NaN             NaN             NaN 
+
+Log-likelihood       -Inf

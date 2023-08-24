@@ -4,7 +4,7 @@ function [Egamma93, Egamma02, Egamma04, Egamma06, Egamma10, Egamma12, Egamma14] 
 % Computes the E(gamma|c,X)
 % Based on code by Claudia R. Sahm (claudia.r.sahm@frb.gov)
 %
-% Author: Chau Pham
+% Author: Chau Pham (chau.pham.22@ucl.ac.uk)
 % Updated August 23, 2023
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

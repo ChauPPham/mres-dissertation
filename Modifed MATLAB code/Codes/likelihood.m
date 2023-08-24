@@ -65,8 +65,8 @@ LiF = ones(N,Nodes);
     i = find(c93>0); 
         if size(i,1) > 0 
             for k = 1:Nodes
-                Li93(i,k) = norm_cdf((cpt_old(c93(i)+1)-muX93(i)-xU(j)-xKo(k))./sigmae93(i)) - ...
-                    norm_cdf((cpt_old(c93(i))-muX93(i)-xU(j)-xKo(k))./sigmae93(i));
+                Li93(i,k) = norm_cdf((cpt_old(c93(i)+1)-muX93(i)-xU(j)-xKo(k))./abs(sigmae93(i))) - ...
+                    norm_cdf((cpt_old(c93(i))-muX93(i)-xU(j)-xKo(k))./abs(sigmae93(i)));
             end
         end        
 
@@ -74,8 +74,8 @@ LiF = ones(N,Nodes);
     i = find(c02>0); 
         if size(i,1) > 0 
             for k = 1:Nodes
-                Li10(i,k) = norm_cdf((cpt_old(c02(i)+1)-muX02(i)-xU(j)-xKo(k))./sigmae02(i)) - ...
-                    norm_cdf((cpt_old(c02(i))-muX02(i)-xU(j)-xKo(k))./sigmae02(i));
+                Li10(i,k) = norm_cdf((cpt_old(c02(i)+1)-muX02(i)-xU(j)-xKo(k))./abs(sigmae02(i))) - ...
+                    norm_cdf((cpt_old(c02(i))-muX02(i)-xU(j)-xKo(k))./abs(sigmae02(i)));
             end     
         end        
 
@@ -83,8 +83,8 @@ LiF = ones(N,Nodes);
     i = find(c04>0); 
         if size(i,1) > 0 
             for k = 1:Nodes
-                Li04(i,k) = norm_cdf((cpt_old(c04(i)+1)-muX04(i)-xU(j)-xKf(k))./sigmae04(i)) - ...
-                    norm_cdf((cpt_old(c04(i))-muX04(i)-xU(j)-xKf(k))./sigmae04(i));
+                Li04(i,k) = norm_cdf((cpt_old(c04(i)+1)-muX04(i)-xU(j)-xKo(k))./abs(sigmae04(i))) - ...
+                    norm_cdf((cpt_old(c04(i))-muX04(i)-xU(j)-xKo(k))./abs(sigmae04(i)));
             end
         end        
 
@@ -92,8 +92,8 @@ LiF = ones(N,Nodes);
     i = find(c06>0); 
         if size(i,1) > 0 
             for k = 1:Nodes
-                Li06(i,k) = norm_cdf((cpt_old(c06(i)+1)-muX06(i)-xU(j)-xKf(k))./sigmae06(i)) - ...
-                    norm_cdf((cpt_old(c06(i))-muX06(i)-xU(j)-xKf(k))./sigmae06(i));
+                Li06(i,k) = norm_cdf((cpt_old(c06(i)+1)-muX06(i)-xU(j)-xKo(k))./abs(sigmae06(i))) - ...
+                    norm_cdf((cpt_old(c06(i))-muX06(i)-xU(j)-xKo(k))./abs(sigmae06(i)));
             end
         end
 
@@ -101,8 +101,8 @@ LiF = ones(N,Nodes);
     i = find(c10>0); 
         if size(i,1) > 0 
             for k = 1:Nodes
-                Li10(i,k) = norm_cdf((cpt_new(c10(i)+1)-muX10(i)-xU(j)-xKf(k))./sigmae10(i)) - ...
-                    norm_cdf((cpt_new(c10(i))-muX10(i)-xU(j)-xKf(k))./sigmae10(i));
+                Li10(i,k) = norm_cdf((cpt_new(c10(i)+1)-muX10(i)-xU(j)-xKf(k))./abs(sigmae10(i))) - ...
+                    norm_cdf((cpt_new(c10(i))-muX10(i)-xU(j)-xKf(k))./abs(sigmae10(i)));
             end
         end   
 
@@ -110,8 +110,8 @@ LiF = ones(N,Nodes);
     i = find(c12>0); 
         if size(i,1) > 0 
             for k = 1:Nodes
-                Li12(i,k) = norm_cdf((cpt_new(c12(i)+1)-muX12(i)-xU(j)-xKf(k))./sigmae12(i)) - ...
-                    norm_cdf((cpt_new(c12(i))-muX12(i)-xU(j)-xKf(k))./sigmae12(i));
+                Li12(i,k) = norm_cdf((cpt_new(c12(i)+1)-muX12(i)-xU(j)-xKf(k))./abs(sigmae12(i))) - ...
+                    norm_cdf((cpt_new(c12(i))-muX12(i)-xU(j)-xKf(k))./abs(sigmae12(i)));
             end
         end  
 
@@ -119,8 +119,8 @@ LiF = ones(N,Nodes);
     i = find(c14>0); 
         if size(i,1) > 0 
             for k = 1:Nodes
-                Li14(i,k) = norm_cdf((cpt_new(c14(i)+1)-muX14(i)-xU(j)-xKf(k))./sigmae14(i)) - ...
-                    norm_cdf((cpt_new(c14(i))-muX14(i)-xU(j)-xKf(k))./sigmae14(i));
+                Li14(i,k) = norm_cdf((cpt_new(c14(i)+1)-muX14(i)-xU(j)-xKf(k))./abs(sigmae14(i))) - ...
+                    norm_cdf((cpt_new(c14(i))-muX14(i)-xU(j)-xKf(k))./abs(sigmae14(i)));
             end
         end  
     
