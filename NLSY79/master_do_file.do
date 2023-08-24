@@ -815,7 +815,9 @@ label values RISK_AVERSE2 RISK1
 * ASSUMPTION: 
 * 1. risk attitudes vary from year to year (since there is only one type of question, cannot elicit status quo bias (Kimball, 2008, 2009))
 * 2. individuals have constant relative  risk preference (CRRA)
-do risk_mle.do
+* do risk_mle.do ==========> THIS IS OLD PROGRAM
+* NEW COEFFICIENTS ARE ESTIMATED FROM MATLAB AND IMPORTED
+
 
 *save NLSY79_long.dta, replace
 
@@ -829,26 +831,9 @@ replace alpha2 = 1 if WTA_1K_IMPUTED == 0
 replace alpha2 = -6 if WTA_1K_IMPUTED > 900 & WTA_1K_IMPUTED != .
 */
 
-**# Bookmark #8 Merging child & mom data (wide)
-/*===================================================*/
-/*========== Merge child & mom data (wide) ==========*/
-/*===================================================*/
-use MERGE_CHILD, clear
-rename C0000200 R0000100
-merge m:1 R0000100 using NLSY79_main.dta, keep(match) nogen
-order C0000100 year C0005400 C0005300 C0005700 R0000100 R0214800 R0000149 R0173600 
-replace T2274100 = T1215600 if T2274100 < 0
-gen DEGREE_CAT = 0 if T2274100 == 0 & T3108600 < 9 & T3108600 >= 0
-replace DEGREE_CAT = 1 if T2274100 == 0 & T3108600 >= 9 & T3108600 <= 12
-replace DEGREE_CAT = 2 if T2274100 == 1 & T3108600 == 12
-replace DEGREE_CAT = 3 if (T2274100 == 1 | T2274100 == 2) & T3108600 > 12 & T3108600 < 90
-replace DEGREE_CAT = 4 if (T2274100 == 3 | T2274100 == 4)
-replace DEGREE_CAT = 5 if (T2274100 >= 5 & T2274100 < 8)
-label define DEGREE_CAT 0 "No high school" 1 "Some high school" 2 "High school" 3 "Some college" 4 "College" 5 "Postgraduate"
-label values DEGREE_CAT DEGREE_CAT
-save POOL.dta, replace
 
-**# Bookmark #9 Merging child & mom data (long)
+
+**# Bookmark #8 Merging child & mom data (long)
 /*===================================================*/
 /*========== Merge child & mom data (long) ==========*/
 /*===================================================*/
@@ -866,7 +851,7 @@ label define DEGREE_CAT 0 "No high school" 1 "Some high school" 2 "High school" 
 label values DEGREE_CAT DEGREE_CAT
 save POOL_long.dta, replace
 
-**# Bookmark #10 Data analysis
+**# Bookmark #9 Data analysis
 *=====================================================================================*
 /*==========================================*/
 /*========== Data analysis (long) ==========*/
@@ -889,7 +874,6 @@ replace NEW = 1 if year >= 2010
 
 gen ln_INCOME = log(HH_INCOME)
 
-replace WKS_WORKED = . if WKS_WORKED < 0
 
 gen MOM_AGE = year - R0000500 - 1900
 
@@ -899,11 +883,11 @@ replace AGE_14 = 1 if R0001900 == 11
 
 
 /* Generate variable for age at first birth */
-by R0000100: egen AGE_FIRST_BIRTH = min(C0007000)
+bys R0000100: egen AGE_FIRST_BIRTH = min(C0007000)
 
 replace R0618301 = R0618301/1000
 
-**# Bookmark #11 Summary table
+**# Bookmark #10 Summary table
 /*==============================================================*/
 /*==================== Output summary table ====================*/
 /*==============================================================*/
@@ -924,8 +908,8 @@ label var R0006500 "Mother's mother's years of schooling"
 label var R0007900 "Mother's father's years of schooling"
 label var HH_INCOME "Net household income (\\$)"
 label var WKS_WORKED "$\#$ weeks worked last year"
+label var WKS_WORKED_SPS "$\#$ weeks spouse worked last year"
 label var AGE_14 "Mother lives with both biological parents at age 14"
-label var gamma "$\gamma$"
 label var R9909800 "Marriage before first birth"
 label var MARITAL_STAT "Marital status"
 label var MOM_AGE "Mother's age"
@@ -951,12 +935,18 @@ replace DEGREE_SEP = 2 if DEGREE_CAT >= 3 & DEGREE_CAT != .
 label define DEGREE_SEP 0 "\thead{High school\\\\dropout}" 1 "\thead{High school}" 2 "\thead{College}" /* Need to manually change to two lines in tex */
 label values DEGREE_SEP DEGREE_SEP
 
-qui estpost tabstat gamma INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE SEX2 RACE1 RACE2 RACE3 C000700 NO_SIB FAM_SIZE AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED HH_INCOME if gamma != . & R0618301 >= 0 & R0618301 != . & R0006500 >= 0 & R0006500 != .& R0007900 >= 0 & R0007900 !=. & FAM_SIZE >= 0 & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & HH_INCOME >= 0 & AGE_14 != ., by(DEGREE_SEP) statistics(mean sd) columns(statistics)
-*esttab . using tex/summary.tex, main(mean %12.2f) aux(sd %12.2f) noobs nostar unstack nonote label replace booktabs nonum title("Summary statistics \label{table:5-summary}")
+/* Summary statistics for time-varying variables */
+qui estpost tabstat IMPUTED_CRRA* INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE NO_SIB FAM_SIZE   WKS_WORKED WKS_WORKED_SPS HH_INCOME if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != ., by(DEGREE_SEP) statistics(mean sd) columns(statistics)
+*esttab . using tex/summary.tex, main(mean %12.2f) aux(sd %12.2f) noobs nostar unstack nonote label replace booktabs nonum title("Summary statistics \label{table:5-summary}") replace
 esttab ., main(mean %12.2f n) aux(sd %12.2f) nostar nonote label unstack nonum long title("Summary statistics") noobs
 
+/* Summary statistics for time-invariant variables */
+* Temporarily change to wide format for time-invariant variables
+* reshape wide SEX2 RACE1 RACE2 RACE3 C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900, i(C0000100) j(year)
+qui estpost tabstat SEX2 RACE1 RACE2 RACE3 C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != ., by(DEGREE_SEP) statistics(mean sd) columns(statistics)
+esttab ., main(mean %12.2f n) aux(sd %12.2f) nostar nonote label unstack nonum long title("Summary statistics") noobs
 
-**# Bookmark #12 Regression table
+**# Bookmark #11 Regression table
 /*==================================================================*/
 /*==================== Output regression tables ====================*/
 /*==================================================================*/
@@ -968,7 +958,8 @@ esttab ., main(mean %12.2f n) aux(sd %12.2f) nostar nonote label unstack nonum l
 eststo clear
 
 
-*==================== RISK AS GAMMA (COEF OF RRA) ============================*
+*==================== RISK AS COEF OF RRA ============================*
+/* TIME-INVARIANT RISK PREFERENCE */
 local identifier = 1
 qui foreach i of varlist INV_ALL GOODS_ALL TIME_ALL {
 	reghdfe `i' gamma i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 >= 0 & R0618301 != . & R0006500 >= 0 & R0006500 != .& R0007900 >= 0 & R0007900 !=. & FAM_SIZE >= 0 & FAM_SIZE !=. & HH_INCOME != . & HH_INCOME >= 0 & AGE_14 != . & DEGREE_SEP != ., absorb(year AGE_CAT) vce(cluster R0000100)
