@@ -873,7 +873,7 @@ gen NEW = 0
 replace NEW = 1 if year >= 2010
 
 gen ln_INCOME = log(HH_INCOME)
-
+rename WEEKS_WORKED_SPS WKS_WORKED_SPS
 
 gen MOM_AGE = year - R0000500 - 1900
 
@@ -995,7 +995,7 @@ qui forval k = 1/4 {
 		local ++identifier
 	}
 
-
+******************************** This here creates the problem
 	forvalues i = 1/5 {
 		esttab model_`i'*, keep(IMPUTED_CRRA_`k') mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress indicate(Year interaction = *.year#c.IMPUTED_CRRA_`k')
 	}

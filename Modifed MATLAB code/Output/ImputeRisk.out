@@ -520,3 +520,9 @@ Etheta(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,[X93,ones(N,1)],[X02,
 
 Model 12: Log Risk Tolerance Mean = -0.238 (0.168) Std Dev = 0.898 (0.021)
 Model 12: Risk Tolerance Mean = 1.180 Std Dev = 1.314
+Model 12: Log Risk Tolerance Mean = -0.238 (0.168) Std Dev = 0.898 (0.021)
+Model 12: Risk Tolerance Mean = 1.180 Std Dev = 1.314
+Model 13: Log Risk Tolerance Mean = -0.070 (0.187) Std Dev = 0.233 (0.018)
+Model 13: Risk Tolerance Mean = 0.958 Std Dev = 0.226
+Model 14: Log Risk Tolerance Mean = -0.116 Std Dev = 0.873
+Model 14: Risk Tolerance Mean = 1.304 Std Dev = 1.393
