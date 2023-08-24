@@ -302,21 +302,25 @@ clear all;
 diary('../Output/ImputeRisk.out');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Impute Proxy Values for Risk Tolerance
+%% Impute Proxy Values for Risk Tolerance
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+clear all
 load ../Output/MATLAB_sample;
 global model
 
-%% Imputations from Model 11 %%
+% Imputations from Model 11 %%
 load ../Output/results_final_11
 [Etheta_11] = Etheta(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,RISK_2012,RISK_2014, ...
     [X93(:,1),ones(N,1)],[X02(:,1),ones(N,1)],[X04(:,1),ones(N,1)],[X06(:,1),ones(N,1)],[X10(:,1),zeros(N,1)],[X12(:,1),zeros(N,1)],[X14(:,1),zeros(N,1)]);
 [Elntheta_11] = Elntheta(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,RISK_2012,RISK_2014, ...
     [X93(:,1),ones(N,1)],[X02(:,1),ones(N,1)],[X04(:,1),ones(N,1)],[X06(:,1),ones(N,1)],[X10(:,1),zeros(N,1)],[X12(:,1),zeros(N,1)],[X14(:,1),zeros(N,1)]);
-[Egamma_11] = Egamma(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,RISK_2012,RISK_2014, ...
+[Egamma1_93,Egamma1_02,Egamma1_04,Egamma1_06,Egamma1_10,Egamma1_12,Egamma1_14] = Egamma(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,RISK_2012,RISK_2014, ...
     [X93(:,1),ones(N,1)],[X02(:,1),ones(N,1)],[X04(:,1),ones(N,1)],[X06(:,1),ones(N,1)],[X10(:,1),zeros(N,1)],[X12(:,1),zeros(N,1)],[X14(:,1),zeros(N,1)]);
-    se = full(se); b = full(b); X93 = full(X93);
+    
+Egamma1 = [Egamma1_93, Egamma1_02,Egamma1_04,Egamma1_06,Egamma1_10,Egamma1_12,Egamma1_14];
+
+se = full(se); b = full(b); X93 = full(X93);
     sigmau = abs(b(3));
     xb_11 = X93(:,1)*b(1);
     mu_11 = mean(xb_11);
@@ -325,6 +329,8 @@ load ../Output/results_final_11
     Vgamma_11  = exp(-2*mu_11+va_11)*(exp(va_11)-1);
     lambdaP  = Vtheta_11 / var(Etheta_11);
     lambdalnP  = va_11 / var(Elntheta_11);
+
+ % writematrix(Egamma1, '../Output/RISK1.csv')
 
 %% TABLE 6 %%		    
 disp('   ');
@@ -343,7 +349,11 @@ Tables_Model_11(b,V);
 load ../Output/results_final_12
 [Etheta_12]  = Etheta(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,RISK_2012,RISK_2014,[X93,ones(N,1)],[X02,ones(N,1)],[X04,zeros(N,1)],[X06,zeros(N,1)],[X10,zeros(N,1)],[X12,zeros(N,1)],[X14,zeros(N,1)]);
 [Elntheta_12] = Elntheta(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,RISK_2012,RISK_2014,[X93,ones(N,1)],[X02,ones(N,1)],[X04,zeros(N,1)],[X06,zeros(N,1)],[X10,zeros(N,1)],[X12,zeros(N,1)],[X14,zeros(N,1)]);  
-[Egamma_12]  = Egamma(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,RISK_2012,RISK_2014,[X93,ones(N,1)],[X02,ones(N,1)],[X04,zeros(N,1)],[X06,zeros(N,1)],[X10,zeros(N,1)],[X12,zeros(N,1)],[X14,zeros(N,1)]);
+[Egamma2_93,Egamma2_02,Egamma2_04,Egamma2_06,Egamma2_10,Egamma2_12,Egamma2_14]  = Egamma(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,RISK_2012,RISK_2014,[X93,ones(N,1)],[X02,ones(N,1)],[X04,zeros(N,1)],[X06,zeros(N,1)],[X10,zeros(N,1)],[X12,zeros(N,1)],[X14,zeros(N,1)]);
+
+Egamma2 = [Egamma2_93, Egamma2_02,Egamma2_04,Egamma2_06,Egamma2_10,Egamma2_12,Egamma2_14];
+
+% writematrix(Egamma2, '../Output/RISK2.csv')
 
 se = full(se); b = full(b); X93 = full(X93);
     K = size(X93,2);    
@@ -368,26 +378,34 @@ se = full(se); b = full(b); X93 = full(X93);
 fprintf('Model 12: Log Risk Tolerance Mean = %1.3f (%1.3f) Std Dev = %1.3f (%1.3f)\n', mu_12, se_mu12,va_12^.5, se_va12 );
 fprintf('Model 12: Risk Tolerance Mean = %1.3f Std Dev = %1.3f\n', exp(mu_12 + va_12/2), Vtheta_12^.5 );
 
+
 %% Imputations from Model 13 %%    
 load ../Output/results_final_13
-[Etheta_13]  = Etheta_KSS(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,[W92 ,ones(N,1)],[W94 ,ones(N,1)],...
-    [W98 ,zeros(N,1)],[W00, zeros(N,1)],[W02, zeros(N,1)]);
-[Elntheta_13] = Elntheta_KSS(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,[W92 ,ones(N,1)],[W94 ,ones(N,1)],...
-    [W98 ,zeros(N,1)],[W00, zeros(N,1)],[W02, zeros(N,1)]);
-se = full(se); b = full(b); W92 = full(W92);
-    K = size(W92,2);    
+[Etheta_13]  = Etheta(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,RISK_2012,RISK_2014,[W93 ,ones(N,1)],[W02 ,ones(N,1)],...
+    [W04 ,ones(N,1)],[W06, ones(N,1)],[W10, zeros(N,1)],[W12, zeros(N,1)],[W14, zeros(N,1)]);
+[Elntheta_13] = Elntheta(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,RISK_2012,RISK_2014,[W93 ,ones(N,1)],[W02 ,ones(N,1)],...
+    [W04 ,ones(N,1)],[W06, ones(N,1)],[W10, zeros(N,1)],[W12, zeros(N,1)],[W14, zeros(N,1)]);
+[Egamma3_93,Egamma3_02,Egamma3_04,Egamma3_06,Egamma3_10,Egamma3_12,Egamma3_14] = Egamma(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,RISK_2012,RISK_2014,[W93 ,ones(N,1)],[W02 ,ones(N,1)],...
+    [W04 ,ones(N,1)],[W06, ones(N,1)],[W10, zeros(N,1)],[W12, zeros(N,1)],[W14, zeros(N,1)]);
+
+Egamma3 = [Egamma3_93, Egamma3_02,Egamma3_04,Egamma3_06,Egamma3_10,Egamma3_12,Egamma3_14];
+
+% writematrix(Egamma3, '../Output/RISK3.csv')
+
+se = full(se); b = full(b); W93 = full(W93);
+    K = size(W93,2);    
     sigmau = abs(b(16));
-    xb_13 = W92*b(1:K);
+    xb_13 = W93*b(1:K);
     mu_13 = mean(xb_13);
     va_13 = var(xb_13)+sigmau^2;
     Vtheta_13  = exp(2*mu_13+va_13)*(exp(va_13)-1);
    
     B = size(b,1);
     g = zeros(B,1);
-    g(1:K,1) = mean(W92)';
+    g(1:K,1) = mean(W93)';
     se_mu13 = (g'*V*g)^0.5;       
     
-    X = W92 - repmat(mean(W92),N,1);
+    X = W93 - repmat(mean(W93),N,1);
     g = zeros(B,1);
     g(1:K,1) = va_13^-.5*(X'*X)*b(1:K)/N;
     g(K+2) = va_13^-.5*sigmau;
@@ -396,65 +414,17 @@ se = full(se); b = full(b); W92 = full(W92);
 fprintf('Model 13: Log Risk Tolerance Mean = %1.3f (%1.3f) Std Dev = %1.3f (%1.3f)\n', mu_13, se_mu13,va_13^.5, se_va13 );
 fprintf('Model 13: Risk Tolerance Mean = %1.3f Std Dev = %1.3f\n', exp(mu_13 + va_13/2), Vtheta_13^.5 );
     
-%% Table R-4 Weighted and Unweighted    
-i = find(wgt_1992 >0);
-N = size(i,1);
-    mu_13u = mean(xb_13(i));
-    va_13u = var(xb_13(i))+sigmau^2;
-    B = size(b,1);
-    
-    g = zeros(B,1);
-    g(1:K,1) = mean(W92(i,:))';
-    se_mu13u = (g'*V*g)^0.5; 
-
-    g = zeros(B,1);
-    g(1:K,1) = exp(mu_13u)*mean(W92(i,:))';
-    se_md13u = (g'*V*g)^0.5; 
-
-    mn_13u = exp(mu_13u + va_13u/2);
-    X = W92(i,:) - repmat(mean(W92(i,:)),N,1);
-    g = zeros(B,1);
-    g(1:K,1) = mn_13u*mean(W92(i,:))';
-    g(1:K,1) = mn_13u*(va_13u^-.5*(X'*X)*b(1:K)/N) + g(1:K,1);
-    g(K+2) = mn_13u*va_13u^-.5*sigmau + g(K+2);
-    se_mn13u = (g'*V*g)^0.5;
-    
-    mu_13w = sum(wgt_1992(i).*xb_13(i))/sum(wgt_1992(i));
-    
-    g = zeros(B,1);
-    g(1:K,1) = (sum(repmat(wgt_1992(i),1,K).*W92(i,:))/sum(wgt_1992(i)))';
-    se_mu13w = (g'*V*g)^0.5;     
-    
-    g = zeros(B,1);
-    g(1:K,1) = exp(mu_13w)*(sum(repmat(wgt_1992(i),1,K).*W92(i,:))/sum(wgt_1992(i)))';
-    se_md13w = (g'*V*g)^0.5; 
-
-    va_13w = sum(wgt_1992(i).*(xb_13(i)-mu_13w).^2)/sum(wgt_1992(i)) + sigmau^2;
-    mn_13w = exp(mu_13w+va_13w/2);
-
-    X = W92(i,:) - repmat(sum(repmat(wgt_1992(i),1,K).*W92(i,:))/sum(wgt_1992(i)),N,1);
-    g = zeros(B,1);
-    g(1:K,1) = mn_13w*(sum(repmat(wgt_1992(i),1,K).*W92(i,:))/sum(wgt_1992(i)))';
-    g(1:K,1) = mn_13w*(va_13w^-.5*(X'*X)*b(1:K)/N) + g(1:K,1);
-    g(K+2) = mn_13w*va_13w^-.5*sigmau + g(K+2);
-    se_mn13w = (g'*V*g)^0.5;    
-
-%% Columns 2,3 of Table R-4 %%
-disp('Table R-4: Descriptive Statistics (Weighting Sensitivity Check) Columns 2, 3');
-disp('Model 13, Unweighted, Sampling Covariates');
-fprintf(' Mean Log(RT) = %1.3f (%1.3f) Median RT = %1.3f (%1.3f) Mean RT = %1.3f (%1.3f)\n', ...
-	mu_13u, se_mu13u, exp(mu_13u), se_md13u, mn_13u, se_mn13u ); 
-disp('Model 13, Weighted, Sampling Covariates');
-fprintf(' Mean Log(RT) = %1.3f (%1.3f) Median RT = %1.3f (%1.3f) Mean RT = %1.3f (%1.3f)\n', ...
-	mu_13w, se_mu13w, exp(mu_13w), se_md13w, mn_13w, se_mn13w ); 
     
 %% Imputations from Model 14 %%
 load ../Output/results_final_14
-[Etheta_14]  = Etheta_KSS(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,[XW93,ones(N,1)],[XW02 ,ones(N,1)],...
-    [XW04 ,zeros(N,1)],[XW06, zeros(N,1)],[XW02, zeros(N,1)]);
-[Elntheta_14] = Elntheta_KSS(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,[XW93,ones(N,1)],[XW02 ,ones(N,1)],...
-    [XW04 ,zeros(N,1)],[XW06, zeros(N,1)],[XW02, zeros(N,1)]);
-    se = full(se); b = full(b); W92 = full(W92);
+[Etheta_14]  = Etheta(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,RISK_2012,RISK_2014,[XW93,ones(N,1)],[XW02 ,ones(N,1)],...
+    [XW04 ,zeros(N,1)],[XW06, zeros(N,1)],[XW10, zeros(N,1)],[XW12, zeros(N,1)],[XW14, zeros(N,1)]);
+[Elntheta_14] = Elntheta(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,RISK_2012,RISK_2014,[XW93,ones(N,1)],[XW02 ,ones(N,1)],...
+    [XW04 ,zeros(N,1)],[XW06, zeros(N,1)],[XW10, zeros(N,1)],[XW12, zeros(N,1)],[XW14, zeros(N,1)]);
+[Egamma4_93,Egamma4_02,Egamma4_04,Egamma4_06,Egamma4_10,Egamma4_12,Egamma4_14] = Egamma(b,RISK_1993,RISK_2002,RISK_2004,RISK_2006,RISK_2010,RISK_2012,RISK_2014,[XW93,ones(N,1)],[XW02 ,ones(N,1)],...
+    [XW04 ,zeros(N,1)],[XW06, zeros(N,1)],[XW10, zeros(N,1)],[XW12, zeros(N,1)],[XW14, zeros(N,1)]);
+
+    se = full(se); b = full(b); W93 = full(W93);
     K = size(XW93,2);  
     sigmau = abs(b(24));
     xb_14 = XW93*b(1:K);
@@ -462,8 +432,12 @@ load ../Output/results_final_14
     va_14 = var(xb_14)+sigmau^2;
     Vtheta_14  = exp(2*mu_14+va_14)*(exp(va_14)-1);
 
-disp(sprintf('Model 14: Log Risk Tolerance Mean = %1.3f Std Dev = %1.3f', mu_14, va_14^.5 ));
-disp(sprintf('Model 14: Risk Tolerance Mean = %1.3f Std Dev = %1.3f', exp(mu_14 + va_14/2), Vtheta_14^.5 ));
+Egamma4 = [Egamma4_93, Egamma4_02,Egamma4_04,Egamma4_06,Egamma4_10,Egamma4_12,Egamma4_14];
+
+% writematrix(Egamma4, '../Output/RISK4.csv')
+
+fprintf('Model 14: Log Risk Tolerance Mean = %1.3f Std Dev = %1.3f\n', mu_14, va_14^.5 );
+fprintf('Model 14: Risk Tolerance Mean = %1.3f Std Dev = %1.3f\n', exp(mu_14 + va_14/2), Vtheta_14^.5 );
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Second-step: Asset Allocation Application

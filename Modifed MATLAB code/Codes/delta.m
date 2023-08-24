@@ -1,4 +1,4 @@
-function [b,se,R2,Avar] = delta_KSS(y,x,lambda);
+function [b,se,R2,Avar] = delta_KSS(y,x,lambda)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % delta_KSS.m
 % Calcultes the OLS, GMM estimates for second-step

@@ -1,4 +1,4 @@
-function [Egamma93] = Egamma(b,c93,c02,c04,c06,c10,c12,c14,X93,X02,X04,X06,X10,X12,X14)
+function [Egamma93, Egamma02, Egamma04, Egamma06, Egamma10, Egamma12, Egamma14] = Egamma(b,c93,c02,c04,c06,c10,c12,c14,X93,X02,X04,X06,X10,X12,X14)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Egamma.m
 % Computes the E(gamma|c,X)
@@ -197,6 +197,12 @@ if model < 10
     Egamma93 = exp(-muX93+sigmau^2/2).*(num./den);
 elseif model >= 10    
     Egamma93 = exp(-X93(:,1:end-1)*b(1:K-1)+sigmau^2/2).*(num./den);
+    Egamma02 = exp(-X02(:,1:end-1)*b(1:K-1)+sigmau^2/2).*(num./den);
+    Egamma04 = exp(-X04(:,1:end-1)*b(1:K-1)+sigmau^2/2).*(num./den);
+    Egamma06 = exp(-X06(:,1:end-1)*b(1:K-1)+sigmau^2/2).*(num./den);
+    Egamma10 = exp(-X10(:,1:end-1)*b(1:K-1)+sigmau^2/2).*(num./den);
+    Egamma12 = exp(-X12(:,1:end-1)*b(1:K-1)+sigmau^2/2).*(num./den);
+    Egamma14 = exp(-X14(:,1:end-1)*b(1:K-1)+sigmau^2/2).*(num./den);
 end
 
 
