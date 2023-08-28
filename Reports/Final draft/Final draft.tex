@@ -13,10 +13,10 @@
 \usepackage[nameinlink, noabbrev]{cleveref}	% Use \Cref always 
 \usepackage{caption}
 \usepackage{threeparttable, makecell, cellspace, multirow, booktabs, diagbox, tabularx, longtable, threeparttablex}
-\usepackage{verbatim}
+%\usepackage{verbatim}
 \usepackage{natbib}
 \usepackage[bottom]{footmisc}	% keep footnotes at end of the page
-\usepackage{xcolor}
+\usepackage{xcolor, easyReview}
 
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 
@@ -24,19 +24,7 @@
 \renewcommand\theadgape{\Gape[4pt]}
 \renewcommand\cellgape{\Gape[4pt]}
 
-%---- Simple table template
-\begin{comment} 
-	\begin{table}[!htbp]\centering
-		\begin{threeparttable}
-			\setlength{\extrarowheight}{0.2em}
-			\begin{tabular}
-				content...
-			\end{tabular}
-			%\caption{text}
-			%\label{key}
-		\end{threeparttable}
-	\end{table}
-\end{comment}
+
 
 %\setlist[enumerate]{label=(\roman*)}
 
@@ -61,7 +49,7 @@ Investment in human capital has been considered risky since the works of \citet{
 
 This line of inquiry is, however, valid insofar as the decision maker is the individual under study. Occupational choice, tertiary education, specific skills training, to name a few, fall under the domain of individual choice wherein an individual is the decision maker and she exercises scrutiny before making her choice. For children and teenagers, the choice are, more often than not, not theirs to make as they lack the appropriate capacity to make an informed choice while various factors such as pecuniary issues are beyond their control. At the same  time, a vast literature on early childhood intervention has deemed these early investments substantially beneficial for future outcomes of children.\footnote{See \citet{Currie2001} and \citet{NORES2010} for a comprehensive review on a large number of childhood intervention programs. Prenatal and postnatal investments have also been found to affect later life outcomes \citep{currie2011human, almond2011killing, currie2013early}.} Furthermore, as highlighted by \citet{jacob2008improving} and \citet{duflo2011poor}, early childhood interventions are most effective in levelling the playground for disadvantaged children. Thus, parents' investment during early childhood plays a pivotal role in shaping the children's future paths. If investment in human capital is risky, the importance of understanding the effect of parental risk preference on children investment naturally follows.
 
-Most works that focus on parental risk attitudes study how various educational outcomes are influenced by risk preference of parents. The majority reported negative effects of risk aversion on educational outcomes including test scores in the US \citep{brown2012parental}, college enrollment in Italy \citep{checchi2014parents}, cognitive outcomes in Indonesia \citep{hartarto2023parental}. Furthermore, \citet{frempong2021risk} found a positive association between risk aversion and child labour. This coupled with evidence found by \citet{HEADY2003385} and \citet{bezerra2009impact} suggesting child labour impedes learning also points to a negative relationship between parental risk aversion and educational outcomes. With regards to various school tracks which offer different curriculums, \citet{wolfel2012parental} also confirmed the negative effects of maternal risk aversion on daughters for a sample of German students such that daughters of more risk-averse mothers are more likely to pursue lower secondary track. On the other hand, \citet{leonardi2007parents} found no effect of risk aversion on secondary school track choice for a sample of Italian students.\footnote{German and Italy secondary schools mainly separate curriculums based on later-life goals which can be broadly categorized into vocational-oriented education or traditional pathway to university. Schools in Germany also adopt a recommendation system based on the child's ability and which greatly affects track choice.}
+Most works that focus on parental risk attitudes study how various educational outcomes are influenced by risk preference of parents. The majority reported negative effects of risk aversion on educational outcomes including test scores in the US \citep{brown2012parental}, college enrollment in Italy \citep{checchi2014parents}, cognitive outcomes in Indonesia \citep{hartarto2023parental}. Furthermore, \citet{frempong2021risk} found a positive association between risk aversion and child labour. This, coupled with evidence found by \citet{HEADY2003385} and \citet{bezerra2009impact} suggesting child labour impedes learning, also points to a negative relationship between parental risk aversion and educational outcomes. With regards to various school tracks which offer different curriculums, \citet{wolfel2012parental} confirmed the negative effects of maternal risk aversion on daughters for a sample of German students such that daughters of more risk-averse mothers are more likely to pursue lower secondary track. On the other hand, \citet{leonardi2007parents} found no effect of risk aversion on secondary school track choice for a sample of Italian students.\footnote{German and Italy secondary schools mainly separate curriculums based on later-life goals which can be broadly categorized into vocational-oriented education or traditional pathway to university. Schools in Germany also adopt a recommendation system based on the child's ability and which greatly affects track choice.}
 
 In general, the literature on parental risk aversion is scarce whilst results are inconclusive. In direct relation to our study, \citet{sovero2018risk} uses height-for-age, and BMI-for-age along with other several spending categories to measure investment of Mexican parents. Risk attitudes of parents are elicited using a series of questions with multiple price list structure. Her results indicate a positive linkage between risk averse mothers and their investment on sons, i.e., risk averse mothers invest more on sons than daughters. Using data on Uganda households, \citet{tabetando2019parental} confirms the positive relation between risk aversion and investment, measured by level of educational expenditure and its share of household budget. Although wealthier households tend to be more risk averse, the relationship is reversed for poor households. That is, risk aversion depresses investment in credit constrained households.      
 
@@ -73,8 +61,8 @@ In general, the literature on parental risk aversion is scarce whilst results ar
 %===================================================================================================================================================================
 %===================================================================================================================================================================
 
-\section{Data \& methodology}
-I use data of National Longitudinal Survey of Youth 1979 (NLSY79) and NLSY79 Child and Young Adults (CYA) to study the effects of parental risk aversion on children investment. The NLSY79 is a longitudinal project that follows the lives of a sample of American youth born between 1957 and 1964 with the first round of data collection in 1979. The original cohort included 12,686 respondents ages 14-22 when first interviewed but later dropped to 9,964 respondents after the exclusion of the military subsample. Data are collected annually from 1979 to 1994 and biannually thereafter. Beginning in 1986, additional information was collected biannually about children born to female NLSY79 respondents, constituting the NLSY79 CYA dataset. The Child and Young Adult contains information on a rich set of assessments on cognitive ability, temperament, motor and social development, behaviour problems, self-competence of the children as well as the quality of their home environment. By linking investment, as measured by The HOME (Home Observation Measurement of the Environment) indices along with its subsection indices in the NLSY79 CYA, and an indicator of risk attitudes generated from a series of questions in the NLSY79, it is possible to study the effect of maternal risk aversion on investment in children.
+\section{Data}
+I use data of National Longitudinal Survey of Youth 1979 (NLSY79) and NLSY79 Child and Young Adults (CYA) to study the effects of parental risk aversion on children investment. The NLSY79 is a longitudinal project that follows the lives of a sample of American youth born between 1957 and 1964 with the first round of data collection in 1979. The original cohort included 12,686 respondents ages 14-22 when first interviewed but later dropped to 9,964 respondents after the scaling down of the military subsample and the exclusion of a portion of the economically disadvantaged, non-Black and non-Hispanic sample. Data are collected annually from 1979 to 1994 and biannually thereafter. Beginning in 1986, additional information was collected biannually about children born to female NLSY79 respondents, constituting the NLSY79 CYA dataset. The Child and Young Adult contains information on a rich set of assessments on cognitive ability, temperament, motor and social development, behaviour problems, self-competence of the children as well as the quality of their home environment. By linking investment, as measured by The HOME (Home Observation Measurement of the Environment) indices along with its subsection indices in the NLSY79 CYA, and an indicator of risk attitudes generated from a series of questions in the NLSY79, it is possible to study the effect of maternal risk aversion on investment in children.
 
 \subsection{Mothers' risk preference}
 To measure attitudes towards risk of mothers,\footnote{Since NLSY79 and NLSY79 CYA are linked by identifying unique pairs of mother-child.} Participants of NLSY79 were asked a series of hypothetical questions on occupational choice. The first question of the series reads:
@@ -96,9 +84,9 @@ Depending on respondents' answers to this question, survey participants were ask
 \begin{flushright}
 	\textit{Questionnaire Public Report, National Longitudinal Survey of Youth 1979 (NLSY79), 2010.}
 \end{flushright} 
-Choosing ``First job" would lead respondents to a second question with income cut increased to 15\% asopposed to 5\% for ``Second job". Based on answers to the either series of questions, respondents can be categorized into four groups numbered 1-4 where individuals in group 1 choose ``Yes" in both questions of the old series or "The first job" in both questions of the new series; while individuals in group 4 opt for ``No" in both questions of the old series or "The second job" in both questions of the new series. This means that it is possible for an individual to be placed into different groups in different years. Specifics of groups categorization are presented in \Cref{table:1-risk-category}. 
+Choosing ``First job" would lead respondents to a second question with income cut increased to 15\% asopposed to 5\% for ``Second job". Based on answers to the either series of questions, respondents can be categorized into four groups numbered 1-4 where individuals in group 1 choose ``Yes" in both questions of the old series or "The first job" in both questions of the new series; while individuals in group 4 opt for ``No" in both questions of the old series or "The second job" in both questions of the new series. This means that it is possible for an individual to be placed into different groups in different years, e.g., group 1 in 1993, group 2 in 2002, and group 1 in 2004. By contrast, it is also possible for any individual to stay in one category throughout all the years in which the responses are collected, for instance, she stays in group 1 in all the years she participated in the survey, including 1993, 2006, and 2010. Specifics of groups categorization are presented in \Cref{table:1-risk-category}. 
 
-\begin{table}[!h]
+\begin{table}[!b]
 	\centering
 	\setlength{\extrarowheight}{0.2em}
 	\caption{Category of risk attitudes}	
@@ -106,11 +94,65 @@ Choosing ``First job" would lead respondents to a second question with income cu
 	\label{table:1-risk-category}
 \end{table}
 
-It is noteworthy to point out the difference both in the stakes individuals face in two versions of the questions as well as the way in which the questions are phrased. In the first series, individuals face much higher stakes with the lowest being 20\% of income loss while the highest percentage of income loss in the second series is 15\%. Further, as noted by \citet{kimball2008imputing,kimball2009risk}, the original series presuppose that individuals already have the stable job, i.e., a job without any change to income. This supposition is absent in the newer version wherein individuals are present with two jobs, one stable and one risky. The difference in situations faced by individuals, albeit subtle, may generate status quo bias (SQB). That is, individuals may be more inclined to choose the stable job in the first series not because they are more risk averse but due to their reluctance to change. Consequently, having responses from individuals who answered both type of questions aids in separating SQB from the true risk preference.
+It is noteworthy to point out the difference both in the stakes individuals face in two versions of the questions as well as the way in which the questions are phrased. In the first series, individuals face much higher stakes with the lowest being 20\% of income loss while the highest percentage of income loss in the second series is 15\%. Further, as noted by \citet{kimball2008imputing,kimball2009risk}, the original series presuppose that individuals already have the stable job, i.e., a job without any change to income. This supposition is absent in the newer version wherein individuals are present with two jobs, one stable and one risky. The difference in situations faced by individuals, albeit subtle, may induce the status quo bias. That is, individuals may be more inclined to choose the stable job in the first series not because they are more risk averse but due to their reluctance to change \citep{samuelson1988status,tversky1991loss}. Consequently, having responses from individuals who answered both type of questions aids in the separation of the status quo bias from the true risk preference.
 
-Several issues arise with the use of these series of questions to capture risk preference of mothers when she make investment on her children. First, it is crucial to examine the suitability of this measure in capturing true risk attitudes. The question wordings and structure of the NLSY79 are the same as those in the Health and Retirement Study (HRS) as well as the Panel Study of Income Dynamics (PSID). While the method of eliciting risk preference using lifetime income is uncommon and most other methods fall into the category of self-evaluated risk willingness/tolerance employing Likert scale, gamble choice \citep{eckel2002sex}, or multiple price list (MPL),\footnote{For a comprehensive review on methods of elicitation of risk preference, see \citet{charness2013experimental}} \citet{barsky1997preference} showed that this measure does predict an array of risk behaviours including drinking, smoking, and holding of risky assets. Furthermore, gamble on hypothetical choice in general has been shown to perform relatively well compared to its counterpart which offer real monetary rewards \citep{binswanger1981attitudes, camerer1999effects, dohmen2005individual}. Given that these series of questions have predictive power over several risky behaviours as well as engagement in activities involving risks such as holding risky assets and participation in the financial market, the measure should be a good proxy for true risk preference. 
 
-The second concern is how relevant this measure is in predicting investment behaviour of mothers. This is to say, are risk attitudes mother adopts when faced with lifetime income gamble equivalent to those when she makes investment decision for her children. This problem is usually referred to in the literature as the instability of risk preference across contexts. At large, this literature explores how revealed preference changes with different elicitation methods, phrasing of questions, the amount of stakes, and the domains in which risks manifest. Stability across different domains of risk is our second point of contention. \citet{barseghyan2011risk} rejects the null of stable risk preference for insurance on automobiles and homes. Similarly, \citet{einav2012general} found that only 30\% of their sample make consistent choices when presented with a diverse set of options for insurance coverage and 401(k) portfolios. They further note that preference are less consistent for domains that are too disparate whereas choices in closer domains do exhibit some consistency. Then our question reduces to how ``close" are risks of the lifetime income gamble and risks of child investment.
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Investment data}
+Traditionally, investment is often associated with monetary expenditures or goods investment \citep{heckman2014economics}. Only in recent studies such as \citet{carneiro2016partial}, \citet{bono2016early} and \citet{del2016transfers} has time input received more attention as a component of parental input. Since more educated parents spend more quality time with their children despite the higher opportunity cost, time inputs plays a pivotal role in shaping children's future \citep{guryan2008parental}. Aside time input, a nurturing home environment has also been proven conducive to early cognitive development \citep{altman2013home, iverson1982home}. 
+
+\begin{table}[!t]
+	\centering
+	\setlength{\extrarowheight}{0.2em}
+	\caption{Components of HOME index}	
+	\input{Tables/table-4-HOME}
+	\label{table:4-HOME}
+\end{table} 
+
+Following \citet{carneiro2016partial}, parental inputs are captured by various elements of HOME (Home Observation Measurement of the Environment). HOME (Short Form) comprises primary measures of the quality of a child's home environment included in the NLSY79 Child survey. Various components of the HOME evaluate the cognitive stimulation and emotional support children below 15 years old receive from the home environment. Items that made up the HOME score are grouped into goods input and time input. These are reported in \Cref{table:4-HOME}. Apart from measures of HOME section, several items included in the self-administered questions indicating parent-child interaction for children between 10-14 are also present and have the (NH) prefix. These extra items are also used when constructing HOME index and Time index for children within said age-group.  
+ 
+
+For each age group, to generate the generic investment index (HOME index), indicators of all items in \Cref{table:4-HOME} for the corresponding age are totalled then normalised to have a mean zero and unit standard deviation.\footnote{The recoding of items follows the procedure used by Bureau of Labor Statistics (BLS) when constructing HOME score (See \citet{center2004nlsy79})} A similar procedure is also applied to items denoting goods related investment and time related investment to generate indices representing the respective type of parental inputs. Other assessments of cognitive stimulation and emotional support are aggregated into percentile score for the respective quality of home. Unlike previous indices, the percentile scores for cognitive  stimulation and emotional support are taken from the NLSY79 CYA dataset.
+
+\alert{Now we discuss the timing of investment.}
+
+
+\subsection{Summary statistics}
+\input{Tables/table-5-summary}
+
+Descriptive statistics of variables used in analysis are shown in \Cref{table:5-summary}. The sample is restricted to observations in the year 1994, 2002, 2004 and 2006 to include a measure of risk aversion and which have valid responses (non-missing and non-negative) to child's characteristics, mother's characteristics, and parental inputs. This leaves us with 9,134 observations. The table reports the mean and standard deviations of numerical variables and only frequency for categorical variables for the total sample and 3 subgroups based on mother's level of education (High school dropout, high school and college). The table is organised into three panels: (1) parental inputs which include various indices described above (HOME, Goods, Time, Cognitive Stimulation, and Emotional Support); (2) Child's characteristics which include sex, race, age of mother at birth of child, number of siblings and family size; and (3) Mother's characteristics which include Mother's AFQT score (2006 revised edition), age of mother at first birth, an indicator variable showing whether mother lived with both biological parents at age 14, years of schooling of mother's parents, number of weeks worked in the previous calendar year, and net household income in the previous calendar year.
+
+
+The average HOME score in our sample is 0.15 which is higher than the average HOME score for the nationally representative sample. A potential cause for this is the restriction on the years in which data chosen, namely 1994, 2002, 2004, and 2006. By the mentioned years, mothers are typically older than the average age of mothers in NLSY79 CYA. This is apparent in the high mean age of mother at child's birth, which is over 27 in our sample compared to around 25 in the whole sample as reported in \citet{carneiro2016partial}. Higher age also correlates with higher earnings and experience, thus affecting our measures of parental inputs. 
+
+
+%===================================================================================================================================
+%===================================================================================================================================
+
+
+\section{Methodology}
+\subsection{The choice of proxy for risk}
+Several issues arise with the use of the series of questions on lifetime income gamble to capture risk preference of mothers when she make investment on her children, namely relevance, stability and temporal properties. 
+
+First, it is crucial to examine the suitability of this measure in capturing true risk attitudes as highlighted by \citet{yilmazer2015portfolio}. To this end, note that the question wordings and structure of the questions on risk preference in the NLSY79 are the same as those in the Health and Retirement Study (HRS) as well as the Panel Study of Income Dynamics (PSID). While the method of eliciting risk preference using lifetime income is uncommon and most other methods fall into the category of self-evaluated risk willingness/tolerance employing Likert scale, gamble choice \citep{eckel2002sex}, or multiple price list (MPL),\footnote{For a comprehensive review on methods of elicitation of risk preference, see \citet{charness2013experimental}} \citet{barsky1997preference} showed that this measure does predict an array of risky behaviours including drinking, smoking, and holding of risky assets. Furthermore, gamble on hypothetical choice in general has been shown to perform relatively well compared to its counterpart which offer real monetary rewards \citep{binswanger1981attitudes, camerer1999effects, dohmen2005individual}. Given that these series of questions have predictive power over several risky behaviours as well as engagement in activities involving risks such as holding risky assets and participation in the financial market, the measure should be an appropriate proxy for true risk preference. 
+
+The second concern is whether the two versions of the questions on lifetime income gamble provide a consistent proxy for risk preference. More elaborately, it begs the question ``Besides the status quo bias stemming from different phrasing of the questions, do mothers change their risk preference due to different stakes involved?" This problem is usually referred to in the literature as the stability or consistency of risk preference across contexts. At large, this literature explores how revealed preference changes with different elicitation methods, phrasing of questions, the amount of stakes, and the domains in which risks manifest. In our case, respondents are administered two hypothetical gambles on lifetime income with different stakes. As shown by \citet{holt2002risk}, there are shifts in risk preference when participants consider gambles with varying magnitude of stakes when they involve real monetary payoffs. However, no such change in risk preference is found when the stakes are hypothetical. Consequently, responses to hypothetical lifetime income gamble can provide a consistent proxy for risk preference.
+
+
+The third issue that we will address is the temporal properties of risk preference. We pay close attention to this on the two following grounds. First, if risk preference is static and time-invariant, changes in investment in children across time are independent of risk preference. On the other hand, if risk preference varies over time, to distinguish the impact of risk preference from potential confounders, we need not only account for potential endogeneity and confounding factors, but also capture the dynamic linkage between risk attitudes and investment in children.   
+
+
+\alert{This is to say, are risk attitudes mother adopts when faced with lifetime income gamble equivalent to those when she makes investment decision for her children. Stability across different domains of risk is our second point of contention. \citet{barseghyan2011risk} rejects the null of stable risk preference for insurance on automobiles and homes. Similarly, \citet{einav2012general} found that only 30\% of their sample make consistent choices when presented with a diverse set of options for insurance coverage and 401(k) portfolios. They further note that preference are less consistent for domains that are too disparate whereas choices in closer domains do exhibit some consistency. Then our question reduces to how ``close" are risks of the lifetime income gamble and risks of child investment.}
 
 
 
@@ -144,43 +186,7 @@ where $\mu$ and $\sigma_x$ are respectively the mean and standard deviation of l
 
 A mild trend of increasing risk aversion can be observed from \Cref{table:2-risk-bound} wherein 46.47\% of respondents are categorized as "High risk aversion" in 1994 whereas more than 50\% of respondents belong to this category in all subsequent years. The majority of participants display a high degree of risk aversion with respect to gamble on lifetime earning although there is substantial heterogeneity across the distributions of responses across year. From \Cref{table:3-imputed-risk}, imputed values of $\gamma$ are similar across years with the exception of 2004. The difference stems from the noticeably reduced variance in response in 2004 which can be observed in the third column of \Cref{table:2-risk-bound}. As variance plays a large role in determining the overall level of imputation following \eqref{eq:1-conditional-expectation}, the lower variance brings about significant changes to the imputed values. This should not be a concern as the interaction term between $\gamma$ and year is be included in the analysis but results obtained with the exclusion of 2004 are presented in Section 5 for robustness check.
 
-
-
-
-
-
-
-
-
-
-
-\subsection{Investment data}
-Traditionally, investment is often associated with monetary expenditures or goods investment \citep{heckman2014economics}. Only in recent studies such as \citet{carneiro2016partial}, \citet{bono2016early} and \citet{del2016transfers} has time input received more attention as a component of parental input. Aside time input, a nurturing home environment has also been proven conducive to early cognitive development \citep{altman2013home, iverson1982home}. 
-
-\begin{table}[!t]
-	\centering
-	\setlength{\extrarowheight}{0.2em}
-	\caption{Components of HOME index}	
-	\input{Tables/table-4-HOME}
-	\label{table:4-HOME}
-\end{table} 
-
-Following \citet{carneiro2016partial}, parental inputs are captured by various elements of HOME. HOME (Short Form) comprises of primary measures of the quality of a child's home environment included in the NLSY79 Child survey. Various components of the HOME evaluate the cognitive stimulation and emotional support children below 15 years old receive from the home environment. Items that made up the HOME score are grouped into goods input and time input. These are reported in \Cref{table:4-HOME}. Apart from measures of HOME section, several items included in the self-administered questions indicating parent-child interaction for children between 10-14 are also present and have the (NH) prefix. These extra items are also used when constructing HOME index and Time index for children within said age-group.  
- 
-
-For each age group, to generate the generic investment index (HOME index), indicators of all items in \Cref{table:4-HOME} for the corresponding age are totalled then normalised to have a mean zero and unit standard deviation.\footnote{The recoding of items follow the procedure used by Bureau of Labor Statistics (BLS) when constructing HOME score (See \citet{center2004nlsy79})} A similar procedure is also applied to items denoting goods related investment and time related investment to generate indices representing the respective type of parental inputs. Other assessments of cognitive stimulation and emotional support are aggregated into percentile score for the respective quality of home. Unlike previous indices, the percentile scores for cognitive  stimulation and emotional support are taken from the NLSY79 CYA dataset.
-
-
-
-
-\subsection{Summary statistics}
-\input{Tables/table-5-summary}
-
-Descriptive statistics of variables used in analysis are shown in \Cref{table:5-summary}. The sample is restricted to observations in the year 1994, 2002, 2004 and 2006 to include a measure of risk aversion and which have valid responses (non-missing and non-negative) to child's characteristics, mother's characteristics, and parental inputs. This leaves us with 9,134 observations. The table reports the mean and standard deviations of numerical variables and only frequency for categorical variables for the total sample and 3 subgroups based on mother's level of education (High school dropout, high school and college). The table is organised into three panels: (1) parental inputs which include various indices described above (HOME, Goods, Time, Cognitive Stimulation, and Emotional Support); (2) Child's characteristics which include sex, race, age of mother at birth of child, number of siblings and family size; and (3) Mother's characteristics which include Mother's AFQT score (2006 revised edition), age of mother at first birth, an indicator variable showing whether mother lived with both biological parents at age 14, years of schooling of mother's parents, number of weeks worked in the previous calendar year, and net household income in the previous calendar year.
-
-
-The average HOME score in our sample is 0.15 which is higher than the average HOME score for the nationally representative sample. A potential cause for this is the restriction on the years in which data chosen, namely 1994, 2002, 2004, and 2006. By the mentioned years, mothers are typically older than the average age of mothers in NLSY79 CYA. This is apparent in the high mean age of mother at child's birth, which is over 27 in our sample compared to around 25 in the whole sample as reported in \citet{carneiro2016partial}. Higher age also correlates with higher earnings and experience, thus affecting our measures of parental inputs. 
-
+\subsection{Empirical strategy}
 
 
 

@@ -66,6 +66,10 @@ Carneiro, P. and Ginja, R. (2016).
 \newblock Partial insurance and investments in children.
 \newblock {\em The Economic Journal}, 126(596):F66--F95.
 
+\bibitem[{Center for Human Resource Research}, 2004]{center2004nlsy79}
+{Center for Human Resource Research} (2004).
+\newblock Nlsy79 child \& young adult data users guide.
+
 \bibitem[Charness et~al., 2013]{charness2013experimental}
 Charness, G., Gneezy, U., and Imas, A. (2013).
 \newblock Experimental methods: Eliciting risk preferences.
@@ -132,14 +136,15 @@ Einav, L., Finkelstein, A., Pascu, I., and Cullen, M.~R. (2012).
   different domains.
 \newblock {\em American Economic Review}, 102(6):2606--2638.
 
-\bibitem[for Human Resource~Research, 2004]{center2004nlsy79}
-for Human Resource~Research, C. (2004).
-\newblock Nlsy79 child \& young adult data users guide.
-
 \bibitem[Frempong and Stadelmann, 2021]{frempong2021risk}
 Frempong, R.~B. and Stadelmann, D. (2021).
 \newblock Risk preference and child labor: Econometric evidence.
 \newblock {\em Review of Development Economics}, 25(2):878--894.
+
+\bibitem[Guryan et~al., 2008]{guryan2008parental}
+Guryan, J., Hurst, E., and Kearney, M. (2008).
+\newblock Parental education and parental time with children.
+\newblock {\em Journal of Economic perspectives}, 22(3):23--46.
 
 \bibitem[Hartarto et~al., 2023]{hartarto2023parental}
 Hartarto, R.~B., Aravena, C., and Bhattacharjee, A. (2023).
@@ -155,6 +160,11 @@ Heady, C. (2003).
 Heckman, J.~J. and Mosso, S. (2014).
 \newblock The economics of human development and social mobility.
 \newblock {\em Annu. Rev. Econ.}, 6(1):689--733.
+
+\bibitem[Holt and Laury, 2002]{holt2002risk}
+Holt, C.~A. and Laury, S.~K. (2002).
+\newblock Risk aversion and incentive effects.
+\newblock {\em American economic review}, 92(5):1644--1655.
 
 \bibitem[Iverson and Walberg, 1982]{iverson1982home}
 Iverson, B.~K. and Walberg, H.~J. (1982).
@@ -199,6 +209,11 @@ Nores, M. and Barnett, W.~S. (2010).
 \newblock {\em Economics of Education Review}, 29(2):271--282.
 \newblock Special Issue in Honor of Henry M. Levin.
 
+\bibitem[Samuelson and Zeckhauser, 1988]{samuelson1988status}
+Samuelson, W. and Zeckhauser, R. (1988).
+\newblock Status quo bias in decision making.
+\newblock {\em Journal of risk and uncertainty}, 1:7--59.
+
 \bibitem[Schultz, 1971]{schultz1971investment}
 Schultz, T.~W. (1971).
 \newblock Investment in human capital. the role of education and of research.
@@ -219,9 +234,19 @@ Thaler, R. and Rosen, S. (1976).
 \newblock The value of saving a life: evidence from the labor market.
 \newblock In {\em Household production and consumption}, pages 265--302. NBER.
 
+\bibitem[Tversky and Kahneman, 1991]{tversky1991loss}
+Tversky, A. and Kahneman, D. (1991).
+\newblock Loss aversion in riskless choice: A reference-dependent model.
+\newblock {\em The quarterly journal of economics}, 106(4):1039--1061.
+
 \bibitem[W{\"o}lfel and Heineck, 2012]{wolfel2012parental}
 W{\"o}lfel, O. and Heineck, G. (2012).
 \newblock Parental risk attitudes and children's secondary school track choice.
 \newblock {\em Economics of Education Review}, 31(5):727--743.
+
+\bibitem[Yilmazer and Lich, 2015]{yilmazer2015portfolio}
+Yilmazer, T. and Lich, S. (2015).
+\newblock Portfolio choice and risk attitudes: a household bargaining approach.
+\newblock {\em Review of Economics of the Household}, 13:219--241.
 
 \end{thebibliography}

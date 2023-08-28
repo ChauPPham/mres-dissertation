@@ -1,51 +1,53 @@
-This is BibTeX, Version 0.99d (TeX Live 2018/W32TeX)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Final draft.aux
+Reallocating 'name_of_file' (item size: 1) to 8 items.
 The style file: apalike.bst
+Reallocating 'name_of_file' (item size: 1) to 17 items.
 Database file #1: bibliography.bib
 Warning--empty journal in bezerra2009impact
 Warning--empty journal in dohmen2005individual
 Warning--empty journal in jacob2008improving
 Warning--empty journal in schultz1971investment
-You've used 42 entries,
+You've used 47 entries,
             1935 wiz_defined-function locations,
-            739 strings with 10417 characters,
-and the built_in function-call counts, 17053 in all, are:
-= -- 1717
-> -- 610
-< -- 35
-+ -- 213
-- -- 198
-* -- 1477
-:= -- 2903
-add.period$ -- 125
-call.type$ -- 42
-change.case$ -- 307
-chr.to.int$ -- 41
-cite$ -- 46
-duplicate$ -- 633
-empty$ -- 1233
-format.name$ -- 272
-if$ -- 3349
+            768 strings with 11097 characters,
+and the built_in function-call counts, 19079 in all, are:
+= -- 1927
+> -- 680
+< -- 39
++ -- 235
+- -- 220
+* -- 1659
+:= -- 3248
+add.period$ -- 140
+call.type$ -- 47
+change.case$ -- 343
+chr.to.int$ -- 46
+cite$ -- 51
+duplicate$ -- 703
+empty$ -- 1380
+format.name$ -- 307
+if$ -- 3743
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 43
-newline$ -- 209
-num.names$ -- 126
-pop$ -- 240
+missing$ -- 48
+newline$ -- 234
+num.names$ -- 141
+pop$ -- 262
 preamble$ -- 1
-purify$ -- 309
+purify$ -- 345
 quote$ -- 0
-skip$ -- 497
+skip$ -- 551
 stack$ -- 0
-substring$ -- 1390
-swap$ -- 81
+substring$ -- 1572
+swap$ -- 86
 text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 248
+type$ -- 278
 warning$ -- 4
-while$ -- 155
+while$ -- 175
 width$ -- 0
-write$ -- 539
+write$ -- 604
 (There were 4 warnings)
