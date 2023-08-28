@@ -832,6 +832,12 @@ replace alpha2 = -6 if WTA_1K_IMPUTED > 900 & WTA_1K_IMPUTED != .
 */
 
 
+/* Summary statistics for imputed CRRA values */
+qui estpost tabstat IMPUTED_CRRA_1 IMPUTED_CRRA_4 if IMPUTED_CRRA_1 != ., by(year) statistics(mean sd) columns(statistics) 
+esttab ., main(mean %12.2f n) aux(sd %12.2f) nostar nonote label unstack nonum title("Summary statistics of imputed CRRA") noobs
+*esttab . using tex/CRRA-summary, main(mean %12.2f n) aux(sd %12.2f) nostar nonote label unstack nonum title("Summary statistics of imputed CRRA")
+
+
 
 **# Bookmark #8 Merging child & mom data (long)
 /*===================================================*/
@@ -945,6 +951,11 @@ esttab ., main(mean %12.2f n) aux(sd %12.2f) nostar nonote label unstack nonum l
 * reshape wide SEX2 RACE1 RACE2 RACE3 C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900, i(C0000100) j(year)
 qui estpost tabstat SEX2 RACE1 RACE2 RACE3 C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != ., by(DEGREE_SEP) statistics(mean sd) columns(statistics)
 esttab ., main(mean %12.2f n) aux(sd %12.2f) nostar nonote label unstack nonum long title("Summary statistics") noobs
+
+
+/* Summary statistics for imputed CRRA values */
+qui estpost tabstat IMPUTED_CRRA_1 IMPUTED_CRRA_4 if IMPUTED_CRRA_1 != . & 
+
 
 **# Bookmark #11 Regression table
 /*==================================================================*/

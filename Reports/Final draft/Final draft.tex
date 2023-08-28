@@ -126,7 +126,7 @@ Following \citet{carneiro2016partial}, parental inputs are captured by various e
 
 For each age group, to generate the generic investment index (HOME index), indicators of all items in \Cref{table:4-HOME} for the corresponding age are totalled then normalised to have a mean zero and unit standard deviation.\footnote{The recoding of items follows the procedure used by Bureau of Labor Statistics (BLS) when constructing HOME score (See \citet{center2004nlsy79})} A similar procedure is also applied to items denoting goods related investment and time related investment to generate indices representing the respective type of parental inputs. Other assessments of cognitive stimulation and emotional support are aggregated into percentile score for the respective quality of home. Unlike previous indices, the percentile scores for cognitive  stimulation and emotional support are taken from the NLSY79 CYA dataset.
 
-\alert{Now we discuss the timing of investment. Unlike the questions on lifetime gamble which, to some extent, captures an individual's risk preference at the time of survey, the HOME section of the Child \& Young Adult survey contains a number of items that are measured at different time-interval as can be seen from the Time panel in \Cref{table:4-HOME}. The time-interval can range from daily basis, to weekly or monthly bases. Two items even measure the frequency of occurrence in the previous year. }
+Now we discuss the timing of investment. Unlike the questions on lifetime gamble which, to some extent, captures an individual's risk preference at the time of survey, the HOME section of the Child \& Young Adult survey contains a number of items that are measured at different time-interval as can be seen from the Time panel in \Cref{table:4-HOME}. The time-interval can range from daily basis, to weekly or monthly bases. Two items even measure the frequency of occurrence in the previous year. The incongruence of time diary makes comparison and aggregation of items difficult. To allow a more coherent interpretation of index collecting time-related items, we will assume that there are no stark changes in items that are recorded on bases spanning shorter than a year within the year when data is collected.
 
 
 \subsection{Summary statistics}
@@ -163,18 +163,6 @@ Using the series of questions on risk attitudes, following \citet{kimball2008imp
 \[U(W)={W^{1-{1/\theta}}\over 1-{1/\theta}}\]
 where $\theta$ is the coefficient of relative risk tolerance and its reciprocal, $\gamma = 1/\theta$, coefficient of relative risk aversion, bounds on $\theta$ are calculated and reported in \Cref{table:2-risk-bound} for each category. 
 
-
-To derive the main imputations of HRS, \citet{kimball2008imputing} adopts the structural assumption that risk preference is time-invariant. Differences in responses of an individual across waves to the same type of questions are then attributed to response errors which are further decomposed into transitory error and persistent error, both normally distributed with zero mean. However, according to \citet{dohmen2011individual} and \citet{dohmen2017risk}, willingness to take risks varies over the course of life-cycle and trends downward as individuals age. These evidences are consistent with \citet{sahm2012much}. To test for potential dynamic relationship between maternal risk preference and investment in children, we estimate the models with imputations under the assumptions of constant risk preference as well as floating risk preference. 
-
-The procedure entails 2 steps. First, for each wave that collects responses to risk preference questions, the status quo bias, mean and variance of log risk tolerance, and variance of transitory and persistent response error are estimated using maximum likelihood.\footnote{To circumvent any biases potentially introduced by sample selection, for each wave, MLE is carried out on the entirety of the NLSY79 dataset. Likelihood functions and results of the first-stage MLE are reported in \alert{Appendix A}.} \alert{The coefficient of risk aversion, $\gamma$, is then imputed using the conditional expectation that an individual belongs to a certain risk category $j$,}
-
-\begin{equation}
-	\color{red}\mathbb E(\gamma|c=j)=\exp\Big(-\mu+{\sigma_x^2\over 2}\Big){\Phi\Big({\log(\bar{\theta}_j)-\mu-b+\sigma_x^2\over \sigma_{\xi}}\Big)-\Phi\Big({\log(\underline{\theta}_j)-\mu-b+\sigma_x^2\over \sigma_{\xi}}\Big)\over \Phi\Big({\log(\bar{\theta}_j)-\mu-b\over \sigma_\xi}\Big)-\Phi\Big({\log(\underline{\theta}_j)-\mu-b\over \sigma_\xi}\Big)}
-	\label{eq:1-conditional-expectation}
-\end{equation}
-
-\alert{where $\mu$ and $\sigma_x$ are respectively the mean and standard deviation of log risk tolerance for a certain wave of response. $\bar \theta_j$ and $\underline{\theta}_j$ are upper and lower bounds on the coefficient of risk tolerance. $b$ denotes status quo bias and $\sigma_\xi$ standard deviation of response error which take values of -0.21 and 1.3 respectively. \footnote{These values are computed for the Health and Retirement Study (HRS) capitalizing on the difference in responses to two different versions of the risk preference questions. For more information, see \citet{kimball2009risk} and their accompanying appendix available at https://www.aeaweb.org/articles?id=10.1257/aer.99.2.363.} \Cref{table:3-imputed-risk} reports the imputed values of CRRA coefficient for all NLSY79 respondents with valid answers along with the mean, standard deviation and number observation segregated by year.\footnote{For clarity, I only include those who responded to both questions in the risk preference series and exclude those who provide answers only to the first question.} }
-
 \begin{table}[!t]
 	\centering
 	\setlength{\extrarowheight}{0.3em}
@@ -183,15 +171,29 @@ The procedure entails 2 steps. First, for each wave that collects responses to r
 	\label{table:2-risk-bound}
 \end{table}
 
-\begin{table}[!b]
+To derive the main imputations of HRS, \citet{kimball2008imputing} adopts the structural assumption that risk preference is time-invariant. Differences in responses of an individual across waves to the same type of questions are then attributed to response errors which are further decomposed into transitory error and persistent error, both normally distributed with zero mean. However, according to \citet{dohmen2011individual} and \citet{dohmen2017risk}, willingness to take risks varies over the course of life-cycle and trends downward as individuals age. These evidences are consistent with \citet{sahm2012much}. To test for potential dynamic relationship between maternal risk preference and investment in children, we estimate the models with imputations under the assumptions of constant risk preference as well as floating risk preference. The former assumption impose a stringent constraint on risk preference such that risk preference can only depend on survey responses to the lifetime income gamble. The latter assumption is more flexible as it allows for risk preference to, conditioned on survey responses, not only fluctuate with time but also with other observable characteristics of an individuals.  
+
+The procedure entails 2 steps. First, for each wave that collects responses to risk preference questions, the status quo bias, mean and variance of log risk tolerance, and variance of transitory and persistent response error are estimated using maximum likelihood.\footnote{For clarity, only those who responded to both questions in the risk preference series are included. Individuals who only provide answer to the first question are excluded from the sample. To circumvent any biases potentially introduced by sample selection, for each wave, MLE is carried out on the entirety of the NLSY79 dataset. Likelihood functions and results of the first-stage MLE are reported in \alert{Appendix A}.} Having obtained estimates of the mean and log risk tolerance in the first stage, we impute the coefficient of risk aversion, $\gamma$, via conditional expectation that an individual belongs to a certain risk category $j$. Depending on the assumptions imposed, two patterns can be observed. Under the assumption of time-constant risk preference, the imputations are constant for an individual for a risk category across years. \alert{If an individual are grouped into different categories in different years, she can still be assigned different values of imputed $\gamma$ but for years in which she belong to the same category, the assigned CRRA values must be the same.} If risk preference is time-varying, an individual can have varying degree of risk aversion across waves even if she belongs to the same category.\footnote{While there are evidences suggesting linear increase in risk aversion over the life-cycle \citep{dohmen2017risk}, individuals do not necessarily have a priori increasing risk aversion over years as there are also supporting evidence on the increase in willingness to take risk when entrepreneurs accumulate more experience  \citep{brachert2017simultaneity,cho2021endogenous}. We allow risk aversion to float freely with other observable factors further described in \alert{Appendix A}.} \Cref{table:CRRA-summary} reports the means and standard deviations of the imputed CRRA values under the two assumptions within the NLSY79 dataset and the restricted sample of mothers used for linking with investment in children.
+
+\begin{table} 
 	\centering
 	\setlength{\extrarowheight}{0.3em}
-	\caption{Imputed coefficient of risk aversion ($\gamma$)}	
-	\input{Tables/table-3-risk-imputed}
-	\label{table:3-imputed-risk}
-\end{table}
+	\begin{threeparttable}
+		\caption{Summary statistics of imputed CRRA}	
+		\input{Tables/CRRA-summary}
+		\label{table:CRRA-summary}
+	\begin{tablenotes}[flushleft]\footnotesize
+		\item The table reports the means, standard deviations and number of observations of the imputed CRRA by year, under assumptions of time-constant or time-varying, and in the full NLSY79 dataset or the restricted sample of mothers with available data on investment in children.
+	\end{tablenotes}
+	\end{threeparttable}
+\end{table}    
 
-A mild trend of increasing risk aversion can be observed from \Cref{table:2-risk-bound} wherein 46.47\% of respondents are categorized as "High risk aversion" in 1994 whereas more than 50\% of respondents belong to this category in all subsequent years. The majority of participants display a high degree of risk aversion with respect to gamble on lifetime earning although there is substantial heterogeneity across the distributions of responses across year. From \Cref{table:3-imputed-risk}, imputed values of $\gamma$ are similar across years with the exception of 2004. The difference stems from the noticeably reduced variance in response in 2004 which can be observed in the third column of \Cref{table:2-risk-bound}. As variance plays a large role in determining the overall level of imputation following \eqref{eq:1-conditional-expectation}, the lower variance brings about significant changes to the imputed values. This should not be a concern as the interaction term between $\gamma$ and year is be included in the analysis but results obtained with the exclusion of 2004 are presented in Section 5 for robustness check.
+
+
+
+
+
+
 
 \subsection{Empirical strategy}
 
@@ -297,12 +299,22 @@ Another concern is that since we only have one response from any individuals for
 
 \section{Conclusion}
 
+
+
+
+
+\pagebreak
+
+\bibliographystyle{apalike}
+\bibliography{bibliography.bib}
+
+
 \pagebreak
 
 \section{Appendix}
 \subsection{First-stage MLE of risk preference}
 \subsubsection{Time-invariant risk preference}
-The likelihood of being in category $j$ for an individual who answered in only one wave is 
+Under the assumption of time-invariant risk preference, our estimates are most conservative in that the probability distribution functions, and hence derived conditional expectations, depend only on survey responses to the question on lifetime income gamble. The probability of being in category $j$ for an individual who answered in only one wave is 
 \begin{equation}
 P(c=j)=P(\log\underline{\theta}_j<x<\log\bar{\theta}_j)=\Phi\Big({\log(\bar{\theta}_j)-\mu-b\over\sqrt{\sigma_x^2+\sigma_{eq}^2+\sigma_{\kappa q}^2}}\Big)-\Phi\Big({\log(\underline{\theta}_j)-\mu-b\over\sqrt{\sigma_x^2+\sigma_{eq}^2+\sigma_{\kappa q}^2}}\Big) 
 \label{eq:A-likelihood-constant-univariate}	
@@ -319,11 +331,5 @@ where $\vec{\Phi}$ is the bivariate normal cumulative distribution function, $\b
 
 
 \subsubsection{MLE results}
-
-
-\pagebreak
-
-\bibliographystyle{apalike}
-\bibliography{bibliography.bib}
 
 \end{document}
