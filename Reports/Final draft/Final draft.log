@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.9.11)  28 AUG 2023 16:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.9.11)  28 AUG 2023 20:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1240,34 +1240,25 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 {c:/ProgramData/App-V/0D40C871-6F2E-40F5-A035-626F9F937690/1E442B07-C9D7-442D-9
 EAA-344AD89302B8/Root/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 }] [2] (./Tables/table-1-risk-category.tex) [3] (./Tables/table-4-HOME.tex)
-[4] (./Tables/table-5-summary.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--73
-[]
- []
-
-[5]) [6]
-
-LaTeX Warning: Text page 7 contains only floats.
-
-[7]
+[4] (./Tables/table-5-summary.tex [5]) [6] [7]
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 163.
+(amsmath)                 on input line 165.
 
-[8] (./Tables/table-2-risk-coefficient.tex
+(./Tables/table-2-risk-coefficient.tex
 Overfull \vbox (1.99994pt too high) detected at line 5
  []
 
-) [9] (./Tables/CRRA-summary.tex)
+) [8] (./Tables/CRRA-summary.tex) [9] [10]
 
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 208.
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 210.
 
 
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 208
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 210
 .
 
-[10] (./Tables/table-6-main-result.tex)
+(./Tables/table-6-main-result.tex)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1285,20 +1276,20 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [13] (./Tables/table-8-robust-2.tex [14] [15]) [16] [17] (./Final draft.bbl
 [18] [19]) [20] [21]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 335.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 335.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 337.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 337.
  (./Final draft.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 335.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 335.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 337.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 337.
 Package rerunfilecheck Info: File `"Final draft".out' has not changed.
 (rerunfilecheck)             Checksum: 113559738FB8298326B13FB4483B0C4F;1310.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 335.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 337.
  ) 
 Here is how much of TeX's memory you used:
- 22591 strings out of 492649
- 450280 string characters out of 6119168
- 539510 words of memory out of 5000000
- 25858 multiletter control sequences out of 15000+600000
+ 22602 strings out of 492649
+ 450559 string characters out of 6119168
+ 539625 words of memory out of 5000000
+ 25867 multiletter control sequences out of 15000+600000
  54627 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,25n,84p,2286b,633s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1358,10 +1349,10 @@ B07-C9D7-442D-9EAA-344AD89302B8/Root/texlive/2018/texmf-dist/fonts/type1/public
 /tex-gyre/qplr.pfb><c:/ProgramData/App-V/0D40C871-6F2E-40F5-A035-626F9F937690/1
 E442B07-C9D7-442D-9EAA-344AD89302B8/Root/texlive/2018/texmf-dist/fonts/type1/pu
 blic/tex-gyre/qplri.pfb>
-Output written on "Final draft.pdf" (21 pages, 253928 bytes).
+Output written on "Final draft.pdf" (21 pages, 255706 bytes).
 PDF statistics:
- 502 PDF objects out of 1000 (max. 8388607)
- 460 compressed objects within 5 object streams
- 120 named destinations out of 1000 (max. 500000)
+ 513 PDF objects out of 1000 (max. 8388607)
+ 471 compressed objects within 5 object streams
+ 122 named destinations out of 1000 (max. 500000)
  173 words of extra memory for PDF output out of 10000 (max. 10000000)
 
