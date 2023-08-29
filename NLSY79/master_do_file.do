@@ -990,8 +990,8 @@ esttab ., main(mean %12.2f n) aux(sd %12.2f) nostar nonote label unstack nonum t
 eststo clear
 
 
-*==================== RISK AS COEF OF RRA ============================*
 local identifier = 1
+*==================== RISK AS COEF OF RRA ============================*
 qui forval k = 1/4 {
 	qui foreach i of varlist INV_ALL GOODS_ALL TIME_ALL {
 		reghdfe `i' IMPUTED_CRRA_`k' i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP != ., absorb(year AGE_CAT) vce(cluster R0000100)
