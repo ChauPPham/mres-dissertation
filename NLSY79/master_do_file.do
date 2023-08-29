@@ -835,7 +835,7 @@ replace alpha2 = -6 if WTA_1K_IMPUTED > 900 & WTA_1K_IMPUTED != .
 /* Summary statistics for imputed CRRA values */
 qui estpost tabstat IMPUTED_CRRA_1 IMPUTED_CRRA_4 if IMPUTED_CRRA_1 != ., by(year) statistics(mean sd) columns(statistics) 
 esttab ., main(mean %12.2f n) aux(sd %12.2f) nostar nonote label unstack nonum title("Summary statistics of imputed CRRA") noobs
-*esttab . using tex/CRRA-summary, main(mean %12.2f n) aux(sd %12.2f) nostar nonote label unstack nonum title("Summary statistics of imputed CRRA")
+*esttab . using tex/CRRA-summary.tex, main(mean %12.2f n) aux(sd %12.2f) nostar nonote label unstack nonum title("Summary statistics of imputed CRRA")
 
 
 
@@ -947,7 +947,7 @@ label var DEGREE_SEP_3 "College"
 label values DEGREE_SEP DEGREE_SEP
 
 /* Summary statistics for time-varying variables */
-qui estpost tabstat IMPUTED_CRRA_1 IMPUTED_CRRA_4 INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE NO_SIB FAM_SIZE   WKS_WORKED WKS_WORKED_SPS HH_INCOME if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != ., statistics(mean sd) columns(statistics)
+qui estpost tabstat IMPUTED_CRRA_1 IMPUTED_CRRA_4 INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE NO_SIB FAM_SIZE   WKS_WORKED WKS_WORKED_SPS HH_INCOME if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & WKS_WORKED_SPS != . & IMPUTED_CRRA_1 != ., statistics(mean sd) columns(statistics)
 *esttab . using tex/summary.tex, main(mean %12.2f) aux(sd %12.2f) noobs nostar unstack nonote label replace booktabs nonum title("Summary statistics \label{table:5-summary}") wide
 esttab ., main(mean %12.2f n) aux(sd %12.2f) nostar nonote label unstack nonum title("Summary statistics") noobs
 
@@ -955,7 +955,7 @@ esttab ., main(mean %12.2f n) aux(sd %12.2f) nostar nonote label unstack nonum t
 * Temporarily change to wide format for time-invariant variables
 preserve 
 
-keep if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & year >= 1993
+keep if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & WKS_WORKED_SPS >= 0 & IMPUTED_CRRA_1 != . & year >= 1993
 keep SEX2 RACE1 RACE2 RACE3 C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 C0000100 R0000100 year DEGREE_SEP_*
 
 foreach i of varlist DEGREE_SEP_1 DEGREE_SEP_2 DEGREE_SEP_3 {
@@ -964,6 +964,8 @@ foreach i of varlist DEGREE_SEP_1 DEGREE_SEP_2 DEGREE_SEP_3 {
 
 reshape wide DEGREE_SEP_*_, i(C0000100) j(year)
 
+su SEX2 RACE1 RACE2 RACE3 C000700 AGE_FIRST_BIRTH AGE_14 R0006500 R0007900 R0618301
+
 qui estpost tabstat SEX2 RACE1 RACE2 RACE3 C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900, statistics(mean sd) columns(statistics)
 esttab ., main(mean %12.2f n) aux(sd %12.2f) nostar nonote label unstack nonum long title("Summary statistics") noobs wide
 *esttab . using tex/summary.tex, main(mean %12.2f n) aux(sd %12.2f) nostar nonote label unstack nonum noobs append wide
@@ -971,9 +973,9 @@ esttab ., main(mean %12.2f n) aux(sd %12.2f) nostar nonote label unstack nonum l
 restore
 
 /* Summary statistics for imputed CRRA values */
-qui estpost tabstat IMPUTED_CRRA_1 IMPUTED_CRRA_4 if IMPUTED_CRRA_1 != . 
-esttab ., main(mean %12.2f n) aux(sd %12.2f) nostar nonote label unstack nonum title("Summary statistics of imputed CRRA") replace
-*esttab . using tex/CRRA-summary, main(mean %12.2f n) aux(sd %12.2f) nostar nonote label unstack nonum title("Summary statistics of imputed CRRA") append
+qui estpost tabstat IMPUTED_CRRA_1 IMPUTED_CRRA_4 if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & WKS_WORKED_SPS != . & IMPUTED_CRRA_1 != ., statistics(mean sd) columns(statistics) by(year) 
+esttab ., main(mean %12.2f n) aux(sd %12.2f) nostar nonote label unstack nonum title("Summary statistics of imputed CRRA")
+*esttab . using tex/CRRA-summary.tex, main(mean %12.2f n) aux(sd %12.2f) nostar nonote label unstack nonum title("Summary statistics of imputed CRRA") append
 
 
 **# Bookmark #11 Regression table
