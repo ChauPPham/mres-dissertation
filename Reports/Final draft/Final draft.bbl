@@ -16,6 +16,18 @@ Altman, I. and Werner, C.~M. (2013).
 \newblock {\em Home environments}, volume~8.
 \newblock Springer Science \& Business Media.
 
+\bibitem[Arellano and Bond, 1991]{arellano1991some}
+Arellano, M. and Bond, S. (1991).
+\newblock Some tests of specification for panel data: Monte carlo evidence and
+  an application to employment equations.
+\newblock {\em The review of economic studies}, 58(2):277--297.
+
+\bibitem[Arellano and Bover, 1995]{arellano1995another}
+Arellano, M. and Bover, O. (1995).
+\newblock Another look at the instrumental variable estimation of
+  error-components models.
+\newblock {\em Journal of econometrics}, 68(1):29--51.
+
 \bibitem[Barseghyan et~al., 2011]{barseghyan2011risk}
 Barseghyan, L., Prince, J., and Teitelbaum, J.~C. (2011).
 \newblock Are risk preferences stable across contexts? evidence from insurance
@@ -281,6 +293,12 @@ Thaler, R. and Rosen, S. (1976).
 Tversky, A. and Kahneman, D. (1991).
 \newblock Loss aversion in riskless choice: A reference-dependent model.
 \newblock {\em The quarterly journal of economics}, 106(4):1039--1061.
+
+\bibitem[Windmeijer, 2005]{windmeijer2005finite}
+Windmeijer, F. (2005).
+\newblock A finite sample correction for the variance of linear efficient
+  two-step gmm estimators.
+\newblock {\em Journal of econometrics}, 126(1):25--51.
 
 \bibitem[W{\"o}lfel and Heineck, 2012]{wolfel2012parental}
 W{\"o}lfel, O. and Heineck, G. (2012).
