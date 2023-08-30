@@ -938,7 +938,7 @@ gen DEGREE_SEP = .
 replace DEGREE_SEP = 0 if DEGREE_CAT <= 1
 replace DEGREE_SEP = 1 if DEGREE_CAT == 2
 replace DEGREE_SEP = 2 if DEGREE_CAT >= 3 & DEGREE_CAT != .
-label define DEGREE_SEP 0 "\thead{High school\\\\dropout}" 1 "\thead{High school}" 2 "\thead{College}" /* Need to manually change to two lines in tex */
+label define DEGREE_SEP 0 "High school dropout" 1 "High school" 2 "College" /* Need to manually change to two lines in tex */
 tab DEGREE_SEP, gen(DEGREE_SEP_) 
 label var DEGREE_SEP_1 "High school dropout"
 label var DEGREE_SEP_2 "High school"
@@ -993,50 +993,15 @@ esttab ., not unstack compress noobs
 * 3 - Time investment (normalised) (taken from HOME SECTION)
 * 4 - Cognitive stimulation (in %) (taken from HOME SECTION)
 * 5 - Emotional support (in %) (taken from HOME SECTION)
+
+xtset C0000100 year, delta(2)
+
 eststo clear
 
 
 *==================== RISK AS COEF OF RRA ============================*
 local identifier = 1
-qui forval k = 1/4 {
-	qui foreach i of varlist INV_ALL GOODS_ALL TIME_ALL {
-		reghdfe `i' IMPUTED_CRRA_`k' i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP != ., absorb(year AGE_CAT) vce(cluster R0000100)
-		eststo model_`identifier'
-		
-		reghdfe `i' IMPUTED_CRRA_`k' c.IMPUTED_CRRA_`k'#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP != ., absorb(year AGE_CAT) vce(cluster R0000100)
-		eststo model_`identifier'_a
-		
-		forval j = 0/2 {
-			reghdfe `i' IMPUTED_CRRA_`k' i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP == `j', absorb(year AGE_CAT) vce(cluster R0000100)
-			eststo model_`identifier'_`j'
-			
-			reghdfe `i' IMPUTED_CRRA_`k' c.IMPUTED_CRRA_`k'#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP == `j', absorb(year AGE_CAT) vce(cluster R0000100)
-			eststo model_`identifier'_`j'_a
-		}
-		local ++identifier
-	}
 
-	qui foreach i of varlist COG_SCORE EMO_SCORE {
-		reghdfe `i' IMPUTED_CRRA_`k' i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP != . & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
-		eststo model_`identifier'
-		
-		reghdfe `i' IMPUTED_CRRA_`k' c.IMPUTED_CRRA_`k'#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP != . & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
-		eststo model_`identifier'_a
-		
-		forval j = 0/2 {
-			reghdfe `i' IMPUTED_CRRA_`k' i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP == `j' & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
-			eststo model_`identifier'_`j'
-			
-			reghdfe `i' IMPUTED_CRRA_`k' c.IMPUTED_CRRA_`k'#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP == `j' & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
-			eststo model_`identifier'_`j'_a
-		}
-		local ++identifier
-	}
-
-******************************** This here creates the problem
-	forvalues i = 1/5 {
-		esttab model_`i'*, keep(IMPUTED_CRRA_`k') mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress indicate(Year interaction = *.year#c.IMPUTED_CRRA_`k')
-	}
 
 /*
 forvalues i = 1/5 {

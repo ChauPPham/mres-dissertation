@@ -1,0 +1,46 @@
+
+
+Reference
+Number     Year    Variable Description                                                        Question Name    
+------------------------------------------------------------------------------------------------------------------
+R00001.00  1979    IDENTIFICATION CODE                                                         CASEID           
+R01736.00  1979    SAMPLE IDENTIFICATION CODE                                                  SAMPLE_ID        
+R02147.00  78SCRN  R'S RACIAL/ETHNIC COHORT FROM SCREENER                                      SAMPLE_RACE      
+R02148.00  1979    SEX OF R                                                                    SAMPLE_SEX       
+R27361.00  1988    R/SPOUSE HAVE ANY STOCKS/BONDS/MUTUAL FUNDS?                                Q13-124          
+R27362.01  1988    TOTAL MARKET VALUE OF STOCKS/BONDS/MUTUAL FUNDS (TRUNC) (REVISED)           Q13-125_REVISED  
+R29836.00  1989    R/SPOUSE HAVE ANY STOCKS/BONDS/MUTUAL FUNDS?                                Q13-124          
+R29837.01  1989    TOTAL MARKET VALUE OF STOCKS/BONDS/MUTUAL FUNDS (TRUNC) (REVISED)           Q13-125_REVISED  
+R32940.00  1990    R/SPOUSE HAVE ANY STOCKS/BONDS/MUTUAL FUNDS?                                Q13-124          
+R32941.01  1990    TOTAL MARKET VALUE OF STOCKS/BONDS/MUTUAL FUNDS (TRUNC) (REVISED)           Q13-125_REVISED  
+R39117.00  1992    R/SPOUSE HAVE ANY STOCKS/BONDS/MUTUAL FUNDS?                                Q13-124          
+R39118.01  1992    TOTAL MARKET VALUE OF STOCKS/BONDS/MUTUAL FUNDS (TRUNC) (REVISED)           Q13-125_REVISED  
+R43931.00  1993    R/SPOUSE HAVE ANY STOCKS/BONDS/MUTUAL FUNDS?                                Q13-124          
+R43932.01  1993    TOTAL MARKET VALUE OF STOCKS/BONDS/MUTUAL FUNDS (TRUNC) (REVISED)           Q13-125_REVISED  
+R50479.00  1994    R/SPOUSE HAVE ANY STOCKS/BONDS/MUTUAL FUNDS?                                Q13-124          
+R50480.01  1994    TOTAL MARKET VALUE OF STOCKS/BONDS/MUTUAL FUNDS (TRUNC) (REVISED)           Q13-125_REVISED  
+R57293.00  1996    R/SPOUSE HAVE ANY STOCKS/BONDS/MUTUAL FUNDS?                                Q13-124          
+R57294.01  1996    TOTAL MARKET VALUE OF STOCKS/BONDS/MUTUAL FUNDS (TRUNC) (REVISED)           Q13-125_REVISED  
+R64273.00  1998    R/SPOUSE HAVE ANY STOCKS/BONDS/MUTUAL FUNDS?                                Q13-124          
+R64274.01  1998    TOTAL MARKET VALUE OF STOCKS/BONDS/MUTUAL FUNDS (TRUNC) (REVISED)           Q13-125_REVISED  
+R69461.00  2000    R/SPOUSE HAVE ANY STOCKS/BONDS/MUTUAL FUNDS?                                Q13-124          
+R69462.01  2000    TOTAL MARKET VALUE OF STOCKS/BONDS/MUTUAL FUNDS (TRUNC) (REVISED)           Q13-125_REVISED  
+R83654.00  2004    R-SPAR OWN SHARES OF ANY MUTUAL FUNDS?                                      FA_4             
+R83761.00  2004    R-SPOUSE/PARTNER OWN ANY SHARES OF STOCK                                    FA_9             
+R83764.00  2004    MONEY R-SPAR HAVE IF SOLD/PAID AMT OWE ON STOCK (TRUNC)                     FA_9A_TRUNC      
+T21291.00  2008    R-SPAR OWN SHARES OF ANY MUTUAL FUNDS?                                      FA_4             
+T21398.00  2008    R-SPOUSE/PARTNER OWN ANY SHARES OF STOCK                                    FA_9             
+T21401.00  2008    MONEY R-SPAR HAVE IF SOLD/PAID AMT OWE ON STOCK (TRUNCATED)                 FA_9A_TRUNC      
+T40304.00  2012    R-SPAR OWN SHARES OF ANY MUTUAL FUNDS?                                      FA_4             
+T40426.00  2012    R-SPOUSE/PARTNER OWN ANY SHARES OF STOCK                                    FA_9             
+T40429.00  2012    MONEY R-SPAR HAVE IF SOLD/PAID AMT OWE ON STOCK (TRUNC)                     FA_9A_TRUNC      
+T56681.00  2016    R-SPAR OWN SHARES OF ANY MUTUAL FUNDS?                                      FA_4             
+T56815.00  2016    R-SPOUSE/PARTNER OWN ANY SHARES OF STOCK                                    FA_9             
+T56818.00  2016    MONEY R-SPAR HAVE IF SOLD/PAID AMT OWE ON STOCK (TRUNC)                     FA_9A_TRUNC      
+X00458.00  XRND    R EVER OWNED A BUSINESS                                                     BUSOWN-1         
+X00459.00  XRND    NUMBER OF BUSINESSES R EVER OWNED                                           BUSOWN-2         
+X00612.00  XRND    ANY OF R FAMILY MEMBERS EVER OWED A BUSINESS PRIOR TO ACQUIRING R BUSINESS  BUSOWN-23A       
+X00613.00  XRND    ANY OF R FAMILY MEMBERS EVER OWED A BUSINESS                                BUSOWN-23B       
+X00614.00  XRND    R WORKED FOR ANY OF THOSE FAMILY MEMBERS PRIOR ACQUIRING R BUS              BUSOWN-24A       
+X00615.00  XRND    R WORKED FOR ANY OF THOSE FAMILY MEMBERS                                    BUSOWN-24B       
+X00620.00  XRND    R CONSIDERS R TO BE AN ENTREPRENEUR                                         BUSOWN-29        

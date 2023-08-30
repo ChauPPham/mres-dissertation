@@ -1,0 +1,1390 @@
+R00001.00    [CASEID]                                       Survey Year: 1979
+  PRIMARY VARIABLE
+
+ 
+             IDENTIFICATION CODE
+ 
+ORIGINAL QUESTION NAME: CASEID
+ 
+NOTE: THIS NUMBER WAS ASSIGNED ACCORDING TO THE RECORD NUMBER OF EACH RESPONDENT
+ON THE TAPE. THE FIRST RESPONDENT WAS ASSIGNED ID#1, THE SECOND WAS ASSIGNED 
+ID#2, ETC.
+ 
+ACTUAL NUMBER
+ 
+UNIVERSE: All
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12686   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:          12686        Mean:              6343.5
+ 
+Lead In: None.
+Default Next Question: R00001.49
+--------------------------------------------------------------------------------
+R01736.00    [SAMPLE_ID]                                    Survey Year: 1979
+  PRIMARY VARIABLE
+
+ 
+             SAMPLE IDENTIFICATION CODE
+ 
+ORIGINAL QUESTION NAME: S24Q01
+ 
+UNIVERSE: Entire Sample
+ 
+    2236       1 CROSS MALE WHITE
+     203       2 CROSS MALE WH. POOR
+     346       3 CROSS MALE BLACK
+     218       4 CROSS MALE HISPANIC
+    2279       5 CROSS FEMALE WHITE
+     198       6 CROSS FEMALE WH POOR
+     405       7 CROSS FEMALE BLACK
+     226       8 CROSS FEMALE HISPANIC
+     742       9 SUP MALE WH POOR
+    1105      10 SUP MALE BLACK
+     729      11 SUP MALE HISPANIC
+     901      12 SUP FEM WH POOR
+    1067      13 SUP FEMALE BLACK
+     751      14 SUP FEMALE HISPANIC
+     609      15 MIL MALE WHITE
+     162      16 MIL MALE BLACK
+      53      17 MIL MALE HISPANIC
+     342      18 MIL FEMALE WHITE
+      89      19 MIL FEMALE BLACK
+      25      20 MIL FEMALE HISPANIC
+  -------
+   12686
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12686   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:             20        Mean:                8.17
+ 
+
+
+NOTE: MARCH 1, 1986  NORC
+ 
+SEX CODE CHANGED ON 42 CASES
+ 
+Lead In: R01735.19[Default]
+Default Next Question: R01737.00
+--------------------------------------------------------------------------------
+R02147.00    [SAMPLE_RACE]                                  Survey Year: 78SCRN
+  PRIMARY VARIABLE
+
+ 
+             R'S RACIAL/ETHNIC COHORT FROM SCREENER
+ 
+UNIVERSE: Entire Sample
+ 
+    2002       1 HISPANIC
+    3174       2 BLACK
+    7510       3 NON-BLACK, NON-HISPANIC
+  -------
+   12686
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12686   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:              3        Mean:                2.43
+ 
+
+
+NOTE: AUGUST 26, 1980  DENNIS GREY
+ 
+DESCRIPTION:
+COHORT=3;
+IF R(1736.)=4 ! R(1736.)=8 ! R(1736.)=11 ! R(1736.)=14 THEN COHORT=1;
+IF R(1736.)=17 ! R(1736.)=20 THEN COHORT=1;
+IF R(1736.)=3 ! R(1736.)=7 ! R(1736.)=10 ! R(1736.)=13 THEN COHORT=2;
+IF R(1736.)=16 ! R(1736.)=19 THEN COHORT=2;
+R(2147.)=COHORT;
+ 
+Lead In: R02146.00[Default]
+Default Next Question: R02148.00
+--------------------------------------------------------------------------------
+R02148.00    [SAMPLE_SEX]                                   Survey Year: 1979
+  PRIMARY VARIABLE
+
+ 
+             SEX OF R
+ 
+UNIVERSE: Entire sample
+ 
+    6403       1 MALE
+    6283       2 FEMALE
+  -------
+   12686
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12686   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:              2        Mean:                 1.5
+ 
+
+
+NOTE: AUGUST 26, 1980  DENNIS GREY
+MARCH 1, 1986  NORC
+ 
+DESCRIPTION:
+IF (R(1736.)>0 & R(1736.)<=4) ! (R(1736.)>=9 & R(1736.)<=11) THEN SEX=1;
+IF R(1736.)>=15 & R(1736.)<=17 THEN SEX=1;
+IF (R(1736.)>=5 & R(1736.)<=8) ! (R(1736.)>=12 & R(1736.)<=14) THEN SEX=
+IF R(1736.)>=18 & R(1736.)<=20 THEN SEX=2;
+R(2148.)=SEX;
+SEX CODE CHANGED ON 42 CASES
+ 
+Lead In: R02147.00[Default]
+Default Next Question: R02149.00
+--------------------------------------------------------------------------------
+R27361.00    [Q13-124]                                      Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             R/SPOUSE HAVE ANY STOCKS/BONDS/MUTUAL FUNDS?
+ 
+ORIGINAL QUESTION NAME: Q15.34C
+ 
+[NOT COUNTING ANY INDIVIDUAL RETIREMENT ACCOUNTS (IRA OR KEOGH) YOU
+MAY HAVE ALREADY TOLD ME ABOUT)] DO YOU [OR YOUR (HUSBAND/WIFE)] HAVE
+ANY COMMON STOCK, PREFERRED STOCK, STOCK OPTIONS, CORPORATE OR
+GOVERNMENT BONDS, OR MUTUAL FUNDS?
+ 
+UNIVERSE: All
+ 
+    1447       1 YES
+    8991       0 NO
+  -------
+   10438
+ 
+Refusal(-1)           11
+Don't Know(-2)         2
+Invalid Skip(-3)      14
+TOTAL =========>   10465   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2221
+ 
+Min:              0        Max:              1        Mean:                 .14
+ 
+Lead In: R27360.00[Default] R27360.01[Default]
+Default Next Question: R27362.00
+--------------------------------------------------------------------------------
+R27362.01    [Q13-125_REVISED]                              Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             TOTAL MARKET VALUE OF STOCKS/BONDS/MUTUAL FUNDS (TRUNC) (REVISED)
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+Altogether, what is the current market value of these stocks, bonds, or mutual 
+funds that you [{sp_or}] [Spouse/partner's name] have invested in?
+ 
+UNIVERSE: R/S have stocks/bonds/mutual funds
+ 
+       4           0
+     869           1 TO 4999
+     153        5000 TO 9999
+      55       10000 TO 14999
+      23       15000 TO 19999
+      19       20000 TO 24999
+      11       25000 TO 29999
+      17       30000 TO 39999
+       8       40000 TO 49999
+       7       50000 TO 59999
+       6       60000 TO 69999
+       3       70000 TO 79999
+       0       80000 TO 89999
+       0       90000 TO 99999
+       0      100000 TO 149999
+      24      150000 TO 9999999: 150000+
+  -------
+    1199
+ 
+Refusal(-1)           38
+Don't Know(-2)       188
+Invalid Skip(-3)      49
+TOTAL =========>    1474   VALID SKIP(-4)    8991     NON-INTERVIEW(-5)    2221
+ 
+Min:              0        Max:         195333        Mean:             8523.02
+ 
+
+
+NOTE: Revised topcode for R27362.00. Top 2% of values are replaced with the 
+group average.
+ 
+Lead In: None.
+Default Next Question: R27363.00
+--------------------------------------------------------------------------------
+R29836.00    [Q13-124]                                      Survey Year: 1989
+  PRIMARY VARIABLE
+
+ 
+             R/SPOUSE HAVE ANY STOCKS/BONDS/MUTUAL FUNDS?
+ 
+ORIGINAL QUESTION NAME: Q2660
+ 
+[NOT COUNITNG ANY INDIVIDUAL RETIREMENT ACCOUNTS (IRA OR KEOGH) YOU
+MAY HAVE ALREADY TOLD ME ABOUT)] DO YOU [OR YOUR (HUSBAND/WIFE)]
+HAVE ANY COMMON STOCK, PREFERRED STOCK, STOCK OPTIONS, CORPORATE OR
+GOVERNMENT BONDS, OR MUTUAL FUNDS?
+ 
+UNIVERSE: All
+ 
+    1529       1 YES
+    9045       0 NO
+  -------
+   10574
+ 
+Refusal(-1)           28
+Don't Know(-2)         2
+Invalid Skip(-3)       1
+TOTAL =========>   10605   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2081
+ 
+Min:              0        Max:              1        Mean:                 .14
+ 
+Lead In: R29835.00[Default] R29835.01[Default]
+Default Next Question: R29837.00
+--------------------------------------------------------------------------------
+R29837.01    [Q13-125_REVISED]                              Survey Year: 1989
+  PRIMARY VARIABLE
+
+ 
+             TOTAL MARKET VALUE OF STOCKS/BONDS/MUTUAL FUNDS (TRUNC) (REVISED)
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+Altogether, what is the current market value of these stocks, bonds, or mutual 
+funds that you [{sp_or}] [Spouse/partner's name] have invested in?
+ 
+UNIVERSE: R/S have stocks/bonds/mutual funds
+ 
+       0           0
+     246           1 TO 499
+     165         500 TO 999
+     126        1000 TO 1499
+      52        1500 TO 1999
+      94        2000 TO 2499
+      24        2500 TO 2999
+      77        3000 TO 3499
+      16        3500 TO 3999
+      53        4000 TO 4499
+       6        4500 TO 4999
+     410        5000 TO 9999999: 5000+
+  -------
+    1269
+ 
+Refusal(-1)           23
+Don't Know(-2)       219
+Invalid Skip(-3)      19
+TOTAL =========>    1530   VALID SKIP(-4)    9075     NON-INTERVIEW(-5)    2081
+ 
+Min:              5        Max:         554510        Mean:            18966.06
+ 
+
+
+NOTE: Revised topcode for R29837.00. Top 2% of values are replaced with the 
+group average.
+ 
+Lead In: None.
+Default Next Question: R29838.00
+--------------------------------------------------------------------------------
+R32940.00    [Q13-124]                                      Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             R/SPOUSE HAVE ANY STOCKS/BONDS/MUTUAL FUNDS?
+ 
+ORIGINAL QUESTION NAME: Q6851
+ 
+(NOT COUNTING ANY INDIVIDUAL RETIREMENT ACCOUNTS (IRA OR KEOGH),
+401K, OR PRE-TAX ANNUITIES YOU MAY HAVE ALREADY TOLD ME ABOUT)]
+DO YOU [OR YOUR (HUSBAND/WIFE)] HAVE ANY COMMON STOCK, PREFERRED
+STOCK, STOCK OPTIONS, CORPORATE OR GOVERNMENT BONDS, OR MUTUAL
+FUNDS?
+ 
+UNIVERSE: All
+ 
+    1507       1 YES
+    8904       0 NO
+  -------
+   10411
+ 
+Refusal(-1)           17
+Don't Know(-2)         4
+Invalid Skip(-3)       4
+TOTAL =========>   10436   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2250
+ 
+Min:              0        Max:              1        Mean:                 .14
+ 
+Lead In: R32939.00[Default] R32939.01[Default]
+Default Next Question: R32941.00
+--------------------------------------------------------------------------------
+R32941.01    [Q13-125_REVISED]                              Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             TOTAL MARKET VALUE OF STOCKS/BONDS/MUTUAL FUNDS (TRUNC) (REVISED)
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+Altogether, what is the current market value of these stocks, bonds, or mutual 
+funds that you [{sp_or}] [Spouse/partner's name] have invested in?
+ 
+UNIVERSE: R/S have stocks/bonds/mutual funds
+ 
+       2           0
+     235           1 TO 499
+     135         500 TO 999
+     143        1000 TO 1499
+      53        1500 TO 1999
+      99        2000 TO 2499
+      33        2500 TO 2999
+      67        3000 TO 3499
+      14        3500 TO 3999
+      41        4000 TO 4499
+       8        4500 TO 4999
+     436        5000 TO 9999999: 5000+
+  -------
+    1266
+ 
+Refusal(-1)           33
+Don't Know(-2)       203
+Invalid Skip(-3)      10
+TOTAL =========>    1512   VALID SKIP(-4)    8924     NON-INTERVIEW(-5)    2250
+ 
+Min:              0        Max:         301692        Mean:            12364.52
+ 
+
+
+NOTE: Revised topcode for R32941.00. Top 2% of values are replaced with the 
+group average.
+ 
+Lead In: None.
+Default Next Question: R32942.00
+--------------------------------------------------------------------------------
+R39117.00    [Q13-124]                                      Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             R/SPOUSE HAVE ANY STOCKS/BONDS/MUTUAL FUNDS?
+ 
+ORIGINAL QUESTION NAME: Q6947
+ 
+(NOT COUNTING ANY INDIVIDUAL RETIREMENT ACCOUNTS (IRA OR KEOGH),
+401K, OR PRE-TAX ANNUITIES YOU MAY HAVE ALREADY TOLD ME ABOUT)]
+DO YOU [OR YOUR (HUSBAND/WIFE)] HAVE ANY COMMON STOCK, PREFERRED
+STOCK, STOCK OPTIONS, CORPORATE OR GOVERNMENT BONDS, OR MUTUAL
+FUNDS?
+ 
+UNIVERSE: All
+ 
+    1393       1 YES
+    7591       0 NO
+  -------
+    8984
+ 
+Refusal(-1)           23
+Don't Know(-2)         6
+Invalid Skip(-3)       3
+TOTAL =========>    9016   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    3670
+ 
+Min:              0        Max:              1        Mean:                 .16
+ 
+Lead In: R39116.00[Default] R39116.01[Default]
+Default Next Question: R39118.00
+--------------------------------------------------------------------------------
+R39118.01    [Q13-125_REVISED]                              Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             TOTAL MARKET VALUE OF STOCKS/BONDS/MUTUAL FUNDS (TRUNC) (REVISED)
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+Altogether, what is the current market value of these stocks, bonds, or mutual 
+funds that you [{sp_or}] [Spouse/partner's name] have invested in?
+ 
+UNIVERSE: R/S have stocks/bonds/mutual funds
+ 
+       0           0
+     164           1 TO 499
+     127         500 TO 999
+      99        1000 TO 1499
+      41        1500 TO 1999
+      78        2000 TO 2499
+      30        2500 TO 2999
+      67        3000 TO 3499
+      13        3500 TO 3999
+      42        4000 TO 4499
+      11        4500 TO 4999
+     493        5000 TO 9999999: 5000+
+  -------
+    1165
+ 
+Refusal(-1)           30
+Don't Know(-2)       195
+Invalid Skip(-3)       6
+TOTAL =========>    1396   VALID SKIP(-4)    7620     NON-INTERVIEW(-5)    3670
+ 
+Min:              1        Max:         497042        Mean:            18409.17
+ 
+
+
+NOTE: Revised topcode for R39118.00. Top 2% of values are replaced with the 
+group average.
+ 
+Lead In: R39118.00[Default]
+Default Next Question: R39119.00
+--------------------------------------------------------------------------------
+R43931.00    [Q13-124]                                      Survey Year: 1993
+  PRIMARY VARIABLE
+
+ 
+             R/SPOUSE HAVE ANY STOCKS/BONDS/MUTUAL FUNDS?
+ 
+ORIGINAL QUESTION NAME: Q11-124
+ 
+[Not counting any individual retirement accounts (IRA or Keogh) 401K or
+pre-tax annuities you may have already told me about)] Do you (or your
+[Text fill based on respondent's gender](10)) have any common stock, preferred 
+stock, stock options,
+corporate or government bonds, or mutual funds?
+ 
+    1535       1 YES
+    7448       0 NO
+  -------
+    8983
+ 
+Refusal(-1)           15
+Don't Know(-2)        10
+TOTAL =========>    9008   VALID SKIP(-4)       3     NON-INTERVIEW(-5)    3675
+ 
+Min:              0        Max:              1        Mean:                 .17
+ 
+Lead In: R43930.00[Default] R43930.01[Default]
+Default Next Question: R43932.00
+--------------------------------------------------------------------------------
+R43932.01    [Q13-125_REVISED]                              Survey Year: 1993
+  PRIMARY VARIABLE
+
+ 
+             TOTAL MARKET VALUE OF STOCKS/BONDS/MUTUAL FUNDS (TRUNC) (REVISED)
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+Altogether, what is the current market value of these stocks, bonds, or mutual 
+funds that you [{sp_or}](10) [Spouse/partner's name](10) have invested in?
+ 
+       0           0
+     677           1 TO 4999
+     173        5000 TO 9999
+     100       10000 TO 14999
+      51       15000 TO 19999
+      46       20000 TO 24999
+      17       25000 TO 29999
+      30       30000 TO 39999
+      17       40000 TO 49999
+      13       50000 TO 59999
+       9       60000 TO 69999
+       6       70000 TO 79999
+       4       80000 TO 89999
+       3       90000 TO 99999
+      11      100000 TO 149999
+      24      150000 TO 9999999: 150000+
+  -------
+    1181
+ 
+Refusal(-1)           53
+Don't Know(-2)       301
+TOTAL =========>    1535   VALID SKIP(-4)    7476     NON-INTERVIEW(-5)    3675
+ 
+Min:              1        Max:         393333        Mean:            16859.33
+ 
+
+
+NOTE: Revised topcode for R43932.00. Top 2% of values are replaced with the 
+group average.
+ 
+Lead In: R43932.00[Default]
+Default Next Question: R43933.00
+--------------------------------------------------------------------------------
+R50479.00    [Q13-124]                                      Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             R/SPOUSE HAVE ANY STOCKS/BONDS/MUTUAL FUNDS?
+ 
+[Not counting any individual retirement accounts (IRA or Keogh) 401K or
+pre-tax annuities you may have already told me about)] Do you (or 
+[Spouse/partner's name](8)
+have any common stock, preferred stock, stock options, corporate or
+government bonds, or mutual funds?
+ 
+    1328       1 YES   (Go To R50480.00)
+    7527       0 NO
+  -------
+    8855
+ 
+Refusal(-1)           21
+Don't Know(-2)        12
+TOTAL =========>    8888   VALID SKIP(-4)       3     NON-INTERVIEW(-5)    3795
+ 
+Min:              0        Max:              1        Mean:                 .15
+ 
+Lead In: R50477.00[Default] R50478.00[Default] R50478.01[Default]
+Default Next Question: R50481.00
+--------------------------------------------------------------------------------
+R50480.01    [Q13-125_REVISED]                              Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             TOTAL MARKET VALUE OF STOCKS/BONDS/MUTUAL FUNDS (TRUNC) (REVISED)
+ 
+Altogether, what is the current market value of these stocks, bonds, or mutual 
+funds that you [{sp_or}](8) [Spouse/partner's name](8) have invested in?
+ 
+NOTE: 
+NOTE: Revised topcode for R50480.00. Top 2% of values are replaced with the 
+group average.
+ 
+       0           0
+     540           1 TO 4999
+     168        5000 TO 9999
+      82       10000 TO 14999
+      43       15000 TO 19999
+      40       20000 TO 24999
+      27       25000 TO 29999
+      39       30000 TO 39999
+      21       40000 TO 49999
+      19       50000 TO 59999
+      13       60000 TO 69999
+      10       70000 TO 79999
+       5       80000 TO 89999
+       5       90000 TO 99999
+      11      100000 TO 149999
+      25      150000 TO 99999999: 150000+
+  -------
+    1048
+ 
+Refusal(-1)           46
+Don't Know(-2)       234
+TOTAL =========>    1328   VALID SKIP(-4)    7563     NON-INTERVIEW(-5)    3795
+ 
+Min:              1        Max:         420725        Mean:            20506.98
+ 
+Lead In: None.
+Default Next Question: R50481.00
+--------------------------------------------------------------------------------
+R57293.00    [Q13-124]                                      Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             R/SPOUSE HAVE ANY STOCKS/BONDS/MUTUAL FUNDS?
+ 
+[Not counting any individual retirement accounts (IRA or Keogh) 401K or pre-tax 
+annuities you may have already told me about)] Do you (or [Spouse/partner's 
+name](9) have any common stock, preferred stock, stock options, corporate or 
+government bonds, or mutual funds?
+ 
+    1441       1 YES   (Go To R57294.00)
+    7156       0 NO
+  -------
+    8597
+ 
+Refusal(-1)           17
+Don't Know(-2)        17
+TOTAL =========>    8631   VALID SKIP(-4)       5     NON-INTERVIEW(-5)    4050
+ 
+Min:              0        Max:              1        Mean:                 .17
+ 
+Lead In: R57291.00[Default] R57292.00[Default] R57292.01[Default]
+Default Next Question: R57295.00
+--------------------------------------------------------------------------------
+R57294.01    [Q13-125_REVISED]                              Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             TOTAL MARKET VALUE OF STOCKS/BONDS/MUTUAL FUNDS (TRUNC) (REVISED)
+ 
+Altogether, what is the current market value of these stocks, bonds, or mutual 
+funds that you (or [Spouse/partner's name](9)) have invested in?
+ 
+NOTE: TRUNCATED VALUES ARE APPLIED TO THE TOP APPROXIMATELY 2 PERCENT OF 
+RESPONDENTS WITH VALID NON-MISSING RESPONSES. THE LOWEST VALUE FOR THE TOP 2 
+PERCENT OF CASES IS USED AS THE TRUNCATION LEVEL ($240,000 FOR THIS VARIABLE). 
+VALUES FOR ALL CASES AT OR OVER THAT LEVEL ARE AVERAGED. THAT AVERAGE IS THEN 
+ASSIGNED TO EACH OF THE TOP 2 PERCENT OF CASES. OVERSEAS RESPONDENTS WHOSE 
+DOLLAR INCOME COULD NOT BE DETERMINED ARE CODED -3.
+ 
+NOTE: Revised topcode for R57294.00. Top 2% of values are replaced with the 
+group average.
+ 
+       0           0
+     512           1 TO 4999
+     169        5000 TO 9999
+      88       10000 TO 14999
+      60       15000 TO 19999
+      48       20000 TO 24999
+      30       25000 TO 29999
+      49       30000 TO 39999
+      31       40000 TO 49999
+      24       50000 TO 59999
+      20       60000 TO 69999
+      15       70000 TO 79999
+       6       80000 TO 89999
+       7       90000 TO 99999
+      29      100000 TO 149999
+      50      150000 TO 99999999: 150000+
+  -------
+    1138
+ 
+Refusal(-1)           53
+Don't Know(-2)       249
+Invalid Skip(-3)       1
+TOTAL =========>    1441   VALID SKIP(-4)    7195     NON-INTERVIEW(-5)    4050
+ 
+Min:              1        Max:         923193        Mean:             37391.2
+ 
+Lead In: None.
+Default Next Question: R57295.00
+--------------------------------------------------------------------------------
+R64273.00    [Q13-124]                                      Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             R/SPOUSE HAVE ANY STOCKS/BONDS/MUTUAL FUNDS?
+ 
+(Not counting any individual retirement accounts (IRA or Keogh) 401K or pre-tax 
+annuities you may have already told me about). Do you (or [Spouse/partner's 
+name]) have any common stock, preferred stock, stock options, corporate or 
+government bonds, or mutual funds?
+ 
+    1540       1 YES   (Go To R64274.00)
+    6779       0 NO
+  -------
+    8319
+ 
+Refusal(-1)           39
+Don't Know(-2)        32
+TOTAL =========>    8390   VALID SKIP(-4)       9     NON-INTERVIEW(-5)    4287
+ 
+Min:              0        Max:              1        Mean:                 .19
+ 
+Lead In: R64271.00[Default] R64272.00[Default] R64272.01[Default]
+Default Next Question: R64275.00
+--------------------------------------------------------------------------------
+R64274.01    [Q13-125_REVISED]                              Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             TOTAL MARKET VALUE OF STOCKS/BONDS/MUTUAL FUNDS (TRUNC) (REVISED)
+ 
+Altogether, what is the current market value of these stocks, bonds, or mutual 
+funds that you (or [Spouse/partner's name]) have invested in?
+ 
+NOTE: Revised topcode for R64274.00.
+ 
+       0           0
+     402           1 TO 4999
+     169        5000 TO 9999
+     118       10000 TO 14999
+      69       15000 TO 19999
+      61       20000 TO 24999
+      37       25000 TO 29999
+      56       30000 TO 39999
+      41       40000 TO 49999
+      43       50000 TO 59999
+      26       60000 TO 69999
+      25       70000 TO 79999
+      11       80000 TO 89999
+       4       90000 TO 99999
+      44      100000 TO 149999
+      97      150000 TO 99999999: 150000+
+  -------
+    1203
+ 
+Refusal(-1)           70
+Don't Know(-2)       268
+TOTAL =========>    1541   VALID SKIP(-4)    6858     NON-INTERVIEW(-5)    4287
+ 
+Min:              1        Max:        1642120        Mean:            66413.94
+ 
+Lead In: None.
+Default Next Question: R64275.00
+--------------------------------------------------------------------------------
+R69461.00    [Q13-124]                                      Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             R/SPOUSE HAVE ANY STOCKS/BONDS/MUTUAL FUNDS?
+ 
+(Not counting any individual retirement accounts (IRA or Keogh) 401K or pre-tax 
+annuities you may have already told me about). Do you [or] [Spouse/partner's 
+name] have any common stock, preferred stock, stock options, corporate or 
+government bonds, or mutual funds?
+ 
+(INTERVIEWER: PRESS <F1> TO SEE HELP SCREEN WITH DETAILED DEFINITIONS)
+ 
+UNIVERSE: All
+ 
+    1631       1 YES   (Go To R69462.00)
+    6313       0 NO
+  -------
+    7944
+ 
+Refusal(-1)           59
+Don't Know(-2)        29
+TOTAL =========>    8032   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    4654
+ 
+Min:              0        Max:              1        Mean:                 .21
+ 
+Lead In: R69459.00[Default] R69460.00[Default] R69460.01[Default]
+Default Next Question: R69466.00
+--------------------------------------------------------------------------------
+R69462.01    [Q13-125_REVISED]                              Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             TOTAL MARKET VALUE OF STOCKS/BONDS/MUTUAL FUNDS (TRUNC) (REVISED)
+ 
+Altogether, what is the current market value of these stocks, bonds, or mutual 
+funds that you [or] [Spouse/partner's name] have invested in?
+ 
+UNIVERSE: R and/or S/P have stocks, bonds, mutual funds
+ 
+NOTE: Revised topcode for R69462.00.
+ 
+       0           0
+     369           1 TO 4999
+     167        5000 TO 9999
+     104       10000 TO 14999
+      56       15000 TO 19999
+      69       20000 TO 24999
+      40       25000 TO 29999
+      67       30000 TO 39999
+      50       40000 TO 49999
+      58       50000 TO 59999
+      26       60000 TO 69999
+      26       70000 TO 79999
+      22       80000 TO 89999
+       8       90000 TO 99999
+      43      100000 TO 149999
+     146      150000 TO 99999999: 150000+
+  -------
+    1251
+ 
+Refusal(-1)           73   (Go To R69463.00)
+Don't Know(-2)       307   (Go To R69463.00)
+TOTAL =========>    1631   VALID SKIP(-4)    6401     NON-INTERVIEW(-5)    4654
+ 
+Min:              1        Max:        2553000        Mean:           101737.44
+ 
+Lead In: None.
+Default Next Question: R69466.00
+--------------------------------------------------------------------------------
+R83654.00    [FA_4]                                         Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             R-SPAR OWN SHARES OF ANY MUTUAL FUNDS?
+ 
+Do you [or] [Spouse/partner's name] own any shares of a mutual fund? Please do 
+not include any pension or 401K accounts, funds held as a part of a trust or 
+annuity, or assets you have already told me about.
+ 
+(INTERVIEWER: PLEASE READ IF NECESSARY:)Please include all shares of a mutual 
+fund whether the fund is made up of stock shares, bond shares, or a combination 
+of stock and bond shares.
+ 
+     972       1 Yes   (Go To R83655.00)
+    6248       0 No
+  -------
+    7220
+ 
+Refusal(-1)           54
+Don't Know(-2)        51
+TOTAL =========>    7325   VALID SKIP(-4)     336     NON-INTERVIEW(-5)    5025
+ 
+Min:              0        Max:              1        Mean:                 .13
+ 
+Lead In: R83645.00[Default] R83650.00[Default] R83648.00[Default] 
+         R83651.00[Default] R83652.00[Default] R83653.00[Default] 
+         R83646.00[Default]
+Default Next Question: R83663.00
+--------------------------------------------------------------------------------
+R83761.00    [FA_9]                                         Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             R-SPOUSE/PARTNER OWN ANY SHARES OF STOCK
+ 
+[RESPONDENT OR SPOUSE OWN ANY SHARES OF STOCK] you [or] [Spouse/partner's name] 
+own any shares of stock?
+ 
+(INTERVIEWER: PLEASE READ IF NECESSARY:) Please do not include any company stock
+given to you [or] [Spouse/partner's name] through an employer and held in an 
+Employee Stock Purchase Plan (ESoPP) or in stock options. Please include any 
+type of stock, whether it is common or preferred or closely-held or publicly 
+traded.
+ 
+    1157       1 Yes   (Go To R83762.00)
+    6088       0 No
+  -------
+    7245
+ 
+Refusal(-1)           46
+Don't Know(-2)        35
+TOTAL =========>    7326   VALID SKIP(-4)     335     NON-INTERVIEW(-5)    5025
+ 
+Min:              0        Max:              1        Mean:                 .16
+ 
+Lead In: R83705.00[Default] R83713.00[Default] R83720.00[Default] 
+         R83725.00[Default] R83753.00[Default] R83739.00[Default] 
+         R83760.00[Default] R85400.00[Default]  R83760.00[0:0]
+Default Next Question: R83770.00
+--------------------------------------------------------------------------------
+R83764.00    [FA_9A_TRUNC]                                  Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             MONEY R-SPAR HAVE IF SOLD/PAID AMT OWE ON STOCK (TRUNC)
+ 
+If you sold all of these stock holdings and paid off anything you owed on them, 
+how much money would you [or] [Spouse/partner's name] end up with?
+ 
+(INTERVIEWER: PLEASE READ IF NECESSARY:) Please do not include any company stock
+in an ESoPP or stock options.
+ 
+ 
+        ENTER AMOUNT: $
+ 
+      38           0
+     249           1 TO 4999
+      99        5000 TO 9999
+      93       10000 TO 14999
+      45       15000 TO 19999
+      50       20000 TO 24999
+      23       25000 TO 29999
+      49       30000 TO 39999
+      15       40000 TO 49999
+      48       50000 TO 59999
+      20       60000 TO 69999
+      23       70000 TO 79999
+       9       80000 TO 89999
+       5       90000 TO 99999
+      52      100000 TO 149999
+      90      150000 TO 9999999999: 150000+
+  -------
+     908
+ 
+Refusal(-1)            3   (Go To R83767.00)
+Don't Know(-2)       163   (Go To R83765.00)
+TOTAL =========>    1074   VALID SKIP(-4)    6587     NON-INTERVIEW(-5)    5025
+ 
+Min:              0        Max:        2538737        Mean:            98633.35
+ 
+Lead In: None.
+Default Next Question: R83770.00
+--------------------------------------------------------------------------------
+T21291.00    [FA_4]                                         Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             R-SPAR OWN SHARES OF ANY MUTUAL FUNDS?
+ 
+Do you [or] [Spouse/partner's name] own any shares of a mutual fund? Please do 
+not include any pension or 401K accounts, funds held as a part of a trust or 
+[{inc_text10}]  (INTERVIEWER: PLEASE READ IF NECESSARY:) Please include all 
+shares of a mutual fund whether the fund is made up of stock shares, bond 
+shares, or a combination of stock and bond shares.
+ 
+     869       1 Yes   (Go To T21292.00)
+    6567       0 No
+  -------
+    7436
+ 
+Refusal(-1)           44
+Don't Know(-2)        45
+TOTAL =========>    7525   VALID SKIP(-4)     232     NON-INTERVIEW(-5)    4929
+ 
+Min:              0        Max:              1        Mean:                 .12
+ 
+Lead In: T21283.00[Default] T21285.00[Default] T21287.00[Default] 
+         T21288.00[Default] T21289.00[Default] T21290.00[Default]
+Default Next Question: T21302.00
+--------------------------------------------------------------------------------
+T21398.00    [FA_9]                                         Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             R-SPOUSE/PARTNER OWN ANY SHARES OF STOCK
+ 
+[(Other than stock you already reported as a part of a mutual fund- an 
+individual retirement plan- or an employer sponsored retirement plan) Do] you 
+[or] [Spouse/partner's name] own any shares of stock?  (INTERVIEWER: PLEASE READ
+IF NECESSARY:) Please do not include any company stock given to you [or] 
+[Spouse/partner's name] through an employer and held in an Employee Stock 
+Purchase Plan (ESoPP) or in stock options. Please include any type of stock, 
+whether it is common or preferred or closely-held or publicly traded.
+ 
+     990       1 Yes   (Go To T21399.00)
+    6452       0 No
+  -------
+    7442
+ 
+Refusal(-1)           41
+Don't Know(-2)        43
+TOTAL =========>    7526   VALID SKIP(-4)     231     NON-INTERVIEW(-5)    4929
+ 
+Min:              0        Max:              1        Mean:                 .13
+ 
+Lead In: T21347.00[Default] T21355.00[Default] T21362.00[Default] 
+         T21367.00[Default] T21389.00[Default] T22591.00[Default] 
+         T22592.00[Default] T22592.01[Default] T22592.02[Default] 
+         T22593.00[Default] T22593.01[Default] T22594.00[Default] 
+         T21396.00[Default] T22583.00[Default] T22590.00[Default]
+Default Next Question: T21409.00
+--------------------------------------------------------------------------------
+T21401.00    [FA_9A_TRUNC]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             MONEY R-SPAR HAVE IF SOLD/PAID AMT OWE ON STOCK (TRUNCATED)
+ 
+If you sold all of these stock holdings and paid off anything you owed on them, 
+how much money would you [or] [Spouse/partner's name] end up with?
+ 
+(INTERVIEWER: PLEASE READ IF NECESSARY:) Please do not include any company stock
+in an ESoPP or stock options.
+ 
+ 
+        ENTER AMOUNT: $
+ 
+      36           0
+     180           1 TO 4999
+      73        5000 TO 9999
+      67       10000 TO 14999
+      40       15000 TO 19999
+      39       20000 TO 24999
+      23       25000 TO 29999
+      39       30000 TO 39999
+      28       40000 TO 49999
+      36       50000 TO 59999
+      16       60000 TO 69999
+      11       70000 TO 79999
+       7       80000 TO 89999
+       7       90000 TO 99999
+      37      100000 TO 149999
+     124      150000 TO 99999999: 150000+
+  -------
+     763
+ 
+Refusal(-1)            0
+Don't Know(-2)       137   (Go To T21402.00)
+TOTAL =========>     900   VALID SKIP(-4)    6857     NON-INTERVIEW(-5)    4929
+ 
+Min:              0        Max:        3236842        Mean:           152926.28
+ 
+Lead In: None.
+Default Next Question: T21409.00
+--------------------------------------------------------------------------------
+T40304.00    [FA_4]                                         Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             R-SPAR OWN SHARES OF ANY MUTUAL FUNDS?
+ 
+Do you [or] [Spouse/partner's name] own any shares of a mutual fund? Please do 
+not include any pension or 401K accounts, funds held as a part of a trust or 
+[annuity, (or assets you have already told me about.)]  (INTERVIEWER: PLEASE 
+READ IF NECESSARY:) Please include all shares of a mutual fund whether the fund 
+is made up of stock shares, bond shares, or a combination of stock and bond 
+shares.
+ 
+     536       1 Yes   (Go To T40305.00)
+    6309       0 No
+  -------
+    6845
+ 
+Refusal(-1)           40
+Don't Know(-2)        40
+TOTAL =========>    6925   VALID SKIP(-4)     375     NON-INTERVIEW(-5)    5386
+ 
+Min:              0        Max:              1        Mean:                 .08
+ 
+Lead In: T40296.00[Default] T40298.00[Default] T40300.00[Default] 
+         T40301.00[Default] T40302.00[Default] T40303.00[Default]
+Default Next Question: T40313.00
+--------------------------------------------------------------------------------
+T40426.00    [FA_9]                                         Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             R-SPOUSE/PARTNER OWN ANY SHARES OF STOCK
+ 
+[(Other than stock you already reported as a part of a mutual fund- an 
+individual retirement plan- or an employer sponsored retirement plan) Do] you 
+[or] [Spouse/partner's name] own any shares of stock?  (INTERVIEWER: PLEASE READ
+IF NECESSARY:) Please do not include any company stock given to you [or] 
+[Spouse/partner's name] through an employer and held in an Employee Stock 
+Purchase Plan (ESoPP) or in stock options. Please include any type of stock, 
+whether it is common or preferred or closely-held or publicly traded.
+ 
+     816       1 Yes   (Go To T40427.00)
+    6052       0 No
+  -------
+    6868
+ 
+Refusal(-1)           35
+Don't Know(-2)        23
+TOTAL =========>    6926   VALID SKIP(-4)     374     NON-INTERVIEW(-5)    5386
+ 
+Min:              0        Max:              1        Mean:                 .12
+ 
+Lead In: T40359.00[Default] T40367.00[Default] T40374.00[Default] 
+         T40379.00[Default] T40409.00[Default] T40392.00[Default] 
+         T40393.00[Default] T40393.01[Default] T40393.02[Default] 
+         T40394.00[Default] T40394.01[Default] T40395.00[Default] 
+         T40415.00[Default] T40424.00[Default]  T40415.00[0:0]
+Default Next Question: T40437.00
+--------------------------------------------------------------------------------
+T40429.00    [FA_9A_TRUNC]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             MONEY R-SPAR HAVE IF SOLD/PAID AMT OWE ON STOCK (TRUNC)
+ 
+If you sold all of these stock holdings and paid off anything you owed on them, 
+how much money would you [or] [Spouse/partner's name] end up with?
+ 
+(INTERVIEWER: PLEASE READ IF NECESSARY:) Please do not include any company stock
+in an ESoPP or stock options.
+ 
+ 
+        ENTER AMOUNT: $
+ 
+      23           0
+     143           1 TO 4999
+      57        5000 TO 9999
+      40       10000 TO 14999
+      28       15000 TO 19999
+      34       20000 TO 24999
+      14       25000 TO 29999
+      31       30000 TO 39999
+      18       40000 TO 49999
+      27       50000 TO 59999
+      17       60000 TO 69999
+      18       70000 TO 79999
+      11       80000 TO 89999
+       0       90000 TO 99999
+      46      100000 TO 149999
+     126      150000 TO 99999999: 150000+
+  -------
+     633
+ 
+Refusal(-1)            2   (Go To T40433.00)
+Don't Know(-2)       108   (Go To T40430.00)
+TOTAL =========>     743   VALID SKIP(-4)    6557     NON-INTERVIEW(-5)    5386
+ 
+Min:              0        Max:        4011600        Mean:           192647.11
+ 
+Lead In: None.
+Default Next Question: T40437.00
+--------------------------------------------------------------------------------
+T56681.00    [FA_4]                                         Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             R-SPAR OWN SHARES OF ANY MUTUAL FUNDS?
+ 
+Do you [or] [Spouse/partner's name] own any shares of a mutual fund? Please do 
+not include any pension or 401K accounts, funds held as a part of a trust or 
+[annuity, (or assets you have already told me about.)]  (INTERVIEWER: PLEASE 
+READ IF NECESSARY:) Please include all shares of a mutual fund whether the fund 
+is made up of stock shares, bond shares, or a combination of stock and bond 
+shares.
+ 
+     516       1 Yes   (Go To T56682.00)
+    5893       0 No
+  -------
+    6409
+ 
+Refusal(-1)           33
+Don't Know(-2)        34
+TOTAL =========>    6476   VALID SKIP(-4)     436     NON-INTERVIEW(-5)    5774
+ 
+Min:              0        Max:              1        Mean:                 .08
+ 
+Lead In: T56672.00[Default] T56677.00[Default] T56675.00[Default] 
+         T56678.00[Default] T56679.00[Default] T56680.00[Default] 
+         T56673.00[Default]
+Default Next Question: T56690.00
+--------------------------------------------------------------------------------
+T56815.00    [FA_9]                                         Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             R-SPOUSE/PARTNER OWN ANY SHARES OF STOCK
+ 
+[(Other than stock you already reported as a part of a mutual fund- an 
+individual retirement plan- or an employer sponsored retirement plan) Do] you 
+[or] [Spouse/partner's name] own any shares of stock?  (INTERVIEWER: PLEASE READ
+IF NECESSARY:) Please do not include any company stock given to you [or] 
+[Spouse/partner's name] through an employer and held in an Employee Stock 
+Purchase Plan (ESoPP) or in stock options. Please include any type of stock, 
+whether it is common or preferred or closely-held or publicly traded.
+ 
+     779       1 Yes   (Go To T56816.00)
+    5631       0 No
+  -------
+    6410
+ 
+Refusal(-1)           36
+Don't Know(-2)        31
+TOTAL =========>    6477   VALID SKIP(-4)     435     NON-INTERVIEW(-5)    5774
+ 
+Min:              0        Max:              1        Mean:                 .12
+ 
+Lead In: T56735.00[Default] T56743.00[Default] T56750.00[Default] 
+         T56757.00[Default] T56784.00[Default] T56798.00[Default] 
+         T56777.00[Default] T56805.00[Default] T56814.00[Default]  
+         T56805.00[0:0]
+Default Next Question: T56825.00
+--------------------------------------------------------------------------------
+T56818.00    [FA_9A_TRUNC]                                  Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             MONEY R-SPAR HAVE IF SOLD/PAID AMT OWE ON STOCK (TRUNC)
+ 
+If you sold all of these stock holdings and paid off anything you owed on them, 
+how much money would you [or] [Spouse/partner's name] end up with?
+ 
+(INTERVIEWER: PLEASE READ IF NECESSARY:) Please do not include any company stock
+in an ESoPP or stock options.
+ 
+ 
+        ENTER AMOUNT: $
+ 
+      26           0
+      95           1 TO 4999
+      57        5000 TO 9999
+      39       10000 TO 14999
+      18       15000 TO 19999
+      24       20000 TO 24999
+      23       25000 TO 29999
+      28       30000 TO 39999
+      25       40000 TO 49999
+      31       50000 TO 59999
+       9       60000 TO 69999
+      11       70000 TO 79999
+       7       80000 TO 89999
+       5       90000 TO 99999
+      44      100000 TO 149999
+     165      150000 TO 99999999: 150000+
+  -------
+     607
+ 
+Refusal(-1)            1   (Go To T56822.00)
+Don't Know(-2)        92   (Go To T56821.00)
+TOTAL =========>     700   VALID SKIP(-4)    6212     NON-INTERVIEW(-5)    5774
+ 
+Min:              0        Max:        4700000        Mean:           249531.37
+ 
+Lead In: None.
+Default Next Question: T56825.00
+--------------------------------------------------------------------------------
+X00458.00    [BUSOWN-1]                                     Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             R EVER OWNED A BUSINESS
+ 
+We would like to know whether you have ever owned a business. By business, we 
+mean any activity operated with regularity for the purpose of generating income 
+or profit. We are interested in all incorporated companies and partnerships in 
+which you had any ownership share, as well as unincorporated businesses that you
+may have operated as a sole proprietor, independent contractor, consultant, or 
+free-lancer. This even includes informal businesses such as cleaning services, 
+gardening services, and the selling of goods out of your home, as long as they 
+generated income and were operated on a regular basis. The only businesses we 
+are not interested in are those operated on a highly sporadic basis, those 
+carried out purely as a hobby, and those in which you were merely a shareholder 
+or investor with no role in the operation of the company.  Since you were 18 
+years old, have you ever owned a business that would be of interest to us 
+according to this description?  (INTERVIEWER: PLEASE SEE HELP SCREEN FOR FURTHER
+INFORMATION.)
+ 
+    1221       1 YES
+    6928       0 NO   (Go To X00613.00)
+  -------
+    8149
+ 
+Refusal(-1)            7
+Don't Know(-2)         3
+TOTAL =========>    8159   VALID SKIP(-4)    4527     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:              1        Mean:                 .15
+ 
+Lead In: X00457.00[Default]
+Default Next Question: X00459.00
+--------------------------------------------------------------------------------
+X00459.00    [BUSOWN-2]                                     Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF BUSINESSES R EVER OWNED
+ 
+[{esbus_text1}] How many such businesses have you owned?
+ 
+ 
+        ENTER NUMBER:
+ 
+     371           0   (Go To X00613.00)
+     673           1
+     126           2
+      42           3
+      17           4
+       1           5
+       1           6
+  -------
+    1231
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1231   VALID SKIP(-4)   11455     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:              6        Mean:                 .92
+ 
+Lead In: X00458.00[Default]
+Default Next Question: X00460.00
+--------------------------------------------------------------------------------
+X00612.00    [BUSOWN-23A]                                   Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             ANY OF R FAMILY MEMBERS EVER OWED A BUSINESS PRIOR TO ACQUIRING R 
+             BUSINESS
+ 
+Prior to acquiring your (first) business, had any of your family members ever 
+owned a business? (READ IF NECESSARY:) Please include spouses, domestic 
+partners, parents or guardians, brothers, sisters of other close relatives.
+ 
+     487       1 YES
+     734       0 NO   (Go To X00616.00)
+  -------
+    1221
+ 
+Refusal(-1)            8
+Don't Know(-2)         2
+TOTAL =========>    1231   VALID SKIP(-4)   11455     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:              1        Mean:                  .4
+ 
+Lead In: None.
+Default Next Question: X00614.00
+--------------------------------------------------------------------------------
+X00613.00    [BUSOWN-23B]                                   Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             ANY OF R FAMILY MEMBERS EVER OWED A BUSINESS
+ 
+Have any of your family members ever owned a business? (READ IF NECESSARY:) 
+Please include spouses, domestic partners, parents or guardians, brothers, 
+sisters of other close relatives.
+ 
+    1771       1 YES
+    5135       0 NO   (Go To X00616.00)
+  -------
+    6906
+ 
+Refusal(-1)            3
+Don't Know(-2)        19
+TOTAL =========>    6928   VALID SKIP(-4)    5758     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:              1        Mean:                 .26
+ 
+Lead In: X00599.00[Default] X00600.00[Default] X00601.00[Default] 
+         X00602.00[Default] X00603.00[Default] X00604.00[Default] 
+         X00605.00[Default] X00606.00[Default] X00607.00[Default] 
+         X00608.00[Default] X00609.00[Default] X00610.00[Default] 
+         X00611.00[Default]  X00458.00[0:0] X00588.00[1:1] X00459.00[0:0] 
+         X00603.00[1:99]
+Default Next Question: X00615.00
+--------------------------------------------------------------------------------
+X00614.00    [BUSOWN-24A]                                   Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             R WORKED FOR ANY OF THOSE FAMILY MEMBERS PRIOR ACQUIRING R BUS
+ 
+Did you work for any of those family members prior to acquiring your (first) 
+business? (READ IF NECESSARY:) Please include spouses, domestic partners, 
+parents or guardians, brothers, sisters of other close relatives.
+ 
+     231       1 YES
+     258       0 NO
+  -------
+     489
+ 
+Refusal(-1)            7
+Don't Know(-2)         1
+TOTAL =========>     497   VALID SKIP(-4)   12189     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:              1        Mean:                 .47
+ 
+Lead In: X00612.00[Default]
+Default Next Question: X00616.00
+--------------------------------------------------------------------------------
+X00615.00    [BUSOWN-24B]                                   Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             R WORKED FOR ANY OF THOSE FAMILY MEMBERS
+ 
+Did you work for any of those family members? (READ IF NECESSARY:) Please 
+include spouses, domestic partners, parents or guardians, brothers, sisters of 
+other close relatives.
+ 
+     505       1 YES
+    1283       0 NO
+  -------
+    1788
+ 
+Refusal(-1)            1
+Don't Know(-2)         4
+TOTAL =========>    1793   VALID SKIP(-4)   10893     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:              1        Mean:                 .28
+ 
+Lead In: X00613.00[Default]
+Default Next Question: X00616.00
+--------------------------------------------------------------------------------
+X00620.00    [BUSOWN-29]                                    Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             R CONSIDERS R TO BE AN ENTREPRENEUR
+ 
+Do you consider yourself to be an entrepreneur?  (INTERVIEWER: IF NECESSARY 
+EXPLAIN THAT AN "ENTREPRENEUR" IS SOMEONE WHO LAUNCHES A BUSINESS ENTERPRISE, 
+USUALLY WITH CONSIDERABLE INITIATIVE AND RISK.)
+ 
+    1556       1 YES
+    6482       0 NO
+  -------
+    8038
+ 
+Refusal(-1)            2
+Don't Know(-2)       119
+TOTAL =========>    8159   VALID SKIP(-4)    4527     NON-INTERVIEW(-5)       0
+ 
+Min:              0        Max:              1        Mean:                 .19
+ 
+Lead In: X00616.00[Default] X00619.00[Default] X00620.00[Default]  
+         X00618.00[-2:-1] X00618.00[2:2]
+Default Next Question: X00620.00

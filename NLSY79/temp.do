@@ -1,43 +1,4 @@
 
-local identifier1 = 1
-local identifier2 = 1
-
-qui foreach j of varlist INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE {
-	forval k = 1/4 {
-		reghdfe `j' l.`j' IMPUTED_CRRA_`k' i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & year == 1994 & DEGREE_SEP != . , absorb(AGE_CAT) vce(cluster R0000100)
-	eststo model_`identifier2'_`identifier1'
-	forval i = 0/2 {
-		reghdfe `j' l.`j' IMPUTED_CRRA_`k' i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & year == 1994 & DEGREE_SEP == `i' , absorb(AGE_CAT) vce(cluster R0000100)
-		eststo model_`identifier2'_`identifier1'_`j'
-		local ++identifier1
-	}
-	
-	}
-	local ++identifier2
-	
-	}
-	
-
-eststo clear	
-	
-local identifier1 = 1
-local identifier2 = 1
-qui foreach j of varlist INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE {
-	forval k = 1/4 {
-		reghdfe `j' l.`j' IMPUTED_CRRA_`k' i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME i.DEGREE_SEP if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & year == 1994, absorb(AGE_CAT) vce(cluster R0000100)
-	eststo model_`identifier2'_`identifier1'
-	local ++identifier1
-	}
-	local ++identifier2
-	
-	}
-	
-	
-forvalues i = 1/5 {
-		esttab model_`i'*, keep(IMPUTED_CRRA_*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress
-	}
-	
-	
 tab year, gen(year_)	
 tab AGE_CAT, gen(AGE_CAT_)
 	
@@ -46,8 +7,6 @@ reghdfe INV_ALL IMPUTED_CRRA_1 c.IMPUTED_CRRA_1#AGE_CAT  c.IMPUTED_CRRA_1#C00054
 reghdfe d.INV_ALL d.IMPUTED_CRRA_4 IMPUTED_CRRA_4 c.IMPUTED_CRRA_4#AGE_CAT  c.IMPUTED_CRRA_4#C00054 c.IMPUTED_CRRA_4#b(3).C00053 i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_SEP, absorb(year AGE_CAT) cluster(R0000100)
 
 xtreg INV_ALL IMPUTED_CRRA_1 i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_SEP year_* AGE_CAT_*, fe
-
-xtabond2  GOODS_ALL L.GOODS_ALL L.IMPUTED_CRRA_1 i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_SEP year_* AGE_CAT_*, gmm(l.GOODS_ALL L.IMPUTED_CRRA_4 WKS_WORKED WKS_WORKED_SPS ln_INCOME, orthog) iv(i.C00054 b(3).C00053 NO_SIB FAM_SIZE AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 i.DEGREE_SEP  year_* AGE_CAT_*) cluster(R0000100) orthog twostep
 
 
 reghdfe d.INV_ALL d.IMPUTED_CRRA_4 i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_SEP if year == 2010, absorb(year AGE_CAT) cluster(R0000100)
@@ -58,4 +17,53 @@ reghdfe d.INV_ALL d.IMPUTED_CRRA_4 i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 
 reghdfe TIME_ALL IMPUTED_CRRA_1 NO_SIB FAM_SIZE i.C00054#year b(3).C00053#year c.C000700#year c.AGE_FIRST_BIRTH#year c.R0618301#year AGE_14#year c.R0006500#year c.R0007900#year WKS_WORKED WKS_WORKED_SPS ln_INCOME c.MOM_AGE#year, absorb(year AGE_CAT C0000100) vce(cluster R0000100)
 
 
+
+*==============================================================================
+local identifier = 1
+qui foreach i of varlist INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE {
+	xtabond2 `i' L.`i' L.IMPUTED_CRRA_1 i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_SEP AGE_CAT_* year_*, gmm(l.GOODS_ALL WKS_WORKED WKS_WORKED_SPS ln_INCOME, orthog) iv(i.C00054 b(3).C00053 NO_SIB FAM_SIZE AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 i.DEGREE_SEP AGE_CAT_* year_* L.IMPUTED_CRRA_1) cluster(R0000100) orthog twostep
+	eststo model_`identifier'_a
+	
+	xtabond2 `i' L.`i' L.IMPUTED_CRRA_4 i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_SEP AGE_CAT_* year_*, gmm(l.GOODS_ALL L.IMPUTED_CRRA_4 WKS_WORKED WKS_WORKED_SPS ln_INCOME, orthog) iv(i.C00054 b(3).C00053 NO_SIB FAM_SIZE AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 i.DEGREE_SEP AGE_CAT_* year_*) cluster(R0000100) orthog twostep
+	eststo model_`identifier'_b
+	
+	local ++identifier
+}
+
+esttab model_*_a, keep(L.IMPUTED_CRRA_1) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress
+esttab model_*_b, keep(L.IMPUTED_CRRA_4) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress
+
+
+
+
+
+local identifier = 1
+qui foreach i of varlist INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE {
+	xtabond2 `i' L.`i' L.IMPUTED_CRRA_1 i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_SEP AGE_CAT_* year_*, gmm(l.`i' WKS_WORKED WKS_WORKED_SPS ln_INCOME, orthog) iv(i.C00054 b(3).C00053 NO_SIB FAM_SIZE AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 i.DEGREE_SEP AGE_CAT_* year_* L.IMPUTED_CRRA_1) cluster(R0000100) orthog twostep
+	eststo model_`identifier'_a
+	
+	xtabond2 `i' L.`i' L.IMPUTED_CRRA_4 i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_SEP AGE_CAT_* year_*, gmm(l.`i' L.IMPUTED_CRRA_4 WKS_WORKED WKS_WORKED_SPS ln_INCOME, orthog) iv(i.C00054 b(3).C00053 NO_SIB FAM_SIZE AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 i.DEGREE_SEP AGE_CAT_* year_*) cluster(R0000100) orthog twostep
+	eststo model_`identifier'_b
+	
+	local ++identifier
+}
+
+esttab model_*_a, keep(L.IMPUTED_CRRA_1) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress
+esttab model_*_b, keep(L.IMPUTED_CRRA_4) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress
+
+
+
+local identifier = 10
+qui foreach i of varlist INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE {
+	xtabond2 `i' L.`i' L.IMPUTED_CRRA_4 i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_SEP AGE_CAT_* year_* if X0045800 == 0, gmm(l.GOODS_ALL WKS_WORKED WKS_WORKED_SPS ln_INCOME L.IMPUTED_CRRA_4, orthog) iv(i.C00054 b(3).C00053 NO_SIB FAM_SIZE AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 i.DEGREE_SEP AGE_CAT_* year_*) cluster(R0000100) orthog twostep
+	eststo model_`identifier'_a
+	
+	xtabond2 `i' L.`i' L.IMPUTED_CRRA_4 i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_SEP AGE_CAT_* year_* if X0045800 == 1, gmm(l.GOODS_ALL L.IMPUTED_CRRA_4 WKS_WORKED WKS_WORKED_SPS ln_INCOME, orthog) iv(i.C00054 b(3).C00053 NO_SIB FAM_SIZE AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 i.DEGREE_SEP AGE_CAT_* year_*) cluster(R0000100) orthog twostep
+	eststo model_`identifier'_b
+	
+	local ++identifier
+}
+
+esttab model_*_a, keep(L.IMPUTED_CRRA_4) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress
+esttab model_*_b, keep(L.IMPUTED_CRRA_4) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress
 
