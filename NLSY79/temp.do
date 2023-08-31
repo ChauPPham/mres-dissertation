@@ -1,8 +1,4 @@
 
-tab year, gen(year_)	
-tab AGE_CAT, gen(AGE_CAT_)
-	
-reghdfe INV_ALL IMPUTED_CRRA_1 c.IMPUTED_CRRA_1#AGE_CAT  c.IMPUTED_CRRA_1#C00054 c.IMPUTED_CRRA_1#b(3).C00053 i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_SEP, absorb(year AGE_CAT) cluster(R0000100)
 
 reghdfe d.INV_ALL d.IMPUTED_CRRA_4 IMPUTED_CRRA_4 c.IMPUTED_CRRA_4#AGE_CAT  c.IMPUTED_CRRA_4#C00054 c.IMPUTED_CRRA_4#b(3).C00053 i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_SEP, absorb(year AGE_CAT) cluster(R0000100)
 
@@ -14,7 +10,7 @@ reghdfe d.INV_ALL d.IMPUTED_CRRA_4 i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 
 
 
 
-reghdfe TIME_ALL IMPUTED_CRRA_1 NO_SIB FAM_SIZE i.C00054#year b(3).C00053#year c.C000700#year c.AGE_FIRST_BIRTH#year c.R0618301#year AGE_14#year c.R0006500#year c.R0007900#year WKS_WORKED WKS_WORKED_SPS ln_INCOME c.MOM_AGE#year, absorb(year AGE_CAT C0000100) vce(cluster R0000100)
+reghdfe TIME_ALL L.TIME_ALL cl.TIME_ALL#c.NO_SIB L.IMPUTED_CRRA_4 NO_SIB FAM_SIZE i.C00054#year b(3).C00053#year c.C000700#year c.AGE_FIRST_BIRTH#year c.R0618301#year AGE_14#year c.R0006500#year c.R0007900#year WKS_WORKED WKS_WORKED_SPS ln_INCOME c.MOM_AGE#year, absorb(year AGE_CAT C0000100) vce(cluster R0000100)
 
 
 
@@ -66,4 +62,26 @@ qui foreach i of varlist INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE {
 
 esttab model_*_a, keep(L.IMPUTED_CRRA_4) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress
 esttab model_*_b, keep(L.IMPUTED_CRRA_4) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress
+
+
+
+
+preserve
+keep if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & WKS_WORKED_SPS != . & IMPUTED_CRRA_1 != . & year >= 1993
+keep DEGREE_CAT C0000100 year
+tab DEGREE_CAT, gen(DEGREE_CAT_)
+rename DEGREE_CAT_* DEGREE_CAT_*_ 
+reshape wide DEGREE_CAT_*_, i(C0000100) j(year)
+
+tab su DEGREE_CAT_*
+
+
+restore
+
+
+
+
+
+
+
 
