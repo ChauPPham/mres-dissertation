@@ -1034,7 +1034,7 @@ forval i = 1/5 {
 
 
 /*==============================*/
-/* RESULT BY AGE-GROUP: TABLE 9 */
+/* RESULT BY AGE-GROUP: TABLE 8 */
 /*==============================*/
 
 local identifier = 11
@@ -1067,13 +1067,13 @@ qui foreach i of varlist INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE {
 	local ++identifier
 }
 
-forval i = 1/5 {
+forval i = 11/15 {
 	esttab model_`i'*_a_*, keep(L.IMPUTED_CRRA_*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress
 	esttab model_`i'*_b_*, keep(L.IMPUTED_CRRA_*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress
-	if `i' == 1 esttab model_`i'_a_* using "tex/result-age", keep(L.IMPUTED_CRRA_*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress booktabs replace
-	if `i' == 1 esttab model_`i'_b_* using "tex/result-age", keep(L.IMPUTED_CRRA_*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress booktabs append
-	if `i' > 1 esttab model_`i'_a_* using "tex/result-age", keep(L.IMPUTED_CRRA_*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress booktabs append
-	if `i' > 1 esttab model_`i'_b_* using "tex/result-age", keep(L.IMPUTED_CRRA_*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress booktabs append
+*	if `i' == 1 esttab model_`i'_a_* using "tex/result-age", keep(L.IMPUTED_CRRA_*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress booktabs replace
+*	if `i' == 1 esttab model_`i'_b_* using "tex/result-age", keep(L.IMPUTED_CRRA_*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress booktabs append
+*	if `i' > 1 esttab model_`i'_a_* using "tex/result-age", keep(L.IMPUTED_CRRA_*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress booktabs append
+*	if `i' > 1 esttab model_`i'_b_* using "tex/result-age", keep(L.IMPUTED_CRRA_*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress booktabs append
 }
 
 
@@ -1116,7 +1116,7 @@ qui foreach i of varlist INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE {
 	eststo model_`identifier'_f
 	
 	xtabond2 `i' L.`i' L.IMPUTED_CRRA_1 i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_SEP AGE_CAT_* year_* if BUS_OWN == 1, gmm(l.GOODS_ALL WKS_WORKED WKS_WORKED_SPS ln_INCOME, orthog) iv(i.C00054 b(3).C00053 NO_SIB FAM_SIZE AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 i.DEGREE_CAT AGE_CAT_* year_* L.IMPUTED_CRRA_1) cluster(R0000100) orthog twostep
-	eststo model_`identifier'_j
+	eststo model_`identifier'_g
 	
 	xtabond2 `i' L.`i' L.IMPUTED_CRRA_4 i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_CAT AGE_CAT_* year_* if BUS_OWN == 1, gmm(l.GOODS_ALL L.IMPUTED_CRRA_4 WKS_WORKED WKS_WORKED_SPS ln_INCOME, orthog) iv(i.C00054 b(3).C00053 NO_SIB FAM_SIZE AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 i.DEGREE_SEP AGE_CAT_* year_*) cluster(R0000100) orthog twostep
 	eststo model_`identifier'_h
@@ -1137,7 +1137,7 @@ qui foreach i of varlist INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE {
 	local ++identifier
 }
 
-forval i = 21/15 {
+forval i = 21/25 {
 	esttab model_`i'*, keep(L.IMPUTED_CRRA_*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.2f) compress
 *	if `i' == 11 esttab model_`i'* using "tex/result-entrepreneur", keep(L.IMPUTED_CRRA_*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.2f) compress booktabs replace
 *	if `i' > 11 esttab model_`i'* using "tex/result-entrepreneur", keep(L.IMPUTED_CRRA_*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.2f) compress booktabs append
