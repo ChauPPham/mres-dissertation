@@ -28,6 +28,11 @@ Arellano, M. and Bover, O. (1995).
   error-components models.
 \newblock {\em Journal of econometrics}, 68(1):29--51.
 
+\bibitem[Attanasio et~al., 2020]{attanasio2020human}
+Attanasio, O., Meghir, C., and Nix, E. (2020).
+\newblock Human capital development and parental investment in india.
+\newblock {\em The Review of Economic Studies}, 87(6):2511--2541.
+
 \bibitem[Barseghyan et~al., 2011]{barseghyan2011risk}
 Barseghyan, L., Prince, J., and Teitelbaum, J.~C. (2011).
 \newblock Are risk preferences stable across contexts? evidence from insurance
@@ -73,11 +78,22 @@ Brachert, M., Hyll, W., and Titze, M. (2017).
   entry into entrepreneurship and entrepreneurial survival.
 \newblock {\em Applied Economics Letters}, 24(7):477--480.
 
+\bibitem[Brooks-Gunn and Duncan, 1997]{brooks1997effects}
+Brooks-Gunn, J. and Duncan, G.~J. (1997).
+\newblock The effects of poverty on children.
+\newblock {\em The future of children}, pages 55--71.
+
 \bibitem[Brown et~al., 2012]{brown2012parental}
 Brown, S., Ortiz-Nu{\~n}ez, A., and Taylor, K. (2012).
 \newblock Parental risk attitudes and children's academic test scores: Evidence
   from the us panel study of income dynamics.
 \newblock {\em Scottish Journal of Political Economy}, 59(1):47--70.
+
+\bibitem[Brown, 2004]{brown2004family}
+Brown, S.~L. (2004).
+\newblock Family structure and child well-being: The significance of parental
+  cohabitation.
+\newblock {\em Journal of marriage and family}, 66(2):351--367.
 
 \bibitem[Camerer and Hogarth, 1999]{camerer1999effects}
 Camerer, C.~F. and Hogarth, R.~M. (1999).
@@ -89,6 +105,10 @@ Camerer, C.~F. and Hogarth, R.~M. (1999).
 Carneiro, P. and Ginja, R. (2016).
 \newblock Partial insurance and investments in children.
 \newblock {\em The Economic Journal}, 126(596):F66--F95.
+
+\bibitem[Carneiro and Heckman, 2003]{carneiro2003human}
+Carneiro, P.~M. and Heckman, J.~J. (2003).
+\newblock Human capital policy.
 
 \bibitem[{Center for Human Resource Research}, 2004]{center2004nlsy79}
 {Center for Human Resource Research} (2004).
@@ -103,6 +123,10 @@ Charness, G., Gneezy, U., and Imas, A. (2013).
 Checchi, D., Fiorio, C.~V., and Leonardi, M. (2014).
 \newblock Parents' risk aversion and children's educational attainment.
 \newblock {\em Labour Economics}, 30:164--175.
+
+\bibitem[Chevalier, 2004]{chevalier2004parental}
+Chevalier, A. (2004).
+\newblock Parental education and child's education: A natural experiment.
 
 \bibitem[Cho and Orazem, 2021]{cho2021endogenous}
 Cho, I. and Orazem, P.~F. (2021).
@@ -129,6 +153,12 @@ Currie, J. (2001).
 Currie, J. and Vogl, T. (2013).
 \newblock Early-life health and adult circumstance in developing countries.
 \newblock {\em Annual Review of Economics}, 5(1):1--36.
+
+\bibitem[Dahl and Lochner, 2012]{dahl2012impact}
+Dahl, G.~B. and Lochner, L. (2012).
+\newblock The impact of family income on child achievement: Evidence from the
+  earned income tax credit.
+\newblock {\em American Economic Review}, 102(5):1927--1956.
 
 \bibitem[David, 1974]{david1974fortune}
 David, P.~A. (1974).
@@ -298,6 +328,12 @@ Samuelson, W. and Zeckhauser, R. (1988).
 \newblock Status quo bias in decision making.
 \newblock {\em Journal of risk and uncertainty}, 1:7--59.
 
+\bibitem[Schady, 2011]{schady2011parents}
+Schady, N. (2011).
+\newblock Parents’ education, mothers’ vocabulary, and cognitive
+  development in early childhood: Longitudinal evidence from ecuador.
+\newblock {\em American Journal of public health}, 101(12):2299--2307.
+
 \bibitem[Schmidt, 2008]{schmidt2008risk}
 Schmidt, L. (2008).
 \newblock Risk preferences and the timing of marriage and childbearing.
@@ -343,6 +379,12 @@ Windmeijer, F. (2005).
 W{\"o}lfel, O. and Heineck, G. (2012).
 \newblock Parental risk attitudes and children's secondary school track choice.
 \newblock {\em Economics of Education Review}, 31(5):727--743.
+
+\bibitem[Yeung et~al., 2002]{yeung2002money}
+Yeung, W.~J., Linver, M.~R., and Brooks-Gunn, J. (2002).
+\newblock How money matters for young children's development: Parental
+  investment and family processes.
+\newblock {\em Child development}, 73(6):1861--1879.
 
 \bibitem[Yilmazer and Lich, 2015]{yilmazer2015portfolio}
 Yilmazer, T. and Lich, S. (2015).

@@ -1,14 +1,17 @@
-\documentclass[]{article}
+\documentclass[emulatestandardclasses, 10pt, abstract = true]{scrartcl}
 
 %opening
-\title{Risk preference of mothers and investment in children}
-\author{Chau Pham}
+\title{Maternal risk preference and investment in children}
+\author{Chau Pham\\ MRes Economics Dissertation \\ University College London \\ \textbf{Supervisor: Professor Pedro Carneiro}}
+
+
+%-------------------------- packages
 %\date{} for no date shown
 \usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools, mathrsfs}
 \usepackage[margin = 1.0in]{geometry}
 \usepackage{bbold, soul}
 \usepackage{tgpagella}
-\usepackage{braket, setspace, parskip, enumitem}
+\usepackage{braket, setspace, parskip, enumitem, titling}
 \usepackage[colorlinks, citecolor = blue]{hyperref}
 \usepackage[nameinlink, noabbrev]{cleveref}	% Use \Cref always 
 \usepackage[justification=centering]{caption}
@@ -24,7 +27,7 @@
 \renewcommand\theadgape{\Gape[4pt]}
 \renewcommand\cellgape{\Gape[4pt]}
 
-
+\setlength{\droptitle}{-2em}
 
 %\setlist[enumerate]{label=(\roman*)}
 
@@ -37,9 +40,27 @@
 
 \begin{document}
 
-\maketitle
 \onehalfspacing
 
+\begin{titlingpage}
+\maketitle
+\begin{abstract}
+\noindent 
+This article studies the effect of maternal risk preference on investment in children. 
+\end{abstract}
+
+
+\vspace{2em}
+\begin{center}
+	\begin{minipage}[!h]{.89\linewidth}\small
+		\begin{center}
+			\textbf{Acknowledgement}
+		\end{center}
+		\noindent I would like to offer my utmost gratitude to my supervisor, Professor Pedro Carneiro, for his valuable guidance and suggestions on the direction and minute details of the dissertation.
+	\end{minipage}
+\end{center}
+
+\end{titlingpage}
 
 %===================================================================================================================================================================
 %===================================================================================================================================================================
@@ -47,22 +68,21 @@
 \section{Introduction}
 Investment in human capital has been considered risky since the works of \citet{becker1962investment, levhari1974effect} and \citet{schultz1971investment}. Returns to investment in human capital, ability, probability of getting a good job are few of the various accounts of risk. The traditional approach on the topic examines how an individual's risk preference affects her investment decision. Earlier theoretical works consider the investment choice in various contexts including migration \citep{david1974fortune}, job mobility \citep{johnson1978theory}, hazardous job \citep{thaler1976value}, and between physical and human capital \citep{levhari1974effect}. 
 
-This line of inquiry is, however, valid insofar as the decision maker is the individual under study. Occupational choice, tertiary education, specific skills training, to name a few, fall under the domain of individual choice wherein an individual is the decision maker and she exercises scrutiny before making her choice. For children and teenagers, the choice are, more often than not, not theirs to make as they lack the appropriate capacity to make an informed choice while various factors such as pecuniary issues are beyond their control. At the same  time, a vast literature on early childhood intervention has deemed these early investments substantially beneficial for future outcomes of children.\footnote{See \citet{Currie2001} and \citet{NORES2010} for a comprehensive review on a large number of childhood intervention programs. Prenatal and postnatal investments have also been found to affect later life outcomes \citep{currie2011human, almond2011killing, currie2013early}.} Furthermore, as highlighted by \citet{jacob2008improving} and \citet{duflo2011poor}, early childhood interventions are most effective in levelling the playground for disadvantaged children. Thus, parents' investment during early childhood plays a pivotal role in shaping the children's future paths. If investment in human capital is risky, the importance of understanding the effect of parental risk preference on children investment naturally follows.
-
-Most works that focus on parental risk attitudes study how various educational outcomes are influenced by risk preference of parents. The majority reported negative effects of risk aversion on educational outcomes including test scores in the US \citep{brown2012parental}, college enrollment in Italy \citep{checchi2014parents}, cognitive outcomes in Indonesia \citep{hartarto2023parental}. Furthermore, \citet{frempong2021risk} found a positive association between risk aversion and child labour. This, coupled with evidence found by \citet{HEADY2003385} and \citet{bezerra2009impact} suggesting child labour impedes learning, also points to a negative relationship between parental risk aversion and educational outcomes. With regards to various school tracks which offer different curriculums, \citet{wolfel2012parental} confirmed the negative effects of maternal risk aversion on daughters for a sample of German students such that daughters of more risk-averse mothers are more likely to pursue lower secondary track. On the other hand, \citet{leonardi2007parents} found no effect of risk aversion on secondary school track choice for a sample of Italian students.\footnote{German and Italy secondary schools mainly separate curriculums based on later-life goals which can be broadly categorized into vocational-oriented education or traditional pathway to university. Schools in Germany also adopt a recommendation system based on the child's ability and which greatly affects track choice.}
-
-In general, the literature on parental risk aversion is scarce whilst results are inconclusive. In direct relation to our study, \citet{sovero2018risk} uses height-for-age, and BMI-for-age along with other several spending categories to measure investment of Mexican parents. Risk attitudes of parents are elicited using a series of questions with multiple price list structure. Her results indicate a positive linkage between risk averse mothers and their investment on sons, i.e., risk averse mothers invest more on sons than daughters. Using data on Uganda households, \citet{tabetando2019parental} confirms the positive relation between risk aversion and investment, measured by level of educational expenditure and its share of household budget. Although wealthier households tend to be more risk averse, the relationship is reversed for poor households. That is, risk aversion depresses investment in credit constrained households.      
+This line of inquiry is, however, valid insofar as the decision maker is the individual under study. Occupational choice, tertiary education, specific skills training, to name a few, fall under the domain of individual choice wherein an individual is the decision maker and she exercises scrutiny before making her choice. For children and teenagers, the choice are, more often than not, not theirs to make as they lack the appropriate capacity to make an informed choice while various factors such as pecuniary issues are beyond their control. At the same  time, a vast literature on early childhood intervention has deemed these early investments substantially beneficial for future outcomes of children.\footnote{See \citet{Currie2001} and \citet{NORES2010} for a comprehensive review on a large number of childhood intervention programs. Prenatal and postnatal investments have also been found to affect later life outcomes \citep{currie2011human, almond2011killing, currie2013early}.} Furthermore, as highlighted by \citet{jacob2008improving} and \citet{duflo2011poor}, early childhood interventions are most effective in levelling the playground for disadvantaged children. Thus, parents' investment during early childhood plays a pivotal role in shaping the children's future paths. If investment in human capital is risky, the importance of understanding the effect of parental risk preference on children investment naturally follows. 
+    
 
 Using National Longitudinal Study of Youth 1979 (NLSY79) and the accompanying dataset on children to mothers in NLSY79, we study the effects of maternal risk aversion on 5 measure parental inputs captured by various aspects of home environment including the general HOME (Home Observation Measurement of the Environment) index, Goods index, Time index, Cognitive Stimulation percentile score and Emotional Support percentile score for a sample of 5167 children. We measure the first three dimensions  Maternal risk aversion is measured by a series of questions on lifetime income gamble administered to participants in 1993, 2002, 2004, 2006, 2010, 2012 and 2014. In each wave, the sequence of responses categorises respondents into four groups, ranked from the least risk averse to the most risk averse. We then follow \citet{kimball2008imputing, kimball2009risk} to deal with response errors and potential confounders through the imputation of coefficient of relative risk aversion (RRA). The explicit correction for confounders from survey responses is necessary as mother's risk preference is associated a number of factors that have direct linkage to investment in children or even life outcomes. \citet{schmidt2008risk} found that high levels of risk tolerance were associated with earlier births at young ages, delayed marriage, and delayed fertility at older ages among highly-educated women in the Panel Study of Income Dynamics (PSID). \citet{spivey2010desperation} also confirmed the longer time-to-marriage for risk-loving respondents compared to their risk-averse counterparts using NLSY79 data. Then risk preference of mothers have potential effects on not only direct investment in children but also indirect channels including mother's education, mother's financial stability, and preparation to motherhood among others. Failure to account for these factors predetermined to the investment decision likely generates a downward bias. In addition, the imputation allows the investigation of the effects of maternal risk aversion on investment in children under two assumptions, namely time-invariant risk preference or constant relative risk aversion (CRRA) and time-varying risk preference. To permit a more in-depth discussion, we also look at how the effects of risk preference vary by age-group of children and by measures of entrepreneurship of mothers.
  
-\alert{Since past investments likely correlate with future investment, especially in the goods dimension, we adopt a 2-step GMM \citep{arellano1991some, blundell1998initial} with orthogonal deviations \citep{arellano1995another} to deal with autocorrelation in dynamic panel. Our results indicate a negative effect of maternal risk aversion on goods investment. The effect is large, standing at -0.46 point (about 0.5 SD) lower for mothers who are 1.15 SD more risk averse than the average mother. This result is robust to various specifications and tests across different subsamples. Further investigation reveal that the negative results are largely driven by mothers who identify as entrepreneurs but not necessarily own any business. Investment in goods made by these mothers for children between 3-5 and 10-14 is especially prone to the mothers' degree of risk aversion. We surmise that these mothers perceive substantial ``risks" when their children enter the ``sensitive" periods, defined as a period when formulation of skills are more productive \citep{knudsen2006economic, cunha2007technology}, and accordingly reduce investment the more risk averse they are. This hypothesis hinges on the assumption that these entrepreneur mothers treat investment in goods for children and investment in firms, such as in physical capital, in a synonymous manner, perhaps, due to their pecuniary nature. In an entrepreneurial setting, more risk averse business owners are found to have smaller firms with lower leverage \citep{herranz2015entrepreneurs}. To the extent that entrepreneur mothers' perception of goods investment is similar to that of business investment, they would reduce investment in goods in periods when ``risks" are high, i.e., when children enter pre-school or puberty.}  
+Since past investments likely correlate with future investment, especially in the goods dimension, we adopt a 2-step GMM \citep{arellano1991some, blundell1998initial} with orthogonal deviations \citep{arellano1995another} to deal with autocorrelation in dynamic panel. Our results indicate a negative effect of maternal risk aversion on goods investment. The effect is large, standing at -0.46 point (about 0.5 SD) lower for children of mothers who are 1.15 SD more risk averse than the average mother. This result is robust to various specifications and tests across different subsamples. Further investigation reveal that the negative results are largely driven by mothers who identify as entrepreneurs but not necessarily own any business. Investment in goods made by these mothers for children between 3-5 and 10-14 is especially prone to the mothers' degree of risk aversion. We surmise that these mothers perceive substantial ``risks" when their children enter the ``sensitive" periods, defined as periods when formulation of skills are more productive \citep{knudsen2006economic, cunha2007technology}, and accordingly reduce investment the more risk averse they are. This hypothesis hinges on the assumption that these entrepreneur mothers treat investment in goods for children and investment in firms, such as in physical capital, in a synonymous manner, perhaps, due to their pecuniary nature. In an entrepreneurial setting, more risk averse business owners are found to have smaller firms with lower leverage \citep{herranz2015entrepreneurs}. To the extent that entrepreneur mothers' perception of goods investment is similar to that of business investment, they would reduce investment in goods in periods when ``risks" are high, i.e., when children enter pre-school or puberty.  
 
+This article also contributes to the literature on the determinants of investment in children. Naturally, income and timing thereof has received a lot of attention with copious amounts of articles on the topic (See for instance \citet{brooks1997effects, yeung2002money, carneiro2003human,dahl2012impact, carneiro2016partial, attanasio2020human}). Parental education, parents' cognitive ability and household structure have also been shown to affect children outcomes \citep{chevalier2004parental, brown2004family, guryan2008parental, schady2011parents}. More relevant to our study, parental risk aversion has also been linked to various educational outcomes of children. The majority reported negative effects of risk aversion on educational outcomes including test scores in the US \citep{brown2012parental}, college enrollment in Italy \citep{checchi2014parents}, cognitive outcomes in Indonesia \citep{hartarto2023parental}. Furthermore, \citet{frempong2021risk} found a positive association between risk aversion and child labour. This, coupled with evidence found by \citet{HEADY2003385} and \citet{bezerra2009impact} suggesting child labour impedes learning, also points to a negative relationship between parental risk aversion and educational outcomes. With regards to various school tracks which offer different curriculums, \citet{wolfel2012parental} confirmed the negative effects of maternal risk aversion on daughters for a sample of German students such that daughters of more risk-averse mothers are more likely to pursue lower secondary track. On the other hand, \citet{leonardi2007parents} found no effect of risk aversion on secondary school track choice for a sample of Italian students.\footnote{German and Italy secondary schools mainly separate curriculums based on later-life goals which can be broadly categorized into vocational-oriented education or traditional pathway to university. Schools in Germany also adopt a recommendation system based on the child's ability and which greatly affects track choice.}   
 
+In general, the literature on the impact of parental risk aversion on direct investment in children is scarce whilst results are inconclusive. In direct relation to our study, \citet{sovero2018risk} uses height-for-age, and BMI-for-age along with other several spending categories to measure investment of Mexican parents. Risk attitudes of parents are elicited using a series of questions with multiple price list structure. Her results indicate a positive linkage between risk averse mothers and their investment on sons, i.e., risk averse mothers invest more on sons than daughters. Using data on Uganda households, \citet{tabetando2019parental} confirms the positive relation between risk aversion and investment, measured by level of educational expenditure and its share of household budget. Although wealthier households tend to be more risk averse, the relationship is reversed for poor households. That is, risk aversion depresses investment in credit constrained households. To the best of our knowledge, this article is the first that looks at how maternal risk preference influences investment at various stages of children's development. While we cannot provide full exposition to whether the effects of maternal risk preference vary at different stages as this calls into question a much debated issue in the risk preference literature which pertains to its stability, our results suggest that if mothers react differently at different periods of investment a negative relationship is found for children in sensitive periods whose mothers identify as entrepreneurs. 
 
+Unfortunately, we are unable to establish causality between maternal risk preference and investment in children due to two threats to our identification. The first pertains to the stability across domains of risk preference and over time. We use the sequence of questions on lifetime income gamble to infer the risk preference of mothers but the issue complicates when it comes to the cross-comparison among lifetime income, business investment, and goods investment for children.  \citet{barseghyan2011risk} rejects the null of stable risk preference for insurance on automobiles and homes. Similarly, \citet{einav2012general} found that only 30\% of their sample make consistent choices when presented with a diverse set of options for insurance coverage and 401(k) portfolios. They further note that preference are less consistent for domains that are too disparate whereas choices in closer domains do exhibit some consistency. The issue of temporal stability further compounds the intricacy involving risk preference. The second threat lies in our empirical strategy, more specifically the assumption of the 2-step GMM method which assumes away the existence of valid instruments outside the covariates. This assumption, if violated, generates bias similar to omitted variable bias in the OLS setting. Although we go to great lengths to control for potential confounders, we cannot be sure that no other sources exist.
 
+The rest of the paper is organised as follows. The next section discusses data sources on risk preference and investment. The third section outlines identification and empirical strategy. Results are presented in the fourth section with further robustness checks in the fifth section. The last section concludes our paper.
 
-%Using NLSY79 ... -> EXPLAINS ABOUT THE PAPER
-...
 
 %===================================================================================================================================================================
 %===================================================================================================================================================================
@@ -151,9 +171,7 @@ Here we let number of siblings and family size vary with time as these crucially
 
 The average HOME score in our sample is 0.39 which is higher than the average HOME score for the nationally representative sample. A potential cause for this is the restriction on the years in which data chosen which are mostly after 2000 except for the first wave. By the mentioned years, mothers are typically older than the average age of mothers in NLSY79 CYA. This is apparent in the high mean age of mother at child's birth, which is close to 28 in our sample compared to around 25 in the whole sample as reported in \citet{carneiro2016partial}. Higher age also correlates with higher earnings and experience, thus affecting our measures of parental inputs. 
 
-The correlation matrix of Imputed values of RRA and Parental inputs are presented in \Cref{table:correlation-matrix}. It also reports statistical significance based on the t-test for pairwise correlation. The correlations between imputed values of RRA and Emotional Support Score are found to be statistically significant under both assumptions whereas Goods index is only robustly correlated with the time-variant version of imputed RRA. At this point, while there is co-movement among these variables that is not due to pure chance, it is difficult to tell whether these correlations imply causations. We expect the effect of risk preference on parental inputs to be confounded by a number of factors including educational level, cognitive ability, age at child's birth among others. The next section discusses how we deal with these potential confounders.   
-
-\begin{sidewaystable}[!htbp]
+\begin{sidewaystable}[!tbp]
 	\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
 	\setlength{\extrarowheight}{0.3em}
 	\begin{threeparttable}
@@ -166,6 +184,10 @@ The correlation matrix of Imputed values of RRA and Parental inputs are presente
 		\label{table:correlation-matrix}
 	\end{threeparttable}
 \end{sidewaystable}
+
+The correlation matrix of Imputed values of RRA and Parental inputs are presented in \Cref{table:correlation-matrix}. It also reports statistical significance based on the t-test for pairwise correlation. The correlations between imputed values of RRA and Emotional Support Score are found to be statistically significant under both assumptions whereas Goods index is only robustly correlated with the time-variant version of imputed RRA. At this point, while there is co-movement among these variables that is not due to pure chance, it is difficult to tell whether these correlations imply causations. We expect the effect of risk preference on parental inputs to be confounded by a number of factors including educational level, cognitive ability, age at child's birth among others. The next section discusses how we deal with these potential confounders.   
+
+
 
 %===================================================================================================================================
 %===================================================================================================================================
@@ -182,8 +204,6 @@ The second concern is whether the two versions of the questions on lifetime inco
 
 The third issue that we will address is the temporal properties of risk preference. We pay close attention to this on the following grounds. On the one hand, if risk preference is static and time-invariant, changes in investment in children across time are independent of risk preference. On the other hand, if risk preference varies over time, to distinguish the impact of risk preference from potential confounders, we need not only account for potential endogeneity and confounding factors, but also capture the dynamic linkage between risk attitudes and investment in children. \citet{sahm2012much} found that systematic differences in risk preference across individuals and over time mostly stem from time-constant characteristics such as gender and ethnicity. To a lesser extent, aging and fluctuations in macroeconomic conditions also contribute to these discrepancies while the effects of the latter is short-lived. Surprisingly, individual circumstances such as job loss, divorce or serious health events do not alter risk preference. \citet{gorlitz2020parenthood} further found that while parenthood considerably affects risk aversion, that is risk aversion increases as early as 2 years prior to becoming a parent, risky labour market behaviour remains unaffected by parenthood. As our measure of risk is closely linked to labour market behaviour, it can capture risk preference without being affected by parenthood. To further separate true risk preference from underlying systemic factors, we will use 2-steps imputation methods by \citet{kimball2008imputing,kimball2009risk} further explained below.   
 
-
-\alert{This is to say, are risk attitudes mother adopts when faced with lifetime income gamble equivalent to those when she makes investment decision for her children. Stability across different domains of risk is our second point of contention. \citet{barseghyan2011risk} rejects the null of stable risk preference for insurance on automobiles and homes. Similarly, \citet{einav2012general} found that only 30\% of their sample make consistent choices when presented with a diverse set of options for insurance coverage and 401(k) portfolios. They further note that preference are less consistent for domains that are too disparate whereas choices in closer domains do exhibit some consistency. Then our question reduces to how ``close" are risks of the lifetime income gamble and risks of child investment.} 
 
 
 \subsection{Identification of risk preference}
@@ -310,9 +330,7 @@ Although entrepreneurs are generally more willing to take risks, a comparison am
 In this section, we perform various checks to ensure the robustness of our model. These include re-estimating the model with the use of an ordinal variable indicating risk aversion instead of a cardinal measure ($\gamma$). 
 
 \subsection{Risk as category}
-Now we focus on the treatment of the variable that acts as a surrogate for risk preference, i.e., how we incorporate responses to the sequence of risk preference in our model. As has been done thus far, one way is to impute and turn these responses into a single cardinal variable which aids in interpretation. In so doing, however, we impose several identifying restrictions crucial to the imputation process as noted in Section 3. Another approach which relaxes these restrictions is to include an indicator for each response group of respondents. \Cref{table:robust-1} present GMM estimates of \eqref{eq:empirical-specification} when the cardinal variable $\gamma$ representing RRA coefficient is replaced by 3 indicators for each response group with the least risk averse (group 4) acting as base.
-
-With the baseline being category 4, which groups respondents answering "Second job" to both questions, estimates in \Cref{table:robust-1} indicate how being more risk averse affects parental inputs. 
+Now we focus on the treatment of the variable that acts as a surrogate for risk preference, i.e., how we incorporate responses to the sequence of risk preference in our model. As has been done thus far, one way is to impute and turn these responses into a single cardinal variable which aids in interpretation. In so doing, however, we impose several identifying restrictions crucial to the imputation process as noted in Section 3. Another approach which relaxes these restrictions is to include an indicator for each response group of respondents. \Cref{table:robust-1} present GMM estimates of \eqref{eq:empirical-specification} when the cardinal variable $\gamma$ representing RRA coefficient is replaced by 3 indicators for each response group with the least risk averse (group 4) acting as the baseline.
 
 
 \alert{As before, significant results are only found for children whose mothers are high school dropouts. Results show that children tend to receive more investment in terms of parental inputs if their mothers are the most risk averse, i.e., they are in category 1. Effects are more sizeable than those found using the cardinal measure $\gamma$. Most notably, children with high school dropouts mothers in category 1 receives up to 7.271 \% higher in emotional support percentile score compared to category 4. Additionally, positive effects are also found for category 3 but not for category 2, implying a possibility of a non-linear relationship between investment and maternal risk aversion.
@@ -347,9 +365,14 @@ We hypothesise that this pattern arise because mothers act as if investment in g
 
 \pagebreak
 
-\section{Appendix}
-\subsection{First-stage MLE of risk preference}
-\subsubsection{Time-invariant risk preference}
+\section*{Appendix}
+\appendix
+
+\setcounter{secnumdepth}{3}
+\counterwithin{equation}{section}
+
+\section{First-stage MLE of risk preference}
+\subsection{Time-invariant risk preference}
 Under the assumption of time-invariant risk preference, our estimates are most conservative in that the probability distribution functions, and hence derived conditional expectations, depend only on survey responses to the question on lifetime income gamble. The probability of being in category $j$ for an individual who answered in only one wave is 
 \begin{equation}
 P(c=j)=P(\log\underline{\theta}_j<x<\log\bar{\theta}_j)=\Phi\Big({\log(\bar{\theta}_j)-\mu-b\over\sqrt{\sigma_x^2+\sigma_{eq}^2+\sigma_{\kappa q}^2}}\Big)-\Phi\Big({\log(\underline{\theta}_j)-\mu-b\over\sqrt{\sigma_x^2+\sigma_{eq}^2+\sigma_{\kappa q}^2}}\Big) 
@@ -362,10 +385,14 @@ P(c_w=j, c_{w'}=k)=\vec{\Phi}(\bar N_{jq}, \bar N_{kq'},\rho)+\vec{\Phi}(\underl
 \end{equation}
 where $\vec{\Phi}$ is the bivariate normal cumulative distribution function, $\bar N_{jq}=(\log \bar \theta_j-\mu-b_q)/\sigma_q,\bar N_{kq'}=(\log \bar \theta_k-\mu-b_{q'})/\sigma_{q'}, \underline N_{jq}=(\log \underline \theta_j-\mu-b_q)/\sigma_q, \underline N_{kq'}=(\log \underline \theta_k-\mu-b_{q'})/\sigma_{q'}$, and $\rho$ is the correlation between answers across the two waves. If respondents participated in more than two waves, the form of \eqref{eq:A-likelihood-constant-bivariate} alters accordingly to accommodate multivariate normal distribution.
 
-\subsubsection{Time-varying risk preference}
+\subsection{Time-varying risk preference}
+Under the assumption of time-variant risk preference, we augment our estimation with both time-invariant and time-variant characteristics of participants. The former comprise gender, race, parents' years of schooling, an indicator of whether the respondent lived with both biological parents at age 14, AFQT score (2006 revised edition). The latter consist of marital status, age, educational level,\footnote{Educational level is allowed to vary with time to capture the potential endogeneity of education, i.e., more educated individuals are less risk averse but less risk averse individuals may also choose to obtain more education.} log of income in the previous year, and the number of weeks worked in the previous calendar year by respondent and respondent's spouse. To further control for fluctuations in macroeconomic condition at the time the questions on risk preference were asked, we also include the unemployment rate and index of consumer sentiment (ICS) as covariates. Under this assumption, the probability of being in category $j$ for an individual $i$ who answered in only one wave is
+\begin{equation}
+	P(c=j)=P(\log\underline{\theta}_j<x<\log\bar{\theta}_j)=\Phi\Big({\log(\bar{\theta}_j)-\mu-b-\beta X_{it}\over\sqrt{\sigma_x^2+\sigma_{eq}^2+\sigma_{\kappa q}^2}}\Big)-\Phi\Big({\log(\underline{\theta}_j)-\mu-b-\beta X_{it}\over\sqrt{\sigma_x^2+\sigma_{eq}^2+\sigma_{\kappa q}^2}}\Big) 
+	\label{eq:A-likelihood-floating-univariate}	
+\end{equation}
+where $X_{it}$ denotes the set of characteristics of the respondents at the time of the survey, $t$.
 
-
-
-\subsubsection{MLE results}
+\subsection{MLE results}
 
 \end{document}
