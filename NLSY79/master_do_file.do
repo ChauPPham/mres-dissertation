@@ -1145,6 +1145,39 @@ forval i = 21/25 {
 
 
 
+*==================== RISK AS CATEGORICAL VARIABLE ===========================*
+
+gen RISK_AVERSE = RISK_AVERSE1
+replace RISK_AVERSE = RISK_AVERSE2 if RISK_AVERSE == .
+
+
+/*===============================*/
+/* ENTREPRENEUR RESULT: TABLE 10 */
+/*===============================*/
+
+
+local identifier = 31
+qui foreach i of varlist INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE {
+	reghdfe `i' L.`i' Li.RISK_AVERSE Li.RISK_AVERSE#NEW i.C00054#year b(3).C00053#year c.NO_SIB#year c.FAM_SIZE#year c.C000700#year c.AGE_FIRST_BIRTH#year c.R0618301#year AGE_14#year c.R0006500#year c.R0007900#year WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_CAT#year, absorb(C0000100 year AGE_CAT) cluster(R0000100) keepsingleton
+	eststo model_`identifier'_a
+	
+	reghdfe `i' L.`i' Li.RISK_AVERSE Li.RISK_AVERSE#NEW i.C00054#year b(3).C00053#year c.NO_SIB#year c.FAM_SIZE#year c.C000700#year c.AGE_FIRST_BIRTH#year c.R0618301#year AGE_14#year c.R0006500#year c.R0007900#year WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_CAT#year, absorb(C0000100 year AGE_CAT) cluster(R0000100) keepsingleton
+	eststo model_`identifier'_b
+	
+	xtabond2 `i' L.`i' Li.RISK_AVERSE Li.RISK_AVERSE#NEW i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_SEP AGE_CAT_* year_*, gmm(l.GOODS_ALL WKS_WORKED WKS_WORKED_SPS ln_INCOME, orthog) iv(i.C00054 b(3).C00053 NO_SIB FAM_SIZE AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 i.DEGREE_CAT AGE_CAT_* year_* Li.RISK_AVERSE Li.RISK_AVERSE#NEW) cluster(R0000100) orthog twostep
+	eststo model_`identifier'_c
+	
+	xtabond2 `i' L.`i' Li.RISK_AVERSE Li.RISK_AVERSE#NEW i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_CAT AGE_CAT_* year_*, gmm(l.GOODS_ALL Li.RISK_AVERSE Li.RISK_AVERSE#NEW WKS_WORKED WKS_WORKED_SPS ln_INCOME, orthog) iv(i.C00054 b(3).C00053 NO_SIB FAM_SIZE AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 i.DEGREE_SEP AGE_CAT_* year_*) cluster(R0000100) orthog twostep
+	eststo model_`identifier'_d
+	
+	local ++identifier
+}
+
+forval i = 31/35 {
+	esttab model_`i'*, keep(2L.RISK_AVERSE 3L.RISK_AVERSE 4L.RISK_AVERSE 1bL.RISK_AVERSE*1* 2L.RISK_AVERSE*1* 3L.RISK_AVERSE*1* 4L.RISK_AVERSE*1*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress
+*	if `i' == 1 esttab model_`i'* using "tex/main_result", keep(L.IMPUTED_CRRA_*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress booktabs replace
+*	if `i' > 1 esttab model_`i'* using "tex/main_result", keep(L.IMPUTED_CRRA_*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress booktabs append
+}
 
 
 

@@ -125,7 +125,7 @@ elseif model == 13
         b(23,1) = -0.058; % SQB
         b(24,1) =  0.815; % True Std Dev
         b(25,1) =  0.348; % Persistent Original
-        b(26,1) = -0.376; % Persistent SQB-Free
+        b(26,1) = -0.376; % Persistent SQB-Free (imprecisely estimated)
         b(27,1) =  1.461; % Transitory Error Original        
         b(28,1) =  2.114; % Transitory Error SQB-Free               
 end
