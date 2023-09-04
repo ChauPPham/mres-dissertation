@@ -1,0 +1,84 @@
+Model 1
+Error at iteration 1 = 1.50e-01
+04-Sep-2023 17:30:08
+                     estimate          t-stat            step 
+Mean                   -1.717        -115.872       -0.867087 
+Std Dev                 0.389          15.220       -0.360575 
+Error Std Dev           1.550          92.483        0.150172 
+
+Log-likelihood   -23561.3
+Error at iteration 2 = 3.85e-01
+04-Sep-2023 17:30:08
+                     estimate          t-stat            step 
+Mean                   -1.876        -121.738       -0.158993 
+Std Dev                 0.774          18.380        0.384978 
+Error Std Dev           1.536          80.854       -0.014359 
+
+Log-likelihood   -21334.1
+Error at iteration 3 = 1.84e-02
+04-Sep-2023 17:30:09
+                     estimate          t-stat            step 
+Mean                   -1.914        -103.121       -0.037810 
+Std Dev                 0.793          25.374        0.018433 
+Error Std Dev           1.522          78.634       -0.013641 
+
+Log-likelihood   -21227.8
+Error at iteration 4 = 1.69e-03
+04-Sep-2023 17:30:10
+                     estimate          t-stat            step 
+Mean                   -1.913        -101.721        0.001340 
+Std Dev                 0.795          26.010        0.001688 
+Error Std Dev           1.518          79.701       -0.004097 
+
+Log-likelihood   -21224.3
+Error at iteration 5 = 2.24e-04
+04-Sep-2023 17:30:10
+                     estimate          t-stat            step 
+Mean                   -1.912        -101.827        0.000224 
+Std Dev                 0.795          26.143        0.000181 
+Error Std Dev           1.517          80.001       -0.000848 
+
+Log-likelihood   -21224.2
+Error at iteration 6 = 5.19e-05
+04-Sep-2023 17:30:11
+                     estimate          t-stat            step 
+Mean                   -1.912        -101.854        0.000052 
+Std Dev                 0.795          26.171        0.000032 
+Error Std Dev           1.517          80.065       -0.000188 
+
+Log-likelihood   -21224.2
+Error at iteration 7 = 1.16e-05
+04-Sep-2023 17:30:11
+                     estimate          t-stat            step 
+Mean                   -1.912        -101.861        0.000012 
+Std Dev                 0.795          26.177        0.000007 
+Error Std Dev           1.517          80.079       -0.000042 
+
+Log-likelihood   -21224.2
+Error at iteration 8 = 2.61e-06
+04-Sep-2023 17:30:12
+                     estimate          t-stat            step 
+Mean                   -1.912        -101.862        0.000003 
+Std Dev                 0.795          26.178        0.000001 
+Error Std Dev           1.517          80.082       -0.000009 
+
+Log-likelihood   -21224.2
+Error at iteration 9 = 5.84e-07
+04-Sep-2023 17:30:13
+                     estimate          t-stat            step 
+Mean                   -1.912        -101.862        0.000001 
+Std Dev                 0.795          26.178        0.000000 
+Error Std Dev           1.517          80.083       -0.000002 
+
+Log-likelihood   -21224.2
+Estimates of Model 1.0
+04-Sep-2023 17:30:13
+Sample size 11616
+Number of iterations = 9
+Error at last iteration = 5.84e-07
+                     estimate      std. error          t-stat 
+Mean                   -1.912           0.019        -101.862 
+Std Dev                 0.795           0.030          26.178 
+Error Std Dev           1.517           0.019          80.083 
+
+Log-likelihood   -21224.2

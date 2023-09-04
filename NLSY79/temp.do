@@ -165,9 +165,25 @@ forval i = 11/15 {
 }
 
 
+*========================================================================================
 
+eststo clear
 
+local identifier = 31
+qui foreach i of varlist INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE {
+	
+	xtabond2 `i' L.`i' L.IMPUTED_CRRA_1 i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_SEP AGE_CAT_* year_* L.PPVT, gmm(l.GOODS_ALL WKS_WORKED WKS_WORKED_SPS ln_INCOME L.PPVT, orthog) iv(i.C00054 b(3).C00053 NO_SIB FAM_SIZE AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 i.DEGREE_CAT AGE_CAT_* year_* L.IMPUTED_CRRA_1) cluster(R0000100) orthog twostep
+	eststo model_`identifier'_a
+	
+	xtabond2 `i' L.`i' L.IMPUTED_CRRA_4 i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_CAT AGE_CAT_* year_* L.PPVT, gmm(l.GOODS_ALL L.IMPUTED_CRRA_4 WKS_WORKED WKS_WORKED_SPS ln_INCOME L.PPVT, orthog) iv(i.C00054 b(3).C00053 NO_SIB FAM_SIZE AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 i.DEGREE_SEP AGE_CAT_* year_*) cluster(R0000100) orthog twostep
+	eststo model_`identifier'_b
+	
+	local ++identifier
+	
+}
 
-
-
-
+forval i = 31/35 {
+	esttab model_`i'*, keep(L.IMPUTED_CRRA_*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.2f) compress
+*	if `i' == 11 esttab model_`i'* using "tex/result-entrepreneur", keep(L.IMPUTED_CRRA_*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.2f) compress booktabs replace
+*	if `i' > 11 esttab model_`i'* using "tex/result-entrepreneur", keep(L.IMPUTED_CRRA_*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.2f) compress booktabs append
+}

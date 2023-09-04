@@ -1145,147 +1145,86 @@ forval i = 21/25 {
 
 
 
+
+/*==============================*/
+/* ENTREPRENEUR RESULT: TABLE 9 */
+/*==============================*/
+* First 2 columns: 2-step GMM for time-invariant risk preference & time-variant  risk preference FOR EMPLOYEES
+* Next 2 columns: 2-step GMM for time-invariant risk preference & time-variant  risk preference FOR BUSINESS OWNERS (NLSY79)
+* Next 2 columns: 2-step GMM for time-invariant risk preference & time-variant  risk preference FOR BUSINESS OWNERS (CREATED)
+* Last 2 columns: 2-step GMM for time-invariant risk preference & time-variant  risk preference FOR SELF-PROCLAIMED ENTREPRENEURS
+
+
+local identifier = 31
+qui foreach i of varlist INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE {
+	
+	
+	xtabond2 `i' L.`i' L.IMPUTED_CRRA_1 i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_SEP year_* L.PPVT  if AGE_CAT == 1, gmm(l.GOODS_ALL WKS_WORKED WKS_WORKED_SPS ln_INCOME L.PPVT , orthog) iv(i.C00054 b(3).C00053 NO_SIB FAM_SIZE AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 i.DEGREE_CAT year_* L.IMPUTED_CRRA_1) cluster(R0000100) orthog twostep
+	eststo model_`identifier'_a_1
+	
+	xtabond2 `i' L.`i' L.IMPUTED_CRRA_1 i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_SEP year_* L.PPVT  if AGE_CAT == 2, gmm(l.GOODS_ALL WKS_WORKED WKS_WORKED_SPS ln_INCOME L.PPVT , orthog) iv(i.C00054 b(3).C00053 NO_SIB FAM_SIZE AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 i.DEGREE_CAT year_* L.IMPUTED_CRRA_1) cluster(R0000100) orthog twostep
+	eststo model_`identifier'_a_2
+	
+	xtabond2 `i' L.`i' L.IMPUTED_CRRA_1 i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_SEP year_* L.PPVT  if AGE_CAT == 3, gmm(l.GOODS_ALL WKS_WORKED WKS_WORKED_SPS ln_INCOME L.PPVT , orthog) iv(i.C00054 b(3).C00053 NO_SIB FAM_SIZE AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 i.DEGREE_CAT year_* L.IMPUTED_CRRA_1) cluster(R0000100) orthog twostep
+	eststo model_`identifier'_a_3
+	
+	
+	xtabond2 `i' L.`i' L.IMPUTED_CRRA_4 i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_CAT year_* L.PPVT  if AGE_CAT == 1, gmm(l.GOODS_ALL L.IMPUTED_CRRA_4 WKS_WORKED WKS_WORKED_SPS ln_INCOME L.PPVT , orthog) iv(i.C00054 b(3).C00053 NO_SIB FAM_SIZE AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 i.DEGREE_SEP year_*) cluster(R0000100) orthog twostep
+	eststo model_`identifier'_b_1
+	
+	xtabond2 `i' L.`i' L.IMPUTED_CRRA_4 i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_CAT year_* L.PPVT  if AGE_CAT == 2, gmm(l.GOODS_ALL L.IMPUTED_CRRA_4 WKS_WORKED WKS_WORKED_SPS ln_INCOME L.PPVT , orthog) iv(i.C00054 b(3).C00053 NO_SIB FAM_SIZE AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 i.DEGREE_SEP year_*) cluster(R0000100) orthog twostep
+	eststo model_`identifier'_b_2
+	
+	xtabond2 `i' L.`i' L.IMPUTED_CRRA_4 i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_CAT year_* L.PPVT  if AGE_CAT == 3, gmm(l.GOODS_ALL L.IMPUTED_CRRA_4 WKS_WORKED WKS_WORKED_SPS ln_INCOME L.PPVT , orthog) iv(i.C00054 b(3).C00053 NO_SIB FAM_SIZE AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 i.DEGREE_SEP year_*) cluster(R0000100) orthog twostep
+	eststo model_`identifier'_b_3
+	
+	local ++identifier
+}
+
+
+forval i = 31/35 {
+	esttab model_`i'*, keep(L.IMPUTED_CRRA_*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.2f) compress
+*	if `i' == 11 esttab model_`i'* using "tex/result-entrepreneur", keep(L.IMPUTED_CRRA_*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.2f) compress booktabs replace
+*	if `i' > 11 esttab model_`i'* using "tex/result-entrepreneur", keep(L.IMPUTED_CRRA_*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.2f) compress booktabs append
+}
+
+
+
+
+
 *==================== RISK AS CATEGORICAL VARIABLE ===========================*
 
 gen RISK_AVERSE = RISK_AVERSE1
 replace RISK_AVERSE = RISK_AVERSE2 if RISK_AVERSE == .
 
 
-/*===============================*/
-/* ENTREPRENEUR RESULT: TABLE 10 */
-/*===============================*/
+/*==============================*/
+/* CATEGORICAL RESULT: TABLE 10 */
+/*==============================*/
 
 
-local identifier = 31
+local identifier = 41
 qui foreach i of varlist INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE {
-	reghdfe `i' L.`i' Li.RISK_AVERSE i.C00054#year b(3).C00053#year c.NO_SIB#year c.FAM_SIZE#year c.C000700#year c.AGE_FIRST_BIRTH#year c.R0618301#year AGE_14#year c.R0006500#year c.R0007900#year WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_CAT#year, absorb(C0000100 year AGE_CAT) cluster(R0000100) keepsingleton
+	reghdfe `i' L.`i' Li.RISK_AVERSE#NEW i.C00054#year b(3).C00053#year c.NO_SIB#year c.FAM_SIZE#year c.C000700#year c.AGE_FIRST_BIRTH#year c.R0618301#year AGE_14#year c.R0006500#year c.R0007900#year WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_CAT#year, absorb(C0000100 year AGE_CAT) cluster(R0000100) keepsingleton
 	eststo model_`identifier'_a
 	
 	
-	xtabond2 `i' L.`i' Li.RISK_AVERSE i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_SEP AGE_CAT_* year_*, gmm(l.GOODS_ALL WKS_WORKED WKS_WORKED_SPS ln_INCOME, orthog) iv(i.C00054 b(3).C00053 NO_SIB FAM_SIZE AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 i.DEGREE_CAT AGE_CAT_* year_* Li.RISK_AVERSE) cluster(R0000100) orthog twostep
+	xtabond2 `i' L.`i' Li.RISK_AVERSE#NEW i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_SEP AGE_CAT_* year_*, gmm(l.GOODS_ALL WKS_WORKED WKS_WORKED_SPS ln_INCOME, orthog) iv(i.C00054 b(3).C00053 NO_SIB FAM_SIZE AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 i.DEGREE_CAT AGE_CAT_* year_* Li.RISK_AVERSE#NEW) cluster(R0000100) orthog twostep
 	eststo model_`identifier'_c
 	
-	xtabond2 `i' L.`i' Li.RISK_AVERSE i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_CAT AGE_CAT_* year_*, gmm(l.GOODS_ALL Li.RISK_AVERSE WKS_WORKED WKS_WORKED_SPS ln_INCOME, orthog) iv(i.C00054 b(3).C00053 NO_SIB FAM_SIZE AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 i.DEGREE_SEP AGE_CAT_* year_*) cluster(R0000100) orthog twostep
+	xtabond2 `i' L.`i' Li.RISK_AVERSE#NEW i.C00054 b(3).C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED WKS_WORKED_SPS ln_INCOME i.DEGREE_CAT AGE_CAT_* year_*, gmm(l.GOODS_ALL Li.RISK_AVERSE#NEW WKS_WORKED WKS_WORKED_SPS ln_INCOME, orthog) iv(i.C00054 b(3).C00053 NO_SIB FAM_SIZE AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 i.DEGREE_SEP AGE_CAT_* year_*) cluster(R0000100) orthog twostep
 	eststo model_`identifier'_d
 	
 	local ++identifier
 }
 
-forval i = 31/35 {
-	esttab model_`i'*, keep(*L.RISK_AVERSE*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress
-*	if `i' == 1 esttab model_`i'* using "tex/main_result", keep(L.IMPUTED_CRRA_*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress booktabs replace
-*	if `i' > 1 esttab model_`i'* using "tex/main_result", keep(L.IMPUTED_CRRA_*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress booktabs append
+forval i = 41/45 {
+	esttab model_`i'*, keep(*L.RISK_AVERSE*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress long
+*	if `i' == 1 esttab model_`i'* using "tex/result-categorical", keep(*L.RISK_AVERSE*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress booktabs replace long
+*	if `i' > 1 esttab model_`i'* using "tex/result-categorical", keep(*L.RISK_AVERSE*) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress booktabs append long
 }
 
 
 
 
 
-
-*==================== RISK AS CATEGORICAL VARIABLE ===========================*
-/*========== WITHOUT INTERACTION TERM FOR NEW SERIES (NOT USED) ==========*/
-
-local identifier = 1
-qui foreach i of varlist INV_ALL GOODS_ALL TIME_ALL {
-	reghdfe `i' i.RISK_AVERSE1 i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP != ., absorb(year AGE_CAT) vce(cluster R0000100)
-	eststo robust2_`identifier'
-	
-	reghdfe `i' i.RISK_AVERSE1 i.RISK_AVERSE1#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP != ., absorb(year AGE_CAT) vce(cluster R0000100)
-	eststo robust2_`identifier'_a
-	
-	forval j = 0/2 {
-		reghdfe `i' i.RISK_AVERSE1 i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP == `j', absorb(year AGE_CAT) vce(cluster R0000100)
-		eststo robust2_`identifier'_`j'
-		
-		reghdfe `i' i.RISK_AVERSE1 i.RISK_AVERSE1#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP == `j', absorb(year AGE_CAT) vce(cluster R0000100)
-		eststo robust2_`identifier'_`j'_a
-	}
-	local ++identifier
-}
-
-qui foreach i of varlist COG_SCORE EMO_SCORE {
-	reghdfe `i' i.RISK_AVERSE1 i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP != . & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
-	eststo robust2_`identifier'
-	
-	reghdfe `i' i.RISK_AVERSE1 i.RISK_AVERSE1#year i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP != . & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
-	eststo robust2_`identifier'_a
-	
-	forval j = 0/2 {
-		reghdfe `i' i.RISK_AVERSE1 i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP == `j' & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
-		eststo robust2_`identifier'_`j'
-		
-		reghdfe `i' i.RISK_AVERSE1 i.RISK_AVERSE1#year  i.C00054 i.C00053 NO_SIB FAM_SIZE C000700 AGE_FIRST_BIRTH R0618301 AGE_14 R0006500 R0007900 WKS_WORKED ln_INCOME  if R0618301 != . & R0006500 != . & R0007900 !=. & FAM_SIZE !=. & DEGREE_SEP != . & HH_INCOME != . & AGE_14 != . & WKS_WORKED != . & DEGREE_SEP == `j' & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
-		eststo robust2_`identifier'_`j'_a
-	}
-	
-	local ++identifier
-}
-
-
-forvalues i = 1/5 {
-	esttab robust2_`i'*, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum b(%9.3f) compress indicate(Year interaction = *RISK_AVERSE1#*year)
-}
-
-/*
-forvalues i = 1/5 {
-	if `i' == 1 esttab robust2_`i'* using "tex/robust-2", keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum booktabs replace sfmt(%12.3f) indicate(Year interaction = *RISK_AVERSE1#*year)
-	if `i' > 1 esttab robust2_`i'* using "tex/robust-2", keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1) mtitle("") se star(* 0.10 ** 0.05 *** 0.01) label nonum booktabs append sfmt(%12.3f) indicate(Year interaction = *RISK_AVERSE1#*year)
-}
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* THIS SECTION NEEDS MORE ATTENTION: SINCE NOT GROUPING OLD AND NEW QUESTIONS ANYMORE
-/*========== WITH INTERACTION TERM ==========*/
-label define NEW 0 "Old" 1 "New"
-label value NEW NEW 
-eststo clear
-
-local identifier = 1
-qui foreach i of varlist INV_ALL GOODS_ALL TIME_ALL {
-	reghdfe `i' i.RISK_AVERSE1 b1.RISK_AVERSE1#NEW  ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP != ., absorb(year AGE_CAT) vce(cluster R0000100)
-	eststo model_`identifier'
-	
-	forval j = 0/3 {
-		reghdfe `i' i.RISK_AVERSE1 b1.RISK_AVERSE1#NEW ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP == `j', absorb(year AGE_CAT) vce(cluster R0000100)
-		eststo model_`identifier'_`j'
-	}
-	local ++identifier
-}
-
-qui foreach i of varlist COG_SCORE EMO_SCORE {
-	reghdfe `i' i.RISK_AVERSE1 ln_INCOME b1.RISK_AVERSE1#NEW R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & `i' >= 0 & (DEGREE_SEP != .), absorb(year AGE_CAT) vce(cluster R0000100)
-	eststo model_`identifier'
-	
-	forval j = 0/3 {
-		reghdfe `i' i.RISK_AVERSE1 b1.RISK_AVERSE1#NEW ln_INCOME R0618300 i.C00054 i.C00053 NO_UNDER_18 NO_SIB C000700 R0006500 R0007900 if R0618300 >= 0 & NO_UNDER_18 >= 0 & R0006500 >= 0 & R0007900 >= 0 & DEGREE_SEP == `j' & `i' >= 0, absorb(year AGE_CAT) vce(cluster R0000100)
-		eststo model_`identifier'_`j'
-	}
-	
-	local ++identifier
-}
-
-
-forvalues i = 1/5 {
-	if `i' == 1 esttab model_`i'*, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1 1.RISK_AVERSE1#1.NEW 2.RISK_AVERSE1#1.NEW 3.RISK_AVERSE1#1.NEW) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum sfmt(%12.3f)
-	if `i' > 1 esttab model_`i'*, keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1 1.RISK_AVERSE1#1.NEW 2.RISK_AVERSE1#1.NEW 3.RISK_AVERSE1#1.NEW) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum sfmt(%12.3f)
-}
-
-/*
-forvalues i = 1/5 {
-	if `i' == 1 esttab model_`i'* using "tex/regression_2", keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1 1.RISK_AVERSE1#1.NEW 2.RISK_AVERSE1#1.NEW 3.RISK_AVERSE1#1.NEW) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum booktabs replace sfmt(%12.3f) long title("OLS estimates with interaction term\label{table:5}")
-	if `i' > 1 esttab model_`i'* using "tex/regression_2", keep(2.RISK_AVERSE1 3.RISK_AVERSE1 4.RISK_AVERSE1 1.RISK_AVERSE1#1.NEW 2.RISK_AVERSE1#1.NEW 3.RISK_AVERSE1#1.NEW) mtitle("All" "No HS" "HS dropout" "HS" "College and above") se star(* 0.10 ** 0.05 *** 0.01) label nonum booktabs append sfmt(%12.3f) long
-}
-*/

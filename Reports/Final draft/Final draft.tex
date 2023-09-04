@@ -14,7 +14,7 @@
 %\usepackage{verbatim}
 \usepackage{natbib}
 \usepackage[bottom]{footmisc}	% keep footnotes at end of the page
-\usepackage{xcolor, easyReview}
+\usepackage{xcolor, easyReview, pifont}
 
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 
@@ -30,7 +30,7 @@
 %\captionsetup[figure]{labelfont=bf}
 \captionsetup[table]{labelfont=bf}
 
-\interfootnotelinepenalty=10000
+%\interfootnotelinepenalty=10000
 
 
 %opening
@@ -44,8 +44,9 @@
 
 
 \newcommand\itembox{\item[$\square$]}
-
-
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
+	\hspace{-2.5pt}}
 
 \makeatletter
 \renewenvironment{abstract}{%
@@ -65,7 +66,6 @@
 \begin{document}
 
 \onehalfspacing
-
 \begin{titlingpage}
 \maketitle
 \begin{center}
@@ -101,7 +101,7 @@
 			\large
 			This piece of research is primarily (please tick as appropriate):
 			\begin{itemize}
-				\itembox an empirical/econometric study
+				\item[\done] an empirical/econometric study
 				\itembox the examination of a theoretical problem
 				\itembox a critical analysis of a policy issue
 				\itembox an analytical survey of empirical and/or theoretical literature
@@ -322,7 +322,7 @@ To estimate the effect of risk preference on parental inputs, we follow the 2-st
 \end{equation}
 where $I_{ij,t}$ denotes the parental input child $i$ of mother $j$ receives at time $t$. $\gamma_{j,t-2}$ is the imputed RRA coefficient of mother $j$ 2 years prior to the investment time since some investment are recorded with respect to past year and to deal with potential reverse causality, risk preference should be measured before an investment decision is made \citet{hartog2002linking}.\footnote{Since data is recorded biennially, we can only include 2-period lagged explanatory variables instead of 1-period lag variables.} $Z_{ij,t}$ denote child $i$ and mother $j$' time-variant characteristics number of siblings, family size, number of weeks mother and mother's spouse worked in previous year, and household net income in the previous calendar year. $Z_{ij}$ denote child $i$ and mother $j$' time-invariant characteristics including child $i$'s sex, mother's age at child's birth, mother's age at first birth, mother's AFQT score (2006 revised edition), educational level of mother, an indicator variable for mother's residence at age 14, mother's parents education. The specification also contains unobservable child-specific effect $\eta_i$, a year-specific effect common to all children at time $t$, $\lambda_t$, age-group specific effect $\kappa$, and an idiosyncratic shock $v_{ij,t}$ assumed to be purely stochastic.\footnote{We include age-group fixed effect since parental inputs are normalised by age-group, namely 0-2, 3-5, 6-9, and 10-14.} Standard error are clustered at mother's level to allow correlation among siblings. All time-variant variables are assumed to be endogenous while time-invariant exogenous.
 
-Under the assumption of time-constant risk preference, $\gamma_{j,t-2}$ is strictly exogenous, such that $\mathbb E[\gamma_{j,t-2}v_{i,s}]=0$ for all $t,s$. Thus, consistent estimate of $\delta$ in this case can be obtained through the inclusion of $\gamma$ as an instrument for other endogenous variables alongside the exogenous variables. On the other hand, if risk preference is time-variant, $\gamma_{j,t-2}$ is predetermined, in the sense that $\mathbb E[\gamma_{j,t-2}v_{ij,s}]\ne 0$ for $s<t-2$ but zero otherwise. \alert{Then $\delta$ can be consistently estimated by also treating $\gamma$ as an instrument for endogenous variables but the set of valid instruments reduce to $\gamma_{j,1},...,\gamma_{j,t-3}$.} In practice, however, due to gaps in responses to lifetime income gamble, we treat $\gamma_{j,t-2}$ purely as an endogenous variable.
+Under the assumption of time-constant risk preference, $\gamma_{j,t-2}$ is strictly exogenous, such that $\mathbb E[\gamma_{j,t-2}v_{i,s}]=0$ for all $t,s$. Thus, consistent estimate of $\delta$ in this case can be obtained through the inclusion of $\gamma$ as an instrument for other endogenous variables alongside the exogenous variables. On the other hand, if risk preference is time-variant, $\gamma_{j,t-2}$ is predetermined, in the sense that $\mathbb E[\gamma_{j,t-2}v_{ij,s}]\ne 0$ for $s<t-2$ but zero otherwise. Then $\delta$ can be consistently estimated by also treating $\gamma$ as an instrument for endogenous variables but the set of valid instruments reduce to $\gamma_{j,1},...,\gamma_{j,t-3}$. In practice, however, due to gaps in responses to lifetime income gamble, we treat $\gamma_{j,t-2}$ purely as an endogenous variable.
 
 To have a better sense of why and how risk aversion might affect parental inputs, we also examine how the effects of maternal risk aversion vary by age-group of their children. Furthermore, as it is commonly known that entrepreneurs have higher levels of risk tolerance than their employees counterparts, we also study how the effects of risk preference vary in these two subgroups. To this end, we employ two survey measures and one constructed measure. The first one is an indicator of whether mothers own any type of business.\footnote{This is irrespective of whether the business went into operation before or after the birth of a child.} However, a closer inspection at the data reveals that there are respondents who owned no business while answering "Yes" to the question on business ownership. This motivates us to reclassify respondents by the actual number of business they own, i.e., the indicator takes value 1 if respondents owned at least one business and 0 otherwise. The second survey measure we use is respondents' answers to the question ``Do you consider yourself to be an entrepreneur?" It should be noted that not all those who own business identify as entrepreneurs and not all those who identify as entrepreneurs own at least one business. This measure, thus, captures one's self-identity and possibly her mindset rather than reflect actual business ownership.
 
@@ -400,19 +400,20 @@ Although entrepreneurs are generally more willing to take risks, a comparison am
 In this section, we perform various checks to ensure the robustness of our model. These include re-estimating the model with the use of an ordinal variable indicating risk aversion instead of a cardinal measure ($\gamma$), and incorporating information on cognitive and non-cognitive ability and behavioural issues of the child. 
 
 \subsection{Risk as category}
-Now we focus on the treatment of the variable that acts as a surrogate for risk preference, i.e., how we incorporate responses to the sequence of risk preference in our model. As has been done thus far, one way is to impute and turn these responses into a single cardinal variable which aids in interpretation. In so doing, however, we impose several identifying restrictions crucial to the imputation process as noted in Section 3. Another approach which relaxes these restrictions is to include an indicator for each response group of respondents. Additionally, to separate the old series and new series, we interact the categorical variable with an indicator variable which takes value 1 for the new series and 0 otherwise. \Cref{table:robust-1} repeats the estimation done in \Cref{table:main-result} when the cardinal variable $\gamma$ representing RRA coefficient is replaced by 3 indicators for each response group with the least risk averse (group 4) acting as the baseline.
+Now we focus on the treatment of the variable that acts as a surrogate for risk preference, i.e., how we incorporate responses to the sequence of risk preference in our model. As has been done thus far, one way is to impute and turn these responses into a single cardinal variable which aids in interpretation. In so doing, however, we impose several identifying restrictions crucial to the imputation process as noted in Section 3. Another approach which relaxes these restrictions is to include an indicator for each response group of respondents. Additionally, to separate the old series and new series, we interact the categorical variable with an indicator variable which takes value 1 for the new series and 0 otherwise. \Cref{table:robust-1} repeats the estimation done in \Cref{table:main-result} when the cardinal variable $\gamma$ representing RRA coefficient is replaced by a categorical variable indicating response group with group 4, the least risk averse, acting as the baseline. 
+
+Since there is no distinguishing feature of risk preference when the ordinal variable is employed for the OLS specification, the general effect of risk aversion for each group is reported. It should be kept in mind that these are obtained without any assumptions on the temporal properties of risk preference. Results of this exercise are available in Appendix B. Overall, OLS estimates are only significant for emotional support percentile score in the subsample of mothers who are most risk averse based on the old measure. On the other hand, in the GMM specifications, risk  aversion is found to have statistically significant and large negative effects on general investment (HOME index), goods investment and cognitive stimulation. Unfortunately, however, it is difficult to determine whether these estimates carry any meaningful interpretation as the categorisation is static, meaning it does not account for the fact that participants of the lifetime income gamble might change their responses in subsequent rounds.
 
 
-\alert{As before, significant results are only found for children whose mothers are high school dropouts. Results show that children tend to receive more investment in terms of parental inputs if their mothers are the most risk averse, i.e., they are in category 1. Effects are more sizeable than those found using the cardinal measure $\gamma$. Most notably, children with high school dropouts mothers in category 1 receives up to 7.271 \% higher in emotional support percentile score compared to category 4. Additionally, positive effects are also found for category 3 but not for category 2, implying a possibility of a non-linear relationship between investment and maternal risk aversion.
-}
 
 \subsection{Controlling for child's test scores}
 
-Thus far, we have not include any measures indicative of children's ability since we are not trying to explicitly estimate an empirical model of child development in which mothers update investment, subject to their degree of risk aversion, in response to information on cognitive and non-cognitive ability as well as behaviours problem of the child. Such a study, ideally should follow closely the work of \citet{cunha2007technology} and \citet{cunha2010estimating} with appropriate modification to accommodate identification of parental risk preference. That said, to see how the estimates would change in response to information on children's ability, we control for a battery of measures of cognitive and non-cognitive ability, and behavioural issues measured by three Peabody Individual Achievement Test (PIAT) scores including math, reading cognition and comprehension; Peabody Picture Vocabulary Test (PPVT); and Behavioural Problem Index (BPI). These tests are administered at different starting age of children with the earliest being PPVT for children age 3 and above. Information on BPI is collected for children age 4 and above while PIAT are only administered to children whose age are 5 years and above.
+Thus far, we have not include any measures indicative of children's ability since we are not trying to explicitly estimate an empirical model of child development in which mothers update investment, subject to their degree of risk aversion, in response to information on cognitive and non-cognitive ability as well as behaviours problem of the child. Such a study, ideally should follow closely the work of \citet{cunha2007technology} and \citet{cunha2010estimating} with appropriate modification to accommodate identification of parental risk preference. That said, to see how the estimates would change in response to information on children's ability, we control for a battery of measures of cognitive and non-cognitive ability, and behavioural issues measured by three Peabody Individual Achievement Test (PIAT) scores including math, reading cognition and comprehension; Peabody Picture Vocabulary Test (PPVT); and Behavioural Problem Index (BPI). These tests are administered at different starting age of children with the earliest being PPVT for children age 3 and above. Information on BPI is collected for children age 4 and above while PIAT are only administered to children whose age are 5 years and above. 
+
+We progressively include the measure by age requirement, i.e., PPVT in the first specification, PPVT and BPI in the second specification, and all measures, PIAT inclusive in the last specification. All measures are treated as endogenous to parental inputs. Due to the age requirement of these tests, later specifications naturally have fewer observations. We focus on the effects of maternal risk aversion on parental inputs for children age 3 and above.
 
 
 
-Another concern is that since we only have one response from any individuals for the newer series, the identification problem of risk preference, especially with regards to the estimation of persistent error of the SQB-free questions, is under-identified. 
 
 
 %===================================================================================================================================================================
@@ -444,12 +445,20 @@ We hypothesise that this pattern arise because mothers act as if investment in g
 
 \section{First-stage MLE of risk preference}
 \subsection{Time-invariant risk preference}
-Under the assumption of time-invariant risk preference, our estimates are most conservative in that the probability distribution functions, and hence derived conditional expectations, depend only on survey responses to the question on lifetime income gamble. The probability of being in category $j$ for an individual who answered in only one wave is 
+Under the assumption of time-invariant risk preference, our estimates are most conservative in that the probability distribution functions, and hence the derived conditional probability, depend only on survey responses to the question on lifetime income gamble. The probability of being in category $j$ for an individual who answered in only one wave is 
+\parskip 0cm
 \begin{equation}
 P(c=j)=P(\log\underline{\theta}_j<x<\log\bar{\theta}_j)=\Phi\Big({\log(\bar{\theta}_j)-\mu-b\over\sqrt{\sigma_x^2+\sigma_{eq}^2+\sigma_{\kappa q}^2}}\Big)-\Phi\Big({\log(\underline{\theta}_j)-\mu-b\over\sqrt{\sigma_x^2+\sigma_{eq}^2+\sigma_{\kappa q}^2}}\Big) 
 \label{eq:A-likelihood-constant-univariate}	
 \end{equation}
-$\mu$ and $\sigma_x$ are respectively the mean and standard deviation of true log risk tolerance. $\sigma_{eq}^2$ is variance in an individual's transitory response error for a particular wave and question type $q$ while $\sigma_{\kappa q}^2$ is variance in an individual's persistent response error for question type $q$. $\bar \theta_j$ and $\underline{\theta}_j$ are upper and lower bounds on the coefficient of risk tolerance. $b$ denotes status quo bias (common bias across individuals to questions of type $q$) and $\sigma_e$ standard deviation of transitory response error, assumed to be purely random and independent of an individual's true risk tolerance or any other attributes. If she participated in exactly two waves, the probability of her being in category $j$ in wave $w$ and category $k$ in wave $w'$ is
+$\mu$ and $\sigma_x$ are respectively the mean and standard deviation of true log risk tolerance. $\sigma_{eq}^2$ is variance in an individual's transitory response error for a particular wave and question type $q$ while $\sigma_{\kappa q}^2$ is variance in an individual's persistent response error for question type $q$. $\bar \theta_j$ and $\underline{\theta}_j$ are upper and lower bounds on the coefficient of risk tolerance. $b$ denotes status quo bias (common bias across individuals to questions of type $q$) and $\sigma_e$ standard deviation of transitory response error, assumed to be purely random and independent of an individual's true risk tolerance or any other attributes. The coefficient of risk aversion, $\gamma$, is then imputed using the conditional expectation that an individual belongs to a certain risk category $j$,
+
+\begin{equation}
+\mathbb E(\gamma|c=j)=\exp\Big(-\mu+{\sigma_x^2\over 2}\Big){\Phi\Big({\log(\bar{\theta}_j)-\mu-b+\sigma_x^2\over \sigma_{\xi}}\Big)-\Phi\Big({\log(\underline{\theta}_j)-\mu-b+\sigma_x^2\over \sigma_{\xi}}\Big)\over \Phi\Big({\log(\bar{\theta}_j)-\mu-b\over \sigma_\xi}\Big)-\Phi\Big({\log(\underline{\theta}_j)-\mu-b\over \sigma_\xi}\Big)}
+\label{eq:A-conditional-expectation}
+\end{equation}
+
+If she participated in exactly two waves, the probability of her being in category $j$ in wave $w$ and category $k$ in wave $w'$ is
 \begin{equation}
 P(c_w=j, c_{w'}=k)=\vec{\Phi}(\bar N_{jq}, \bar N_{kq'},\rho)+\vec{\Phi}(\underline N_{jq}, \underline N_{kq'},\rho)-\vec{\Phi}(\underline N_{jq}, \bar N_{kq'},\rho)-\vec{\Phi}(\underline N_{jq}, \bar N_{kq'},\rho)
 \label{eq:A-likelihood-constant-bivariate}
@@ -457,7 +466,7 @@ P(c_w=j, c_{w'}=k)=\vec{\Phi}(\bar N_{jq}, \bar N_{kq'},\rho)+\vec{\Phi}(\underl
 where $\vec{\Phi}$ is the bivariate normal cumulative distribution function, $\bar N_{jq}=(\log \bar \theta_j-\mu-b_q)/\sigma_q,\bar N_{kq'}=(\log \bar \theta_k-\mu-b_{q'})/\sigma_{q'}, \underline N_{jq}=(\log \underline \theta_j-\mu-b_q)/\sigma_q, \underline N_{kq'}=(\log \underline \theta_k-\mu-b_{q'})/\sigma_{q'}$, and $\rho$ is the correlation between answers across the two waves. If respondents participated in more than two waves, the form of \eqref{eq:A-likelihood-constant-bivariate} alters accordingly to accommodate multivariate normal distribution.
 
 \subsection{Time-varying risk preference}
-Under the assumption of time-variant risk preference, we augment our estimation with both time-invariant and time-variant characteristics of participants. The former comprise gender, race, parents' years of schooling, an indicator of whether the respondent lived with both biological parents at age 14, AFQT score (2006 revised edition). The latter consist of marital status, age, educational level,\footnote{Educational level is allowed to vary with time to capture the potential endogeneity of education, i.e., more educated individuals are less risk averse but less risk averse individuals may also choose to obtain more education.} log of income in the previous year, and the number of weeks worked in the previous calendar year by respondent and respondent's spouse. To further control for fluctuations in macroeconomic condition at the time the questions on risk preference were asked, we also include the unemployment rate and index of consumer sentiment (ICS) as covariates. Under this assumption, the probability of being in category $j$ for an individual $i$ who answered in only one wave is
+Under the assumption of time-variant risk preference, we augment our estimation with both time-invariant and time-variant characteristics of participants. The former comprise gender, race, parents' years of schooling, an indicator of whether the respondent lived with both biological parents at age 14, AFQT score (2006 revised edition). The latter consist of marital status, age, educational level,\footnote{Educational level is allowed to vary with time to capture the potential endogeneity of education, i.e., more educated individuals are less risk averse but less risk averse individuals may also choose to obtain more education.} log of income, and the number of weeks worked in the previous year by respondent and respondent's spouse. To further control for fluctuations in macroeconomic condition at the time the questions on risk preference were asked, we also include the unemployment rate and index of consumer sentiment (ICS) as covariates. Under this assumption, the probability of being in category $j$ for an individual $i$ who answered in only one wave is
 \begin{equation}
 	P(c=j)=P(\log\underline{\theta}_j<x<\log\bar{\theta}_j)=\Phi\Big({\log(\bar{\theta}_j)-\mu-b-\beta X_{it}\over\sqrt{\sigma_x^2+\sigma_{eq}^2+\sigma_{\kappa q}^2}}\Big)-\Phi\Big({\log(\underline{\theta}_j)-\mu-b-\beta X_{it}\over\sqrt{\sigma_x^2+\sigma_{eq}^2+\sigma_{\kappa q}^2}}\Big) 
 	\label{eq:A-likelihood-floating-univariate}	
@@ -466,18 +475,38 @@ where $X_{it}$ denotes the set of characteristics of the respondents at the time
 
 \subsection{MLE results}
 
-
-
+\Cref{table:appendix-mle} reports MLE results for 2 specifications, time-invariant with stringent constraints that risk preference only depend on survey responses, and time-variant which incorporates information on several characteristics of participants. Since we only have one response from any individuals for the newer series, the identification problem of risk preference, especially with regards to the estimation of persistent error of the SQB-free questions, is under-identified. Nevertheless, other parameters are very precisely estimated.
+\parskip 0cm
 \begin{table}[!htbp]
 	\centering \setlength{\extrarowheight}{0.3em}
 	\caption{Distribution of log risk tolerance: Maximum likelihood estimates}
 	\begin{threeparttable}
 		\input{Tables/appendix-mle}
 		\begin{tablenotes}[flushleft]\footnotesize
-			\item The table reports MLE estimation of parameters of log risk tolerance and response error under the assumption of time-invariant risk preference following \eqref{eq:A-likelihood-constant-univariate} and \eqref{eq:A-likelihood-constant-bivariate}, and time-invariant risk preference following \eqref{eq:A-likelihood-floating-univariate}. Standard error enclosed in parentheses.
+			\item The table reports MLE of parameters of log risk tolerance and response error under the assumption of time-invariant risk preference following \eqref{eq:A-likelihood-constant-univariate} and \eqref{eq:A-likelihood-constant-bivariate}, and time-invariant risk preference following \eqref{eq:A-likelihood-floating-univariate}. Standard error in parentheses.
 		\end{tablenotes}
 	\end{threeparttable}
 	\label{table:appendix-mle}
 \end{table}
+
+
+\parskip 0cm
+
+\pagebreak
+
+
+
+\section{Robustness checks}
+\subsection{Estimation with categorical variable}
+
+\begin{ThreePartTable}
+	\begin{TableNotes}[flushleft]\footnotesize
+		\item \footnotesize The table reports estimates for $\delta$ in \eqref{eq:empirical-specification} with the categorical variable indicating response group instead of $\gamma$. Group 4, least risk aversion, is treated as baseline. For the OLS specification, the estimates for respondents in group 1 of the new series are excluded due to collinearity. Other details are similar to \Cref{table:main-result}. Standard errors in parentheses.
+		\item \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\).\\
+	\end{TableNotes}
+	\input{Tables/result-categorical}
+\end{ThreePartTable}
+
+
 
 \end{document}
