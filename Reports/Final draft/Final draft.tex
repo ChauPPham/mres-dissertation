@@ -1,12 +1,7 @@
 \documentclass[emulatestandardclasses, 10pt, abstract = true]{scrartcl}
 
-%opening
-\title{Maternal risk preference and investment in children}
-\author{Chau Pham\\ MRes Economics Dissertation \\ University College London \\ \textbf{Supervisor: Professor Pedro Carneiro}}
-
 
 %-------------------------- packages
-%\date{} for no date shown
 \usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools, mathrsfs}
 \usepackage[margin = 1.0in]{geometry}
 \usepackage{bbold, soul}
@@ -27,7 +22,6 @@
 \renewcommand\theadgape{\Gape[4pt]}
 \renewcommand\cellgape{\Gape[4pt]}
 
-\setlength{\droptitle}{-2em}
 
 %\setlist[enumerate]{label=(\roman*)}
 
@@ -38,26 +32,102 @@
 
 \interfootnotelinepenalty=10000
 
+
+%opening
+\pretitle{\vspace{2cm}\begin{center}\huge}
+\title{Maternal risk preference \\and investment in children}
+\posttitle{\par\end{center}\vspace{2cm}}
+\preauthor{\vspace{1.5cm}\begin{center}\LARGE}
+\author{Chau Pham}
+\postauthor{\par\end{center}\vspace{2cm}}
+\date{}
+
+
+\newcommand\itembox{\item[$\square$]}
+
+
+
+\makeatletter
+\renewenvironment{abstract}{%
+	\if@twocolumn
+	\section*{\abstractname}%
+	\else %% <- here I've removed \small
+	\begin{center}%
+		{\bfseries \large\abstractname\vspace{\z@}}%  %% <- here I've added \Large
+	\end{center}%
+	\quotation
+	\fi}
+{\if@twocolumn\else\endquotation\fi}
+\makeatother
+
+
+
 \begin{document}
 
 \onehalfspacing
 
 \begin{titlingpage}
 \maketitle
-\begin{abstract}
-\noindent 
-This article studies the effect of maternal risk preference on investment in children. Using NLSY79, we link risk preference of mothers, measured by the sequence of responses to the lifetime income gamble, to their children and the investment made, measured by various parental inputs and the home environment. Our results indicate a large and negative effect of maternal risk aversion on goods investment for children between 3-5 and 10-14 whose mothers identify as entrepreneurs. We conjecture that these mothers perceive said periods of development of children more ``risky" while treating investment in goods the same as investment in business. The more risk averse mothers, thus, reduce goods input. The effects are much less pronounced and most are found to be statistically insignificant in other dimensions of parental inputs.
+\begin{center}
+	\Large Dissertation Supervisor: Professor Pedro Carneiro
+\end{center}
+\vspace{4cm}
+\begin{center}
+	\large
+	Dissertation submitted in part-fulfilment of the MRes in Economics,\\ \vspace{0.5cm}
+	UCL\\ \vspace{0.5cm}
+	September 2023
+	
+\end{center}
+\end{titlingpage}
+
+
+\begin{titlingpage}
+	\begin{center}
+		{\Large Declaration}
+		\vskip 1cm
+		\begin{minipage}[!h]{.89\linewidth}\large 
+			I, Pham Phu Chau, hereby declare that the work presented in this dissertation is my own original work. Where information has been derived from other sources, I confirm that this has been clearly and fully identified and acknowledged. No part of this dissertation contains material previously submitted to the examiners of this or any other University, or any material previously submitted for any other assessment.
+			\vskip 2cm
+			Signature
+			\vskip 2cm
+			September 4, 2023
+		\end{minipage}
+		\vskip 4cm
+		\begin{minipage}[!h]{.89\linewidth}
+			\begin{center}
+				\Large Classification \vskip 0.5cm
+			\end{center}
+			\large
+			This piece of research is primarily (please tick as appropriate):
+			\begin{itemize}
+				\itembox an empirical/econometric study
+				\itembox the examination of a theoretical problem
+				\itembox a critical analysis of a policy issue
+				\itembox an analytical survey of empirical and/or theoretical literature
+			\end{itemize}
+		\end{minipage}
+	\end{center}
+\end{titlingpage}
+
+
+
+
+\begin{titlingpage}
+\paragraph*{\vspace{3cm}}
+\begin{abstract}\large
+	\noindent 
+	This article studies the effect of maternal risk preference on investment in children. Using NLSY79, we link risk preference of mothers, measured by the sequence of responses to the lifetime income gamble, to their children and the investment made, measured by various parental inputs and the home environment. Our results indicate a large and negative effect of maternal risk aversion on goods investment for children between 3-5 and 10-14 whose mothers identify as entrepreneurs. We conjecture that these mothers perceive said periods of development of children more ``risky" while treating investment in goods the same as investment in business. The more risk averse mothers, thus, reduce goods input. The effects are much less pronounced and most are found to be statistically insignificant in other dimensions of parental inputs.
 \end{abstract}
 
-
-\vspace{2em}
+\vspace{5cm}
 \begin{center}
 	\begin{minipage}[!h]{.89\linewidth}\small
-		\begin{center}
-			\textbf{Acknowledgement}
-		\end{center}
-		\noindent I would like to offer my utmost gratitude to my supervisor, Professor Pedro Carneiro, for his valuable guidance and suggestions on the direction and minute details of the dissertation.
-	\end{minipage}
+			\begin{center}
+				\large	\textbf{Acknowledgement}
+				\end{center} \large
+			\noindent I would like to offer my utmost gratitude to my supervisor, Professor Pedro Carneiro, for his valuable guidance and suggestions on the direction and minute details of the dissertation.
+		\end{minipage}
 \end{center}
 
 \end{titlingpage}
@@ -319,7 +389,7 @@ Before attempting to interpret our results, we now look at the effects of risk a
 
 One pattern persists throughout these different specifications and subsamplings, namely the statistically significant and sizeable negative effect of risk aversion on goods investment under the assumption of floating risk preference. The negative effect is driven mostly by the group of mothers with entrepreneur identity whose children are either between 3-5 (preschooler) or 10-14 (middle-schooler). Despite the persistent trend, it is hard to interpret this finding or investigate the underlying mechanism due to the lack of a suitable theory linking parental risk preference and investment in children. The most we can offer is a conjecture. 
 
-Although entrepreneurs are generally more willing to take risks, a comparison among entrepreneurs reveal that those who are more risk averse have firms of smaller size and lower leverage \citep{herranz2015entrepreneurs}. If the same rationale applies to investment in children, we would expect mothers who identify as entrepreneurs to shrink investment during periods where substantial ``risks" are perceived. Thus far, we have refrained from discussing what risks mean in the context of investment in children because such an explicit discussion warrants well-grounded theoretical and empirical underpinnings on the aspects which perceived risks manifest and influence investment decisions. Traditionally, risk is associated with uncertainties in ability, cognitive or non-cognitive outcomes, or market outcomes. Following the narrative of \citet{knudsen2006economic} and \citet{cunha2007technology} on ``sensitive period," defined as periods in which the formation of skills are more productive, we hypothesise that mothers perceive substantial risks when their children enter these ``sensitive" age-range when considerable changes typically occur.\footnote{A more involved model would incorporate how mothers update their investment, subject to their own degree of risk aversion, in response to information on cognitive and non-cognitive ability as well as behaviours problem of the child. While we do not attempt to build a model of child development here, \alert{our results are robust to controlling for cognitive ability and behavioural problems of the child, measured by various Peabody Individual Achievement Test (PIAT) scores, Peabody Picture Vocabulary Test (PPVT), and Behavioural Problem Index (BPI). More information is available in \alert{Appendix B}.}} It is an indisputable fact that children experience drastic changes in temperament once they enter puberty. Accordingly, it is possible that their erratic behaviours constitute a risk factor from the perspective of mothers. The situation aggravates when mothers have little information on their children. Despite the substantial risks mothers face when their children enter puberty, they did have information on the children's previous behaviours. Mothers whose children are about to enter preschool, on the other hand, have very limited information on how their children would behave when interacting with other children or unfamiliar adults. In response to these perceived risks, mothers with entrepreneur identity reduce investment in goods input which include books, magazines, and CD player for children between 3-5, and books, newspaper and musical instrument for children between 10-14. It is possible that maternal risk preference affects goods investment but not other dimensions of parental inputs because the similarity in pecuniary nature between investment in goods and investment in physical capital or infrastructure for a firm. Again, this hypothesis hinges crucially on the premise that self-identified entrepreneur mothers react to risks in investment in children the same way they would in an entrepreneurial setting. How plausible this precondition is will be left for future investigation.    
+Although entrepreneurs are generally more willing to take risks, a comparison among entrepreneurs reveal that those who are more risk averse have firms of smaller size and lower leverage \citep{herranz2015entrepreneurs}. If the same rationale applies to investment in children, we would expect mothers who identify as entrepreneurs to shrink investment during periods where substantial ``risks" are perceived. Thus far, we have refrained from discussing what risks mean in the context of investment in children because such an explicit discussion warrants well-grounded theoretical and empirical underpinnings on the aspects which perceived risks manifest and influence investment decisions. Traditionally, risk is associated with uncertainties in ability, cognitive or non-cognitive outcomes, or market outcomes. Following the narrative of \citet{knudsen2006economic} and \citet{cunha2007technology} on ``sensitive period," defined as periods in which the formation of skills are more productive, we hypothesise that mothers perceive substantial risks when their children enter these ``sensitive" age-range when considerable changes typically occur. It is an indisputable fact that children experience drastic changes in temperament once they enter puberty. Accordingly, it is possible that their erratic behaviours constitute a risk factor from the perspective of mothers. The situation aggravates when mothers have little information on their children. Despite the substantial risks mothers face when their children enter puberty, they did have information on the children's previous behaviours. Mothers whose children are about to enter preschool, on the other hand, have very limited information on how their children would behave when interacting with other children or unfamiliar adults. In response to these perceived risks, mothers with entrepreneur identity reduce investment in goods input which include books, magazines, and CD player for children between 3-5, and books, newspaper and musical instrument for children between 10-14. It is possible that maternal risk preference affects goods investment but not other dimensions of parental inputs because the similarity in pecuniary nature between investment in goods and investment in physical capital or infrastructure for a firm. Again, this hypothesis hinges crucially on the premise that self-identified entrepreneur mothers react to risks in investment in children the same way they would in an entrepreneurial setting. How plausible this precondition is will be left for future investigation.    
 
 
 
@@ -327,18 +397,18 @@ Although entrepreneurs are generally more willing to take risks, a comparison am
 %===================================================================================================================================================================
 
 \section{Robustness checks}
-In this section, we perform various checks to ensure the robustness of our model. These include re-estimating the model with the use of an ordinal variable indicating risk aversion instead of a cardinal measure ($\gamma$). 
+In this section, we perform various checks to ensure the robustness of our model. These include re-estimating the model with the use of an ordinal variable indicating risk aversion instead of a cardinal measure ($\gamma$), and incorporating information on cognitive and non-cognitive ability and behavioural issues of the child. 
 
 \subsection{Risk as category}
-Now we focus on the treatment of the variable that acts as a surrogate for risk preference, i.e., how we incorporate responses to the sequence of risk preference in our model. As has been done thus far, one way is to impute and turn these responses into a single cardinal variable which aids in interpretation. In so doing, however, we impose several identifying restrictions crucial to the imputation process as noted in Section 3. Another approach which relaxes these restrictions is to include an indicator for each response group of respondents. \Cref{table:robust-1} present GMM estimates of \eqref{eq:empirical-specification} when the cardinal variable $\gamma$ representing RRA coefficient is replaced by 3 indicators for each response group with the least risk averse (group 4) acting as the baseline.
+Now we focus on the treatment of the variable that acts as a surrogate for risk preference, i.e., how we incorporate responses to the sequence of risk preference in our model. As has been done thus far, one way is to impute and turn these responses into a single cardinal variable which aids in interpretation. In so doing, however, we impose several identifying restrictions crucial to the imputation process as noted in Section 3. Another approach which relaxes these restrictions is to include an indicator for each response group of respondents. Additionally, to separate the old series and new series, we interact the categorical variable with an indicator variable which takes value 1 for the new series and 0 otherwise. \Cref{table:robust-1} repeats the estimation done in \Cref{table:main-result} when the cardinal variable $\gamma$ representing RRA coefficient is replaced by 3 indicators for each response group with the least risk averse (group 4) acting as the baseline.
 
 
 \alert{As before, significant results are only found for children whose mothers are high school dropouts. Results show that children tend to receive more investment in terms of parental inputs if their mothers are the most risk averse, i.e., they are in category 1. Effects are more sizeable than those found using the cardinal measure $\gamma$. Most notably, children with high school dropouts mothers in category 1 receives up to 7.271 \% higher in emotional support percentile score compared to category 4. Additionally, positive effects are also found for category 3 but not for category 2, implying a possibility of a non-linear relationship between investment and maternal risk aversion.
 }
 
-\subsection{Other measures of risk preference}
+\subsection{Controlling for child's test scores}
 
-Another concern over the use of answers to lifetime income gamble to capture risk attitudes towards investment in children is how relevant such a measure is to the process of investment in children. Put differently, are risk attitudes captured by lifetime income gamble equivalent to risk attitudes mothers take when they make their investment decisions.  
+Thus far, we have not include any measures indicative of children's ability since we are not trying to explicitly estimate an empirical model of child development in which mothers update investment, subject to their degree of risk aversion, in response to information on cognitive and non-cognitive ability as well as behaviours problem of the child. Such a study, ideally should follow closely the work of \citet{cunha2007technology} and \citet{cunha2010estimating} with appropriate modification to accommodate identification of parental risk preference. That said, to see how the estimates would change in response to information on children's ability, we control for a battery of measures of cognitive and non-cognitive ability, and behavioural issues measured by three Peabody Individual Achievement Test (PIAT) scores including math, reading cognition and comprehension; Peabody Picture Vocabulary Test (PPVT); and Behavioural Problem Index (BPI). These tests are administered at different starting age of children with the earliest being PPVT for children age 3 and above. Information on BPI is collected for children age 4 and above while PIAT are only administered to children whose age are 5 years and above.
 
 
 
@@ -399,9 +469,14 @@ where $X_{it}$ denotes the set of characteristics of the respondents at the time
 
 
 \begin{table}[!htbp]
-	\centering \setlength{\extrarowheight}{0.2em}
+	\centering \setlength{\extrarowheight}{0.3em}
 	\caption{Distribution of log risk tolerance: Maximum likelihood estimates}
-	\input{Tables/appendix-mle}
+	\begin{threeparttable}
+		\input{Tables/appendix-mle}
+		\begin{tablenotes}[flushleft]\footnotesize
+			\item The table reports MLE estimation of parameters of log risk tolerance and response error under the assumption of time-invariant risk preference following \eqref{eq:A-likelihood-constant-univariate} and \eqref{eq:A-likelihood-constant-bivariate}, and time-invariant risk preference following \eqref{eq:A-likelihood-floating-univariate}. Standard error enclosed in parentheses.
+		\end{tablenotes}
+	\end{threeparttable}
 	\label{table:appendix-mle}
 \end{table}
 
