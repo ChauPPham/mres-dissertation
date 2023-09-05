@@ -1,0 +1,34 @@
+Model 11
+Error at iteration 1 = 1.04e+00
+05-Sep-2023 14:38:02
+                                   estimate          t-stat            step 
+Constant                             -0.055          -1.423        0.000378 
+Status Quo Bias                       0.105           2.634        0.000213 
+Std Dev                               0.848          32.443        0.000001 
+Original Persistent Std Dev           0.348           4.879        0.000051 
+SQB-Free Persistent Std Dev           0.521           0.551        1.040760 
+Original Transitory Std Dev           1.486          90.254       -0.000132 
+SQB-Free Transitory Std Dev           2.176           9.523       -0.000101 
+
+Log-likelihood   -37822.7
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('norm_cdf>stdn_cdf')" style="font-weight:bold">norm_cdf>stdn_cdf</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('norm_cdf', 'C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\norm_cdf.m', 32)" style="font-weight:bold">norm_cdf</a> (<a href="matlab: opentoline('C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\norm_cdf.m',32,0)">line 32</a>)
+  cdf(1:r,1) = stdn_cdf((x(1:r,1) - m(1:r,1)) ./ sqrt (v(1:r,1)));
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('likelihood', 'C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\likelihood.m', 96)" style="font-weight:bold">likelihood</a> (<a href="matlab: opentoline('C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\likelihood.m',96,0)">line 96</a>)
+                    norm_cdf((cpt_old(c06(i))-muX06(i)-xU(j)-xKo(k))./abs(sigmae06(i)));
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fdjac', 'C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\fdjac.m', 32)" style="font-weight:bold">fdjac</a> (<a href="matlab: opentoline('C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\fdjac.m',32,0)">line 32</a>)
+   xx(j) = xh0(j); f0=feval(f,xx,varargin{:});
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('EstimateRisk', 'C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\EstimateRisk.m', 175)" style="font-weight:bold">EstimateRisk</a> (<a href="matlab: opentoline('C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\EstimateRisk.m',175,0)">line 175</a>)
+        si = fdjac('likelihood',b,c93,c02,c04,c06,c10,c12,c14,X93,X02,X04,X06,X10,X12,X14);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ImputeRisk', 'C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\ImputeRisk.m', 254)" style="font-weight:bold">ImputeRisk</a> (<a href="matlab: opentoline('C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code\Codes\ImputeRisk.m',254,0)">line 254</a>)
+EstimateRisk(RISK_1993, RISK_2002, RISK_2004, RISK_2006, RISK_2010, RISK_2012, RISK_2014,[X93(:,1),ones(N,1)],[X02(:,1),ones(N,1)],[X04(:,1),ones(N,1)],[X06(:,1),ones(N,1)],[X10(:,1),zeros(N,1)],[X12(:,1),zeros(N,1)],[X14(:,1),zeros(N,1)]);
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('run', 'C:\Program Files\MATLAB\R2022a\toolbox\matlab\lang\run.m', 91)" style="font-weight:bold">run</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2022a\toolbox\matlab\lang\run.m',91,0)">line 91</a>)
+evalin('caller', strcat(script, ';'));
+} 

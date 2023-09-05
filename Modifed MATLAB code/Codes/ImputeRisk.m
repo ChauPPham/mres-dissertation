@@ -18,7 +18,7 @@ clear all;
 delete('../Output/ImputeRisk.out')
 diary('../Output/ImputeRisk.out');
 
-disp('Output from ImputeRisk.m - August 21 2023');
+disp('Output from ImputeRisk.m - September 5 2023');
 disp('  ');
 
 %% Input NLSY79 data %%
@@ -332,9 +332,22 @@ se = full(se); b = full(b); X93 = full(X93);
     lambdalnP  = va_11 / var(Elntheta_11);
 
 
+    X02 = full(X02);
+    K1 = size(X02,2);
+    sigmau_02 = abs(b(3));
+    xb_11_02 = X02(:,1)*b(1);
+    mu_11_02 = mean(xb_11_02);
+    va_11_02 = var(xb_11_02)+sigmau_02^2;
+    Vtheta_11_02  = exp(2*mu_11_02+va_11_02)*(exp(va_11_02)-1);
+    Vgamma_11_02  = exp(-2*mu_11_02+va_11_02)*(exp(va_11_02)-1);
+
+
+
 fprintf('Model 11: Log Risk Tolerance Mean = %1.3f (%1.3f) Std Dev = %1.3f (%1.3f)\n', mu_11, se(1),va_11^.5, se(2) );
 fprintf('Model 11: Risk Tolerance Mean = %1.3f Std Dev = %1.3f\n', exp(mu_11 + va_11/2), Vtheta_11^.5 );
-    
+fprintf('Model 11: Log Risk Tolerance Mean = %1.3f (%1.3f) Std Dev = %1.3f (%1.3f)\n', mu_11_02, se(1),va_11_02^.5, se(2) );
+fprintf('Model 11: Risk Tolerance Mean = %1.3f Std Dev = %1.3f\n', exp(mu_11_02 + va_11_02/2), Vtheta_11_02^.5 );
+  
 
 % writematrix(Egamma1, '../Output/RISK1.csv')
 

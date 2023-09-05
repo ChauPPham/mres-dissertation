@@ -4,7 +4,7 @@ use NLSY79_long, clear
 
 * List of categorical variable to be turned into dummy categorical
 rename R0214700 RACE
-rename R0214800 R_SEX
+rename R0214800 SEX
 rename R0001900 AGE_14
 rename R9909800 FIRST_MARRIAGE
 rename R0006500 MOM_HGC
@@ -26,56 +26,68 @@ replace DEGREE_SEP = 2 if DEGREE_CAT >= 3 & DEGREE_CAT != .
 label define DEGREE_SEP 0 "High school dropout" 1 "High school" 2 "College" 
 label values DEGREE_SEP DEGREE_SEP
 
-foreach i of varlist RACE R_SEX REGION FIRST_MARRIAGE MARITAL_STAT DEGREE_SEP {
-	tab `i', gen(`i'_) 
+foreach i of varlist RACE SEX REGION FIRST_MARRIAGE MARITAL_STAT DEGREE_SEP {
+	tab `i', gen(`i'_) missing 
+	* GENERATE THE LAST CATEGORY AS MISSING VALUE
 }
 
 gen AGE_14_BOTH_PARENTS = AGE_14 == 11
 
 replace RISK_AVERSE1 = RISK_AVERSE1[_n+1] if year == 1993
 
-keep if year == 1993 | year == 2002 | year == 2004 | year == 2006 | year == 2010 | year == 2012 | year == 2014
-
 gen RISK = RISK_AVERSE1
 replace RISK = RISK_AVERSE2 if RISK_AVERSE1 == .
+drop if year == 1994
 
 gen AGE = year - R0000500 - 1900
 
-/*============== Excluding certain categories to act as base level ================
-RACE_3: Non-black/non-Hispanic
-REGION_2: NORTH-CENTRAL
-MARITAL_STAT_1: NEVER MARRIED
-DEGREE_SEP_1: HS DROPOUT
- */
- 
-keep R0000100 year MOM_HGC DAD_HGC AFQT_2006 HH_INCOME RISK INTERVIEW_MONTH WEEKS_WORKED WEEKS_WORKED_SPS RACE_1 RACE_2 R_SEX_2 REGION_1 REGION_3 REGION_4 MARITAL_STAT_2 MARITAL_STAT_3 DEGREE_SEP_2 DEGREE_SEP_3 AGE_14_BOTH_PARENTS AGE
+foreach i of varlist MOM_HGC DAD_HGC AFQT_2006 HH_INCOME WEEKS_WORKED WEEKS_WORKED_SPS {
+	gen MISSING_`i' = cond(`i' == ., 1, 0)
+	* GENERATE AN INDCATOR FOR MISSING VALUES
+}
 
-rename R_SEX_2 FEMALE
+
+/*=========== Excluding MISSING categories to act as base level =============*/
+/* Base levels for characteristics without missing values
+SEX_1: MALE
+RACE_3: NON-BLACK/NON-HISPANIC
+*/
+ 
+keep R0000100 year MOM_HGC DAD_HGC AFQT_2006 HH_INCOME RISK INTERVIEW_MONTH WEEKS_WORKED WEEKS_WORKED_SPS RACE_1 RACE_2 SEX_2 REGION_1 REGION_2 REGION_3 REGION_4 MARITAL_STAT_1 MARITAL_STAT_2 MARITAL_STAT_3 DEGREE_SEP_1 DEGREE_SEP_2 DEGREE_SEP_3 AGE_14_BOTH_PARENTS AGE MISSING*
+
+rename SEX_2 FEMALE
 rename RACE_1 HISPANIC
 rename RACE_2 BLACK
 rename REGION_1 EAST
+rename REGION_2 NORTHCENTRAL
 rename REGION_3 SOUTH
 rename REGION_4 WEST
+rename MARITAL_STAT_1 NEVER_MARRIED
 rename MARITAL_STAT_2 MARRIED
 rename MARITAL_STAT_3 OTHER
+rename DEGREE_SEP_1 DROPOUT
 rename DEGREE_SEP_2 HIGHSCHOOL
 rename DEGREE_SEP_3 COLLEGE
+rename MISSING_HH_INCOME MISSING_INCOME
 
-foreach i of varlist HH_INCOME INTERVIEW_MONTH EAST SOUTH WEST MARRIED OTHER HIGHSCHOOL COLLEGE RISK WEEKS_WORKED WEEKS_WORKED_SPS AGE {
+
+foreach i of varlist HH_INCOME INTERVIEW_MONTH EAST NORTHCENTRAL SOUTH WEST NEVER_MARRIED MARRIED OTHER DROPOUT HIGHSCHOOL COLLEGE RISK WEEKS_WORKED WEEKS_WORKED_SPS AGE MISSING_INCOME MISSING_WEEKS* {
 	rename `i' `i'_
 }
 
-reshape wide HH_INCOME INTERVIEW_MONTH EAST SOUTH WEST MARRIED OTHER HIGHSCHOOL COLLEGE RISK WEEKS_WORKED_ WEEKS_WORKED_SPS AGE_, i(R0000100) j(year)
+keep if year == 1993 | year == 2002 | year == 2004 | year == 2006 | year == 2010 | year == 2012 | year == 2014
+
+reshape wide HH_INCOME INTERVIEW_MONTH EAST NORTHCENTRAL SOUTH WEST NEVER_MARRIED MARRIED OTHER DROPOUT HIGHSCHOOL COLLEGE RISK WEEKS_WORKED_ WEEKS_WORKED_SPS AGE_ MISSING_INCOME_ MISSING_WEEKS*_, i(R0000100) j(year)
 
 * Generate indicator variable for being asked question about risks in a certain year
 foreach i in 1993 2002 2004 2006 2010 2012 2014 {
 	gen INTERVIEW_`i' = cond(RISK_`i' !=., 1, 0)
 }
 
-
+* The next line of code instead of drop RISK early on reduces data loss
 drop if INTERVIEW_1993 == 0 & INTERVIEW_2002 == 0 & INTERVIEW_2004 == 0 & INTERVIEW_2006 == 0 & INTERVIEW_2010 == 0 & INTERVIEW_2012 == 0 & INTERVIEW_2014 == 0
 
-*export delimited using "MATLAB_INPUT.txt", delimiter(tab) novarnames nolabel replace
+*export delimited using "MATLAB_INPUT_redo.txt", delimiter(tab) novarnames nolabel replace
 
 
 
