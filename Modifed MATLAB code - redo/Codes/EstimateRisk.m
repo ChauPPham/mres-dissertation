@@ -79,69 +79,69 @@ elseif model == 12
         b(21,1) =  2.149; % Transitory Error SQB-Free  
 elseif model == 13  
         b = zeros(26,1);
-        b(1,1) =  -0.805; % Constant
-        b(2,1) =  -0.097; % Black
-        b(3,1) =  -0.125; % Hispanic
-        b(4,1) =   0.018; % East
-        b(5,1) =   0.023; % NORTH CENTRAL
-        b(6,1) =  -0.032; % South   
-        b(7,1) =  -0.152; % West
-        b(8,1) =   0.022; % Never married
-        b(9,1) =   0.375; % Married (spouse present)
-        b(10,1) =  0.223; % Other marital status
-        b(11,1) =  0.139; % Age/10 
-        b(12,1) = -0.063; % Unemployment rate
-        b(13,1) =  0.084; % ICS      
-        b(14,1) =  0.003; % Mother's years of schooling   
-        b(15,1) = -0.011; % Father's years of schooling  
-        b(16,1) =  0.034; % Living with both biological parents at age 14?
-        b(17,1) = -0.012; % AFQT score in 1981 (2006 version)
-        b(18,1) =  0.022; % INDICATOR FOR MISSING MOM'S EDUCATION
-        b(19,1) =  0.022; % INDICATOR FOR MISSING DAD'S EDUCATION
-        b(20,1) =  0.003; % INDICATOR FOR MISSING AFQT SCORE
-        b(21,1) =  0.119; % SQB
+        b(1,1) =  -1.669; % Constant
+        b(2,1) =  -0.096; % Black
+        b(3,1) =  -0.146; % Hispanic
+        b(4,1) =   0.137; % East
+        b(5,1) =   0.125; % NORTH CENTRAL
+        b(6,1) =   0.082; % South   
+        b(7,1) =  -0.035; % West
+        b(8,1) =   0.897; % NEVER MARRIED
+        b(9,1) =   1.269; % Married (spouse present)
+        b(10,1) =  1.115; % Other marital status
+        b(11,1) =  0.140; % Age/10 
+        b(12,1) = -0.062; % Unemployment rate
+        b(13,1) =  0.083; % ICS      
+        b(14,1) =  0.000; % Mother's years of schooling   
+        b(15,1) = -0.020; % Father's years of schooling  
+        b(16,1) =  0.014; % Living with both biological parents at age 14?
+        b(17,1) = -0.010; % AFQT score in 1981 (2006 version)
+        b(18,1) = -0.067; % INDICATOR FOR MISSING MOM'S EDUCATION
+        b(19,1) = -0.168; % INDICATOR FOR MISSING DAD'S EDUCATION
+        b(20,1) = -0.036; % INDICATOR FOR MISSING AFQT SCORE
+        b(21,1) =  0.117; % SQB
         b(22,1) =  0.840; % True Std Dev
-        b(23,1) =  0.334; % Persistent Original 
-        b(24,1) = -0.608; % Persistent SQB-Free (imprecisely estimated)
+        b(23,1) =  0.335; % Persistent Original 
+        b(24,1) = -0.637; % Persistent SQB-Free (imprecisely estimated)
         b(25,1) =  1.466; % Transitory Error Original        
-        b(26,1) =  2.236; % Transitory Error SQB-Free         
+        b(26,1) =  2.253; % Transitory Error SQB-Free         
  elseif model == 14  
         b = zeros(35,1);
-        b(1,1) =  -1.243; % Constant
-        b(2,1) =  -0.088; % Black
-        b(3,1) =  -0.111; % Hispanic
-        b(4,1) =   0.022; % East
-        b(5,1) =   0.023; % NORTH CENTRAL
-        b(6,1) =  -0.032; % South   
-        b(7,1) =  -0.152; % West
-        b(8,1) =   0.022; % Never married
-        b(9,1) =   0.375; % Married (spouse present)
-        b(10,1) =  0.223; % Other marital status
-        b(11,1) =  0.139; % Age/10 
-        b(12,1) = -0.063; % Unemployment rate
-        b(13,1) =  0.084; % ICS      
-        b(14,1) =  0.003; % Mother's years of schooling   
-        b(15,1) = -0.011; % Father's years of schooling  
-        b(16,1) =  0.034; % Living with both biological parents at age 14?
-        b(17,1) = -0.012; % AFQT score in 1981 (2006 version)
-        b(18,1) =  0.022; % INDICATOR FOR MISSING MOM'S EDUCATION
-        b(19,1) =  0.022; % INDICATOR FOR MISSING DAD'S EDUCATION
-        b(20,1) =  0.003; % INDICATOR FOR MISSING AFQT SCORE
-        b(21,1) =  0.268; % Female
-        b(22,1) =  0.270; % DROPOUT
-        b(23,1) =  0.129; % High school
-        b(24,1) = -0.087; % College 
-        b(25,1) =  0.170; % Log Income / 10 
-        b(26,1) =  0.151; % Zero income
-        b(27,1) =  0.005; % # weeks worked in previous year        
-        b(28,1) = -0.002; % # weeks spouse worked in previous year   
-        b(29,1) =  0.030; % INDICATOR FOR MISSING WEEKS WORKED BY SPOUSE
-        b(30,1) = -0.058; % SQB
-        b(31,1) =  0.815; % True Std Dev
-        b(32,1) =  0.348; % Persistent Original
-        b(33,1) = -0.376; % Persistent SQB-Free (imprecisely estimated)
-        b(34,1) =  1.461; % Transitory Error Original        
-        b(35,1) =  2.114; % Transitory Error SQB-Free               
+        b(1,1) =  -1.982; % Constant
+        b(2,1) =  -0.089; % Black
+        b(3,1) =  -0.133; % Hispanic
+        b(4,1) =   0.060; % East
+        b(5,1) =   0.039; % NORTH CENTRAL
+        b(6,1) =  -0.000; % South   
+        b(7,1) =  -0.111; % West
+        b(8,1) =   0.857; % Never married
+        b(9,1) =   1.201; % Married (spouse present)
+        b(10,1) =  1.028; % Other marital status
+        b(11,1) =  0.152; % Age/10 
+        b(12,1) = -0.054; % Unemployment rate
+        b(13,1) =  0.077; % ICS      
+        b(14,1) =  0.001; % Mother's years of schooling   
+        b(15,1) = -0.018; % Father's years of schooling  
+        b(16,1) =  0.011; % Living with both biological parents at age 14?
+        b(17,1) = -0.007; % AFQT score in 1981 (2006 version)
+        b(18,1) = -0.026; % INDICATOR FOR MISSING MOM'S EDUCATION
+        b(19,1) = -0.150; % INDICATOR FOR MISSING DAD'S EDUCATION
+        b(20,1) =  0.000; % INDICATOR FOR MISSING AFQT SCORE
+        b(21,1) =  0.284; % Female
+        b(22,1) = -0.110; % DROPOUT
+        b(23,1) =  0.019; % High school
+        b(24,1) = -0.189; % College 
+        b(25,1) =  0.153; % Log Income / 10 
+        b(26,1) =  0.148; % Zero income
+        b(27,1) =  0.030; % # weeks worked in previous year        
+        b(28,1) = -0.016; % # weeks spouse worked in previous year   
+        b(29,1) = -0.039; % INDICATOR FOR MISSING WEEKS WORKED BY SPOUSE
+        b(30,1) = -0.060; % SQB
+        b(31,1) =  0.814; % True Std Dev
+        b(32,1) =  0.346; % Persistent Original
+        b(33,1) = -0.522; % Persistent SQB-Free (imprecisely estimated)
+        b(34,1) =  1.464; % Transitory Error Original        
+        b(35,1) =  2.194; % Transitory Error SQB-Free               
 end
 
  info.cnames = strvcat('estimate','t-stat','step');
@@ -160,18 +160,18 @@ end
 		'Original Transitory Std Dev','SQB-Free Transitory Std Dev');   
         elseif model == 13
             info.rnames = strvcat(' ','Constant','Black','Hispanic',...
-		'East','South','West','Married (spouse present)','Other marital status',...
+		'East', 'North Central', 'South','West', 'Never married', 'Married (spouse present)','Other marital status',...
                 'Age/10','Unemployment rate','ICS',"Mother's years of schooling","Father's years of schooling",...
-                'Living with both biological parents at 14?', 'AFQT score (2006 version)', 'Status Quo Bias','Std Dev',...
-		'Original Persistent Std Dev','SQB-Free Persistent Std Dev',...
-		'Original Transitory Std Dev','SQB-Free Transitory Std Dev');  
+                'Living with both biological parents at 14?', 'AFQT score (2006 version)', "Missing mom's education", "Missing dad's education", 'Missing AFQT',...
+                'Status Quo Bias','Std Dev','Original Persistent Std Dev','SQB-Free Persistent Std Dev',...
+		        'Original Transitory Std Dev','SQB-Free Transitory Std Dev');  
         elseif model == 14
             info.rnames = strvcat(' ','Constant','Black','Hispanic',...
-		'East','South','West','Married (spouse present)','Other marital status',...
+		'East','North','South','West', 'Never married','Married (spouse present)','Other marital status',...
                 'Age/10','Unemployment rate','ICS',"Mother's years of schooling","Father's years of schooling",...
-                'Living with both biological parents at 14?','AFQT score (2006 version)',...
-                'Female', 'High school', 'College','Log income/10', 'Zero income', '# weeks worked in previous year',...  
-                '# weeks spouse worked in previous year', 'Status Quo Bias','Std Dev',...
+                'Living with both biological parents at 14?','AFQT score (2006 version)',"Missing mom's education", "Missing dad's education", 'Missing AFQT',......
+                'Female', 'Dropout', 'High school', 'College','Log income/10', 'Zero income', '# weeks worked in previous year',...  
+                '# weeks spouse worked in previous year', 'Missing weeks worked spouse', 'Status Quo Bias','Std Dev',...
 		'Original Persistent Std Dev','SQB-Free Persistent Std Dev',...
 		'Original Transitory Std Dev','SQB-Free Transitory Std Dev');               
         end
@@ -222,13 +222,13 @@ end
     elseif model == 2
         save results_final_02 b V se L iter err N itertime sumsi model;                 
     elseif model == 11 
-        save results_final_11 b V se L iter err N itertime sumsi model;                 
+        save ../Output/results_final_11 b V se L iter err N itertime sumsi model;                 
     elseif model == 12
-        save results_final_12 b V se L iter err N itertime sumsi model;  
+        save ../Output/results_final_12 b V se L iter err N itertime sumsi model;  
     elseif model == 13
-        save results_final_13 b V se L iter err N itertime sumsi model;        
+        save ../Output/results_final_13 b V se L iter err N itertime sumsi model;        
     elseif model == 14
-        save results_final_14 b V se L iter err N itertime sumsi model;          
+        save ../Output/results_final_14 b V se L iter err N itertime sumsi model;          
     end
     
     fprintf('Estimates of Model %1.1f\n', model );
