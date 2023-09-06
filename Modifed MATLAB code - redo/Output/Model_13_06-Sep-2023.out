@@ -1,0 +1,47 @@
+Model 13
+Error at iteration 1 = 7.98e-01
+06-Sep-2023 15:47:37
+Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mprint')" style="font-weight:bold">mprint</a>
+Wrong # rnames in mprint
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('EstimateRisk', 'C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code - redo\Codes\EstimateRisk.m', 216)" style="font-weight:bold">EstimateRisk</a> (<a href="matlab: opentoline('C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code - redo\Codes\EstimateRisk.m',216,0)">line 216</a>)
+        mprint([b,b./se,d],info)
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ImputeRisk', 'C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code - redo\Codes\ImputeRisk.m', 297)" style="font-weight:bold">ImputeRisk</a> (<a href="matlab: opentoline('C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code - redo\Codes\ImputeRisk.m',297,0)">line 297</a>)
+EstimateRisk(RISK_1993, RISK_2002, RISK_2004, RISK_2006, RISK_2010,
+RISK_2012, RISK_2014,[W93 ,ones(N,1)],[W02 ,ones(N,1)], [W04
+,ones(N,1)],[W06, ones(N,1)], ...
+
+06-Sep-2023 15:47:37
+Model 13
+Error at iteration 1 = 7.98e-01
+06-Sep-2023 15:59:15
+                                                  estimate          t-stat            step 
+Constant                                            -1.353          -1.483       -0.548494 
+Black                                               -0.111          -2.868       -0.013717 
+Hispanic                                            -0.149          -3.360       -0.023547 
+East                                                 0.124           1.165        0.105855 
+North Central                                        0.104           0.979        0.080508 
+South                                                0.079           0.762        0.110586 
+West                                                -0.051          -0.487        0.100978 
+Never married                                        0.538           0.722        0.516157 
+Married (spouse present)                             0.903           1.212        0.527797 
+Other marital status                                 0.748           1.005        0.525497 
+Age/10                                               0.166           2.884        0.026850 
+Unemployment rate                                   -0.059          -1.824        0.004206 
+ICS                                                  0.073           2.869       -0.011412 
+Mother's years of schooling                          0.002           0.255       -0.001460 
+Father's years of schooling                         -0.020          -4.042       -0.009127 
+Living with both biological parents at 14?           0.019           0.589       -0.014962 
+AFQT score (2006 version)                           -0.014          -2.279       -0.002164 
+Missing mom's education                             -0.054          -0.643       -0.075696 
+Mssing dad's education                              -0.137          -2.153       -0.158824 
+Missing AFQT                                        -0.039          -0.537       -0.041726 
+Status Quo Bias                                     -0.070          -0.360       -0.189170 
+Std Dev                                              0.854          32.303        0.013770 
+Original Persistent Std Dev                          0.256           3.481       -0.078204 
+SQB-Free Persistent Std Dev                          0.190           0.193        0.798419 
+Original Transitory Std Dev                          1.485          91.621        0.019293 
+SQB-Free Transitory Std Dev                          2.119           7.820       -0.117216 
+
+Log-likelihood   -37766.5
