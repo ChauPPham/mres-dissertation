@@ -115,19 +115,19 @@ IMPUTED_CRRA_2,3,4: TIME-VARYING CRRA (with different sets of covariates)
 *===========================================================================================*
 /* This next piece of code uses as input the output file from MATLAB, then merge to the main NLSY79 dataset which are then to be merge with the NLSY79CYA. */
 
-import delimited "RISK_MATLAB.csv", case(upper) clear
+import delimited "RISK_MATLAB(new).csv", case(upper) clear
 reshape long RISK1_ RISK2_ RISK3_ RISK4_, i(R0000100) j(year)
-rename RISK*_ IMPUTE_CRRA_*
+rename RISK*_ IMPUTED_CRRA_*
 replace year = 1994 if year == 1993 /*recode to match investment data*/
-* save RISK_MATLAB, replace
+* save RISK_MATLAB_new, replace
 
 use NLSY79_long, clear
 
-merge 1:1 R0000100 year using RISK_MATLAB, nogen
+merge 1:1 R0000100 year using RISK_MATLAB_new, nogen
 
 /* Change imputed values to NULL for years that the individuals did not participate in the risk survey */
 foreach i of varlist IMPUTED* {
 	replace `i' = . if RISK1_a == . & RISK2_a == .
 }
-save NLSY79_long, replace
+* save NLSY79_long_redo, replace
 

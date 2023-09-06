@@ -390,7 +390,7 @@ Egamma2 = [ID,Egamma2_93, Egamma2_02,Egamma2_04,Egamma2_06,Egamma2_10,Egamma2_12
 
 se = full(se); b = full(b); X93 = full(X93);
     K = size(X93,2);    
-    sigmau = abs(b(17));
+    sigmau = abs(b(21));
     xb_12 = X93*b(1:K);
     mu_12 = mean(xb_12);
     va_12 = var(xb_12)+sigmau^2;
@@ -459,7 +459,7 @@ load ../Output/results_final_14
 
     se = full(se); b = full(b); XW93 = full(XW93);
     K = size(XW93,2);    
-    sigmau = abs(b(31));
+    sigmau = abs(b(35));
     xb_14 = XW93*b(1:K);
     mu_14 = mean(xb_14);
     va_14 = var(xb_14)+sigmau^2;

@@ -1093,6 +1093,14 @@ forval i = 11/15 {
 gen BUS_OWN = cond(X0045900 >= 1 & X0045900 != ., 1, 0)
 replace BUS_OWN = X0045900 if X0045800 == .
 
+/*		THIS PART FOR THE REDOING DATA
+foreach i of varlist X0045800 X0062000 BUS_OWN {
+	sort R0000100 `i'
+	by R0000100: replace `i' = `i'[1] if missing(`i')
+}
+sort C0000100 year
+*/
+
 local identifier = 21
 qui foreach i of varlist INV_ALL GOODS_ALL TIME_ALL COG_SCORE EMO_SCORE {
 	
