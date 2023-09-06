@@ -46,9 +46,9 @@ disp('  ');
     INCOME_2014, INTERVIEW_MONTH_2014, WKS_WORKED_SPS_2014, WKS_WORKED_2014, ...
     EAST_2014, NORTH_2014, SOUTH_2014, WEST_2014, NEVERMARRIED_2014, MARRIED_2014, OTHER_2014, ...
     DROPOUT_2014, HS_2014, COLLEGE_2014, RISK_2014, AGE_2014, MISSING_INCOME_2014, MISSING_WKS_2014, MISSING_WKS_SPS_2014,...
-    MOM_HGC, DAD_HGC, AFQT_2006, HISPANIC, BLACK, FEMALE, AGE_14, MISSING_MOM_HGC, MISSING_DAD_HGC, MISSING_AFQT, ...
+    MOM_HGC, DAD_HGC, AFQT_2006, NLSY_BUSINESS, ENTREPRENEUR, BUSOWN, HISPANIC, BLACK, FEMALE, AGE_14, MISSING_MOM_HGC, MISSING_DAD_HGC, MISSING_AFQT, MISSING_BUS, ...
     INTERVIEW_1993, INTERVIEW_2002, INTERVIEW_2004, INTERVIEW_2006, INTERVIEW_2010, INTERVIEW_2012, INTERVIEW_2014] = ...
-textread('../Input/MATLAB_INPUT_redo.txt','%u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u', -1, 'delimiter', '\t', 'emptyvalue', 0);
+textread('../Input/MATLAB_INPUT_redo.txt','%u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %f %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u %u', -1, 'delimiter', '\t', 'emptyvalue', 0);
 
 N = size(ID,1);
 
@@ -139,35 +139,35 @@ ii = find(INTERVIEW_MONTH_2014 == mn);
 end
 
 %% Variable Matrices for Baseline Estimation %%    
-X93 = zeros(N,15); X02 = zeros(N,15); X04 = zeros(N,15); X06 = zeros(N,15); X10 = zeros(N,15); X12 = zeros(N,15); X14 = zeros(N,15);
+X93 = zeros(N,19); X02 = zeros(N,19); X04 = zeros(N,19); X06 = zeros(N,19); X10 = zeros(N,19); X12 = zeros(N,19); X14 = zeros(N,19);
 
 ii = find(INTERVIEW_1993 > 0);
 X93(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), FEMALE(ii), DROPOUT_1993(ii), HS_1993(ii), COLLEGE_1993(ii), AGE_1993(ii), ...
-    lINCOME_1993(ii), zINCOME_1993(ii), WKS_WORKED_1993(ii)/10, WKS_WORKED_SPS_1993(ii)/10, URATE_1993(ii), ICS_1993(ii), MISSING_WKS_SPS_1993(ii)];  
+    lINCOME_1993(ii), zINCOME_1993(ii), WKS_WORKED_1993(ii)/10, WKS_WORKED_SPS_1993(ii)/10, URATE_1993(ii), ICS_1993(ii), MISSING_WKS_SPS_1993(ii), NLSY_BUSINESS(ii), BUSOWN(ii), ENTREPRENEUR(ii), MISSING_BUS(ii)];  
 
 ii = find(INTERVIEW_2002 > 0);
 X02(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), FEMALE(ii), DROPOUT_2002(ii), HS_2002(ii), COLLEGE_2002(ii), AGE_2002(ii), ...
-    lINCOME_2002(ii), zINCOME_2002(ii), WKS_WORKED_2002(ii)/10, WKS_WORKED_SPS_2002(ii)/10, URATE_2002(ii), ICS_2002(ii), MISSING_WKS_SPS_2002(ii)];  
+    lINCOME_2002(ii), zINCOME_2002(ii), WKS_WORKED_2002(ii)/10, WKS_WORKED_SPS_2002(ii)/10, URATE_2002(ii), ICS_2002(ii), MISSING_WKS_SPS_2002(ii), NLSY_BUSINESS(ii), BUSOWN(ii), ENTREPRENEUR(ii), MISSING_BUS(ii)];  
 
 ii = find(INTERVIEW_2004 > 0);
 X04(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), FEMALE(ii), DROPOUT_2004(ii), HS_2004(ii), COLLEGE_2004(ii), AGE_2004(ii), ...
-    lINCOME_2004(ii), zINCOME_2004(ii), WKS_WORKED_2004(ii)/10, WKS_WORKED_SPS_2004(ii)/10, URATE_2004(ii), ICS_2004(ii), MISSING_WKS_SPS_2004(ii)];
+    lINCOME_2004(ii), zINCOME_2004(ii), WKS_WORKED_2004(ii)/10, WKS_WORKED_SPS_2004(ii)/10, URATE_2004(ii), ICS_2004(ii), MISSING_WKS_SPS_2004(ii), NLSY_BUSINESS(ii), BUSOWN(ii), ENTREPRENEUR(ii), MISSING_BUS(ii)];
 
 ii = find(INTERVIEW_2006 > 0);
 X06(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), FEMALE(ii), DROPOUT_2006(ii), HS_2006(ii), COLLEGE_2006(ii), AGE_2006(ii), ...
-    lINCOME_2006(ii), zINCOME_2006(ii), WKS_WORKED_2006(ii)/10, WKS_WORKED_SPS_2006(ii)/10, URATE_2006(ii), ICS_2006(ii), MISSING_WKS_SPS_2006(ii)]; 
+    lINCOME_2006(ii), zINCOME_2006(ii), WKS_WORKED_2006(ii)/10, WKS_WORKED_SPS_2006(ii)/10, URATE_2006(ii), ICS_2006(ii), MISSING_WKS_SPS_2006(ii), NLSY_BUSINESS(ii), BUSOWN(ii), ENTREPRENEUR(ii), MISSING_BUS(ii)]; 
 
 ii = find(INTERVIEW_2010 > 0);
 X10(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), FEMALE(ii), DROPOUT_2010(ii), HS_2010(ii), COLLEGE_2010(ii), AGE_2010(ii), ...
-    lINCOME_2010(ii), zINCOME_2010(ii), WKS_WORKED_2010(ii)/10, WKS_WORKED_SPS_2010(ii)/10, URATE_2010(ii), ICS_2010(ii), MISSING_WKS_SPS_2010(ii)]; 
+    lINCOME_2010(ii), zINCOME_2010(ii), WKS_WORKED_2010(ii)/10, WKS_WORKED_SPS_2010(ii)/10, URATE_2010(ii), ICS_2010(ii), MISSING_WKS_SPS_2010(ii), NLSY_BUSINESS(ii), BUSOWN(ii), ENTREPRENEUR(ii), MISSING_BUS(ii)]; 
 
 ii = find(INTERVIEW_2012 > 0);
 X12(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), FEMALE(ii), DROPOUT_2012(ii), HS_2012(ii), COLLEGE_2012(ii), AGE_2012(ii), ...
-    lINCOME_2012(ii), zINCOME_2012(ii), WKS_WORKED_2012(ii)/10, WKS_WORKED_SPS_2012(ii)/10, URATE_2012(ii), ICS_2012(ii), MISSING_WKS_SPS_2012(ii)]; 
+    lINCOME_2012(ii), zINCOME_2012(ii), WKS_WORKED_2012(ii)/10, WKS_WORKED_SPS_2012(ii)/10, URATE_2012(ii), ICS_2012(ii), MISSING_WKS_SPS_2012(ii), NLSY_BUSINESS(ii), BUSOWN(ii), ENTREPRENEUR(ii), MISSING_BUS(ii)]; 
 
 ii = find(INTERVIEW_2014 > 0);
 X14(ii,:) = [ones(size(ii)), BLACK(ii), HISPANIC(ii), FEMALE(ii), DROPOUT_2014(ii), HS_2014(ii), COLLEGE_2014(ii), AGE_2014(ii), ...
-    lINCOME_2014(ii), zINCOME_2014(ii), WKS_WORKED_2014(ii)/10, WKS_WORKED_SPS_2014(ii)/10, URATE_2014(ii), ICS_2014(ii), MISSING_WKS_SPS_2014(ii)];  
+    lINCOME_2014(ii), zINCOME_2014(ii), WKS_WORKED_2014(ii)/10, WKS_WORKED_SPS_2014(ii)/10, URATE_2014(ii), ICS_2014(ii), MISSING_WKS_SPS_2014(ii), NLSY_BUSINESS(ii), BUSOWN(ii), ENTREPRENEUR(ii), MISSING_BUS(ii)];  
 
 
 X93 = sparse(X93); X02 = sparse(X02); X04 = sparse(X04); X06 = sparse(X06); X10 = sparse(X10); X12 = sparse(X12); X14 = sparse(X14);
@@ -214,35 +214,35 @@ W93 = sparse(W93); W02 = sparse(W02); W04 = sparse(W04); W06 = sparse(W06); W10 
 
 %% Variable Matrices for Sampling Sensitivity Check (Plus Second-Step Covariates) %%
 
-XW93 = zeros(N,29); XW02 = zeros(N,29); XW04 = zeros(N,29); XW06 = zeros(N,29); XW10 = zeros(N,29); XW12 = zeros(N,29); XW14 = zeros(N,29);
+XW93 = zeros(N,33); XW02 = zeros(N,33); XW04 = zeros(N,33); XW06 = zeros(N,33); XW10 = zeros(N,33); XW12 = zeros(N,33); XW14 = zeros(N,33);
 
 ii = find(INTERVIEW_1993 > 0);
 XW93(ii,:) = [W93(ii,:), FEMALE(ii), DROPOUT_1993(ii), HS_1993(ii), COLLEGE_1993(ii), lINCOME_1993(ii), ... 
-    zINCOME_1993(ii), WKS_WORKED_1993(ii)/10, WKS_WORKED_SPS_1993(ii)/10, MISSING_WKS_SPS_1993(ii)];  
+    zINCOME_1993(ii), WKS_WORKED_1993(ii)/10, WKS_WORKED_SPS_1993(ii)/10, MISSING_WKS_SPS_1993(ii), NLSY_BUSINESS(ii), BUSOWN(ii), ENTREPRENEUR(ii), MISSING_BUS(ii)];  
 
 ii = find(INTERVIEW_2002 > 0);
 XW02(ii,:) = [W02(ii,:), FEMALE(ii), DROPOUT_2002(ii), HS_2002(ii), COLLEGE_2002(ii), lINCOME_2002(ii), ... 
-    zINCOME_2002(ii), WKS_WORKED_2002(ii)/10, WKS_WORKED_SPS_2002(ii)/10, MISSING_WKS_SPS_2002(ii)];  
+    zINCOME_2002(ii), WKS_WORKED_2002(ii)/10, WKS_WORKED_SPS_2002(ii)/10, MISSING_WKS_SPS_2002(ii), NLSY_BUSINESS(ii), BUSOWN(ii), ENTREPRENEUR(ii), MISSING_BUS(ii)];  
 
 ii = find(INTERVIEW_2004 > 0);
 XW04(ii,:) = [W04(ii,:), FEMALE(ii), DROPOUT_2004(ii), HS_2004(ii), COLLEGE_2004(ii), lINCOME_2004(ii), ... 
-    zINCOME_2004(ii), WKS_WORKED_2004(ii)/10, WKS_WORKED_SPS_2004(ii)/10, MISSING_WKS_SPS_2004(ii)];  
+    zINCOME_2004(ii), WKS_WORKED_2004(ii)/10, WKS_WORKED_SPS_2004(ii)/10, MISSING_WKS_SPS_2004(ii), NLSY_BUSINESS(ii), BUSOWN(ii), ENTREPRENEUR(ii), MISSING_BUS(ii)];  
 
 ii = find(INTERVIEW_2006 > 0);
 XW06(ii,:) = [W06(ii,:), FEMALE(ii), DROPOUT_2006(ii), HS_2006(ii), COLLEGE_2006(ii), lINCOME_2006(ii), ... 
-    zINCOME_2006(ii), WKS_WORKED_2006(ii)/10, WKS_WORKED_SPS_2006(ii)/10, MISSING_WKS_SPS_2006(ii)]; 
+    zINCOME_2006(ii), WKS_WORKED_2006(ii)/10, WKS_WORKED_SPS_2006(ii)/10, MISSING_WKS_SPS_2006(ii), NLSY_BUSINESS(ii), BUSOWN(ii), ENTREPRENEUR(ii), MISSING_BUS(ii)]; 
 
 ii = find(INTERVIEW_2010 > 0);
 XW10(ii,:) = [W10(ii,:), FEMALE(ii), DROPOUT_2010(ii), HS_2010(ii), COLLEGE_2010(ii), lINCOME_2010(ii), ... 
-    zINCOME_2010(ii), WKS_WORKED_2010(ii)/10, WKS_WORKED_SPS_2010(ii)/10, MISSING_WKS_SPS_2010(ii)];   
+    zINCOME_2010(ii), WKS_WORKED_2010(ii)/10, WKS_WORKED_SPS_2010(ii)/10, MISSING_WKS_SPS_2010(ii), NLSY_BUSINESS(ii), BUSOWN(ii), ENTREPRENEUR(ii), MISSING_BUS(ii)];   
 
 ii = find(INTERVIEW_2012 > 0);
 XW12(ii,:) = [W12(ii,:), FEMALE(ii), DROPOUT_2012(ii), HS_2012(ii), COLLEGE_2012(ii), lINCOME_2012(ii), ... 
-    zINCOME_2012(ii), WKS_WORKED_2012(ii)/10, WKS_WORKED_SPS_2012(ii)/10, MISSING_WKS_SPS_2012(ii)];   
+    zINCOME_2012(ii), WKS_WORKED_2012(ii)/10, WKS_WORKED_SPS_2012(ii)/10, MISSING_WKS_SPS_2012(ii), NLSY_BUSINESS(ii), BUSOWN(ii), ENTREPRENEUR(ii), MISSING_BUS(ii)];   
 
 ii = find(INTERVIEW_2014 > 0);
 XW14(ii,:) = [W14(ii,:), FEMALE(ii), DROPOUT_2014(ii), HS_2014(ii), COLLEGE_2014(ii), lINCOME_2014(ii), ... 
-    zINCOME_2014(ii), WKS_WORKED_2014(ii)/10, WKS_WORKED_SPS_2014(ii)/10, MISSING_WKS_SPS_2014(ii)];   
+    zINCOME_2014(ii), WKS_WORKED_2014(ii)/10, WKS_WORKED_SPS_2014(ii)/10, MISSING_WKS_SPS_2014(ii), NLSY_BUSINESS(ii), BUSOWN(ii), ENTREPRENEUR(ii), MISSING_BUS(ii)];   
 
 
 XW93 = sparse(XW93); XW02 = sparse(XW02); XW04 = sparse(XW04); XW06 = sparse(XW06); XW10 = sparse(XW10); XW12 = sparse(XW12); XW14 = sparse(XW14);
