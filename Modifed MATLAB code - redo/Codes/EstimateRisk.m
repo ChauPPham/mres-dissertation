@@ -103,104 +103,54 @@ elseif model == 13
         b(18,1) = -0.067; % INDICATOR FOR MISSING MOM'S EDUCATION
         b(19,1) = -0.168; % INDICATOR FOR MISSING DAD'S EDUCATION
         b(20,1) = -0.036; % INDICATOR FOR MISSING AFQT SCORE
-        b(21,1) =  0.117; % SQB
+        b(21,1) = -0.117; % SQB
         b(22,1) =  0.840; % True Std Dev
         b(23,1) =  0.335; % Persistent Original 
         b(24,1) = -0.637; % Persistent SQB-Free (imprecisely estimated)
         b(25,1) =  1.466; % Transitory Error Original        
         b(26,1) =  2.253; % Transitory Error SQB-Free         
  elseif model == 14  
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        b = zeros(35,1);
-        b(1,1) =  -1.982; % Constant
-        b(2,1) =  -0.089; % Black
-        b(3,1) =  -0.133; % Hispanic
-        b(4,1) =   0.060; % East
-        b(5,1) =   0.039; % NORTH CENTRAL
-        b(6,1) =  -0.000; % South   
-        b(7,1) =  -0.111; % West
-        b(8,1) =   0.857; % Never married
-        b(9,1) =   1.201; % Married (spouse present)
-        b(10,1) =  1.028; % Other marital status
-        b(11,1) =  0.152; % Age/10 
-        b(12,1) = -0.054; % Unemployment rate
-        b(13,1) =  0.077; % ICS      
-        b(14,1) =  0.001; % Mother's years of schooling   
-        b(15,1) = -0.018; % Father's years of schooling  
-        b(16,1) =  0.011; % Living with both biological parents at age 14?
-        b(17,1) = -0.007; % AFQT score in 1981 (2006 version)
-        b(18,1) = -0.026; % INDICATOR FOR MISSING MOM'S EDUCATION
-        b(19,1) = -0.150; % INDICATOR FOR MISSING DAD'S EDUCATION
-        b(20,1) =  0.000; % INDICATOR FOR MISSING AFQT SCORE
-        b(21,1) =  0.284; % Female
-        b(22,1) = -0.110; % DROPOUT
-        b(23,1) =  0.019; % High school
-        b(24,1) = -0.189; % College 
-        b(25,1) =  0.153; % Log Income / 10 
-        b(26,1) =  0.148; % Zero income
-        b(27,1) =  0.030; % # weeks worked in previous year        
-        b(28,1) = -0.016; % # weeks spouse worked in previous year   
-        b(29,1) = -0.039; % INDICATOR FOR MISSING WEEKS WORKED BY SPOUSE
-        b(30,1) = -0.060; % SQB
-        b(31,1) =  0.814; % True Std Dev
-        b(32,1) =  0.346; % Persistent Original
-        b(33,1) = -0.522; % Persistent SQB-Free (imprecisely estimated)
-        b(34,1) =  1.464; % Transitory Error Original        
-        b(35,1) =  2.194; % Transitory Error SQB-Free               
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
         b = zeros(39,1);
-        b(1,1) =  -1.243; % Constant
-        b(2,1) =  -0.088; % Black
-        b(3,1) =  -0.111; % Hispanic
-        b(4,1) =   0.022; % East
-        b(5,1) =   0.023; % NORTH CENTRAL
-        b(6,1) =  -0.032; % South   
-        b(7,1) =  -0.152; % West
-        b(8,1) =   0.022; % Never married
-        b(9,1) =   0.375; % Married (spouse present)
-        b(10,1) =  0.223; % Other marital status
-        b(11,1) =  0.139; % Age/10 
-        b(12,1) = -0.063; % Unemployment rate
-        b(13,1) =  0.084; % ICS      
-        b(14,1) =  0.003; % Mother's years of schooling   
-        b(15,1) = -0.011; % Father's years of schooling  
-        b(16,1) =  0.034; % Living with both biological parents at age 14?
-        b(17,1) = -0.012; % AFQT score in 1981 (2006 version)
-        b(18,1) =  0.022; % INDICATOR FOR MISSING MOM'S EDUCATION
-        b(19,1) =  0.022; % INDICATOR FOR MISSING DAD'S EDUCATION
-        b(20,1) =  0.003; % INDICATOR FOR MISSING AFQT SCORE
-        b(21,1) =  0.268; % Female
-        b(22,1) =  0.270; % DROPOUT
-        b(23,1) =  0.129; % High school
-        b(24,1) = -0.087; % College 
-        b(25,1) =  0.170; % Log Income / 10 
-        b(26,1) =  0.151; % Zero income
-        b(27,1) =  0.005; % # weeks worked in previous year        
-        b(28,1) = -0.002; % # weeks spouse worked in previous year   
-        b(29,1) =  0.030; % INDICATOR FOR MISSING WEEKS WORKED BY SPOUSE
-        b(30,1) =  0.012; % NLSY BUSINESS OWNER
-        b(31,1) =  0.050; % REAL BUSINESS OWNER
-        b(32,1) =  0.120; % ENTREPRENEUR
-        b(33,1) =  0.060; % MISSING BUSINESS DATA
-        b(34,1) = -0.058; % SQB
-        b(35,1) =  0.815; % True Std Dev
-        b(36,1) =  0.348; % Persistent Original
-        b(37,1) = -0.376; % Persistent SQB-Free (imprecisely estimated)
-        b(38,1) =  1.461; % Transitory Error Original        
-        b(39,1) =  2.114; % Transitory Error SQB-Free               
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+        b(1,1) =  -1.946; % Constant
+        b(2,1) =  -0.074; % Black
+        b(3,1) =  -0.138; % Hispanic
+        b(4,1) =   0.042; % East
+        b(5,1) =   0.027; % NORTH CENTRAL
+        b(6,1) =  -0.013; % South   
+        b(7,1) =  -0.116; % West
+        b(8,1) =   0.844; % Never married
+        b(9,1) =   1.201; % Married (spouse present)
+        b(10,1) =  1.029; % Other marital status
+        b(11,1) =  0.149; % Age/10 
+        b(12,1) = -0.056; % Unemployment rate
+        b(13,1) =  0.077; % ICS      
+        b(14,1) =  0.002; % Mother's years of schooling   
+        b(15,1) = -0.017; % Father's years of schooling  
+        b(16,1) =  0.010; % Living with both biological parents at age 14?
+        b(17,1) = -0.009; % AFQT score in 1981 (2006 version)
+        b(18,1) = -0.022; % INDICATOR FOR MISSING MOM'S EDUCATION
+        b(19,1) = -0.132; % INDICATOR FOR MISSING DAD'S EDUCATION
+        b(20,1) = -0.005; % INDICATOR FOR MISSING AFQT SCORE
+        b(21,1) =  0.252; % Female
+        b(22,1) = -0.103; % DROPOUT
+        b(23,1) =  0.021; % High school
+        b(24,1) = -0.177; % College 
+        b(25,1) =  0.207; % Log Income / 10 
+        b(26,1) =  0.206; % Zero income
+        b(27,1) =  0.031; % # weeks worked in previous year        
+        b(28,1) = -0.017; % # weeks spouse worked in previous year   
+        b(29,1) = -0.040; % INDICATOR FOR MISSING WEEKS WORKED BY SPOUSE
+        b(30,1) = -0.033; % NLSY BUSINESS OWNER
+        b(31,1) = -0.055; % REAL BUSINESS OWNER
+        b(32,1) = -0.291; % ENTREPRENEUR
+        b(33,1) = -0.041; % MISSING BUSINESS DATA
+        b(34,1) = -0.066; % SQB
+        b(35,1) =  0.800; % True Std Dev
+        b(36,1) =  0.372; % Persistent Original
+        b(37,1) = -0.593; % Persistent SQB-Free (imprecisely estimated)
+        b(38,1) =  1.468; % Transitory Error Original        
+        b(39,1) =  2.220; % Transitory Error SQB-Free               
+
 end
 
  info.cnames = strvcat('estimate','t-stat','step');
@@ -208,71 +158,33 @@ end
      
         if model == 11
             info.rnames = strvcat(' ','Constant','Status Quo Bias','Std Dev',...
-		'Original Persistent Std Dev','SQB-Free Persistent Std Dev',...
-		'Original Transitory Std Dev','SQB-Free Transitory Std Dev');   
+		        'Original Persistent Std Dev','SQB-Free Persistent Std Dev',...
+		        'Original Transitory Std Dev','SQB-Free Transitory Std Dev');   
         elseif model == 12
             info.rnames = strvcat(' ','Constant','Black','Hispanic','Female',...
-		'Dropout','High school','College','Age','Log income',...
-		'Zero income', '# weeks worked last year','# weeks spouse worked last year',...
-		'Unemployment rate','ICS', "Missing weeks spouse worked", ...
-        'NLSY business owner', 'Real business owner', 'Entrepreneur identity', 'Missing business data',...
-        'Status Quo Bias','Std Dev','Original Persistent Std Dev','SQB-Free Persistent Std Dev',...
-		'Original Transitory Std Dev','SQB-Free Transitory Std Dev');   
+		        'Dropout','High school','College','Age','Log income',...
+		        'Zero income', '# weeks worked last year','# weeks spouse worked last year',...
+		        'Unemployment rate','ICS', "Missing weeks spouse worked", ...
+                'NLSY business owner', 'Real business owner', 'Entrepreneur identity', 'Missing business data',...
+                'Status Quo Bias','Std Dev','Original Persistent Std Dev','SQB-Free Persistent Std Dev',...
+		        'Original Transitory Std Dev','SQB-Free Transitory Std Dev');   
         elseif model == 13
             info.rnames = strvcat(' ','Constant','Black','Hispanic',...
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-		'East', 'North Central', 'South','West', 'Never married', 'Married (spouse present)','Other marital status',...
+                'East', 'North Central', 'South','West', 'Never married', 'Married (spouse present)','Other marital status',...
                 'Age/10','Unemployment rate','ICS',"Mother's years of schooling","Father's years of schooling",...
                 'Living with both biological parents at 14?', 'AFQT score (2006 version)', "Missing mom's education", "Missing dad's education", 'Missing AFQT',...
-=======
-		'East', 'North Central' , 'South','West', 'Never married', 'Married (spouse present)','Other marital status',...
-                'Age/10','Unemployment rate','ICS',"Mother's years of schooling","Father's years of schooling",...
-                'Living with both biological parents at 14?', 'AFQT score (2006 version)', "Missing mom's education", "Mssing dad's education", 'Missing AFQT', ...
->>>>>>> Stashed changes
-=======
-		'East', 'North Central' , 'South','West', 'Never married', 'Married (spouse present)','Other marital status',...
-                'Age/10','Unemployment rate','ICS',"Mother's years of schooling","Father's years of schooling",...
-                'Living with both biological parents at 14?', 'AFQT score (2006 version)', "Missing mom's education", "Mssing dad's education", 'Missing AFQT', ...
->>>>>>> Stashed changes
-=======
-		'East', 'North Central' , 'South','West', 'Never married', 'Married (spouse present)','Other marital status',...
-                'Age/10','Unemployment rate','ICS',"Mother's years of schooling","Father's years of schooling",...
-                'Living with both biological parents at 14?', 'AFQT score (2006 version)', "Missing mom's education", "Mssing dad's education", 'Missing AFQT', ...
->>>>>>> Stashed changes
                 'Status Quo Bias','Std Dev','Original Persistent Std Dev','SQB-Free Persistent Std Dev',...
 		        'Original Transitory Std Dev','SQB-Free Transitory Std Dev');  
         elseif model == 14
             info.rnames = strvcat(' ','Constant','Black','Hispanic',...
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-		'East','North','South','West', 'Never married','Married (spouse present)','Other marital status',...
-                'Age/10','Unemployment rate','ICS',"Mother's years of schooling","Father's years of schooling",...
-                'Living with both biological parents at 14?','AFQT score (2006 version)',"Missing mom's education", "Missing dad's education", 'Missing AFQT',......
-                'Female', 'Dropout', 'High school', 'College','Log income/10', 'Zero income', '# weeks worked in previous year',...  
-                '# weeks spouse worked in previous year', 'Missing weeks worked spouse', 'Status Quo Bias','Std Dev',...
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-		'East', 'North Central' , 'South','West','Married (spouse present)','Other marital status',...
+                'East', 'North Central' , 'South','West', 'Never married', 'Married (spouse present)','Other marital status',...
                 'Age/10','Unemployment rate','ICS',"Mother's years of schooling","Father's years of schooling",...
                 'Living with both biological parents at 14?','AFQT score (2006 version)',"Missing mom's education", "Mssing dad's education", 'Missing AFQT',...
                 'Female', 'Dropout' , 'High school', 'College','Log income/10', 'Zero income', '# weeks worked in previous year',...  
                 '# weeks spouse worked in previous year', 'Missing weeks worked spouse', 'NLSY business owner', 'Real business owner', 'Entrepreneur identity', 'Missing business data',...
                 'Status Quo Bias','Std Dev',...
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-		'Original Persistent Std Dev','SQB-Free Persistent Std Dev',...
-		'Original Transitory Std Dev','SQB-Free Transitory Std Dev');               
+                'Original Persistent Std Dev','SQB-Free Persistent Std Dev',...
+		        'Original Transitory Std Dev','SQB-Free Transitory Std Dev');               
         end
     iter = 0;
     err = 1;
