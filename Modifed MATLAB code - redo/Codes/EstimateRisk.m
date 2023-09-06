@@ -112,6 +112,7 @@ elseif model == 13
  elseif model == 14  
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         b = zeros(35,1);
         b(1,1) =  -1.982; % Constant
         b(2,1) =  -0.089; % Black
@@ -149,6 +150,8 @@ elseif model == 13
         b(34,1) =  1.464; % Transitory Error Original        
         b(35,1) =  2.194; % Transitory Error SQB-Free               
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
         b = zeros(39,1);
@@ -192,6 +195,9 @@ elseif model == 13
         b(38,1) =  1.461; % Transitory Error Original        
         b(39,1) =  2.114; % Transitory Error SQB-Free               
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -216,9 +222,15 @@ end
             info.rnames = strvcat(' ','Constant','Black','Hispanic',...
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 		'East', 'North Central', 'South','West', 'Never married', 'Married (spouse present)','Other marital status',...
                 'Age/10','Unemployment rate','ICS',"Mother's years of schooling","Father's years of schooling",...
                 'Living with both biological parents at 14?', 'AFQT score (2006 version)', "Missing mom's education", "Missing dad's education", 'Missing AFQT',...
+=======
+		'East', 'North Central' , 'South','West', 'Never married', 'Married (spouse present)','Other marital status',...
+                'Age/10','Unemployment rate','ICS',"Mother's years of schooling","Father's years of schooling",...
+                'Living with both biological parents at 14?', 'AFQT score (2006 version)', "Missing mom's education", "Mssing dad's education", 'Missing AFQT', ...
+>>>>>>> Stashed changes
 =======
 		'East', 'North Central' , 'South','West', 'Never married', 'Married (spouse present)','Other marital status',...
                 'Age/10','Unemployment rate','ICS',"Mother's years of schooling","Father's years of schooling",...
@@ -235,12 +247,15 @@ end
             info.rnames = strvcat(' ','Constant','Black','Hispanic',...
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 		'East','North','South','West', 'Never married','Married (spouse present)','Other marital status',...
                 'Age/10','Unemployment rate','ICS',"Mother's years of schooling","Father's years of schooling",...
                 'Living with both biological parents at 14?','AFQT score (2006 version)',"Missing mom's education", "Missing dad's education", 'Missing AFQT',......
                 'Female', 'Dropout', 'High school', 'College','Log income/10', 'Zero income', '# weeks worked in previous year',...  
                 '# weeks spouse worked in previous year', 'Missing weeks worked spouse', 'Status Quo Bias','Std Dev',...
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 		'East', 'North Central' , 'South','West','Married (spouse present)','Other marital status',...
@@ -250,6 +265,9 @@ end
                 '# weeks spouse worked in previous year', 'Missing weeks worked spouse', 'NLSY business owner', 'Real business owner', 'Entrepreneur identity', 'Missing business data',...
                 'Status Quo Bias','Std Dev',...
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

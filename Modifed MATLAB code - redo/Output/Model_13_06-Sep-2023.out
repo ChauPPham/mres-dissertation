@@ -14,6 +14,7 @@ RISK_2012, RISK_2014,[W93 ,ones(N,1)],[W02 ,ones(N,1)], [W04
 
 06-Sep-2023 15:47:37
 Model 13
+<<<<<<< Updated upstream
 Error at iteration 1 = 7.98e-01
 06-Sep-2023 15:59:15
                                                   estimate          t-stat            step 
@@ -89,3 +90,5 @@ In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Live
 EstimateRisk(RISK_1993, RISK_2002, RISK_2004, RISK_2006, RISK_2010, RISK_2012, RISK_2014,[W93 ,ones(N,1)],[W02 ,ones(N,1)], [W04 ,ones(N,1)],[W06, ones(N,1)], ...
 } 
 06-Sep-2023 16:01:22
+=======
+>>>>>>> Stashed changes
