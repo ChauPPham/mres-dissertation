@@ -1,0 +1,466 @@
+Model 14
+Error at iteration 1 = 6.46e-01
+26-Jul-2007 22:13:51
+                                   estimate          t-stat            step 
+Constant                             -0.204          -0.530        0.646242 
+1931-41 Cohorts                       0.182           2.757       -0.067522 
+1942+ Cohorts                         0.161           1.676       -0.088676 
+Black                                -0.172          -4.311        0.078179 
+Hispanic                              0.016           0.320        0.066169 
+Couple                                0.196           0.954        0.245875 
+Spouse 1931-41                        0.066           1.213        0.016449 
+Spouse 1942+                          0.082           1.062        0.032024 
+South                                -0.214          -5.997        0.036174 
+East                                 -0.060          -1.369       -0.010119 
+West                                  0.006           0.133        0.055999 
+Age/10                               -0.200          -4.650       -0.049787 
+Spouse Age / 10                      -0.099          -3.301        0.051355 
+Unemployement Rate                   -0.082          -3.338       -0.022088 
+Male                                  0.197           5.874       -0.003246 
+Lt 12 Yrs Ed                         -0.017          -0.454        0.032841 
+13-16 Yrs Ed                          0.212           5.929        0.011883 
+Gt 16 Yrs Ed                          0.383           7.606        0.033437 
+Log Total Income / 10                -0.090          -0.516       -0.039865 
+Zero Total Income                    -0.011          -0.053        0.038865 
+Log Financial Assets / 10            -0.033          -0.460        0.066786 
+Non-Positive Assets                   0.109           1.541        0.009272 
+Status Quo Bias                      -0.137          -1.739       -0.036758 
+Std Dev                               0.497          14.803       -0.228101 
+Original Persistent Std Dev           0.734           8.613       -0.016184 
+SQB-Free Persistent Std Dev           0.686          10.388       -0.063662 
+Original Transitory Std Dev           1.414          31.610        0.014296 
+SQB-Free Transitory Std Dev           1.407          46.315        0.006626 
+
+Log-likelihood   -22635.9
+Error at iteration 2 = 3.35e-01
+26-Jul-2007 22:27:38
+                                   estimate          t-stat            step 
+Constant                              0.131           0.326        0.335118 
+1931-41 Cohorts                       0.016           0.217       -0.166921 
+1942+ Cohorts                        -0.026          -0.256       -0.187742 
+Black                                -0.093          -2.228        0.078840 
+Hispanic                              0.068           1.262        0.051526 
+Couple                                0.298           1.419        0.101933 
+Spouse 1931-41                        0.010           0.174       -0.056149 
+Spouse 1942+                          0.026           0.317       -0.056406 
+South                                -0.140          -3.767        0.073614 
+East                                 -0.040          -0.871        0.020309 
+West                                  0.062           1.308        0.056486 
+Age/10                               -0.249          -5.483       -0.049293 
+Spouse Age / 10                      -0.059          -1.922        0.039761 
+Unemployement Rate                   -0.075          -2.958        0.006780 
+Male                                  0.181           5.179       -0.016127 
+Lt 12 Yrs Ed                          0.021           0.531        0.038224 
+13-16 Yrs Ed                          0.211           5.605       -0.000785 
+Gt 16 Yrs Ed                          0.401           7.590        0.017854 
+Log Total Income / 10                -0.163          -0.901       -0.073104 
+Zero Total Income                    -0.052          -0.239       -0.040773 
+Log Financial Assets / 10             0.021           0.271        0.053753 
+Non-Positive Assets                   0.137           1.844        0.027594 
+Status Quo Bias                      -0.158          -2.064       -0.021022 
+Std Dev                               0.623          13.114        0.125809 
+Original Persistent Std Dev           0.707           7.780       -0.026821 
+SQB-Free Persistent Std Dev           0.597           8.368       -0.089420 
+Original Transitory Std Dev           1.407          29.748       -0.007750 
+SQB-Free Transitory Std Dev           1.414          45.619        0.007114 
+
+Log-likelihood   -21314.2
+Error at iteration 3 = 2.74e-01
+26-Jul-2007 22:41:32
+                                   estimate          t-stat            step 
+Constant                              0.406           0.950        0.274442 
+1931-41 Cohorts                      -0.089          -1.142       -0.104497 
+1942+ Cohorts                        -0.136          -1.214       -0.109168 
+Black                                -0.051          -1.133        0.042130 
+Hispanic                              0.078           1.360        0.010313 
+Couple                                0.279           1.284       -0.018629 
+Spouse 1931-41                       -0.027          -0.427       -0.037542 
+Spouse 1942+                          0.007           0.085       -0.018344 
+South                                -0.108          -2.715        0.032293 
+East                                 -0.030          -0.610        0.010014 
+West                                  0.081           1.590        0.018689 
+Age/10                               -0.273          -5.626       -0.024257 
+Spouse Age / 10                      -0.039          -1.230        0.019730 
+Unemployement Rate                   -0.078          -3.002       -0.003008 
+Male                                  0.172           4.621       -0.009089 
+Lt 12 Yrs Ed                          0.058           1.356        0.036663 
+13-16 Yrs Ed                          0.218           5.382        0.006557 
+Gt 16 Yrs Ed                          0.423           7.450        0.021274 
+Log Total Income / 10                -0.246          -1.300       -0.082622 
+Zero Total Income                    -0.129          -0.569       -0.076797 
+Log Financial Assets / 10             0.040           0.502        0.019442 
+Non-Positive Assets                   0.143           1.838        0.006373 
+Status Quo Bias                      -0.158          -2.021       -0.000150 
+Std Dev                               0.688          16.697        0.065656 
+Original Persistent Std Dev           0.713           7.188        0.006476 
+SQB-Free Persistent Std Dev           0.589           7.065       -0.008178 
+Original Transitory Std Dev           1.399          28.430       -0.007778 
+SQB-Free Transitory Std Dev           1.416          44.496        0.002147 
+
+Log-likelihood   -21124.6
+Error at iteration 4 = 5.47e-02
+26-Jul-2007 22:55:22
+                                   estimate          t-stat            step 
+Constant                              0.460           1.048        0.054683 
+1931-41 Cohorts                      -0.105          -1.301       -0.016155 
+1942+ Cohorts                        -0.153          -1.318       -0.017096 
+Black                                -0.039          -0.836        0.011985 
+Hispanic                              0.079           1.331        0.000844 
+Couple                                0.263           1.186       -0.016510 
+Spouse 1931-41                       -0.031          -0.470       -0.003724 
+Spouse 1942+                          0.010           0.117        0.003018 
+South                                -0.105          -2.558        0.002730 
+East                                 -0.031          -0.608       -0.000919 
+West                                  0.083           1.564        0.001388 
+Age/10                               -0.275          -5.473       -0.001274 
+Spouse Age / 10                      -0.034          -1.060        0.004769 
+Unemployement Rate                   -0.081          -3.063       -0.002851 
+Male                                  0.170           4.422       -0.002036 
+Lt 12 Yrs Ed                          0.071           1.615        0.013479 
+13-16 Yrs Ed                          0.221           5.270        0.002985 
+Gt 16 Yrs Ed                          0.429           7.298        0.006609 
+Log Total Income / 10                -0.278          -1.440       -0.032601 
+Zero Total Income                    -0.158          -0.685       -0.029588 
+Log Financial Assets / 10             0.045           0.547        0.004693 
+Non-Positive Assets                   0.144           1.804        0.000737 
+Status Quo Bias                      -0.150          -1.882        0.008367 
+Std Dev                               0.693          17.590        0.004321 
+Original Persistent Std Dev           0.719           7.164        0.005867 
+SQB-Free Persistent Std Dev           0.611           7.052        0.022470 
+Original Transitory Std Dev           1.397          28.091       -0.001865 
+SQB-Free Transitory Std Dev           1.416          43.872        0.000480 
+
+Log-likelihood   -21111.3
+Error at iteration 5 = 1.22e-02
+26-Jul-2007 23:09:00
+                                   estimate          t-stat            step 
+Constant                              0.473           1.069        0.012177 
+1931-41 Cohorts                      -0.107          -1.316       -0.001793 
+1942+ Cohorts                        -0.154          -1.323       -0.001494 
+Black                                -0.037          -0.792        0.001807 
+Hispanic                              0.080           1.338        0.000837 
+Couple                                0.259           1.168       -0.003250 
+Spouse 1931-41                       -0.031          -0.471       -0.000186 
+Spouse 1942+                          0.011           0.124        0.000706 
+South                                -0.105          -2.548       -0.000172 
+East                                 -0.031          -0.616       -0.000537 
+West                                  0.082           1.552       -0.000202 
+Age/10                               -0.275          -5.449       -0.000205 
+Spouse Age / 10                      -0.034          -1.035        0.000685 
+Unemployement Rate                   -0.082          -3.065       -0.000498 
+Male                                  0.169           4.394       -0.000205 
+Lt 12 Yrs Ed                          0.073           1.642        0.001562 
+13-16 Yrs Ed                          0.221           5.249        0.000295 
+Gt 16 Yrs Ed                          0.430           7.266        0.000684 
+Log Total Income / 10                -0.286          -1.474       -0.007884 
+Zero Total Income                    -0.165          -0.710       -0.006586 
+Log Financial Assets / 10             0.045           0.552        0.000643 
+Non-Positive Assets                   0.144           1.799        0.000372 
+Status Quo Bias                      -0.149          -1.861        0.001004 
+Std Dev                               0.693          17.484        0.000742 
+Original Persistent Std Dev           0.721           7.212        0.001557 
+SQB-Free Persistent Std Dev           0.616           7.263        0.005119 
+Original Transitory Std Dev           1.397          28.071       -0.000081 
+SQB-Free Transitory Std Dev           1.417          43.673        0.001076 
+
+Log-likelihood   -21110.8
+Error at iteration 6 = 2.54e-03
+26-Jul-2007 23:22:45
+                                   estimate          t-stat            step 
+Constant                              0.475           1.073        0.002535 
+1931-41 Cohorts                      -0.107          -1.317       -0.000232 
+1942+ Cohorts                        -0.154          -1.323       -0.000206 
+Black                                -0.037          -0.784        0.000319 
+Hispanic                              0.080           1.341        0.000289 
+Couple                                0.259           1.165       -0.000429 
+Spouse 1931-41                       -0.031          -0.472       -0.000084 
+Spouse 1942+                          0.011           0.124        0.000034 
+South                                -0.106          -2.548       -0.000150 
+East                                 -0.031          -0.619       -0.000206 
+West                                  0.082           1.547       -0.000131 
+Age/10                               -0.275          -5.442       -0.000042 
+Spouse Age / 10                      -0.034          -1.031        0.000088 
+Unemployement Rate                   -0.082          -3.063       -0.000084 
+Male                                  0.169           4.388        0.000038 
+Lt 12 Yrs Ed                          0.073           1.645        0.000237 
+13-16 Yrs Ed                          0.221           5.243        0.000053 
+Gt 16 Yrs Ed                          0.430           7.257        0.000139 
+Log Total Income / 10                -0.288          -1.481       -0.001778 
+Zero Total Income                    -0.166          -0.714       -0.001287 
+Log Financial Assets / 10             0.045           0.553        0.000149 
+Non-Positive Assets                   0.144           1.798        0.000146 
+Status Quo Bias                      -0.148          -1.856        0.000208 
+Std Dev                               0.694          17.440        0.000112 
+Original Persistent Std Dev           0.721           7.219        0.000138 
+SQB-Free Persistent Std Dev           0.617           7.300        0.001059 
+Original Transitory Std Dev           1.397          28.058        0.000011 
+SQB-Free Transitory Std Dev           1.418          43.588        0.000651 
+
+Log-likelihood   -21110.8
+Error at iteration 7 = 6.69e-04
+26-Jul-2007 23:36:26
+                                   estimate          t-stat            step 
+Constant                              0.476           1.074        0.000669 
+1931-41 Cohorts                      -0.107          -1.317       -0.000037 
+1942+ Cohorts                        -0.154          -1.323       -0.000024 
+Black                                -0.037          -0.783        0.000054 
+Hispanic                              0.080           1.342        0.000091 
+Couple                                0.259           1.164       -0.000064 
+Spouse 1931-41                       -0.031          -0.472       -0.000026 
+Spouse 1942+                          0.011           0.124       -0.000016 
+South                                -0.106          -2.548       -0.000052 
+East                                 -0.032          -0.620       -0.000057 
+West                                  0.082           1.546       -0.000041 
+Age/10                               -0.275          -5.441       -0.000009 
+Spouse Age / 10                      -0.034          -1.031        0.000012 
+Unemployement Rate                   -0.082          -3.062       -0.000018 
+Male                                  0.169           4.387        0.000016 
+Lt 12 Yrs Ed                          0.073           1.645        0.000034 
+13-16 Yrs Ed                          0.221           5.241        0.000017 
+Gt 16 Yrs Ed                          0.430           7.255        0.000033 
+Log Total Income / 10                -0.288          -1.483       -0.000462 
+Zero Total Income                    -0.166          -0.715       -0.000314 
+Log Financial Assets / 10             0.045           0.553        0.000013 
+Non-Positive Assets                   0.145           1.798        0.000024 
+Status Quo Bias                      -0.148          -1.855        0.000028 
+Std Dev                               0.694          17.427        0.000030 
+Original Persistent Std Dev           0.721           7.219        0.000017 
+SQB-Free Persistent Std Dev           0.618           7.302        0.000174 
+Original Transitory Std Dev           1.397          28.056        0.000018 
+SQB-Free Transitory Std Dev           1.418          43.552        0.000278 
+
+Log-likelihood   -21110.8
+Error at iteration 8 = 1.76e-04
+26-Jul-2007 23:50:08
+                                   estimate          t-stat            step 
+Constant                              0.476           1.075        0.000176 
+1931-41 Cohorts                      -0.107          -1.317       -0.000006 
+1942+ Cohorts                        -0.154          -1.323       -0.000002 
+Black                                -0.037          -0.783        0.000012 
+Hispanic                              0.080           1.342        0.000028 
+Couple                                0.259           1.164       -0.000010 
+Spouse 1931-41                       -0.031          -0.472       -0.000009 
+Spouse 1942+                          0.011           0.124       -0.000009 
+South                                -0.106          -2.548       -0.000017 
+East                                 -0.032          -0.620       -0.000017 
+West                                  0.082           1.545       -0.000013 
+Age/10                               -0.275          -5.440       -0.000000 
+Spouse Age / 10                      -0.034          -1.030        0.000002 
+Unemployement Rate                   -0.082          -3.061       -0.000004 
+Male                                  0.169           4.387        0.000007 
+Lt 12 Yrs Ed                          0.073           1.645        0.000007 
+13-16 Yrs Ed                          0.221           5.241        0.000006 
+Gt 16 Yrs Ed                          0.430           7.255        0.000011 
+Log Total Income / 10                -0.288          -1.483       -0.000132 
+Zero Total Income                    -0.167          -0.715       -0.000090 
+Log Financial Assets / 10             0.045           0.552       -0.000002 
+Non-Positive Assets                   0.145           1.798        0.000001 
+Status Quo Bias                      -0.148          -1.854        0.000009 
+Std Dev                               0.694          17.423        0.000006 
+Original Persistent Std Dev           0.721           7.218       -0.000000 
+SQB-Free Persistent Std Dev           0.618           7.301        0.000024 
+Original Transitory Std Dev           1.397          28.055        0.000008 
+SQB-Free Transitory Std Dev           1.418          43.538        0.000107 
+
+Log-likelihood   -21110.8
+Error at iteration 9 = 5.11e-05
+27-Jul-2007 00:03:52
+                                   estimate          t-stat            step 
+Constant                              0.476           1.075        0.000051 
+1931-41 Cohorts                      -0.107          -1.317       -0.000001 
+1942+ Cohorts                        -0.154          -1.323        0.000000 
+Black                                -0.037          -0.782        0.000003 
+Hispanic                              0.080           1.343        0.000009 
+Couple                                0.259           1.164       -0.000003 
+Spouse 1931-41                       -0.031          -0.472       -0.000003 
+Spouse 1942+                          0.011           0.124       -0.000003 
+South                                -0.106          -2.548       -0.000005 
+East                                 -0.032          -0.620       -0.000005 
+West                                  0.082           1.545       -0.000004 
+Age/10                               -0.275          -5.440        0.000000 
+Spouse Age / 10                      -0.034          -1.030        0.000000 
+Unemployement Rate                   -0.082          -3.061       -0.000001 
+Male                                  0.169           4.387        0.000002 
+Lt 12 Yrs Ed                          0.073           1.645        0.000002 
+13-16 Yrs Ed                          0.221           5.241        0.000002 
+Gt 16 Yrs Ed                          0.430           7.254        0.000003 
+Log Total Income / 10                -0.288          -1.483       -0.000041 
+Zero Total Income                    -0.167          -0.715       -0.000029 
+Log Financial Assets / 10             0.045           0.552       -0.000002 
+Non-Positive Assets                   0.145           1.797       -0.000001 
+Status Quo Bias                      -0.148          -1.854        0.000002 
+Std Dev                               0.694          17.422        0.000001 
+Original Persistent Std Dev           0.721           7.218       -0.000000 
+SQB-Free Persistent Std Dev           0.618           7.300        0.000000 
+Original Transitory Std Dev           1.397          28.055        0.000003 
+SQB-Free Transitory Std Dev           1.419          43.533        0.000039 
+
+Log-likelihood   -21110.8
+Error at iteration 10 = 1.54e-05
+27-Jul-2007 00:17:43
+                                   estimate          t-stat            step 
+Constant                              0.476           1.075        0.000015 
+1931-41 Cohorts                      -0.107          -1.317       -0.000000 
+1942+ Cohorts                        -0.154          -1.323        0.000000 
+Black                                -0.037          -0.782        0.000001 
+Hispanic                              0.080           1.343        0.000003 
+Couple                                0.259           1.164       -0.000001 
+Spouse 1931-41                       -0.031          -0.472       -0.000001 
+Spouse 1942+                          0.011           0.124       -0.000001 
+South                                -0.106          -2.548       -0.000002 
+East                                 -0.032          -0.620       -0.000001 
+West                                  0.082           1.545       -0.000001 
+Age/10                               -0.275          -5.440        0.000000 
+Spouse Age / 10                      -0.034          -1.030        0.000000 
+Unemployement Rate                   -0.082          -3.061       -0.000000 
+Male                                  0.169           4.387        0.000001 
+Lt 12 Yrs Ed                          0.073           1.645        0.000000 
+13-16 Yrs Ed                          0.221           5.241        0.000001 
+Gt 16 Yrs Ed                          0.430           7.254        0.000001 
+Log Total Income / 10                -0.289          -1.483       -0.000013 
+Zero Total Income                    -0.167          -0.716       -0.000010 
+Log Financial Assets / 10             0.045           0.552       -0.000001 
+Non-Positive Assets                   0.145           1.797       -0.000001 
+Status Quo Bias                      -0.148          -1.854        0.000001 
+Std Dev                               0.694          17.421        0.000000 
+Original Persistent Std Dev           0.721           7.218       -0.000000 
+SQB-Free Persistent Std Dev           0.618           7.300       -0.000001 
+Original Transitory Std Dev           1.397          28.055        0.000001 
+SQB-Free Transitory Std Dev           1.419          43.531        0.000014 
+
+Log-likelihood   -21110.8
+Error at iteration 11 = 4.85e-06
+27-Jul-2007 00:31:36
+                                   estimate          t-stat            step 
+Constant                              0.476           1.075        0.000005 
+1931-41 Cohorts                      -0.107          -1.317        0.000000 
+1942+ Cohorts                        -0.154          -1.323        0.000000 
+Black                                -0.037          -0.782        0.000000 
+Hispanic                              0.080           1.343        0.000001 
+Couple                                0.259           1.164       -0.000000 
+Spouse 1931-41                       -0.031          -0.472       -0.000000 
+Spouse 1942+                          0.011           0.124       -0.000000 
+South                                -0.106          -2.548       -0.000001 
+East                                 -0.032          -0.620       -0.000000 
+West                                  0.082           1.545       -0.000000 
+Age/10                               -0.275          -5.440        0.000000 
+Spouse Age / 10                      -0.034          -1.030        0.000000 
+Unemployement Rate                   -0.082          -3.061       -0.000000 
+Male                                  0.169           4.387        0.000000 
+Lt 12 Yrs Ed                          0.073           1.645        0.000000 
+13-16 Yrs Ed                          0.221           5.241        0.000000 
+Gt 16 Yrs Ed                          0.430           7.254        0.000000 
+Log Total Income / 10                -0.289          -1.483       -0.000004 
+Zero Total Income                    -0.167          -0.716       -0.000003 
+Log Financial Assets / 10             0.045           0.552       -0.000000 
+Non-Positive Assets                   0.145           1.797       -0.000000 
+Status Quo Bias                      -0.148          -1.854        0.000000 
+Std Dev                               0.694          17.421        0.000000 
+Original Persistent Std Dev           0.721           7.218       -0.000000 
+SQB-Free Persistent Std Dev           0.618           7.300       -0.000001 
+Original Transitory Std Dev           1.397          28.055        0.000000 
+SQB-Free Transitory Std Dev           1.419          43.531        0.000005 
+
+Log-likelihood   -21110.8
+Error at iteration 12 = 1.64e-06
+27-Jul-2007 00:45:19
+                                   estimate          t-stat            step 
+Constant                              0.476           1.075        0.000002 
+1931-41 Cohorts                      -0.107          -1.317        0.000000 
+1942+ Cohorts                        -0.154          -1.323        0.000000 
+Black                                -0.037          -0.782        0.000000 
+Hispanic                              0.080           1.343        0.000000 
+Couple                                0.259           1.164       -0.000000 
+Spouse 1931-41                       -0.031          -0.472       -0.000000 
+Spouse 1942+                          0.011           0.124       -0.000000 
+South                                -0.106          -2.548       -0.000000 
+East                                 -0.032          -0.620       -0.000000 
+West                                  0.082           1.545       -0.000000 
+Age/10                               -0.275          -5.440        0.000000 
+Spouse Age / 10                      -0.034          -1.030        0.000000 
+Unemployement Rate                   -0.082          -3.061       -0.000000 
+Male                                  0.169           4.387        0.000000 
+Lt 12 Yrs Ed                          0.073           1.645        0.000000 
+13-16 Yrs Ed                          0.221           5.241        0.000000 
+Gt 16 Yrs Ed                          0.430           7.254        0.000000 
+Log Total Income / 10                -0.289          -1.483       -0.000001 
+Zero Total Income                    -0.167          -0.716       -0.000001 
+Log Financial Assets / 10             0.045           0.552       -0.000000 
+Non-Positive Assets                   0.145           1.797       -0.000000 
+Status Quo Bias                      -0.148          -1.854        0.000000 
+Std Dev                               0.694          17.421        0.000000 
+Original Persistent Std Dev           0.721           7.218        0.000000 
+SQB-Free Persistent Std Dev           0.618           7.299       -0.000000 
+Original Transitory Std Dev           1.397          28.055        0.000000 
+SQB-Free Transitory Std Dev           1.419          43.530        0.000002 
+
+Log-likelihood   -21110.8
+Error at iteration 13 = 5.64e-07
+27-Jul-2007 00:59:05
+                                   estimate          t-stat            step 
+Constant                              0.476           1.075        0.000001 
+1931-41 Cohorts                      -0.107          -1.317        0.000000 
+1942+ Cohorts                        -0.154          -1.323        0.000000 
+Black                                -0.037          -0.782        0.000000 
+Hispanic                              0.080           1.343        0.000000 
+Couple                                0.259           1.164       -0.000000 
+Spouse 1931-41                       -0.031          -0.472       -0.000000 
+Spouse 1942+                          0.011           0.124       -0.000000 
+South                                -0.106          -2.548       -0.000000 
+East                                 -0.032          -0.620       -0.000000 
+West                                  0.082           1.545       -0.000000 
+Age/10                               -0.275          -5.440        0.000000 
+Spouse Age / 10                      -0.034          -1.030        0.000000 
+Unemployement Rate                   -0.082          -3.061       -0.000000 
+Male                                  0.169           4.387        0.000000 
+Lt 12 Yrs Ed                          0.073           1.645        0.000000 
+13-16 Yrs Ed                          0.221           5.241        0.000000 
+Gt 16 Yrs Ed                          0.430           7.254        0.000000 
+Log Total Income / 10                -0.289          -1.483       -0.000000 
+Zero Total Income                    -0.167          -0.716       -0.000000 
+Log Financial Assets / 10             0.045           0.552       -0.000000 
+Non-Positive Assets                   0.145           1.797       -0.000000 
+Status Quo Bias                      -0.148          -1.854        0.000000 
+Std Dev                               0.694          17.421        0.000000 
+Original Persistent Std Dev           0.721           7.218        0.000000 
+SQB-Free Persistent Std Dev           0.618           7.299       -0.000000 
+Original Transitory Std Dev           1.397          28.055        0.000000 
+SQB-Free Transitory Std Dev           1.419          43.530        0.000001 
+
+Log-likelihood   -21110.8
+Estimates of Model 14.0
+27-Jul-2007 00:59:05
+Sample size 11616
+Number of iterations = 13
+Error at last iteration = 5.64e-07
+                                   estimate      std. error          t-stat 
+Constant                              0.476           0.443           1.075 
+1931-41 Cohorts                      -0.107           0.081          -1.317 
+1942+ Cohorts                        -0.154           0.117          -1.323 
+Black                                -0.037           0.047          -0.782 
+Hispanic                              0.080           0.060           1.343 
+Couple                                0.259           0.222           1.164 
+Spouse 1931-41                       -0.031           0.066          -0.472 
+Spouse 1942+                          0.011           0.089           0.124 
+South                                -0.106           0.041          -2.548 
+East                                 -0.032           0.051          -0.620 
+West                                  0.082           0.053           1.545 
+Age/10                               -0.275           0.051          -5.440 
+Spouse Age / 10                      -0.034           0.033          -1.030 
+Unemployement Rate                   -0.082           0.027          -3.061 
+Male                                  0.169           0.039           4.387 
+Lt 12 Yrs Ed                          0.073           0.044           1.645 
+13-16 Yrs Ed                          0.221           0.042           5.241 
+Gt 16 Yrs Ed                          0.430           0.059           7.254 
+Log Total Income / 10                -0.289           0.194          -1.483 
+Zero Total Income                    -0.167           0.233          -0.716 
+Log Financial Assets / 10             0.045           0.082           0.552 
+Non-Positive Assets                   0.145           0.080           1.797 
+Status Quo Bias                      -0.148           0.080          -1.854 
+Std Dev                               0.694           0.040          17.421 
+Original Persistent Std Dev           0.721           0.100           7.218 
+SQB-Free Persistent Std Dev           0.618           0.085           7.299 
+Original Transitory Std Dev           1.397           0.050          28.055 
+SQB-Free Transitory Std Dev           1.419           0.033          43.530 
+
+Log-likelihood   -21110.8

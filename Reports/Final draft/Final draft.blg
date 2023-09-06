@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2018/W32TeX)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: Final draft.aux
+The style file: apalike.bst
+Database file #1: bibliography.bib
+Warning--empty journal in bezerra2009impact
+Warning--empty journal in carneiro2003human
+Warning--empty journal in chevalier2004parental
+Warning--empty journal in dohmen2005individual
+Warning--empty journal in jacob2008improving
+Warning--empty journal in schultz1971investment
+You've used 74 entries,
+            1935 wiz_defined-function locations,
+            925 strings with 15312 characters,
+and the built_in function-call counts, 29888 in all, are:
+= -- 3032
+> -- 1023
+< -- 61
++ -- 351
+- -- 328
+* -- 2611
+:= -- 5076
+add.period$ -- 219
+call.type$ -- 74
+change.case$ -- 532
+chr.to.int$ -- 73
+cite$ -- 80
+duplicate$ -- 1097
+empty$ -- 2185
+format.name$ -- 466
+if$ -- 5859
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 75
+newline$ -- 367
+num.names$ -- 222
+pop$ -- 389
+preamble$ -- 1
+purify$ -- 534
+quote$ -- 0
+skip$ -- 865
+stack$ -- 0
+substring$ -- 2553
+swap$ -- 129
+text.length$ -- 10
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 440
+warning$ -- 6
+while$ -- 279
+width$ -- 0
+write$ -- 949
+(There were 6 warnings)

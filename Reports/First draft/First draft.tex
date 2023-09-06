@@ -1,0 +1,268 @@
+\documentclass[]{article}
+
+%opening
+\title{Risk preference of mothers and investment in children}
+\author{Chau Pham}
+%\date{} for no date shown
+\usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools, mathrsfs}
+\usepackage[margin = 1.0in]{geometry}
+\usepackage{bbold, soul}
+\usepackage{tgpagella}
+\usepackage{braket, setspace, parskip, enumitem}
+\usepackage[colorlinks, citecolor = blue]{hyperref}
+\usepackage[nameinlink, noabbrev]{cleveref}	% Use \Cref always 
+\usepackage{caption}
+\usepackage{threeparttable, makecell, cellspace, multirow, booktabs, diagbox, tabularx, longtable, threeparttablex}
+\usepackage{verbatim}
+\usepackage{natbib}
+\usepackage[bottom]{footmisc}	% keep footnotes at end of the page
+\usepackage{xcolor}
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
+
+%---- Simple table template
+\begin{comment} 
+	\begin{table}[!htbp]\centering
+		\begin{threeparttable}
+			\setlength{\extrarowheight}{0.2em}
+			\begin{tabular}
+				content...
+			\end{tabular}
+			%\caption{text}
+			%\label{key}
+		\end{threeparttable}
+	\end{table}
+\end{comment}
+
+%\setlist[enumerate]{label=(\roman*)}
+
+%\setlength{\parindent}{0pt}
+
+%\captionsetup[figure]{labelfont=bf}
+\captionsetup[table]{labelfont=bf}
+
+%\interfootnotelinepenalty=10000
+
+\begin{document}
+
+\maketitle
+\onehalfspacing
+
+
+%===================================================================================================================================================================
+%===================================================================================================================================================================
+
+\section{Introduction}
+Investment in human capital has been considered risky since the works of \citet{becker1962investment, levhari1974effect} and \citet{schultz1971investment}. Returns to investment, ability, probability of getting a good job are few of the various accounts of risk. The traditional approach on the topic examines how an individual's risk preference affects her investment decision. This line of inquiry is, however, valid insofar as the decision maker is the individual under study. College choices, tertiary education, specific skills training, and to a lesser extent, high school track, fall under the domain of individual choice wherein an individual is the decision maker and she exercises scrutiny before making her choice. For children and teenagers, the choice are, more often than not, not theirs to make as they lack the appropriate capacity to make an informed choice while various factors such as pecuniary issues are beyond their control. At the same  time, a vast literature on early childhood intervention has deemed such investment substantially beneficial for future outcomes of children.\footnote{See \citet{Currie2001} and \citet{NORES2010} for a comprehensive review on a large number of childhood intervention programs.} Furthermore, as highlighted by \citet{jacob2008improving} and \citet{duflo2011poor}, early childhood interventions are most effective in levelling the playground for disadvantaged children. Thus, parents' investment during early childhood plays a pivotal role in shaping the children's future paths. If investment in human capital is risky, the importance of understanding the effect of parental risk preference on children investment naturally follows.
+
+In general, the literature on parental risk aversion is scarce whilst results are inconclusive. In direct relation to our study, \citet{sovero2018risk} uses height-for-age, and BMI-for-age along with other several spending categories to measure investment of Mexican parents. Risk attitudes of parents are elicited using a series of questions with multiple price list structure. Her results indicate a positive linkage between risk averse mothers and their investment on sons, i.e., risk averse mothers invest more on sons than daughters. Using data on Uganda households, \citet{tabetando2019parental} confirms the positive relation between risk aversion and investment, measured by level of educational expenditure and its share of household budget. Although wealthier households tend to be more risk averse, the relationship is reversed for poor households. That is, risk aversion depresses investment in credit constrained households.      
+
+Other works involving risk preference of parents focus on educational outcomes. With the exception of \citet{leonardi2007parents} which found no effect of risk aversion on secondary school track choice for the Italian sample, the majority reported negative effects of risk aversion on educational outcomes including test scores in the US \citep{brown2012parental}, college enrollment in Italy \citep{checchi2014parents}, cognitive outcomes in Indonesia \citep{hartarto2023parental}. Furthermore, \citet{frempong2021risk} found a positive association between risk aversion and child labour while there is evidence that increased child labour impedes learning \citep{HEADY2003385, bezerra2009impact}.  
+
+%Using NLSY79 ... -> EXPLAINS ABOUT THE PAPER
+...
+
+%===================================================================================================================================================================
+%===================================================================================================================================================================
+
+\section{Data \& methodology}
+I use data of National Longitudinal Survey of Youth 1979 (NLSY79) and NLSY79 Child and Young Adults (CYA) to study the effects of parental risk aversion on children investment. The NLSY79 is a longitudinal project that follows the lives of a sample of American youth born between 1957 and 1964 with the first round of data collection in 1979. The original cohort included 12,686 respondents ages 14-22 when first interviewed but later dropped to 9,964 respondents after the exclusion of the military subsample. Data are collected annually from 1979 to 1994 and biannually thereafter. Beginning in 1986, additional information was collected biannually about children born to female NLSY79 respondents, constituting the NLSY79 CYA dataset. The Child and Young Adult contains information on a rich set of assessments on cognitive ability, temperament, motor and social development, behaviour problems, self-competence of the children as well as the quality of their home environment. By linking investment, as measured by The HOME (Home Observation Measurement of the Environment) indices along with its subsection indices in the NLSY79 CYA, and an indicator of risk attitudes generated from a series of questions in the NLSY79, it is possible to study the effect of maternal risk aversion on investment in children.
+
+\subsection{Mothers' risk preference}
+To measure attitudes towards risk of mothers,\footnote{Since NLSY79 and NLSY79 CYA are linked by identifying unique pairs of mother-child.} Participants of NLSY79 were asked a series of hypothetical questions on occupational choice. The first question of the series reads:
+
+\begin{center}
+	\begin{minipage}[!h]{.9\linewidth}\small
+		``...Suppose that you are the only income earner in the family, and you have a good job guaranteed to give you your current (family) income every year for life. You are given the opportunity to take a new and equally good job, with a 50-50 chance that it will double your (family) income and a 50-50 chance that it will cut your (family) income by a third. Would you take the new job?"
+	\end{minipage}
+\end{center}
+\begin{flushright}
+	\textit{Questionnaire Public Report, National Longitudinal Survey of Youth 1979 (NLSY79), 1993.}
+\end{flushright}
+Depending on respondents' answers to this question, survey participants were asked a similar question holding the first choice constant while the income cut in the second choice is modified. If participants choose ``First job" in the first question, the income cut in the second question is lowered to 20\%. If ``Second job" is chosen in the first question, the income cut is increased to 1/2 in the second question. The first series of questions on risk attitudes were asked in four rounds in 1993, 2002, 2004 and 2006. Based on answers to this series of questions, respondents can be categorized into four groups numbered 1-4 where individuals in group 1 choose the ``First job" in both questions present to them while individuals in group 4 opt for ``Second job" in both questions administered to them. Specifics of groups categorization are presented in \Cref{table:1-risk-category}.
+
+\begin{table}[!h]
+	\centering
+	\setlength{\extrarowheight}{0.2em}
+	\caption{Category of risk attitudes}	
+	\input{Tables/table-1-risk-category}
+	\label{table:1-risk-category}
+\end{table}
+
+A valid concern over the use of this series of questions as a measure of risk preference is how well it predicts true risk attitudes. The question wordings and structure of the NLSY79 are the same as those in the Health and Retirement Study (HRS) as well as the Panel Study of Income Dynamics (PSID). While the method of eliciting risk preference using lifetime income is uncommon and most other methods fall into the category of self-evaluated risk willingness/tolerance employing Likert scale, gamble choice \citep{eckel2002sex}, or multiple price list (MPL),\footnote{For a comprehensive review on methods of elicitation of risk preference, see \citet{charness2013experimental}} \citet{barsky1997preference} showed that this measure does predict an array of risk behaviours including drinking, smoking, holding risky assets, etc. Furthermore, gamble on hypothetical choice in general has been shown to perform relatively well compared to its counterpart which offer real monetary rewards \citep{binswanger1981attitudes, camerer1999effects, dohmen2005individual}. Consequently, our use of responses to this series of question to proxy for risk preference is appropriate to the extent that risk attitudes captured by gamble on lifetime income reflect the risk attitudes mothers hold when investing in her child.
+
+Using the series of questions on risk attitudes, following \citet{kimball2008imputing} and \citet{kimball2009risk}, under the assumption that respondents have constant relative risk aversion (CRRA) and risk tolerance are log-normally distributed, I calculated and imputed values of CRRA coefficient for each respondent. The procedure is as follows. First, assuming that CRRA well approximates individuals' utility over lifetime income,
+\[U(W)={W^{1-{1/\theta}}\over 1-{1/\theta}}\]
+where $\theta$ is the coefficient of relative risk tolerance and its reciprocal, $\gamma = 1/\theta$, coefficient of relative risk aversion, bounds on $\theta$ are reported in \Cref{table:2-risk-bound} for each category. A second assumption I would emphasize here that deviates from \citet{kimball2008imputing} and \cite{kimball2009risk} is that respondents have time-varying risk preference. In the previously cited works, due to the structure of PSID surveys, there is only one response per individual, making the inference on the true risk preference impossible without further assumption. When there are multiple responses from each individual, under the assumption that the true risk preference remains constant over time, inference on the parameters of risk tolerance, and hence risk aversion, is possible.\footnote{As the true risk preference is constant, differences in responses of an individual are attributed to response error.} However, according to \citet{dohmen2011individual} and \citet{dohmen2017risk}, willingness to take risks varies over the course of life-cycle and trends downward as individuals age. Thus, to allow for time-varying risk preference, for each wave that collects the responses to risk preference questions, the mean and variance of log risk tolerance are calculated using maximum likelihood.\footnote{To circumvent any biases potentially introduced by the sample selection, for each year, MLE is carried out on the entirety of NLSY79 dataset. The first wave of answers on risk preference is recoded as year 1994 instead of 1993 to match the closest corresponding investment data. Results of the MLE are reported in Appendix A.} The variance of response error, on the other hand, is imputed from \cite{kimball2009risk} and assumed to be fixed across waves. While fixing the variance goes against the assumption of time-varying risk preference, the treatment is necessary as \citet{kimball2008imputing} pointed out the substantial noise in responses to questions of this nature. The coefficient of risk aversion, $\gamma$, is then imputed using the conditional expectation that an individual belongs to a certain risk category $j$,
+
+\begin{equation}
+	\mathbb E(\gamma|c=j)=\exp\Big(-\mu+{\sigma_x^2\over 2}\Big){\Phi\Big({\log(\bar{\theta}_j)-\mu-b+\sigma_x^2\over \sigma_{\xi}}\Big)-\Phi\Big({\log(\underline{\theta}_j)-\mu-b+\sigma_x^2\over \sigma_{\xi}}\Big)\over \Phi\Big({\log(\bar{\theta}_j)-\mu-b\over \sigma_\xi}\Big)-\Phi\Big({\log(\underline{\theta}_j)-\mu-b\over \sigma_\xi}\Big)}
+	\label{eq:1-conditional-expectation}
+\end{equation}
+
+where $\mu$ and $\sigma_x$ are respectively the mean and standard deviation of log risk tolerance for a certain wave of response. $\bar \theta_j$ and $\underline{\theta}_j$ are upper and lower bounds on the coefficient of risk tolerance. $b$ denotes status quo bias and $\sigma_\xi$ standard deviation of response error which take values of -0.21 and 1.3 respectively. \footnote{These values are computed for the Health and Retirement Study (HRS) capitalizing on the difference in responses to two different versions of the risk preference questions. For more information, see \citet{kimball2009risk} and their accompanying appendix available at https://www.aeaweb.org/articles?id=10.1257/aer.99.2.363.} \Cref{table:3-imputed-risk} reports the imputed values of CRRA coefficient for all NLSY79 respondents with valid answers along with the mean, standard deviation and number observation segregated by year.\footnote{For clarity, I only include those who responded to both questions in the risk preference series and exclude those who provide answers only to the first question.} 
+
+\begin{table}[!t]
+	\centering
+	\setlength{\extrarowheight}{0.3em}
+	\caption{Risk tolerance response category}	
+	\input{Tables/table-2-risk-coefficient}
+	\label{table:2-risk-bound}
+\end{table}
+
+\begin{table}[!b]
+	\centering
+	\setlength{\extrarowheight}{0.3em}
+	\caption{Imputed coefficient of risk aversion ($\gamma$)}	
+	\input{Tables/table-3-risk-imputed}
+	\label{table:3-imputed-risk}
+\end{table}
+
+A mild trend of increasing risk aversion can be observed from \Cref{table:2-risk-bound} wherein 46.47\% of respondents are categorized as "High risk aversion" in 1994 whereas more than 50\% of respondents belong to this category in all subsequent years. The majority of participants display a high degree of risk aversion with respect to gamble on lifetime earning although there is substantial heterogeneity across the distributions of responses across year. From \Cref{table:3-imputed-risk}, imputed values of $\gamma$ are similar across years with the exception of 2004. The difference stems from the noticeably reduced variance in response in 2004 which can be observed in the third column of \Cref{table:2-risk-bound}. As variance plays a large role in determining the overall level of imputation following \eqref{eq:1-conditional-expectation}, the lower variance brings about significant changes to the imputed values. This should not be a concern as the interaction term between $\gamma$ and year is be included in the analysis but results obtained with the exclusion of 2004 are presented in Section 5 for robustness check.
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Investment data}
+Traditionally, investment is often associated with monetary expenditures or goods investment \citep{heckman2014economics}. Only in recent studies such as \citet{carneiro2016partial}, \citet{bono2016early} and \citet{del2016transfers} has time input received more attention as a component of parental input. Aside time input, a nurturing home environment has also been proven conducive to early cognitive development \citep{altman2013home, iverson1982home}. 
+
+\begin{table}[!t]
+	\centering
+	\setlength{\extrarowheight}{0.2em}
+	\caption{Components of HOME index}	
+	\input{Tables/table-4-HOME}
+	\label{table:4-HOME}
+\end{table} 
+
+Following \citet{carneiro2016partial}, parental inputs are captured by various elements of HOME. HOME (Short Form) comprises of primary measures of the quality of a child's home environment included in the NLSY79 Child survey. Various components of the HOME evaluate the cognitive stimulation and emotional support children below 15 years old receive from the home environment. Items that made up the HOME score are grouped into goods input and time input. These are reported in \Cref{table:4-HOME}. Apart from measures of HOME section, several items included in the self-administered questions indicating parent-child interaction for children between 10-14 are also present and have the (NH) prefix. These extra items are also used when constructing HOME index and Time index for children within said age-group.  
+ 
+
+For each age group, to generate the generic investment index (HOME index), indicators of all items in \Cref{table:4-HOME} for the corresponding age are totalled then normalised to have a mean zero and unit standard deviation.\footnote{The recoding of items follow the procedure used by Bureau of Labor Statistics (BLS) when constructing HOME score (See \citet{center2004nlsy79})} A similar procedure is also applied to items denoting goods related investment and time related investment to generate indices representing the respective type of parental inputs. Other assessments of cognitive stimulation and emotional support are aggregated into percentile score for the respective quality of home. Unlike previous indices, the percentile scores for cognitive  stimulation and emotional support are taken from the NLSY79 CYA dataset.
+
+
+
+
+\subsection{Summary statistics}
+\input{Tables/table-5-summary}
+
+Descriptive statistics of variables used in analysis are shown in \Cref{table:5-summary}. The sample is restricted to observations in the year 1994, 2002, 2004 and 2006 to include a measure of risk aversion and which have valid responses (non-missing and non-negative) to child's characteristics, mother's characteristics, and parental inputs. This leaves us with 9,134 observations. The table reports the mean and standard deviations of numerical variables and only frequency for categorical variables for the total sample and 3 subgroups based on mother's level of education (High school dropout, high school and college). The table is organised into three panels: (1) parental inputs which include various indices described above (HOME, Goods, Time, Cognitive Stimulation, and Emotional Support); (2) Child's characteristics which include sex, race, age of mother at birth of child, number of siblings and family size; and (3) Mother's characteristics which include Mother's AFQT score (2006 revised edition), age of mother at first birth, an indicator variable showing whether mother lived with both biological parents at age 14, years of schooling of mother's parents, number of weeks worked in the previous calendar year, and net household income in the previous calendar year.
+
+
+The average HOME score in our sample is 0.15 which is higher than the average HOME score for the nationally representative sample. A potential cause for this is the restriction on the years in which data chosen, namely 1994, 2002, 2004, and 2006. By the mentioned years, mothers are typically older than the average age of mothers in NLSY79 CYA. This is apparent in the high mean age of mother at child's birth, which is over 27 in our sample compared to around 25 in the whole sample as reported in \citet{carneiro2016partial}. Higher age also correlates with higher earnings and experience, thus affecting our measures of parental inputs. 
+
+
+
+
+%===================================================================================================================================================================
+%===================================================================================================================================================================
+
+\section{Results}
+I estimate a simple OLS model of the relationship between mother's risk aversion, proxied by the CRRA coefficient $\gamma$ and investments in children, measured by various indices of parental inputs. The empirical specification is as follows:
+\begin{equation}
+	I_{it} = \alpha \times \gamma_{it} + \beta{\boldmath Z_{it}} + \theta_t + AGE\_GRP_{it} + \varepsilon_{it}
+	\label{eq:2-empirical-specification}
+\end{equation}
+where $I_{it}$ denotes the investment for child $i$ at time $t$, measured by various indices present under the first panel of \Cref{table:5-summary}. $\gamma_{it}$ is the imputed CRRA coefficient of child $i$'s mother at time $t$. $Z_{it}$ is a vector of controls containing both child's characteristics and maternal characteristics as described in the second and third panel of \Cref{table:5-summary}. $AGE\_GRP_t$ and $\theta_t$ indicate age-group fixed effect and time fixed effect. The reason age-group fixed effect is introduced is due to the manner in which indices of parental inputs are constructed, i.e., totalled and normalised for each age group. The coefficient of $\gamma$, i.e., $\alpha$ shows the effect of maternal risk aversion on child investment. 
+
+As mentioned in the previous section, due to the large change in variance as well as distribution of risk attitudes in the sample, \eqref{eq:2-empirical-specification} will be augmented with interaction terms between year and $\gamma$ to capture for changes of risk preference occurring in a specific year. Standard errors are clustered by mothers to allow for correlation among children of the same mother. 
+
+I present the OLS estimates of $\gamma$ in \eqref{eq:2-empirical-specification} \Cref{table:6-main-result} as the main results of the paper. \Cref{table:6-main-result} is organised into 5 panels of each measures of parental inputs, namely HOME index, Goods index, Time index, Cognitive stimulation score (\%) and Emotional support score (\%). For each panel, the first two lines report point estimates and standard deviation of $\alpha$ in \eqref{eq:2-empirical-specification} for the whole sample and three sub-sample characterised by mother's level of education including High school dropout (not rewarded High school diploma), High school (rewarded High school diploma but no further education) and College or above (attended college regardless of awards). The next two lines also report point estimates and standard deviation of $\alpha$ but when models are augmented with interaction terms between $\gamma$ and year to account for year-specific changes in risk preference. All models include a full set of controls of child's characteristics (sex, race, age of mother at child's birth, number of siblings, family size) and mother's characteristics (age of mother at first birth, mother's AFQT score, an indicator of whether mother lived with both biological parents at age 14, education levels of mother's parents, number of weeks worked and log of household income in the previous calendar year) as described in \Cref{table:5-summary}.
+
+\begin{table}[!h]
+	\centering
+	\begin{threeparttable}
+		\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+		\caption{OLS estimates of risk aversion on Parental inputs}	
+		\input{Tables/table-6-main-result}
+		\label{table:6-main-result}
+		\begin{tablenotes}[flushleft] \footnotesize
+			\item \textit{Note:} The table present OLS estimates of risk aversion on parental inputs. For every panel, the first two lines report point estimates and standard errors of $\gamma$ in models without interaction between risk aversion and year, whereas the next two lines report the same figures but for models with year interaction (year 1994 is treated as baseline). The set of controls included in the table but omitted here due to space constraints and ease of representation consist of child characteristics (sex, age of mother at child's birth, number of siblings, family size) and maternal characteristics (age of mother at first birth, AFQT score, indicator of whether mother lived with both biological parents at age 14, educational level of mother's parents, number of weeks worked last year and log of household income last year). All models are augmented with year and age-category fixed effect. Standard errors are clustered by mother and shown in parentheses.
+			\item Significant levels are as follows: \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\).
+		\end{tablenotes}
+	\end{threeparttable}
+\end{table}
+
+We observe an overall positive effect of risk aversion on parental inputs notwithstanding the substantial heterogeneity of effects size across groups. When considering sub-samples, the effects are found only for the sample of child whose mothers never attended high school or are high school dropouts. For these children, maternal risk aversion exhibits significant and positive effects throughout all panels of parental input except for cognitive stimulation. A unit increase in CRRA coefficient of mothers drives an increase of 0.038 which is slightly more than one third of the standard deviation of HOME index for this sub-sample. The effect size on goods and time inputs are similarly high, at 0.027 and 0.032 respectively, which correspond to about 25\% and 1/3 of the standard deviations for these inputs. Lastly, for a unit increase in $\gamma$, emotional support percentile increases by 0.489 percentage points. For the whole sample, positive and significant effect size is found for generic HOME index, Time index and Emotional support score (\%) when accounting for year-specific changes in risk preference of mothers. However, these positive results for the whole sample might be driven by results in the sample of mothers who are high school dropouts. 
+
+%At this point, it is hard to identify the channels through which risk attitudes influence parental investment. Nonetheless, it is possible to speculate a few things about the mechanism of propagation.    ADD SOMETHING LATER
+
+%HOW TO ADDRESS REVERSE CAUSALITY AND ENDOGENEITY?
+
+
+%ADD POSSIBLE MECHANISM: RISK AVERSION AND CREDIT CONSTRAINTS?
+
+
+
+%===================================================================================================================================================================
+%===================================================================================================================================================================
+
+\section{Robustness checks}
+In this section, various specifications are used to check for robustness of our model. These include re-estimating the model excluding the year 2004 (due to the discussed substantial change in variance of log risk tolerance), using a categorical variable of risk preference, using other measures of risk preference.
+
+\subsection{Large swing in risk preference}
+As mentioned in Section 2, in the year 2004, the distribution of responses to the series of questions on risk preference changed drastically. In particular, the second response category, which groups respondents who answered "First job" in the first question and "Second job" in the second question, expanded substantially compared to other years, accounting for almost 16\% of responses compared to under 12\% in other years. To put these figures into perspective, in 1994, the year with the second highest proportion of "Group 2" respondents, 1027 out of 8945 participants were classified into the second response category. For 2004, 1133 out of 7176 participants belong to the second category based on their responses. Taking the other three years as baseline (1994, 2002, and 2006), the year 2004 is characterised by a large movement of concentration in terms of mass towards the ``least popular" second category even overtaking the third response category. Even though the drastic change in risk preference is puzzling, OLS estimates of \eqref{eq:2-empirical-specification} without observations in 2004, presented in \Cref{table:7-robust-1}, are almost identical to those in \Cref{table:6-main-result}. 
+
+\begin{table}[!h]
+	\centering
+	\begin{threeparttable}
+		\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+		\caption{OLS estimates with restricted sample}	
+		\input{Tables/table-7-robust-1}
+		\label{table:7-robust-1}
+		\begin{tablenotes}[flushleft] \footnotesize
+			\item \textit{Note:} The table present OLS estimates of risk aversion on parental inputs excluding observations in 2004. Other details are the same as \Cref{table:6-main-result}.
+			\item Significant levels are as follows: \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\).
+		\end{tablenotes}
+	\end{threeparttable}
+\end{table}
+
+The exclusion of 2004 brings the total number of observations down to 7399 from 9134 for the HOME index, an omission of 1735 observations. Similarly, the restriction excludes 1679 observations on Goods and Time indices, 1552 observations on Cognitive Stimulation score, and 1387 observations on Emotional Support score. Nevertheless, most point estimates remain the same while there are a slight increases in the point estimates of the effect of $\gamma$ on emotional support score. This shows that our original specification is robust to the shift in the risk preference of the population and point estimates along with standard error are very precisely estimated. 
+
+
+
+\subsection{Risk as category}
+Now we focus on the treatment of the variable that acts as a surrogate for risk preference, i.e., how we incorporate responses to the sequence of risk preference in our model. As has been done thus far, one way is to impute and turn these responses into a single cardinal variable which aids in interpretation. In so doing, however, we impose several identifying restrictions crucial to the imputation process as noted in Section 2. Another approach which relaxes these restrictions is to group respondents into different categories depending on their answers. \Cref{table:8-robust-2} present OLS estimates of \eqref{eq:2-empirical-specification} when the cardinal variable $\gamma$ representing CRRA coefficient is replaced by a 4-level categorical variable segregating participants by their answers.
+
+\pagebreak
+
+\begin{ThreePartTable}
+	\centering
+	\setlength{\extrarowheight}{0.2em}
+	\begin{TableNotes}[flushleft]\footnotesize
+		\item \textit{Note:} The table present OLS estimates of risk aversion on parental inputs using a 4-level categorical variable segregating respondents by their answers to the sequence of questions on lifetime gamble. Category 4 (least risk averse) is treated as the baseline. Other details are the same as \Cref{table:6-main-result}.
+		\item Significant levels are as follows: \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\).
+	\end{TableNotes}
+	\input{Tables/table-8-robust-2}
+\end{ThreePartTable}
+
+With the baseline being category 4, which groups respondents answering "Second job" to both questions, estimates in \Cref{table:8-robust-2} indicate how being more risk averse affects parental inputs. As before, significant results are only found for children whose mothers are high school dropouts. Results show that children tend to receive more investment in terms of parental inputs if their mothers are the most risk averse, i.e., they are in category 1. Effects are more sizeable than those found using the cardinal measure $\gamma$. Most notably, children with high school dropouts mothers in category 1 receives up to 7.271 \% higher in emotional support percentile score compared to category 4. Additionally, positive effects are also found for category 3 but not for category 2, implying a possibility of a non-linear relationship between investment and maternal risk aversion.
+
+
+\subsection{Other measures of risk preference}
+
+
+
+
+%===================================================================================================================================================================
+%===================================================================================================================================================================
+
+
+\section{Conclusion}
+
+\pagebreak
+
+\bibliographystyle{apalike}
+\bibliography{bibliography.bib}
+
+\end{document}

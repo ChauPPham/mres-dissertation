@@ -1,0 +1,3641 @@
+C00001.00    [CPUBID]                                       Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             ID CODE OF CHILD
+ 
+PUBLIC IDENTIFICATION CODE OF CHILD
+ 
+UNIVERSE: All biological children of NLSY79 mothers, regardless of age.
+ 
+   11551           1 TO 9999999: See Min & Max values below for range as of this
+                          release
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:            201        Max:        1267501        Mean:           600544.28
+ 
+Lead In: None.
+Default Next Question: C00002.00
+--------------------------------------------------------------------------------
+C00002.00    [MPUBID]                                       Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             ID CODE OF MOTHER OF CHILD
+ 
+PUBLIC IDENTIFICATION CODE OF MOTHER OF CHILD
+ 
+UNIVERSE: All biological children of NLSY79 mothers, regardless of age.
+ 
+NOTE: SEE YOUTH REFERENCE NUMBER R(    1.)
+ 
+   11551           1 TO 12686: NLSY79 Public ID
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:              2        Max:          12675        Mean:             6005.42
+ 
+Lead In: C00001.00[Default]
+Default Next Question: C00003.00
+--------------------------------------------------------------------------------
+C00053.00    [CRACE]                                        Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             RACE OF CHILD (MOTHER'S RACIAL/ETHNIC COHORT FROM SCREENER)
+ 
+RACE OF CHILD (MOTHER'S RACIAL/ETHNIC COHORT FROM SCREENER)
+ 
+NOTE: Child race/ethnicity is based on the report of the mother. See NLSY79 main
+Youth Reference Number R( 2147.)
+ 
+    2224       1 HISPANIC
+    3196       2 BLACK
+    6131       3 NON-BLACK, NON-HISPANIC
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:              1        Max:              3        Mean:                2.34
+ 
+Lead In: C00052.00[Default]
+Default Next Question: C00054.00
+--------------------------------------------------------------------------------
+C00054.00    [CSEX]                                         Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             SEX OF CHILD
+ 
+SEX OF CHILD
+ 
+    5898       1 MALE
+    5651       2 FEMALE
+  -------
+   11549
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:              1        Max:              2        Mean:                1.49
+ 
+Lead In: C00053.00[Default]
+Default Next Question: C00055.00
+--------------------------------------------------------------------------------
+C00057.00    [CYRB]                                         Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             DATE OF BIRTH OF CHILD - YEAR
+ 
+DATE OF BIRTH OF CHILD - YEAR
+ 
+    1223        1970 TO 1978: < before 1979
+     528        1979
+     607        1980
+     714        1981
+     703        1982
+     715        1983
+     657        1984
+     676        1985
+     618        1986
+     621        1987
+     585        1988
+     629        1989
+     495        1990
+     424        1991
+     402        1992
+     348        1993
+     303        1994
+     245        1995
+     229        1996
+     216        1997
+     156        1998
+     129        1999
+     100        2000
+      81        2001
+      48        2002
+      34        2003
+      24        2004
+      15        2005
+      11        2006
+       4        2007
+       3        2008
+       3        2009
+       2        2010
+       2        2011
+       1        2014
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:           1970        Max:           2014        Mean:              1986.1
+ 
+Lead In: C00055.00[Default]
+Default Next Question: C00057.01
+--------------------------------------------------------------------------------
+C05408.00    [MS860127]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD GETS OUT OF THE HOUSE
+ 
+HOME: MS PART A (0-2.11) - HOW OFTEN CHILD GETS OUT OF THE HOUSE  86 INT
+ 
+     201       1 TOO YOUNG
+      32       2 ONCE A MONTH OR LESS
+      66       3 A FEW TIMES A MONTH
+      77       4 ABOUT ONCE A WEEK
+     331       5 A FEW TIMES A WEEK
+     297       6 4 OR MORE TIMES A WEEK
+     752       7 EVERY DAY
+  -------
+    1756
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1756      MISSING(-7)    9795
+ 
+Min:              1        Max:              7        Mean:                5.39
+ 
+Lead In: C05407.00[Default]
+Default Next Question: C05409.00
+--------------------------------------------------------------------------------
+C05409.00    [MS860129]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+HOME: MS PART A (0-2.11) - HOW MANY CHILDRENS BOOKS CHILD HAS  86 INT
+ 
+     532       1 NONE, TOO YOUNG
+     276       2 1 OR 2 BOOKS
+     415       3 3 OR 9 BOOKS
+     536       4 10 OR MORE BOOKS
+  -------
+    1759
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1759      MISSING(-7)    9792
+ 
+Min:              1        Max:              4        Mean:                2.54
+ 
+Lead In: C05408.00[Default]
+Default Next Question: C05410.00
+--------------------------------------------------------------------------------
+C05410.00    [MS860130]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+HOME: MS PART A (0-2.11) - HOW OFTEN MOTHER READS TO CHILD 86 INT
+ 
+     423       1 NEVER
+      89       2 SEVERAL TIMES A YEAR
+     178       3 SEVERAL TIMES A MONTH
+     285       4 ONCE A WEEK
+     428       5 ABOUT 3 TIMES A WEEK
+     355       6 EVERYDAY
+  -------
+    1758
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1758      MISSING(-7)    9793
+ 
+Min:              1        Max:              6        Mean:                3.72
+ 
+Lead In: C05409.00[Default]
+Default Next Question: C05411.00
+--------------------------------------------------------------------------------
+C05411.00    [MS860131]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER TAKES CHILD TO GROCERY
+ 
+HOME: MS PART A (0-2.11) - HOW OFTEN MOTHER TAKES CHILD TO GROCERY  86 INT
+ 
+     570       1 TWICE A WEEK OR MORE
+     684       2 ONCE A WEEK
+     257       3 ONCE A MONTH
+     239       4 HARDLY EVER, GO ALONE
+  -------
+    1750
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1750      MISSING(-7)    9801
+ 
+Min:              1        Max:              4        Mean:                2.09
+ 
+Lead In: C05410.00[Default]
+Default Next Question: C05412.00
+--------------------------------------------------------------------------------
+C05412.00    [MS860132]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CUDDLY OR ROLE-PLAYING TOYS CHILD 
+             HAS
+ 
+HOME: MS PART A (0-2.11) - HOW MANY CUDDLY OR ROLE-PLAYING TOYS CHILD HAS  86 
+INT
+ 
+ACTUAL NUMBER
+ 
+      26           0
+     242           1 TO 4
+     388           5 TO 9
+     417          10 TO 14
+     157          15 TO 19
+     212          20 TO 24
+      77          25 TO 29
+     100          30 TO 34
+       7          35 TO 39
+      25          40 TO 44
+       3          45 TO 49
+      88          50 TO 9999999: 50+
+  -------
+    1742
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1742      MISSING(-7)    9809
+ 
+Min:              0        Max:             90        Mean:               14.49
+ 
+Lead In: C05411.00[Default]
+Default Next Question: C05413.00
+--------------------------------------------------------------------------------
+C05413.00    [MS860134]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY PUSH OR PULL TOYS CHILD HAS
+ 
+HOME: MS PART A (0-2.11) - HOW MANY PUSH OR PULL TOYS CHILD HAS  86 INT
+ 
+ACTUAL NUMBER
+ 
+     259           0
+     101           1
+     169           2
+     182           3
+     174           4
+     228           5
+     122           6
+      46           7
+      57           8
+      18           9
+     195          10
+       4          11
+      29          12
+       5          13
+       6          14
+      63          15
+      83          16 TO 99999: 16+
+  -------
+    1741
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1741      MISSING(-7)    9810
+ 
+Min:              0        Max:             75        Mean:                5.79
+ 
+Lead In: C05412.00[Default]
+Default Next Question: C05414.00
+--------------------------------------------------------------------------------
+C05415.00    [MS860137]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+HOME: MS PART A (0-2.11) - DOES CHILD SEE FATHER(-FIGURE) DAILY?  86 INT
+ 
+    1428       1 YES
+     325       0 NO
+  -------
+    1753
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1753      MISSING(-7)    9798
+ 
+Min:              0        Max:              1        Mean:                 .81
+ 
+Lead In: C05414.00[Default]
+Default Next Question: C05416.00
+--------------------------------------------------------------------------------
+C05416.00    [MS860138]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+HOME: MS PART A (0-2.11) - HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD  86 INT
+ 
+     568       1 MORE THAN ONCE A DAY
+     513       2 ONCE A DAY
+     154       3 SEVERAL TIMES A WEEK
+      45       4 ONCE A WEEK
+      31       5 ONCE A MONTH OR LESS
+     104       6 NEVER
+  -------
+    1415
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1415      MISSING(-7)   10136
+ 
+Min:              1        Max:              6        Mean:                2.13
+ 
+Lead In: C05415.00[Default]
+Default Next Question: C05417.00
+--------------------------------------------------------------------------------
+C07512.00    [MS880244]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD GETS OUT OF THE HOUSE
+ 
+HOME: MS PART A (0-2.11) - HOW OFTEN CHILD GETS OUT OF THE HOUSE 88 INT
+ 
+     175       1 DOES NOT GO YET, TOO YOUNG
+      28       2 ABOUT ONCE A MONTH OR LESS
+      45       3 A FEW TIMES A MONTH
+      53       4 ABOUT ONCE A WEEK
+     235       5 A FEW TIMES A WEEK
+     243       6 4 OR MORE TIMES A WEEK
+     870       7 EVERY DAY
+  -------
+    1649
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1649      MISSING(-7)    9902
+ 
+Min:              1        Max:              7        Mean:                5.64
+ 
+Lead In: C07511.00[Default]
+Default Next Question: C07513.00
+--------------------------------------------------------------------------------
+C07513.00    [MS880246]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+HOME: MS PART A (0-2.11) - HOW MANY CHILDRENS BOOKS CHILD HAS  88 INT
+ 
+     440       1 NONE, TOO YOUNG
+     218       2 1 OR 2 BOOKS
+     372       3 3 OR 9 BOOKS
+     621       4 10 OR MORE BOOKS
+  -------
+    1651
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1651      MISSING(-7)    9900
+ 
+Min:              1        Max:              4        Mean:                2.71
+ 
+Lead In: C07512.00[Default]
+Default Next Question: C07514.00
+--------------------------------------------------------------------------------
+C07514.00    [MS880247]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+HOME: MS PART A (0-2.11) - HOW OFTEN MOTHER READS TO CHILD  88 INT
+ 
+     343       1 NEVER
+      75       2 SEVERAL TIMES A YEAR
+     169       3 SEVERAL TIMES A MONTH
+     274       4 ONCE A WEEK
+     422       5 ABOUT 3 TIMES A WEEK
+     350       6 EVERYDAY
+  -------
+    1633
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1633      MISSING(-7)    9918
+ 
+Min:              1        Max:              6        Mean:                3.86
+ 
+Lead In: C07513.00[Default]
+Default Next Question: C07515.00
+--------------------------------------------------------------------------------
+C07515.00    [MS880248]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER TAKES CHILD TO GROCERY
+ 
+HOME: MS PART A (0-2.11) - HOW OFTEN MOTHER TAKES CHILD TO GROCERY  88 INT
+ 
+     572       1 TWICE A WEEK OR MORE
+     726       2 ONCE A WEEK
+     181       3 ONCE A MONTH
+     152       4 HARDLY EVER, GO ALONE
+  -------
+    1631
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1631      MISSING(-7)    9920
+ 
+Min:              1        Max:              4        Mean:                1.95
+ 
+Lead In: C07514.00[Default]
+Default Next Question: C07516.00
+--------------------------------------------------------------------------------
+C07516.00    [MS880249]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CUDDLY OR ROLE-PLAYING TOYS CHILD 
+             HAS
+ 
+HOME: MS PART A (0-2.11) - HOW MANY CUDDLY OR ROLE-PLAYING TOYS CHILD HAS  88 
+INT
+ 
+      29           0: < 1
+      34           1
+      57           2
+      78           3
+      82           4
+     131           5
+      84           6
+      40           7
+      53           8
+      17           9
+     307          10
+       9          11
+      56          12
+       2          13
+      10          14
+     122          15
+       2          16
+     508          17 TO 99999: 17+
+  -------
+    1621
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1621      MISSING(-7)    9930
+ 
+Min:              0        Max:             75        Mean:               14.19
+ 
+Lead In: C07515.00[Default]
+Default Next Question: C07517.00
+--------------------------------------------------------------------------------
+C07517.00    [MS880251]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY PUSH OR PULL TOYS CHILD HAS
+ 
+HOME: MS PART A (0-2.11) - HOW MANY PUSH OR PULL TOYS CHILD HAS  88 INT
+ 
+     260           0: < 1
+      77           1
+     147           2
+     155           3
+     175           4
+     212           5
+     100           6
+      44           7
+      35           8
+      21           9
+     224          10
+       2          11
+      16          12
+       3          13
+       4          14
+      52          15
+       1          16
+      98          17 TO 99999: 17+
+  -------
+    1626
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1626      MISSING(-7)    9925
+ 
+Min:              0        Max:             90        Mean:                6.02
+ 
+Lead In: C07516.00[Default]
+Default Next Question: C07518.00
+--------------------------------------------------------------------------------
+C07519.00    [MS880254]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+HOME: MS PART A (0-2.11) - DOES CHILD SEE FATHER(-FIGURE) DAILY?  88 INT
+ 
+    1393       1 YES
+     247       0 NO
+  -------
+    1640
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1640      MISSING(-7)    9911
+ 
+Min:              0        Max:              1        Mean:                 .85
+ 
+Lead In: C07518.00[Default]
+Default Next Question: C07520.00
+--------------------------------------------------------------------------------
+C07520.00    [MS880255]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+HOME: MS PART A (0-2.11) - HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD  88 INT
+ 
+     492       1 MORE THAN ONCE A DAY
+     577       2 ONCE A DAY
+     209       3 SEVERAL TIMES A WEEK
+      64       4 ONCE A WEEK
+      55       5 ONCE A MONTH OR LESS
+     235       6 NEVER
+  -------
+    1632
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1632      MISSING(-7)    9919
+ 
+Min:              1        Max:              6        Mean:                2.58
+ 
+Lead In: C07519.00[Default]
+Default Next Question: C07521.00
+--------------------------------------------------------------------------------
+C09523.00    [MS900243]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD GETS OUT OF THE HOUSE
+ 
+HOME: MS PART A (0-2.11) - HOW OFTEN CHILD GETS OUT OF THE HOUSE  90 INT
+ 
+      42       1 DOES NOT GO YET, TOO YOUNG
+      15       2 ABOUT ONCE A MONTH OR LESS
+      32       3 A FEW TIMES A MONTH
+      48       4 ABOUT ONCE A WEEK
+     185       5 A FEW TIMES A WEEK
+     183       6 4 OR MORE TIMES A WEEK
+     822       7 EVERY DAY
+  -------
+    1327
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1328      MISSING(-7)   10223
+ 
+Min:              1        Max:              7        Mean:                6.13
+ 
+Lead In: C09522.00[Default]
+Default Next Question: C09524.00
+--------------------------------------------------------------------------------
+C09524.00    [MS900245]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+HOME: MS PART A (0-2.11) - HOW MANY CHILDRENS BOOKS CHILD HAS  90 INT
+ 
+     222       1 NONE, TOO YOUNG
+     174       2 1 OR 2 BOOKS
+     328       3 3 OR 9 BOOKS
+     598       4 10 OR MORE BOOKS
+  -------
+    1322
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1323      MISSING(-7)   10228
+ 
+Min:              1        Max:              4        Mean:                2.98
+ 
+Lead In: C09523.00[Default]
+Default Next Question: C09525.00
+--------------------------------------------------------------------------------
+C09525.00    [MS900247]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+HOME: MS PART A (0-2.11) - HOW OFTEN MOTHER READS TO CHILD  90 INT
+ 
+     223       1 NEVER
+      42       2 SEVERAL TIMES A YEAR
+     107       3 SEVERAL TIMES A MONTH
+     243       4 ONCE A WEEK
+     345       5 ABOUT 3 TIMES A WEEK
+     356       6 EVERYDAY
+  -------
+    1316
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1317      MISSING(-7)   10234
+ 
+Min:              1        Max:              6        Mean:                4.15
+ 
+Lead In: C09524.00[Default]
+Default Next Question: C09526.00
+--------------------------------------------------------------------------------
+C09526.00    [MS900249]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER TAKES CHILD TO GROCERY
+ 
+HOME: MS PART A (0-2.11) - HOW OFTEN MOTHER TAKES CHILD TO GROCERY  90 INT
+ 
+     499       1 TWICE A WEEK OR MORE
+     568       2 ONCE A WEEK
+     138       3 ONCE A MONTH
+     113       4 HARDLY EVER, GO ALONE
+  -------
+    1318
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1319      MISSING(-7)   10232
+ 
+Min:              1        Max:              4        Mean:                 1.9
+ 
+Lead In: C09525.00[Default]
+Default Next Question: C09527.00
+--------------------------------------------------------------------------------
+C09527.00    [MS900251]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CUDDLY OR ROLE-PLAYING TOYS CHILD 
+             HAS
+ 
+HOME: MS PART A (0-2.11) - HOW MANY CUDDLY OR ROLE-PLAYING TOYS CHILD HAS  90 
+INT
+ 
+      20           0: < 1
+      17           1
+      33           2
+      50           3
+      62           4
+     100           5
+      72           6
+      29           7
+      37           8
+       9           9
+     260          10
+       3          11
+      46          12
+       3          13
+       1          14
+     104          15
+       1          16
+     462          17 TO 99999: 17+
+  -------
+    1309
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1310      MISSING(-7)   10241
+ 
+Min:              0        Max:             90        Mean:                15.3
+ 
+Lead In: C09526.00[Default]
+Default Next Question: C09528.00
+--------------------------------------------------------------------------------
+C09528.00    [MS900253]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY PUSH OR PULL TOYS CHILD HAS
+ 
+HOME: MS PART A (0-2.11) - HOW MANY PUSH OR PULL TOYS CHILD HAS  90 INT
+ 
+     164           0: < 1
+      56           1
+     122           2
+     128           3
+     105           4
+     234           5
+      66           6
+      33           7
+      36           8
+      10           9
+     210          10
+       2          11
+      17          12
+       1          13
+      39          15
+       1          16
+      88          17 TO 99999: 17+
+  -------
+    1312
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1313      MISSING(-7)   10238
+ 
+Min:              0        Max:             90        Mean:                6.53
+ 
+Lead In: C09527.00[Default]
+Default Next Question: C09529.00
+--------------------------------------------------------------------------------
+C09536.00    [MS900315]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+HOME: MS PART A (0-2.11) - DOES CHILD SEE FATHER(-FIGURE) DAILY?  90 INT
+ 
+    1115       1 YES
+     169       0 NO
+      26       2 NO FATHER, STEP FATHER, OR FATHER-FIGURE
+  -------
+    1310
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1311      MISSING(-7)   10240
+ 
+Min:              0        Max:              2        Mean:                 .89
+ 
+Lead In: C09535.00[Default]
+Default Next Question: C09537.00
+--------------------------------------------------------------------------------
+C09537.00    [MS900317]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+HOME: MS PART A (0-2.11) - HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD  90 INT
+ 
+     352       1 MORE THAN ONCE A DAY
+     493       2 ONCE A DAY
+     190       3 SEVERAL TIMES A WEEK
+      59       4 ONCE A WEEK
+      42       5 ONCE A MONTH OR LESS
+     141       6 NEVER
+      30       7 NO FATHER, STEP FATHER, OR FATHER-FIGURE
+  -------
+    1307
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1308      MISSING(-7)   10243
+ 
+Min:              1        Max:              7        Mean:                2.61
+ 
+Lead In: C09536.00[Default]
+Default Next Question: C09538.00
+--------------------------------------------------------------------------------
+C11504.00    [MS920243]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD GETS OUT OF THE HOUSE
+ 
+HOME PART A (0-2 YRS): HOW OFTEN CHILD GETS OUT OF THE HOUSE  92 INT
+ 
+      47       1 DOES NOT GO YET, TOO YOUNG
+      17       2 ABOUT ONCE A MONTH OR LESS
+      20       3 A FEW TIMES A MONTH
+      18       4 ABOUT ONCE A WEEK
+     178       5 A FEW TIMES A WEEK
+     183       6 4 OR MORE TIMES A WEEK
+     802       7 EVERY DAY
+  -------
+    1265
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1265      MISSING(-7)   10286
+ 
+Min:              1        Max:              7        Mean:                6.18
+ 
+Lead In: C11503.00[Default]
+Default Next Question: C11505.00
+--------------------------------------------------------------------------------
+C11505.00    [MS920245]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+HOME PART A (0-2 YRS): HOW MANY CHILDREN'S BOOKS CHILD HAS  92 INT
+ 
+     125       1 NONE, TOO YOUNG
+     126       2 1 OR 2 BOOKS
+     230       3 3 OR 9 BOOKS
+     781       4 10 OR MORE BOOKS
+  -------
+    1262
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1262      MISSING(-7)   10289
+ 
+Min:              1        Max:              4        Mean:                3.32
+ 
+Lead In: C11504.00[Default]
+Default Next Question: C11506.00
+--------------------------------------------------------------------------------
+C11506.00    [MS920247]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+HOME PART A (0-2 YRS): HOW OFTEN MOTHER READS TO CHILD  92 INT
+ 
+     169       1 NEVER
+      44       2 SEVERAL TIMES A YEAR
+     113       3 SEVERAL TIMES A MONTH
+     204       4 ONCE A WEEK
+     335       5 ABOUT 3 TIMES A WEEK
+     388       6 EVERYDAY
+  -------
+    1253
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1253      MISSING(-7)   10298
+ 
+Min:              1        Max:              6        Mean:                4.32
+ 
+Lead In: C11505.00[Default]
+Default Next Question: C11507.00
+--------------------------------------------------------------------------------
+C11507.00    [MS920249]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER TAKES CHILD TO GROCERY
+ 
+HOME PART A (0-2 YRS): HOW OFTEN MOTHER TAKES CHILD TO GROCERY  92 INT
+ 
+     450       1 TWICE A WEEK OR MORE
+     594       2 ONCE A WEEK
+     136       3 ONCE A MONTH
+      81       4 HARDLY EVER, GO ALONE
+  -------
+    1261
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1261      MISSING(-7)   10290
+ 
+Min:              1        Max:              4        Mean:                1.88
+ 
+Lead In: C11506.00[Default]
+Default Next Question: C11508.00
+--------------------------------------------------------------------------------
+C11508.00    [MS920251]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CUDDLY OR ROLE-PLAYING TOYS CHILD 
+             HAS
+ 
+HOME PART A (0-2 YRS): HOW MANY CUDDLY OR ROLE-PLAYING TOYS CHILD HAS  92 INT
+ 
+      25           0: < 1
+      17           1
+      25           2
+      38           3
+      37           4
+      95           5
+      62           6
+      26           7
+      22           8
+      12           9
+     288          10
+       3          11
+      39          12
+       4          13
+       7          14
+     109          15
+       2          16
+     446          17 TO 99999: 17+
+  -------
+    1257
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1257      MISSING(-7)   10294
+ 
+Min:              0        Max:             99        Mean:               16.68
+ 
+Lead In: C11507.00[Default]
+Default Next Question: C11509.00
+--------------------------------------------------------------------------------
+C11509.00    [MS920253]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY PUSH OR PULL TOYS CHILD HAS
+ 
+HOME PART A (0-2 YRS): HOW MANY PUSH OR PULL TOYS CHILD HAS  92 INT
+ 
+     150           0: < 1
+      59           1
+     128           2
+     106           3
+     114           4
+     179           5
+      60           6
+      31           7
+      38           8
+       4           9
+     203          10
+       3          11
+      16          12
+       1          13
+       1          14
+      41          15
+     121          17 TO 99999: 17+
+  -------
+    1255
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1255      MISSING(-7)   10296
+ 
+Min:              0        Max:             99        Mean:                7.31
+ 
+Lead In: C11508.00[Default]
+Default Next Question: C11510.00
+--------------------------------------------------------------------------------
+C11517.00    [MS920315]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+HOME PART A (0-2 YRS): DOES CHILD SEE FATHER(-FIGURE) DAILY?  92 INT
+ 
+    1078       1 YES
+     156       0 NO
+      16       2 NO FATHER, STEP FATHER, OR FATHER-FIGURE
+  -------
+    1250
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1250      MISSING(-7)   10301
+ 
+Min:              0        Max:              2        Mean:                 .89
+ 
+Lead In: C11516.00[Default]
+Default Next Question: C11518.00
+--------------------------------------------------------------------------------
+C11518.00    [MS920317]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+HOME PART A (0-2 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD  92 INT
+ 
+     357       1 ONCE A DAY OR MORE OFTEN
+     430       2 AT LEAST 4 TIMES A WEEK
+     191       3 ABOUT ONCE A WEEK
+      60       4 ABOUT ONCE A MONTH
+      34       5 A FEW TIMES A YEAR OR LESS
+     154       6 NEVER
+      21       7 NO FATHER, STEP FATHER, OR FATHER-FIGURE
+  -------
+    1247
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1247      MISSING(-7)   10304
+ 
+Min:              1        Max:              7        Mean:                2.62
+ 
+Lead In: C11517.00[Default]
+Default Next Question: C11519.00
+--------------------------------------------------------------------------------
+C14012.00    [MS940243]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD GETS OUT OF THE HOUSE
+ 
+HOME PART A (0-2 YRS): HOW OFTEN CHILD GETS OUT OF THE HOUSE  94 INT
+ 
+      37       1 DOES NOT GO YET, TOO YOUNG
+      15       2 ABOUT ONCE A MONTH OR LESS
+      27       3 A FEW TIMES A MONTH
+      33       4 ABOUT ONCE A WEEK
+     130       5 A FEW TIMES A WEEK
+     151       6 4 OR MORE TIMES A WEEK
+     610       7 EVERY DAY
+  -------
+    1003
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1003      MISSING(-7)   10548
+ 
+Min:              1        Max:              7        Mean:                6.09
+ 
+Lead In: C14011.00[Default]
+Default Next Question: C14013.00
+--------------------------------------------------------------------------------
+C14013.00    [MS940245]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+HOME PART A (0-2 YRS): HOW MANY CHILDREN'S BOOKS CHILD HAS  94 INT
+ 
+      86       1 NONE, TOO YOUNG
+      95       2 1 OR 2 BOOKS
+     161       3 3 OR 9 BOOKS
+     662       4 10 OR MORE BOOKS
+  -------
+    1004
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1004      MISSING(-7)   10547
+ 
+Min:              1        Max:              4        Mean:                3.39
+ 
+Lead In: C14012.00[Default]
+Default Next Question: C14014.00
+--------------------------------------------------------------------------------
+C14014.00    [MS940247]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+HOME PART A (0-2 YRS): HOW OFTEN MOTHER READS TO CHILD  94 INT
+ 
+     116       1 NEVER
+      38       2 SEVERAL TIMES A YEAR
+      89       3 SEVERAL TIMES A MONTH
+     152       4 ONCE A WEEK
+     282       5 ABOUT 3 TIMES A WEEK
+     318       6 EVERYDAY
+  -------
+     995
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     995      MISSING(-7)   10556
+ 
+Min:              1        Max:              6        Mean:                4.41
+ 
+Lead In: C14013.00[Default]
+Default Next Question: C14015.00
+--------------------------------------------------------------------------------
+C14015.00    [MS940249]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER TAKES CHILD TO GROCERY
+ 
+HOME PART A (0-2 YRS): HOW OFTEN MOTHER TAKES CHILD TO GROCERY  94 INT
+ 
+     377       1 TWICE A WEEK OR MORE
+     429       2 ONCE A WEEK
+     103       3 ONCE A MONTH
+      91       4 HARDLY EVER, GO ALONE
+  -------
+    1000
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1000      MISSING(-7)   10551
+ 
+Min:              1        Max:              4        Mean:                1.91
+ 
+Lead In: C14014.00[Default]
+Default Next Question: C14016.00
+--------------------------------------------------------------------------------
+C14016.00    [MS940251]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CUDDLY OR ROLE-PLAYING TOYS CHILD 
+             HAS
+ 
+HOME PART A (0-2 YRS): HOW MANY CUDDLY OR ROLE-PLAYING TOYS CHILD HAS  94 INT
+ 
+      23           0
+      10           1
+      17           2
+      23           3
+      37           4
+      55           5
+      46           6
+      19           7
+      25           8
+       9           9
+     190          10
+       6          11
+      38          12
+       4          13
+       5          14
+     101          15
+     385          16 TO 99999: 16+
+  -------
+     993
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     993      MISSING(-7)   10558
+ 
+Min:              0        Max:             99        Mean:               17.48
+ 
+Lead In: C14015.00[Default]
+Default Next Question: C14017.00
+--------------------------------------------------------------------------------
+C14017.00    [MS940253]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY PUSH OR PULL TOYS CHILD HAS
+ 
+HOME PART A (0-2 YRS): HOW MANY PUSH OR PULL TOYS CHILD HAS  94 INT
+ 
+     103           0
+      49           1
+      67           2
+      91           3
+      73           4
+     150           5
+      60           6
+      26           7
+      33           8
+      10           9
+     174          10
+       7          11
+      12          12
+       1          14
+      41          15
+      93          16 TO 99999: 16+
+  -------
+     990
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     990      MISSING(-7)   10561
+ 
+Min:              0        Max:             99        Mean:                   8
+ 
+Lead In: C14016.00[Default]
+Default Next Question: C14018.00
+--------------------------------------------------------------------------------
+C14025.00    [MS940315]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+HOME PART A (0-2 YRS): DOES CHILD SEE FATHER(-FIGURE) DAILY?  94 INT
+ 
+     839       1 YES
+     130       0 NO
+      16       2 NO FATHER, STEP-FATHER, OR FATHER FIGURE
+  -------
+     985
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     985      MISSING(-7)   10566
+ 
+Min:              0        Max:              2        Mean:                 .88
+ 
+Lead In: C14024.00[Default]
+Default Next Question: C14026.00
+--------------------------------------------------------------------------------
+C14026.00    [MS940317]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+HOME PART A (0-2 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD  94 INT
+ 
+     266       1 ONCE A DAY OR MORE OFTEN
+     331       2 AT LEAST 4 TIMES A WEEK
+     162       3 ABOUT ONCE A WEEK
+      46       4 ABOUT ONCE A MONTH
+      36       5 A FEW TIMES A YEAR OR LESS
+     120       6 NEVER
+      17       7 NO FATHER, STEP FATHER, OR FATHER-FIGURE
+  -------
+     978
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     978      MISSING(-7)   10573
+ 
+Min:              1        Max:              7        Mean:                2.68
+ 
+Lead In: C14025.00[Default]
+Default Next Question: C14027.00
+--------------------------------------------------------------------------------
+C16029.00    [MS960243]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD GETS OUT OF THE HOUSE
+ 
+1 ).  About how often does your child have a chance to get out of the house 
+(either by himself/herself, or with an older person)?    (CIRCLE ONE)
+ 
+      19       1 NOT AT ALL
+      12       2 ABOUT ONCE A MONTH OR LESS
+      15       3 A FEW TIMES A MONTH
+      29       4 ABOUT ONCE A WEEK
+     112       5 A FEW TIMES A WEEK
+     112       6 4 OR MORE TIMES A WEEK
+     455       7 EVERY DAY
+  -------
+     754
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     754      MISSING(-7)   10797
+ 
+Min:              1        Max:              7        Mean:                6.13
+ 
+Lead In: C16028.00[Default]
+Default Next Question: C16030.00
+--------------------------------------------------------------------------------
+C16030.00    [MS960245]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+2). About how many children's books does your child have?  (CIRCLE ONE)
+ 
+      48       1 NONE
+      45       2 1 OR 2 BOOKS
+     117       3 3 TO 9 BOOKS
+     543       4 10 OR MORE BOOKS
+  -------
+     753
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     753      MISSING(-7)   10798
+ 
+Min:              1        Max:              4        Mean:                3.53
+ 
+Lead In: C16029.00[Default]
+Default Next Question: C16031.00
+--------------------------------------------------------------------------------
+C16031.00    [MS960247]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+3). How often do you get a chance to read stories to your child? (CIRCLE ONE)
+ 
+      78       1 NEVER
+      35       2 SEVERAL TIMES A YEAR
+      41       3 SEVERAL TIMES A MONTH
+     121       4 ONCE A WEEK
+     237       5 ABOUT 3 TIMES A WEEK
+     242       6 EVERYDAY
+  -------
+     754
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     754      MISSING(-7)   10797
+ 
+Min:              1        Max:              6        Mean:                 4.5
+ 
+Lead In: C16030.00[Default]
+Default Next Question: C16032.00
+--------------------------------------------------------------------------------
+C16032.00    [MS960249]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER TAKES CHILD TO GROCERY
+ 
+4.About how often do you take your child to the grocery store? (CIRCLE ONE)
+ 
+     252       1 TWICE A WEEK OR MORE
+     368       2 ONCE A WEEK
+      81       3 ONCE A MONTH
+      55       4 HARDLY EVER
+  -------
+     756
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     756      MISSING(-7)   10795
+ 
+Min:              1        Max:              4        Mean:                1.92
+ 
+Lead In: C16031.00[Default]
+Default Next Question: C16033.00
+--------------------------------------------------------------------------------
+C16033.00    [MS960251]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CUDDLY OR ROLE-PLAYING TOYS CHILD 
+             HAS
+ 
+5.About how many, if any, cuddly, soft or role-playing toys (like a doll) does 
+your child have?  (May be shared with sister or brother.) (WRITE IN NUMBER OF 
+TOYS.)
+ 
+      13           0
+      79           1 TO 4
+      93           5 TO 9
+     201          10 TO 14
+      65          15 TO 19
+     134          20 TO 24
+      48          25 TO 29
+      50          30 TO 34
+       3          35 TO 39
+      14          40 TO 44
+       3          45 TO 49
+      48          50 TO 99999999: 50+
+  -------
+     751
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     751      MISSING(-7)   10800
+ 
+Min:              0        Max:             99        Mean:               17.47
+ 
+Lead In: C16032.00[Default]
+Default Next Question: C16034.00
+--------------------------------------------------------------------------------
+C16034.00    [MS960253]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY PUSH OR PULL TOYS CHILD HAS
+ 
+6.About how many, if any, push or pull toys does your child have?  (May be 
+shared with sister or brother.) (WRITE IN NUMBER OF TOYS.)
+ 
+      76           0
+     190           1 TO 4
+     224           5 TO 9
+     145          10 TO 14
+      32          15 TO 19
+      44          20 TO 24
+      18          25 TO 29
+       6          30 TO 34
+       5          40 TO 44
+       1          45 TO 49
+       6          50 TO 99999999: 50+
+  -------
+     747
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     747      MISSING(-7)   10804
+ 
+Min:              0        Max:             99        Mean:                8.07
+ 
+Lead In: C16033.00[Default]
+Default Next Question: C16035.00
+--------------------------------------------------------------------------------
+C16039.00    [MS960263]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+11.How often does your child eat a meal with both mother and father (or step 
+father or father-figure)?  (CIRCLE ONE)
+ 
+     177       1 More than once a day
+     276       2 Once a day
+     129       3 Several times a week
+      53       4 About once a week
+      11       5 About once a month
+      67       6 Never
+      36       7 No father, step-father, father figure
+  -------
+     749
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     749      MISSING(-7)   10802
+ 
+Min:              1        Max:              7        Mean:                2.72
+ 
+Lead In: C16038.00[Default]
+Default Next Question: C16040.00
+--------------------------------------------------------------------------------
+C16042.00    [MS960315]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+14.  Does your child see this person on a daily basis?
+ 
+     658       1 YES
+      62       0 NO
+      29       2 NO FATHER, STEP-FATHER, OR FATHER FIGURE
+  -------
+     749
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     749      MISSING(-7)   10802
+ 
+Min:              0        Max:              2        Mean:                 .96
+ 
+Lead In: C16041.00[Default]
+Default Next Question: C16043.00
+--------------------------------------------------------------------------------
+C19434.00    [MS981A01]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD GETS OUT OF THE HOUSE
+ 
+1.     About how often does your child have a chance to get out of the house 
+(either by himself/herself, or with an older person)?    (Circle Only One)
+ 
+      13       1 NOT AT ALL
+       5       2 ABOUT ONCE A MONTH OR LESS
+       9       3 A FEW TIMES A MONTH
+      19       4 ABOUT ONCE A WEEK
+      63       5 A FEW TIMES A WEEK
+      85       6 4 OR MORE TIMES A WEEK
+     360       7 EVERY DAY
+  -------
+     554
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     554      MISSING(-7)   10997
+ 
+Min:              1        Max:              7        Mean:                6.27
+ 
+Lead In: C19433.00[Default]
+Default Next Question: C19435.00
+--------------------------------------------------------------------------------
+C19435.00    [MS981A02]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY BOOKS CHILD HAS
+ 
+2.     About how many children's books does your child have?  (Circle Only One)
+ 
+      26       1 NONE
+      29       2 1 OR 2 BOOKS
+      81       3 3 TO 9 BOOKS
+     416       4 10 OR MORE BOOKS
+  -------
+     552
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     552      MISSING(-7)   10999
+ 
+Min:              1        Max:              4        Mean:                3.61
+ 
+Lead In: C19434.00[Default]
+Default Next Question: C19436.00
+--------------------------------------------------------------------------------
+C19436.00    [MS981A03]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+3.     How often do you get a chance to read stories to your child?  (Circle 
+Only One)
+ 
+      44       1 NEVER
+      13       2 SEVERAL TIMES A YEAR
+      35       3 SEVERAL TIMES A MONTH
+      86       4 ONCE A WEEK
+     169       5 ABOUT 3 TIMES A WEEK
+     207       6 EVERYDAY
+  -------
+     554
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     554      MISSING(-7)   10997
+ 
+Min:              1        Max:              6        Mean:                 4.7
+ 
+Lead In: C19435.00[Default]
+Default Next Question: C19437.00
+--------------------------------------------------------------------------------
+C19437.00    [MS981A04]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER TAKES CHILD TO GROCERY
+ 
+4.     About how often do you take your child to the grocery store? (Circle Only
+One)
+ 
+     197       1 TWICE A WEEK OR MORE
+     239       2 ONCE A WEEK
+      64       3 ONCE A MONTH
+      52       4 HARDLY EVER
+  -------
+     552
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     552      MISSING(-7)   10999
+ 
+Min:              1        Max:              4        Mean:                1.95
+ 
+Lead In: C19436.00[Default]
+Default Next Question: C19438.00
+--------------------------------------------------------------------------------
+C19438.00    [MS981A05]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CUDDLY OR ROLE-PLAYING TOYS CHILD 
+             HAS
+ 
+5.     About how many, if any, cuddly, soft or role-playing toys (like a doll) 
+does your child have?  (May be shared with sister or brother.)  (WRITE IN NUMBER
+OF SOFT TOYS.)
+ 
+       3           0
+      47           1 TO 4
+      60           5 TO 9
+     151          10 TO 14
+      48          15 TO 19
+     101          20 TO 24
+      29          25 TO 29
+      41          30 TO 34
+       4          35 TO 39
+      11          40 TO 44
+       1          45 TO 49
+      48          50 TO 9999
+  -------
+     544
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     544      MISSING(-7)   11007
+ 
+Min:              0        Max:             99        Mean:               18.98
+ 
+Lead In: C19437.00[Default]
+Default Next Question: C19439.00
+--------------------------------------------------------------------------------
+C19439.00    [MS981A06]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY PUSH OR PULL TOYS CHILD HAS
+ 
+6.     About how many, if any, push or pull toys does your child have?  (May be 
+shared with sister or brother.)   (WRITE IN NUMBER OF PUSH/PULL TOYS.)
+ 
+      55           0
+     144           1 TO 4
+     139           5 TO 9
+     126          10 TO 14
+      30          15 TO 19
+      36          20 TO 24
+       4          25 TO 29
+       4          30 TO 34
+       2          40 TO 44
+       6          50 TO 9999
+  -------
+     546
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     546      MISSING(-7)   11005
+ 
+Min:              0        Max:             99        Mean:                8.09
+ 
+Lead In: C19438.00[Default]
+Default Next Question: C19440.00
+--------------------------------------------------------------------------------
+C19447.00    [MS981A14]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): DOES CHILD SEE FATHER(-FIGURE) DAILY
+ 
+14.     Does your child see this person on a daily basis?
+ 
+     484       1 YES
+      57       0 NO
+       5       2 NO FATHER, STEPFATHER, OR FATHER FIGURE
+  -------
+     546
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     546      MISSING(-7)   11005
+ 
+Min:              0        Max:              2        Mean:                  .9
+ 
+Lead In: C19446.00[Default]
+Default Next Question: C19448.00
+--------------------------------------------------------------------------------
+C19448.00    [MS981A15]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+15.     How often does your child eat a meal with both mother and father?  
+(Circle Only One)
+ 
+     152       1 More than once a day
+     187       2 Once a day
+     105       3 Several times a week
+      31       4 About once a week
+      11       5 About once a month
+      49       6 Never
+       9       7 No father, step-father, father figure
+  -------
+     544
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     544      MISSING(-7)   11007
+ 
+Min:              1        Max:              7        Mean:                2.53
+ 
+Lead In: C19447.00[Default]
+Default Next Question: C19449.00
+--------------------------------------------------------------------------------
+C22641.00    [HOME-A01]                                     Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD GETS OUT OF THE HOUSE
+ 
+About how often does [Child First Name] have a chance to get out of the house?
+ 
+NOTE: This item was moved from paper Mother Supplement to CAPI Child Supplement 
+for 2000. The item may have been modified to accommodate CAPI vs. 
+self-administration format.  For comparison see Mother Supplement, Section 1A, 
+Q.01, and codebook item MS981A01.
+ 
+     308       5 Every day
+      38       4 4 or more times a week
+      27       3 A few times a week
+       5       2 About once a week
+       2       1 A few times a month or less
+  -------
+     380
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     380      MISSING(-7)   11171
+ 
+Min:              1        Max:              5        Mean:                 4.7
+ 
+Lead In: None.
+Default Next Question: C22642.00
+--------------------------------------------------------------------------------
+C22642.00    [HOME-A02]                                     Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+About how many children's books does [Child First Name] have?
+ 
+NOTE: This item was moved from paper Mother Supplement to CAPI Child Supplement 
+for 2000. The item may have been modified to accommodate CAPI vs. 
+self-administration format.  For comparison see Mother Supplement, Section 1A, 
+Q.02, and codebook item MS981A02.
+ 
+     292       4 10 or more books
+      46       3 3 to 9 books
+      12       2 1 or 2 books
+      30       1 None
+  -------
+     380
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     380      MISSING(-7)   11171
+ 
+Min:              1        Max:              4        Mean:                3.58
+ 
+Lead In: C22641.00[Default]
+Default Next Question: C22643.00
+--------------------------------------------------------------------------------
+C22643.00    [HOME-A03]                                     Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+How often do you get a chance to read stories to [Child First Name]?
+ 
+NOTE: This item was moved from paper Mother Supplement to CAPI Child Supplement 
+for 2000. The item may have been modified to accommodate CAPI vs. 
+self-administration format.  For comparison see Mother Supplement, Section 1A, 
+Q.03, and codebook item MS981A03.
+ 
+      37       1 Never
+       6       2 Several times a year
+      14       3 Several times a month
+      42       4 Once a week
+     107       5 About 3 times a week
+     174       6 Everyday
+  -------
+     380
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     380      MISSING(-7)   11171
+ 
+Min:              1        Max:              6        Mean:                4.84
+ 
+Lead In: C22642.00[Default]
+Default Next Question: C22644.00
+--------------------------------------------------------------------------------
+C22644.00    [HOME-A04]                                     Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER TAKES CHILD TO GROCERY
+ 
+About how often do you take [Child First Name] to the grocery store?
+ 
+NOTE: This item was moved from paper Mother Supplement to CAPI Child Supplement 
+for 2000. The item may have been modified to accommodate CAPI vs. 
+self-administration format.  For comparison see Mother Supplement, Section 1A, 
+Q.04, and codebook item MS981A04.
+ 
+     152       1 Twice a week or more
+     151       2 Once a week
+      41       3 Once a month
+      36       4 Hardly ever
+  -------
+     380
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     380      MISSING(-7)   11171
+ 
+Min:              1        Max:              4        Mean:                 1.9
+ 
+Lead In: C22643.00[Default]
+Default Next Question: C22645.00
+--------------------------------------------------------------------------------
+C22645.00    [HOME-A05]                                     Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CUDDLY OR ROLE-PLAYING TOYS CHILD 
+             HAS
+ 
+About how many, if any, cuddly, soft or role-playing toys (like a doll) does 
+[Child First Name] have?  (May be shared with sister or brother.)
+ 
+ENTER NUMBER OF SOFT TOYS.
+ 
+NOTE: This item was moved from paper Mother Supplement to CAPI Child Supplement 
+for 2000. The item may have been modified to accommodate CAPI vs. 
+self-administration format.  For comparison see Mother Supplement, Section 1A, 
+Q.05, and codebook item MS981A05.
+ 
+       4           0
+      42           1 TO 4
+      40           5 TO 9
+      72          10 TO 14
+      30          15 TO 19
+      81          20 TO 24
+      19          25 TO 29
+      36          30 TO 34
+       3          35 TO 39
+       5          40 TO 44
+      30          50 TO 9999
+  -------
+     362
+ 
+Refusal(-1)            0
+Don't Know(-2)         7
+Invalid Skip(-3)      11
+TOTAL =========>     380      MISSING(-7)   11171
+ 
+Min:              0        Max:             70        Mean:               18.24
+ 
+Lead In: C22644.00[Default]
+Default Next Question: C22646.00
+--------------------------------------------------------------------------------
+C22646.00    [HOME-A06]                                     Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY PUSH OR PULL TOYS CHILD HAS
+ 
+About how many, if any, push or pull toys does [Child First Name] have?  (May be
+shared with sister or brother.)
+ 
+ 
+ENTER NUMBER OF PUSH/PULL TOYS.
+ 
+NOTE: This item was moved from paper Mother Supplement to CAPI Child Supplement 
+for 2000. The item may have been modified to accommodate CAPI vs. 
+self-administration format.  For comparison see Mother Supplement, Section 1A, 
+Q.06, and codebook item MS981A06.
+ 
+      45           0
+     131           1 TO 4
+      89           5 TO 9
+      77          10 TO 14
+      10          15 TO 19
+      12          20 TO 24
+       3          25 TO 29
+       4          30 TO 34
+       2          50 TO 9999
+  -------
+     373
+ 
+Refusal(-1)            0
+Don't Know(-2)         5
+Invalid Skip(-3)       2
+TOTAL =========>     380      MISSING(-7)   11171
+ 
+Min:              0        Max:             50        Mean:                6.23
+ 
+Lead In: C22645.00[Default]
+Default Next Question: C22647.00
+--------------------------------------------------------------------------------
+C22657.00    [HOME-A14]                                     Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+Does [Child First Name] see [his/her] [father/stepfather/father-figure] on a 
+daily basis?
+ 
+NOTE: This item was moved from paper Mother Supplement to CAPI Child Supplement 
+for 2000. The item may have been modified to accommodate CAPI vs. 
+self-administration format.  For comparison see Mother Supplement, Section 1A, 
+Q.14, and codebook item MS981A14.
+ 
+     343       1 Yes
+      29       0 No
+  -------
+     372
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     372      MISSING(-7)   11179
+ 
+Min:              0        Max:              1        Mean:                 .92
+ 
+Lead In: C22655.00[Default]  C22652.00[1:1]
+Default Next Question: C22658.00
+--------------------------------------------------------------------------------
+C22658.00    [HOME-A15]                                     Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+How often does [Child First Name] eat a meal with both you and [his/her] 
+[father/stepfather/father-figure]?
+ 
+NOTE: This item was moved from paper Mother Supplement to CAPI Child Supplement 
+for 2000. The item may have been modified to accommodate CAPI vs. 
+self-administration format.  For comparison see Mother Supplement, Section 1A, 
+Q.15, and codebook item MS981A15.
+ 
+     102       1 More than once a day
+     151       2 Once a day
+      65       3 Several times a week
+      15       4 About once a week
+      11       5 About once a month
+      28       6 Never
+  -------
+     372
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     372      MISSING(-7)   11179
+ 
+Min:              1        Max:              6        Mean:                2.37
+ 
+Lead In: C22657.00[Default]
+Default Next Question: C22659.00
+--------------------------------------------------------------------------------
+C27089.00    [HOME-A01]                                     Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD GETS OUT OF THE HOUSE
+ 
+About how often does [Child First Name] have a chance to get out of the house?
+ 
+     177       5 Every day
+      20       4 4 or more times a week
+      16       3 A few times a week
+       5       2 About once a week
+       2       1 A few times a month or less
+  -------
+     220
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     220      MISSING(-7)   11331
+ 
+Min:              1        Max:              5        Mean:                4.66
+ 
+Lead In: C27088.01[1:1]
+Default Next Question: C27090.00
+--------------------------------------------------------------------------------
+C27090.00    [HOME-A02]                                     Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+About how many children's books does [Child First Name] have?
+ 
+     172       4 10 or more books
+      22       3 3 to 9 books
+       9       2 1 or 2 books
+      17       1 None
+  -------
+     220
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     220      MISSING(-7)   11331
+ 
+Min:              1        Max:              4        Mean:                3.59
+ 
+Lead In: C27089.00[Default]
+Default Next Question: C27091.00
+--------------------------------------------------------------------------------
+C27091.00    [HOME-A03]                                     Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+How often do you get a chance to read stories to [Child First Name]?
+ 
+      20       1 Never
+       4       2 Several times a year
+       8       3 Several times a month
+      37       4 Once a week
+      44       5 About 3 times a week
+     107       6 Everyday
+  -------
+     220
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     220      MISSING(-7)   11331
+ 
+Min:              1        Max:              6        Mean:                4.83
+ 
+Lead In: C27090.00[Default]
+Default Next Question: C27092.00
+--------------------------------------------------------------------------------
+C27092.00    [HOME-A04]                                     Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER TAKES CHILD TO GROCERY
+ 
+About how often do you take [Child First Name] to the grocery store?
+ 
+     114       1 Twice a week or more
+      67       2 Once a week
+      22       3 Once a month
+      17       4 Hardly ever
+  -------
+     220
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     220      MISSING(-7)   11331
+ 
+Min:              1        Max:              4        Mean:                1.74
+ 
+Lead In: C27091.00[Default]
+Default Next Question: C27093.00
+--------------------------------------------------------------------------------
+C27093.00    [HOME-A05]                                     Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CUDDLY OR ROLE-PLAYING TOYS CHILD 
+             HAS
+ 
+About how many, if any, cuddly, soft or role-playing toys (like a doll) does 
+[Child First Name] have?  (May be shared with sister or brother.)
+ 
+ENTER NUMBER OF SOFT TOYS.
+ 
+       3           0
+      15           1 TO 4
+      27           5 TO 9
+      50          10 TO 14
+      16          15 TO 19
+      39          20 TO 24
+      13          25 TO 29
+      16          30 TO 34
+       3          40 TO 44
+      24          50 TO 9999
+  -------
+     206
+ 
+Refusal(-1)            0
+Don't Know(-2)         3
+Invalid Skip(-3)      11
+TOTAL =========>     220      MISSING(-7)   11331
+ 
+Min:              0        Max:             99        Mean:               19.37
+ 
+Lead In: C27092.00[Default]
+Default Next Question: C27094.00
+--------------------------------------------------------------------------------
+C27094.00    [HOME-A06]                                     Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY PUSH OR PULL TOYS CHILD HAS
+ 
+About how many, if any, push or pull toys does [Child First Name] have?  (May be
+shared with sister or brother.)
+ 
+ 
+ENTER NUMBER OF PUSH/PULL TOYS.
+ 
+      20           0
+      69           1 TO 4
+      60           5 TO 9
+      39          10 TO 14
+      11          15 TO 19
+      10          20 TO 24
+       1          25 TO 29
+       3          30 TO 34
+       2          50 TO 9999
+  -------
+     215
+ 
+Refusal(-1)            0
+Don't Know(-2)         3
+Invalid Skip(-3)       2
+TOTAL =========>     220      MISSING(-7)   11331
+ 
+Min:              0        Max:             60        Mean:                7.09
+ 
+Lead In: C27093.00[Default]
+Default Next Question: C27095.00
+--------------------------------------------------------------------------------
+C27105.00    [HOME-A14]                                     Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+Does [Child First Name] see [his/her] [father/stepfather/father-figure] on a 
+daily basis?
+ 
+     194       1 Yes
+      11       0 No
+  -------
+     205
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     205      MISSING(-7)   11346
+ 
+Min:              0        Max:              1        Mean:                 .95
+ 
+Lead In: C27103.00[Default]  C27100.00[1:1]
+Default Next Question: C27106.00
+--------------------------------------------------------------------------------
+C27106.00    [HOME-A15]                                     Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+How often does [Child First Name] eat a meal with both you and [his/her] 
+[father/stepfather/father-figure]?
+ 
+      66       1 More than once a day
+      86       2 Once a day
+      33       3 Several times a week
+      11       4 About once a week
+       0       5 About once a month
+       9       6 Never
+  -------
+     205
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     205      MISSING(-7)   11346
+ 
+Min:              1        Max:              6        Mean:                2.12
+ 
+Lead In: C27105.00[Default]
+Default Next Question: C27107.00
+--------------------------------------------------------------------------------
+C29855.00    [HOME-A01]                                     Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD GETS OUT OF THE HOUSE
+ 
+About how often does [Child First Name] have a chance to get out of the house?
+ 
+      75       5 Every day
+      16       4 4 or more times a week
+       7       3 A few times a week
+       1       2 About once a week
+       2       1 A few times a month or less
+  -------
+     101
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     101      MISSING(-7)   11450
+ 
+Min:              1        Max:              5        Mean:                4.59
+ 
+Lead In: C29854.01[1:1]
+Default Next Question: C29856.00
+--------------------------------------------------------------------------------
+C29856.00    [HOME-A02]                                     Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+About how many children's books does [Child First Name] have?
+ 
+      77       4 10 or more books
+      14       3 3 to 9 books
+       5       2 1 or 2 books
+       5       1 None
+  -------
+     101
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     101      MISSING(-7)   11450
+ 
+Min:              1        Max:              4        Mean:                3.61
+ 
+Lead In: C29855.00[Default]
+Default Next Question: C29857.00
+--------------------------------------------------------------------------------
+C29857.00    [HOME-A03]                                     Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+How often do you get a chance to read stories to [Child First Name]?
+ 
+      10       1 Never
+       2       2 Several times a year
+       4       3 Several times a month
+       7       4 Once a week
+      26       5 About 3 times a week
+      52       6 Everyday
+  -------
+     101
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     101      MISSING(-7)   11450
+ 
+Min:              1        Max:              6        Mean:                4.91
+ 
+Lead In: C29856.00[Default]
+Default Next Question: C29858.00
+--------------------------------------------------------------------------------
+C29858.00    [HOME-A04]                                     Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER TAKES CHILD TO GROCERY
+ 
+About how often do you take [Child First Name] to the grocery store?
+ 
+      42       1 Twice a week or more
+      34       2 Once a week
+      14       3 Once a month
+      11       4 Hardly ever
+  -------
+     101
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     101      MISSING(-7)   11450
+ 
+Min:              1        Max:              4        Mean:                1.94
+ 
+Lead In: C29857.00[Default]
+Default Next Question: C29859.00
+--------------------------------------------------------------------------------
+C29859.00    [HOME-A05]                                     Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CUDDLY OR ROLE-PLAYING TOYS CHILD 
+             HAS
+ 
+About how many, if any, cuddly, soft or role-playing toys (like a doll) does 
+[Child First Name] have? (May be shared with sister or brother.)
+ 
+ENTER NUMBER OF SOFT TOYS.
+ 
+       2           0
+      10           1 TO 4
+      16           5 TO 9
+      22          10 TO 14
+      10          15 TO 19
+      23          20 TO 24
+       5          25 TO 29
+       5          30 TO 34
+       2          40 TO 44
+       5          50 TO 9999
+  -------
+     100
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>     101      MISSING(-7)   11450
+ 
+Min:              0        Max:            100        Mean:               16.69
+ 
+Lead In: C29858.00[Default]
+Default Next Question: C29860.00
+--------------------------------------------------------------------------------
+C29860.00    [HOME-A06]                                     Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY PUSH OR PULL TOYS CHILD HAS
+ 
+About how many, if any, push or pull toys does [Child First Name] have? (May be 
+shared with sister or brother.)
+ 
+ENTER NUMBER OF PUSH/PULL TOYS.
+ 
+      11           0
+      34           1 TO 4
+      22           5 TO 9
+      15          10 TO 14
+       5          15 TO 19
+       9          20 TO 24
+       2          25 TO 29
+       2          30 TO 34
+       1          50 TO 9999
+  -------
+     101
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     101      MISSING(-7)   11450
+ 
+Min:              0        Max:             50        Mean:                7.84
+ 
+Lead In: C29859.00[Default]
+Default Next Question: C29861.00
+--------------------------------------------------------------------------------
+C29870.00    [HOME-A14]                                     Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+Does [Child First Name] see [his/her] [father/stepfather/father-figure] on a 
+daily basis?
+ 
+      89       1 Yes
+       8       0 No
+  -------
+      97
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      97      MISSING(-7)   11454
+ 
+Min:              0        Max:              1        Mean:                 .92
+ 
+Lead In: C29869.00[Default]  C29866.00[1:1]
+Default Next Question: C29871.00
+--------------------------------------------------------------------------------
+C29871.00    [HOME-A15]                                     Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+How often does [Child First Name] eat a meal with both you and [his/her] 
+[father/stepfather/father-figure]?
+ 
+      21       1 More than once a day
+      43       2 Once a day
+      17       3 Several times a week
+       5       4 About once a week
+       3       5 About once a month
+       8       6 Never
+  -------
+      97
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      97      MISSING(-7)   11454
+ 
+Min:              1        Max:              6        Mean:                2.48
+ 
+Lead In: C29870.00[Default]
+Default Next Question: C29872.00
+--------------------------------------------------------------------------------
+C33880.00    [MS-HOME-A01]                                  Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD GETS OUT OF THE HOUSE
+ 
+About how often does [Child First Name] have a chance to get out of the house?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      38       5 Every day
+       7       4 4 or more times a week
+       4       3 A few times a week
+       2       2 About once a week
+       1       1 A few times a month or less
+  -------
+      52
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      52      MISSING(-7)   11499
+ 
+Min:              1        Max:              5        Mean:                4.52
+ 
+Lead In: C33879.01[1:1]
+Default Next Question: C33881.00
+--------------------------------------------------------------------------------
+C33881.00    [MS-HOME-A02]                                  Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+About how many children's books does [Child First Name] have?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      45       4 10 or more books
+       6       3 3 to 9 books
+       1       2 1 or 2 books
+       0       1 None
+  -------
+      52
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      52      MISSING(-7)   11499
+ 
+Min:              2        Max:              4        Mean:                3.85
+ 
+Lead In: C33880.00[Default]
+Default Next Question: C33882.00
+--------------------------------------------------------------------------------
+C33882.00    [MS-HOME-A03]                                  Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+How often do you get a chance to read stories to [Child First Name]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       5       1 Never
+       0       2 Several times a year
+       0       3 Several times a month
+       3       4 Once a week
+      13       5 About 3 times a week
+      31       6 Everyday
+  -------
+      52
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      52      MISSING(-7)   11499
+ 
+Min:              1        Max:              6        Mean:                5.15
+ 
+Lead In: C33881.00[Default]
+Default Next Question: C33883.00
+--------------------------------------------------------------------------------
+C33883.00    [MS-HOME-A04]                                  Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER TAKES CHILD TO GROCERY
+ 
+About how often do you take [Child First Name] to the grocery store?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      21       1 Twice a week or more
+      17       2 Once a week
+       8       3 Once a month
+       6       4 Hardly ever
+  -------
+      52
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      52      MISSING(-7)   11499
+ 
+Min:              1        Max:              4        Mean:                1.98
+ 
+Lead In: C33882.00[Default]
+Default Next Question: C33884.00
+--------------------------------------------------------------------------------
+C33884.00    [MS-HOME-A05]                                  Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CUDDLY OR ROLE-PLAYING TOYS CHILD 
+             HAS
+ 
+About how many, if any, cuddly, soft or role-playing toys (like a doll) does 
+[Child First Name] have? (May be shared with sister or brother.)
+ 
+ENTER NUMBER OF SOFT TOYS.
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       1           0
+       3           1 TO 4
+       4           5 TO 9
+      16          10 TO 14
+       2          15 TO 19
+       9          20 TO 24
+       4          25 TO 29
+       4          30 TO 34
+       2          35 TO 39
+       6          50 TO 9999
+  -------
+      51
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>      52      MISSING(-7)   11499
+ 
+Min:              0        Max:            300        Mean:               26.71
+ 
+Lead In: C33883.00[Default]
+Default Next Question: C33885.00
+--------------------------------------------------------------------------------
+C33885.00    [MS-HOME-A06]                                  Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY PUSH OR PULL TOYS CHILD HAS
+ 
+About how many, if any, push or pull toys does [Child First Name] have? (May be 
+shared with sister or brother.)
+ 
+ENTER NUMBER OF PUSH/PULL TOYS.
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       6           0
+      17           1 TO 4
+      14           5 TO 9
+       9          10 TO 14
+       2          20 TO 24
+       2          30 TO 34
+  -------
+      50
+ 
+Refusal(-1)            0
+Don't Know(-2)         2
+TOTAL =========>      52      MISSING(-7)   11499
+ 
+Min:              0        Max:             30        Mean:                 6.4
+ 
+Lead In: C33884.00[Default]
+Default Next Question: C33886.00
+--------------------------------------------------------------------------------
+C33895.00    [MS-HOME-A14]                                  Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+Does [Child First Name] see [his/her] [father/stepfather/father-figure] on a 
+daily basis?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      48       1 Yes
+       2       0 No
+  -------
+      50
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      50      MISSING(-7)   11501
+ 
+Min:              0        Max:              1        Mean:                 .96
+ 
+Lead In: C33894.00[Default]  C33891.00[1:1]
+Default Next Question: C33896.00
+--------------------------------------------------------------------------------
+C33896.00    [MS-HOME-A15]                                  Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+How often does [Child First Name] eat a meal with both you and [his/her] 
+[father/stepfather/father-figure]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      11       1 More than once a day
+      31       2 Once a day
+       3       3 Several times a week
+       2       4 About once a week
+       1       5 About once a month
+       2       6 Never
+  -------
+      50
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      50      MISSING(-7)   11501
+ 
+Min:              1        Max:              6        Mean:                2.14
+ 
+Lead In: C33895.00[Default]
+Default Next Question: C33897.00
+--------------------------------------------------------------------------------
+C39138.00    [MS-HOME-A01]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD GETS OUT OF THE HOUSE
+ 
+About how often does [Child First Name] have a chance to get out of the house?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      15       5 Every day
+       6       4 4 or more times a week
+       5       3 A few times a week
+       0       2 About once a week
+       0       1 A few times a month or less
+  -------
+      26
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>      27      MISSING(-7)   11524
+ 
+Min:              3        Max:              5        Mean:                4.38
+ 
+Lead In: C39137.01[1:1]
+Default Next Question: C39139.00
+--------------------------------------------------------------------------------
+C39139.00    [MS-HOME-A02]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+About how many children's books does [Child First Name] have?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      22       4 10 or more books
+       4       3 3 to 9 books
+       1       2 1 or 2 books
+       0       1 None
+  -------
+      27
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      27      MISSING(-7)   11524
+ 
+Min:              2        Max:              4        Mean:                3.78
+ 
+Lead In: C39138.00[Default]
+Default Next Question: C39140.00
+--------------------------------------------------------------------------------
+C39140.00    [MS-HOME-A03]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+How often do you get a chance to read stories to [Child First Name]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       1       1 Never
+       0       2 Several times a year
+       1       3 Several times a month
+       2       4 Once a week
+       7       5 About 3 times a week
+      16       6 Everyday
+  -------
+      27
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      27      MISSING(-7)   11524
+ 
+Min:              1        Max:              6        Mean:                 5.3
+ 
+Lead In: C39139.00[Default]
+Default Next Question: C39141.00
+--------------------------------------------------------------------------------
+C39141.00    [MS-HOME-A04]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER TAKES CHILD TO GROCERY
+ 
+About how often do you take [Child First Name] to the grocery store?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      12       1 Twice a week or more
+      10       2 Once a week
+       3       3 Once a month
+       2       4 Hardly ever
+  -------
+      27
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      27      MISSING(-7)   11524
+ 
+Min:              1        Max:              4        Mean:                1.81
+ 
+Lead In: C39140.00[Default]
+Default Next Question: C39142.00
+--------------------------------------------------------------------------------
+C39142.00    [MS-HOME-A05]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CUDDLY OR ROLE-PLAYING TOYS CHILD 
+             HAS
+ 
+About how many, if any, cuddly, soft or role-playing toys (like a doll) does 
+[Child First Name] have? (May be shared with sister or brother.)
+ 
+ENTER NUMBER OF SOFT TOYS.
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       2           1 TO 4
+       7           5 TO 9
+       6          10 TO 14
+       1          15 TO 19
+       5          20 TO 24
+       1          25 TO 29
+       2          30 TO 34
+       1          40 TO 44
+       1          50 TO 9999
+  -------
+      26
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>      27      MISSING(-7)   11524
+ 
+Min:              2        Max:             99        Mean:               17.23
+ 
+Lead In: C39141.00[Default]
+Default Next Question: C39143.00
+--------------------------------------------------------------------------------
+C39143.00    [MS-HOME-A06]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY PUSH OR PULL TOYS CHILD HAS
+ 
+About how many, if any, push or pull toys does [Child First Name] have? (May be 
+shared with sister or brother.)
+ 
+ENTER NUMBER OF PUSH/PULL TOYS.
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       4           0
+      14           1 TO 4
+       1           5 TO 9
+       4          10 TO 14
+       1          20 TO 24
+       1          30 TO 34
+       1          50 TO 9999
+  -------
+      26
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>      27      MISSING(-7)   11524
+ 
+Min:              0        Max:             99        Mean:                9.08
+ 
+Lead In: C39142.00[Default]
+Default Next Question: C39144.00
+--------------------------------------------------------------------------------
+C39153.00    [MS-HOME-A14]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+Does [Child First Name] see [his/her] [father/stepfather/father-figure] on a 
+daily basis?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      24       1 Yes
+       2       0 No
+  -------
+      26
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      26      MISSING(-7)   11525
+ 
+Min:              0        Max:              1        Mean:                 .92
+ 
+Lead In: C39152.00[Default]  C39149.00[1:1]
+Default Next Question: C39154.00
+--------------------------------------------------------------------------------
+C39154.00    [MS-HOME-A15]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+How often does [Child First Name] eat a meal with both you and [his/her] 
+[father/stepfather/father-figure]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       9       1 More than once a day
+       5       2 Once a day
+       6       3 Several times a week
+       3       4 About once a week
+       1       5 About once a month
+       2       6 Never
+  -------
+      26
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      26      MISSING(-7)   11525
+ 
+Min:              1        Max:              6        Mean:                2.54
+ 
+Lead In: C39153.00[Default]
+Default Next Question: C39155.00
+--------------------------------------------------------------------------------
+C51653.00    [MS-HOME-A01]                                  Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD GETS OUT OF THE HOUSE
+ 
+About how often does [Child First Name] have a chance to get out of the house?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       3       5 Every day
+       3       4 4 or more times a week
+       2       3 A few times a week
+       0       2 About once a week
+       1       1 A few times a month or less
+  -------
+       9
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       9      MISSING(-7)   11542
+ 
+Min:              1        Max:              5        Mean:                3.78
+ 
+Lead In: C51652.01[1:1]
+Default Next Question: C51654.00
+--------------------------------------------------------------------------------
+C51654.00    [MS-HOME-A02]                                  Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+About how many children's books does [Child First Name] have?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       7       4 10 or more books
+       1       3 3 to 9 books
+       1       2 1 or 2 books
+       0       1 None
+  -------
+       9
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       9      MISSING(-7)   11542
+ 
+Min:              2        Max:              4        Mean:                3.67
+ 
+Lead In: C51653.00[Default]
+Default Next Question: C51655.00
+--------------------------------------------------------------------------------
+C51655.00    [MS-HOME-A03]                                  Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+How often do you get a chance to read stories to [Child First Name]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       0       1 Never
+       0       2 Several times a year
+       0       3 Several times a month
+       0       4 Once a week
+       2       5 About 3 times a week
+       7       6 Everyday
+  -------
+       9
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       9      MISSING(-7)   11542
+ 
+Min:              5        Max:              6        Mean:                5.78
+ 
+Lead In: C51654.00[Default]
+Default Next Question: C51656.00
+--------------------------------------------------------------------------------
+C51656.00    [MS-HOME-A04]                                  Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER TAKES CHILD TO GROCERY
+ 
+About how often do you take [Child First Name] to the grocery store?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       2       1 Twice a week or more
+       1       2 Once a week
+       3       3 Once a month
+       3       4 Hardly ever
+  -------
+       9
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       9      MISSING(-7)   11542
+ 
+Min:              1        Max:              4        Mean:                2.78
+ 
+Lead In: C51655.00[Default]
+Default Next Question: C51657.00
+--------------------------------------------------------------------------------
+C51657.00    [MS-HOME-A05]                                  Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CUDDLY OR ROLE-PLAYING TOYS CHILD 
+             HAS
+ 
+About how many, if any, cuddly, soft or role-playing toys (like a doll) does 
+[Child First Name] have? (May be shared with sister or brother.)
+ 
+ENTER NUMBER OF SOFT TOYS.
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       3          10 TO 14
+       3          15 TO 19
+       2          20 TO 24
+       1          50 TO 9999
+  -------
+       9
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       9      MISSING(-7)   11542
+ 
+Min:             10        Max:             60        Mean:               19.44
+ 
+Lead In: C51656.00[Default]
+Default Next Question: C51658.00
+--------------------------------------------------------------------------------
+C51658.00    [MS-HOME-A06]                                  Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY PUSH OR PULL TOYS CHILD HAS
+ 
+About how many, if any, push or pull toys does [Child First Name] have? (May be 
+shared with sister or brother.)
+ 
+ENTER NUMBER OF PUSH/PULL TOYS.
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       2           0
+       3           1 TO 4
+       2           5 TO 9
+       2          10 TO 14
+  -------
+       9
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       9      MISSING(-7)   11542
+ 
+Min:              0        Max:             10        Mean:                4.11
+ 
+Lead In: C51657.00[Default]
+Default Next Question: C51659.00
+--------------------------------------------------------------------------------
+C51666.00    [MS-HOME-A14]                                  Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+Does [Child First Name] see [his/her] [father/stepfather/father-figure] on a 
+daily basis?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       8       1 Yes
+       0       0 No
+  -------
+       8
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       8      MISSING(-7)   11543
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: C51664.00[1:1]
+Default Next Question: C51667.00
+--------------------------------------------------------------------------------
+C51667.00    [MS-HOME-A15]                                  Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+How often does [Child First Name] eat a meal with both you and [his/her] 
+[father/stepfather/father-figure]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       4       1 More than once a day
+       3       2 Once a day
+       1       3 Several times a week
+       0       4 About once a week
+       0       5 About once a month
+       0       6 Never
+  -------
+       8
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       8      MISSING(-7)   11543
+ 
+Min:              1        Max:              3        Mean:                1.63
+ 
+Lead In: C51666.00[Default]
+Default Next Question: C51668.00
+--------------------------------------------------------------------------------
+C57415.00    [MS-HOME-A01]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD GETS OUT OF THE HOUSE
+ 
+About how often does [Child First Name] have a chance to get out of the house?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       3       5 Every day
+       0       4 4 or more times a week
+       2       3 A few times a week
+       0       2 About once a week
+       0       1 A few times a month or less
+  -------
+       5
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       5      MISSING(-7)   11546
+ 
+Min:              3        Max:              5        Mean:                 4.2
+ 
+Lead In: C57414.01[1:1]
+Default Next Question: C57416.00
+--------------------------------------------------------------------------------
+C57416.00    [MS-HOME-A02]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+About how many children's books does [Child First Name] have?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       5       4 10 or more books
+       0       3 3 to 9 books
+       0       2 1 or 2 books
+       0       1 None
+  -------
+       5
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       5      MISSING(-7)   11546
+ 
+Min:              4        Max:              4        Mean:                   4
+ 
+Lead In: C57415.00[Default]
+Default Next Question: C57417.00
+--------------------------------------------------------------------------------
+C57417.00    [MS-HOME-A03]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+How often do you get a chance to read stories to [Child First Name]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       0       1 Never
+       0       2 Several times a year
+       0       3 Several times a month
+       2       4 Once a week
+       2       5 About 3 times a week
+       1       6 Everyday
+  -------
+       5
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       5      MISSING(-7)   11546
+ 
+Min:              4        Max:              6        Mean:                 4.8
+ 
+Lead In: C57416.00[Default]
+Default Next Question: C57418.00
+--------------------------------------------------------------------------------
+C57418.00    [MS-HOME-A04]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER TAKES CHILD TO GROCERY
+ 
+About how often do you take [Child First Name] to the grocery store?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       0       1 Twice a week or more
+       3       2 Once a week
+       1       3 Once a month
+       1       4 Hardly ever
+  -------
+       5
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       5      MISSING(-7)   11546
+ 
+Min:              2        Max:              4        Mean:                 2.6
+ 
+Lead In: C57417.00[Default]
+Default Next Question: C57419.00
+--------------------------------------------------------------------------------
+C57419.00    [MS-HOME-A05]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CUDDLY OR ROLE-PLAYING TOYS CHILD 
+             HAS
+ 
+About how many, if any, cuddly, soft or role-playing toys (like a doll) does 
+[Child First Name] have? (May be shared with sister or brother.)
+ 
+ENTER NUMBER OF SOFT TOYS.
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       2           5 TO 9
+       1          30 TO 34
+       2          50 TO 9999
+  -------
+       5
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       5      MISSING(-7)   11546
+ 
+Min:              9        Max:             99        Mean:                49.2
+ 
+Lead In: C57418.00[Default]
+Default Next Question: C57420.00
+--------------------------------------------------------------------------------
+C57420.00    [MS-HOME-A06]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY PUSH OR PULL TOYS CHILD HAS
+ 
+About how many, if any, push or pull toys does [Child First Name] have? (May be 
+shared with sister or brother.)
+ 
+ENTER NUMBER OF PUSH/PULL TOYS.
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       4           1 TO 4
+       1           5 TO 9
+  -------
+       5
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       5      MISSING(-7)   11546
+ 
+Min:              2        Max:              5        Mean:                 3.2
+ 
+Lead In: C57419.00[Default]
+Default Next Question: C57421.00
+--------------------------------------------------------------------------------
+C57430.00    [MS-HOME-A14]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+Does [Child First Name] see [his/her] [father/stepfather/father-figure] on a 
+daily basis?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       3       1 Yes
+       2       0 No
+  -------
+       5
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       5      MISSING(-7)   11546
+ 
+Min:              0        Max:              1        Mean:                  .6
+ 
+Lead In: C57429.00[Default]  C57426.00[1:1]
+Default Next Question: C57431.00
+--------------------------------------------------------------------------------
+C57431.00    [MS-HOME-A15]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+How often does [Child First Name] eat a meal with both you and [his/her] 
+[father/stepfather/father-figure]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       0       1 More than once a day
+       1       2 Once a day
+       1       3 Several times a week
+       3       4 About once a week
+       0       5 About once a month
+       0       6 Never
+  -------
+       5
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       5      MISSING(-7)   11546
+ 
+Min:              2        Max:              4        Mean:                 3.4
+ 
+Lead In: C57430.00[Default]
+Default Next Question: C57432.00
+--------------------------------------------------------------------------------
+C60808.00    [MS-HOME-A01]                                  Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN CHILD GETS OUT OF THE HOUSE
+ 
+About how often does [Child First Name] have a chance to get out of the house?
+ 
+       1       5 Every day
+       0       4 4 or more times a week
+       0       3 A few times a week
+       0       2 About once a week
+       0       1 A few times a month or less
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1      MISSING(-7)   11550
+ 
+Min:              5        Max:              5        Mean:                   5
+ 
+Lead In: C60807.00[1:1]
+Default Next Question: C60809.00
+--------------------------------------------------------------------------------
+C60809.00    [MS-HOME-A02]                                  Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+About how many children's books does [Child First Name] have?
+ 
+       1       4 10 or more books
+       0       3 3 to 9 books
+       0       2 1 or 2 books
+       0       1 None
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1      MISSING(-7)   11550
+ 
+Min:              4        Max:              4        Mean:                   4
+ 
+Lead In: C60808.00[Default]
+Default Next Question: C60810.00
+--------------------------------------------------------------------------------
+C60810.00    [MS-HOME-A03]                                  Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+How often do you get a chance to read stories to [Child First Name]?
+ 
+       0       1 Never
+       0       2 Several times a year
+       0       3 Several times a month
+       0       4 Once a week
+       1       5 About 3 times a week
+       0       6 Everyday
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1      MISSING(-7)   11550
+ 
+Min:              5        Max:              5        Mean:                   5
+ 
+Lead In: C60809.00[Default]
+Default Next Question: C60811.00
+--------------------------------------------------------------------------------
+C60811.00    [MS-HOME-A04]                                  Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW OFTEN MOTHER TAKES CHILD TO GROCERY
+ 
+About how often do you take [Child First Name] to the grocery store?
+ 
+       0       1 Twice a week or more
+       0       2 Once a week
+       1       3 Once a month
+       0       4 Hardly ever
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1      MISSING(-7)   11550
+ 
+Min:              3        Max:              3        Mean:                   3
+ 
+Lead In: C60810.00[Default]
+Default Next Question: C60812.00
+--------------------------------------------------------------------------------
+C60812.00    [MS-HOME-A05]                                  Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY CUDDLY OR ROLE-PLAYING TOYS CHILD 
+             HAS
+ 
+About how many, if any, cuddly, soft or role-playing toys (like a doll) does 
+[Child First Name] have? (May be shared with sister or brother.)
+ 
+ENTER NUMBER OF SOFT TOYS.
+ 
+       1          30 TO 34
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1      MISSING(-7)   11550
+ 
+Min:             30        Max:             30        Mean:                  30
+ 
+Lead In: C60811.00[Default]
+Default Next Question: C60813.00
+--------------------------------------------------------------------------------
+C60813.00    [MS-HOME-A06]                                  Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART A (0-2 YRS): HOW MANY PUSH OR PULL TOYS CHILD HAS
+ 
+About how many, if any, push or pull toys does [Child First Name] have? (May be 
+shared with sister or brother.)
+ 
+ENTER NUMBER OF PUSH/PULL TOYS.
+ 
+       1           1 TO 4
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       1      MISSING(-7)   11550
+ 
+Min:              4        Max:              4        Mean:                   4
+ 
+Lead In: C60812.00[Default]
+Default Next Question: C60814.00
+--------------------------------------------------------------------------------
+Y22670.00    [VERSION_R29]                                  Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             VERSION_R29 CHILD/YOUNG ADULT
+ 
+This variable identifies the release version of the current NLSY79 Child/Young 
+Adult data set, This information allows User Services to identify the release 
+version used by a researcher who is asking a question and to access past 
+versions of the data if necessary.
+ 
+   11551         532
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:            532        Max:            532        Mean:                 532
+ 
+Lead In: Y12053.00[Default]
+Default Next Question: Y12054.00

@@ -1,0 +1,3044 @@
+R00001.00    [CASEID]                                       Survey Year: 1979
+  PRIMARY VARIABLE
+
+ 
+             IDENTIFICATION CODE
+ 
+ORIGINAL QUESTION NAME: CASEID
+ 
+NOTE: THIS NUMBER WAS ASSIGNED ACCORDING TO THE RECORD NUMBER OF EACH RESPONDENT
+ON THE TAPE. THE FIRST RESPONDENT WAS ASSIGNED ID#1, THE SECOND WAS ASSIGNED 
+ID#2, ETC.
+ 
+ACTUAL NUMBER
+ 
+UNIVERSE: All
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12686   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:          12686        Mean:              6343.5
+ 
+Lead In: None.
+Default Next Question: R00001.49
+--------------------------------------------------------------------------------
+R01725.00    [CURDATE~M]                                    Survey Year: 1979
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+ORIGINAL QUESTION NAME: S23Q02
+ 
+1 THRU 12 ACTUAL MONTH
+ 
+UNIVERSE: All
+ 
+      12           1
+    3273           2
+    4857           3
+    2221           4
+    1538           5
+     458           6
+     283           7
+      44           8
+  -------
+   12686
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12686   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:              8        Mean:                3.37
+ 
+Lead In: R01724.00[Default]
+Default Next Question: R01727.00
+--------------------------------------------------------------------------------
+R01736.00    [SAMPLE_ID]                                    Survey Year: 1979
+  PRIMARY VARIABLE
+
+ 
+             SAMPLE IDENTIFICATION CODE
+ 
+ORIGINAL QUESTION NAME: S24Q01
+ 
+UNIVERSE: Entire Sample
+ 
+    2236       1 CROSS MALE WHITE
+     203       2 CROSS MALE WH. POOR
+     346       3 CROSS MALE BLACK
+     218       4 CROSS MALE HISPANIC
+    2279       5 CROSS FEMALE WHITE
+     198       6 CROSS FEMALE WH POOR
+     405       7 CROSS FEMALE BLACK
+     226       8 CROSS FEMALE HISPANIC
+     742       9 SUP MALE WH POOR
+    1105      10 SUP MALE BLACK
+     729      11 SUP MALE HISPANIC
+     901      12 SUP FEM WH POOR
+    1067      13 SUP FEMALE BLACK
+     751      14 SUP FEMALE HISPANIC
+     609      15 MIL MALE WHITE
+     162      16 MIL MALE BLACK
+      53      17 MIL MALE HISPANIC
+     342      18 MIL FEMALE WHITE
+      89      19 MIL FEMALE BLACK
+      25      20 MIL FEMALE HISPANIC
+  -------
+   12686
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12686   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:             20        Mean:                8.17
+ 
+
+
+NOTE: MARCH 1, 1986  NORC
+ 
+SEX CODE CHANGED ON 42 CASES
+ 
+Lead In: R01735.19[Default]
+Default Next Question: R01737.00
+--------------------------------------------------------------------------------
+R02147.00    [SAMPLE_RACE]                                  Survey Year: 78SCRN
+  PRIMARY VARIABLE
+
+ 
+             R'S RACIAL/ETHNIC COHORT FROM SCREENER
+ 
+UNIVERSE: Entire Sample
+ 
+    2002       1 HISPANIC
+    3174       2 BLACK
+    7510       3 NON-BLACK, NON-HISPANIC
+  -------
+   12686
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12686   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:              3        Mean:                2.43
+ 
+
+
+NOTE: AUGUST 26, 1980  DENNIS GREY
+ 
+DESCRIPTION:
+COHORT=3;
+IF R(1736.)=4 ! R(1736.)=8 ! R(1736.)=11 ! R(1736.)=14 THEN COHORT=1;
+IF R(1736.)=17 ! R(1736.)=20 THEN COHORT=1;
+IF R(1736.)=3 ! R(1736.)=7 ! R(1736.)=10 ! R(1736.)=13 THEN COHORT=2;
+IF R(1736.)=16 ! R(1736.)=19 THEN COHORT=2;
+R(2147.)=COHORT;
+ 
+Lead In: R02146.00[Default]
+Default Next Question: R02148.00
+--------------------------------------------------------------------------------
+R02148.00    [SAMPLE_SEX]                                   Survey Year: 1979
+  PRIMARY VARIABLE
+
+ 
+             SEX OF R
+ 
+UNIVERSE: Entire sample
+ 
+    6403       1 MALE
+    6283       2 FEMALE
+  -------
+   12686
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12686   VALID SKIP(-4)       0     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:              2        Mean:                 1.5
+ 
+
+
+NOTE: AUGUST 26, 1980  DENNIS GREY
+MARCH 1, 1986  NORC
+ 
+DESCRIPTION:
+IF (R(1736.)>0 & R(1736.)<=4) ! (R(1736.)>=9 & R(1736.)<=11) THEN SEX=1;
+IF R(1736.)>=15 & R(1736.)<=17 THEN SEX=1;
+IF (R(1736.)>=5 & R(1736.)<=8) ! (R(1736.)>=12 & R(1736.)<=14) THEN SEX=
+IF R(1736.)>=18 & R(1736.)<=20 THEN SEX=2;
+R(2148.)=SEX;
+SEX CODE CHANGED ON 42 CASES
+ 
+Lead In: R02147.00[Default]
+Default Next Question: R02149.00
+--------------------------------------------------------------------------------
+R02164.00    [REGION]                                       Survey Year: 1979
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+UNIVERSE: All except those with no records
+ 
+    2550       1 NORTHEAST
+    2934       2 NORTH CENTRAL
+    4568       3 SOUTH
+    2395       4 WEST
+  -------
+   12447
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12447   VALID SKIP(-4)     239     NON-INTERVIEW(-5)       0
+ 
+Min:              1        Max:              4        Mean:                2.55
+ 
+
+
+NOTE: AUGUST 26, 1980  DENNIS GREY
+ 
+DESCRIPTION:
+REGION=-4;
+S=R(1740.);
+IF S=09 ! S=23 ! S=25 ! S=33 ! S=34 ! S=36 ! S=42 ! S=44 ! S=50
+                                                       THEN REGION=1;
+IF S=01 ! S=05 ! S=10 ! S=11 ! S=12 ! S=13 ! S=21 ! S=22 ! S=24 ! S=28 !
+   S=37 ! S=40 ! S=45 ! S=47 ! S=48 ! S=51 ! S=54      THEN REGION=3;
+IF S=17 ! S=18 ! S=19 ! S=20 ! S=26 ! S=27 ! S=29 ! S=31 ! S=39 !
+   S=46 ! S=38 ! S=55                                  THEN REGION=2;
+IF S=02 ! S=04 ! S=06 ! S=08 ! S=15 ! S=16 ! S=30 ! S=32 ! S=35 !
+   S=41 ! S=49 ! S=53 ! S=56                           THEN REGION=4;
+R(2164.)=REGION;
+ 
+Lead In: R02161.01[Default]
+Default Next Question: R02165.00
+--------------------------------------------------------------------------------
+R02261.00    [Q2-15A]                                       Survey Year: 1980
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE IN 1979
+ 
+ORIGINAL QUESTION NAME: S02Q08A
+ 
+DURING 1979, HOW MANY WEEKS DID YOUR (HUSBAND/WIFE) WORK AT ALL JOBS, EITHER 
+FULL OR PART TIME, NOT COUNTING WORK AROUND THE HOUSE?
+ 
+ACTUAL WEEKS
+ 
+UNIVERSE: R is married now; was not coded married/remarried for a change in 
+marital status
+ 
+       0           0
+     104           1 TO 13
+     137          14 TO 26
+     161          27 TO 39
+     224          40 TO 48
+     234          49 TO 51
+     685          52
+       0          53 TO 9999999: > 52
+  -------
+    1545
+ 
+Refusal(-1)            0
+Don't Know(-2)        21
+Invalid Skip(-3)      29
+TOTAL =========>    1595   VALID SKIP(-4)   10546     NON-INTERVIEW(-5)     545
+ 
+Min:              1        Max:             52        Mean:               42.92
+ 
+Lead In: R02260.00[Default]
+Default Next Question: R02262.00
+--------------------------------------------------------------------------------
+R03292.00    [CURDATE~M]                                    Survey Year: 1980
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+ORIGINAL QUESTION NAME: S20Q02
+ 
+1 THRU 12 ACTUAL MONTH
+ 
+UNIVERSE: All
+ 
+       0           0: < 1
+    1375           1
+    3924           2
+    3970           3
+    2009           4
+     573           5
+     215           6
+      47           7
+      28           8
+       0           9
+       0          10
+       0          11
+       0          12
+       0          13
+       0          14
+       0          15
+       0          16
+       0          17 TO 99999: 17+
+  -------
+   12141
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12141   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     545
+ 
+Min:              1        Max:              8        Mean:                2.79
+ 
+Lead In: R03291.00[Default]
+Default Next Question: R03293.00
+--------------------------------------------------------------------------------
+R04057.00    [REGION]                                       Survey Year: 1980
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+UNIVERSE: All
+ 
+    2401       1 NORTHEAST
+    2874       2 NORTH CENTRAL
+    4516       3 SOUTH
+    2314       4 WEST
+  -------
+   12105
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      36
+TOTAL =========>   12141   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     545
+ 
+Min:              1        Max:              4        Mean:                2.56
+ 
+Lead In: R04056.01[Default]
+Default Next Question: R04060.10
+--------------------------------------------------------------------------------
+R04137.00    [Q2-15A]                                       Survey Year: 1981
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE IN 1980
+ 
+ORIGINAL QUESTION NAME: S02D0214
+ 
+DURING 1980, HOW MANY WEEKS DID YOUR (HUSBAND/WIFE) WORK AT ALL JOBS, EITHER 
+FULL OR PART TIME, NOT COUNTING WORK AROUND THE HOUSE?
+ 
+ACTUAL WEEKS
+ 
+UNIVERSE: R is married
+ 
+       4           0
+     149           1 TO 13
+     192          14 TO 26
+     200          27 TO 39
+     235          40 TO 48
+     150          49 TO 51
+    1070          52
+       0          53 TO 9999999: > 52
+  -------
+    2000
+ 
+Refusal(-1)            1
+Don't Know(-2)        11
+Invalid Skip(-3)      67
+TOTAL =========>    2079   VALID SKIP(-4)   10116     NON-INTERVIEW(-5)     491
+ 
+Min:              0        Max:             52        Mean:               42.71
+ 
+Lead In: R04136.00[Default]
+Default Next Question: R04138.00
+--------------------------------------------------------------------------------
+R05307.00    [CURDATE~M]                                    Survey Year: 1981
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+ORIGINAL QUESTION NAME: S30D6813
+ 
+1 THRU 12 ACTUAL MONTH
+ 
+UNIVERSE: All
+ 
+       0           0: < 1
+     903           1
+    4792           2
+    4660           3
+    1328           4
+     287           5
+     214           6
+      11           7
+       0           8
+       0           9
+       0          10
+       0          11
+       0          12
+       0          13
+       0          14
+       0          15
+       0          16
+       0          17 TO 99999: 17+
+  -------
+   12195
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12195   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     491
+ 
+Min:              1        Max:              7        Mean:                2.67
+ 
+Lead In: R05306.00[Default]
+Default Next Question: R05309.00
+--------------------------------------------------------------------------------
+R06028.10    [REGION]                                       Survey Year: 1981
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+UNIVERSE: All
+ 
+    2345       1 NORTHEAST
+    2882       2 NORTH CENTRAL
+    4554       3 SOUTH
+    2348       4 WEST
+  -------
+   12129
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       4
+TOTAL =========>   12133   VALID SKIP(-4)      62     NON-INTERVIEW(-5)     491
+ 
+Min:              1        Max:              4        Mean:                2.57
+ 
+Lead In: R06025.00[Default]
+Default Next Question: R06029.00
+--------------------------------------------------------------------------------
+R06596.00    [Q2-15A]                                       Survey Year: 1982
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE IN 1981
+ 
+ORIGINAL QUESTION NAME: S02D0430
+ 
+DURING 1981, HOW MANY WEEKS DID YOUR (HUSBAND/WIFE) WORK AT ALL JOBS, EITHER 
+FULL OR PART-TIME, NOT COUNTING WORK AROUND THE HOUSE?
+ 
+ACTUAL WEEKS
+ 
+UNIVERSE: R is married
+ 
+     486           0
+     190           1 TO 13
+     245          14 TO 26
+     221          27 TO 39
+     332          40 TO 48
+     141          49 TO 51
+    1503          52
+       0          53 TO 9999999: > 52
+  -------
+    3118
+ 
+Refusal(-1)            5
+Don't Know(-2)        22
+Invalid Skip(-3)      18
+TOTAL =========>    3163   VALID SKIP(-4)    8960     NON-INTERVIEW(-5)     563
+ 
+Min:              0        Max:             52        Mean:               36.53
+ 
+Lead In: R06595.00[Default]
+Default Next Question: R06597.00
+--------------------------------------------------------------------------------
+R08099.00    [CURDATE~M]                                    Survey Year: 1982
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+ORIGINAL QUESTION NAME: S20D5140
+ 
+DATE OF INTERVIEW:
+ 
+1 THRU 12 ACTUAL MONTH
+ 
+UNIVERSE: All
+ 
+       0           0: < 1
+    1351           1
+    4487           2
+    4010           3
+    1502           4
+     527           5
+     223           6
+      23           7
+       0           8
+       0           9
+       0          10
+       0          11
+       0          12
+       0          13
+       0          14
+       0          15
+       0          16
+       0          17 TO 99999: 17+
+  -------
+   12123
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12123   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     563
+ 
+Min:              1        Max:              7        Mean:                2.68
+ 
+Lead In: R08098.00[Default]
+Default Next Question: R08101.00
+--------------------------------------------------------------------------------
+R08979.10    [REGION]                                       Survey Year: 1982
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+    2278       1 NORTHEAST
+    2820       2 NORTH CENTRAL
+    4593       3 SOUTH
+    2357       4 WEST
+  -------
+   12048
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12048   VALID SKIP(-4)      75     NON-INTERVIEW(-5)     563
+ 
+Min:              1        Max:              4        Mean:                2.58
+ 
+Lead In: R08979.00[Default]
+Default Next Question: R08982.01
+--------------------------------------------------------------------------------
+R09029.00    [Q2-15A]                                       Survey Year: 1983
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE IN 1982
+ 
+ORIGINAL QUESTION NAME: Q0166
+ 
+DURING THE 52 WEEKS OF 1982, HOW MANY WEEKS DID YOUR (HUSBAND/WIFE) WORK AT ALL 
+JOBS, EITHER FULL OR PART TIME, NOT COUNTING WORK AROUND THE HOUSE?
+ 
+ACTUAL WEEKS
+ 
+UNIVERSE: R marital status changed since DLI
+ 
+     673           0
+     236           1 TO 13
+     352          14 TO 26
+     291          27 TO 39
+     337          40 TO 48
+     149          49 TO 51
+    1878          52
+       0          53 TO 9999999: > 52
+  -------
+    3916
+ 
+Refusal(-1)            3
+Don't Know(-2)        54
+Invalid Skip(-3)      30
+TOTAL =========>    4003   VALID SKIP(-4)    8218     NON-INTERVIEW(-5)     465
+ 
+Min:              0        Max:             52        Mean:               35.49
+ 
+Lead In: R09028.00[Default]
+Default Next Question: R09030.00
+--------------------------------------------------------------------------------
+R10457.00    [CURDATE~M]                                    Survey Year: 1983
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+ORIGINAL QUESTION NAME: Q4565
+ 
+DATE OF INTERVIEW:
+ 
+1 THRU 12 ACTUAL MONTH
+ 
+UNIVERSE: All
+ 
+       0           0: < 1
+    2454           1
+    4159           2
+    3951           3
+    1218           4
+     366           5
+      73           6
+       0           7
+       0           8
+       0           9
+       0          10
+       0          11
+       0          12
+       0          13
+       0          14
+       0          15
+       0          16
+       0          17 TO 99999: 17+
+  -------
+   12221
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12221   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     465
+ 
+Min:              1        Max:              6        Mean:                2.44
+ 
+Lead In: R10456.00[Default]
+Default Next Question: R10460.00
+--------------------------------------------------------------------------------
+R11448.00    [REGION]                                       Survey Year: 1983
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+    2326       1 NORTHEAST
+    2782       2 NORTH CENTRAL
+    4619       3 SOUTH
+    2418       4 WEST
+  -------
+   12145
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12145   VALID SKIP(-4)      76     NON-INTERVIEW(-5)     465
+ 
+Min:              1        Max:              4        Mean:                2.59
+ 
+Lead In: R11447.10[Default]
+Default Next Question: R11449.00
+--------------------------------------------------------------------------------
+R12027.00    [Q2-15A]                                       Survey Year: 1984
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE IN 1983
+ 
+ORIGINAL QUESTION NAME: Q0162
+ 
+DURING THE 52 WEEKS OF 1983, HOW MANY WEEKS DID YOUR (HUSBAND/WIFE) WORK AT ALL 
+JOBS, EITHER FULL OF PART TIME, NOT COUNTING WORK AROUND THE HOUSE?
+ 
+ACTUAL WEEKS
+ 
+UNIVERSE: R marital status changed since DLI; was coded married or remarried for
+a change in marital status
+ 
+     724           0
+     252           1 TO 13
+     339          14 TO 26
+     282          27 TO 39
+     356          40 TO 48
+     135          49 TO 51
+    2265          52
+       0          53 TO 9999999: > 52
+  -------
+    4353
+ 
+Refusal(-1)            3
+Don't Know(-2)        61
+Invalid Skip(-3)      72
+TOTAL =========>    4489   VALID SKIP(-4)    7580     NON-INTERVIEW(-5)     617
+ 
+Min:              0        Max:             52        Mean:               36.46
+ 
+Lead In: R12026.00[Default]
+Default Next Question: R12028.00
+--------------------------------------------------------------------------------
+R14275.00    [CURDATE~M]                                    Survey Year: 1984
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+ORIGINAL QUESTION NAME: Q6144
+ 
+DATE OF INTERVIEW
+ 
+1 THRU 12 ACTUAL MONTH
+ 
+UNIVERSE: All
+ 
+       0           0: < 1
+    2052           1
+    4247           2
+    3871           3
+    1276           4
+     507           5
+     116           6
+       0           7
+       0           8
+       0           9
+       0          10
+       0          11
+       0          12
+       0          13
+       0          14
+       0          15
+       0          16
+       0          17 TO 99999: 17+
+  -------
+   12069
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   12069   VALID SKIP(-4)       0     NON-INTERVIEW(-5)     617
+ 
+Min:              1        Max:              6        Mean:                2.53
+ 
+Lead In: R14274.00[Default]
+Default Next Question: R14278.00
+--------------------------------------------------------------------------------
+R15200.00    [REGION]                                       Survey Year: 1984
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+    2263       1 NORTHEAST
+    2690       2 NORTH CENTRAL
+    4487       3 SOUTH
+    2444       4 WEST
+  -------
+   11884
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)     158
+TOTAL =========>   12042   VALID SKIP(-4)      27     NON-INTERVIEW(-5)     617
+ 
+Min:              1        Max:              4        Mean:                 2.6
+ 
+Lead In: R15199.10[Default]
+Default Next Question: R15201.00
+--------------------------------------------------------------------------------
+R16020.00    [Q2-15A]                                       Survey Year: 1985
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE IN 1984
+ 
+ORIGINAL QUESTION NAME: Q0143
+ 
+DURING THE 52 WEEKS OF 1984, HOW MANY WEEKS DID YOUR (HUSBAND/WIFE)
+WORK AT ALL JOBS, EITHER FULL- OR PART-TIME, NOT COUNTING WORK AROUND
+THE HOUSE?
+ 
+ACTUAL WEEKS
+ 
+UNIVERSE: R got married/remarried since DLI
+ 
+     620           0
+     185           1 TO 13
+     316          14 TO 26
+     245          27 TO 39
+     449          40 TO 48
+     275          49 TO 51
+    2087          52
+       0          53 TO 9999999: > 52
+  -------
+    4177
+ 
+Refusal(-1)            5
+Don't Know(-2)        52
+Invalid Skip(-3)      64
+TOTAL =========>    4298   VALID SKIP(-4)    6596     NON-INTERVIEW(-5)    1792
+ 
+Min:              0        Max:             52        Mean:               37.96
+ 
+Lead In: R16019.00[Default]
+Default Next Question: R16021.00
+--------------------------------------------------------------------------------
+R17946.00    [CURDATE~M]                                    Survey Year: 1985
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+ORIGINAL QUESTION NAME: Q5532
+ 
+DATE OF INTERVIEW:
+ 
+1 THRU 12 ACTUAL MONTH
+ 
+UNIVERSE: All
+ 
+       0           0: < 1
+    1859           1
+    3605           2
+    3458           3
+    1288           4
+     531           5
+     153           6
+       0           7
+       0           8
+       0           9
+       0          10
+       0          11
+       0          12
+       0          13
+       0          14
+       0          15
+       0          16
+       0          17 TO 99999: 17+
+  -------
+   10894
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10894   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    1792
+ 
+Min:              1        Max:              6        Mean:                2.59
+ 
+Lead In: R17945.00[Default]
+Default Next Question: R17949.00
+--------------------------------------------------------------------------------
+R18907.00    [REGION]                                       Survey Year: 1985
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+    2054       1 NORTHEAST
+    2460       2 NORTH CENTRAL
+    4143       3 SOUTH
+    2152       4 WEST
+  -------
+   10809
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      13
+TOTAL =========>   10822   VALID SKIP(-4)      72     NON-INTERVIEW(-5)    1792
+ 
+Min:              1        Max:              4        Mean:                2.59
+ 
+Lead In: R18906.01[Default]
+Default Next Question: R18908.00
+--------------------------------------------------------------------------------
+R19020.00    [Q2-15A]                                       Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE IN 1985
+ 
+ORIGINAL QUESTION NAME: Q0143
+ 
+DURING THE 52 WEEKS OF 1985, HOW MANY WEEKS DID YOUR (HUSBAND/WIFE) WORK AT ALL 
+JOBS, EITHER FULL-TIME OF PART-TIME, NOT COUNTING WORK AROUND THE HOUSE?
+ 
+ACTUAL WEEKS
+ 
+UNIVERSE: R is married
+ 
+     629           0
+     169           1 TO 13
+     288          14 TO 26
+     276          27 TO 39
+     473          40 TO 48
+     358          49 TO 51
+    2395          52
+       0          53 TO 9999999: > 52
+  -------
+    4588
+ 
+Refusal(-1)            2
+Don't Know(-2)        70
+Invalid Skip(-3)      40
+TOTAL =========>    4700   VALID SKIP(-4)    5955     NON-INTERVIEW(-5)    2031
+ 
+Min:              0        Max:             52        Mean:               39.27
+ 
+Lead In: R19019.00[Default]
+Default Next Question: R19021.00
+--------------------------------------------------------------------------------
+R21562.00    [CURDATE~M]                                    Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+ORIGINAL QUESTION NAME: Q7060
+ 
+DATE OF INTERVIEW:
+ 
+1 THRU 12 ACTUAL MONTH
+ 
+UNIVERSE: All
+ 
+       0           0: < 1
+       3           1
+    1924           2
+    4437           3
+    2539           4
+    1205           5
+     452           6
+      95           7
+       0           8
+       0           9
+       0          10
+       0          11
+       0          12
+       0          13
+       0          14
+       0          15
+       0          16
+       0          17 TO 99999: 17+
+  -------
+   10655
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10655   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2031
+ 
+Min:              1        Max:              7        Mean:                3.45
+ 
+Lead In: R21561.00[Default]
+Default Next Question: R21565.00
+--------------------------------------------------------------------------------
+R22578.00    [REGION]                                       Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+    1993       1 NORTHEAST
+    2403       2 NORTH CENTRAL
+    4086       3 SOUTH
+    2091       4 WEST
+  -------
+   10573
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10573   VALID SKIP(-4)      82     NON-INTERVIEW(-5)    2031
+ 
+Min:              1        Max:              4        Mean:                2.59
+ 
+Lead In: R22577.01[Default]
+Default Next Question: R22579.00
+--------------------------------------------------------------------------------
+R23020.00    [Q2-15A]                                       Survey Year: 1987
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE IN 1986
+ 
+ORIGINAL QUESTION NAME: Q0142
+ 
+DURING THE 52 WEEKS OF 1986, HOW MANY WEEKS DID YOUR (HUSBAND/WIFE)
+WORK AT ALL JOBS, EITHER FULL-TIME OF PART-TIME, NOT COUNTING WORK
+AROUND THE HOUSE?
+ 
+ACTUAL WEEKS
+ 
+UNIVERSE: R is married OR has been married
+ 
+     744           0
+     143           1 TO 13
+     297          14 TO 26
+     251          27 TO 39
+     498          40 TO 48
+     807          49 TO 51
+    2227          52
+       0          53 TO 9999999: > 52
+  -------
+    4967
+ 
+Refusal(-1)           11
+Don't Know(-2)        90
+Invalid Skip(-3)      54
+TOTAL =========>    5122   VALID SKIP(-4)    5363     NON-INTERVIEW(-5)    2201
+ 
+Min:              0        Max:             52        Mean:               39.15
+ 
+Lead In: R23019.00[Default]
+Default Next Question: R23021.00
+--------------------------------------------------------------------------------
+R23657.00    [CURDATE~M]                                    Survey Year: 1987
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+ORIGINAL QUESTION NAME: Q2068
+ 
+DATE OF INTERVIEW:
+ 
+1 THRU 12 ACTUAL MONTH
+ 
+UNIVERSE: All
+ 
+       0           0: < 1
+       0           1
+       0           2
+     369           3
+    2445           4
+    2925           5
+    2193           6
+    1121           7
+     798           8
+     531           9
+     103          10
+       0          11
+       0          12
+       0          13
+       0          14
+       0          15
+       0          16
+       0          17 TO 99999: 17+
+  -------
+   10485
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10485   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2201
+ 
+Min:              3        Max:             10        Mean:                 5.6
+ 
+Lead In: R23656.00[Default]
+Default Next Question: R23660.00
+--------------------------------------------------------------------------------
+R24452.00    [REGION]                                       Survey Year: 1987
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+    1952       1 NORTHEAST
+    2378       2 NORTH CENTRAL
+    4022       3 SOUTH
+    2067       4 WEST
+  -------
+   10419
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10419   VALID SKIP(-4)      66     NON-INTERVIEW(-5)    2201
+ 
+Min:              1        Max:              4        Mean:                 2.6
+ 
+Lead In: R24451.01[Default]
+Default Next Question: R24453.00
+--------------------------------------------------------------------------------
+R25031.00    [Q2-15A]                                       Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE IN 1987
+ 
+ORIGINAL QUESTION NAME: Q2.6A
+ 
+DURING THE 52 WEEKS OF 1987, HOW MANY WEEKS DID YOUR (MOST RECENT)
+(HUSBAND/WIFE) WORK AT ALL JOBS, EITHER FULL-TIME OR PART-TIME,
+NOT COUNTING WORK AROUND THE HOUSE?
+ 
+ACTUAL WEEKS
+ 
+UNIVERSE: R is married OR has been married
+ 
+     751           0
+     149           1 TO 13
+     243          14 TO 26
+     265          27 TO 39
+     482          40 TO 48
+     478          49 TO 51
+    2990          52
+       0          53 TO 9999999: > 52
+  -------
+    5358
+ 
+Refusal(-1)            6
+Don't Know(-2)        61
+Invalid Skip(-3)     109
+TOTAL =========>    5534   VALID SKIP(-4)    4931     NON-INTERVIEW(-5)    2221
+ 
+Min:              0        Max:             52        Mean:                40.3
+ 
+Lead In: R25030.00[Default]
+Default Next Question: R25032.00
+--------------------------------------------------------------------------------
+R27425.00    [CURDATE~M]                                    Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+ORIGINAL QUESTION NAME: IR.2MO
+ 
+DATE OF INTERVIEW:
+ 
+1 THRU 12 ACTUAL MONTH
+ 
+UNIVERSE: All
+ 
+       0           0: < 1
+       0           1
+       0           2
+       0           3
+       0           4
+       0           5
+     419           6
+    2682           7
+    3332           8
+    2091           9
+    1125          10
+     580          11
+     236          12
+       0          13
+       0          14
+       0          15
+       0          16
+       0          17 TO 99999: 17+
+  -------
+   10465
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10465   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2221
+ 
+Min:              6        Max:             12        Mean:                8.33
+ 
+Lead In: R27424.00[Default]
+Default Next Question: R27428.00
+--------------------------------------------------------------------------------
+R28708.00    [REGION]                                       Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+    1933       1 NORTHEAST
+    2416       2 NORTH CENTRAL
+    4013       3 SOUTH
+    2041       4 WEST
+  -------
+   10403
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10403   VALID SKIP(-4)      62     NON-INTERVIEW(-5)    2221
+ 
+Min:              1        Max:              4        Mean:                2.59
+ 
+Lead In: R28707.00[Default]
+Default Next Question: R28709.00
+--------------------------------------------------------------------------------
+R29031.00    [Q2-15A]                                       Survey Year: 1989
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE IN 1988
+ 
+ORIGINAL QUESTION NAME: Q0161
+ 
+DURING THE 52 WEEKS OF 1988, HOW MANY WEEKS DID YOUR (MOST RECENT)
+(HUSBAND/WIFE) WORK AT ALL JOBS, EITHER FULL-TIME OR PART-TIME, NOT
+COUNTING WORK AROUND THE HOUSE?
+ 
+ACTUAL WEEKS
+ 
+UNIVERSE: R is married OR has been married
+ 
+     803           0
+     149           1 TO 13
+     247          14 TO 26
+     232          27 TO 39
+     449          40 TO 48
+     518          49 TO 51
+    3251          52
+       0          53 TO 9999999: > 52
+  -------
+    5649
+ 
+Refusal(-1)           12
+Don't Know(-2)        68
+Invalid Skip(-3)      26
+TOTAL =========>    5755   VALID SKIP(-4)    4850     NON-INTERVIEW(-5)    2081
+ 
+Min:              0        Max:             52        Mean:               40.56
+ 
+Lead In: R29030.00[Default]
+Default Next Question: R29032.00
+--------------------------------------------------------------------------------
+R29861.00    [CURDATE~M]                                    Survey Year: 1989
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+ORIGINAL QUESTION NAME: Q2813
+ 
+DATE OF INTERVIEW:
+ 
+1 THRU 12 ACTUAL MONTH
+ 
+UNIVERSE: All
+ 
+       0           0: < 1
+       0           1
+       0           2
+       0           3
+       0           4
+       0           5
+    2912           6
+    3420           7
+    2192           8
+    1107           9
+     575          10
+     282          11
+     117          12
+       0          13
+       0          14
+       0          15
+       0          16
+       0          17 TO 99999: 17+
+  -------
+   10605
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10605   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2081
+ 
+Min:              6        Max:             12        Mean:                7.47
+ 
+Lead In: R29860.00[Default]
+Default Next Question: R29863.00
+--------------------------------------------------------------------------------
+R30745.00    [REGION]                                       Survey Year: 1989
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: FOR VARIABLE CREATION SEE ATTACHMENT 104: GEOGRAPHIC REGIONS
+ 
+    1866       1 NORTHEAST
+    2405       2 NORTH CENTRAL
+    3957       3 SOUTH
+    2020       4 WEST
+  -------
+   10248
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10248   VALID SKIP(-4)     357     NON-INTERVIEW(-5)    2081
+ 
+Min:              1        Max:              4        Mean:                 2.6
+ 
+Lead In: R30744.00[Default]
+Default Next Question: R30746.00
+--------------------------------------------------------------------------------
+R31045.00    [Q2-15A]                                       Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE IN 1989
+ 
+ORIGINAL QUESTION NAME: Q0241
+ 
+DURING THE 52 WEEKS OF 1989, HOW MANY WEEKS DID YOUR (MOST RECENT) 
+(HUSBAND/WIFE) WORK AT ALL JOBS, EITHER FULL-TIME OR PART-TIME, NOT COUNTING 
+WORK AROUND THE HOUSE?
+ 
+ACTUAL WEEKS
+ 
+     831           0
+     135           1 TO 13
+     239          14 TO 26
+     229          27 TO 39
+     610          40 TO 48
+     729          49 TO 51
+    3014          52
+       0          53 TO 9999999: > 52
+  -------
+    5787
+ 
+Refusal(-1)           11
+Don't Know(-2)        70
+Invalid Skip(-3)      36
+TOTAL =========>    5904   VALID SKIP(-4)    4532     NON-INTERVIEW(-5)    2250
+ 
+Min:              0        Max:             52        Mean:               40.52
+ 
+Lead In: R31043.00[Default]
+Default Next Question: R31046.00
+--------------------------------------------------------------------------------
+R33025.00    [CURDATE~M]                                    Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+ORIGINAL QUESTION NAME: Q7215
+ 
+DATE OF INTERVIEW.
+ 
+1 THRU 12 ACTUAL MONTH
+ 
+UNIVERSE: All
+ 
+       0           0: < 1
+       0           1
+       0           2
+       0           3
+       0           4
+       0           5
+      57           6
+    2672           7
+    3213           8
+    2238           9
+    1461          10
+     719          11
+      76          12
+       0          13
+       0          14
+       0          15
+       0          16
+       0          17 TO 99999: 17+
+  -------
+   10436
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10436   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    2250
+ 
+Min:              6        Max:             12        Mean:                8.46
+ 
+Lead In: R33024.00[Default]
+Default Next Question: R33028.00
+--------------------------------------------------------------------------------
+R34012.00    [REGION]                                       Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: FOR VARIABLE CREATION SEE ATTACHMENT 104: GEOGRAPHIC REGIONS
+ 
+    1843       1 NORTHEAST
+    2410       2 NORTH CENTRAL
+    3999       3 SOUTH
+    2040       4 WEST
+  -------
+   10292
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   10292   VALID SKIP(-4)     144     NON-INTERVIEW(-5)    2250
+ 
+Min:              1        Max:              4        Mean:                2.61
+ 
+Lead In: R34011.00[Default]
+Default Next Question: R34013.00
+--------------------------------------------------------------------------------
+R35045.00    [Q2-15A]                                       Survey Year: 1991
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE IN 1990
+ 
+ORIGINAL QUESTION NAME: Q0241
+ 
+DURING THE 52 WEEKS OF 1990, HOW MANY WEEKS DID YOUR (MOST RECENT)
+(HUSBAND/WIFE) WORK AT ALL JOBS, EITHER FULL-TIME OR PART-TIME,
+NOT COUNTING WORK AROUND THE HOUSE?
+ 
+ACTUAL WEEKS
+ 
+     677           0
+     106           1 TO 13
+     217          14 TO 26
+     218          27 TO 39
+     482          40 TO 48
+     490          49 TO 51
+    2759          52
+       0          53 TO 9999999: > 52
+  -------
+    4949
+ 
+Refusal(-1)           10
+Don't Know(-2)        73
+Invalid Skip(-3)      30
+TOTAL =========>    5062   VALID SKIP(-4)    3956     NON-INTERVIEW(-5)    3668
+ 
+Min:              0        Max:             52        Mean:               40.91
+ 
+Lead In: R35043.00[Default]
+Default Next Question: R35046.00
+--------------------------------------------------------------------------------
+R35734.00    [CURDATE~M]                                    Survey Year: 1991
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+ORIGINAL QUESTION NAME: Q2512
+ 
+DATE OF INTERVIEW:
+ 
+1 THRU 12 ACTUAL MONTH
+ 
+UNIVERSE: All
+ 
+       0           0: < 1
+       0           1
+       0           2
+       0           3
+       0           4
+       0           5
+    1685           6
+    4080           7
+    2000           8
+     830           9
+     302          10
+     120          11
+       1          12
+       0          13
+       0          14
+       0          15
+       0          16
+       0          17 TO 99999: 17+
+  -------
+    9018
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    9018   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    3668
+ 
+Min:              6        Max:             12        Mean:                7.37
+ 
+Lead In: R35733.00[Default]
+Default Next Question: R35737.00
+--------------------------------------------------------------------------------
+R36566.00    [REGION]                                       Survey Year: 1991
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: FOR VARIABLE CREATION SEE ATTACHMENT 104: GEOGRAPHIC REGIONS
+ 
+    1511       1 NORTHEAST
+    2087       2 NORTH CENTRAL
+    3439       3 SOUTH
+    1855       4 WEST
+  -------
+    8892
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8892   VALID SKIP(-4)     126     NON-INTERVIEW(-5)    3668
+ 
+Min:              1        Max:              4        Mean:                2.63
+ 
+Lead In: R36565.00[Default]
+Default Next Question: R36567.00
+--------------------------------------------------------------------------------
+R37045.00    [Q2-15A]                                       Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE IN 1991
+ 
+ORIGINAL QUESTION NAME: Q0241
+ 
+DURING THE 52 WEEKS OF 1991, HOW MANY WEEKS DID YOUR (MOST RECENT)
+(HUSBAND/WIFE) WORK AT ALL JOBS, EITHER FULL-TIME OR PART-TIME,
+NOT COUNTING WORK AROUND THE HOUSE?
+ 
+ACTUAL WEEKS
+ 
+     767           0
+      90           1 TO 13
+     228          14 TO 26
+     236          27 TO 39
+     448          40 TO 48
+     583          49 TO 51
+    2704          52
+       0          53 TO 9999999: > 52
+  -------
+    5056
+ 
+Refusal(-1)            8
+Don't Know(-2)        65
+Invalid Skip(-3)      39
+TOTAL =========>    5168   VALID SKIP(-4)    3848     NON-INTERVIEW(-5)    3670
+ 
+Min:              0        Max:             52        Mean:               40.19
+ 
+Lead In: R37043.00[Default]
+Default Next Question: R37046.00
+--------------------------------------------------------------------------------
+R39176.00    [CURDATE~M]                                    Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+ORIGINAL QUESTION NAME: Q7119
+ 
+DATE OF INTERVIEW:
+ 
+1 THRU 12 ACTUAL MONTH
+ 
+UNIVERSE: All
+ 
+       0           0: < 1
+       0           1
+       0           2
+       0           3
+       0           4
+      89           5
+    1884           6
+    2652           7
+    2284           8
+    1330           9
+     620          10
+     152          11
+       5          12
+       0          13
+       0          14
+       0          15
+       0          16
+       0          17 TO 99999: 17+
+  -------
+    9016
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    9016   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    3670
+ 
+Min:              5        Max:             12        Mean:                 7.6
+ 
+Lead In: R39172.00[Default]
+Default Next Question: R39179.00
+--------------------------------------------------------------------------------
+R40071.00    [REGION]                                       Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+ORIGINAL QUESTION NAME: *CREATED
+ 
+NOTE: FOR VARIABLE CREATION SEE ATTACHMENT 104: GEOGRAPHIC REGIONS
+ 
+    1506       1 NORTHEAST
+    2071       2 NORTH CENTRAL
+    3460       3 SOUTH
+    1852       4 WEST
+  -------
+    8889
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>    8891   VALID SKIP(-4)     125     NON-INTERVIEW(-5)    3670
+ 
+Min:              1        Max:              4        Mean:                2.64
+ 
+Lead In: R40070.00[Default]
+Default Next Question: R40072.00
+--------------------------------------------------------------------------------
+R41002.00    [CURDATE~M]                                    Survey Year: 1993
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+ORIGINAL QUESTION NAME: Q-1C
+ 
+[1996 interview date (current date)](10)];
+ 
+UNIVERSE: All
+ 
+       0           0: < 1
+       0           1
+       0           2
+       0           3
+       0           4
+      80           5
+    3747           6
+    2487           7
+    1593           8
+     726           9
+     367          10
+      11          11
+       0          12
+       0          13
+       0          14
+       0          15
+       0          16
+       0          17 TO 99999: 17+
+  -------
+    9011
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    9011   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    3675
+ 
+Min:              5        Max:             11        Mean:                7.03
+ 
+Lead In: R41001.00[Default]
+Default Next Question: R41002.02
+--------------------------------------------------------------------------------
+R41232.00    [Q2-15A]                                       Survey Year: 1993
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE IN 1992
+ 
+ORIGINAL QUESTION NAME: Q2-15A
+ 
+During the 52 weeks of 1992, how many weeks did your (most recent)
+[Text fill based on respondent's gender](10) work at all jobs, either full-time 
+or part-time, not
+counting work around the house?
+ 
+ACTUAL WEEKS
+ 
+      26           0
+     113           1 TO 13
+     227          14 TO 26
+     222          27 TO 39
+     445          40 TO 48
+     618          49 TO 51
+    2697          52
+       0          53 TO 9999999: > 52
+  -------
+    4348
+ 
+Refusal(-1)           16
+Don't Know(-2)        85
+Invalid Skip(-3)       1
+TOTAL =========>    4450   VALID SKIP(-4)    4561     NON-INTERVIEW(-5)    3675
+ 
+Min:              0        Max:             52        Mean:               46.98
+ 
+Lead In: R41231.00[Default]
+Default Next Question: R41233.00
+--------------------------------------------------------------------------------
+R44182.00    [REGION]                                       Survey Year: 1993
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+ORIGINAL QUESTION NAME: REGION
+ 
+COMMENT: REGION OF RESIDENCE
+ 
+    1492       1 NORTHEAST
+    2058       2 NORTH CENTRAL
+    3457       3 SOUTH
+    1781       4 WEST
+  -------
+    8788
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8788   VALID SKIP(-4)     223     NON-INTERVIEW(-5)    3675
+ 
+Min:              1        Max:              4        Mean:                2.63
+ 
+Lead In: R44181.00[Default]
+Default Next Question: R44183.00
+--------------------------------------------------------------------------------
+R45002.01    [CURDATE~M]                                    Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+[1994 interview date (current date)](8)]
+ 
+       0           1: January
+       0           2: February
+       0           3: March
+       0           4: April
+       0           5: May
+    1307           6: June
+    2775           7: July
+    2347           8: August
+    1212           9: September
+     674          10: October
+     433          11: November
+     141          12: December
+  -------
+    8889
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>    8891   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    3795
+ 
+Min:              6        Max:             12        Mean:                7.89
+ 
+Earliest (NonMissing): JUNE/1994
+Latest   (NonMissing): DECEMBER/1994
+ 
+Lead In: None.
+Default Next Question: R45002.02
+--------------------------------------------------------------------------------
+R45192.00    [Q2-15A]                                       Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN 1993
+ 
+During the 52 weeks of 1993, how many weeks did your (most recent)
+[husband/wife](8) work at all jobs, either full-time or part-time, not 
+counting work around the house?
+ 
+      79           0   (Go To R45194.00)
+     127           1 TO 13
+     230          14 TO 26
+     207          27 TO 39
+     490          40 TO 48
+     616          49 TO 51
+    3179          52
+       0          53 TO 99999999: > 52
+  -------
+    4928
+ 
+Refusal(-1)           28
+Don't Know(-2)       154
+TOTAL =========>    5110   VALID SKIP(-4)    3781     NON-INTERVIEW(-5)    3795
+ 
+Min:              0        Max:             52        Mean:               46.81
+ 
+Lead In: R45119.00[Default] R45137.00[Default] R45143.00[Default] 
+         R45187.00[Default] R45188.00[Default] R45190.00[Default] 
+         R45191.00[Default]  R45141.00[0:0]
+Default Next Question: R45193.00
+--------------------------------------------------------------------------------
+R50812.00    [REGION]                                       Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+COMMENT: REGION OF RESIDENCE
+ 
+NOTE: FOR VARIABLE CREATION SEE ATTACHMENT 104: GEOGRAPHIC REGIONS
+ 
+    1443           1: 1  NORTHEAST
+    2040           2: 2  NORTH CENTRAL
+    3447           3: 3  SOUTH
+    1751           4: 4  WEST
+  -------
+    8681
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8681   VALID SKIP(-4)     210     NON-INTERVIEW(-5)    3795
+ 
+Min:              1        Max:              4        Mean:                2.63
+ 
+Lead In: R50811.00[Default]
+Default Next Question: R50813.00
+--------------------------------------------------------------------------------
+R51665.00    [REGION]                                       Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+COMMENT: REGION OF RESIDENCE
+ 
+NOTE: FOR VARIABLE CREATION SEE ATTACHMENT 104: GEOGRAPHIC REGIONS
+ 
+    1374           1: NORTHEAST
+    2002           2: NORTH CENTRAL
+    3454           3: SOUTH
+    1694           4: WEST
+  -------
+    8524
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       1
+TOTAL =========>    8525   VALID SKIP(-4)     111     NON-INTERVIEW(-5)    4050
+ 
+Min:              1        Max:              4        Mean:                2.64
+ 
+Lead In: R51664.00[Default]
+Default Next Question: R51666.00
+--------------------------------------------------------------------------------
+R52002.01    [CURDATE~M]                                    Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+       0           1: January
+       0           2: February
+       0           3: March
+       7           4: April
+    2406           5: May
+    2713           6: June
+    1784           7: July
+     967           8: August
+     491           9: September
+     255          10: October
+      13          11: November
+       0          12: December
+  -------
+    8636
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8636   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    4050
+ 
+Min:              4        Max:             11        Mean:                6.45
+ 
+Earliest (NonMissing): APRIL/1996
+Latest   (NonMissing): NOVEMBER/1996
+ 
+Lead In: None.
+Default Next Question: R52002.02
+--------------------------------------------------------------------------------
+R52182.00    [Q2-15A]                                       Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN 1995
+ 
+During the 52 weeks of 1995, how many weeks did your [Name of (most recent) 
+spouse](9) work at all jobs, either full-time or part-time, not counting work 
+around the house?
+ 
+NOTE: ACTUAL WEEKS
+ 
+      96           0   (Go To R52185.00)
+     109           1 TO 13
+     221          14 TO 26
+     211          27 TO 39
+     488          40 TO 48
+     604          49 TO 51
+    3169          52
+       0          53 TO 99999999: > 52
+  -------
+    4898
+ 
+Refusal(-1)           39
+Don't Know(-2)       156
+TOTAL =========>    5093   VALID SKIP(-4)    3543     NON-INTERVIEW(-5)    4050
+ 
+Min:              0        Max:             52        Mean:               46.85
+ 
+Lead In: R52119.00[Default] R52131.00[Default] R52137.00[Default] 
+         R52177.00[Default] R52178.00[Default] R52180.00[Default] 
+         R52181.00[Default]  R52084.00[-1:-1] R52089.00[-1:-1] R52090.00[-1:-1] 
+         R52091.00[-2:-1] R52097.00[-1:-1] R52105.00[-2:-1] R52109.00[-2:-1] 
+         R52135.00[0:0] R52139.00[-1:-1] R52140.00[-1:-1] R52141.00[-2:-1] 
+         R52151.00[-1:-1] R52153.00[-2:-1] R52159.00[-1:-1] R52160.00[-1:-1] 
+         R52161.00[-2:-1] R52168.00[-1:-1] R52170.00[-2:-1]
+Default Next Question: R52183.00
+--------------------------------------------------------------------------------
+R58177.00    [Q2-15A]                                       Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN 1997
+ 
+During the 52 weeks of 1997, how many weeks did your [name of (most recent) 
+spouse/partner] work at all jobs, either full-time or part-time, not counting 
+work around the house?
+ 
+      61           0   (Go To R58179.00)
+     106           1 TO 13
+     198          14 TO 26
+     204          27 TO 39
+     425          40 TO 48
+     462          49 TO 51
+    3309          52
+       0          53 TO 99999999: > 52
+  -------
+    4765
+ 
+Refusal(-1)           26
+Don't Know(-2)       151
+TOTAL =========>    4942   VALID SKIP(-4)    3457     NON-INTERVIEW(-5)    4287
+ 
+Min:              0        Max:             52        Mean:               47.44
+ 
+Lead In: R58106.00[Default] R58117.00[Default] R58123.00[Default] 
+         R58172.00[Default] R58173.00[Default] R58175.00[Default] 
+         R58176.00[Default]  R58069.00[-1:-1] R58072.00[-1:-1] R58073.00[-1:-1] 
+         R58075.00[-2:-1] R58090.00[-2:-1] R58094.00[-2:-1] R58125.00[-1:-1] 
+         R58126.00[-1:-1] R58127.00[-2:-1] R58139.00[-1:-1] R58140.00[-1:-1] 
+         R58141.00[-2:-1] R58149.00[-1:-1] R58150.00[-1:-1] R58151.00[-2:-1] 
+         R58160.00[-1:-1] R58161.00[-1:-1] R58162.00[-2:-1]
+Default Next Question: R58178.00
+--------------------------------------------------------------------------------
+R64353.01    [CURDATE~M]                                    Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+[1998 int (current) date]
+ 
+COMMENT: Date of interview.
+ 
+       0           1: January
+       0           2: February
+      19           3: March
+    1616           4: April
+    2098           5: May
+    2043           6: June
+    1395           7: July
+     680           8: August
+     532           9: September
+       6          10: October
+      10          11: November
+       0          12: December
+  -------
+    8399
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8399   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    4287
+ 
+Min:              3        Max:             11        Mean:                5.89
+ 
+Earliest (NonMissing): MARCH/1998
+Latest   (NonMissing): NOVEMBER/1998
+ 
+Lead In: None.
+Default Next Question: R64353.02
+--------------------------------------------------------------------------------
+R64791.00    [REGION]                                       Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+COMMENT: REGION OF RESIDENCE
+ 
+NOTE: FOR VARIABLE CREATION SEE ATTACHMENT 104: GEOGRAPHIC REGIONS
+ 
+    1289           1: 1  NORTHEAST
+    1931           2: 2  NORTH CENTRAL
+    3326           3: 3  SOUTH
+    1653           4: 4  WEST
+  -------
+    8199
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      25
+TOTAL =========>    8224   VALID SKIP(-4)     175     NON-INTERVIEW(-5)    4287
+ 
+Min:              1        Max:              4        Mean:                2.65
+ 
+Lead In: R64790.00[Default]
+Default Next Question: R64792.00
+--------------------------------------------------------------------------------
+R67497.00    [Q2-15A]                                       Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN 1999
+ 
+During the 52 weeks of 1999, how many weeks did [name of (most recent) 
+spouse/partner] work at all jobs, either full-time or part-time, not counting 
+work around the house?
+ 
+UNIVERSE: R has current spouse or partner; S/P worked in previous calendar year
+ 
+      29           0   (Go To R67499.00)
+      61           1 TO 13
+     151          14 TO 26
+     165          27 TO 39
+     362          40 TO 48
+     325          49 TO 51
+    3398          52
+       0          53 TO 99999999: > 52
+  -------
+    4491
+ 
+Refusal(-1)           49
+Don't Know(-2)       103
+TOTAL =========>    4643   VALID SKIP(-4)    3389     NON-INTERVIEW(-5)    4654
+ 
+Min:              0        Max:             52        Mean:               48.62
+ 
+Lead In: R67428.00[Default] R67439.00[Default] R67445.00[Default] 
+         R67492.00[Default] R67493.00[Default] R67495.00[Default] 
+         R67496.00[Default]  R67393.00[-1:-1] R67395.00[-1:-1] R67396.00[-1:-1] 
+         R67398.00[-2:-1] R67412.00[-2:-1] R67416.00[-2:-1] R67447.00[-1:-1] 
+         R67448.00[-1:-1] R67449.00[-2:-1] R67460.00[-1:-1] R67462.00[-2:-1] 
+         R67470.00[-1:-1] R67471.00[-1:-1] R67472.00[-2:-1] R67480.00[-1:-1] 
+         R67481.00[-1:-1] R67482.00[-2:-1]
+Default Next Question: R67498.00
+--------------------------------------------------------------------------------
+R69633.01    [CURDATE~M]                                    Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+[2000 int (current) date]
+ 
+COMMENT: Date of interview.
+ 
+      58           1: January
+       0           2: February
+       1           3: March
+       3           4: April
+     705           5: May
+    1390           6: June
+    1727           7: July
+    1721           8: August
+    1017           9: September
+     574          10: October
+     485          11: November
+     351          12: December
+  -------
+    8032
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    8032   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    4654
+ 
+Min:              1        Max:             12        Mean:                7.75
+ 
+Earliest (NonMissing): APRIL/2000
+Latest   (NonMissing): MARCH/2001
+ 
+Lead In: None.
+Default Next Question: R69633.02
+--------------------------------------------------------------------------------
+R70068.00    [REGION]                                       Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+COMMENT: REGION OF RESIDENCE
+ 
+NOTE: FOR VARIABLE CREATION SEE ATTACHMENT 104: GEOGRAPHIC REGIONS
+ 
+    1244           1: 1  NORTHEAST
+    1856           2: 2  NORTH CENTRAL
+    3293           3: 3  SOUTH
+    1579           4: 4  WEST
+  -------
+    7972
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>    7974   VALID SKIP(-4)      58     NON-INTERVIEW(-5)    4654
+ 
+Min:              1        Max:              4        Mean:                2.65
+ 
+Lead In: R70066.00[Default]
+Default Next Question: R70069.00
+--------------------------------------------------------------------------------
+R73969.00    [Q2-15A]                                       Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN 2001
+ 
+During the 52 weeks of 2001, how many weeks did [name of (most recent) 
+spouse/partner] work at all jobs, either full-time or part-time, not counting 
+work around the house?  Please include paid vacations as time worked.
+ 
+UNIVERSE: R has current spouse or partner; S/P worked in previous calendar year
+ 
+      55           0   (Go To R73971.00)
+      63           1 TO 13
+     159          14 TO 26
+     137          27 TO 39
+     295          40 TO 48
+     177          49 TO 51
+    3370          52
+       0          53 TO 99999999: > 52
+  -------
+    4256
+ 
+Refusal(-1)           34
+Don't Know(-2)       110
+TOTAL =========>    4400   VALID SKIP(-4)    3324     NON-INTERVIEW(-5)    4962
+ 
+Min:              0        Max:             52        Mean:               48.29
+ 
+Lead In: R73888.00[Default] R73900.00[Default] R73910.00[Default] 
+         R73916.00[Default] R73964.00[Default] R73965.00[Default] 
+         R73967.00[Default] R73968.00[Default]  R73865.00[-1:-1] 
+         R73867.00[-1:-1] R73868.00[-1:-1] R73870.00[-2:-1] R73877.00[-1:-1] 
+         R73884.00[-2:-1] R73918.00[-1:-1] R73919.00[-1:-1] R73920.00[-2:-1] 
+         R73932.00[-1:-1] R73934.00[-2:-1] R73942.00[-1:-1] R73943.00[-1:-1] 
+         R73944.00[-2:-1] R73954.00[-1:-1] R73955.00[-1:-1] R73956.00[-2:-1]
+Default Next Question: R73970.00
+--------------------------------------------------------------------------------
+R76563.01    [CURDATE~M]                                    Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+[1998 int (current) date]
+ 
+COMMENT: Date of interview.
+ 
+      22           1: January
+      85           2: February
+     313           3: March
+     522           4: April
+     722           5: May
+    1668           6: June
+    1909           7: July
+    1164           8: August
+     683           9: September
+     480          10: October
+     130          11: November
+      26          12: December
+  -------
+    7724
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7724   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    4962
+ 
+Min:              1        Max:             12        Mean:                6.76
+ 
+Earliest (NonMissing): JANUARY/2002
+Latest   (NonMissing): DECEMBER/2002
+ 
+Lead In: None.
+Default Next Question: R76563.02
+--------------------------------------------------------------------------------
+R77041.00    [REGION]                                       Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+COMMENT: REGION OF RESIDENCE
+ 
+NOTE: FOR VARIABLE CREATION SEE ATTACHMENT 104: GEOGRAPHIC REGIONS
+ 
+    1190           1: 1  NORTHEAST
+    1814           2: 2  NORTH CENTRAL
+    3189           3: 3  SOUTH
+    1473           4: 4  WEST
+  -------
+    7666
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7666   VALID SKIP(-4)      58     NON-INTERVIEW(-5)    4962
+ 
+Min:              1        Max:              4        Mean:                2.65
+ 
+Lead In: R77039.00[Default]
+Default Next Question: R77042.00
+--------------------------------------------------------------------------------
+R78005.01    [CURDATE~M]                                    Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+DATE("SHORT")
+ 
+       0           0: Month not reported
+      70           1: January
+     509           2: February
+     902           3: March
+    1122           4: April
+    1012           5: May
+    1450           6: June
+    1044           7: July
+     645           8: August
+     411           9: September
+     295          10: October
+     137          11: November
+      64          12: December
+  -------
+    7661
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7661   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5025
+ 
+Min:              1        Max:             12        Mean:                5.67
+ 
+Earliest (NonMissing): JANUARY/2004
+Latest   (NonMissing): MAY/2005
+ 
+Lead In: None.
+Default Next Question: R78005.02
+--------------------------------------------------------------------------------
+R80902.00    [Q2-15A]                                       Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN 2003
+ 
+During the 52 weeks of 2003, how many weeks did [name of (most recent) 
+spouse/partner] work at all jobs, either full-time or part-time, not counting 
+work around the house? Please include paid vacations as time worked.
+ 
+UNIVERSE: R has current spouse or partner; S/P worked in previous calendar year
+ 
+      58           0   (Go To R80904.00)
+      82           1 TO 13
+     147          14 TO 26
+     158          27 TO 39
+     271          40 TO 48
+     150          49 TO 51
+    3326          52
+       0          53 TO 99999999: > 52
+  -------
+    4192
+ 
+Refusal(-1)           65
+Don't Know(-2)       111
+TOTAL =========>    4368   VALID SKIP(-4)    3293     NON-INTERVIEW(-5)    5025
+ 
+Min:              0        Max:             52        Mean:               48.09
+ 
+Lead In: R80827.00[Default] R80838.00[Default] R80844.00[Default] 
+         R80897.00[Default] R80898.00[Default] R80900.00[Default] 
+         R80901.00[Default]  R80792.00[-1:-1] R80794.00[-1:-1] R80795.00[-1:-1] 
+         R80797.00[-2:-1] R80805.00[-1:-1] R80811.00[-2:-1] R80815.00[-2:-1] 
+         R80846.00[-1:-1] R80848.00[-2:-1] R80860.00[-1:-1] R80861.00[-1:-1] 
+         R80862.00[-2:-1] R80871.00[-1:-1] R80872.00[-1:-1] R80873.00[-2:-1] 
+         R80883.00[-1:-1] R80885.00[-2:-1]
+Default Next Question: R80903.00
+--------------------------------------------------------------------------------
+R84965.00    [REGION]                                       Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+COMMENT: REGION OF RESIDENCE
+ 
+NOTE: FOR VARIABLE CREATION SEE ATTACHMENT 104: GEOGRAPHIC REGIONS
+ 
+    1169           1: 1  NORTHEAST
+    1803           2: 2  NORTH CENTRAL
+    3155           3: 3  SOUTH
+    1474           4: 4  WEST
+  -------
+    7601
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>    7603   VALID SKIP(-4)      58     NON-INTERVIEW(-5)    5025
+ 
+Min:              1        Max:              4        Mean:                2.65
+ 
+Lead In: R84963.00[Default]
+Default Next Question: R84966.00
+--------------------------------------------------------------------------------
+T00009.01    [CURDATE~M]                                    Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+DATE("SHORT")
+ 
+     103           1: January
+     824           2: February
+    2190           3: March
+    1486           4: April
+     472           5: May
+     809           6: June
+     592           7: July
+     458           8: August
+     335           9: September
+     156          10: October
+     122          11: November
+     106          12: December
+  -------
+    7653
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7653   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5033
+ 
+Min:              1        Max:             12        Mean:                4.77
+ 
+Earliest (NonMissing): JANUARY/2006
+Latest   (NonMissing): MARCH/2007
+ 
+Lead In: None.
+Default Next Question: T00009.02
+--------------------------------------------------------------------------------
+T03217.00    [Q2-15A]                                       Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN 2005
+ 
+During the 52 weeks of 2005, how many weeks did [name of (most recent) 
+spouse/partner] work at all jobs, either full-time or part-time, not counting 
+work around the house? Please include paid vacations as time worked.
+ 
+UNIVERSE: R has current spouse or partner; S/P worked in previous calendar year
+ 
+      29           0   (Go To T03219.00)
+      71           1 TO 13
+     123          14 TO 26
+     145          27 TO 39
+     270          40 TO 48
+     136          49 TO 51
+    3329          52
+       0          53 TO 99999999: > 52
+  -------
+    4103
+ 
+Refusal(-1)           64
+Don't Know(-2)       121
+TOTAL =========>    4288   VALID SKIP(-4)    3365     NON-INTERVIEW(-5)    5033
+ 
+Min:              0        Max:             52        Mean:               48.68
+ 
+Lead In: T03144.00[Default] T03155.00[Default] T03161.00[Default] 
+         T03212.00[Default] T03213.00[Default] T03215.00[Default] 
+         T03216.00[Default]  T03109.00[-1:-1] T03111.00[-1:-1] T03112.00[-1:-1] 
+         T03114.00[-2:-1] T03128.00[-2:-1] T03132.00[-2:-1] T03163.00[-1:-1] 
+         T03165.00[-2:-1] T03177.00[-1:-1] T03179.00[-2:-1] T03188.00[-1:-1] 
+         T03189.00[-1:-1] T03190.00[-2:-1] T03199.00[-1:-1] T03200.00[-1:-1] 
+         T03201.00[-2:-1]
+Default Next Question: T03218.00
+--------------------------------------------------------------------------------
+T09883.00    [REGION]                                       Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+COMMENT: REGION OF RESIDENCE
+ 
+NOTE: FOR VARIABLE CREATION SEE ATTACHMENT 104: GEOGRAPHIC REGIONS
+ 
+    1172           1: 1  NORTHEAST
+    1775           2: 2  NORTH CENTRAL
+    3152           3: 3  SOUTH
+    1477           4: 4  WEST
+  -------
+    7576
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       4
+TOTAL =========>    7580   VALID SKIP(-4)      73     NON-INTERVIEW(-5)    5033
+ 
+Min:              1        Max:              4        Mean:                2.65
+ 
+Lead In: T09882.00[Default]
+Default Next Question: T09884.00
+--------------------------------------------------------------------------------
+T12007.01    [CURDATE~M]                                    Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+DATE("SHORT")
+ 
+     602           1: January
+    2002           2: February
+    2444           3: March
+     572           4: April
+     275           5: May
+     461           6: June
+     407           7: July
+     297           8: August
+     250           9: September
+     222          10: October
+     130          11: November
+      95          12: December
+  -------
+    7757
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7757   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    4929
+ 
+Min:              1        Max:             12        Mean:                3.95
+ 
+Earliest (NonMissing): JANUARY/2008
+Latest   (NonMissing): MARCH/2009
+ 
+Lead In: None.
+Default Next Question: T12007.02
+--------------------------------------------------------------------------------
+T14713.00    [Q2-15A]                                       Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN 2007
+ 
+During the 52 weeks of [PAST_CALENDAR_YEAR], how many weeks did [name of (most 
+recent) spouse/partner] work at all jobs, either full-time or part-time, not 
+counting work around the house? Please include paid vacations as time worked.
+ 
+UNIVERSE: R has current spouse or partner; S/P worked in previous calendar year
+ 
+      35           0   (Go To T14715.00)
+      66           1 TO 13
+     131          14 TO 26
+     166          27 TO 39
+     330          40 TO 48
+     143          49 TO 51
+    3234          52
+  -------
+    4105
+ 
+Refusal(-1)           49
+Don't Know(-2)       121
+TOTAL =========>    4275   VALID SKIP(-4)    3482     NON-INTERVIEW(-5)    4929
+ 
+Min:              0        Max:             52        Mean:               48.42
+ 
+Lead In: T14630.00[Default] T14642.00[Default] T14653.00[Default] 
+         T14659.00[Default] T14708.00[Default] T14709.00[Default] 
+         T14711.00[Default] T14712.00[Default]  T14607.00[-1:-1] 
+         T14609.00[-1:-1] T14610.00[-1:-1] T14612.00[-2:-1] T14626.00[-2:-1] 
+         T14661.00[-1:-1] T14662.00[-1:-1] T14663.00[-2:-1] T14674.00[-1:-1] 
+         T14675.00[-1:-1] T14676.00[-2:-1] T14685.00[-1:-1] T14686.00[-1:-1] 
+         T14687.00[-2:-1] T14697.00[-1:-1] T14698.00[-1:-1] T14699.00[-2:-1]
+Default Next Question: T14714.00
+--------------------------------------------------------------------------------
+T22103.00    [REGION]                                       Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+COMMENT: REGION OF RESIDENCE
+ 
+NOTE: FOR VARIABLE CREATION SEE ATTACHMENT 104: GEOGRAPHIC REGIONS
+ 
+REVISION NOTE: 551 VALUES WERE REVISED FOR THIS VARIABLE IN OCTOBER, 2011.  SEE 
+ERRATA LISTING FOR FURTHER INFORMATION.
+ 
+    1156           1: NORTHEAST
+    1786           2: NORTH CENTRAL
+    3241           3: SOUTH
+    1485           4: WEST
+  -------
+    7668
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)      31
+TOTAL =========>    7699   VALID SKIP(-4)      58     NON-INTERVIEW(-5)    4929
+ 
+Min:              1        Max:              4        Mean:                2.66
+ 
+Lead In: T22102.01[Default]
+Default Next Question: T22104.00
+--------------------------------------------------------------------------------
+T22606.01    [CURDATE~M]                                    Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+DATE("SHORT")
+ 
+    1554           1: January
+    1950           2: February
+    1116           3: March
+     320           4: April
+     342           5: May
+     378           6: June
+     317           7: July
+     305           8: August
+     198           9: September
+     138          10: October
+     137          11: November
+     810          12: December
+  -------
+    7565
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7565   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5121
+ 
+Min:              1        Max:             12        Mean:                4.38
+ 
+Earliest (NonMissing): NOVEMBER/2009
+Latest   (NonMissing): JANUARY/2011
+ 
+Lead In: None.
+Default Next Question: T22606.02
+--------------------------------------------------------------------------------
+T25202.00    [Q2-15A]                                       Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN 2009
+ 
+During the 52 weeks of [PAST_CALENDAR_YEAR], how many weeks did [name of (most 
+recent) spouse/partner] work at all jobs, either full-time or part-time, not 
+counting work around the house? Please include paid vacations as time worked.
+ 
+UNIVERSE: R has current spouse or partner; S/P worked in previous calendar year
+ 
+      41           0   (Go To T25204.00)
+      92           1 TO 13
+     140          14 TO 26
+     164          27 TO 39
+     340          40 TO 48
+     140          49 TO 51
+    2870          52
+  -------
+    3787
+ 
+Refusal(-1)           45
+Don't Know(-2)       123
+TOTAL =========>    3955   VALID SKIP(-4)    3610     NON-INTERVIEW(-5)    5121
+ 
+Min:              0        Max:             52        Mean:               47.61
+ 
+Lead In: T25118.00[Default] T25130.00[Default] T25139.00[Default] 
+         T25145.00[Default] T25197.00[Default] T25198.00[Default] 
+         T25200.00[Default] T25201.00[Default]  T25095.00[-1:-1] 
+         T25097.00[-1:-1] T25098.00[-1:-1] T25100.00[-2:-1] T25114.00[-2:-1] 
+         T25147.00[-1:-1] T25148.00[-1:-1] T25149.00[-2:-1] T25161.00[-1:-1] 
+         T25162.00[-1:-1] T25163.00[-2:-1] T25172.00[-1:-1] T25173.00[-1:-1] 
+         T25174.00[-2:-1] T25186.00[-2:-1]
+Default Next Question: T25203.00
+--------------------------------------------------------------------------------
+T31082.00    [REGION]                                       Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+COMMENT: REGION OF RESIDENCE
+ 
+NOTE: FOR VARIABLE CREATION SEE ATTACHMENT 104: GEOGRAPHIC REGIONS
+ 
+    1132           1: NORTHEAST
+    1738           2: NORTH CENTRAL
+    3159           3: SOUTH
+    1473           4: WEST
+  -------
+    7502
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       6
+TOTAL =========>    7508   VALID SKIP(-4)      57     NON-INTERVIEW(-5)    5121
+ 
+Min:              1        Max:              4        Mean:                2.66
+ 
+Lead In: T31081.01[Default]
+Default Next Question: T31083.00
+--------------------------------------------------------------------------------
+T31956.01    [CURDATE~M]                                    Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+DATE("SHORT")
+ 
+     477           1: January
+     267           2: February
+     300           3: March
+     254           4: April
+     223           5: May
+     200           6: June
+     174           7: July
+     161           8: August
+     805           9: September
+    2319          10: October
+    1221          11: November
+     899          12: December
+  -------
+    7300
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7300   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5386
+ 
+Min:              1        Max:             12        Mean:                8.55
+ 
+Earliest (NonMissing): SEPTEMBER/2012
+Latest   (NonMissing): SEPTEMBER/2013
+ 
+Lead In: None.
+Default Next Question: T31956.02
+--------------------------------------------------------------------------------
+T35065.00    [Q2-15A]                                       Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN 2011
+ 
+During the 52 weeks of [PAST_CALENDAR_YEAR], how many weeks did [name of (most 
+recent) spouse/partner] work at all jobs, either full-time or part-time, not 
+counting work around the house? Please include paid vacations as time worked.
+ 
+UNIVERSE: R has current spouse or partner; S/P worked in previous calendar year
+ 
+      32           0   (Go To T35067.00)
+      67           1 TO 13
+     136          14 TO 26
+     152          27 TO 39
+     303          40 TO 48
+     149          49 TO 51
+    2672          52
+       0          53 TO 99999999: > 52
+  -------
+    3511
+ 
+Refusal(-1)           66
+Don't Know(-2)       122
+TOTAL =========>    3699   VALID SKIP(-4)    3601     NON-INTERVIEW(-5)    5386
+ 
+Min:              0        Max:             52        Mean:               47.93
+ 
+Lead In: T34995.00[Default] T35004.00[Default] T35010.00[Default] 
+         T35060.00[Default] T35061.00[Default] T35063.00[Default] 
+         T35064.00[Default]  T34960.00[-1:-1] T34962.00[-1:-1] T34963.00[-1:-1] 
+         T34965.00[-2:-1] T34972.00[-1:-1] T34979.00[-2:-1] T34983.00[-2:-1] 
+         T35012.00[-1:-1] T35013.00[-1:-1] T35014.00[-2:-1] T35027.00[-2:-1] 
+         T35036.00[-1:-1] T35037.00[-1:-1] T35038.00[-2:-1] T35047.00[-1:-1] 
+         T35048.00[-1:-1] T35049.00[-2:-1]
+Default Next Question: T35066.00
+--------------------------------------------------------------------------------
+T41127.00    [REGION]                                       Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+COMMENT: REGION OF RESIDENCE
+ 
+NOTE: FOR VARIABLE CREATION SEE ATTACHMENT 104: GEOGRAPHIC REGIONS
+ 
+    1081           1: NORTHEAST
+    1669           2: NORTH CENTRAL
+    3069           3: SOUTH
+    1421           4: WEST
+  -------
+    7240
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7240   VALID SKIP(-4)      60     NON-INTERVIEW(-5)    5386
+ 
+Min:              1        Max:              4        Mean:                2.67
+ 
+Lead In: T41126.01[Default]
+Default Next Question: T41128.00
+--------------------------------------------------------------------------------
+T41811.01    [CURDATE~M]                                    Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+DATE("SHORT")
+ 
+    2307           1: January
+    1388           2: February
+     417           3: March
+     323           4: April
+     291           5: May
+     244           6: June
+     161           7: July
+     176           8: August
+      86           9: September
+      42          10: October
+     120          11: November
+    1515          12: December
+  -------
+    7070
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    7070   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5616
+ 
+Min:              1        Max:             12        Mean:                4.78
+ 
+Earliest (NonMissing): OCTOBER/2014
+Latest   (NonMissing): OCTOBER/2015
+ 
+Lead In: None.
+Default Next Question: T41811.02
+--------------------------------------------------------------------------------
+T44782.00    [Q2-15A]                                       Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN PREVIOUS CALENDAR YEAR
+ 
+During the 52 weeks of [PAST_CALENDAR_YEAR], how many weeks did [name of (most 
+recent) spouse/partner] work at all jobs, either full-time or part-time, not 
+counting work around the house? Please include paid vacations as time worked.
+ 
+UNIVERSE: R has current spouse or partner; S/P worked in previous calendar year
+ 
+      73           0   (Go To T44784.00)
+      46           1 TO 13
+      95          14 TO 26
+     143          27 TO 39
+     288          40 TO 48
+     143          49 TO 51
+    2417          52
+  -------
+    3205
+ 
+Refusal(-1)           89
+Don't Know(-2)       104
+Invalid Skip(-3)       2
+TOTAL =========>    3400   VALID SKIP(-4)    3670     NON-INTERVIEW(-5)    5616
+ 
+Min:              0        Max:             52        Mean:               47.62
+ 
+Lead In: T44712.00[Default] T44723.00[Default] T44729.00[Default] 
+         T44777.00[Default] T44778.00[Default] T44780.00[Default] 
+         T44781.00[Default]  T44677.00[-1:-1] T44679.00[-1:-1] T44680.00[-1:-1] 
+         T44682.00[-2:-1] T44696.00[-2:-1] T44700.00[-2:-1] T44731.00[-1:-1] 
+         T44732.00[-1:-1] T44733.00[-2:-1] T44744.00[-1:-1] T44746.00[-2:-1] 
+         T51341.00[-1:-1] T44754.00[-1:-1] T44755.00[-2:-1] T44764.00[-1:-1] 
+         T44766.00[-2:-1]
+Default Next Question: T44783.00
+--------------------------------------------------------------------------------
+T50231.00    [REGION]                                       Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+COMMENT: REGION OF RESIDENCE
+ 
+NOTE: FOR VARIABLE CREATION SEE ATTACHMENT 104: GEOGRAPHIC REGIONS
+ 
+    1029           1: NORTHEAST
+    1611           2: NORTH CENTRAL
+    2983           3: SOUTH
+    1380           4: WEST
+  -------
+    7003
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       5
+TOTAL =========>    7008   VALID SKIP(-4)      62     NON-INTERVIEW(-5)    5616
+ 
+Min:              1        Max:              4        Mean:                2.67
+ 
+Lead In: T50230.00[Default]
+Default Next Question: T50232.00
+--------------------------------------------------------------------------------
+T51500.01    [CURDATE~M]                                    Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+DATE("SHORT")
+ 
+    1578           1: January
+     979           2: February
+     385           3: March
+     322           4: April
+     273           5: May
+     205           6: June
+     158           7: July
+     180           8: August
+      99           9: September
+     305          10: October
+    1059          11: November
+    1369          12: December
+  -------
+    6912
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    6912   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5774
+ 
+Min:              1        Max:             12        Mean:                6.24
+ 
+Earliest (NonMissing): OCTOBER/2016
+Latest   (NonMissing): NOVEMBER/2017
+ 
+Lead In: None.
+Default Next Question: T51500.02
+--------------------------------------------------------------------------------
+T54241.00    [Q2-15A]                                       Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN PREVIOUS CALENDAR YEAR
+ 
+During the 52 weeks of [PAST_CALENDAR_YEAR], how many weeks did [name of (most 
+recent) spouse/partner] work at all jobs, either full-time or part-time, not 
+counting work around the house? Please include paid vacations as time worked.
+ 
+UNIVERSE: R has current spouse or partner; S/P worked in previous calendar year
+ 
+      64           0   (Go To T54243.00)
+      54           1 TO 13
+      94          14 TO 26
+     117          27 TO 39
+     260          40 TO 48
+     177          49 TO 51
+    2276          52
+  -------
+    3042
+ 
+Refusal(-1)           64
+Don't Know(-2)       117
+TOTAL =========>    3223   VALID SKIP(-4)    3689     NON-INTERVIEW(-5)    5774
+ 
+Min:              0        Max:             52        Mean:               47.65
+ 
+Lead In: T54239.00[Default] T54240.00[Default]  T54238.00[-1:-1]
+Default Next Question: T54242.00
+--------------------------------------------------------------------------------
+T57710.00    [REGION]                                       Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+COMMENT: REGION OF RESIDENCE
+ 
+NOTE: FOR VARIABLE CREATION SEE ATTACHMENT 104: GEOGRAPHIC REGIONS
+ 
+    1006           1: NORTHEAST
+    1537           2: NORTH CENTRAL
+    2963           3: SOUTH
+    1344           4: WEST
+  -------
+    6850
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    6850   VALID SKIP(-4)      62     NON-INTERVIEW(-5)    5774
+ 
+Min:              1        Max:              4        Mean:                2.68
+ 
+Lead In: T57709.01[Default]
+Default Next Question: T57711.00
+--------------------------------------------------------------------------------
+T77200.01    [CURDATE~M]                                    Survey Year: 2018
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+DATE("SHORT")
+ 
+     422           1: January
+     480           2: February
+     405           3: March
+     276           4: April
+     164           5: May
+     125           6: June
+      76           7: July
+      78           8: August
+     134           9: September
+    2203          10: October
+    1808          11: November
+     707          12: December
+  -------
+    6878
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    6878   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    5808
+ 
+Min:              1        Max:             12        Mean:                8.44
+ 
+Earliest (NonMissing): SEPTEMBER/2018
+Latest   (NonMissing): NOVEMBER/2019
+ 
+Lead In: None.
+Default Next Question: T77200.02
+--------------------------------------------------------------------------------
+T79799.00    [Q2-15A]                                       Survey Year: 2018
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN PREVIOUS CALENDAR YEAR
+ 
+(During the 52 weeks of [PAST_CALENDAR_YEAR], how many weeks did [name of (most 
+recent) spouse/partner] work at all jobs, either full-time or part-time, not 
+counting work around the house? Please include paid vacations as time worked.)
+ 
+UNIVERSE: R has current spouse or partner; S/P worked in previous calendar year
+ 
+      50           0   (Go To T79801.00)
+      53           1 TO 13
+     108          14 TO 26
+     112          27 TO 39
+     266          40 TO 48
+     179          49 TO 51
+    1998          52
+  -------
+    2766
+ 
+Refusal(-1)           17
+Don't Know(-2)        78
+TOTAL =========>    2861   VALID SKIP(-4)    4017     NON-INTERVIEW(-5)    5808
+ 
+Min:              0        Max:             52        Mean:               47.37
+ 
+Lead In: T79798.00[Default]
+Default Next Question: T79800.00
+--------------------------------------------------------------------------------
+T82191.00    [REGION]                                       Survey Year: 2018
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+COMMENT: REGION OF RESIDENCE
+ 
+NOTE: FOR VARIABLE CREATION SEE ATTACHMENT 104: GEOGRAPHIC REGIONS
+ 
+     994           1: NORTHEAST
+    1532           2: NORTH CENTRAL
+    2935           3: SOUTH
+    1352           4: WEST
+  -------
+    6813
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       1
+TOTAL =========>    6814   VALID SKIP(-4)      64     NON-INTERVIEW(-5)    5808
+ 
+Min:              1        Max:              4        Mean:                2.68
+ 
+Lead In: T82190.00[Default]
+Default Next Question: T82192.00
+--------------------------------------------------------------------------------
+T83300.01    [CURDATE~M]                                    Survey Year: 2020
+  PRIMARY VARIABLE
+
+ 
+             DATE OF INTERVIEW - MONTH
+ 
+DATE("SHORT")
+ 
+     694           1: January
+     490           2: February
+     297           3: March
+     205           4: April
+     147           5: May
+     139           6: June
+     120           7: July
+      81           8: August
+      90           9: September
+    1138          10: October
+    1601          11: November
+    1533          12: December
+  -------
+    6535
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    6535   VALID SKIP(-4)       0     NON-INTERVIEW(-5)    6151
+ 
+Min:              1        Max:             12        Mean:                8.36
+ 
+Earliest (NonMissing): SEPTEMBER/2020
+Latest   (NonMissing): DECEMBER/2021
+ 
+Lead In: None.
+Default Next Question: T83300.02
+--------------------------------------------------------------------------------
+T85846.00    [Q2-15A]                                       Survey Year: 2020
+  PRIMARY VARIABLE
+
+ 
+             NUMBER OF WEEKS WORKED BY SPOUSE/PARTNER IN PREVIOUS CALENDAR YEAR
+ 
+(During the 52 weeks of [PAST_CALENDAR_YEAR], how many weeks did [name of (most 
+recent) spouse/partner] work at all jobs, either full-time or part-time, not 
+counting work around the house? Please include paid vacations as time worked.)
+ 
+UNIVERSE: R has current spouse or partner; S/P worked in previous calendar year
+ 
+    1253           0   (Go To T85848.00)
+     112           1 TO 13
+     121          14 TO 26
+     103          27 TO 39
+     227          40 TO 48
+     148          49 TO 51
+    1841          52
+  -------
+    3805
+ 
+Refusal(-1)           17
+Don't Know(-2)        62
+Invalid Skip(-3)       1
+TOTAL =========>    3885   VALID SKIP(-4)    2650     NON-INTERVIEW(-5)    6151
+ 
+Min:              0        Max:             52        Mean:               31.59
+ 
+Lead In: T85845.00[Default]
+Default Next Question: T85847.00
+--------------------------------------------------------------------------------
+T87883.00    [REGION]                                       Survey Year: 2020
+  PRIMARY VARIABLE
+
+ 
+             REGION OF CURRENT RESIDENCE
+ 
+COMMENT: REGION OF RESIDENCE
+ 
+NOTE: FOR VARIABLE CREATION SEE ATTACHMENT 104: GEOGRAPHIC REGIONS
+ 
+     937           1: NORTHEAST
+    1439           2: NORTH CENTRAL
+    2820           3: SOUTH
+    1272           4: WEST
+  -------
+    6468
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       3
+TOTAL =========>    6471   VALID SKIP(-4)      64     NON-INTERVIEW(-5)    6151
+ 
+Min:              1        Max:              4        Mean:                2.68
+ 
+Lead In: T87882.00[Default]
+Default Next Question: T87884.00

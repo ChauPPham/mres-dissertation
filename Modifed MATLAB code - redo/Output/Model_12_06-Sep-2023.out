@@ -1,0 +1,968 @@
+Model 12
+Error at iteration 1 = 1.07e+00
+06-Sep-2023 15:27:12
+                                       estimate          t-stat            step 
+Constant                                 -2.151          -3.959        0.068361 
+Black                                    -0.075          -2.205        0.005145 
+Hispanic                                 -0.126          -3.264       -0.013947 
+Female                                    0.269           9.341       -0.027522 
+Dropout                                   0.137           0.911       -0.006487 
+High school                               0.236           1.588       -0.020326 
+College                                  -0.029          -0.193       -0.004094 
+Age                                       0.199           3.672        0.000525 
+Log income                                0.661           4.565        0.032216 
+Zero income                               0.670           4.461        0.034549 
+# weeks worked last year                  0.029           4.539        0.002067 
+# weeks spouse worked last year          -0.007          -0.425       -0.002931 
+Unemployment rate                        -0.032          -1.065        0.001207 
+ICS                                       0.069           2.744        0.000784 
+Missing weeks spouse worked              -0.100          -1.225       -0.023719 
+NLSY business owner                      -0.038          -0.489       -0.049702 
+Real business owner                      -0.060          -0.707       -0.109589 
+Entrepreneur identity                    -0.262          -6.516       -0.382128 
+Missing business data                    -0.030          -0.648       -0.089963 
+Status Quo Bias                           0.075           0.419       -0.008080 
+Std Dev                                   0.789          30.333       -0.031145 
+Original Persistent Std Dev               0.345           5.035       -0.002657 
+SQB-Free Persistent Std Dev               0.618           0.682        1.073350 
+Original Transitory Std Dev               1.461          90.145       -0.002915 
+SQB-Free Transitory Std Dev               2.192          11.217        0.042704 
+
+Log-likelihood   -37594.3
+Error at iteration 2 = 3.81e-02
+06-Sep-2023 15:28:13
+                                       estimate          t-stat            step 
+Constant                                 -2.184          -4.022       -0.033270 
+Black                                    -0.068          -2.032        0.006979 
+Hispanic                                 -0.121          -3.203        0.004499 
+Female                                    0.266           9.346       -0.003928 
+Dropout                                   0.142           0.951        0.005911 
+High school                               0.244           1.647        0.008636 
+College                                  -0.028          -0.183        0.001526 
+Age                                       0.200           3.722        0.001126 
+Log income                                0.680           4.709        0.018367 
+Zero income                               0.689           4.613        0.019849 
+# weeks worked last year                  0.029           4.597        0.000276 
+# weeks spouse worked last year          -0.004          -0.259        0.002727 
+Unemployment rate                        -0.033          -1.118       -0.001508 
+ICS                                       0.067           2.684       -0.001806 
+Missing weeks spouse worked              -0.080          -0.991        0.019307 
+NLSY business owner                      -0.042          -0.541       -0.004300 
+Real business owner                      -0.053          -0.618        0.006692 
+Entrepreneur identity                    -0.280          -6.996       -0.017888 
+Missing business data                    -0.026          -0.571        0.004155 
+Status Quo Bias                           0.083           0.469        0.008437 
+Std Dev                                   0.808          30.116        0.019632 
+Original Persistent Std Dev               0.367           5.300        0.021958 
+SQB-Free Persistent Std Dev              -0.594          -0.622       -1.212009 
+Original Transitory Std Dev               1.469          90.837        0.007572 
+SQB-Free Transitory Std Dev               2.230           8.221        0.038067 
+
+Log-likelihood   -37533.6
+Error at iteration 3 = 1.15e+00
+06-Sep-2023 15:29:14
+                                       estimate          t-stat            step 
+Constant                                 -2.163          -3.912        0.020474 
+Black                                    -0.067          -1.963        0.000684 
+Hispanic                                 -0.123          -3.153       -0.001161 
+Female                                    0.268           9.201        0.002567 
+Dropout                                   0.142           0.927       -0.000469 
+High school                               0.243           1.599       -0.001804 
+College                                  -0.029          -0.185       -0.000967 
+Age                                       0.197           3.592       -0.002566 
+Log income                                0.682           4.655        0.001960 
+Zero income                               0.691           4.562        0.002051 
+# weeks worked last year                  0.030           4.555        0.000164 
+# weeks spouse worked last year          -0.005          -0.287       -0.000530 
+Unemployment rate                        -0.034          -1.112       -0.000457 
+ICS                                       0.068           2.699        0.001213 
+Missing weeks spouse worked              -0.084          -1.018       -0.003311 
+NLSY business owner                      -0.040          -0.496        0.002406 
+Real business owner                      -0.054          -0.610       -0.000716 
+Entrepreneur identity                    -0.284          -6.913       -0.004197 
+Missing business data                    -0.028          -0.609       -0.002325 
+Status Quo Bias                           0.068           0.373       -0.015651 
+Std Dev                                   0.809          29.529        0.000336 
+Original Persistent Std Dev               0.370           5.461        0.002774 
+SQB-Free Persistent Std Dev               0.559           0.604        1.152262 
+Original Transitory Std Dev               1.469          90.174       -0.000087 
+SQB-Free Transitory Std Dev               2.202           8.847       -0.028206 
+
+Log-likelihood   -37540.5
+Error at iteration 4 = 5.92e-03
+06-Sep-2023 15:30:18
+                                       estimate          t-stat            step 
+Constant                                 -2.158          -3.918        0.005921 
+Black                                    -0.067          -1.950        0.000440 
+Hispanic                                 -0.122          -3.133        0.000757 
+Female                                    0.267           9.163       -0.001207 
+Dropout                                   0.143           0.937        0.001110 
+High school                               0.243           1.610        0.000884 
+College                                  -0.027          -0.177        0.001422 
+Age                                       0.196           3.589       -0.000832 
+Log income                                0.677           4.637       -0.004111 
+Zero income                               0.687           4.540       -0.004811 
+# weeks worked last year                  0.029           4.524       -0.000252 
+# weeks spouse worked last year          -0.005          -0.293       -0.000076 
+Unemployment rate                        -0.034          -1.139       -0.000685 
+ICS                                       0.068           2.708        0.000145 
+Missing weeks spouse worked              -0.084          -1.022       -0.000230 
+NLSY business owner                      -0.042          -0.525       -0.002235 
+Real business owner                      -0.052          -0.589        0.001857 
+Entrepreneur identity                    -0.284          -6.919       -0.000146 
+Missing business data                    -0.028          -0.613       -0.000188 
+Status Quo Bias                           0.073           0.404        0.005323 
+Std Dev                                   0.807          29.849       -0.001528 
+Original Persistent Std Dev               0.372           5.590        0.002340 
+SQB-Free Persistent Std Dev              -0.547          -0.607       -1.105486 
+Original Transitory Std Dev               1.468          90.171       -0.000364 
+SQB-Free Transitory Std Dev               2.191           9.465       -0.010840 
+
+Log-likelihood   -37532.2
+Error at iteration 5 = 1.08e+00
+06-Sep-2023 15:31:19
+                                       estimate          t-stat            step 
+Constant                                 -2.155          -3.920        0.002973 
+Black                                    -0.066          -1.943        0.000320 
+Hispanic                                 -0.121          -3.126        0.000423 
+Female                                    0.267           9.166       -0.000225 
+Dropout                                   0.144           0.943        0.000656 
+High school                               0.244           1.614        0.000295 
+College                                  -0.027          -0.176        0.000090 
+Age                                       0.196           3.597        0.000042 
+Log income                                0.674           4.623       -0.003014 
+Zero income                               0.683           4.524       -0.003250 
+# weeks worked last year                  0.029           4.523       -0.000039 
+# weeks spouse worked last year          -0.005          -0.294       -0.000018 
+Unemployment rate                        -0.034          -1.142       -0.000034 
+ICS                                       0.068           2.708       -0.000037 
+Missing weeks spouse worked              -0.084          -1.025       -0.000128 
+NLSY business owner                      -0.042          -0.528       -0.000232 
+Real business owner                      -0.052          -0.590       -0.000013 
+Entrepreneur identity                    -0.285          -6.932       -0.000182 
+Missing business data                    -0.028          -0.614       -0.000035 
+Status Quo Bias                           0.073           0.406        0.000296 
+Std Dev                                   0.807          29.937       -0.000558 
+Original Persistent Std Dev               0.373           5.655        0.000508 
+SQB-Free Persistent Std Dev               0.535           0.602        1.082071 
+Original Transitory Std Dev               1.468          90.175       -0.000465 
+SQB-Free Transitory Std Dev               2.184           9.713       -0.006627 
+
+Log-likelihood   -37530.6
+Error at iteration 6 = 1.89e-03
+06-Sep-2023 15:32:20
+                                       estimate          t-stat            step 
+Constant                                 -2.153          -3.923        0.001887 
+Black                                    -0.066          -1.941        0.000138 
+Hispanic                                 -0.121          -3.122        0.000228 
+Female                                    0.266           9.165       -0.000234 
+Dropout                                   0.144           0.946        0.000297 
+High school                               0.244           1.618        0.000173 
+College                                  -0.027          -0.175        0.000240 
+Age                                       0.196           3.599       -0.000136 
+Log income                                0.673           4.617       -0.001481 
+Zero income                               0.682           4.517       -0.001670 
+# weeks worked last year                  0.029           4.519       -0.000054 
+# weeks spouse worked last year          -0.005          -0.295       -0.000012 
+Unemployment rate                        -0.035          -1.148       -0.000126 
+ICS                                       0.068           2.711        0.000013 
+Missing weeks spouse worked              -0.084          -1.026       -0.000054 
+NLSY business owner                      -0.042          -0.534       -0.000383 
+Real business owner                      -0.051          -0.587        0.000291 
+Entrepreneur identity                    -0.285          -6.938       -0.000009 
+Missing business data                    -0.028          -0.615       -0.000016 
+Status Quo Bias                           0.074           0.412        0.000896 
+Std Dev                                   0.806          30.021       -0.000446 
+Original Persistent Std Dev               0.373           5.690        0.000545 
+SQB-Free Persistent Std Dev              -0.531          -0.601       -1.066247 
+Original Transitory Std Dev               1.467          90.203       -0.000247 
+SQB-Free Transitory Std Dev               2.179           9.930       -0.005084 
+
+Log-likelihood   -37529.0
+Error at iteration 7 = 1.06e+00
+06-Sep-2023 15:33:21
+                                       estimate          t-stat            step 
+Constant                                 -2.151          -3.924        0.001243 
+Black                                    -0.066          -1.939        0.000108 
+Hispanic                                 -0.121          -3.120        0.000161 
+Female                                    0.266           9.165       -0.000137 
+Dropout                                   0.144           0.949        0.000226 
+High school                               0.244           1.620        0.000116 
+College                                  -0.027          -0.175        0.000109 
+Age                                       0.196           3.602       -0.000050 
+Log income                                0.672           4.613       -0.001069 
+Zero income                               0.681           4.512       -0.001178 
+# weeks worked last year                  0.029           4.518       -0.000029 
+# weeks spouse worked last year          -0.005          -0.296       -0.000009 
+Unemployment rate                        -0.035          -1.151       -0.000056 
+ICS                                       0.068           2.712        0.000003 
+Missing weeks spouse worked              -0.084          -1.028       -0.000048 
+NLSY business owner                      -0.043          -0.536       -0.000195 
+Real business owner                      -0.051          -0.586        0.000113 
+Entrepreneur identity                    -0.285          -6.942       -0.000036 
+Missing business data                    -0.028          -0.615       -0.000016 
+Status Quo Bias                           0.075           0.414        0.000381 
+Std Dev                                   0.806          30.071       -0.000268 
+Original Persistent Std Dev               0.374           5.713        0.000278 
+SQB-Free Persistent Std Dev               0.528           0.600        1.058968 
+Original Transitory Std Dev               1.467          90.215       -0.000179 
+SQB-Free Transitory Std Dev               2.177          10.021       -0.001766 
+
+Log-likelihood   -37528.1
+Error at iteration 8 = 5.04e-04
+06-Sep-2023 15:34:21
+                                       estimate          t-stat            step 
+Constant                                 -2.151          -3.925        0.000504 
+Black                                    -0.066          -1.938        0.000044 
+Hispanic                                 -0.121          -3.119        0.000071 
+Female                                    0.266           9.166       -0.000056 
+Dropout                                   0.144           0.950        0.000092 
+High school                               0.244           1.621        0.000048 
+College                                  -0.027          -0.174        0.000045 
+Age                                       0.196           3.603       -0.000016 
+Log income                                0.671           4.611       -0.000470 
+Zero income                               0.680           4.510       -0.000519 
+# weeks worked last year                  0.029           4.517       -0.000012 
+# weeks spouse worked last year          -0.005          -0.296       -0.000000 
+Unemployment rate                        -0.035          -1.153       -0.000023 
+ICS                                       0.068           2.713       -0.000004 
+Missing weeks spouse worked              -0.084          -1.028       -0.000004 
+NLSY business owner                      -0.043          -0.537       -0.000081 
+Real business owner                      -0.051          -0.586        0.000052 
+Entrepreneur identity                    -0.285          -6.944       -0.000005 
+Missing business data                    -0.028          -0.615        0.000003 
+Status Quo Bias                           0.075           0.416        0.000190 
+Std Dev                                   0.806          30.092       -0.000108 
+Original Persistent Std Dev               0.374           5.725        0.000121 
+SQB-Free Persistent Std Dev              -0.526          -0.600       -1.054152 
+Original Transitory Std Dev               1.467          90.226       -0.000081 
+SQB-Free Transitory Std Dev               2.176          10.085       -0.001576 
+
+Log-likelihood   -37527.8
+Error at iteration 9 = 1.05e+00
+06-Sep-2023 15:35:21
+                                       estimate          t-stat            step 
+Constant                                 -2.150          -3.926        0.000420 
+Black                                    -0.066          -1.937        0.000032 
+Hispanic                                 -0.121          -3.118        0.000049 
+Female                                    0.266           9.166       -0.000046 
+Dropout                                   0.144           0.950        0.000068 
+High school                               0.244           1.621        0.000035 
+College                                  -0.027          -0.174        0.000041 
+Age                                       0.196           3.603       -0.000024 
+Log income                                0.671           4.610       -0.000326 
+Zero income                               0.680           4.509       -0.000363 
+# weeks worked last year                  0.029           4.516       -0.000010 
+# weeks spouse worked last year          -0.005          -0.296       -0.000004 
+Unemployment rate                        -0.035          -1.154       -0.000023 
+ICS                                       0.068           2.713        0.000003 
+Missing weeks spouse worked              -0.084          -1.028       -0.000018 
+NLSY business owner                      -0.043          -0.538       -0.000070 
+Real business owner                      -0.051          -0.585        0.000046 
+Entrepreneur identity                    -0.285          -6.945       -0.000009 
+Missing business data                    -0.028          -0.616       -0.000007 
+Status Quo Bias                           0.075           0.416        0.000136 
+Std Dev                                   0.806          30.109       -0.000091 
+Original Persistent Std Dev               0.374           5.732        0.000100 
+SQB-Free Persistent Std Dev               0.525           0.599        1.051643 
+Original Transitory Std Dev               1.467          90.230       -0.000056 
+SQB-Free Transitory Std Dev               2.175          10.120       -0.000678 
+
+Log-likelihood   -37527.5
+Error at iteration 10 = 1.75e-04
+06-Sep-2023 15:36:22
+                                       estimate          t-stat            step 
+Constant                                 -2.150          -3.926        0.000175 
+Black                                    -0.066          -1.937        0.000016 
+Hispanic                                 -0.121          -3.118        0.000025 
+Female                                    0.266           9.166       -0.000020 
+Dropout                                   0.144           0.951        0.000033 
+High school                               0.244           1.622        0.000017 
+College                                  -0.027          -0.174        0.000015 
+Age                                       0.196           3.604       -0.000005 
+Log income                                0.671           4.609       -0.000164 
+Zero income                               0.679           4.508       -0.000180 
+# weeks worked last year                  0.029           4.516       -0.000004 
+# weeks spouse worked last year          -0.005          -0.296       -0.000000 
+Unemployment rate                        -0.035          -1.154       -0.000007 
+ICS                                       0.068           2.713       -0.000001 
+Missing weeks spouse worked              -0.084          -1.028       -0.000002 
+NLSY business owner                      -0.043          -0.539       -0.000028 
+Real business owner                      -0.051          -0.585        0.000017 
+Entrepreneur identity                    -0.285          -6.946       -0.000003 
+Missing business data                    -0.028          -0.616        0.000000 
+Status Quo Bias                           0.075           0.417        0.000061 
+Std Dev                                   0.806          30.116       -0.000037 
+Original Persistent Std Dev               0.374           5.736        0.000039 
+SQB-Free Persistent Std Dev              -0.525          -0.599       -1.050237 
+Original Transitory Std Dev               1.467          90.233       -0.000028 
+SQB-Free Transitory Std Dev               2.175          10.138       -0.000418 
+
+Log-likelihood   -37527.4
+Error at iteration 11 = 1.05e+00
+06-Sep-2023 15:37:23
+                                       estimate          t-stat            step 
+Constant                                 -2.150          -3.926        0.000117 
+Black                                    -0.066          -1.937        0.000009 
+Hispanic                                 -0.121          -3.117        0.000014 
+Female                                    0.266           9.166       -0.000013 
+Dropout                                   0.144           0.951        0.000019 
+High school                               0.244           1.622        0.000010 
+College                                  -0.027          -0.174        0.000011 
+Age                                       0.196           3.604       -0.000006 
+Log income                                0.671           4.609       -0.000094 
+Zero income                               0.679           4.507       -0.000105 
+# weeks worked last year                  0.029           4.516       -0.000003 
+# weeks spouse worked last year          -0.005          -0.296       -0.000001 
+Unemployment rate                        -0.035          -1.154       -0.000006 
+ICS                                       0.068           2.713        0.000000 
+Missing weeks spouse worked              -0.084          -1.028       -0.000004 
+NLSY business owner                      -0.043          -0.539       -0.000019 
+Real business owner                      -0.051          -0.585        0.000013 
+Entrepreneur identity                    -0.285          -6.947       -0.000002 
+Missing business data                    -0.028          -0.616       -0.000001 
+Status Quo Bias                           0.075           0.417        0.000039 
+Std Dev                                   0.806          30.121       -0.000025 
+Original Persistent Std Dev               0.374           5.738        0.000028 
+SQB-Free Persistent Std Dev               0.525           0.599        1.049408 
+Original Transitory Std Dev               1.467          90.235       -0.000016 
+SQB-Free Transitory Std Dev               2.174          10.150       -0.000248 
+
+Log-likelihood   -37527.3
+Error at iteration 12 = 6.41e-05
+06-Sep-2023 15:38:24
+                                       estimate          t-stat            step 
+Constant                                 -2.150          -3.926        0.000064 
+Black                                    -0.066          -1.937        0.000005 
+Hispanic                                 -0.121          -3.117        0.000008 
+Female                                    0.266           9.166       -0.000007 
+Dropout                                   0.144           0.951        0.000011 
+High school                               0.244           1.622        0.000006 
+College                                  -0.027          -0.174        0.000006 
+Age                                       0.196           3.604       -0.000003 
+Log income                                0.671           4.609       -0.000055 
+Zero income                               0.679           4.507       -0.000061 
+# weeks worked last year                  0.029           4.516       -0.000002 
+# weeks spouse worked last year          -0.005          -0.296       -0.000000 
+Unemployment rate                        -0.035          -1.155       -0.000003 
+ICS                                       0.068           2.713        0.000000 
+Missing weeks spouse worked              -0.084          -1.029       -0.000002 
+NLSY business owner                      -0.043          -0.539       -0.000010 
+Real business owner                      -0.051          -0.585        0.000007 
+Entrepreneur identity                    -0.285          -6.947       -0.000001 
+Missing business data                    -0.028          -0.616       -0.000000 
+Status Quo Bias                           0.075           0.417        0.000021 
+Std Dev                                   0.806          30.124       -0.000014 
+Original Persistent Std Dev               0.374           5.739        0.000015 
+SQB-Free Persistent Std Dev              -0.524          -0.599       -1.048973 
+Original Transitory Std Dev               1.467          90.236       -0.000009 
+SQB-Free Transitory Std Dev               2.174          10.155       -0.000122 
+
+Log-likelihood   -37527.2
+Error at iteration 13 = 1.05e+00
+06-Sep-2023 15:39:30
+                                       estimate          t-stat            step 
+Constant                                 -2.150          -3.926        0.000033 
+Black                                    -0.066          -1.937        0.000003 
+Hispanic                                 -0.121          -3.117        0.000004 
+Female                                    0.266           9.166       -0.000004 
+Dropout                                   0.144           0.951        0.000006 
+High school                               0.244           1.622        0.000003 
+College                                  -0.027          -0.174        0.000003 
+Age                                       0.196           3.604       -0.000001 
+Log income                                0.671           4.609       -0.000029 
+Zero income                               0.679           4.507       -0.000032 
+# weeks worked last year                  0.029           4.516       -0.000001 
+# weeks spouse worked last year          -0.005          -0.296       -0.000000 
+Unemployment rate                        -0.035          -1.155       -0.000002 
+ICS                                       0.068           2.714       -0.000000 
+Missing weeks spouse worked              -0.084          -1.029       -0.000001 
+NLSY business owner                      -0.043          -0.539       -0.000005 
+Real business owner                      -0.051          -0.585        0.000003 
+Entrepreneur identity                    -0.285          -6.947       -0.000001 
+Missing business data                    -0.028          -0.616       -0.000000 
+Status Quo Bias                           0.075           0.417        0.000011 
+Std Dev                                   0.806          30.125       -0.000007 
+Original Persistent Std Dev               0.374           5.740        0.000008 
+SQB-Free Persistent Std Dev               0.524           0.599        1.048716 
+Original Transitory Std Dev               1.467          90.236       -0.000005 
+SQB-Free Transitory Std Dev               2.174          10.159       -0.000078 
+
+Log-likelihood   -37527.2
+Error at iteration 14 = 2.09e-05
+06-Sep-2023 15:40:33
+                                       estimate          t-stat            step 
+Constant                                 -2.150          -3.926        0.000021 
+Black                                    -0.066          -1.937        0.000002 
+Hispanic                                 -0.121          -3.117        0.000003 
+Female                                    0.266           9.166       -0.000002 
+Dropout                                   0.144           0.951        0.000004 
+High school                               0.244           1.622        0.000002 
+College                                  -0.027          -0.174        0.000002 
+Age                                       0.196           3.604       -0.000001 
+Log income                                0.671           4.609       -0.000017 
+Zero income                               0.679           4.507       -0.000019 
+# weeks worked last year                  0.029           4.516       -0.000001 
+# weeks spouse worked last year          -0.005          -0.296       -0.000000 
+Unemployment rate                        -0.035          -1.155       -0.000001 
+ICS                                       0.068           2.714        0.000000 
+Missing weeks spouse worked              -0.084          -1.029       -0.000001 
+NLSY business owner                      -0.043          -0.539       -0.000003 
+Real business owner                      -0.051          -0.585        0.000002 
+Entrepreneur identity                    -0.285          -6.947       -0.000000 
+Missing business data                    -0.028          -0.616       -0.000000 
+Status Quo Bias                           0.075           0.417        0.000007 
+Std Dev                                   0.806          30.126       -0.000004 
+Original Persistent Std Dev               0.374           5.740        0.000005 
+SQB-Free Persistent Std Dev              -0.524          -0.599       -1.048576 
+Original Transitory Std Dev               1.467          90.236       -0.000003 
+SQB-Free Transitory Std Dev               2.174          10.161       -0.000040 
+
+Log-likelihood   -37527.2
+Error at iteration 15 = 1.05e+00
+06-Sep-2023 15:41:38
+                                       estimate          t-stat            step 
+Constant                                 -2.150          -3.926        0.000011 
+Black                                    -0.066          -1.937        0.000001 
+Hispanic                                 -0.121          -3.117        0.000001 
+Female                                    0.266           9.166       -0.000001 
+Dropout                                   0.144           0.951        0.000002 
+High school                               0.244           1.622        0.000001 
+College                                  -0.027          -0.174        0.000001 
+Age                                       0.196           3.604       -0.000000 
+Log income                                0.671           4.609       -0.000009 
+Zero income                               0.679           4.507       -0.000010 
+# weeks worked last year                  0.029           4.516       -0.000000 
+# weeks spouse worked last year          -0.005          -0.296       -0.000000 
+Unemployment rate                        -0.035          -1.155       -0.000000 
+ICS                                       0.068           2.714       -0.000000 
+Missing weeks spouse worked              -0.084          -1.029       -0.000000 
+NLSY business owner                      -0.043          -0.539       -0.000002 
+Real business owner                      -0.051          -0.585        0.000001 
+Entrepreneur identity                    -0.285          -6.947       -0.000000 
+Missing business data                    -0.028          -0.616       -0.000000 
+Status Quo Bias                           0.075           0.417        0.000004 
+Std Dev                                   0.806          30.126       -0.000002 
+Original Persistent Std Dev               0.374           5.740        0.000002 
+SQB-Free Persistent Std Dev               0.524           0.599        1.048497 
+Original Transitory Std Dev               1.467          90.237       -0.000002 
+SQB-Free Transitory Std Dev               2.174          10.162       -0.000023 
+
+Log-likelihood   -37527.2
+Error at iteration 16 = 6.32e-06
+06-Sep-2023 15:42:39
+                                       estimate          t-stat            step 
+Constant                                 -2.150          -3.926        0.000006 
+Black                                    -0.066          -1.937        0.000001 
+Hispanic                                 -0.121          -3.117        0.000001 
+Female                                    0.266           9.166       -0.000001 
+Dropout                                   0.144           0.951        0.000001 
+High school                               0.244           1.622        0.000001 
+College                                  -0.027          -0.174        0.000001 
+Age                                       0.196           3.604       -0.000000 
+Log income                                0.671           4.609       -0.000005 
+Zero income                               0.679           4.507       -0.000006 
+# weeks worked last year                  0.029           4.516       -0.000000 
+# weeks spouse worked last year          -0.005          -0.296       -0.000000 
+Unemployment rate                        -0.035          -1.155       -0.000000 
+ICS                                       0.068           2.714        0.000000 
+Missing weeks spouse worked              -0.084          -1.029       -0.000000 
+NLSY business owner                      -0.043          -0.539       -0.000001 
+Real business owner                      -0.051          -0.585        0.000001 
+Entrepreneur identity                    -0.285          -6.947       -0.000000 
+Missing business data                    -0.028          -0.616       -0.000000 
+Status Quo Bias                           0.075           0.417        0.000002 
+Std Dev                                   0.806          30.126       -0.000001 
+Original Persistent Std Dev               0.374           5.740        0.000001 
+SQB-Free Persistent Std Dev              -0.524          -0.599       -1.048453 
+Original Transitory Std Dev               1.467          90.237       -0.000001 
+SQB-Free Transitory Std Dev               2.174          10.162       -0.000013 
+
+Log-likelihood   -37527.2
+Error at iteration 17 = 1.05e+00
+06-Sep-2023 15:43:41
+                                       estimate          t-stat            step 
+Constant                                 -2.150          -3.926        0.000003 
+Black                                    -0.066          -1.937        0.000000 
+Hispanic                                 -0.121          -3.117        0.000000 
+Female                                    0.266           9.166       -0.000000 
+Dropout                                   0.144           0.951        0.000001 
+High school                               0.244           1.622        0.000000 
+College                                  -0.027          -0.174        0.000000 
+Age                                       0.196           3.604       -0.000000 
+Log income                                0.671           4.609       -0.000003 
+Zero income                               0.679           4.507       -0.000003 
+# weeks worked last year                  0.029           4.516       -0.000000 
+# weeks spouse worked last year          -0.005          -0.296       -0.000000 
+Unemployment rate                        -0.035          -1.155       -0.000000 
+ICS                                       0.068           2.714        0.000000 
+Missing weeks spouse worked              -0.084          -1.029       -0.000000 
+NLSY business owner                      -0.043          -0.539       -0.000001 
+Real business owner                      -0.051          -0.585        0.000000 
+Entrepreneur identity                    -0.285          -6.947       -0.000000 
+Missing business data                    -0.028          -0.616       -0.000000 
+Status Quo Bias                           0.075           0.417        0.000001 
+Std Dev                                   0.806          30.127       -0.000001 
+Original Persistent Std Dev               0.374           5.741        0.000001 
+SQB-Free Persistent Std Dev               0.524           0.599        1.048428 
+Original Transitory Std Dev               1.467          90.237       -0.000001 
+SQB-Free Transitory Std Dev               2.174          10.163       -0.000007 
+
+Log-likelihood   -37527.2
+Error at iteration 18 = 1.92e-06
+06-Sep-2023 15:44:40
+                                       estimate          t-stat            step 
+Constant                                 -2.150          -3.926        0.000002 
+Black                                    -0.066          -1.937        0.000000 
+Hispanic                                 -0.121          -3.117        0.000000 
+Female                                    0.266           9.166       -0.000000 
+Dropout                                   0.144           0.951        0.000000 
+High school                               0.244           1.622        0.000000 
+College                                  -0.027          -0.174        0.000000 
+Age                                       0.196           3.604       -0.000000 
+Log income                                0.671           4.609       -0.000002 
+Zero income                               0.679           4.507       -0.000002 
+# weeks worked last year                  0.029           4.516       -0.000000 
+# weeks spouse worked last year          -0.005          -0.296       -0.000000 
+Unemployment rate                        -0.035          -1.155       -0.000000 
+ICS                                       0.068           2.714        0.000000 
+Missing weeks spouse worked              -0.084          -1.029       -0.000000 
+NLSY business owner                      -0.043          -0.539       -0.000000 
+Real business owner                      -0.051          -0.585        0.000000 
+Entrepreneur identity                    -0.285          -6.947       -0.000000 
+Missing business data                    -0.028          -0.616       -0.000000 
+Status Quo Bias                           0.075           0.417        0.000001 
+Std Dev                                   0.806          30.127       -0.000000 
+Original Persistent Std Dev               0.374           5.741        0.000000 
+SQB-Free Persistent Std Dev              -0.524          -0.599       -1.048414 
+Original Transitory Std Dev               1.467          90.237       -0.000000 
+SQB-Free Transitory Std Dev               2.174          10.163       -0.000004 
+
+Log-likelihood   -37527.2
+Error at iteration 19 = 1.05e+00
+06-Sep-2023 15:45:37
+                                       estimate          t-stat            step 
+Constant                                 -2.150          -3.926        0.000001 
+Black                                    -0.066          -1.937        0.000000 
+Hispanic                                 -0.121          -3.117        0.000000 
+Female                                    0.266           9.166       -0.000000 
+Dropout                                   0.144           0.951        0.000000 
+High school                               0.244           1.622        0.000000 
+College                                  -0.027          -0.174        0.000000 
+Age                                       0.196           3.604       -0.000000 
+Log income                                0.671           4.609       -0.000001 
+Zero income                               0.679           4.507       -0.000001 
+# weeks worked last year                  0.029           4.516       -0.000000 
+# weeks spouse worked last year          -0.005          -0.296       -0.000000 
+Unemployment rate                        -0.035          -1.155       -0.000000 
+ICS                                       0.068           2.714        0.000000 
+Missing weeks spouse worked              -0.084          -1.029       -0.000000 
+NLSY business owner                      -0.043          -0.539       -0.000000 
+Real business owner                      -0.051          -0.585        0.000000 
+Entrepreneur identity                    -0.285          -6.947       -0.000000 
+Missing business data                    -0.028          -0.616       -0.000000 
+Status Quo Bias                           0.075           0.417        0.000000 
+Std Dev                                   0.806          30.127       -0.000000 
+Original Persistent Std Dev               0.374           5.741        0.000000 
+SQB-Free Persistent Std Dev               0.524           0.599        1.048406 
+Original Transitory Std Dev               1.467          90.237       -0.000000 
+SQB-Free Transitory Std Dev               2.174          10.163       -0.000002 
+
+Log-likelihood   -37527.2
+Error at iteration 20 = 6.13e-07
+06-Sep-2023 15:46:34
+                                       estimate          t-stat            step 
+Constant                                 -2.150          -3.926        0.000001 
+Black                                    -0.066          -1.937        0.000000 
+Hispanic                                 -0.121          -3.117        0.000000 
+Female                                    0.266           9.166       -0.000000 
+Dropout                                   0.144           0.951        0.000000 
+High school                               0.244           1.622        0.000000 
+College                                  -0.027          -0.174        0.000000 
+Age                                       0.196           3.604       -0.000000 
+Log income                                0.671           4.609       -0.000001 
+Zero income                               0.679           4.507       -0.000001 
+# weeks worked last year                  0.029           4.516       -0.000000 
+# weeks spouse worked last year          -0.005          -0.296       -0.000000 
+Unemployment rate                        -0.035          -1.155       -0.000000 
+ICS                                       0.068           2.714        0.000000 
+Missing weeks spouse worked              -0.084          -1.029       -0.000000 
+NLSY business owner                      -0.043          -0.539       -0.000000 
+Real business owner                      -0.051          -0.585        0.000000 
+Entrepreneur identity                    -0.285          -6.947       -0.000000 
+Missing business data                    -0.028          -0.616       -0.000000 
+Status Quo Bias                           0.075           0.417        0.000000 
+Std Dev                                   0.806          30.127       -0.000000 
+Original Persistent Std Dev               0.374           5.741        0.000000 
+SQB-Free Persistent Std Dev              -0.524          -0.599       -1.048402 
+Original Transitory Std Dev               1.467          90.237       -0.000000 
+SQB-Free Transitory Std Dev               2.174          10.163       -0.000001 
+
+Log-likelihood   -37527.2
+Estimates of Model 12.0
+06-Sep-2023 15:46:34
+Sample size 9279
+Number of iterations = 20
+Error at last iteration = 6.13e-07
+                                       estimate      std. error          t-stat 
+Constant                                 -2.150           0.548          -3.926 
+Black                                    -0.066           0.034          -1.937 
+Hispanic                                 -0.121           0.039          -3.117 
+Female                                    0.266           0.029           9.166 
+Dropout                                   0.144           0.152           0.951 
+High school                               0.244           0.150           1.622 
+College                                  -0.027           0.153          -0.174 
+Age                                       0.196           0.054           3.604 
+Log income                                0.671           0.146           4.609 
+Zero income                               0.679           0.151           4.507 
+# weeks worked last year                  0.029           0.006           4.516 
+# weeks spouse worked last year          -0.005           0.016          -0.296 
+Unemployment rate                        -0.035           0.030          -1.155 
+ICS                                       0.068           0.025           2.714 
+Missing weeks spouse worked              -0.084           0.082          -1.029 
+NLSY business owner                      -0.043           0.079          -0.539 
+Real business owner                      -0.051           0.088          -0.585 
+Entrepreneur identity                    -0.285           0.041          -6.947 
+Missing business data                    -0.028           0.046          -0.616 
+Status Quo Bias                           0.075           0.180           0.417 
+Std Dev                                   0.806           0.027          30.127 
+Original Persistent Std Dev               0.374           0.065           5.741 
+SQB-Free Persistent Std Dev              -0.524           0.875          -0.599 
+Original Transitory Std Dev               1.467           0.016          90.237 
+SQB-Free Transitory Std Dev               2.174           0.214          10.163 
+
+Log-likelihood   -37527.2
+Model 12
+Error at iteration 1 = 1.05e+00
+06-Sep-2023 17:44:24
+                                       estimate          t-stat            step 
+Constant                                 -2.158          -3.943       -0.008358 
+Black                                    -0.066          -1.923        0.000435 
+Hispanic                                 -0.121          -3.133       -0.000434 
+Female                                    0.267           9.196        0.000845 
+Dropout                                   0.145           0.956        0.001066 
+High school                               0.245           1.628        0.000607 
+College                                  -0.029          -0.189       -0.001848 
+Age                                       0.197           3.625        0.001042 
+Log income                                0.674           4.639        0.003460 
+Zero income                               0.683           4.539        0.004323 
+# weeks worked last year                  0.029           4.498       -0.000032 
+# weeks spouse worked last year          -0.005          -0.310       -0.000078 
+Unemployment rate                        -0.035          -1.148        0.000484 
+ICS                                       0.068           2.712        0.000230 
+Missing weeks spouse worked              -0.086          -1.047       -0.001641 
+NLSY business owner                      -0.044          -0.552       -0.000828 
+Real business owner                      -0.050          -0.568        0.001284 
+Entrepreneur identity                    -0.285          -6.948        0.000335 
+Missing business data                    -0.018          -0.397       -0.093238 
+Status Quo Bias                           0.077           0.426       -0.006487 
+Std Dev                                   0.805          30.109       -0.001492 
+Original Persistent Std Dev               0.376           5.778        0.002284 
+SQB-Free Persistent Std Dev               0.530           0.605        1.053726 
+Original Transitory Std Dev               1.468          90.295        0.000738 
+SQB-Free Transitory Std Dev               2.174          10.163        0.000135 
+
+Log-likelihood   -37530.7
+Error at iteration 2 = 6.88e-03
+06-Sep-2023 17:45:26
+                                       estimate          t-stat            step 
+Constant                                 -2.151          -3.928        0.006880 
+Black                                    -0.066          -1.937       -0.000508 
+Hispanic                                 -0.121          -3.117        0.000621 
+Female                                    0.266           9.170       -0.000627 
+Dropout                                   0.145           0.952       -0.000521 
+High school                               0.244           1.623       -0.000309 
+College                                  -0.027          -0.174        0.002345 
+Age                                       0.196           3.606       -0.000924 
+Log income                                0.672           4.614       -0.002782 
+Zero income                               0.680           4.513       -0.003006 
+# weeks worked last year                  0.029           4.513        0.000122 
+# weeks spouse worked last year          -0.005          -0.295        0.000242 
+Unemployment rate                        -0.035          -1.155       -0.000221 
+ICS                                       0.068           2.712        0.000076 
+Missing weeks spouse worked              -0.084          -1.028        0.001480 
+NLSY business owner                      -0.043          -0.540        0.000894 
+Real business owner                      -0.051          -0.584       -0.001430 
+Entrepreneur identity                    -0.285          -6.949        0.000027 
+Missing business data                    -0.027          -0.593       -0.009109 
+Status Quo Bias                           0.075           0.418       -0.001339 
+Std Dev                                   0.806          30.083        0.001349 
+Original Persistent Std Dev               0.374           5.764       -0.002448 
+SQB-Free Persistent Std Dev              -0.523          -0.601       -1.052813 
+Original Transitory Std Dev               1.467          90.194       -0.000410 
+SQB-Free Transitory Std Dev               2.176          10.118        0.001937 
+
+Log-likelihood   -37527.4
+Error at iteration 3 = 1.05e+00
+06-Sep-2023 17:46:26
+                                       estimate          t-stat            step 
+Constant                                 -2.151          -3.926        0.000941 
+Black                                    -0.066          -1.937       -0.000020 
+Hispanic                                 -0.121          -3.118       -0.000099 
+Female                                    0.266           9.166        0.000001 
+Dropout                                   0.144           0.951       -0.000100 
+High school                               0.244           1.622       -0.000209 
+College                                  -0.027          -0.174       -0.000096 
+Age                                       0.196           3.604       -0.000030 
+Log income                                0.671           4.610       -0.000638 
+Zero income                               0.680           4.508       -0.000688 
+# weeks worked last year                  0.029           4.516        0.000020 
+# weeks spouse worked last year          -0.005          -0.296       -0.000022 
+Unemployment rate                        -0.035          -1.154        0.000035 
+ICS                                       0.068           2.713        0.000008 
+Missing weeks spouse worked              -0.084          -1.029       -0.000070 
+NLSY business owner                      -0.043          -0.538        0.000139 
+Real business owner                      -0.051          -0.585       -0.000119 
+Entrepreneur identity                    -0.285          -6.946        0.000024 
+Missing business data                    -0.028          -0.614       -0.000953 
+Status Quo Bias                           0.075           0.416       -0.000263 
+Std Dev                                   0.806          30.110       -0.000065 
+Original Persistent Std Dev               0.374           5.733        0.000172 
+SQB-Free Persistent Std Dev               0.525           0.599        1.048323 
+Original Transitory Std Dev               1.467          90.222       -0.000151 
+SQB-Free Transitory Std Dev               2.173          10.172       -0.002612 
+
+Log-likelihood   -37527.5
+Error at iteration 4 = 1.28e-03
+06-Sep-2023 17:47:25
+                                       estimate          t-stat            step 
+Constant                                 -2.150          -3.926        0.000534 
+Black                                    -0.066          -1.936        0.000021 
+Hispanic                                 -0.121          -3.117        0.000053 
+Female                                    0.266           9.165       -0.000069 
+Dropout                                   0.144           0.951        0.000043 
+High school                               0.244           1.622        0.000020 
+College                                  -0.027          -0.174        0.000071 
+Age                                       0.196           3.604       -0.000051 
+Log income                                0.671           4.609       -0.000332 
+Zero income                               0.679           4.507       -0.000379 
+# weeks worked last year                  0.029           4.515       -0.000012 
+# weeks spouse worked last year          -0.005          -0.296       -0.000001 
+Unemployment rate                        -0.035          -1.155       -0.000034 
+ICS                                       0.068           2.714        0.000005 
+Missing weeks spouse worked              -0.084          -1.029        0.000005 
+NLSY business owner                      -0.043          -0.540       -0.000093 
+Real business owner                      -0.051          -0.585        0.000064 
+Entrepreneur identity                    -0.285          -6.947        0.000001 
+Missing business data                    -0.028          -0.616       -0.000093 
+Status Quo Bias                           0.075           0.418        0.000199 
+Std Dev                                   0.806          30.130       -0.000078 
+Original Persistent Std Dev               0.374           5.740        0.000077 
+SQB-Free Persistent Std Dev              -0.525          -0.599       -1.049809 
+Original Transitory Std Dev               1.467          90.232       -0.000059 
+SQB-Free Transitory Std Dev               2.175          10.145        0.001279 
+
+Log-likelihood   -37527.1
+Error at iteration 5 = 1.05e+00
+06-Sep-2023 17:48:26
+                                       estimate          t-stat            step 
+Constant                                 -2.150          -3.926       -0.000233 
+Black                                    -0.066          -1.937       -0.000012 
+Hispanic                                 -0.121          -3.118       -0.000018 
+Female                                    0.266           9.166        0.000035 
+Dropout                                   0.144           0.951       -0.000030 
+High school                               0.244           1.622       -0.000023 
+College                                  -0.027          -0.174       -0.000043 
+Age                                       0.196           3.604        0.000034 
+Log income                                0.671           4.609        0.000084 
+Zero income                               0.679           4.507        0.000103 
+# weeks worked last year                  0.029           4.516        0.000009 
+# weeks spouse worked last year          -0.005          -0.296        0.000006 
+Unemployment rate                        -0.035          -1.154        0.000023 
+ICS                                       0.068           2.713       -0.000010 
+Missing weeks spouse worked              -0.084          -1.028        0.000025 
+NLSY business owner                      -0.043          -0.539        0.000062 
+Real business owner                      -0.051          -0.585       -0.000049 
+Entrepreneur identity                    -0.285          -6.947        0.000009 
+Missing business data                    -0.028          -0.616        0.000006 
+Status Quo Bias                           0.075           0.417       -0.000096 
+Std Dev                                   0.806          30.119        0.000058 
+Original Persistent Std Dev               0.374           5.739       -0.000064 
+SQB-Free Persistent Std Dev               0.524           0.599        1.048826 
+Original Transitory Std Dev               1.467          90.237        0.000010 
+SQB-Free Transitory Std Dev               2.174          10.156       -0.000672 
+
+Log-likelihood   -37527.3
+Error at iteration 6 = 1.85e-04
+06-Sep-2023 17:49:27
+                                       estimate          t-stat            step 
+Constant                                 -2.150          -3.926        0.000185 
+Black                                    -0.066          -1.937        0.000008 
+Hispanic                                 -0.121          -3.117        0.000011 
+Female                                    0.266           9.166       -0.000021 
+Dropout                                   0.144           0.951        0.000018 
+High school                               0.244           1.622        0.000010 
+College                                  -0.027          -0.174        0.000026 
+Age                                       0.196           3.604       -0.000024 
+Log income                                0.671           4.609       -0.000075 
+Zero income                               0.679           4.507       -0.000088 
+# weeks worked last year                  0.029           4.516       -0.000005 
+# weeks spouse worked last year          -0.005          -0.296       -0.000004 
+Unemployment rate                        -0.035          -1.155       -0.000015 
+ICS                                       0.068           2.714        0.000007 
+Missing weeks spouse worked              -0.084          -1.029       -0.000017 
+NLSY business owner                      -0.043          -0.539       -0.000038 
+Real business owner                      -0.051          -0.585        0.000031 
+Entrepreneur identity                    -0.285          -6.947       -0.000004 
+Missing business data                    -0.028          -0.616       -0.000011 
+Status Quo Bias                           0.075           0.417        0.000058 
+Std Dev                                   0.806          30.127       -0.000042 
+Original Persistent Std Dev               0.374           5.740        0.000050 
+SQB-Free Persistent Std Dev              -0.524          -0.599       -1.048637 
+Original Transitory Std Dev               1.467          90.236       -0.000013 
+SQB-Free Transitory Std Dev               2.174          10.161        0.000051 
+
+Log-likelihood   -37527.2
+Error at iteration 7 = 1.05e+00
+06-Sep-2023 17:50:25
+                                       estimate          t-stat            step 
+Constant                                 -2.150          -3.926       -0.000033 
+Black                                    -0.066          -1.937        0.000001 
+Hispanic                                 -0.121          -3.117        0.000002 
+Female                                    0.266           9.166        0.000003 
+Dropout                                   0.144           0.951        0.000001 
+High school                               0.244           1.622        0.000000 
+College                                  -0.027          -0.174       -0.000007 
+Age                                       0.196           3.604        0.000008 
+Log income                                0.671           4.609       -0.000008 
+Zero income                               0.679           4.507       -0.000006 
+# weeks worked last year                  0.029           4.516        0.000001 
+# weeks spouse worked last year          -0.005          -0.296        0.000001 
+Unemployment rate                        -0.035          -1.155        0.000004 
+ICS                                       0.068           2.714       -0.000003 
+Missing weeks spouse worked              -0.084          -1.029        0.000006 
+NLSY business owner                      -0.043          -0.539        0.000008 
+Real business owner                      -0.051          -0.585       -0.000008 
+Entrepreneur identity                    -0.285          -6.947        0.000000 
+Missing business data                    -0.028          -0.616        0.000003 
+Status Quo Bias                           0.075           0.417       -0.000010 
+Std Dev                                   0.806          30.126        0.000008 
+Original Persistent Std Dev               0.374           5.740       -0.000012 
+SQB-Free Persistent Std Dev               0.524           0.599        1.048604 
+Original Transitory Std Dev               1.467          90.237       -0.000001 
+SQB-Free Transitory Std Dev               2.174          10.160       -0.000010 
+
+Log-likelihood   -37527.2
+Error at iteration 8 = 1.60e-05
+06-Sep-2023 17:51:24
+                                       estimate          t-stat            step 
+Constant                                 -2.150          -3.926        0.000016 
+Black                                    -0.066          -1.937        0.000000 
+Hispanic                                 -0.121          -3.117        0.000000 
+Female                                    0.266           9.166       -0.000001 
+Dropout                                   0.144           0.951        0.000000 
+High school                               0.244           1.622        0.000000 
+College                                  -0.027          -0.174        0.000002 
+Age                                       0.196           3.604       -0.000003 
+Log income                                0.671           4.609       -0.000004 
+Zero income                               0.679           4.507       -0.000005 
+# weeks worked last year                  0.029           4.516       -0.000000 
+# weeks spouse worked last year          -0.005          -0.296       -0.000000 
+Unemployment rate                        -0.035          -1.155       -0.000002 
+ICS                                       0.068           2.714        0.000001 
+Missing weeks spouse worked              -0.084          -1.029       -0.000002 
+NLSY business owner                      -0.043          -0.539       -0.000003 
+Real business owner                      -0.051          -0.585        0.000003 
+Entrepreneur identity                    -0.285          -6.947        0.000000 
+Missing business data                    -0.028          -0.616       -0.000001 
+Status Quo Bias                           0.075           0.417        0.000005 
+Std Dev                                   0.806          30.126       -0.000004 
+Original Persistent Std Dev               0.374           5.740        0.000006 
+SQB-Free Persistent Std Dev              -0.524          -0.599       -1.048460 
+Original Transitory Std Dev               1.467          90.237       -0.000001 
+SQB-Free Transitory Std Dev               2.174          10.163       -0.000063 
+
+Log-likelihood   -37527.2
+Error at iteration 9 = 1.05e+00
+06-Sep-2023 17:52:22
+                                       estimate          t-stat            step 
+Constant                                 -2.150          -3.926        0.000011 
+Black                                    -0.066          -1.937        0.000001 
+Hispanic                                 -0.121          -3.117        0.000002 
+Female                                    0.266           9.166       -0.000001 
+Dropout                                   0.144           0.951        0.000002 
+High school                               0.244           1.622        0.000001 
+College                                  -0.027          -0.174        0.000001 
+Age                                       0.196           3.604       -0.000000 
+Log income                                0.671           4.609       -0.000010 
+Zero income                               0.679           4.507       -0.000011 
+# weeks worked last year                  0.029           4.516       -0.000000 
+# weeks spouse worked last year          -0.005          -0.296       -0.000000 
+Unemployment rate                        -0.035          -1.155       -0.000000 
+ICS                                       0.068           2.714        0.000000 
+Missing weeks spouse worked              -0.084          -1.029       -0.000001 
+NLSY business owner                      -0.043          -0.539       -0.000002 
+Real business owner                      -0.051          -0.585        0.000001 
+Entrepreneur identity                    -0.285          -6.947       -0.000001 
+Missing business data                    -0.028          -0.616       -0.000000 
+Status Quo Bias                           0.075           0.417        0.000003 
+Std Dev                                   0.806          30.127       -0.000002 
+Original Persistent Std Dev               0.374           5.741        0.000002 
+SQB-Free Persistent Std Dev               0.524           0.599        1.048457 
+Original Transitory Std Dev               1.467          90.237       -0.000001 
+SQB-Free Transitory Std Dev               2.174          10.162        0.000015 
+
+Log-likelihood   -37527.2
+Error at iteration 10 = 5.64e-07
+06-Sep-2023 17:53:21
+                                       estimate          t-stat            step 
+Constant                                 -2.150          -3.926       -0.000002 
+Black                                    -0.066          -1.937       -0.000000 
+Hispanic                                 -0.121          -3.117       -0.000000 
+Female                                    0.266           9.166        0.000000 
+Dropout                                   0.144           0.951       -0.000000 
+High school                               0.244           1.622       -0.000000 
+College                                  -0.027          -0.174       -0.000000 
+Age                                       0.196           3.604        0.000000 
+Log income                                0.671           4.609        0.000000 
+Zero income                               0.679           4.507        0.000000 
+# weeks worked last year                  0.029           4.516        0.000000 
+# weeks spouse worked last year          -0.005          -0.296        0.000000 
+Unemployment rate                        -0.035          -1.155        0.000000 
+ICS                                       0.068           2.714       -0.000000 
+Missing weeks spouse worked              -0.084          -1.029        0.000000 
+NLSY business owner                      -0.043          -0.539        0.000001 
+Real business owner                      -0.051          -0.585       -0.000000 
+Entrepreneur identity                    -0.285          -6.947        0.000000 
+Missing business data                    -0.028          -0.616        0.000000 
+Status Quo Bias                           0.075           0.417       -0.000000 
+Std Dev                                   0.806          30.127        0.000001 
+Original Persistent Std Dev               0.374           5.741       -0.000001 
+SQB-Free Persistent Std Dev              -0.524          -0.599       -1.048423 
+Original Transitory Std Dev               1.467          90.237       -0.000000 
+SQB-Free Transitory Std Dev               2.174          10.163       -0.000017 
+
+Log-likelihood   -37527.2
+Estimates of Model 12.0
+06-Sep-2023 17:53:21
+Sample size 9279
+Number of iterations = 10
+Error at last iteration = 5.64e-07
+                                       estimate      std. error          t-stat 
+Constant                                 -2.150           0.548          -3.926 
+Black                                    -0.066           0.034          -1.937 
+Hispanic                                 -0.121           0.039          -3.117 
+Female                                    0.266           0.029           9.166 
+Dropout                                   0.144           0.152           0.951 
+High school                               0.244           0.150           1.622 
+College                                  -0.027           0.153          -0.174 
+Age                                       0.196           0.054           3.604 
+Log income                                0.671           0.146           4.609 
+Zero income                               0.679           0.151           4.507 
+# weeks worked last year                  0.029           0.006           4.516 
+# weeks spouse worked last year          -0.005           0.016          -0.296 
+Unemployment rate                        -0.035           0.030          -1.155 
+ICS                                       0.068           0.025           2.714 
+Missing weeks spouse worked              -0.084           0.082          -1.029 
+NLSY business owner                      -0.043           0.079          -0.539 
+Real business owner                      -0.051           0.088          -0.585 
+Entrepreneur identity                    -0.285           0.041          -6.947 
+Missing business data                    -0.028           0.046          -0.616 
+Status Quo Bias                           0.075           0.180           0.417 
+Std Dev                                   0.806           0.027          30.127 
+Original Persistent Std Dev               0.374           0.065           5.741 
+SQB-Free Persistent Std Dev              -0.524           0.875          -0.599 
+Original Transitory Std Dev               1.467           0.016          90.237 
+SQB-Free Transitory Std Dev               2.174           0.214          10.163 
+
+Log-likelihood   -37527.2

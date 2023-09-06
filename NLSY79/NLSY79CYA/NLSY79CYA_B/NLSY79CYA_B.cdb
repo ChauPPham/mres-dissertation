@@ -1,0 +1,5744 @@
+C00001.00    [CPUBID]                                       Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             ID CODE OF CHILD
+ 
+PUBLIC IDENTIFICATION CODE OF CHILD
+ 
+UNIVERSE: All biological children of NLSY79 mothers, regardless of age.
+ 
+   11551           1 TO 9999999: See Min & Max values below for range as of this
+                          release
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:            201        Max:        1267501        Mean:           600544.28
+ 
+Lead In: None.
+Default Next Question: C00002.00
+--------------------------------------------------------------------------------
+C00002.00    [MPUBID]                                       Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             ID CODE OF MOTHER OF CHILD
+ 
+PUBLIC IDENTIFICATION CODE OF MOTHER OF CHILD
+ 
+UNIVERSE: All biological children of NLSY79 mothers, regardless of age.
+ 
+NOTE: SEE YOUTH REFERENCE NUMBER R(    1.)
+ 
+   11551           1 TO 12686: NLSY79 Public ID
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:              2        Max:          12675        Mean:             6005.42
+ 
+Lead In: C00001.00[Default]
+Default Next Question: C00003.00
+--------------------------------------------------------------------------------
+C00053.00    [CRACE]                                        Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             RACE OF CHILD (MOTHER'S RACIAL/ETHNIC COHORT FROM SCREENER)
+ 
+RACE OF CHILD (MOTHER'S RACIAL/ETHNIC COHORT FROM SCREENER)
+ 
+NOTE: Child race/ethnicity is based on the report of the mother. See NLSY79 main
+Youth Reference Number R( 2147.)
+ 
+    2224       1 HISPANIC
+    3196       2 BLACK
+    6131       3 NON-BLACK, NON-HISPANIC
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:              1        Max:              3        Mean:                2.34
+ 
+Lead In: C00052.00[Default]
+Default Next Question: C00054.00
+--------------------------------------------------------------------------------
+C00054.00    [CSEX]                                         Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             SEX OF CHILD
+ 
+SEX OF CHILD
+ 
+    5898       1 MALE
+    5651       2 FEMALE
+  -------
+   11549
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:              1        Max:              2        Mean:                1.49
+ 
+Lead In: C00053.00[Default]
+Default Next Question: C00055.00
+--------------------------------------------------------------------------------
+C00057.00    [CYRB]                                         Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             DATE OF BIRTH OF CHILD - YEAR
+ 
+DATE OF BIRTH OF CHILD - YEAR
+ 
+    1223        1970 TO 1978: < before 1979
+     528        1979
+     607        1980
+     714        1981
+     703        1982
+     715        1983
+     657        1984
+     676        1985
+     618        1986
+     621        1987
+     585        1988
+     629        1989
+     495        1990
+     424        1991
+     402        1992
+     348        1993
+     303        1994
+     245        1995
+     229        1996
+     216        1997
+     156        1998
+     129        1999
+     100        2000
+      81        2001
+      48        2002
+      34        2003
+      24        2004
+      15        2005
+      11        2006
+       4        2007
+       3        2008
+       3        2009
+       2        2010
+       2        2011
+       1        2014
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:           1970        Max:           2014        Mean:              1986.1
+ 
+Lead In: C00055.00[Default]
+Default Next Question: C00057.01
+--------------------------------------------------------------------------------
+C05420.00    [MS860143]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+HOME: MS PART B (3-5.11) - HOW OFTEN MOTHER READS TO CHILD  86 INT
+ 
+      67       1 NEVER
+     152       2 SEVERAL TIMES A YEAR
+     284       3 SEVERAL TIMES A MONTH
+     374       4 ONCE A WEEK
+     511       5 ABOUT 3 TIMES A WEEK
+     251       6 EVERYDAY
+  -------
+    1639
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1639      MISSING(-7)    9912
+ 
+Min:              1        Max:              6        Mean:                4.14
+ 
+Lead In: C05419.00[Default]
+Default Next Question: C05421.00
+--------------------------------------------------------------------------------
+C05421.00    [MS860144]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+HOME: MS PART B (3-5.11) - HOW MANY CHILDRENS BOOKS CHILD HAS  86 INT
+ 
+      89       1 NONE, TOO YOUNG
+     179       2 1 OR 2 BOOKS
+     363       3 3 OR 9 BOOKS
+    1007       4 10 OR MORE BOOKS
+  -------
+    1638
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1638      MISSING(-7)    9913
+ 
+Min:              1        Max:              4        Mean:                 3.4
+ 
+Lead In: C05420.00[Default]
+Default Next Question: C05422.00
+--------------------------------------------------------------------------------
+C05422.00    [MS860145]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY MAGAZINES FAMILY GETS REGULARLY
+ 
+HOME: MS PART B (3-5.11) - HOW MANY MAGAZINES FAMILY GETS REGULARLY  86 INT
+ 
+     549       1 NONE
+     346       2 ONE
+     303       3 TWO
+     191       4 THREE
+     250       5 FOUR OR MORE
+  -------
+    1639
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1639      MISSING(-7)    9912
+ 
+Min:              1        Max:              5        Mean:                2.54
+ 
+Lead In: C05421.00[Default]
+Default Next Question: C05423.00
+--------------------------------------------------------------------------------
+C05423.00    [MS860146]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD HAVE A RECORD OR TAPE PLAYER?
+ 
+HOME: MS PART B (3-5.11) - DOES CHILD HAVE A RECORD OR TAPE PLAYER?  86 INT
+ 
+     931       1 YES
+     704       0 NO
+  -------
+    1635
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1635      MISSING(-7)    9916
+ 
+Min:              0        Max:              1        Mean:                 .57
+ 
+Lead In: C05422.00[Default]
+Default Next Question: C05424.00
+--------------------------------------------------------------------------------
+C05424.00    [MS860147]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN NUMBERS
+ 
+HOME: MS PART B (3-5.11) - FAMILY MEMBER HELPS CHILD LEARN NUMBERS  86 INT
+ 
+    1526       1 YES
+       0       2 YES
+       0       3 YES
+       0       4 YES
+       0       5 YES
+       0       6 YES
+       0       7 YES
+       0       8 YES
+       0       9 YES
+       0      10 YES
+       0      11 YES
+       0      12 YES
+       0      13 YES
+       0      14 YES
+       0      15 YES
+       0      16 YES
+       0      17 YES
+       0      18 YES
+       0      19 YES
+  -------
+    1526
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1526      MISSING(-7)   10025
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: C05423.00[Default]
+Default Next Question: C05425.00
+--------------------------------------------------------------------------------
+C05425.00    [MS860148]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN THE 
+             ALPHABET
+ 
+HOME: MS PART B (3-5.11) - FAMILY MEMBER HELPS CHILD LEARN THE ALPHABET  86 INT
+ 
+       0       1 YES
+    1411       2 YES
+       0       3 YES
+       0       4 YES
+       0       5 YES
+       0       6 YES
+       0       7 YES
+       0       8 YES
+       0       9 YES
+       0      10 YES
+       0      11 YES
+       0      12 YES
+       0      13 YES
+       0      14 YES
+       0      15 YES
+       0      16 YES
+       0      17 YES
+       0      18 YES
+       0      19 YES
+  -------
+    1411
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1411      MISSING(-7)   10140
+ 
+Min:              2        Max:              2        Mean:                   2
+ 
+Lead In: C05424.00[Default]
+Default Next Question: C05426.00
+--------------------------------------------------------------------------------
+C05426.00    [MS860149]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN COLORS
+ 
+HOME: MS PART B (3-5.11) - FAMILY MEMBER HELPS CHILD LEARN COLORS  86 INT
+ 
+       0       1 YES
+       0       2 YES
+    1487       3 YES
+       0       4 YES
+       0       5 YES
+       0       6 YES
+       0       7 YES
+       0       8 YES
+       0       9 YES
+       0      10 YES
+       0      11 YES
+       0      12 YES
+       0      13 YES
+       0      14 YES
+       0      15 YES
+       0      16 YES
+       0      17 YES
+       0      18 YES
+       0      19 YES
+  -------
+    1487
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1487      MISSING(-7)   10064
+ 
+Min:              3        Max:              3        Mean:                   3
+ 
+Lead In: C05425.00[Default]
+Default Next Question: C05427.00
+--------------------------------------------------------------------------------
+C05427.00    [MS860150]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN SHAPES 
+             AND SIZES
+ 
+HOME: MS PART B (3-5.11) - FAMILY MEMBER HELPS CHILD LEARN SHAPES AND SIZES  86 
+INT
+ 
+       0       1 YES
+       0       2 YES
+       0       3 YES
+    1174       4 YES
+       0       5 YES
+       0       6 YES
+       0       7 YES
+       0       8 YES
+       0       9 YES
+       0      10 YES
+       0      11 YES
+       0      12 YES
+       0      13 YES
+       0      14 YES
+       0      15 YES
+       0      16 YES
+       0      17 YES
+       0      18 YES
+       0      19 YES
+  -------
+    1174
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1174      MISSING(-7)   10377
+ 
+Min:              4        Max:              4        Mean:                   4
+ 
+Lead In: C05426.00[Default]
+Default Next Question: C05428.00
+--------------------------------------------------------------------------------
+C05437.00    [MS860168]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD IS TAKEN ON AN OUTING
+ 
+HOME: MS PART B (3-5.11) - HOW OFTEN IS CHILD TAKEN ON AN OUTING  86 INT
+ 
+     158       1 FEW TIMES A YR OR <
+     167       2 ABOUT ONCE A MONTH
+     516       3 2 OR 3 TIMES A MONTH
+     650       4 SEVERAL TIMES A WEEK
+     141       5 ABOUT ONCE A DAY
+  -------
+    1632
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1632      MISSING(-7)    9919
+ 
+Min:              1        Max:              5        Mean:                3.28
+ 
+Lead In: C05436.00[Default]
+Default Next Question: C05438.00
+--------------------------------------------------------------------------------
+C05438.00    [MS860169]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN 
+             PAST YEAR
+ 
+HOME: MS PART B (3-5.11) - HOW OFTEN CHILD IS TAKEN TO A MUSEUM IN PAST YEAR  86
+INT
+ 
+     750       1 NEVER, TOO YOUNG
+     539       2 ONCE OR TWICE
+     255       3 SEVERAL TIMES
+      68       4 MONTHLY
+      22       5 WKLY OR MORE FREQUENTLY
+  -------
+    1634
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1634      MISSING(-7)    9917
+ 
+Min:              1        Max:              5        Mean:                1.82
+ 
+Lead In: C05437.00[Default]
+Default Next Question: C05439.00
+--------------------------------------------------------------------------------
+C05439.00    [MS860170]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+HOME: MS PART B (3-5.11) - DOES CHILD SEE FATHER(-FIGURE) DAILY?  86 INT
+ 
+    1203       1 YES
+     427       0 NO
+  -------
+    1630
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1630      MISSING(-7)    9921
+ 
+Min:              0        Max:              1        Mean:                 .74
+ 
+Lead In: C05438.00[Default]
+Default Next Question: C05440.00
+--------------------------------------------------------------------------------
+C05440.00    [MS860171]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+HOME: MS PART B (3-5.11) - HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD  86 INT
+ 
+     473       1 MORE THAN ONCE A DAY
+     462       2 ONCE A DAY
+     195       3 SEVERAL TIMES A WEEK
+       1       4 ONCE A WEEK
+      30       5 ONCE A MONTH OR LESS
+      34       6 NEVER
+  -------
+    1195
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1195      MISSING(-7)   10356
+ 
+Min:              1        Max:              6        Mean:                1.96
+ 
+Lead In: C05439.00[Default]
+Default Next Question: C05441.00
+--------------------------------------------------------------------------------
+C07524.00    [MS880260]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+HOME: MS PART B (3-5.11) - HOW OFTEN MOTHER READS TO CHILD  88 INT
+ 
+      58       1 NEVER
+     154       2 SEVERAL TIMES A YEAR
+     324       3 SEVERAL TIMES A MONTH
+     328       4 ONCE A WEEK
+     544       5 ABOUT 3 TIMES A WEEK
+     343       6 EVERYDAY
+  -------
+    1751
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1751      MISSING(-7)    9800
+ 
+Min:              1        Max:              6        Mean:                4.24
+ 
+Lead In: C07523.00[Default]
+Default Next Question: C07525.00
+--------------------------------------------------------------------------------
+C07525.00    [MS880261]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+HOME: MS PART B (3-5.11) - HOW MANY CHILDRENS BOOKS CHILD HAS  88 INT
+ 
+      54       1 NONE, TOO YOUNG
+     137       2 1 OR 2 BOOKS
+     353       3 3 OR 9 BOOKS
+    1204       4 10 OR MORE BOOKS
+  -------
+    1748
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1748      MISSING(-7)    9803
+ 
+Min:              1        Max:              4        Mean:                3.55
+ 
+Lead In: C07524.00[Default]
+Default Next Question: C07526.00
+--------------------------------------------------------------------------------
+C07526.00    [MS880262]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY MAGAZINES FAMILY GETS REGULARLY
+ 
+HOME: MS PART B (3-5.11) - HOW MANY MAGAZINES FAMILY GETS REGULARLY  88 INT
+ 
+     469       1 NONE
+     339       2 ONE
+     366       3 TWO
+     295       4 THREE
+     267       5 FOUR OR MORE
+  -------
+    1736
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1736      MISSING(-7)    9815
+ 
+Min:              1        Max:              5        Mean:                2.74
+ 
+Lead In: C07525.00[Default]
+Default Next Question: C07527.00
+--------------------------------------------------------------------------------
+C07527.00    [MS880263]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD HAVE A RECORD OR TAPE PLAYER?
+ 
+HOME: MS PART B (3-5.11) - DOES CHILD HAVE A RECORD OR TAPE PLAYER?  88 INT
+ 
+    1173       1 YES
+     557       0 NO
+  -------
+    1730
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1730      MISSING(-7)    9821
+ 
+Min:              0        Max:              1        Mean:                 .68
+ 
+Lead In: C07526.00[Default]
+Default Next Question: C07528.00
+--------------------------------------------------------------------------------
+C07528.00    [MS880264]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN NUMBERS
+ 
+HOME: MS PART B (3-5.11) - FAMILY MEMBER HELPS CHILD LEARN NUMBERS  88 INT
+ 
+    1593       1 NUMBERS
+  -------
+    1593
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1593      MISSING(-7)    9958
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: C07527.00[Default]
+Default Next Question: C07529.00
+--------------------------------------------------------------------------------
+C07529.00    [MS880265]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN THE 
+             ALPHABET
+ 
+HOME: MS PART B (3-5.11) - FAMILY MEMBER HELPS CHILD LEARN THE ALPHABET  88 INT
+ 
+    1552       2 THE ALPHABET
+  -------
+    1552
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1552      MISSING(-7)    9999
+ 
+Min:              2        Max:              2        Mean:                   2
+ 
+Lead In: C07528.00[Default]
+Default Next Question: C07530.00
+--------------------------------------------------------------------------------
+C07530.00    [MS880266]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN COLORS
+ 
+HOME: MS PART B (3-5.11) - FAMILY MEMBER HELPS CHILD LEARN COLORS  88 INT
+ 
+    1588       3 COLORS
+  -------
+    1588
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1588      MISSING(-7)    9963
+ 
+Min:              3        Max:              3        Mean:                   3
+ 
+Lead In: C07529.00[Default]
+Default Next Question: C07531.00
+--------------------------------------------------------------------------------
+C07531.00    [MS880267]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN SHAPES 
+             AND SIZES
+ 
+HOME: MS PART B (3-5.11) - FAMILY MEMBER HELPS CHILD LEARN SHAPES AND SIZES  88 
+INT
+ 
+    1319       4 SHAPES AND SIZES
+  -------
+    1319
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1319      MISSING(-7)   10232
+ 
+Min:              4        Max:              4        Mean:                   4
+ 
+Lead In: C07530.00[Default]
+Default Next Question: C07532.00
+--------------------------------------------------------------------------------
+C07544.00    [MS880330]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD IS TAKEN ON AN OUTING
+ 
+HOME: MS PART B (3-5.11) - HOW OFTEN CHILD IS TAKEN ON AN OUTING  88 INT
+ 
+     147       1 A FEW TIMES A YEAR OR LESS
+     187       2 ABOUT ONCE A MONTH
+     503       3 ABOUT 2 OR 3 TIMES A MONTH
+     722       4 SEVERAL TIMES A WEEK
+     167       5 ABOUT ONCE A DAY
+  -------
+    1726
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1726      MISSING(-7)    9825
+ 
+Min:              1        Max:              5        Mean:                3.33
+ 
+Lead In: C07543.00[Default]
+Default Next Question: C07545.00
+--------------------------------------------------------------------------------
+C07545.00    [MS880331]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN 
+             PAST YEAR
+ 
+HOME: MS PART B (3-5.11) - HOW OFTEN CHILD IS TAKEN TO A MUSEUM IN PAST YEAR  88
+INT
+ 
+     668       1 NEVER, TOO YOUNG
+     572       2 ONCE OR TWICE
+     328       3 SEVERAL TIMES
+     138       4 ABOUT ONCE A MONTH
+      22       5 ABOUT ONCE A WEEK OR MORE OFTEN
+  -------
+    1728
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1728      MISSING(-7)    9823
+ 
+Min:              1        Max:              5        Mean:                   2
+ 
+Lead In: C07544.00[Default]
+Default Next Question: C07546.00
+--------------------------------------------------------------------------------
+C07546.00    [MS880332]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+HOME: MS PART B (3-5.11) - DOES CHILD SEE FATHER(-FIGURE) DAILY?  88 INT
+ 
+    1339       1 YES
+     416       0 NO
+  -------
+    1755
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1755      MISSING(-7)    9796
+ 
+Min:              0        Max:              1        Mean:                 .76
+ 
+Lead In: C07545.00[Default]
+Default Next Question: C07547.00
+--------------------------------------------------------------------------------
+C07547.00    [MS880333]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+HOME: MS PART B (3-5.11) - HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD  88 INT
+ 
+     516       1 MORE THAN ONCE A DAY
+     583       2 ONCE A DAY
+     226       3 SEVERAL TIMES A WEEK
+      88       4 ONCE A WEEK
+      79       5 ONCE A MONTH OR LESS
+     262       6 NEVER
+  -------
+    1754
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1754      MISSING(-7)    9797
+ 
+Min:              1        Max:              6        Mean:                2.67
+ 
+Lead In: C07546.00[Default]
+Default Next Question: C07548.00
+--------------------------------------------------------------------------------
+C09540.00    [MS900323]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+HOME: MS PART B (3-5.11) - HOW OFTEN MOTHER READS TO CHILD  90 INT
+ 
+      41       1 NEVER
+     102       2 SEVERAL TIMES A YEAR
+     209       3 SEVERAL TIMES A MONTH
+     253       4 ONCE A WEEK
+     497       5 ABOUT 3 TIMES A WEEK
+     305       6 EVERYDAY
+  -------
+    1407
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1408      MISSING(-7)   10143
+ 
+Min:              1        Max:              6        Mean:                4.41
+ 
+Lead In: C09539.00[Default]
+Default Next Question: C09541.00
+--------------------------------------------------------------------------------
+C09541.00    [MS900325]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+HOME: MS PART B (3-5.11) - HOW MANY CHILDRENS BOOKS CHILD HAS  90 INT
+ 
+      30       1 NONE, TOO YOUNG
+      78       2 1 OR 2 BOOKS
+     232       3 3 OR 9 BOOKS
+    1066       4 10 OR MORE BOOKS
+  -------
+    1406
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1407      MISSING(-7)   10144
+ 
+Min:              1        Max:              4        Mean:                3.66
+ 
+Lead In: C09540.00[Default]
+Default Next Question: C09542.00
+--------------------------------------------------------------------------------
+C09542.00    [MS900327]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY MAGAZINES FAMILY GETS REGULARLY
+ 
+HOME: MS PART B (3-5.11) - HOW MANY MAGAZINES FAMILY GETS REGULARLY  90 INT
+ 
+     375       1 NONE
+     240       2 ONE
+     340       3 TWO
+     234       4 THREE
+     222       5 FOUR OR MORE
+  -------
+    1411
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1412      MISSING(-7)   10139
+ 
+Min:              1        Max:              5        Mean:                2.78
+ 
+Lead In: C09541.00[Default]
+Default Next Question: C09543.00
+--------------------------------------------------------------------------------
+C09543.00    [MS900329]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD HAVE A RECORD, TAPE, OR CD 
+             PLAYER?
+ 
+HOME: MS PART B (3-5.11) - DOES CHILD HAVE A RECORD OR TAPE PLAYER?  90 INT
+ 
+    1052       1 YES
+     358       0 NO
+  -------
+    1410
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1411      MISSING(-7)   10140
+ 
+Min:              0        Max:              1        Mean:                 .75
+ 
+Lead In: C09542.00[Default]
+Default Next Question: C09544.00
+--------------------------------------------------------------------------------
+C09544.00    [MS900331]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN NUMBERS
+ 
+HOME: MS PART B (3-5.11) - FAMILY MEMBER HELPS CHILD LEARN NUMBERS  90 INT
+ 
+    1289       1 NUMBERS
+  -------
+    1289
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1290      MISSING(-7)   10261
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: C09543.00[Default]
+Default Next Question: C09545.00
+--------------------------------------------------------------------------------
+C09545.00    [MS900333]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN THE 
+             ALPHABET
+ 
+HOME: MS PART B (3-5.11) - FAMILY MEMBER HELPS CHILD LEARN THE ALPHABET  90 INT
+ 
+    1261       2 THE ALPHABET
+  -------
+    1261
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1262      MISSING(-7)   10289
+ 
+Min:              2        Max:              2        Mean:                   2
+ 
+Lead In: C09544.00[Default]
+Default Next Question: C09546.00
+--------------------------------------------------------------------------------
+C09546.00    [MS900335]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN COLORS
+ 
+HOME: MS PART B (3-5.11) - FAMILY MEMBER HELPS CHILD LEARN COLORS  90 INT
+ 
+    1299       3 COLORS
+  -------
+    1299
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1300      MISSING(-7)   10251
+ 
+Min:              3        Max:              3        Mean:                   3
+ 
+Lead In: C09545.00[Default]
+Default Next Question: C09547.00
+--------------------------------------------------------------------------------
+C09547.00    [MS900337]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN SHAPES 
+             AND SIZES
+ 
+HOME: MS PART B (3-5.11) - FAMILY MEMBER HELPS CHILD LEARN SHAPES AND SIZES  90 
+INT
+ 
+    1108       4 SHAPES AND SIZES
+  -------
+    1108
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1109      MISSING(-7)   10442
+ 
+Min:              4        Max:              4        Mean:                   4
+ 
+Lead In: C09546.00[Default]
+Default Next Question: C09548.00
+--------------------------------------------------------------------------------
+C09560.00    [MS900363]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD IS TAKEN ON AN OUTING
+ 
+HOME: MS PART B (3-5.11) - HOW OFTEN CHILD IS TAKEN ON AN OUTING  90 INT
+ 
+     120       1 A FEW TIMES A YEAR OR LESS
+     146       2 ABOUT ONCE A MONTH
+     400       3 ABOUT 2 OR 3 TIMES A MONTH
+     584       4 SEVERAL TIMES A WEEK
+     158       5 ABOUT ONCE A DAY
+  -------
+    1408
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1409      MISSING(-7)   10142
+ 
+Min:              1        Max:              5        Mean:                3.37
+ 
+Lead In: C09559.00[Default]
+Default Next Question: C09561.00
+--------------------------------------------------------------------------------
+C09561.00    [MS900365]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN 
+             PAST YEAR
+ 
+HOME: MS PART B (3-5.11) - HOW OFTEN CHILD IS TAKEN TO A MUSEUM IN PAST YEAR  90
+INT
+ 
+     458       1 NEVER, TOO YOUNG
+     533       2 ONCE OR TWICE
+     270       3 SEVERAL TIMES
+     124       4 ABOUT ONCE A MONTH
+      23       5 ABOUT ONCE A WEEK OR MORE OFTEN
+  -------
+    1408
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1409      MISSING(-7)   10142
+ 
+Min:              1        Max:              5        Mean:                2.09
+ 
+Lead In: C09560.00[Default]
+Default Next Question: C09562.00
+--------------------------------------------------------------------------------
+C09567.00    [MS900421]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+HOME: MS PART B (3-5.11) - DOES CHILD SEE FATHER(-FIGURE) DAILY?  90 INT
+ 
+    1104       1 YES
+     269       0 NO
+      25       2 NO FATHER, STEP FATHER, OR FATHER-FIGURE
+  -------
+    1398
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1399      MISSING(-7)   10152
+ 
+Min:              0        Max:              2        Mean:                 .83
+ 
+Lead In: C09566.00[Default]
+Default Next Question: C09568.00
+--------------------------------------------------------------------------------
+C09568.00    [MS900423]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+HOME: MS PART B (3-5.11) - HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD  90 INT
+ 
+     368       1 MORE THAN ONCE A DAY
+     524       2 ONCE A DAY
+     177       3 SEVERAL TIMES A WEEK
+      74       4 ONCE A WEEK
+      57       5 ONCE A MONTH OR LESS
+     166       6 NEVER
+      33       7 NO FATHER, STEP FATHER, OR FATHER-FIGURE
+  -------
+    1399
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1400      MISSING(-7)   10151
+ 
+Min:              1        Max:              7        Mean:                2.68
+ 
+Lead In: C09567.00[Default]
+Default Next Question: C09569.00
+--------------------------------------------------------------------------------
+C11521.00    [MS920323]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+HOME PART B (3-5 YRS): HOW OFTEN MOTHER READS TO CHILD  92 INT
+ 
+      38       1 NEVER
+      74       2 SEVERAL TIMES A YEAR
+     213       3 SEVERAL TIMES A MONTH
+     238       4 ONCE A WEEK
+     437       5 ABOUT 3 TIMES A WEEK
+     359       6 EVERYDAY
+  -------
+    1359
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1359      MISSING(-7)   10192
+ 
+Min:              1        Max:              6        Mean:                 4.5
+ 
+Lead In: C11520.00[Default]
+Default Next Question: C11522.00
+--------------------------------------------------------------------------------
+C11522.00    [MS920325]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+HOME PART B (3-5 YRS): HOW MANY CHILDREN'S BOOKS CHILD HAS  92 INT
+ 
+      23       1 NONE, TOO YOUNG
+      57       2 1 OR 2 BOOKS
+     193       3 3 OR 9 BOOKS
+    1085       4 10 OR MORE BOOKS
+  -------
+    1358
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1358      MISSING(-7)   10193
+ 
+Min:              1        Max:              4        Mean:                3.72
+ 
+Lead In: C11521.00[Default]
+Default Next Question: C11523.00
+--------------------------------------------------------------------------------
+C11523.00    [MS920327]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY MAGAZINES FAMILY GETS REGULARLY
+ 
+HOME PART B (3-5 YRS): HOW MANY MAGAZINES FAMILY GETS REGULARLY  92 INT
+ 
+     338       1 NONE
+     239       2 ONE
+     286       3 TWO
+     239       4 THREE
+     250       5 FOUR OR MORE
+  -------
+    1353
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1353      MISSING(-7)   10198
+ 
+Min:              0        Max:              5        Mean:                2.87
+ 
+Lead In: C11522.00[Default]
+Default Next Question: C11524.00
+--------------------------------------------------------------------------------
+C11524.00    [MS920329]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD HAVE A RECORD, TAPE, OR CD 
+             PLAYER?
+ 
+HOME PART B (3-5 YRS): DOES CHILD HAVE A RECORD OR TAPE PLAYER?  92 INT
+ 
+    1033       1 YES
+     307       0 NO
+  -------
+    1340
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1340      MISSING(-7)   10211
+ 
+Min:              0        Max:              1        Mean:                 .77
+ 
+Lead In: C11523.00[Default]
+Default Next Question: C11525.00
+--------------------------------------------------------------------------------
+C11525.00    [MS920331]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN NUMBERS
+ 
+HOME PART B (3-5 YRS): FAMILY MEMBER HELPS CHILD LEARN NUMBERS  92 INT
+ 
+    1252       1 NUMBERS
+  -------
+    1261
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1261      MISSING(-7)   10290
+ 
+Min:              0        Max:              5        Mean:                1.01
+ 
+Lead In: C11524.00[Default]
+Default Next Question: C11526.00
+--------------------------------------------------------------------------------
+C11526.00    [MS920333]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN THE 
+             ALPHABET
+ 
+HOME PART B (3-5 YRS): FAMILY MEMBER HELPS CHILD LEARN ALPHABET  92 INT
+ 
+    1216       2 THE ALPHABET
+  -------
+    1223
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1223      MISSING(-7)   10328
+ 
+Min:              1        Max:              3        Mean:                   2
+ 
+Lead In: C11525.00[Default]
+Default Next Question: C11527.00
+--------------------------------------------------------------------------------
+C11527.00    [MS920335]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN COLORS
+ 
+HOME PART B (3-5 YRS): FAMILY MEMBER HELPS CHILD LEARN COLORS  92 INT
+ 
+    1267       3 COLORS
+  -------
+    1275
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1275      MISSING(-7)   10276
+ 
+Min:              0        Max:              7        Mean:                   3
+ 
+Lead In: C11526.00[Default]
+Default Next Question: C11528.00
+--------------------------------------------------------------------------------
+C11528.00    [MS920337]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN SHAPES 
+             AND SIZES
+ 
+HOME PART B (3-5 YRS): FAMILY MEMBER HELPS CHILD LEARN SHAPES AND SIZES  92 INT
+ 
+    1086       4 SHAPES AND SIZES
+  -------
+    1090
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1090      MISSING(-7)   10461
+ 
+Min:              0        Max:              4        Mean:                3.99
+ 
+Lead In: C11527.00[Default]
+Default Next Question: C11529.00
+--------------------------------------------------------------------------------
+C11541.00    [MS920363]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD IS TAKEN ON AN OUTING
+ 
+HOME PART B (3-5 YRS): HOW OFTEN CHILD IS TAKEN ON AN OUTING  92 INT
+ 
+     120       1 A FEW TIMES A YEAR OR LESS
+     116       2 ABOUT ONCE A MONTH
+     350       3 ABOUT 2 OR 3 TIMES A MONTH
+     603       4 SEVERAL TIMES A WEEK
+     158       5 ABOUT ONCE A DAY
+  -------
+    1347
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1347      MISSING(-7)   10204
+ 
+Min:              1        Max:              5        Mean:                3.42
+ 
+Lead In: C11540.00[Default]
+Default Next Question: C11542.00
+--------------------------------------------------------------------------------
+C11542.00    [MS920365]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN 
+             PAST YEAR
+ 
+HOME PART B (3-5 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN PAST YEAR  92 
+INT
+ 
+     444       1 NEVER, TOO YOUNG
+     441       2 ONCE OR TWICE
+     322       3 SEVERAL TIMES
+     121       4 ABOUT ONCE A MONTH
+      23       5 ABOUT ONCE A WEEK OR MORE OFTEN
+  -------
+    1351
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1351      MISSING(-7)   10200
+ 
+Min:              1        Max:              5        Mean:                2.14
+ 
+Lead In: C11541.00[Default]
+Default Next Question: C11543.00
+--------------------------------------------------------------------------------
+C11548.00    [MS920421]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+HOME PART B (3-5 YRS): DOES CHILD SEE FATHER(-FIGURE) DAILY?  92 INT
+ 
+    1076       1 YES
+     250       0 NO
+      19       2 NO FATHER, STEP FATHER, OR FATHER-FIGURE
+  -------
+    1345
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1345      MISSING(-7)   10206
+ 
+Min:              0        Max:              2        Mean:                 .83
+ 
+Lead In: C11547.00[Default]
+Default Next Question: C11549.00
+--------------------------------------------------------------------------------
+C11549.00    [MS920423]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+HOME PART B (3-5 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD  92 INT
+ 
+     337       1 ONCE A DAY OR MORE OFTEN
+     508       2 AT LEAST 4 TIMES A WEEK
+     205       3 ABOUT ONCE A WEEK
+      56       4 ABOUT ONCE A MONTH
+      43       5 A FEW TIMES A YEAR OR LESS
+     161       6 NEVER
+      34       7 NO FATHER, STEP FATHER, OR FATHER-FIGURE
+  -------
+    1344
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1344      MISSING(-7)   10207
+ 
+Min:              1        Max:              7        Mean:                2.69
+ 
+Lead In: C11548.00[Default]
+Default Next Question: C11550.00
+--------------------------------------------------------------------------------
+C14033.00    [MS940331]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+HOME PART B (3-5 YRS): HOW OFTEN MOTHER READS TO CHILD  94 INT
+ 
+      23       1 NEVER
+      56       2 SEVERAL TIMES A YEAR
+     160       3 SEVERAL TIMES A MONTH
+     206       4 ONCE A WEEK
+     498       5 ABOUT 3 TIMES A WEEK
+     339       6 EVERYDAY
+  -------
+    1282
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1282      MISSING(-7)   10269
+ 
+Min:              1        Max:              6        Mean:                4.65
+ 
+Lead In: C14032.00[Default]
+Default Next Question: C14034.00
+--------------------------------------------------------------------------------
+C14034.00    [MS940333]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+HOME PART B (3-5 YRS): HOW MANY CHILDREN'S BOOKS CHILD HAS  94 INT
+ 
+      15       1 NONE, TOO YOUNG
+      40       2 1 OR 2 BOOKS
+     150       3 3 OR 9 BOOKS
+    1079       4 10 OR MORE BOOKS
+  -------
+    1284
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1284      MISSING(-7)   10267
+ 
+Min:              1        Max:              4        Mean:                3.79
+ 
+Lead In: C14033.00[Default]
+Default Next Question: C14035.00
+--------------------------------------------------------------------------------
+C14035.00    [MS940335]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY MAGAZINES FAMILY GETS REGULARLY
+ 
+HOME PART B (3-5 YRS): HOW MANY MAGAZINES FAMILY GETS REGULARLY  94 INT
+ 
+     263       1 NONE
+     205       2 ONE
+     308       3 TWO
+     238       4 THREE
+     267       5 FOUR OR MORE
+  -------
+    1281
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1281      MISSING(-7)   10270
+ 
+Min:              1        Max:              5        Mean:                3.03
+ 
+Lead In: C14034.00[Default]
+Default Next Question: C14036.00
+--------------------------------------------------------------------------------
+C14036.00    [MS940337]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD HAVE A RECORD, TAPE, OR CD 
+             PLAYER?
+ 
+HOME PART B (3-5 YRS): DOES CHILD HAVE A RECORD OR TAPE PLAYER?  94 INT
+ 
+    1048       1 YES
+     229       0 NO
+  -------
+    1277
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1277      MISSING(-7)   10274
+ 
+Min:              0        Max:              1        Mean:                 .82
+ 
+Lead In: C14035.00[Default]
+Default Next Question: C14037.00
+--------------------------------------------------------------------------------
+C14037.00    [MS940339]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN NUMBERS
+ 
+HOME PART B (3-5 YRS): FAMILY MEMBER HELPS CHILD LEARN NUMBERS  94 INT
+ 
+    1198       1 NUMBERS
+  -------
+    1198
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1198      MISSING(-7)   10353
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: C14036.00[Default]
+Default Next Question: C14038.00
+--------------------------------------------------------------------------------
+C14038.00    [MS940341]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN THE 
+             ALPHABET
+ 
+HOME PART B (3-5 YRS): FAMILY MEMBER HELPS CHILD LEARN ALPHABET  94 INT
+ 
+    1181       2 ALPHABET
+  -------
+    1181
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1181      MISSING(-7)   10370
+ 
+Min:              2        Max:              2        Mean:                   2
+ 
+Lead In: C14037.00[Default]
+Default Next Question: C14039.00
+--------------------------------------------------------------------------------
+C14039.00    [MS940343]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN COLORS
+ 
+HOME PART B (3-5 YRS): FAMILY MEMBER HELPS CHILD LEARN COLORS  94 INT
+ 
+    1199       3 COLORS
+  -------
+    1199
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1199      MISSING(-7)   10352
+ 
+Min:              3        Max:              3        Mean:                   3
+ 
+Lead In: C14038.00[Default]
+Default Next Question: C14040.00
+--------------------------------------------------------------------------------
+C14040.00    [MS940345]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN SHAPES 
+             AND SIZES
+ 
+HOME PART B (3-5 YRS): FAMILY MEMBER HELPS CHILD LEARN SHAPES AND SIZES  94 INT
+ 
+    1062       4 SHAPES AND SIZES
+  -------
+    1062
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1062      MISSING(-7)   10489
+ 
+Min:              4        Max:              4        Mean:                   4
+ 
+Lead In: C14039.00[Default]
+Default Next Question: C14041.00
+--------------------------------------------------------------------------------
+C14053.00    [MS940371]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD IS TAKEN ON AN OUTING
+ 
+HOME PART B (3-5 YRS): HOW OFTEN CHILD IS TAKEN ON AN OUTING  94 INT
+ 
+     128       1 A few times a year or less
+     115       2 About once a month
+     318       3 About two or three times a month
+     553       4 Several times a week
+     159       5 About once a day
+  -------
+    1273
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1273      MISSING(-7)   10278
+ 
+Min:              1        Max:              5        Mean:                3.39
+ 
+Lead In: C14052.00[Default]
+Default Next Question: C14054.00
+--------------------------------------------------------------------------------
+C14054.00    [MS940373]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN 
+             PAST YEAR
+ 
+HOME PART B (3-5 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN PAST YEAR  94 
+INT
+ 
+     364       1 Never
+     455       2 Once or twice
+     321       3 Several times
+     117       4 About once a month
+      23       5 About once a week or more often
+  -------
+    1280
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1280      MISSING(-7)   10271
+ 
+Min:              1        Max:              5        Mean:                 2.2
+ 
+Lead In: C14053.00[Default]
+Default Next Question: C14055.00
+--------------------------------------------------------------------------------
+C14060.00    [MS940421]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+HOME PART B (3-5 YRS): DOES CHILD SEE FATHER(-FIGURE) DAILY?  94 INT
+ 
+    1028       1 YES
+     236       0 NO
+      16       2 NO FATHER, STEP-FATHER, OR FATHER FIGURE
+  -------
+    1280
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1280      MISSING(-7)   10271
+ 
+Min:              0        Max:              2        Mean:                 .83
+ 
+Lead In: C14059.00[Default]
+Default Next Question: C14061.00
+--------------------------------------------------------------------------------
+C14061.00    [MS940423]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+HOME PART B (3-5 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD  94 INT
+ 
+     304       1 ONCE A DAY OR MORE OFTEN
+     465       2 AT LEAST 4 TIMES A WEEK
+     235       3 ABOUT ONCE A WEEK
+      73       4 ABOUT ONCE A MONTH
+      42       5 A FEW TIMES A YEAR OR LESS
+     135       6 NEVER
+      23       7 NO FATHER, STEP FATHER, OR FATHER-FIGURE
+  -------
+    1277
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1277      MISSING(-7)   10274
+ 
+Min:              1        Max:              7        Mean:                2.67
+ 
+Lead In: C14060.00[Default]
+Default Next Question: C14062.00
+--------------------------------------------------------------------------------
+C16049.00    [MS960329]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+1.About how often do you read stories to your child?  (CIRCLE ONE)
+ 
+      18       1 NEVER
+      46       2 SEVERAL TIMES A YEAR
+     128       3 SEVERAL TIMES A MONTH
+     148       4 ONCE A WEEK
+     370       5 AT LEAST 3 TIMES A WEEK
+     324       6 EVERYDAY
+  -------
+    1034
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1034      MISSING(-7)   10517
+ 
+Min:              1        Max:              6        Mean:                4.72
+ 
+Lead In: C16048.00[Default]
+Default Next Question: C16050.00
+--------------------------------------------------------------------------------
+C16050.00    [MS960331]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+2.About how many children's books does your child have? (CIRCLE ONE)
+ 
+      17       1 NONE
+      30       2 1 OR 2 BOOKS
+     102       3 3 TO 9 BOOKS
+     884       4 10 OR MORE BOOKS
+  -------
+    1033
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1033      MISSING(-7)   10518
+ 
+Min:              1        Max:              4        Mean:                3.79
+ 
+Lead In: C16049.00[Default]
+Default Next Question: C16051.00
+--------------------------------------------------------------------------------
+C16051.00    [MS960333]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY MAGAZINES FAMILY GETS REGULARLY
+ 
+3.About how many magazines does your family get regularly? (CIRCLE ONE)
+ 
+     213       1 NONE
+     154       2 ONE
+     244       3 TWO
+     189       4 THREE
+     235       5 FOUR OR MORE
+  -------
+    1035
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1035      MISSING(-7)   10516
+ 
+Min:              1        Max:              5        Mean:                3.08
+ 
+Lead In: C16050.00[Default]
+Default Next Question: C16052.00
+--------------------------------------------------------------------------------
+C16052.00    [MS960335]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD HAVE A RECORD, TAPE, OR CD 
+             PLAYER?
+ 
+4.Does your child have the use of a record player, or tape deck, or CD player, 
+or tape recorder here at home and at least 5 children's records or tapes? (May 
+be shared with sister or brother.)
+ 
+     832       1 Yes
+     197       0 No
+  -------
+    1029
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1029      MISSING(-7)   10522
+ 
+Min:              0        Max:              1        Mean:                 .81
+ 
+Lead In: C16051.00[Default]
+Default Next Question: C16053.00
+--------------------------------------------------------------------------------
+C16053.00    [MS960337]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN NUMBERS
+ 
+5.Circle the things which you (or another adult or older child) are helping or 
+have helped your child to learn here at home.    (CIRCLE ALL THAT APPLY)
+ 
+a. numbers
+ 
+     979       1 NUMBERS
+  -------
+     979
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     979      MISSING(-7)   10572
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: C16052.00[Default]
+Default Next Question: C16054.00
+--------------------------------------------------------------------------------
+C16054.00    [MS960339]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN THE 
+             ALPHABET
+ 
+5.Circle the things which you (or another adult or older child) are helping or 
+have helped your child to learn here at home.    (CIRCLE ALL THAT APPLY)
+ 
+b. the alphabet
+ 
+     969       2 ALPHABET
+  -------
+     969
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     969      MISSING(-7)   10582
+ 
+Min:              2        Max:              2        Mean:                   2
+ 
+Lead In: C16053.00[Default]
+Default Next Question: C16055.00
+--------------------------------------------------------------------------------
+C16055.00    [MS960341]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN COLORS
+ 
+5.Circle the things which you (or another adult or older child) are helping or 
+have helped your child to learn here at home.    (CIRCLE ALL THAT APPLY)
+ 
+c. colors
+ 
+     976       3 COLORS
+  -------
+     976
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     976      MISSING(-7)   10575
+ 
+Min:              3        Max:              3        Mean:                   3
+ 
+Lead In: C16054.00[Default]
+Default Next Question: C16056.00
+--------------------------------------------------------------------------------
+C16056.00    [MS960343]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN SHAPES 
+             AND SIZES
+ 
+5.Circle the things which you (or another adult or older child) are helping or 
+have helped your child to learn here at home.    (CIRCLE ALL THAT APPLY)
+ 
+d.  Shapes and sizes
+ 
+     893       4 SHAPES AND SIZES
+  -------
+     893
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     893      MISSING(-7)   10658
+ 
+Min:              4        Max:              4        Mean:                   4
+ 
+Lead In: C16055.00[Default]
+Default Next Question: C16057.00
+--------------------------------------------------------------------------------
+C16070.00    [MS960371]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD IS TAKEN ON AN OUTING
+ 
+9.How often does a family member get a chance to take your child on any kind of 
+outing (shopping, park, picnic, drive-in, and so on)?  (CIRCLE ONE)
+ 
+     107       1 A few times a year or less
+     103       2 About once a month
+     228       3 About two or three times a month
+     453       4 Several times a week
+     141       5 About once a day
+  -------
+    1032
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1032      MISSING(-7)   10519
+ 
+Min:              1        Max:              5        Mean:                3.41
+ 
+Lead In: C16069.00[Default]
+Default Next Question: C16071.00
+--------------------------------------------------------------------------------
+C16071.00    [MS960373]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN 
+             PAST YEAR
+ 
+10.How often has a family member taken or arranged to take your child to any 
+type of museum (children's, scientific, art, historical, etc.) within the past 
+year?
+           (CIRCLE ONE)
+ 
+     238       1 NEVER
+     392       2 ONCE OR TWICE
+     278       3 SEVERAL TIMES
+     108       4 ABOUT ONCE A MONTH
+      18       5 ABOUT ONCE A WEEK OR MORE
+  -------
+    1034
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1034      MISSING(-7)   10517
+ 
+Min:              1        Max:              5        Mean:                 2.3
+ 
+Lead In: C16070.00[Default]
+Default Next Question: C16072.00
+--------------------------------------------------------------------------------
+C16074.00    [MS960415]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+13.How often does your child eat a meal with both mother and father (step father
+or father-figure)?    (CIRCLE ONE)
+ 
+     230       1 More than once a day
+     376       2 Once a day
+     204       3 Several times a week
+      69       4 About once a week
+      39       5 About once a month
+      54       6 Never
+      59       7 No father, step-father, father figure
+  -------
+    1031
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1031      MISSING(-7)   10520
+ 
+Min:              1        Max:              7        Mean:                2.72
+ 
+Lead In: C16073.00[Default]
+Default Next Question: C16075.00
+--------------------------------------------------------------------------------
+C16077.00    [MS960421]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+16.   Does your child see this person on a daily basis?
+ 
+     854       1 YES
+     118       0 NO
+      56       2 NO FATHER, STEP-FATHER, OR FATHER FIGURE
+  -------
+    1028
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1028      MISSING(-7)   10523
+ 
+Min:              0        Max:              2        Mean:                 .94
+ 
+Lead In: C16076.00[Default]
+Default Next Question: C16078.00
+--------------------------------------------------------------------------------
+C19455.00    [MS981B01]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+1.     About how often do you read stories to your child?  (Circle Only One)
+ 
+      14       1 NEVER
+      28       2 SEVERAL TIMES A YEAR
+      65       3 SEVERAL TIMES A MONTH
+     105       4 ONCE A WEEK
+     335       5 AT LEAST 3 TIMES A WEEK
+     284       6 EVERYDAY
+  -------
+     831
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>     832      MISSING(-7)   10719
+ 
+Min:              1        Max:              6        Mean:                4.89
+ 
+Lead In: C19454.00[Default]
+Default Next Question: C19456.00
+--------------------------------------------------------------------------------
+C19456.00    [MS981B02]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY BOOKS CHILD HAS
+ 
+2.     About how many children's books does your child have? (Circle Only One)
+ 
+       3       1 NONE
+      21       2 1 OR 2 BOOKS
+      55       3 3 TO 9 BOOKS
+     753       4 10 OR MORE BOOKS
+  -------
+     832
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     832      MISSING(-7)   10719
+ 
+Min:              1        Max:              4        Mean:                3.87
+ 
+Lead In: C19455.00[Default]
+Default Next Question: C19457.00
+--------------------------------------------------------------------------------
+C19457.00    [MS981B03]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY MAGAZINES FAMILY GETS REGULARLY
+ 
+3.     About how many magazines does your family get regularly? (Circle Only 
+One)
+ 
+     163       1 NONE
+     130       2 ONE
+     173       3 TWO
+     132       4 THREE
+     233       5 FOUR OR MORE
+  -------
+     831
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     831      MISSING(-7)   10720
+ 
+Min:              1        Max:              5        Mean:                3.17
+ 
+Lead In: C19456.00[Default]
+Default Next Question: C19458.00
+--------------------------------------------------------------------------------
+C19458.00    [MS981B04]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD HAVE A RECORD OR TAPE PLAYER
+ 
+4.     Does your child have the use of a CD player,  tape deck, or tape 
+recorder, or record player here at home and at least 5 children's records or 
+tapes? (May be shared with sister or brother.)
+ 
+     700       1 Yes
+     131       0 No
+  -------
+     831
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     831      MISSING(-7)   10720
+ 
+Min:              0        Max:              1        Mean:                 .84
+ 
+Lead In: C19457.00[Default]
+Default Next Question: C19459.00
+--------------------------------------------------------------------------------
+C19459.00    [MS981B05A]                                    Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN NUMBERS
+ 
+5.     Circle the things which you (or another adult or older child) are helping
+or have helped your child to learn here at home.    (CIRCLE ALL THAT APPLY)
+ 
+a. numbers
+ 
+     793       1 Selected
+      38       2 Not Selected
+  -------
+     831
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     831      MISSING(-7)   10720
+ 
+Min:              1        Max:              2        Mean:                1.05
+ 
+Lead In: C19458.00[Default]
+Default Next Question: C19460.00
+--------------------------------------------------------------------------------
+C19460.00    [MS981B05B]                                    Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN ALPHABET
+ 
+5.     Circle the things which you (or another adult or older child) are helping
+or have helped your child to learn here at home.    (CIRCLE ALL THAT APPLY)
+ 
+b. the alphabet
+ 
+     784       1 Selected
+      47       2 Not Selected
+  -------
+     831
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     831      MISSING(-7)   10720
+ 
+Min:              1        Max:              2        Mean:                1.06
+ 
+Lead In: C19459.00[Default]
+Default Next Question: C19461.00
+--------------------------------------------------------------------------------
+C19461.00    [MS981B05C]                                    Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN COLORS
+ 
+5.     Circle the things which you (or another adult or older child) are helping
+or have helped your child to learn here at home.    (CIRCLE ALL THAT APPLY)
+ 
+c. colors
+ 
+     796       1 Selected
+      35       2 Not Selected
+  -------
+     831
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     831      MISSING(-7)   10720
+ 
+Min:              1        Max:              2        Mean:                1.04
+ 
+Lead In: C19460.00[Default]
+Default Next Question: C19462.00
+--------------------------------------------------------------------------------
+C19462.00    [MS981B05D]                                    Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN SHAPES 
+             AND SIZES
+ 
+5.     Circle the things which you (or another adult or older child) are helping
+or have helped your child to learn here at home.    (CIRCLE ALL THAT APPLY)
+ 
+d.  Shapes and sizes
+ 
+     736       1 Selected
+      95       2 Not Selected
+  -------
+     831
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     831      MISSING(-7)   10720
+ 
+Min:              1        Max:              2        Mean:                1.11
+ 
+Lead In: C19461.00[Default]
+Default Next Question: C19463.00
+--------------------------------------------------------------------------------
+C19476.00    [MS981B09]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD IS TAKEN ON AN OUTING
+ 
+9.     How often does a family member get a chance to take your child on any 
+kind of outing (shopping, park, picnic, drive-in, and so on)?  (Circle Only One)
+ 
+      87       1 A few times a year or less
+      69       2 About once a month
+     169       3 About two or three times a month
+     372       4 Several times a week
+     130       5 About once a day
+  -------
+     827
+ 
+Refusal(-1)            2
+Don't Know(-2)         0
+TOTAL =========>     829      MISSING(-7)   10722
+ 
+Min:              1        Max:              5        Mean:                3.47
+ 
+Lead In: C19475.00[Default]
+Default Next Question: C19477.00
+--------------------------------------------------------------------------------
+C19477.00    [MS981B10]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN 
+             PAST YEAR
+ 
+10.     How often has a family member taken or arranged to take your child to 
+any type of museum (children's, scientific, art, historical, etc.) within the 
+past year?   (Circle Only One)
+ 
+     199       1 NEVER
+     299       2 ONCE OR TWICE
+     245       3 SEVERAL TIMES
+      71       4 ABOUT ONCE A MONTH
+      14       5 ABOUT ONCE A WEEK OR MORE OFTEN
+  -------
+     828
+ 
+Refusal(-1)            2
+Don't Know(-2)         0
+TOTAL =========>     830      MISSING(-7)   10721
+ 
+Min:              1        Max:              5        Mean:                2.28
+ 
+Lead In: C19476.00[Default]
+Default Next Question: C19478.00
+--------------------------------------------------------------------------------
+C19483.00    [MS981B16]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD SEE FATHER(-FIGURE) DAILY
+ 
+16.     Does your child see this person on a daily basis?
+ 
+     692       1 YES
+     124       0 NO
+      13       2 NO FATHER, STEPFATHER, OR FATHER FIGURE
+  -------
+     829
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     829      MISSING(-7)   10722
+ 
+Min:              0        Max:              2        Mean:                 .87
+ 
+Lead In: C19482.00[Default]
+Default Next Question: C19484.00
+--------------------------------------------------------------------------------
+C19484.00    [MS981B17]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+17.     How often does your child eat a meal with both mother and father?    
+(Circle Only One)
+ 
+     165       1 More than once a day
+     322       2 Once a day
+     167       3 Several times a week
+      45       4 About once a week
+      28       5 About once a month
+      90       6 Never
+      11       7 No father, step-father, father figure
+  -------
+     828
+ 
+Refusal(-1)            2
+Don't Know(-2)         0
+TOTAL =========>     830      MISSING(-7)   10721
+ 
+Min:              1        Max:              7        Mean:                2.71
+ 
+Lead In: C19483.00[Default]
+Default Next Question: C19485.00
+--------------------------------------------------------------------------------
+C22666.00    [HOME-B01]                                     Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+About how often do you read stories to [Child First Name]?
+ 
+NOTE: This item was moved from paper Mother Supplement to CAPI Child Supplement 
+for 2000. The item may have been modified to accommodate CAPI vs. 
+self-administration format.  For comparison see Mother Supplement, Section 1B, 
+Q.01, and codebook item MS981B01.
+ 
+       3       1 Never
+       2       2 Several times a year
+      12       3 Several times a month
+      12       4 Once a week
+      52       5 At least 3 times a week
+      79       6 Everyday
+  -------
+     160
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     160      MISSING(-7)   11391
+ 
+Min:              1        Max:              6        Mean:                5.16
+ 
+Lead In: None.
+Default Next Question: C22667.00
+--------------------------------------------------------------------------------
+C22667.00    [HOME-B02]                                     Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+About how many children's books does [Child First Name] have?
+ 
+NOTE: This item was moved from paper Mother Supplement to CAPI Child Supplement 
+for 2000. The item may have been modified to accommodate CAPI vs. 
+self-administration format.  For comparison see Mother Supplement, Section 1B, 
+Q.02, and codebook item MS981B02.
+ 
+     153       4 10 or more books
+       6       3 3 to 9 books
+       1       2 1 or 2 books
+       0       1 None
+  -------
+     160
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     160      MISSING(-7)   11391
+ 
+Min:              2        Max:              4        Mean:                3.95
+ 
+Lead In: C22666.00[Default]
+Default Next Question: C22668.00
+--------------------------------------------------------------------------------
+C22668.00    [HOME-B03]                                     Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3 YRS): HOW MANY MAGAZINES FAMILY GETS REGULARLY
+ 
+About how many magazines does your family get regularly?
+ 
+NOTE: This item was moved from paper Mother Supplement to CAPI Child Supplement 
+for 2000. The item may have been modified to accommodate CAPI vs. 
+self-administration format.  For comparison see Mother Supplement, Section 1B, 
+Q.03, and codebook item MS981B03.
+ 
+      34       1 None
+      14       2 One
+      37       3 Two
+      24       4 Three
+      51       5 Four or more
+  -------
+     160
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     160      MISSING(-7)   11391
+ 
+Min:              1        Max:              5        Mean:                3.28
+ 
+Lead In: C22667.00[Default]
+Default Next Question: C22669.00
+--------------------------------------------------------------------------------
+C22669.00    [HOME-B04]                                     Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3 YRS): DOES CHILD HAVE A RECORD, TAPE, OR CD PLAYER?
+ 
+Does [Child First Name] have the use of a CD player,  tape deck, or tape 
+recorder, or record player at home and at least 5 children's records or tapes? 
+(May be shared with sister or brother.)
+ 
+NOTE: This item was moved from paper Mother Supplement to CAPI Child Supplement 
+for 2000. The item may have been modified to accommodate CAPI vs. 
+self-administration format.  For comparison see Mother Supplement, Section 1B, 
+Q.04, and codebook item MS981B04.
+ 
+     129       1 Yes
+      31       0 No
+  -------
+     160
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     160      MISSING(-7)   11391
+ 
+Min:              0        Max:              1        Mean:                 .81
+ 
+Lead In: C22668.00[Default]
+Default Next Question: C22670.00
+--------------------------------------------------------------------------------
+C22670.00    [HOME-B05A]                                    Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN NUMBERS
+ 
+Please tell me which of the following you (or someone else) have helped [Child 
+First Name] learn at home.
+ 
+Do you or have you helped with...numbers?
+ 
+NOTE: This item was moved from paper Mother Supplement to CAPI Child Supplement 
+for 2000. The item may have been modified to accommodate CAPI vs. 
+self-administration format.  For comparison see Mother Supplement, Section 1B, 
+Q.05A, and codebook item MS981B05A.
+ 
+     154       1 Yes
+       6       0 No
+  -------
+     160
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     160      MISSING(-7)   11391
+ 
+Min:              0        Max:              1        Mean:                 .96
+ 
+Lead In: C22669.00[Default]
+Default Next Question: C22671.00
+--------------------------------------------------------------------------------
+C22671.00    [HOME-B05B]                                    Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN THE 
+             ALPHABET
+ 
+Do you (or someone else) help with...the alphabet?
+ 
+NOTE: This item was moved from paper Mother Supplement to CAPI Child Supplement 
+for 2000. The item may have been modified to accommodate CAPI vs. 
+self-administration format.  For comparison see Mother Supplement, Section 1B, 
+Q.05B, and codebook item MS981B05B.
+ 
+     155       1 Yes
+       5       0 No
+  -------
+     160
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     160      MISSING(-7)   11391
+ 
+Min:              0        Max:              1        Mean:                 .97
+ 
+Lead In: C22670.00[Default]
+Default Next Question: C22672.00
+--------------------------------------------------------------------------------
+C22672.00    [HOME-B05C]                                    Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN COLORS
+ 
+Do you (or someone else) help with...colors?
+ 
+NOTE: This item was moved from paper Mother Supplement to CAPI Child Supplement 
+for 2000. The item may have been modified to accommodate CAPI vs. 
+self-administration format.  For comparison see Mother Supplement, Section 1B, 
+Q.05C, and codebook item MS981B05C.
+ 
+     155       1 Yes
+       5       0 No
+  -------
+     160
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     160      MISSING(-7)   11391
+ 
+Min:              0        Max:              1        Mean:                 .97
+ 
+Lead In: C22671.00[Default]
+Default Next Question: C22673.00
+--------------------------------------------------------------------------------
+C22673.00    [HOME-B05D]                                    Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN SHAPES AND
+             SIZES
+ 
+Do you (or someone else) help with...shapes and sizes?
+ 
+NOTE: This item was moved from paper Mother Supplement to CAPI Child Supplement 
+for 2000. The item may have been modified to accommodate CAPI vs. 
+self-administration format.  For comparison see Mother Supplement, Section 1B, 
+Q.05D, and codebook item MS981B05D.
+ 
+     142       1 Yes
+      18       0 No
+  -------
+     160
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     160      MISSING(-7)   11391
+ 
+Min:              0        Max:              1        Mean:                 .89
+ 
+Lead In: C22672.00[Default]
+Default Next Question: C22674.00
+--------------------------------------------------------------------------------
+C22679.00    [HOME-B09]                                     Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3 YRS): HOW OFTEN CHILD IS TAKEN ON AN OUTING
+ 
+How often does a family member get a chance to take [Child First Name] on any 
+kind of outing (like shopping, to the park, a picnic, drive-in, and so on)?
+ 
+NOTE: This item was moved from paper Mother Supplement to CAPI Child Supplement 
+for 2000. The item may have been modified to accommodate CAPI vs. 
+self-administration format.  For comparison see Mother Supplement, Section 1B, 
+Q.09, and codebook item MS981B09.
+ 
+       4       1 A few times a year or less
+       8       2 About once a month
+      16       3 About two or three times a month
+      94       4 Several times a week
+      38       5 About once a day
+  -------
+     160
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     160      MISSING(-7)   11391
+ 
+Min:              1        Max:              5        Mean:                3.96
+ 
+Lead In: C22678.09[Default]
+Default Next Question: C22680.00
+--------------------------------------------------------------------------------
+C22680.00    [HOME-B10]                                     Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN PAST 
+             YEAR
+ 
+How often has a family member taken or arranged to take [Child First Name] to 
+any type of museum (children's, scientific, art, historical, etc.) within the 
+past year?
+ 
+NOTE: This item was moved from paper Mother Supplement to CAPI Child Supplement 
+for 2000. The item may have been modified to accommodate CAPI vs. 
+self-administration format.  For comparison see Mother Supplement, Section 1B, 
+Q.10, and codebook item MS981B10.
+ 
+      59       1 Never
+      44       2 Once or twice
+      27       3 Several times
+      28       4 About once a month
+       2       5 About once a week or more often
+  -------
+     160
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     160      MISSING(-7)   11391
+ 
+Min:              1        Max:              5        Mean:                2.19
+ 
+Lead In: C22679.00[Default]
+Default Next Question: C22681.00
+--------------------------------------------------------------------------------
+C22688.00    [HOME-B16]                                     Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+Does [Child First Name] see [his/her] [father/stepfather/father-figure] on a 
+daily basis?
+ 
+NOTE: This item was moved from paper Mother Supplement to CAPI Child Supplement 
+for 2000. The item may have been modified to accommodate CAPI vs. 
+self-administration format.  For comparison see Mother Supplement, Section 1B, 
+Q.16, and codebook item MS981B16.
+ 
+     142       1 Yes
+      16       0 No
+  -------
+     158
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     158      MISSING(-7)   11393
+ 
+Min:              0        Max:              1        Mean:                  .9
+ 
+Lead In: C22686.00[Default]  C22683.00[1:1]
+Default Next Question: C22689.00
+--------------------------------------------------------------------------------
+C22689.00    [HOME-B17]                                     Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+How often does [Child First Name] eat a meal with you and [his/her] 
+[father/stepfather/father-figure]?
+ 
+NOTE: This item was moved from paper Mother Supplement to CAPI Child Supplement 
+for 2000. The item may have been modified to accommodate CAPI vs. 
+self-administration format.  For comparison see Mother Supplement, Section 1B, 
+Q.17, and codebook item MS981B17.
+ 
+      49       1 More than once a day
+      58       2 Once a day
+      25       3 Several times a week
+      11       4 About once a week
+       4       5 About once a month
+      10       6 Never
+  -------
+     157
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>     158      MISSING(-7)   11393
+ 
+Min:              1        Max:              6        Mean:                2.32
+ 
+Lead In: C22688.00[Default]
+Default Next Question: C22690.00
+--------------------------------------------------------------------------------
+C24171.00    [MS1-A01]                                      Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (4-5 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+About how often do you read stories to your child?  (Circle Only One)
+ 
+       1       1 Never
+      12       2 Several times a year
+      41       3 Several times a month
+      44       4 Once a week
+     136       5 At least 3 times a week
+     123       6 Everyday
+  -------
+     357
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     357      MISSING(-7)   11194
+ 
+Min:              1        Max:              6        Mean:                4.88
+ 
+Lead In: C24169.00[Default]
+Default Next Question: C24172.00
+--------------------------------------------------------------------------------
+C24172.00    [MS1-A02]                                      Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (4-5 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+About how many children's books does your child have? (Circle Only One)
+ 
+       0       1 None
+       7       2 1 or 2 books
+      27       3 3 to 9 books
+     323       4 10 or more books
+  -------
+     357
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     357      MISSING(-7)   11194
+ 
+Min:              2        Max:              4        Mean:                3.89
+ 
+Lead In: C24171.00[Default]
+Default Next Question: C24173.00
+--------------------------------------------------------------------------------
+C24173.00    [MS1-A03]                                      Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (4-5 YRS): HOW MANY MAGAZINES FAMILY GETS REGULARLY
+ 
+About how many magazines does your family get regularly? (Circle Only One)
+ 
+      48       1 None
+      64       2 One
+      82       3 Two
+      73       4 Three
+      90       5 Four or more
+  -------
+     357
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     357      MISSING(-7)   11194
+ 
+Min:              1        Max:              5        Mean:                3.26
+ 
+Lead In: C24172.00[Default]
+Default Next Question: C24174.00
+--------------------------------------------------------------------------------
+C24174.00    [MS1-A04]                                      Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (4-5 YRS): DOES CHILD HAVE A RECORD, TAPE, OR CD 
+             PLAYER?
+ 
+Does your child have the use of a CD player, tape deck, or tape recorder, or 
+record player here at home and at least 5 children's records or tapes? (May be 
+shared with sister or brother.)
+ 
+     319       1 Yes
+      37       0 No
+  -------
+     356
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     356      MISSING(-7)   11195
+ 
+Min:              0        Max:              1        Mean:                  .9
+ 
+Lead In: C24173.00[Default]
+Default Next Question: C24175.00
+--------------------------------------------------------------------------------
+C24175.00    [MS1-A05A]                                     Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (4-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN NUMBERS
+ 
+Circle the things which you (or another adult or older child) are helping or 
+have helped your child to learn here at home.    (Circle All That Apply)
+ 
+a. numbers
+ 
+     343       1 Selected
+       0       0 Not Selected
+  -------
+     343
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     343      MISSING(-7)   11208
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: C24174.00[Default]
+Default Next Question: C24176.00
+--------------------------------------------------------------------------------
+C24176.00    [MS1-A05B]                                     Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (4-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN THE 
+             ALPHABET
+ 
+Circle the things which you (or another adult or older child) are helping or 
+have helped your child to learn here at home.    (Circle All That Apply)
+ 
+b. the alphabet
+ 
+     340       1 Selected
+       0       0 Not Selected
+  -------
+     340
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     340      MISSING(-7)   11211
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: C24175.00[Default]
+Default Next Question: C24177.00
+--------------------------------------------------------------------------------
+C24177.00    [MS1-A05C]                                     Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (4-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN COLORS
+ 
+Circle the things which you (or another adult or older child) are helping or 
+have helped your child to learn here at home.    (Circle All That Apply)
+ 
+c. colors
+ 
+     338       1 Selected
+       0       0 Not Selected
+  -------
+     338
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     338      MISSING(-7)   11213
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: C24176.00[Default]
+Default Next Question: C24178.00
+--------------------------------------------------------------------------------
+C24178.00    [MS1-A05D]                                     Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (4-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN SHAPES 
+             AND SIZES
+ 
+Circle the things which you (or another adult or older child) are helping or 
+have helped your child to learn here at home.    (Circle All That Apply)
+ 
+d.  Shapes and sizes
+ 
+     324       1 Selected
+       0       0 Not Selected
+  -------
+     324
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     324      MISSING(-7)   11227
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: C24177.00[Default]
+Default Next Question: C24179.00
+--------------------------------------------------------------------------------
+C24193.00    [MS1-A09]                                      Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (4-5 YRS): HOW OFTEN CHILD IS TAKEN ON AN OUTING
+ 
+How often does a family member get a chance to take your child on any kind of 
+outing (shopping, park, picnic, drive-in, and so on)?  (Circle Only One)
+ 
+      34       1 A few times a year or less
+      35       2 About once a month
+      77       3 About two or three times a month
+     172       4 Several times a week
+      41       5 About once a day
+  -------
+     359
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     359      MISSING(-7)   11192
+ 
+Min:              1        Max:              5        Mean:                3.42
+ 
+Lead In: C24191.00[Default]
+Default Next Question: C24194.00
+--------------------------------------------------------------------------------
+C24194.00    [MS1-A10]                                      Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (4-5 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN 
+             PAST YEAR
+ 
+How often has a family member taken or arranged to take your child to any type 
+of museum (children's, scientific, art, historical, etc.) within the past year? 
+(Circle Only One)
+ 
+      73       1 Never
+     144       2 Once or twice
+      99       3 Several times
+      37       4 About once a month
+       4       5 About once a week or more often
+  -------
+     357
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     357      MISSING(-7)   11194
+ 
+Min:              1        Max:              5        Mean:                2.31
+ 
+Lead In: C24193.00[Default]
+Default Next Question: C24195.00
+--------------------------------------------------------------------------------
+C24201.00    [MS1-A16]                                      Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (4-5 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+Does your child see this person on a daily basis?
+ 
+     307       1 Yes
+      46       0 No
+       2       2 No father, stepfather, or father figure
+  -------
+     355
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     355      MISSING(-7)   11196
+ 
+Min:              0        Max:              2        Mean:                 .88
+ 
+Lead In: C24199.00[Default]
+Default Next Question: C24202.00
+--------------------------------------------------------------------------------
+C24202.00    [MS1-A17]                                      Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (4-5 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+How often does your child eat a meal with both mother and father?    (Circle 
+Only One)
+ 
+      75       1 More than once a day
+     141       2 Once a day
+      67       3 Several times a week
+      23       4 About once a week
+      14       5 About once a month
+      32       6 Never
+       4       7 No father, stepfather, father-figure
+  -------
+     356
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     356      MISSING(-7)   11195
+ 
+Min:              1        Max:              7        Mean:                2.64
+ 
+Lead In: C24201.00[Default]
+Default Next Question: C24203.00
+--------------------------------------------------------------------------------
+C27114.00    [HOME-B01]                                     Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+About how often do you read stories to [Child First Name]?
+ 
+       7       1 Never
+      13       2 Several times a year
+      27       3 Several times a month
+      60       4 Once a week
+     159       5 At least 3 times a week
+     191       6 Everyday
+  -------
+     457
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     457      MISSING(-7)   11094
+ 
+Min:              1        Max:              6        Mean:                5.02
+ 
+Lead In: C27088.01[2:2]
+Default Next Question: C27115.00
+--------------------------------------------------------------------------------
+C27115.00    [HOME-B02]                                     Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+About how many children's books does [Child First Name] have?
+ 
+     427       4 10 or more books
+      20       3 3 to 9 books
+       7       2 1 or 2 books
+       3       1 None
+  -------
+     457
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     457      MISSING(-7)   11094
+ 
+Min:              1        Max:              4        Mean:                3.91
+ 
+Lead In: C27114.00[Default]
+Default Next Question: C27116.00
+--------------------------------------------------------------------------------
+C27116.00    [HOME-B03]                                     Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY MAGAZINES FAMILY GETS REGULARLY
+ 
+About how many magazines does your family get regularly?
+ 
+     100       1 None
+      53       2 One
+      91       3 Two
+      71       4 Three
+     142       5 Four or more
+  -------
+     457
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     457      MISSING(-7)   11094
+ 
+Min:              1        Max:              5        Mean:                3.22
+ 
+Lead In: C27115.00[Default]
+Default Next Question: C27117.00
+--------------------------------------------------------------------------------
+C27117.00    [HOME-B04]                                     Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD HAVE A RECORD, TAPE, OR CD 
+             PLAYER?
+ 
+Does [Child First Name] have the use of a CD player,  tape deck, or tape 
+recorder, or record player at home and at least 5 children's records or tapes? 
+(May be shared with sister or brother.)
+ 
+     372       1 Yes
+      85       0 No
+  -------
+     457
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     457      MISSING(-7)   11094
+ 
+Min:              0        Max:              1        Mean:                 .81
+ 
+Lead In: C27116.00[Default]
+Default Next Question: C27118.00
+--------------------------------------------------------------------------------
+C27118.00    [HOME-B05A]                                    Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN NUMBERS
+ 
+Please tell me which of the following you (or someone else) have helped [Child 
+First Name] learn at home.
+ 
+Do you or have you helped with...numbers?
+ 
+     443       1 Yes
+      14       0 No
+  -------
+     457
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     457      MISSING(-7)   11094
+ 
+Min:              0        Max:              1        Mean:                 .97
+ 
+Lead In: C27117.00[Default]
+Default Next Question: C27119.00
+--------------------------------------------------------------------------------
+C27119.00    [HOME-B05B]                                    Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN THE 
+             ALPHABET
+ 
+Do you (or someone else) help with...the alphabet?
+ 
+     440       1 Yes
+      17       0 No
+  -------
+     457
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     457      MISSING(-7)   11094
+ 
+Min:              0        Max:              1        Mean:                 .96
+ 
+Lead In: C27118.00[Default]
+Default Next Question: C27120.00
+--------------------------------------------------------------------------------
+C27120.00    [HOME-B05C]                                    Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN COLORS
+ 
+Do you (or someone else) help with...colors?
+ 
+     442       1 Yes
+      15       0 No
+  -------
+     457
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     457      MISSING(-7)   11094
+ 
+Min:              0        Max:              1        Mean:                 .97
+ 
+Lead In: C27119.00[Default]
+Default Next Question: C27121.00
+--------------------------------------------------------------------------------
+C27121.00    [HOME-B05D]                                    Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN SHAPES 
+             AND SIZES
+ 
+Do you (or someone else) help with...shapes and sizes?
+ 
+     434       1 Yes
+      23       0 No
+  -------
+     457
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     457      MISSING(-7)   11094
+ 
+Min:              0        Max:              1        Mean:                 .95
+ 
+Lead In: C27120.00[Default]
+Default Next Question: C27122.00
+--------------------------------------------------------------------------------
+C27127.00    [HOME-B09]                                     Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD IS TAKEN ON AN OUTING
+ 
+How often does a family member get a chance to take [Child First Name] on any 
+kind of outing (like shopping, to the park, a picnic, drive-in, and so on)?
+ 
+      24       1 A few times a year or less
+      17       2 About once a month
+      82       3 About two or three times a month
+     262       4 Several times a week
+      72       5 About once a day
+  -------
+     457
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     457      MISSING(-7)   11094
+ 
+Min:              1        Max:              5        Mean:                3.75
+ 
+Lead In: C27126.09[Default]
+Default Next Question: C27128.00
+--------------------------------------------------------------------------------
+C27128.00    [HOME-B10]                                     Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN 
+             PAST YEAR
+ 
+How often has a family member taken or arranged to take [Child First Name] to 
+any type of museum (children's, scientific, art, historical, etc.) within the 
+past year?
+ 
+     133       1 Never
+     175       2 Once or twice
+     102       3 Several times
+      38       4 About once a month
+       9       5 About once a week or more often
+  -------
+     457
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     457      MISSING(-7)   11094
+ 
+Min:              1        Max:              5        Mean:                2.16
+ 
+Lead In: C27127.00[Default]
+Default Next Question: C27129.00
+--------------------------------------------------------------------------------
+C27136.00    [HOME-B16]                                     Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+Does [Child First Name] see [his/her] [father/stepfather/father-figure] on a 
+daily basis?
+ 
+     388       1 Yes
+      57       0 No
+  -------
+     445
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     445      MISSING(-7)   11106
+ 
+Min:              0        Max:              1        Mean:                 .87
+ 
+Lead In: C27134.00[Default]  C27131.00[1:1]
+Default Next Question: C27137.00
+--------------------------------------------------------------------------------
+C27137.00    [HOME-B17]                                     Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+How often does [Child First Name] eat a meal with you and [his/her] 
+[father/stepfather/father-figure]?
+ 
+     120       1 More than once a day
+     184       2 Once a day
+      79       3 Several times a week
+      19       4 About once a week
+      14       5 About once a month
+      29       6 Never
+  -------
+     445
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     445      MISSING(-7)   11106
+ 
+Min:              1        Max:              6        Mean:                2.35
+ 
+Lead In: C27136.00[Default]
+Default Next Question: C27138.00
+--------------------------------------------------------------------------------
+C29878.00    [HOME-B01]                                     Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+About how often do you read stories to [Child First Name]?
+ 
+       7       1 Never
+      10       2 Several times a year
+      26       3 Several times a month
+      35       4 Once a week
+      94       5 At least 3 times a week
+     120       6 Everyday
+  -------
+     292
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     292      MISSING(-7)   11259
+ 
+Min:              1        Max:              6        Mean:                4.91
+ 
+Lead In: C29854.01[2:2]
+Default Next Question: C29879.00
+--------------------------------------------------------------------------------
+C29879.00    [HOME-B02]                                     Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+About how many children's books does [Child First Name] have?
+ 
+     272       4 10 or more books
+      17       3 3 to 9 books
+       1       2 1 or 2 books
+       2       1 None
+  -------
+     292
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     292      MISSING(-7)   11259
+ 
+Min:              1        Max:              4        Mean:                3.91
+ 
+Lead In: C29878.00[Default]
+Default Next Question: C29880.00
+--------------------------------------------------------------------------------
+C29880.00    [HOME-B03]                                     Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY MAGAZINES FAMILY GETS REGULARLY
+ 
+About how many magazines does your family get regularly?
+ 
+      88       1 None
+      31       2 One
+      47       3 Two
+      39       4 Three
+      86       5 Four or more
+  -------
+     291
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>     292      MISSING(-7)   11259
+ 
+Min:              1        Max:              5        Mean:                3.01
+ 
+Lead In: C29879.00[Default]
+Default Next Question: C29881.00
+--------------------------------------------------------------------------------
+C29881.00    [HOME-B04]                                     Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD HAVE A RECORD, TAPE, OR CD 
+             PLAYER?
+ 
+Does [Child First Name] have the use of a CD player, tape deck, or tape 
+recorder, or record player at home and at least 5 children's records or tapes? 
+(May be shared with sister or brother.)
+ 
+     251       1 Yes
+      40       0 No
+  -------
+     291
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>     292      MISSING(-7)   11259
+ 
+Min:              0        Max:              1        Mean:                 .86
+ 
+Lead In: C29880.00[Default]
+Default Next Question: C29882.00
+--------------------------------------------------------------------------------
+C29882.00    [HOME-B05A]                                    Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN NUMBERS
+ 
+Please tell me which of the following you (or someone else) have helped [Child 
+First Name] learn at home.
+ 
+Do you or have you helped with...numbers?
+ 
+     287       1 Yes
+       5       0 No
+  -------
+     292
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     292      MISSING(-7)   11259
+ 
+Min:              0        Max:              1        Mean:                 .98
+ 
+Lead In: C29881.00[Default]
+Default Next Question: C29883.00
+--------------------------------------------------------------------------------
+C29883.00    [HOME-B05B]                                    Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN THE 
+             ALPHABET
+ 
+Do you (or someone else) help with...the alphabet?
+ 
+     284       1 Yes
+       8       0 No
+  -------
+     292
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     292      MISSING(-7)   11259
+ 
+Min:              0        Max:              1        Mean:                 .97
+ 
+Lead In: C29882.00[Default]
+Default Next Question: C29884.00
+--------------------------------------------------------------------------------
+C29884.00    [HOME-B05C]                                    Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN COLORS
+ 
+Do you (or someone else) help with...colors?
+ 
+     290       1 Yes
+       2       0 No
+  -------
+     292
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     292      MISSING(-7)   11259
+ 
+Min:              0        Max:              1        Mean:                 .99
+ 
+Lead In: C29883.00[Default]
+Default Next Question: C29885.00
+--------------------------------------------------------------------------------
+C29885.00    [HOME-B05D]                                    Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN SHAPES 
+             AND SIZES
+ 
+Do you (or someone else) help with...shapes and sizes?
+ 
+     278       1 Yes
+      14       0 No
+  -------
+     292
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     292      MISSING(-7)   11259
+ 
+Min:              0        Max:              1        Mean:                 .95
+ 
+Lead In: C29884.00[Default]
+Default Next Question: C29886.00
+--------------------------------------------------------------------------------
+C29891.00    [HOME-B09]                                     Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD IS TAKEN ON AN OUTING
+ 
+How often does a family member get a chance to take [Child First Name] on any 
+kind of outing (like shopping, to the park, a picnic, drive-in, and so on)?
+ 
+      17       1 A few times a year or less
+      10       2 About once a month
+      63       3 About two or three times a month
+     142       4 Several times a week
+      60       5 About once a day
+  -------
+     292
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     292      MISSING(-7)   11259
+ 
+Min:              1        Max:              5        Mean:                3.75
+ 
+Lead In: C29890.09[Default]
+Default Next Question: C29892.00
+--------------------------------------------------------------------------------
+C29892.00    [HOME-B10]                                     Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN 
+             PAST YEAR
+ 
+How often has a family member taken or arranged to take [Child First Name] to 
+any type of museum (children's, scientific, art, historical, etc.) within the 
+past year?
+ 
+      93       1 Never
+     107       2 Once or twice
+      65       3 Several times
+      23       4 About once a month
+       4       5 About once a week or more often
+  -------
+     292
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     292      MISSING(-7)   11259
+ 
+Min:              1        Max:              5        Mean:                 2.1
+ 
+Lead In: C29891.00[Default]
+Default Next Question: C29893.00
+--------------------------------------------------------------------------------
+C29899.00    [HOME-B16]                                     Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+Does [Child First Name] see [his/her] [father/stepfather/father-figure] on a 
+daily basis?
+ 
+     244       1 Yes
+      33       0 No
+  -------
+     277
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     277      MISSING(-7)   11274
+ 
+Min:              0        Max:              1        Mean:                 .88
+ 
+Lead In: C29898.00[Default]  C29895.00[1:1]
+Default Next Question: C29900.00
+--------------------------------------------------------------------------------
+C29900.00    [HOME-B17]                                     Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+How often does [Child First Name] eat a meal with you and [his/her] 
+[father/stepfather/father-figure]?
+ 
+      57       1 More than once a day
+     134       2 Once a day
+      46       3 Several times a week
+      16       4 About once a week
+       9       5 About once a month
+      15       6 Never
+  -------
+     277
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     277      MISSING(-7)   11274
+ 
+Min:              1        Max:              6        Mean:                2.39
+ 
+Lead In: C29899.00[Default]
+Default Next Question: C29901.00
+--------------------------------------------------------------------------------
+C33903.00    [MS-HOME-B01]                                  Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+About how often do you read stories to [Child First Name]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       6       1 Never
+       3       2 Several times a year
+       5       3 Several times a month
+      17       4 Once a week
+      55       5 At least 3 times a week
+      92       6 Everyday
+  -------
+     178
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     178      MISSING(-7)   11373
+ 
+Min:              1        Max:              6        Mean:                5.18
+ 
+Lead In: C33879.01[2:2]
+Default Next Question: C33904.00
+--------------------------------------------------------------------------------
+C33904.00    [MS-HOME-B02]                                  Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+About how many children's books does [Child First Name] have?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+     169       4 10 or more books
+       6       3 3 to 9 books
+       1       2 1 or 2 books
+       2       1 None
+  -------
+     178
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     178      MISSING(-7)   11373
+ 
+Min:              1        Max:              4        Mean:                3.92
+ 
+Lead In: C33903.00[Default]
+Default Next Question: C33905.00
+--------------------------------------------------------------------------------
+C33905.00    [MS-HOME-B03]                                  Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY MAGAZINES FAMILY GETS REGULARLY
+ 
+About how many magazines does your family get regularly?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      58       1 None
+      21       2 One
+      28       3 Two
+      17       4 Three
+      53       5 Four or more
+  -------
+     177
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>     178      MISSING(-7)   11373
+ 
+Min:              1        Max:              5        Mean:                2.92
+ 
+Lead In: C33904.00[Default]
+Default Next Question: C33906.00
+--------------------------------------------------------------------------------
+C33906.00    [MS-HOME-B04]                                  Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD HAVE A RECORD, TAPE, OR CD 
+             PLAYER?
+ 
+Does [Child First Name] have the use of a CD player, tape deck, or tape 
+recorder, or record player at home and at least 5 children's records or tapes? 
+(May be shared with sister or brother.)
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+     148       1 Yes
+      29       0 No
+  -------
+     177
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>     178      MISSING(-7)   11373
+ 
+Min:              0        Max:              1        Mean:                 .84
+ 
+Lead In: C33905.00[Default]
+Default Next Question: C33907.00
+--------------------------------------------------------------------------------
+C33907.00    [MS-HOME-B05A]                                 Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN NUMBERS
+ 
+Please tell me which of the following you (or someone else) have helped [Child 
+First Name] learn at home.
+ 
+Do you or have you helped with...numbers?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+     173       1 Yes
+       5       0 No
+  -------
+     178
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     178      MISSING(-7)   11373
+ 
+Min:              0        Max:              1        Mean:                 .97
+ 
+Lead In: C33906.00[Default]
+Default Next Question: C33908.00
+--------------------------------------------------------------------------------
+C33908.00    [MS-HOME-B05B]                                 Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN THE 
+             ALPHABET
+ 
+Do you (or someone else) help with...the alphabet?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+     172       1 Yes
+       6       0 No
+  -------
+     178
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     178      MISSING(-7)   11373
+ 
+Min:              0        Max:              1        Mean:                 .97
+ 
+Lead In: C33907.00[Default]
+Default Next Question: C33909.00
+--------------------------------------------------------------------------------
+C33909.00    [MS-HOME-B05C]                                 Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN COLORS
+ 
+Do you (or someone else) help with...colors?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+     170       1 Yes
+       8       0 No
+  -------
+     178
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     178      MISSING(-7)   11373
+ 
+Min:              0        Max:              1        Mean:                 .96
+ 
+Lead In: C33908.00[Default]
+Default Next Question: C33910.00
+--------------------------------------------------------------------------------
+C33910.00    [MS-HOME-B05D]                                 Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN SHAPES 
+             AND SIZES
+ 
+Do you (or someone else) help with...shapes and sizes?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+     168       1 Yes
+      10       0 No
+  -------
+     178
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     178      MISSING(-7)   11373
+ 
+Min:              0        Max:              1        Mean:                 .94
+ 
+Lead In: C33909.00[Default]
+Default Next Question: C33911.00
+--------------------------------------------------------------------------------
+C33916.00    [MS-HOME-B09]                                  Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD IS TAKEN ON AN OUTING
+ 
+How often does a family member get a chance to take [Child First Name] on any 
+kind of outing (like shopping, to the park, a picnic, drive-in, and so on)?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       9       1 A few times a year or less
+      15       2 About once a month
+      37       3 About two or three times a month
+      89       4 Several times a week
+      26       5 About once a day
+  -------
+     176
+ 
+Refusal(-1)            0
+Don't Know(-2)         2
+TOTAL =========>     178      MISSING(-7)   11373
+ 
+Min:              1        Max:              5        Mean:                3.61
+ 
+Lead In: C33915.09[Default]
+Default Next Question: C33917.00
+--------------------------------------------------------------------------------
+C33917.00    [MS-HOME-B10]                                  Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN 
+             PAST YEAR
+ 
+How often has a family member taken or arranged to take [Child First Name] to 
+any type of museum (children's, scientific, art, historical, etc.) within the 
+past year?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      57       1 Never
+      55       2 Once or twice
+      51       3 Several times
+      12       4 About once a month
+       2       5 About once a week or more often
+  -------
+     177
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>     178      MISSING(-7)   11373
+ 
+Min:              1        Max:              5        Mean:                2.14
+ 
+Lead In: C33916.00[Default]
+Default Next Question: C33918.00
+--------------------------------------------------------------------------------
+C33924.00    [MS-HOME-B16]                                  Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+Does [Child First Name] see [his/her] [father/stepfather/father-figure] on a 
+daily basis?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+     140       1 Yes
+      24       0 No
+  -------
+     164
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     164      MISSING(-7)   11387
+ 
+Min:              0        Max:              1        Mean:                 .85
+ 
+Lead In: C33923.00[Default]  C33920.00[1:1]
+Default Next Question: C33925.00
+--------------------------------------------------------------------------------
+C33925.00    [MS-HOME-B17]                                  Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+How often does [Child First Name] eat a meal with you and [his/her] 
+[father/stepfather/father-figure]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      27       1 More than once a day
+      71       2 Once a day
+      39       3 Several times a week
+       6       4 About once a week
+       7       5 About once a month
+      13       6 Never
+  -------
+     163
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>     164      MISSING(-7)   11387
+ 
+Min:              1        Max:              6        Mean:                 2.6
+ 
+Lead In: C33924.00[Default]
+Default Next Question: C33926.00
+--------------------------------------------------------------------------------
+C39162.00    [MS-HOME-B01]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+About how often do you read stories to [Child First Name]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       2       1 Never
+       0       2 Several times a year
+       4       3 Several times a month
+       7       4 Once a week
+      23       5 At least 3 times a week
+      51       6 Everyday
+  -------
+      87
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      87      MISSING(-7)   11464
+ 
+Min:              1        Max:              6        Mean:                5.32
+ 
+Lead In: C39137.01[2:2]
+Default Next Question: C39163.00
+--------------------------------------------------------------------------------
+C39163.00    [MS-HOME-B02]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+About how many children's books does [Child First Name] have?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      84       4 10 or more books
+       2       3 3 to 9 books
+       1       2 1 or 2 books
+       0       1 None
+  -------
+      87
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      87      MISSING(-7)   11464
+ 
+Min:              2        Max:              4        Mean:                3.95
+ 
+Lead In: C39162.00[Default]
+Default Next Question: C39164.00
+--------------------------------------------------------------------------------
+C39164.00    [MS-HOME-B03]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY MAGAZINES FAMILY GETS REGULARLY
+ 
+About how many magazines does your family get regularly?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      29       1 None
+      11       2 One
+      14       3 Two
+       9       4 Three
+      24       5 Four or more
+  -------
+      87
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      87      MISSING(-7)   11464
+ 
+Min:              1        Max:              5        Mean:                2.86
+ 
+Lead In: C39163.00[Default]
+Default Next Question: C39165.00
+--------------------------------------------------------------------------------
+C39165.00    [MS-HOME-B04]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD HAVE A RECORD, TAPE, OR CD 
+             PLAYER?
+ 
+Does [Child First Name] have the use of a CD player, tape deck, or tape 
+recorder, or record player at home and at least 5 children's records or tapes? 
+(May be shared with sister or brother.)
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      73       1 Yes
+      14       0 No
+  -------
+      87
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      87      MISSING(-7)   11464
+ 
+Min:              0        Max:              1        Mean:                 .84
+ 
+Lead In: C39164.00[Default]
+Default Next Question: C39166.00
+--------------------------------------------------------------------------------
+C39166.00    [MS-HOME-B05A]                                 Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN NUMBERS
+ 
+Please tell me which of the following you (or someone else) have helped [Child 
+First Name] learn at home.
+ 
+Do you or have you helped with...numbers?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      84       1 Yes
+       3       0 No
+  -------
+      87
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      87      MISSING(-7)   11464
+ 
+Min:              0        Max:              1        Mean:                 .97
+ 
+Lead In: C39165.00[Default]
+Default Next Question: C39167.00
+--------------------------------------------------------------------------------
+C39167.00    [MS-HOME-B05B]                                 Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN THE 
+             ALPHABET
+ 
+Do you (or someone else) help with...the alphabet?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      84       1 Yes
+       3       0 No
+  -------
+      87
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      87      MISSING(-7)   11464
+ 
+Min:              0        Max:              1        Mean:                 .97
+ 
+Lead In: C39166.00[Default]
+Default Next Question: C39168.00
+--------------------------------------------------------------------------------
+C39168.00    [MS-HOME-B05C]                                 Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN COLORS
+ 
+Do you (or someone else) help with...colors?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      85       1 Yes
+       2       0 No
+  -------
+      87
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      87      MISSING(-7)   11464
+ 
+Min:              0        Max:              1        Mean:                 .98
+ 
+Lead In: C39167.00[Default]
+Default Next Question: C39169.00
+--------------------------------------------------------------------------------
+C39169.00    [MS-HOME-B05D]                                 Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN SHAPES 
+             AND SIZES
+ 
+Do you (or someone else) help with...shapes and sizes?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      84       1 Yes
+       3       0 No
+  -------
+      87
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      87      MISSING(-7)   11464
+ 
+Min:              0        Max:              1        Mean:                 .97
+ 
+Lead In: C39168.00[Default]
+Default Next Question: C39170.00
+--------------------------------------------------------------------------------
+C39175.00    [MS-HOME-B09]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD IS TAKEN ON AN OUTING
+ 
+How often does a family member get a chance to take [Child First Name] on any 
+kind of outing (like shopping, to the park, a picnic, drive-in, and so on)?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       4       1 A few times a year or less
+      12       2 About once a month
+      20       3 About two or three times a month
+      38       4 Several times a week
+      13       5 About once a day
+  -------
+      87
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      87      MISSING(-7)   11464
+ 
+Min:              1        Max:              5        Mean:                3.51
+ 
+Lead In: C39174.09[Default]
+Default Next Question: C39176.00
+--------------------------------------------------------------------------------
+C39176.00    [MS-HOME-B10]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN 
+             PAST YEAR
+ 
+How often has a family member taken or arranged to take [Child First Name] to 
+any type of museum (children's, scientific, art, historical, etc.) within the 
+past year?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      25       1 Never
+      27       2 Once or twice
+      22       3 Several times
+      11       4 About once a month
+       2       5 About once a week or more often
+  -------
+      87
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      87      MISSING(-7)   11464
+ 
+Min:              1        Max:              5        Mean:                2.29
+ 
+Lead In: C39175.00[Default]
+Default Next Question: C39177.00
+--------------------------------------------------------------------------------
+C39183.00    [MS-HOME-B16]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+Does [Child First Name] see [his/her] [father/stepfather/father-figure] on a 
+daily basis?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      71       1 Yes
+      15       0 No
+  -------
+      86
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      86      MISSING(-7)   11465
+ 
+Min:              0        Max:              1        Mean:                 .83
+ 
+Lead In: C39182.00[Default]  C39179.00[1:1]
+Default Next Question: C39184.00
+--------------------------------------------------------------------------------
+C39184.00    [MS-HOME-B17]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+How often does [Child First Name] eat a meal with you and [his/her] 
+[father/stepfather/father-figure]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      15       1 More than once a day
+      31       2 Once a day
+      27       3 Several times a week
+       4       4 About once a week
+       2       5 About once a month
+       7       6 Never
+  -------
+      86
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      86      MISSING(-7)   11465
+ 
+Min:              1        Max:              6        Mean:                2.63
+ 
+Lead In: C39183.00[Default]
+Default Next Question: C39185.00
+--------------------------------------------------------------------------------
+C51674.00    [MS-HOME-B01]                                  Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+About how often do you read stories to [Child First Name]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       0       1 Never
+       1       2 Several times a year
+       2       3 Several times a month
+       6       4 Once a week
+      13       5 At least 3 times a week
+      25       6 Everyday
+  -------
+      47
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      47      MISSING(-7)   11504
+ 
+Min:              2        Max:              6        Mean:                5.26
+ 
+Lead In: C51652.01[2:2]
+Default Next Question: C51675.00
+--------------------------------------------------------------------------------
+C51675.00    [MS-HOME-B02]                                  Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+About how many children's books does [Child First Name] have?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      43       4 10 or more books
+       2       3 3 to 9 books
+       0       2 1 or 2 books
+       1       1 None
+  -------
+      46
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>      47      MISSING(-7)   11504
+ 
+Min:              1        Max:              4        Mean:                3.89
+ 
+Lead In: C51674.00[Default]
+Default Next Question: C51676.00
+--------------------------------------------------------------------------------
+C51676.00    [MS-HOME-B03]                                  Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY MAGAZINES FAMILY GETS REGULARLY
+ 
+About how many magazines does your family get regularly?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      19       1 None
+      10       2 One
+       6       3 Two
+       4       4 Three
+       8       5 Four or more
+  -------
+      47
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      47      MISSING(-7)   11504
+ 
+Min:              1        Max:              5        Mean:                 2.4
+ 
+Lead In: C51675.00[Default]
+Default Next Question: C51677.00
+--------------------------------------------------------------------------------
+C51677.00    [MS-HOME-B04]                                  Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD HAVE A RECORD, TAPE, OR CD 
+             PLAYER?
+ 
+Does [Child First Name] have the use of a CD player, tape deck, or tape 
+recorder, or record player at home and at least 5 children's records or tapes? 
+(May be shared with sister or brother.)
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      34       1 Yes
+      12       0 No
+  -------
+      46
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>      47      MISSING(-7)   11504
+ 
+Min:              0        Max:              1        Mean:                 .74
+ 
+Lead In: C51676.00[Default]
+Default Next Question: C51678.00
+--------------------------------------------------------------------------------
+C51678.00    [MS-HOME-B05A]                                 Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN NUMBERS
+ 
+Please tell me which of the following you (or someone else) have helped [Child 
+First Name] learn at home.
+ 
+Do you or have you helped with...numbers?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      45       1 Yes
+       2       0 No
+  -------
+      47
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      47      MISSING(-7)   11504
+ 
+Min:              0        Max:              1        Mean:                 .96
+ 
+Lead In: C51677.00[Default]
+Default Next Question: C51679.00
+--------------------------------------------------------------------------------
+C51679.00    [MS-HOME-B05B]                                 Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN THE 
+             ALPHABET
+ 
+Do you (or someone else) help with...the alphabet?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      45       1 Yes
+       2       0 No
+  -------
+      47
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      47      MISSING(-7)   11504
+ 
+Min:              0        Max:              1        Mean:                 .96
+ 
+Lead In: C51678.00[Default]
+Default Next Question: C51680.00
+--------------------------------------------------------------------------------
+C51680.00    [MS-HOME-B05C]                                 Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN COLORS
+ 
+Do you (or someone else) help with...colors?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      47       1 Yes
+       0       0 No
+  -------
+      47
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      47      MISSING(-7)   11504
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: C51679.00[Default]
+Default Next Question: C51681.00
+--------------------------------------------------------------------------------
+C51681.00    [MS-HOME-B05D]                                 Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN SHAPES 
+             AND SIZES
+ 
+Do you (or someone else) help with...shapes and sizes?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      45       1 Yes
+       2       0 No
+  -------
+      47
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      47      MISSING(-7)   11504
+ 
+Min:              0        Max:              1        Mean:                 .96
+ 
+Lead In: C51680.00[Default]
+Default Next Question: C51682.00
+--------------------------------------------------------------------------------
+C51687.00    [MS-HOME-B09]                                  Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD IS TAKEN ON AN OUTING
+ 
+How often does a family member get a chance to take [Child First Name] on any 
+kind of outing (like shopping, to the park, a picnic, drive-in, and so on)?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       4       1 A few times a year or less
+       3       2 About once a month
+       8       3 About two or three times a month
+      25       4 Several times a week
+       7       5 About once a day
+  -------
+      47
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      47      MISSING(-7)   11504
+ 
+Min:              1        Max:              5        Mean:                 3.6
+ 
+Lead In: C51686.09[Default]
+Default Next Question: C51688.00
+--------------------------------------------------------------------------------
+C51688.00    [MS-HOME-B10]                                  Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN 
+             PAST YEAR
+ 
+How often has a family member taken or arranged to take [Child First Name] to 
+any type of museum (children's, scientific, art, historical, etc.) within the 
+past year?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      15       1 Never
+      14       2 Once or twice
+      12       3 Several times
+       3       4 About once a month
+       3       5 About once a week or more often
+  -------
+      47
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      47      MISSING(-7)   11504
+ 
+Min:              1        Max:              5        Mean:                2.26
+ 
+Lead In: C51687.00[Default]
+Default Next Question: C51689.00
+--------------------------------------------------------------------------------
+C51695.00    [MS-HOME-B16]                                  Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+Does [Child First Name] see [his/her] [father/stepfather/father-figure] on a 
+daily basis?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      39       1 Yes
+       7       0 No
+  -------
+      46
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>      47      MISSING(-7)   11504
+ 
+Min:              0        Max:              1        Mean:                 .85
+ 
+Lead In: C51694.00[Default]  C51691.00[1:1]
+Default Next Question: C51696.00
+--------------------------------------------------------------------------------
+C51696.00    [MS-HOME-B17]                                  Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+How often does [Child First Name] eat a meal with you and [his/her] 
+[father/stepfather/father-figure]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       7       1 More than once a day
+      23       2 Once a day
+       8       3 Several times a week
+       1       4 About once a week
+       3       5 About once a month
+       4       6 Never
+  -------
+      46
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>      47      MISSING(-7)   11504
+ 
+Min:              1        Max:              6        Mean:                2.61
+ 
+Lead In: C51695.00[Default]
+Default Next Question: C51697.00
+--------------------------------------------------------------------------------
+C57439.00    [MS-HOME-B01]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+About how often do you read stories to [Child First Name]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       0       1 Never
+       0       2 Several times a year
+       0       3 Several times a month
+       1       4 Once a week
+       0       5 At least 3 times a week
+      11       6 Everyday
+  -------
+      12
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      12      MISSING(-7)   11539
+ 
+Min:              4        Max:              6        Mean:                5.83
+ 
+Lead In: C57414.01[2:2]
+Default Next Question: C57440.00
+--------------------------------------------------------------------------------
+C57440.00    [MS-HOME-B02]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+About how many children's books does [Child First Name] have?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      12       4 10 or more books
+       0       3 3 to 9 books
+       0       2 1 or 2 books
+       0       1 None
+  -------
+      12
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      12      MISSING(-7)   11539
+ 
+Min:              4        Max:              4        Mean:                   4
+ 
+Lead In: C57439.00[Default]
+Default Next Question: C57441.00
+--------------------------------------------------------------------------------
+C57441.00    [MS-HOME-B03]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY MAGAZINES FAMILY GETS REGULARLY
+ 
+About how many magazines does your family get regularly?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       2       1 None
+       1       2 One
+       5       3 Two
+       0       4 Three
+       4       5 Four or more
+  -------
+      12
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      12      MISSING(-7)   11539
+ 
+Min:              1        Max:              5        Mean:                3.25
+ 
+Lead In: C57440.00[Default]
+Default Next Question: C57442.00
+--------------------------------------------------------------------------------
+C57442.00    [MS-HOME-B04]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD HAVE A RECORD, TAPE, OR CD 
+             PLAYER?
+ 
+Does [Child First Name] have the use of a CD player, tape deck, or tape 
+recorder, or record player at home and at least 5 children's records or tapes? 
+(May be shared with sister or brother.)
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      12       1 Yes
+       0       0 No
+  -------
+      12
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      12      MISSING(-7)   11539
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: C57441.00[Default]
+Default Next Question: C57443.00
+--------------------------------------------------------------------------------
+C57443.00    [MS-HOME-B05A]                                 Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN NUMBERS
+ 
+Please tell me which of the following you (or someone else) have helped [Child 
+First Name] learn at home.
+ 
+Do you or have you helped with...numbers?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      12       1 Yes
+       0       0 No
+  -------
+      12
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      12      MISSING(-7)   11539
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: C57442.00[Default]
+Default Next Question: C57444.00
+--------------------------------------------------------------------------------
+C57444.00    [MS-HOME-B05B]                                 Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN THE 
+             ALPHABET
+ 
+Do you (or someone else) help with...the alphabet?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      12       1 Yes
+       0       0 No
+  -------
+      12
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      12      MISSING(-7)   11539
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: C57443.00[Default]
+Default Next Question: C57445.00
+--------------------------------------------------------------------------------
+C57445.00    [MS-HOME-B05C]                                 Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN COLORS
+ 
+Do you (or someone else) help with...colors?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      11       1 Yes
+       1       0 No
+  -------
+      12
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      12      MISSING(-7)   11539
+ 
+Min:              0        Max:              1        Mean:                 .92
+ 
+Lead In: C57444.00[Default]
+Default Next Question: C57446.00
+--------------------------------------------------------------------------------
+C57446.00    [MS-HOME-B05D]                                 Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN SHAPES 
+             AND SIZES
+ 
+Do you (or someone else) help with...shapes and sizes?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      12       1 Yes
+       0       0 No
+  -------
+      12
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      12      MISSING(-7)   11539
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: C57445.00[Default]
+Default Next Question: C57447.00
+--------------------------------------------------------------------------------
+C57452.00    [MS-HOME-B09]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD IS TAKEN ON AN OUTING
+ 
+How often does a family member get a chance to take [Child First Name] on any 
+kind of outing (like shopping, to the park, a picnic, drive-in, and so on)?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       2       1 A few times a year or less
+       3       2 About once a month
+       1       3 About two or three times a month
+       4       4 Several times a week
+       2       5 About once a day
+  -------
+      12
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      12      MISSING(-7)   11539
+ 
+Min:              1        Max:              5        Mean:                3.08
+ 
+Lead In: C57451.09[Default]
+Default Next Question: C57453.00
+--------------------------------------------------------------------------------
+C57453.00    [MS-HOME-B10]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN 
+             PAST YEAR
+ 
+How often has a family member taken or arranged to take [Child First Name] to 
+any type of museum (children's, scientific, art, historical, etc.) within the 
+past year?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       4       1 Never
+       4       2 Once or twice
+       4       3 Several times
+       0       4 About once a month
+       0       5 About once a week or more often
+  -------
+      12
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      12      MISSING(-7)   11539
+ 
+Min:              1        Max:              3        Mean:                   2
+ 
+Lead In: C57452.00[Default]
+Default Next Question: C57454.00
+--------------------------------------------------------------------------------
+C57460.00    [MS-HOME-B16]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+Does [Child First Name] see [his/her] [father/stepfather/father-figure] on a 
+daily basis?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      11       1 Yes
+       1       0 No
+  -------
+      12
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      12      MISSING(-7)   11539
+ 
+Min:              0        Max:              1        Mean:                 .92
+ 
+Lead In: C57459.00[Default]  C57456.00[1:1]
+Default Next Question: C57461.00
+--------------------------------------------------------------------------------
+C57461.00    [MS-HOME-B17]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+How often does [Child First Name] eat a meal with you and [his/her] 
+[father/stepfather/father-figure]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       1       1 More than once a day
+       7       2 Once a day
+       2       3 Several times a week
+       0       4 About once a week
+       1       5 About once a month
+       1       6 Never
+  -------
+      12
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      12      MISSING(-7)   11539
+ 
+Min:              1        Max:              6        Mean:                2.67
+ 
+Lead In: C57460.00[Default]
+Default Next Question: C57462.00
+--------------------------------------------------------------------------------
+C60138.00    [MS-HOME-B01]                                  Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+About how often do you read stories to [Child First Name]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       0       1 Never
+       0       2 Several times a year
+       0       3 Several times a month
+       0       4 Once a week
+       2       5 At least 3 times a week
+       3       6 Everyday
+  -------
+       5
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       5      MISSING(-7)   11546
+ 
+Min:              5        Max:              6        Mean:                 5.6
+ 
+Lead In: C60137.01[2:2]
+Default Next Question: C60139.00
+--------------------------------------------------------------------------------
+C60139.00    [MS-HOME-B02]                                  Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+About how many children's books does [Child First Name] have?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       5       4 10 or more books
+       0       3 3 to 9 books
+       0       2 1 or 2 books
+       0       1 None
+  -------
+       5
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       5      MISSING(-7)   11546
+ 
+Min:              4        Max:              4        Mean:                   4
+ 
+Lead In: C60138.00[Default]
+Default Next Question: C60140.00
+--------------------------------------------------------------------------------
+C60140.00    [MS-HOME-B03]                                  Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY MAGAZINES FAMILY GETS REGULARLY
+ 
+About how many magazines does your family get regularly?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       2       1 None
+       0       2 One
+       2       3 Two
+       0       4 Three
+       1       5 Four or more
+  -------
+       5
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       5      MISSING(-7)   11546
+ 
+Min:              1        Max:              5        Mean:                 2.6
+ 
+Lead In: C60139.00[Default]
+Default Next Question: C60141.00
+--------------------------------------------------------------------------------
+C60141.00    [MS-HOME-B04]                                  Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD HAVE A RECORD, TAPE, OR CD 
+             PLAYER?
+ 
+Does [Child First Name] have the use of a CD player, tape deck, or tape 
+recorder, or record player at home and at least 5 children's records or tapes? 
+(May be shared with sister or brother.)
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       5       1 Yes
+       0       0 No
+  -------
+       5
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       5      MISSING(-7)   11546
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: C60140.00[Default]
+Default Next Question: C60142.00
+--------------------------------------------------------------------------------
+C60142.00    [MS-HOME-B05A]                                 Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN NUMBERS
+ 
+Please tell me which of the following you (or someone else) have helped [Child 
+First Name] learn at home.
+ 
+Do you or have you helped with...numbers?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       5       1 Yes
+       0       0 No
+  -------
+       5
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       5      MISSING(-7)   11546
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: C60141.00[Default]
+Default Next Question: C60143.00
+--------------------------------------------------------------------------------
+C60143.00    [MS-HOME-B05B]                                 Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN THE 
+             ALPHABET
+ 
+Do you (or someone else) help with...the alphabet?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       5       1 Yes
+       0       0 No
+  -------
+       5
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       5      MISSING(-7)   11546
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: C60142.00[Default]
+Default Next Question: C60144.00
+--------------------------------------------------------------------------------
+C60144.00    [MS-HOME-B05C]                                 Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN COLORS
+ 
+Do you (or someone else) help with...colors?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       5       1 Yes
+       0       0 No
+  -------
+       5
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       5      MISSING(-7)   11546
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: C60143.00[Default]
+Default Next Question: C60145.00
+--------------------------------------------------------------------------------
+C60145.00    [MS-HOME-B05D]                                 Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN SHAPES 
+             AND SIZES
+ 
+Do you (or someone else) help with...shapes and sizes?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       3       1 Yes
+       2       0 No
+  -------
+       5
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       5      MISSING(-7)   11546
+ 
+Min:              0        Max:              1        Mean:                  .6
+ 
+Lead In: C60144.00[Default]
+Default Next Question: C60146.00
+--------------------------------------------------------------------------------
+C60151.00    [MS-HOME-B09]                                  Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD IS TAKEN ON AN OUTING
+ 
+How often does a family member get a chance to take [Child First Name] on any 
+kind of outing (like shopping, to the park, a picnic, drive-in, and so on)?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       0       1 A few times a year or less
+       0       2 About once a month
+       0       3 About two or three times a month
+       3       4 Several times a week
+       2       5 About once a day
+  -------
+       5
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       5      MISSING(-7)   11546
+ 
+Min:              4        Max:              5        Mean:                 4.4
+ 
+Lead In: C60150.09[Default]
+Default Next Question: C60152.00
+--------------------------------------------------------------------------------
+C60152.00    [MS-HOME-B10]                                  Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN 
+             PAST YEAR
+ 
+How often has a family member taken or arranged to take [Child First Name] to 
+any type of museum (children's, scientific, art, historical, etc.) within the 
+past year?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       0       1 Never
+       5       2 Once or twice
+       0       3 Several times
+       0       4 About once a month
+       0       5 About once a week or more often
+  -------
+       5
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       5      MISSING(-7)   11546
+ 
+Min:              2        Max:              2        Mean:                   2
+ 
+Lead In: C60151.00[Default]
+Default Next Question: C60153.00
+--------------------------------------------------------------------------------
+C60159.00    [MS-HOME-B16]                                  Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+Does [Child First Name] see [his/her] [father/stepfather/father-figure] on a 
+daily basis?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       3       1 Yes
+       2       0 No
+  -------
+       5
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       5      MISSING(-7)   11546
+ 
+Min:              0        Max:              1        Mean:                  .6
+ 
+Lead In: C60158.00[Default]  C60155.00[1:1]
+Default Next Question: C60160.00
+--------------------------------------------------------------------------------
+C60160.00    [MS-HOME-B17]                                  Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+How often does [Child First Name] eat a meal with you and [his/her] 
+[father/stepfather/father-figure]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       0       1 More than once a day
+       1       2 Once a day
+       3       3 Several times a week
+       1       4 About once a week
+       0       5 About once a month
+       0       6 Never
+  -------
+       5
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       5      MISSING(-7)   11546
+ 
+Min:              2        Max:              4        Mean:                   3
+ 
+Lead In: C60159.00[Default]
+Default Next Question: C60161.00
+--------------------------------------------------------------------------------
+C60825.00    [MS-HOME-B01]                                  Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+About how often do you read stories to [Child First Name]?
+ 
+       0       1 Never
+       0       2 Several times a year
+       1       3 Several times a month
+       0       4 Once a week
+       0       5 At least 3 times a week
+       1       6 Everyday
+  -------
+       2
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       2      MISSING(-7)   11549
+ 
+Min:              3        Max:              6        Mean:                 4.5
+ 
+Lead In: C60807.00[2:2]
+Default Next Question: C60826.00
+--------------------------------------------------------------------------------
+C60826.00    [MS-HOME-B02]                                  Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY CHILDRENS BOOKS CHILD HAS
+ 
+About how many children's books does [Child First Name] have?
+ 
+       2       4 10 or more books
+       0       3 3 to 9 books
+       0       2 1 or 2 books
+       0       1 None
+  -------
+       2
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       2      MISSING(-7)   11549
+ 
+Min:              4        Max:              4        Mean:                   4
+ 
+Lead In: C60825.00[Default]
+Default Next Question: C60827.00
+--------------------------------------------------------------------------------
+C60827.00    [MS-HOME-B03]                                  Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW MANY MAGAZINES FAMILY GETS REGULARLY
+ 
+About how many magazines does your family get regularly?
+ 
+       2       1 None
+       0       2 One
+       0       3 Two
+       0       4 Three
+       0       5 Four or more
+  -------
+       2
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       2      MISSING(-7)   11549
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: C60826.00[Default]
+Default Next Question: C60828.00
+--------------------------------------------------------------------------------
+C60828.00    [MS-HOME-B04]                                  Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD HAVE A RECORD, TAPE, OR CD 
+             PLAYER?
+ 
+Does [Child First Name] have the use of a CD player, tape deck, or tape 
+recorder, or record player at home and at least 5 children's records or tapes? 
+(May be shared with sister or brother.)
+ 
+       0       1 Yes
+       2       0 No
+  -------
+       2
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       2      MISSING(-7)   11549
+ 
+Min:              0        Max:              0        Mean:                   0
+ 
+Lead In: C60827.00[Default]
+Default Next Question: C60829.00
+--------------------------------------------------------------------------------
+C60829.00    [MS-HOME-B05A]                                 Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN NUMBERS
+ 
+Please tell me which of the following you (or someone else) have helped [Child 
+First Name] learn at home.
+ 
+Do you or have you helped with...numbers?
+ 
+       2       1 Yes
+       0       0 No
+  -------
+       2
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       2      MISSING(-7)   11549
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: C60828.00[Default]
+Default Next Question: C60830.00
+--------------------------------------------------------------------------------
+C60830.00    [MS-HOME-B05B]                                 Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN THE 
+             ALPHABET
+ 
+Do you (or someone else) help with...the alphabet?
+ 
+       2       1 Yes
+       0       0 No
+  -------
+       2
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       2      MISSING(-7)   11549
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: C60829.00[Default]
+Default Next Question: C60831.00
+--------------------------------------------------------------------------------
+C60831.00    [MS-HOME-B05C]                                 Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN COLORS
+ 
+Do you (or someone else) help with...colors?
+ 
+       2       1 Yes
+       0       0 No
+  -------
+       2
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       2      MISSING(-7)   11549
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: C60830.00[Default]
+Default Next Question: C60832.00
+--------------------------------------------------------------------------------
+C60832.00    [MS-HOME-B05D]                                 Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): MOM/FAMILY MEMBER HELPS CHILD LEARN SHAPES 
+             AND SIZES
+ 
+Do you (or someone else) help with...shapes and sizes?
+ 
+       2       1 Yes
+       0       0 No
+  -------
+       2
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       2      MISSING(-7)   11549
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: C60831.00[Default]
+Default Next Question: C60833.00
+--------------------------------------------------------------------------------
+C60838.00    [MS-HOME-B09]                                  Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD IS TAKEN ON AN OUTING
+ 
+How often does a family member get a chance to take [Child First Name] on any 
+kind of outing (like shopping, to the park, a picnic, drive-in, and so on)?
+ 
+       0       1 A few times a year or less
+       0       2 About once a month
+       1       3 About two or three times a month
+       1       4 Several times a week
+       0       5 About once a day
+  -------
+       2
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       2      MISSING(-7)   11549
+ 
+Min:              3        Max:              4        Mean:                 3.5
+ 
+Lead In: C60837.09[Default]
+Default Next Question: C60839.00
+--------------------------------------------------------------------------------
+C60839.00    [MS-HOME-B10]                                  Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN 
+             PAST YEAR
+ 
+How often has a family member taken or arranged to take [Child First Name] to 
+any type of museum (children's, scientific, art, historical, etc.) within the 
+past year?
+ 
+       0       1 Never
+       0       2 Once or twice
+       2       3 Several times
+       0       4 About once a month
+       0       5 About once a week or more often
+  -------
+       2
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       2      MISSING(-7)   11549
+ 
+Min:              3        Max:              3        Mean:                   3
+ 
+Lead In: C60838.00[Default]
+Default Next Question: C60840.00
+--------------------------------------------------------------------------------
+C60846.00    [MS-HOME-B16]                                  Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): DOES CHILD SEE FATHER (-FIGURE) DAILY?
+ 
+Does [Child First Name] see [his/her] [father/stepfather/father-figure] on a 
+daily basis?
+ 
+       0       1 Yes
+       2       0 No
+  -------
+       2
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       2      MISSING(-7)   11549
+ 
+Min:              0        Max:              0        Mean:                   0
+ 
+Lead In: C60845.00[Default]
+Default Next Question: C60847.00
+--------------------------------------------------------------------------------
+C60847.00    [MS-HOME-B17]                                  Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART B (3-5 YRS): HOW OFTEN CHILD EATS WITH BOTH MOM AND DAD
+ 
+How often does [Child First Name] eat a meal with you and [his/her] 
+[father/stepfather/father-figure]?
+ 
+       0       1 More than once a day
+       0       2 Once a day
+       0       3 Several times a week
+       1       4 About once a week
+       0       5 About once a month
+       0       6 Never
+  -------
+       1
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>       2      MISSING(-7)   11549
+ 
+Min:              4        Max:              4        Mean:                   4
+ 
+Lead In: C60846.00[Default]
+Default Next Question: C60848.00
+--------------------------------------------------------------------------------
+Y22670.00    [VERSION_R29]                                  Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             VERSION_R29 CHILD/YOUNG ADULT
+ 
+This variable identifies the release version of the current NLSY79 Child/Young 
+Adult data set, This information allows User Services to identify the release 
+version used by a researcher who is asking a question and to access past 
+versions of the data if necessary.
+ 
+   11551         532
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:            532        Max:            532        Mean:                 532
+ 
+Lead In: Y12053.00[Default]
+Default Next Question: Y12054.00

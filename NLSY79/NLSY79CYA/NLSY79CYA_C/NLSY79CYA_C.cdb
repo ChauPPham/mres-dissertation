@@ -1,0 +1,4679 @@
+C00001.00    [CPUBID]                                       Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             ID CODE OF CHILD
+ 
+PUBLIC IDENTIFICATION CODE OF CHILD
+ 
+UNIVERSE: All biological children of NLSY79 mothers, regardless of age.
+ 
+   11551           1 TO 9999999: See Min & Max values below for range as of this
+                          release
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:            201        Max:        1267501        Mean:           600544.28
+ 
+Lead In: None.
+Default Next Question: C00002.00
+--------------------------------------------------------------------------------
+C00002.00    [MPUBID]                                       Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             ID CODE OF MOTHER OF CHILD
+ 
+PUBLIC IDENTIFICATION CODE OF MOTHER OF CHILD
+ 
+UNIVERSE: All biological children of NLSY79 mothers, regardless of age.
+ 
+NOTE: SEE YOUTH REFERENCE NUMBER R(    1.)
+ 
+   11551           1 TO 12686: NLSY79 Public ID
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:              2        Max:          12675        Mean:             6005.42
+ 
+Lead In: C00001.00[Default]
+Default Next Question: C00003.00
+--------------------------------------------------------------------------------
+C00053.00    [CRACE]                                        Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             RACE OF CHILD (MOTHER'S RACIAL/ETHNIC COHORT FROM SCREENER)
+ 
+RACE OF CHILD (MOTHER'S RACIAL/ETHNIC COHORT FROM SCREENER)
+ 
+NOTE: Child race/ethnicity is based on the report of the mother. See NLSY79 main
+Youth Reference Number R( 2147.)
+ 
+    2224       1 HISPANIC
+    3196       2 BLACK
+    6131       3 NON-BLACK, NON-HISPANIC
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:              1        Max:              3        Mean:                2.34
+ 
+Lead In: C00052.00[Default]
+Default Next Question: C00054.00
+--------------------------------------------------------------------------------
+C00054.00    [CSEX]                                         Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             SEX OF CHILD
+ 
+SEX OF CHILD
+ 
+    5898       1 MALE
+    5651       2 FEMALE
+  -------
+   11549
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       2
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:              1        Max:              2        Mean:                1.49
+ 
+Lead In: C00053.00[Default]
+Default Next Question: C00055.00
+--------------------------------------------------------------------------------
+C00057.00    [CYRB]                                         Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             DATE OF BIRTH OF CHILD - YEAR
+ 
+DATE OF BIRTH OF CHILD - YEAR
+ 
+    1223        1970 TO 1978: < before 1979
+     528        1979
+     607        1980
+     714        1981
+     703        1982
+     715        1983
+     657        1984
+     676        1985
+     618        1986
+     621        1987
+     585        1988
+     629        1989
+     495        1990
+     424        1991
+     402        1992
+     348        1993
+     303        1994
+     245        1995
+     229        1996
+     216        1997
+     156        1998
+     129        1999
+     100        2000
+      81        2001
+      48        2002
+      34        2003
+      24        2004
+      15        2005
+      11        2006
+       4        2007
+       3        2008
+       3        2009
+       2        2010
+       2        2011
+       1        2014
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:           1970        Max:           2014        Mean:              1986.1
+ 
+Lead In: C00055.00[Default]
+Default Next Question: C00057.01
+--------------------------------------------------------------------------------
+C05443.00    [MS860212]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6+ YRS): HOW MANY BOOKS CHILD HAS
+ 
+HOME: MS PART C (6 +) - HOW MANY BOOKS CHILD HAS  86 INT
+ 
+      56       1 NONE, TOO YOUNG
+     121       2 1 OR 2 BOOKS
+     373       3 3 OR 9 BOOKS
+     970       4 10 OR MORE BOOKS
+  -------
+    1520
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1520      MISSING(-7)   10031
+ 
+Min:              1        Max:              4        Mean:                3.48
+ 
+Lead In: C05442.00[Default]
+Default Next Question: C05444.00
+--------------------------------------------------------------------------------
+C05444.00    [MS860213]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6+ YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+HOME: MS PART C (6 +) - HOW OFTEN MOTHER READS TO CHILD  86 INT
+ 
+     132       1 NEVER
+     276       2 SEVERAL TIMES A YEAR
+     334       3 SEVERAL TIMES A MONTH
+     338       4 ONCE A WEEK
+     310       5 ABOUT 3 TIMES A WEEK
+     129       6 EVERYDAY
+  -------
+    1519
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1519      MISSING(-7)   10032
+ 
+Min:              1        Max:              6        Mean:                3.53
+ 
+Lead In: C05443.00[Default]
+Default Next Question: C05445.00
+--------------------------------------------------------------------------------
+C05450.00    [MS860219]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6+ YRS): IS THERE A MUSICAL INSTRUMENT CHILD CAN USE 
+             AT HOME?
+ 
+HOME: MS PART C (6 +) - IS THERE A MUSICAL INSTRUMENT CHILD CAN USE AT HOME?  86
+INT
+ 
+     394       1 YES
+    1121       0 NO
+  -------
+    1515
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1515      MISSING(-7)   10036
+ 
+Min:              0        Max:              1        Mean:                 .26
+ 
+Lead In: C05449.00[Default]
+Default Next Question: C05451.00
+--------------------------------------------------------------------------------
+C05451.00    [MS860220]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6+ YRS): DOES FAMILY GET A DAILY NEWSPAPER?
+ 
+HOME: MS PART C (6 +) - DOES FAMILY GET DAILY NEWSPAPER? 86 INT
+ 
+     606       1 YES
+     908       0 NO
+  -------
+    1514
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1514      MISSING(-7)   10037
+ 
+Min:              0        Max:              1        Mean:                  .4
+ 
+Lead In: C05450.00[Default]
+Default Next Question: C05452.00
+--------------------------------------------------------------------------------
+C05455.00    [MS860224]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6+ YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN THE 
+             PAST YEAR
+ 
+HOME: MS PART C (6 +) - HOW OFTEN CHILD TAKEN TO A MUSEUM IN THE PAST YEAR  86 
+INT
+ 
+     574       1 NEVER
+     556       2 ONCE OR TWICE
+     261       3 SEVERAL TIMES
+      94       4 ABOUT ONCE A MONTH
+      31       5 ONCE A WEEK OR MORE
+  -------
+    1516
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1516      MISSING(-7)   10035
+ 
+Min:              1        Max:              5        Mean:                1.98
+ 
+Lead In: C05454.00[Default]
+Default Next Question: C05456.00
+--------------------------------------------------------------------------------
+C05456.00    [MS860225]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6+ YRS): HOW OFTEN CHILD TAKEN TO MUSIC/THEATER 
+             PERFORMANCE IN PAST YEAR
+ 
+HOME: MS PART C (6 +) - HOW OFTEN CHILD TAKEN TO THEATER IN THE PAST YEAR  86 
+INT
+ 
+     792       1 NEVER
+     458       2 ONCE OR TWICE
+     193       3 SEVERAL TIMES
+      54       4 ABOUT ONCE A MONTH
+      18       5 ONCE A WEEK OR MORE
+  -------
+    1515
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1515      MISSING(-7)   10036
+ 
+Min:              1        Max:              5        Mean:                1.71
+ 
+Lead In: C05455.00[Default]
+Default Next Question: C05457.00
+--------------------------------------------------------------------------------
+C05457.00    [MS860226]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6+ YRS): HOW OFTEN FAMILY GETS TOGETHER WITH FRIENDS 
+             OR RELATIVES
+ 
+HOME: MS PART C (6 +) - HOW OFTEN FAMILY SEES FRIENDS OR RELATIVES  86 INT
+ 
+     102       1 ONCE A YEAR OR LESS
+     323       2 A FEW TIMES A YEAR
+     113       3 ONCE A MONTH
+     377       4 2 OR 3 TIMES A MONTH
+     596       5 ONCE A WEEK OR MORE
+  -------
+    1511
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1511      MISSING(-7)   10040
+ 
+Min:              1        Max:              5        Mean:                3.69
+ 
+Lead In: C05456.00[Default]
+Default Next Question: C05458.00
+--------------------------------------------------------------------------------
+C05459.00    [MS860228]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6+ YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE)
+ 
+HOME: MS PART C (6 +) - HOW OFTEN CHILD SPENDS TIME WITH FATHER(-FIGURE)  86 INT
+ 
+     817       1 ONCE A DAY OR MORE
+     176       2 LEAST 4 TIMES A WEEK
+     138       3 ONCE A WEEK
+      75       4 ONCE A MONTH
+      68       5 A FEW TIMES A YEAR
+       0       6 DON'T KNOW
+  -------
+    1274
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1274      MISSING(-7)   10277
+ 
+Min:              1        Max:              5        Mean:                1.74
+ 
+Lead In: C05458.00[Default]
+Default Next Question: C05460.00
+--------------------------------------------------------------------------------
+C05460.00    [MS860229]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6+ YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE) OUTDOORS
+ 
+HOME: MS PART C (6 +) - HOW OFTEN CHILD IS WITH FATHER(-FIGURE) OUTDOORS  86 INT
+ 
+     251       1 ONCE A DAY OR MORE
+     226       2 LEAST 4 TIMES A WEEK
+     408       3 ONCE A WEEK
+     137       4 ONCE A MONTH
+     146       5 A FEW TIMES A YEAR
+     105       6 DON'T KNOW
+  -------
+    1273
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1273      MISSING(-7)   10278
+ 
+Min:              1        Max:              6        Mean:                3.01
+ 
+Lead In: C05459.00[Default]
+Default Next Question: C05461.00
+--------------------------------------------------------------------------------
+C05462.00    [MS860231]                                     Survey Year: 1986
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6+ YRS): DO PARENTS DISCUSS TV PROGRAMS WITH CHILD?
+ 
+HOME: MS PART C (6 +) - DO PARENTS DISCUSS TV WITH CHILD?  86 INT
+ 
+     330       0 NO
+    1152       1 YES
+       3       6 DO NOT HAVE A TV
+  -------
+    1485
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1485      MISSING(-7)   10066
+ 
+Min:              0        Max:              6        Mean:                 .79
+ 
+Lead In: C05461.00[Default]
+Default Next Question: C05463.00
+--------------------------------------------------------------------------------
+C07550.00    [MS880337]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW MANY BOOKS CHILD HAS
+ 
+HOME: MS PART C (6-9.11) - HOW MANY BOOKS CHILD HAS  88 INT
+ 
+      40       1 NONE, TOO YOUNG
+     113       2 1 OR 2 BOOKS
+     382       3 3 OR 9 BOOKS
+    1369       4 10 OR MORE BOOKS
+  -------
+    1904
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1904      MISSING(-7)    9647
+ 
+Min:              1        Max:              4        Mean:                3.62
+ 
+Lead In: C07549.00[Default]
+Default Next Question: C07551.00
+--------------------------------------------------------------------------------
+C07551.00    [MS880338]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+HOME: MS PART C (6-9.11) - HOW OFTEN MOTHER READS TO CHILD  88 INT
+ 
+     100       1 NEVER
+     298       2 SEVERAL TIMES A YEAR
+     500       3 SEVERAL TIMES A MONTH
+     384       4 ONCE A WEEK
+     454       5 ABOUT 3 TIMES A WEEK
+     166       6 EVERYDAY
+  -------
+    1902
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1902      MISSING(-7)    9649
+ 
+Min:              1        Max:              6        Mean:                3.68
+ 
+Lead In: C07550.00[Default]
+Default Next Question: C07552.00
+--------------------------------------------------------------------------------
+C07557.00    [MS880344]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): IS THERE A MUSICAL INSTRUMENT CHILD CAN USE 
+             AT HOME?
+ 
+HOME: MS PART C (6-9.11) - IS THERE A MUSICAL INSTRUMENT CHILD CAN USE AT HOME  
+88 INT
+ 
+     658       1 YES
+    1219       0 NO
+  -------
+    1877
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1877      MISSING(-7)    9674
+ 
+Min:              0        Max:              1        Mean:                 .35
+ 
+Lead In: C07556.00[Default]
+Default Next Question: C07558.00
+--------------------------------------------------------------------------------
+C07558.00    [MS880345]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DOES FAMILY GET A DAILY NEWSPAPER?
+ 
+HOME: MS PART C (6-9.11) - DOES FAMILY GET A DAILY NEWSPAPER?  88 INT
+ 
+     821       1 YES
+    1060       0 NO
+  -------
+    1881
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1881      MISSING(-7)    9670
+ 
+Min:              0        Max:              1        Mean:                 .44
+ 
+Lead In: C07557.00[Default]
+Default Next Question: C07559.00
+--------------------------------------------------------------------------------
+C07562.00    [MS880349]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN THE
+             PAST YEAR
+ 
+HOME: MS PART C (6-9.11) - HOW OFTEN CHILD TAKEN TO A MUSEUM IN THE PAST YEAR  
+88 INT
+ 
+     559       1 NEVER
+     659       2 ONCE OR TWICE
+     478       3 SEVERAL TIMES
+     150       4 ABOUT ONCE A MONTH
+      33       5 ONCE A WEEK OR MORE
+  -------
+    1879
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1879      MISSING(-7)    9672
+ 
+Min:              1        Max:              5        Mean:                2.17
+ 
+Lead In: C07561.00[Default]
+Default Next Question: C07563.00
+--------------------------------------------------------------------------------
+C07563.00    [MS880350]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD TAKEN TO MUSIC/THEATER 
+             PERFORMANCE IN PAST YEAR
+ 
+HOME: MS PART C (6-9.11) - HOW OFTEN CHILD TAKEN TO THEATER IN THE PAST YEAR  88
+INT
+ 
+     924       1 NEVER
+     604       2 ONCE OR TWICE
+     277       3 SEVERAL TIMES
+      64       4 ABOUT ONCE A MONTH
+      13       5 ONCE A WEEK OR MORE
+  -------
+    1882
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1882      MISSING(-7)    9669
+ 
+Min:              1        Max:              5        Mean:                1.74
+ 
+Lead In: C07562.00[Default]
+Default Next Question: C07564.00
+--------------------------------------------------------------------------------
+C07564.00    [MS880351]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN FAMILY GETS TOGETHER WITH FRIENDS 
+             OR RELATIVES
+ 
+HOME: MS PART C (6-9.11) - HOW OFTEN FAMILY SEES FRIENDS OR RELATIVES  88 INT
+ 
+     127       1 ONCE A YEAR OR LESS
+     393       2 A FEW TIMES A YEAR
+     189       3 ONCE A MONTH
+     451       4 TWO OR THREE TIMES A MONTH
+     722       5 ABOUT ONCE A WEEK OR MORE
+  -------
+    1882
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1882      MISSING(-7)    9669
+ 
+Min:              1        Max:              5        Mean:                3.66
+ 
+Lead In: C07563.00[Default]
+Default Next Question: C07565.00
+--------------------------------------------------------------------------------
+C07566.00    [MS880353]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE)
+ 
+HOME: MS PART C (6-9.11) - HOW OFTEN CHILD SPENDS TIME WITH FATHER(-FIGURE)  88 
+INT
+ 
+    1065       1 ONCE A DAY OR MORE
+     166       2 LEAST 4 TIMES A WEEK
+     181       3 ONCE A WEEK
+     100       4 ONCE A MONTH
+     143       5 A FEW TIMES A YEAR
+       3       6 DON'T KNOW
+  -------
+    1658
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1658      MISSING(-7)    9893
+ 
+Min:              1        Max:              6        Mean:                1.85
+ 
+Lead In: C07565.00[Default]
+Default Next Question: C07567.00
+--------------------------------------------------------------------------------
+C07567.00    [MS880354]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE) OUTDOORS
+ 
+HOME: MS PART C (6-9.11) - HOW OFTEN CHILD IS WITH FATHER(-FIGURE) OUTDOORS  88 
+INT
+ 
+     371       1 ONCE A DAY OR MORE
+     309       2 LEAST 4 TIMES A WEEK
+     503       3 ONCE A WEEK
+     175       4 ONCE A MONTH
+     177       5 A FEW TIMES A YEAR
+     122       6 DON'T KNOW
+  -------
+    1657
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1657      MISSING(-7)    9894
+ 
+Min:              1        Max:              6        Mean:                2.91
+ 
+Lead In: C07566.00[Default]
+Default Next Question: C07568.00
+--------------------------------------------------------------------------------
+C07569.00    [MS880356]                                     Survey Year: 1988
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DO PARENTS DISCUSS TV PROGRAMS WITH CHILD?
+ 
+HOME: MS PART C (6-9.11) - DO PARENTS DISCUSS TV PROGRAMS WITH CHILD?  88 INT
+ 
+    1314       1 YES
+     338       0 NO
+       9       2 DO NOT HAVE A TV
+  -------
+    1661
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1661      MISSING(-7)    9890
+ 
+Min:              0        Max:              2        Mean:                  .8
+ 
+Lead In: C07568.00[Default]
+Default Next Question: C07570.00
+--------------------------------------------------------------------------------
+C09570.00    [MS900427]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW MANY BOOKS CHILD HAS
+ 
+HOME: MS PART C (6-9.11) - HOW MANY BOOKS CHILD HAS  90 INT
+ 
+      30       1 NONE, TOO YOUNG
+     118       2 1 OR 2 BOOKS
+     298       3 3 OR 9 BOOKS
+    1313       4 10 OR MORE BOOKS
+  -------
+    1759
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1760      MISSING(-7)    9791
+ 
+Min:              1        Max:              4        Mean:                3.65
+ 
+Lead In: C09569.00[Default]
+Default Next Question: C09571.00
+--------------------------------------------------------------------------------
+C09571.00    [MS900429]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+HOME: MS PART C (6-9.11) - HOW OFTEN MOTHER READS TO CHILD  90 INT
+ 
+     102       1 NEVER
+     285       2 SEVERAL TIMES A YEAR
+     320       3 SEVERAL TIMES A MONTH
+     453       4 ONCE A WEEK
+     430       5 ABOUT 3 TIMES A WEEK
+     173       6 EVERYDAY
+  -------
+    1763
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1764      MISSING(-7)    9787
+ 
+Min:              1        Max:              6        Mean:                3.76
+ 
+Lead In: C09570.00[Default]
+Default Next Question: C09572.00
+--------------------------------------------------------------------------------
+C09577.00    [MS900441]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): IS THERE A MUSICAL INSTRUMENT CHILD CAN USE 
+             AT HOME?
+ 
+HOME: MS PART C (6-9.11) - IS THERE A MUSICAL INSTRUMENT CHILD CAN USE AT HOME  
+90 INT
+ 
+     679       1 YES
+    1086       0 NO
+  -------
+    1765
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1766      MISSING(-7)    9785
+ 
+Min:              0        Max:              1        Mean:                 .38
+ 
+Lead In: C09576.00[Default]
+Default Next Question: C09578.00
+--------------------------------------------------------------------------------
+C09578.00    [MS900443]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DOES FAMILY GET A DAILY NEWSPAPER?
+ 
+HOME: MS PART C (6-9.11) - DOES FAMILY GET A DAILY NEWSPAPER?  90 INT
+ 
+     800       1 YES
+     966       0 NO
+  -------
+    1766
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1767      MISSING(-7)    9784
+ 
+Min:              0        Max:              1        Mean:                 .45
+ 
+Lead In: C09577.00[Default]
+Default Next Question: C09579.00
+--------------------------------------------------------------------------------
+C09582.00    [MS900451]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN THE
+             PAST YEAR
+ 
+HOME: MS PART C (6-9.11) - HOW OFTEN CHILD TAKEN TO A MUSEUM IN THE PAST YEAR  
+90 INT
+ 
+     451       1 NEVER
+     660       2 ONCE OR TWICE
+     463       3 SEVERAL TIMES
+     160       4 ABOUT ONCE A MONTH
+      33       5 ONCE A WEEK OR MORE
+  -------
+    1767
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1768      MISSING(-7)    9783
+ 
+Min:              1        Max:              5        Mean:                2.24
+ 
+Lead In: C09581.00[Default]
+Default Next Question: C09583.00
+--------------------------------------------------------------------------------
+C09583.00    [MS900453]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD TAKEN TO MUSIC/THEATER 
+             PERFORMANCE IN PAST YEAR
+ 
+HOME: MS PART C (6-9.11) - HOW OFTEN CHILD TAKEN TO THEATER IN THE PAST YEAR  90
+INT
+ 
+     812       1 NEVER
+     633       2 ONCE OR TWICE
+     240       3 SEVERAL TIMES
+      60       4 ABOUT ONCE A MONTH
+      18       5 ONCE A WEEK OR MORE
+  -------
+    1763
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1764      MISSING(-7)    9787
+ 
+Min:              1        Max:              5        Mean:                1.77
+ 
+Lead In: C09582.00[Default]
+Default Next Question: C09584.00
+--------------------------------------------------------------------------------
+C09584.00    [MS900455]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN FAMILY GETS TOGETHER WITH FRIENDS 
+             OR RELATIVES
+ 
+HOME: MS PART C (6-9.11) - HOW OFTEN FAMILY SEES FRIENDS OR RELATIVES  90 INT
+ 
+      96       1 ONCE A YEAR OR LESS
+     385       2 A FEW TIMES A YEAR
+     247       3 ONCE A MONTH
+     374       4 TWO OR THREE TIMES A MONTH
+     661       5 ABOUT ONCE A WEEK OR MORE
+  -------
+    1763
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1764      MISSING(-7)    9787
+ 
+Min:              1        Max:              5        Mean:                3.63
+ 
+Lead In: C09583.00[Default]
+Default Next Question: C09585.00
+--------------------------------------------------------------------------------
+C09590.00    [MS900467]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE)
+ 
+HOME: MS PART C (6-9.11) - HOW OFTEN CHILD SPENDS TIME WITH FATHER(-FIGURE)  90 
+INT
+ 
+    1040       1 ONCE A DAY OR MORE
+     146       2 LEAST 4 TIMES A WEEK
+     203       3 ONCE A WEEK
+     114       4 ONCE A MONTH
+     112       5 A FEW TIMES A YEAR
+      85       6 DON'T KNOW
+      54       7 NO FATHER, STEP FATHER, OR FATHER-FIGURE
+  -------
+    1754
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1755      MISSING(-7)    9796
+ 
+Min:              1        Max:              7        Mean:                2.19
+ 
+Lead In: C09589.00[Default]
+Default Next Question: C09591.00
+--------------------------------------------------------------------------------
+C09591.00    [MS900511]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE) OUTDOORS
+ 
+HOME: MS PART C (6-9.11) - HOW OFTEN CHILD IS WITH FATHER(-FIGURE) OUTDOORS  90 
+INT
+ 
+     478       1 ONCE A DAY OR MORE
+     282       2 LEAST 4 TIMES A WEEK
+     458       3 ONCE A WEEK
+     163       4 ONCE A MONTH
+     151       5 A FEW TIMES A YEAR
+     146       6 DON'T KNOW
+      52       7 NO FATHER, STEP FATHER, OR FATHER-FIGURE
+  -------
+    1730
+ 
+Refusal(-1)            1
+Don't Know(-2)        20
+TOTAL =========>    1751      MISSING(-7)    9800
+ 
+Min:              1        Max:              7        Mean:                2.93
+ 
+Lead In: C09590.00[Default]
+Default Next Question: C09592.00
+--------------------------------------------------------------------------------
+C09593.00    [MS900515]                                     Survey Year: 1990
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DO PARENTS DISCUSS TV PROGRAMS WITH CHILD?
+ 
+HOME: MS PART C (6-9.11) - DO PARENTS DISCUSS TV PROGRAMS WITH CHILD?  90 INT
+ 
+    1380       1 YES
+     367       0 NO
+       7       2 DO NOT HAVE A TV
+  -------
+    1754
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1755      MISSING(-7)    9796
+ 
+Min:              0        Max:              2        Mean:                 .79
+ 
+Lead In: C09592.00[Default]
+Default Next Question: C09594.00
+--------------------------------------------------------------------------------
+C11551.00    [MS920427]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW MANY BOOKS CHILD HAS
+ 
+HOME PART C (6-9 YRS): HOW MANY BOOKS CHILD HAS  92 INT
+ 
+      34       1 NONE, TOO YOUNG
+      81       2 1 OR 2 BOOKS
+     253       3 3 OR 9 BOOKS
+    1497       4 10 OR MORE BOOKS
+  -------
+    1866
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1866      MISSING(-7)    9685
+ 
+Min:              0        Max:              4        Mean:                3.72
+ 
+Lead In: C11550.00[Default]
+Default Next Question: C11552.00
+--------------------------------------------------------------------------------
+C11552.00    [MS920429]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+HOME PART C (6-9 YRS): HOW OFTEN MOTHER READS TO CHILD  92 INT
+ 
+      80       1 NEVER
+     214       2 SEVERAL TIMES A YEAR
+     358       3 SEVERAL TIMES A MONTH
+     476       4 ONCE A WEEK
+     493       5 ABOUT 3 TIMES A WEEK
+     244       6 EVERYDAY
+  -------
+    1865
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1865      MISSING(-7)    9686
+ 
+Min:              1        Max:              6        Mean:                3.98
+ 
+Lead In: C11551.00[Default]
+Default Next Question: C11553.00
+--------------------------------------------------------------------------------
+C11558.00    [MS920441]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): IS THERE A MUSICAL INSTRUMENT CHILD CAN USE 
+             AT HOME?
+ 
+HOME PART C (6-9 YRS): IS THERE A MUSICAL INSTRUMENT CHILD CAN USE AT HOME  92 
+INT
+ 
+     735       1 YES
+    1120       0 NO
+  -------
+    1855
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1855      MISSING(-7)    9696
+ 
+Min:              0        Max:              1        Mean:                  .4
+ 
+Lead In: C11557.00[Default]
+Default Next Question: C11559.00
+--------------------------------------------------------------------------------
+C11559.00    [MS920443]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DOES FAMILY GET A DAILY NEWSPAPER?
+ 
+HOME PART C (6-9 YRS): DOES FAMILY GET A DAILY NEWSPAPER?  92 INT
+ 
+     865       1 YES
+     991       0 NO
+  -------
+    1856
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1856      MISSING(-7)    9695
+ 
+Min:              0        Max:              1        Mean:                 .47
+ 
+Lead In: C11558.00[Default]
+Default Next Question: C11560.00
+--------------------------------------------------------------------------------
+C11563.00    [MS920451]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN THE
+             PAST YEAR
+ 
+HOME PART C (6-9 YRS): HOW OFTEN CHILD TAKEN TO A MUSEUM IN THE PAST YEAR  92 
+INT
+ 
+     472       1 NEVER
+     657       2 ONCE OR TWICE
+     529       3 SEVERAL TIMES
+     171       4 ABOUT ONCE A MONTH
+      28       5 ONCE A WEEK OR MORE
+  -------
+    1857
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1857      MISSING(-7)    9694
+ 
+Min:              1        Max:              5        Mean:                2.26
+ 
+Lead In: C11562.00[Default]
+Default Next Question: C11564.00
+--------------------------------------------------------------------------------
+C11564.00    [MS920453]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD TAKEN TO MUSIC/THEATER 
+             PERFORMANCE IN PAST YEAR
+ 
+HOME PART C (6-9 YRS): HOW OFTEN CHILD TAKEN TO THEATER IN THE PAST YEAR  92 INT
+ 
+     813       1 NEVER
+     639       2 ONCE OR TWICE
+     294       3 SEVERAL TIMES
+      84       4 ABOUT ONCE A MONTH
+      22       5 ONCE A WEEK OR MORE
+  -------
+    1853
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1853      MISSING(-7)    9698
+ 
+Min:              0        Max:              5        Mean:                1.85
+ 
+Lead In: C11563.00[Default]
+Default Next Question: C11565.00
+--------------------------------------------------------------------------------
+C11565.00    [MS920455]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN FAMILY GETS TOGETHER WITH FRIENDS 
+             OR RELATIVES
+ 
+HOME PART C (6-9 YRS): HOW OFTEN FAMILY GETS TOGETHER WITH FRIENDS OR RELATIVES 
+92 INT
+ 
+     106       1 ONCE A YEAR OR LESS
+     326       2 A FEW TIMES A YEAR
+     297       3 ONCE A MONTH
+     416       4 TWO OR THREE TIMES A MONTH
+     708       5 ABOUT ONCE A WEEK OR MORE
+  -------
+    1853
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1853      MISSING(-7)    9698
+ 
+Min:              1        Max:              5        Mean:                 3.7
+ 
+Lead In: C11564.00[Default]
+Default Next Question: C11566.00
+--------------------------------------------------------------------------------
+C11571.00    [MS920467]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE)
+ 
+HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER(-FIGURE)  92 INT
+ 
+    1142       1 ONCE A DAY OR MORE OFTEN
+     197       2 AT LEAST 4 TIMES A WEEK
+     189       3 ABOUT ONCE A WEEK
+      96       4 ABOUT ONCE A MONTH
+     107       5 A FEW TIMES A YEAR OR LESS
+      70       6 NEVER
+      45       7 NO FATHER, STEP FATHER, OR FATHER-FIGURE
+  -------
+    1846
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1846      MISSING(-7)    9705
+ 
+Min:              1        Max:              7        Mean:                2.04
+ 
+Lead In: C11570.00[Default]
+Default Next Question: C11572.00
+--------------------------------------------------------------------------------
+C11572.00    [MS920511]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE) OUTDOORS
+ 
+HOME PART C (6-9 YRS): HOW OFTEN SPENDS TIME WITH FATHER(-FIGURE) OUTDOORS  92 
+INT
+ 
+     469       1 ONCE A DAY OR MORE OFTEN
+     379       2 AT LEAST 4 TIMES A WEEK
+     492       3 ABOUT ONCE A WEEK
+     150       4 ABOUT ONCE A MONTH
+     140       5 A FEW TIMES A YEAR OR LESS
+     148       6 NEVER
+      35       7 NO FATHER, STEP FATHER, OR FATHER-FIGURE
+  -------
+    1813
+ 
+Refusal(-1)            0
+Don't Know(-2)        36
+TOTAL =========>    1849      MISSING(-7)    9702
+ 
+Min:              1        Max:              7        Mean:                2.83
+ 
+Lead In: C11571.00[Default]
+Default Next Question: C11573.00
+--------------------------------------------------------------------------------
+C11574.00    [MS920515]                                     Survey Year: 1992
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DO PARENTS DISCUSS TV PROGRAMS WITH CHILD?
+ 
+HOME PART C (6-9 YRS): DO PARENTS DISCUSS TV PROGRAMS WITH CHILD?  92 INT
+ 
+    1469       1 YES
+     374       0 NO
+       4       2 DO NOT HAVE A TV
+  -------
+    1847
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1847      MISSING(-7)    9704
+ 
+Min:              0        Max:              2        Mean:                  .8
+ 
+Lead In: C11573.00[Default]
+Default Next Question: C11575.00
+--------------------------------------------------------------------------------
+C14067.00    [MS940435]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW MANY BOOKS CHILD HAS
+ 
+HOME PART C (6-9 YRS): HOW MANY BOOKS CHILD HAS  94 INT
+ 
+      18       1 NONE, TOO YOUNG
+      71       2 1 OR 2 BOOKS
+     212       3 3 OR 9 BOOKS
+    1553       4 10 OR MORE BOOKS
+  -------
+    1854
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1854      MISSING(-7)    9697
+ 
+Min:              1        Max:              4        Mean:                3.78
+ 
+Lead In: C14066.00[Default]
+Default Next Question: C14068.00
+--------------------------------------------------------------------------------
+C14068.00    [MS940437]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+HOME PART C (6-9 YRS): HOW OFTEN MOTHER READS TO CHILD  94 INT
+ 
+      89       1 NEVER
+     200       2 SEVERAL TIMES A YEAR
+     362       3 SEVERAL TIMES A MONTH
+     436       4 ONCE A WEEK
+     519       5 ABOUT 3 TIMES A WEEK
+     247       6 EVERYDAY
+  -------
+    1853
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1853      MISSING(-7)    9698
+ 
+Min:              1        Max:              6        Mean:                3.99
+ 
+Lead In: C14067.00[Default]
+Default Next Question: C14069.00
+--------------------------------------------------------------------------------
+C14074.00    [MS940449]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): IS THERE A MUSICAL INSTRUMENT CHILD CAN USE 
+             AT HOME?
+ 
+HOME PART C (6-9 YRS): IS THERE A MUSICAL INSTRUMENT CHILD CAN USE AT HOME  94 
+INT
+ 
+     746       1 YES
+    1114       0 NO
+  -------
+    1860
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1860      MISSING(-7)    9691
+ 
+Min:              0        Max:              1        Mean:                  .4
+ 
+Lead In: C14073.00[Default]
+Default Next Question: C14075.00
+--------------------------------------------------------------------------------
+C14075.00    [MS940451]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DOES FAMILY GET A DAILY NEWSPAPER?
+ 
+HOME PART C (6-9 YRS): DOES FAMILY GET A DAILY NEWSPAPER?  94 INT
+ 
+     876       1 YES
+     983       0 NO
+  -------
+    1859
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1859      MISSING(-7)    9692
+ 
+Min:              0        Max:              1        Mean:                 .47
+ 
+Lead In: C14074.00[Default]
+Default Next Question: C14076.00
+--------------------------------------------------------------------------------
+C14079.00    [MS940459]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN THE
+             PAST YEAR
+ 
+HOME PART C (6-9 YRS): HOW OFTEN CHILD TAKEN TO A MUSEUM IN THE PAST YEAR  94 
+INT
+ 
+     421       1 NEVER
+     691       2 ONCE OR TWICE
+     539       3 SEVERAL TIMES
+     166       4 ABOUT ONCE A MONTH
+      43       5 ONCE A WEEK OR MORE
+  -------
+    1860
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1860      MISSING(-7)    9691
+ 
+Min:              1        Max:              5        Mean:                2.31
+ 
+Lead In: C14078.00[Default]
+Default Next Question: C14080.00
+--------------------------------------------------------------------------------
+C14080.00    [MS940461]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD TAKEN TO MUSIC/THEATER 
+             PERFORMANCE IN PAST YEAR
+ 
+HOME PART C (6-9 YRS): HOW OFTEN CHILD TAKEN TO THEATER IN THE PAST YEAR  94 INT
+ 
+     717       1 NEVER
+     695       2 ONCE OR TWICE
+     325       3 SEVERAL TIMES
+      88       4 ABOUT ONCE A MONTH
+      23       5 ONCE A WEEK OR MORE
+  -------
+    1848
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1848      MISSING(-7)    9703
+ 
+Min:              1        Max:              5        Mean:                1.92
+ 
+Lead In: C14079.00[Default]
+Default Next Question: C14081.00
+--------------------------------------------------------------------------------
+C14081.00    [MS940463]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN FAMILY GETS TOGETHER WITH FRIENDS 
+             OR RELATIVES
+ 
+HOME PART C (6-9 YRS): HOW OFTEN FAMILY GETS TOGETHER WITH FRIENDS OR RELATIVES 
+94 INT
+ 
+     104       1 ONCE A YEAR OR LESS
+     370       2 A FEW TIMES A YEAR
+     305       3 ONCE A MONTH
+     402       4 TWO OR THREE TIMES A MONTH
+     669       5 ABOUT ONCE A WEEK OR MORE
+  -------
+    1850
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1850      MISSING(-7)    9701
+ 
+Min:              1        Max:              5        Mean:                3.63
+ 
+Lead In: C14080.00[Default]
+Default Next Question: C14082.00
+--------------------------------------------------------------------------------
+C14087.00    [MS940475]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE)
+ 
+HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER(-FIGURE)  94 INT
+ 
+    1185       1 ONCE A DAY OR MORE OFTEN
+     175       2 AT LEAST 4 TIMES A WEEK
+     185       3 ABOUT ONCE A WEEK
+      80       4 ABOUT ONCE A MONTH
+     103       5 A FEW TIMES A YEAR OR LESS
+      76       6 NEVER
+      36       7 NO FATHER, STEP FATHER, OR FATHER-FIGURE
+  -------
+    1840
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1840      MISSING(-7)    9711
+ 
+Min:              1        Max:              7        Mean:                1.97
+ 
+Lead In: C14086.00[Default]
+Default Next Question: C14088.00
+--------------------------------------------------------------------------------
+C14088.00    [MS940511]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE) OUTDOORS
+ 
+HOME PART C (6-9 YRS): HOW OFTEN SPENDS TIME WITH FATHER(-FIGURE) OUTDOORS  94 
+INT
+ 
+     446       1 ONCE A DAY OR MORE OFTEN
+     381       2 AT LEAST 4 TIMES A WEEK
+     551       3 ABOUT ONCE A WEEK
+     147       4 ABOUT ONCE A MONTH
+     121       5 A FEW TIMES A YEAR OR LESS
+     129       6 NEVER
+      32       7 NO FATHER, STEP FATHER, OR FATHER-FIGURE
+  -------
+    1807
+ 
+Refusal(-1)            0
+Don't Know(-2)        35
+TOTAL =========>    1842      MISSING(-7)    9709
+ 
+Min:              1        Max:              7        Mean:                 2.8
+ 
+Lead In: C14087.00[Default]
+Default Next Question: C14089.00
+--------------------------------------------------------------------------------
+C14090.00    [MS940515]                                     Survey Year: 1994
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DO PARENTS DISCUSS TV PROGRAMS WITH CHILD?
+ 
+HOME PART C (6-9 YRS): DO PARENTS DISCUSS TV PROGRAMS WITH CHILD?  94 INT
+ 
+    1467       1 Yes
+     363       0 No
+       7       2 Do not have a TV
+  -------
+    1837
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1837      MISSING(-7)    9714
+ 
+Min:              0        Max:              2        Mean:                 .81
+ 
+Lead In: C14089.00[Default]
+Default Next Question: C14091.00
+--------------------------------------------------------------------------------
+C16083.00    [MS960433]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW MANY BOOKS CHILD HAS
+ 
+1.About how many books does your child have? (CIRCLE ONE)
+ 
+      13       1 NONE
+      51       2 1 OR 2 BOOKS
+     152       3 3 TO 9 BOOKS
+    1405       4 10 OR MORE BOOKS
+  -------
+    1621
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1621      MISSING(-7)    9930
+ 
+Min:              1        Max:              4        Mean:                3.82
+ 
+Lead In: C16082.00[Default]
+Default Next Question: C16084.00
+--------------------------------------------------------------------------------
+C16084.00    [MS960435]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+2.About how often do you read aloud to your child?  (CIRCLE ONE)
+ 
+      69       1 NEVER
+     171       2 SEVERAL TIMES A YEAR
+     302       3 SEVERAL TIMES A MONTH
+     372       4 ONCE A WEEK
+     455       5 AT LEAST 3 TIMES A WEEK
+     252       6 EVERYDAY
+  -------
+    1621
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1621      MISSING(-7)    9930
+ 
+Min:              1        Max:              6        Mean:                4.07
+ 
+Lead In: C16083.00[Default]
+Default Next Question: C16085.00
+--------------------------------------------------------------------------------
+C16090.00    [MS960447]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): IS THERE A MUSICAL INSTRUMENT CHILD CAN USE 
+             AT HOME?
+ 
+4.  Is there a musical instrument (for example, piano, drum, guitar, etc.) that 
+your child can use here at home?
+ 
+     725       1 Yes
+     898       0 No
+  -------
+    1623
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1623      MISSING(-7)    9928
+ 
+Min:              0        Max:              1        Mean:                 .45
+ 
+Lead In: C16089.00[Default]
+Default Next Question: C16091.00
+--------------------------------------------------------------------------------
+C16091.00    [MS960449]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DOES FAMILY GET A DAILY NEWSPAPER?
+ 
+5.Does your family get a daily newspaper?
+ 
+     756       1 Yes
+     869       0 No
+  -------
+    1625
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1625      MISSING(-7)    9926
+ 
+Min:              0        Max:              1        Mean:                 .47
+ 
+Lead In: C16090.00[Default]
+Default Next Question: C16092.00
+--------------------------------------------------------------------------------
+C16095.00    [MS960457]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN THE
+             PAST YEAR
+ 
+9.How often has a family member taken or arranged to take your child to any type
+of museum (children's, scientific, art, historical, etc.) within the past year?
+          (CIRCLE ONE)
+ 
+     316       1 NEVER
+     618       2 ONCE OR TWICE
+     532       3 SEVERAL TIMES
+     132       4 ABOUT ONCE A MONTH
+      34       5 ABOUT ONCE A WEEK OR MORE
+  -------
+    1632
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1632      MISSING(-7)    9919
+ 
+Min:              1        Max:              5        Mean:                2.36
+ 
+Lead In: C16094.00[Default]
+Default Next Question: C16096.00
+--------------------------------------------------------------------------------
+C16096.00    [MS960459]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD TAKEN TO MUSIC/THEATER 
+             PERFORMANCE IN PAST YEAR
+ 
+10.How often has a family member taken or arranged to take your child to any 
+type of musical or theatrical performance within the past year?  (CIRCLE ONE)
+ 
+     544       1 NEVER
+     652       2 ONCE OR TWICE
+     324       3 SEVERAL TIMES
+      79       4 ABOUT ONCE A MONTH
+      17       5 ABOUT ONCE A WEEK OR MORE
+  -------
+    1616
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1616      MISSING(-7)    9935
+ 
+Min:              1        Max:              5        Mean:                1.99
+ 
+Lead In: C16095.00[Default]
+Default Next Question: C16097.00
+--------------------------------------------------------------------------------
+C16097.00    [MS960461]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN FAMILY GETS TOGETHER WITH FRIENDS 
+             OR RELATIVES
+ 
+11. About how often does your whole family get together with relatives or 
+friends?
+      (CIRCLE ONE)
+ 
+      81       1 ONCE A YEAR OR LESS
+     313       2 A FEW TIMES A YEAR
+     278       3 ONCE A MONTH
+     382       4 TWO OR THREE TIMES A MONTH
+     563       5 ABOUT ONCE A WEEK OR MORE
+  -------
+    1617
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1617      MISSING(-7)    9934
+ 
+Min:              1        Max:              5        Mean:                3.64
+ 
+Lead In: C16096.00[Default]
+Default Next Question: C16098.00
+--------------------------------------------------------------------------------
+C16103.00    [MS960473]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE)
+ 
+17.About how often does your child spend time with his/her father, step father, 
+or father-figure? (CIRCLE ONE)
+ 
+    1061       1 ONCE A DAY OR MORE OFTEN
+     199       2 AT LEAST 4 TIMES A WEEK
+     141       3 ABOUT ONCE A WEEK
+      52       4 ABOUT ONCE A MONTH
+      56       5 A FEW TIMES A YEAR OR LESS
+      42       6 NEVER
+      74       7 NO FATHER, STEP FATHER, OR FATHER-FIGURE
+  -------
+    1625
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1625      MISSING(-7)    9926
+ 
+Min:              1        Max:              7        Mean:                1.93
+ 
+Lead In: C16102.00[Default]
+Default Next Question: C16104.00
+--------------------------------------------------------------------------------
+C16104.00    [MS960511]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE) OUTDOORS
+ 
+18.About how often does your child spend time with his/her father, step father, 
+or father-figure in outdoor activities?  (CIRCLE ONE)
+ 
+     367       1 ONCE A DAY OR MORE OFTEN
+     394       2 AT LEAST 4 TIMES A WEEK
+     486       3 ABOUT ONCE A WEEK
+     134       4 ABOUT ONCE A MONTH
+      69       5 A FEW TIMES A YEAR OR LESS
+      65       6 NEVER
+      74       7 NO FATHER, STEP FATHER, OR FATHER-FIGURE
+  -------
+    1589
+ 
+Refusal(-1)            0
+Don't Know(-2)        34
+TOTAL =========>    1623      MISSING(-7)    9928
+ 
+Min:              1        Max:              7        Mean:                2.77
+ 
+Lead In: C16103.00[Default]
+Default Next Question: C16105.00
+--------------------------------------------------------------------------------
+C16105.00    [MS960513]                                     Survey Year: 1996
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DO PARENTS DISCUSS TV PROGRAMS WITH CHILD?
+ 
+19. When your family watches TV together, do you or your child's father (or step
+father or father-figure) discuss TV programs with him/her?
+ 
+    1359       1 Yes
+     250       0 No
+       4       2 Do not have a TV
+  -------
+    1613
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1613      MISSING(-7)    9938
+ 
+Min:              0        Max:              2        Mean:                 .85
+ 
+Lead In: C16104.00[Default]
+Default Next Question: C16106.00
+--------------------------------------------------------------------------------
+C19490.00    [MS981C01]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW MANY BOOKS CHILD HAS
+ 
+1.     About how many books does your child have? (Circle Only One)
+ 
+      10       1 NONE
+      44       2 1 OR 2 BOOKS
+     129       3 3 TO 9 BOOKS
+    1309       4 10 OR MORE BOOKS
+  -------
+    1492
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1492      MISSING(-7)   10059
+ 
+Min:              1        Max:              4        Mean:                3.83
+ 
+Lead In: C19489.00[Default]
+Default Next Question: C19491.00
+--------------------------------------------------------------------------------
+C19491.00    [MS981C02]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+2.     About how often do you read aloud to your child?  (Circle Only One)
+ 
+      41       1 NEVER
+     135       2 SEVERAL TIMES A YEAR
+     212       3 SEVERAL TIMES A MONTH
+     345       4 ONCE A WEEK
+     480       5 AT LEAST 3 TIMES A WEEK
+     280       6 EVERYDAY
+  -------
+    1493
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1493      MISSING(-7)   10058
+ 
+Min:              1        Max:              6        Mean:                4.29
+ 
+Lead In: C19490.00[Default]
+Default Next Question: C19492.00
+--------------------------------------------------------------------------------
+C19497.00    [MS981C04]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): IS THERE A MUSICAL INSTRUMENT CHILD CAN USE 
+             AT HOME
+ 
+4.     Is there a musical instrument (for example, piano, drum, guitar, etc.) 
+that your child can use here at home?
+ 
+     755       1 Yes
+     737       0 No
+  -------
+    1492
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+Invalid Skip(-3)       1
+TOTAL =========>    1493      MISSING(-7)   10058
+ 
+Min:              0        Max:              1        Mean:                 .51
+ 
+Lead In: C19496.00[Default]
+Default Next Question: C19498.00
+--------------------------------------------------------------------------------
+C19498.00    [MS981C05]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DOES FAMILY GET A DAILY NEWSPAPER
+ 
+5.     Does your family get a daily newspaper?
+ 
+     709       1 Yes
+     783       0 No
+  -------
+    1492
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1492      MISSING(-7)   10059
+ 
+Min:              0        Max:              1        Mean:                 .48
+ 
+Lead In: C19497.00[Default]
+Default Next Question: C19499.00
+--------------------------------------------------------------------------------
+C19502.00    [MS981C09]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD TAKEN TO A MUSEUM IN THE 
+             PAST YEAR
+ 
+9.     How often has a family member taken or arranged to take your child to any
+type of museum (children's, scientific, art, historical, etc.) within the past 
+year?   (Circle Only One)
+ 
+     261       1 NEVER
+     563       2 ONCE OR TWICE
+     498       3 SEVERAL TIMES
+     154       4 ABOUT ONCE A MONTH
+      12       5 ABOUT ONCE A WEEK OR MORE OFTEN
+  -------
+    1488
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1488      MISSING(-7)   10063
+ 
+Min:              1        Max:              5        Mean:                2.39
+ 
+Lead In: C19501.00[Default]
+Default Next Question: C19503.00
+--------------------------------------------------------------------------------
+C19503.00    [MS981C10]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD TAKEN TO THEATER IN THE PAST
+             YEAR
+ 
+10.     How often has a family member taken or arranged to take your child to 
+any type of musical or theatrical performance within the past year?  (Circle 
+Only One)
+ 
+     502       1 NEVER
+     593       2 ONCE OR TWICE
+     312       3 SEVERAL TIMES
+      71       4 ABOUT ONCE A MONTH
+      11       5 ABOUT ONCE A WEEK OR MORE OFTEN
+  -------
+    1489
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1489      MISSING(-7)   10062
+ 
+Min:              1        Max:              5        Mean:                1.99
+ 
+Lead In: C19502.00[Default]
+Default Next Question: C19504.00
+--------------------------------------------------------------------------------
+C19504.00    [MS981C11]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN FAMILY GETS TOGETHER WITH FRIENDS 
+             OR RELATIVES
+ 
+11.     About how often does your whole family get together with relatives or 
+friends?  (Circle Only One)
+ 
+      86       1 ONCE A YEAR OR LESS
+     301       2 A FEW TIMES A YEAR
+     256       3 ABOUT ONCE A MONTH
+     370       4 TWO OR THREE TIMES A MONTH
+     478       5 ABOUT ONCE A WEEK OR MORE
+  -------
+    1491
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>    1492      MISSING(-7)   10059
+ 
+Min:              1        Max:              5        Mean:                3.57
+ 
+Lead In: C19503.00[Default]
+Default Next Question: C19505.00
+--------------------------------------------------------------------------------
+C19510.00    [MS981C17]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH 
+             FATHER(-FIGURE)
+ 
+17.     About how often does your child spend time with his/her father, step 
+father, or father-figure? (Circle Only One)
+ 
+     995       1 ONCE A DAY OR MORE OFTEN
+     143       2 AT LEAST 4 TIMES A WEEK
+     142       3 ABOUT ONCE A WEEK
+      59       4 ABOUT ONCE A MONTH
+      64       5 A FEW TIMES A YEAR OR LESS
+      42       6 NEVER
+      38       7 NO FATHER, STEPFATHER, OR FATHER-FIGURE
+  -------
+    1483
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>    1483      MISSING(-7)   10068
+ 
+Min:              1        Max:              7        Mean:                1.88
+ 
+Lead In: C19509.00[Default]
+Default Next Question: C19511.00
+--------------------------------------------------------------------------------
+C19511.00    [MS981C18]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN SPENDS TIME WITH FATHER(-FIGURE) 
+             OUTDOORS
+ 
+18.     About how often does your child spend time with his/her father, step 
+father, or father-figure in outdoor activities?  (Circle Only One)
+ 
+     355       1 ONCE A DAY OR MORE OFTEN
+     391       2 AT LEAST 4 TIMES A WEEK
+     421       3 ABOUT ONCE A WEEK
+     113       4 ABOUT ONCE A MONTH
+      83       5 A FEW TIMES A YEAR OR LESS
+      71       6 NEVER
+      35       7 NO FATHER, STEPFATHER, OR FATHER-FIGURE
+  -------
+    1469
+ 
+Refusal(-1)            0
+Don't Know(-2)        17
+TOTAL =========>    1486      MISSING(-7)   10065
+ 
+Min:              1        Max:              7        Mean:                2.68
+ 
+Lead In: C19510.00[Default]
+Default Next Question: C19512.00
+--------------------------------------------------------------------------------
+C19513.00    [MS981C20]                                     Survey Year: 1998
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DO PARENTS DISCUSS TV PROGRAMS WITH CHILD
+ 
+20.      When your family watches TV together, do you or your child's father (or
+step father or father-figure) discuss TV programs with him/her?
+ 
+    1227       1 Yes
+     251       0 No
+       6       2 Do not have a TV
+  -------
+    1484
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+Invalid Skip(-3)       1
+TOTAL =========>    1486      MISSING(-7)   10065
+ 
+Min:              0        Max:              2        Mean:                 .83
+ 
+Lead In: C19512.00[Default]
+Default Next Question: C19514.00
+--------------------------------------------------------------------------------
+C24208.00    [MS1-B01]                                      Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW MANY BOOKS CHILD HAS
+ 
+About how many books does your child have? (Circle Only One)
+ 
+       4       1 None
+      12       2 1 or 2 books
+      69       3 3 to 9 books
+     874       4 10 or more books
+  -------
+     959
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     959      MISSING(-7)   10592
+ 
+Min:              1        Max:              4        Mean:                3.89
+ 
+Lead In: C24207.00[Default]
+Default Next Question: C24209.00
+--------------------------------------------------------------------------------
+C24209.00    [MS1-B02]                                      Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+About how often do you read aloud to your child?  (Circle Only One)
+ 
+      25       1 Never
+      91       2 Several times a year
+     155       3 Several times a month
+     199       4 Once a week
+     283       5 At least 3 times a week
+     204       6 Everyday
+       2       7 Child reads to self (write-in)
+  -------
+     959
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     959      MISSING(-7)   10592
+ 
+Min:              1        Max:              7        Mean:                 4.3
+ 
+Lead In: C24208.00[Default]
+Default Next Question: C24210.00
+--------------------------------------------------------------------------------
+C24215.00    [MS1-B04]                                      Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): IS THERE A MUSICAL INSTRUMENT CHILD CAN USE 
+             AT HOME?
+ 
+Please circle one answer for each question:
+ 
+Is there a musical instrument (for example, piano, drum, guitar, etc.) that your
+child can use here at home?
+ 
+     519       1 Yes
+     438       0 No
+  -------
+     957
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     957      MISSING(-7)   10594
+ 
+Min:              0        Max:              1        Mean:                 .54
+ 
+Lead In: C24214.00[Default]
+Default Next Question: C24216.00
+--------------------------------------------------------------------------------
+C24216.00    [MS1-B05]                                      Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DOES FAMILY GET A DAILY NEWSPAPER?
+ 
+(Please circle one answer for each question:)
+ 
+Does your family get a daily newspaper?
+ 
+     480       1 Yes
+     477       0 No
+  -------
+     957
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     957      MISSING(-7)   10594
+ 
+Min:              0        Max:              1        Mean:                  .5
+ 
+Lead In: C24215.00[Default]
+Default Next Question: C24217.00
+--------------------------------------------------------------------------------
+C24220.00    [MS1-B09]                                      Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN THE
+             PAST YEAR
+ 
+Please circle one answer for each question:
+ 
+How often has a family member taken or arranged to take your child to any type 
+of museum (children's, scientific, art, historical, etc.) within the past year?
+ 
+     167       1 Never
+     358       2 Once or twice
+     322       3 Several times
+      89       4 About once a month
+      21       5 About once a week or more often
+  -------
+     957
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     957      MISSING(-7)   10594
+ 
+Min:              1        Max:              5        Mean:                2.41
+ 
+Lead In: C24219.00[Default]
+Default Next Question: C24221.00
+--------------------------------------------------------------------------------
+C24221.00    [MS1-B10]                                      Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD TAKEN TO MUSIC/THEATER 
+             PERFORMANCE IN PAST YEAR
+ 
+(Please circle one answer for each question:)
+ 
+How often has a family member taken or arranged to take your child to any type 
+of musical or theatrical performance within the past year?
+ 
+     308       1 Never
+     387       2 Once or twice
+     219       3 Several times
+      33       4 About once a month
+      10       5 About once a week or more often
+  -------
+     957
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     957      MISSING(-7)   10594
+ 
+Min:              1        Max:              5        Mean:                2.01
+ 
+Lead In: C24220.00[Default]
+Default Next Question: C24222.00
+--------------------------------------------------------------------------------
+C24222.00    [MS1-B11]                                      Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN FAMILY GETS TOGETHER WITH FRIENDS 
+             OR RELATIVES
+ 
+About how often does your whole family get together with relatives or friends?  
+(Circle Only One)
+ 
+      40       1 ONCE A YEAR OR LESS
+     202       2 A FEW TIMES A YEAR
+     174       3 ABOUT ONCE A MONTH
+     250       4 TWO OR THREE TIMES A MONTH
+     290       5 ABOUT ONCE A WEEK OR MORE
+  -------
+     956
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     956      MISSING(-7)   10595
+ 
+Min:              1        Max:              5        Mean:                3.57
+ 
+Lead In: C24221.00[Default]
+Default Next Question: C24223.00
+--------------------------------------------------------------------------------
+C24229.00    [MS1-B17]                                      Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE)
+ 
+About how often does your child spend time with his/her father, step father, or 
+father-figure? (Circle Only One)
+ 
+     660       1 Once a day or more often
+     110       2 At least 4 times a week
+      74       3 About once a week
+      41       4 About once a month
+      35       5 A few times a year or less
+      32       6 Never
+       7       7 No father, stepfather, or father-figure
+  -------
+     959
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     959      MISSING(-7)   10592
+ 
+Min:              1        Max:              7        Mean:                1.75
+ 
+Lead In: C24227.00[Default]
+Default Next Question: C24230.00
+--------------------------------------------------------------------------------
+C24230.00    [MS1-B18]                                      Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE) OUTDOORS
+ 
+About how often does your child spend time with his/her father, step father, or 
+father-figure in outdoor activities?  (Circle Only One)
+ 
+     244       1 Once a day or more often
+     228       2 At least 4 times a week
+     281       3 About once a week
+      94       4 About once a month
+      45       5 A few times a year or less
+      45       6 Never
+       8       7 No father, stepfather, or father-figure
+  -------
+     945
+ 
+Refusal(-1)            0
+Don't Know(-2)        14
+TOTAL =========>     959      MISSING(-7)   10592
+ 
+Min:              1        Max:              7        Mean:                2.61
+ 
+Lead In: C24229.00[Default]
+Default Next Question: C24231.00
+--------------------------------------------------------------------------------
+C24232.00    [MS1-B20]                                      Survey Year: 2000
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DO PARENTS DISCUSS TV PROGRAMS WITH CHILD?
+ 
+When your family watches TV together, do you or your child's father (or step 
+father or father-figure) discuss TV programs with him/her?
+ 
+     824       1 Yes
+     129       0 No
+       4       2 Do not have a TV
+  -------
+     957
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     957      MISSING(-7)   10594
+ 
+Min:              0        Max:              2        Mean:                 .87
+ 
+Lead In: C24231.00[Default]
+Default Next Question: C24233.00
+--------------------------------------------------------------------------------
+C27144.00    [HOME-C01]                                     Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW MANY BOOKS CHILD HAS
+ 
+About how many books does [Child First Name] have?
+ 
+       3       1 None
+       9       2 1 or 2 books
+      68       3 3 to 9 books
+     854       4 10 or more books
+  -------
+     934
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>     935      MISSING(-7)   10616
+ 
+Min:              1        Max:              4        Mean:                 3.9
+ 
+Lead In: C27088.01[3:3]
+Default Next Question: C27145.00
+--------------------------------------------------------------------------------
+C27145.00    [HOME-C02]                                     Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+About how often do you read aloud to [Child First Name]?
+ 
+     117       1 Never
+      90       2 Several times a year
+     159       3 Several times a month
+     175       4 Once a week
+     218       5 At least 3 times a week
+     175       6 Everyday
+  -------
+     934
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>     935      MISSING(-7)   10616
+ 
+Min:              1        Max:              6        Mean:                3.87
+ 
+Lead In: C27144.00[Default]
+Default Next Question: C27146.00
+--------------------------------------------------------------------------------
+C27151.00    [HOME-C04]                                     Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): IS THERE A MUSICAL INSTRUMENT CHILD CAN USE 
+             AT HOME?
+ 
+Is there a musical instrument (for example, piano, drum, guitar, etc.) that 
+[Child First Name] can use here at home?
+ 
+     531       1 Yes
+     404       0 No
+  -------
+     935
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     935      MISSING(-7)   10616
+ 
+Min:              0        Max:              1        Mean:                 .57
+ 
+Lead In: C27150.00[Default]
+Default Next Question: C27152.00
+--------------------------------------------------------------------------------
+C27152.00    [HOME-C05]                                     Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DOES FAMILY GET A DAILY NEWSPAPER?
+ 
+Does your family get a daily newspaper?
+ 
+     403       1 Yes
+     532       0 No
+  -------
+     935
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     935      MISSING(-7)   10616
+ 
+Min:              0        Max:              1        Mean:                 .43
+ 
+Lead In: C27151.00[Default]
+Default Next Question: C27153.00
+--------------------------------------------------------------------------------
+C27156.00    [HOME-C09]                                     Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN THE
+             PAST YEAR
+ 
+How often has a family member taken, or arranged to take [Child First Name] to 
+any type of museum (children's, scientific, art, historical, etc.) within the 
+past year?
+ 
+     247       1 Never
+     380       2 Once or twice
+     240       3 Several times
+      60       4 About once a month
+       7       5 About once a week or more often
+  -------
+     934
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>     935      MISSING(-7)   10616
+ 
+Min:              1        Max:              5        Mean:                2.14
+ 
+Lead In: C27155.00[Default]
+Default Next Question: C27157.00
+--------------------------------------------------------------------------------
+C27157.00    [HOME-C10]                                     Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD TAKEN TO MUSIC/THEATER 
+             PERFORMANCE IN PAST YEAR
+ 
+How often has a family member taken, or arranged to take [Child First Name] to 
+any type of musical or theatrical performance within the past year?
+ 
+     353       1 Never
+     349       2 Once or twice
+     202       3 Several times
+      26       4 About once a month
+       4       5 About once a week or more often
+  -------
+     934
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>     935      MISSING(-7)   10616
+ 
+Min:              1        Max:              5        Mean:                1.91
+ 
+Lead In: C27156.00[Default]
+Default Next Question: C27158.00
+--------------------------------------------------------------------------------
+C27158.00    [HOME-C11]                                     Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN FAMILY GETS TOGETHER WITH FRIENDS 
+             OR RELATIVES
+ 
+About how often does your whole family get together with relatives or friends?
+ 
+      53       1 Once a year or less
+     180       2 A few times a year
+     199       3 About once a month
+     203       4 Two or three times a month
+     299       5 About once a week or more
+  -------
+     934
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>     935      MISSING(-7)   10616
+ 
+Min:              1        Max:              5        Mean:                3.55
+ 
+Lead In: C27157.00[Default]
+Default Next Question: C27159.00
+--------------------------------------------------------------------------------
+C27166.00    [HOME-C17]                                     Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE)
+ 
+About how often does [Child First Name] spend time with [his/her] 
+[father/stepfather/father-figure]?
+ 
+     660       1 Once a day or more often
+      89       2 At least 4 times a week
+      92       3 About once a week
+      30       4 About once a month
+      26       5 A few times a year or less
+       2       6 Never
+       0       7 No father, stepfather, or father-figure
+  -------
+     899
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>     900      MISSING(-7)   10651
+ 
+Min:              1        Max:              6        Mean:                1.53
+ 
+Lead In: C27164.00[Default]
+Default Next Question: C27167.00
+--------------------------------------------------------------------------------
+C27167.00    [HOME-C18]                                     Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE) OUTDOORS
+ 
+About how often does [Child First Name] spend time with [his/her] 
+[father/stepfather/father-figure] in outdoor activities?
+ 
+     224       1 Once a day or more often
+     215       2 At least 4 times a week
+     303       3 About once a week
+      70       4 About once a month
+      43       5 A few times a year or less
+      37       6 Never
+       0       7 No father, stepfather, or father-figure
+  -------
+     892
+ 
+Refusal(-1)            0
+Don't Know(-2)         8
+TOTAL =========>     900      MISSING(-7)   10651
+ 
+Min:              1        Max:              6        Mean:                2.56
+ 
+Lead In: C27166.00[Default]
+Default Next Question: C27168.00
+--------------------------------------------------------------------------------
+C27170.00    [HOME-C20]                                     Survey Year: 2002
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DO PARENTS DISCUSS TV PROGRAMS WITH CHILD?
+ 
+When your family watches TV together, do you [<print blank>/or [Child first 
+name]'s father/stepfather/father-figure] discuss TV programs with [him/her]?
+ 
+     788       1 Yes
+     137       0 No
+       4       2 Do not have a TV
+  -------
+     929
+ 
+Refusal(-1)            0
+Don't Know(-2)         6
+TOTAL =========>     935      MISSING(-7)   10616
+ 
+Min:              0        Max:              2        Mean:                 .86
+ 
+Lead In: C27168.00[Default]  C27162.00[0:0]
+Default Next Question: C27171.00
+--------------------------------------------------------------------------------
+C29907.00    [HOME-C01]                                     Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW MANY BOOKS CHILD HAS
+ 
+About how many books does [Child First Name] have?
+ 
+       0       1 None
+       7       2 1 or 2 books
+      28       3 3 to 9 books
+     689       4 10 or more books
+  -------
+     724
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>     725      MISSING(-7)   10826
+ 
+Min:              2        Max:              4        Mean:                3.94
+ 
+Lead In: C29854.01[3:3]
+Default Next Question: C29908.00
+--------------------------------------------------------------------------------
+C29908.00    [HOME-C02]                                     Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+About how often do you read aloud to [Child First Name]?
+ 
+      86       1 Never
+      72       2 Several times a year
+     105       3 Several times a month
+     120       4 Once a week
+     192       5 At least 3 times a week
+     147       6 Everyday
+  -------
+     722
+ 
+Refusal(-1)            0
+Don't Know(-2)         3
+TOTAL =========>     725      MISSING(-7)   10826
+ 
+Min:              1        Max:              6        Mean:                3.97
+ 
+Lead In: C29907.00[Default]
+Default Next Question: C29909.00
+--------------------------------------------------------------------------------
+C29914.00    [HOME-C04]                                     Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): IS THERE A MUSICAL INSTRUMENT CHILD CAN USE 
+             AT HOME?
+ 
+Is there a musical instrument (for example, piano, drum, guitar, etc.) that 
+[Child First Name] can use here at home?
+ 
+     426       1 Yes
+     297       0 No
+  -------
+     723
+ 
+Refusal(-1)            1
+Don't Know(-2)         1
+TOTAL =========>     725      MISSING(-7)   10826
+ 
+Min:              0        Max:              1        Mean:                 .59
+ 
+Lead In: C29913.00[Default]
+Default Next Question: C29915.00
+--------------------------------------------------------------------------------
+C29915.00    [HOME-C05]                                     Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DOES FAMILY GET A DAILY NEWSPAPER?
+ 
+Does your family get a daily newspaper?
+ 
+     332       1 Yes
+     391       0 No
+  -------
+     723
+ 
+Refusal(-1)            1
+Don't Know(-2)         1
+TOTAL =========>     725      MISSING(-7)   10826
+ 
+Min:              0        Max:              1        Mean:                 .46
+ 
+Lead In: C29914.00[Default]
+Default Next Question: C29916.00
+--------------------------------------------------------------------------------
+C29919.00    [HOME-C09]                                     Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN THE
+             PAST YEAR
+ 
+How often has a family member taken, or arranged to take [Child First Name] to 
+any type of museum (children's, scientific, art, historical, etc.) within the 
+past year?
+ 
+     187       1 Never
+     290       2 Once or twice
+     198       3 Several times
+      42       4 About once a month
+       6       5 About once a week or more often
+  -------
+     723
+ 
+Refusal(-1)            0
+Don't Know(-2)         2
+TOTAL =========>     725      MISSING(-7)   10826
+ 
+Min:              1        Max:              5        Mean:                2.16
+ 
+Lead In: C29918.00[Default]
+Default Next Question: C29920.00
+--------------------------------------------------------------------------------
+C29920.00    [HOME-C10]                                     Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD TAKEN TO MUSIC/THEATER 
+             PERFORMANCE IN PAST YEAR
+ 
+How often has a family member taken, or arranged to take [Child First Name] to 
+any type of musical or theatrical performance within the past year?
+ 
+     265       1 Never
+     288       2 Once or twice
+     147       3 Several times
+      20       4 About once a month
+       3       5 About once a week or more often
+  -------
+     723
+ 
+Refusal(-1)            0
+Don't Know(-2)         2
+TOTAL =========>     725      MISSING(-7)   10826
+ 
+Min:              1        Max:              5        Mean:                 1.9
+ 
+Lead In: C29919.00[Default]
+Default Next Question: C29921.00
+--------------------------------------------------------------------------------
+C29921.00    [HOME-C11]                                     Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN FAMILY GETS TOGETHER WITH FRIENDS 
+             OR RELATIVES
+ 
+About how often does your whole family get together with relatives or friends?
+ 
+      36       1 Once a year or less
+     164       2 A few times a year
+     150       3 About once a month
+     159       4 Two or three times a month
+     215       5 About once a week or more
+  -------
+     724
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>     725      MISSING(-7)   10826
+ 
+Min:              1        Max:              5        Mean:                3.49
+ 
+Lead In: C29920.00[Default]
+Default Next Question: C29922.00
+--------------------------------------------------------------------------------
+C29928.00    [HOME-C17]                                     Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE)
+ 
+About how often does [Child First Name] spend time with [his/her] 
+[father/stepfather/father-figure]?
+ 
+     526       1 Once a day or more often
+      65       2 At least 4 times a week
+      56       3 About once a week
+      20       4 About once a month
+      20       5 A few times a year or less
+       3       6 Never
+       0       7 No father, stepfather, or father-figure
+  -------
+     690
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>     691      MISSING(-7)   10860
+ 
+Min:              1        Max:              6        Mean:                1.48
+ 
+Lead In: C29927.00[Default]  C29924.00[1:1]
+Default Next Question: C29929.00
+--------------------------------------------------------------------------------
+C29929.00    [HOME-C18]                                     Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE) OUTDOORS
+ 
+About how often does [Child First Name] spend time with [his/her] 
+[father/stepfather/father-figure] in outdoor activities?
+ 
+     154       1 Once a day or more often
+     183       2 At least 4 times a week
+     231       3 About once a week
+      53       4 About once a month
+      33       5 A few times a year or less
+      29       6 Never
+       0       7 No father, stepfather, or father-figure
+  -------
+     683
+ 
+Refusal(-1)            0
+Don't Know(-2)         8
+TOTAL =========>     691      MISSING(-7)   10860
+ 
+Min:              1        Max:              6        Mean:                2.58
+ 
+Lead In: C29928.00[Default]
+Default Next Question: C29930.00
+--------------------------------------------------------------------------------
+C29931.00    [HOME-C20]                                     Survey Year: 2004
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DO PARENTS DISCUSS TV PROGRAMS WITH CHILD?
+ 
+When your family watches TV together, do you [FATHER-FIGURE PRINT TEXT] discuss 
+TV programs with [him/her]?
+ 
+     614       1 Yes
+     108       0 No
+       1       2 Do not have a TV
+  -------
+     723
+ 
+Refusal(-1)            0
+Don't Know(-2)         2
+TOTAL =========>     725      MISSING(-7)   10826
+ 
+Min:              0        Max:              2        Mean:                 .85
+ 
+Lead In: C29925.00[Default] C29930.00[Default]
+Default Next Question: C29932.00
+--------------------------------------------------------------------------------
+C33932.00    [MS-HOME-C01]                                  Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW MANY BOOKS CHILD HAS
+ 
+About how many books does [Child First Name] have?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       2       1 None
+       2       2 1 or 2 books
+      24       3 3 to 9 books
+     540       4 10 or more books
+  -------
+     568
+ 
+Refusal(-1)            6
+Don't Know(-2)         7
+TOTAL =========>     581      MISSING(-7)   10970
+ 
+Min:              1        Max:              4        Mean:                3.94
+ 
+Lead In: C33879.01[3:3]
+Default Next Question: C33933.00
+--------------------------------------------------------------------------------
+C33933.00    [MS-HOME-C02]                                  Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+About how often do you read aloud to [Child First Name]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      57       1 Never
+      56       2 Several times a year
+      50       3 Several times a month
+      82       4 Once a week
+     159       5 At least 3 times a week
+     168       6 Everyday
+  -------
+     572
+ 
+Refusal(-1)            6
+Don't Know(-2)         3
+TOTAL =========>     581      MISSING(-7)   10970
+ 
+Min:              1        Max:              6        Mean:                4.28
+ 
+Lead In: C33932.00[Default]
+Default Next Question: C33934.00
+--------------------------------------------------------------------------------
+C33939.00    [MS-HOME-C04]                                  Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): IS THERE A MUSICAL INSTRUMENT CHILD CAN USE 
+             AT HOME?
+ 
+Is there a musical instrument (for example, piano, drum, guitar, etc.) that 
+[Child First Name] can use here at home?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+     385       1 Yes
+     185       0 No
+  -------
+     570
+ 
+Refusal(-1)            4
+Don't Know(-2)         7
+TOTAL =========>     581      MISSING(-7)   10970
+ 
+Min:              0        Max:              1        Mean:                 .68
+ 
+Lead In: C33938.00[Default]
+Default Next Question: C33940.00
+--------------------------------------------------------------------------------
+C33940.00    [MS-HOME-C05]                                  Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DOES FAMILY GET A DAILY NEWSPAPER?
+ 
+Does your family get a daily newspaper?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+     265       1 Yes
+     291       0 No
+       2       2 (IF VOLUNTEERED:) READ NEWSPAPER ONLINE
+      12       3 (IF VOLUNTEERED:) SUNDAY PAPER ONLY
+  -------
+     570
+ 
+Refusal(-1)            5
+Don't Know(-2)         6
+TOTAL =========>     581      MISSING(-7)   10970
+ 
+Min:              0        Max:              3        Mean:                 .54
+ 
+Lead In: C33939.00[Default]
+Default Next Question: C33941.00
+--------------------------------------------------------------------------------
+C33944.00    [MS-HOME-C09]                                  Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN THE
+             PAST YEAR
+ 
+How often has a family member taken, or arranged to take [Child First Name] to 
+any type of museum (children's, scientific, art, historical, etc.) within the 
+past year?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+     143       1 Never
+     215       2 Once or twice
+     162       3 Several times
+      40       4 About once a month
+       8       5 About once a week or more often
+  -------
+     568
+ 
+Refusal(-1)            5
+Don't Know(-2)         8
+TOTAL =========>     581      MISSING(-7)   10970
+ 
+Min:              1        Max:              5        Mean:                2.22
+ 
+Lead In: C33943.00[Default]
+Default Next Question: C33945.00
+--------------------------------------------------------------------------------
+C33945.00    [MS-HOME-C10]                                  Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD TAKEN TO MUSIC/THEATER 
+             PERFORMANCE IN PAST YEAR
+ 
+How often has a family member taken, or arranged to take [Child First Name] to 
+any type of musical or theatrical performance within the past year?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+     177       1 Never
+     233       2 Once or twice
+     137       3 Several times
+      18       4 About once a month
+       3       5 About once a week or more often
+  -------
+     568
+ 
+Refusal(-1)            5
+Don't Know(-2)         8
+TOTAL =========>     581      MISSING(-7)   10970
+ 
+Min:              1        Max:              5        Mean:                2.01
+ 
+Lead In: C33944.00[Default]
+Default Next Question: C33946.00
+--------------------------------------------------------------------------------
+C33946.00    [MS-HOME-C11]                                  Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN FAMILY GETS TOGETHER WITH FRIENDS 
+             OR RELATIVES
+ 
+About how often does your whole family get together with relatives or friends?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      25       1 Once a year or less
+     148       2 A few times a year
+     128       3 About once a month
+     118       4 Two or three times a month
+     152       5 About once a week or more
+  -------
+     571
+ 
+Refusal(-1)            6
+Don't Know(-2)         4
+TOTAL =========>     581      MISSING(-7)   10970
+ 
+Min:              1        Max:              5        Mean:                3.39
+ 
+Lead In: C33945.00[Default]
+Default Next Question: C33947.00
+--------------------------------------------------------------------------------
+C33953.00    [MS-HOME-C17]                                  Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE)
+ 
+About how often does [Child First Name] spend time with [his/her] 
+[father/stepfather/father-figure]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+     404       1 Once a day or more often
+      50       2 At least 4 times a week
+      54       3 About once a week
+      20       4 About once a month
+      15       5 A few times a year or less
+       0       6 Never
+       0       7 No father, stepfather, or father-figure
+  -------
+     543
+ 
+Refusal(-1)            2
+Don't Know(-2)         1
+TOTAL =========>     546      MISSING(-7)   11005
+ 
+Min:              1        Max:              5        Mean:                1.51
+ 
+Lead In: C33952.00[Default]  C33949.00[1:1]
+Default Next Question: C33954.00
+--------------------------------------------------------------------------------
+C33954.00    [MS-HOME-C18]                                  Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE) OUTDOORS
+ 
+About how often does [Child First Name] spend time with [his/her] 
+[father/stepfather/father-figure] in outdoor activities?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+     106       1 Once a day or more often
+     144       2 At least 4 times a week
+     183       3 About once a week
+      51       4 About once a month
+      28       5 A few times a year or less
+      22       6 Never
+       0       7 No father, stepfather, or father-figure
+  -------
+     534
+ 
+Refusal(-1)            2
+Don't Know(-2)        10
+TOTAL =========>     546      MISSING(-7)   11005
+ 
+Min:              1        Max:              6        Mean:                2.66
+ 
+Lead In: C33953.00[Default]
+Default Next Question: C33955.00
+--------------------------------------------------------------------------------
+C33956.00    [MS-HOME-C20]                                  Survey Year: 2006
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DO PARENTS DISCUSS TV PROGRAMS WITH CHILD?
+ 
+When your family watches TV together, do you [FATHER-FIGURE PRINT TEXT] discuss 
+TV programs with [him/her]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+     500       1 Yes
+      64       0 No
+       2       2 Do not have a TV
+  -------
+     566
+ 
+Refusal(-1)            6
+Don't Know(-2)         9
+TOTAL =========>     581      MISSING(-7)   10970
+ 
+Min:              0        Max:              2        Mean:                 .89
+ 
+Lead In: C33950.00[Default] C33955.00[Default]
+Default Next Question: C33957.00
+--------------------------------------------------------------------------------
+C39191.00    [MS-HOME-C01]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW MANY BOOKS CHILD HAS
+ 
+About how many books does [Child First Name] have?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       2       1 None
+       2       2 1 or 2 books
+      16       3 3 to 9 books
+     351       4 10 or more books
+  -------
+     371
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     371      MISSING(-7)   11180
+ 
+Min:              1        Max:              4        Mean:                3.93
+ 
+Lead In: C39137.01[3:3]
+Default Next Question: C39192.00
+--------------------------------------------------------------------------------
+C39192.00    [MS-HOME-C02]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+About how often do you read aloud to [Child First Name]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      27       1 Never
+      33       2 Several times a year
+      24       3 Several times a month
+      59       4 Once a week
+      86       5 At least 3 times a week
+     140       6 Everyday
+  -------
+     369
+ 
+Refusal(-1)            0
+Don't Know(-2)         2
+TOTAL =========>     371      MISSING(-7)   11180
+ 
+Min:              1        Max:              6        Mean:                4.53
+ 
+Lead In: C39191.00[Default]
+Default Next Question: C39193.00
+--------------------------------------------------------------------------------
+C39198.00    [MS-HOME-C04]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): IS THERE A MUSICAL INSTRUMENT CHILD CAN USE 
+             AT HOME?
+ 
+Is there a musical instrument (for example, piano, drum, guitar, etc.) that 
+[Child First Name] can use here at home?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+     257       1 Yes
+     114       0 No
+  -------
+     371
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     371      MISSING(-7)   11180
+ 
+Min:              0        Max:              1        Mean:                 .69
+ 
+Lead In: C39197.00[Default]
+Default Next Question: C39199.00
+--------------------------------------------------------------------------------
+C39199.00    [MS-HOME-C05]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DOES FAMILY GET A DAILY NEWSPAPER?
+ 
+Does your family get a daily newspaper?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+     156       1 Yes
+     206       0 No
+       0       2 (IF VOLUNTEERED:) READ NEWSPAPER ONLINE
+       9       3 (IF VOLUNTEERED:) SUNDAY PAPER ONLY
+  -------
+     371
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     371      MISSING(-7)   11180
+ 
+Min:              0        Max:              3        Mean:                 .49
+ 
+Lead In: C39198.00[Default]
+Default Next Question: C39200.00
+--------------------------------------------------------------------------------
+C39203.00    [MS-HOME-C09]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN THE
+             PAST YEAR
+ 
+How often has a family member taken, or arranged to take [Child First Name] to 
+any type of museum (children's, scientific, art, historical, etc.) within the 
+past year?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      90       1 Never
+     143       2 Once or twice
+     100       3 Several times
+      32       4 About once a month
+       6       5 About once a week or more often
+  -------
+     371
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     371      MISSING(-7)   11180
+ 
+Min:              1        Max:              5        Mean:                2.25
+ 
+Lead In: C39202.00[Default]
+Default Next Question: C39204.00
+--------------------------------------------------------------------------------
+C39204.00    [MS-HOME-C10]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD TAKEN TO MUSIC/THEATER 
+             PERFORMANCE IN PAST YEAR
+ 
+How often has a family member taken, or arranged to take [Child First Name] to 
+any type of musical or theatrical performance within the past year?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+     120       1 Never
+     140       2 Once or twice
+      90       3 Several times
+      20       4 About once a month
+       1       5 About once a week or more often
+  -------
+     371
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     371      MISSING(-7)   11180
+ 
+Min:              1        Max:              5        Mean:                2.04
+ 
+Lead In: C39203.00[Default]
+Default Next Question: C39205.00
+--------------------------------------------------------------------------------
+C39205.00    [MS-HOME-C11]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN FAMILY GETS TOGETHER WITH FRIENDS 
+             OR RELATIVES
+ 
+About how often does your whole family get together with relatives or friends?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      19       1 Once a year or less
+     105       2 A few times a year
+      88       3 About once a month
+      80       4 Two or three times a month
+      79       5 About once a week or more
+  -------
+     371
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     371      MISSING(-7)   11180
+ 
+Min:              1        Max:              5        Mean:                3.26
+ 
+Lead In: C39204.00[Default]
+Default Next Question: C39206.00
+--------------------------------------------------------------------------------
+C39212.00    [MS-HOME-C17]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE)
+ 
+About how often does [Child First Name] spend time with [his/her] 
+[father/stepfather/father-figure]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+     264       1 Once a day or more often
+      32       2 At least 4 times a week
+      33       3 About once a week
+      12       4 About once a month
+       7       5 A few times a year or less
+       4       6 Never
+       2       7 No father, stepfather, or father-figure
+  -------
+     354
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     354      MISSING(-7)   11197
+ 
+Min:              1        Max:              7        Mean:                1.55
+ 
+Lead In: C39211.00[Default]  C39208.00[1:1]
+Default Next Question: C39213.00
+--------------------------------------------------------------------------------
+C39213.00    [MS-HOME-C18]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE) OUTDOORS
+ 
+About how often does [Child First Name] spend time with [his/her] 
+[father/stepfather/father-figure] in outdoor activities?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      63       1 Once a day or more often
+      98       2 At least 4 times a week
+     125       3 About once a week
+      28       4 About once a month
+      21       5 A few times a year or less
+      16       6 Never
+       2       7 No father, stepfather, or father-figure
+  -------
+     353
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>     354      MISSING(-7)   11197
+ 
+Min:              1        Max:              7        Mean:                2.72
+ 
+Lead In: C39212.00[Default]
+Default Next Question: C39214.00
+--------------------------------------------------------------------------------
+C39215.00    [MS-HOME-C20]                                  Survey Year: 2008
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DO PARENTS DISCUSS TV PROGRAMS WITH CHILD?
+ 
+When your family watches TV together, do you [FATHER-FIGURE PRINT TEXT] discuss 
+TV programs with [him/her]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+     317       1 Yes
+      52       0 No
+       2       2 Do not have a TV
+  -------
+     371
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>     371      MISSING(-7)   11180
+ 
+Min:              0        Max:              2        Mean:                 .87
+ 
+Lead In: C39209.00[Default] C39214.00[Default]
+Default Next Question: C39216.00
+--------------------------------------------------------------------------------
+C51703.00    [MS-HOME-C01]                                  Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW MANY BOOKS CHILD HAS
+ 
+About how many books does [Child First Name] have?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       0       1 None
+       1       2 1 or 2 books
+       4       3 3 to 9 books
+     198       4 10 or more books
+  -------
+     203
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>     204      MISSING(-7)   11347
+ 
+Min:              2        Max:              4        Mean:                3.97
+ 
+Lead In: C51652.01[3:3]
+Default Next Question: C51704.00
+--------------------------------------------------------------------------------
+C51704.00    [MS-HOME-C02]                                  Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+About how often do you read aloud to [Child First Name]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      25       1 Never
+      16       2 Several times a year
+      18       3 Several times a month
+      33       4 Once a week
+      52       5 At least 3 times a week
+      59       6 Everyday
+  -------
+     203
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>     204      MISSING(-7)   11347
+ 
+Min:              1        Max:              6        Mean:                4.22
+ 
+Lead In: C51703.00[Default]
+Default Next Question: C51705.00
+--------------------------------------------------------------------------------
+C51710.00    [MS-HOME-C04]                                  Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): IS THERE A MUSICAL INSTRUMENT CHILD CAN USE 
+             AT HOME?
+ 
+Is there a musical instrument (for example, piano, drum, guitar, etc.) that 
+[Child First Name] can use here at home?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+     147       1 Yes
+      56       0 No
+  -------
+     203
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>     204      MISSING(-7)   11347
+ 
+Min:              0        Max:              1        Mean:                 .72
+ 
+Lead In: C51709.00[Default]
+Default Next Question: C51711.00
+--------------------------------------------------------------------------------
+C51711.00    [MS-HOME-C05]                                  Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DOES FAMILY GET A DAILY NEWSPAPER?
+ 
+Does your family get a daily newspaper?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      74       1 Yes
+     124       0 No
+       4       2 (IF VOLUNTEERED:) READ NEWSPAPER ONLINE
+       1       3 (IF VOLUNTEERED:) SUNDAY PAPER ONLY
+  -------
+     203
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>     204      MISSING(-7)   11347
+ 
+Min:              0        Max:              3        Mean:                 .42
+ 
+Lead In: C51710.00[Default]
+Default Next Question: C51712.00
+--------------------------------------------------------------------------------
+C51715.00    [MS-HOME-C09]                                  Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN THE
+             PAST YEAR
+ 
+How often has a family member taken, or arranged to take [Child First Name] to 
+any type of museum (children's, scientific, art, historical, etc.) within the 
+past year?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      48       1 Never
+      78       2 Once or twice
+      62       3 Several times
+      14       4 About once a month
+       1       5 About once a week or more often
+  -------
+     203
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>     204      MISSING(-7)   11347
+ 
+Min:              1        Max:              5        Mean:                2.22
+ 
+Lead In: C51714.00[Default]
+Default Next Question: C51716.00
+--------------------------------------------------------------------------------
+C51716.00    [MS-HOME-C10]                                  Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD TAKEN TO MUSIC/THEATER 
+             PERFORMANCE IN PAST YEAR
+ 
+How often has a family member taken, or arranged to take [Child First Name] to 
+any type of musical or theatrical performance within the past year?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      63       1 Never
+      81       2 Once or twice
+      52       3 Several times
+       6       4 About once a month
+       1       5 About once a week or more often
+  -------
+     203
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>     204      MISSING(-7)   11347
+ 
+Min:              1        Max:              5        Mean:                2.02
+ 
+Lead In: C51715.00[Default]
+Default Next Question: C51717.00
+--------------------------------------------------------------------------------
+C51717.00    [MS-HOME-C11]                                  Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN FAMILY GETS TOGETHER WITH FRIENDS 
+             OR RELATIVES
+ 
+About how often does your whole family get together with relatives or friends?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       8       1 Once a year or less
+      54       2 A few times a year
+      54       3 About once a month
+      35       4 Two or three times a month
+      52       5 About once a week or more
+  -------
+     203
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>     204      MISSING(-7)   11347
+ 
+Min:              1        Max:              5        Mean:                3.34
+ 
+Lead In: C51716.00[Default]
+Default Next Question: C51718.00
+--------------------------------------------------------------------------------
+C51724.00    [MS-HOME-C17]                                  Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE)
+ 
+About how often does [Child First Name] spend time with [his/her] 
+[father/stepfather/father-figure]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+     136       1 Once a day or more often
+      15       2 At least 4 times a week
+      29       3 About once a week
+       8       4 About once a month
+       4       5 A few times a year or less
+       0       6 Never
+       0       7 No father, stepfather, or father-figure
+  -------
+     192
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>     193      MISSING(-7)   11358
+ 
+Min:              1        Max:              5        Mean:                1.59
+ 
+Lead In: C51723.00[Default]  C51720.00[1:1]
+Default Next Question: C51725.00
+--------------------------------------------------------------------------------
+C51725.00    [MS-HOME-C18]                                  Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE) OUTDOORS
+ 
+About how often does [Child First Name] spend time with [his/her] 
+[father/stepfather/father-figure] in outdoor activities?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      29       1 Once a day or more often
+      44       2 At least 4 times a week
+      71       3 About once a week
+      21       4 About once a month
+      15       5 A few times a year or less
+       8       6 Never
+       0       7 No father, stepfather, or father-figure
+  -------
+     188
+ 
+Refusal(-1)            1
+Don't Know(-2)         4
+TOTAL =========>     193      MISSING(-7)   11358
+ 
+Min:              1        Max:              6        Mean:                2.86
+ 
+Lead In: C51724.00[Default]
+Default Next Question: C51726.00
+--------------------------------------------------------------------------------
+C51727.00    [MS-HOME-C20]                                  Survey Year: 2010
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DO PARENTS DISCUSS TV PROGRAMS WITH CHILD?
+ 
+When your family watches TV together, do you [or child's 
+father/stepfather/father-figure] discuss TV programs with [him/her]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+     173       1 Yes
+      29       0 No
+       1       2 Do not have a TV
+  -------
+     203
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>     204      MISSING(-7)   11347
+ 
+Min:              0        Max:              2        Mean:                 .86
+ 
+Lead In: C51721.00[Default] C51726.00[Default]
+Default Next Question: C51728.00
+--------------------------------------------------------------------------------
+C57468.00    [MS-HOME-C01]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW MANY BOOKS CHILD HAS
+ 
+About how many books does [Child First Name] have?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       0       1 None
+       0       2 1 or 2 books
+       2       3 3 to 9 books
+      77       4 10 or more books
+  -------
+      79
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      79      MISSING(-7)   11472
+ 
+Min:              3        Max:              4        Mean:                3.97
+ 
+Lead In: C57414.01[3:3]
+Default Next Question: C57469.00
+--------------------------------------------------------------------------------
+C57469.00    [MS-HOME-C02]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+About how often do you read aloud to [Child First Name]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      13       1 Never
+       6       2 Several times a year
+       8       3 Several times a month
+      10       4 Once a week
+      15       5 At least 3 times a week
+      27       6 Everyday
+  -------
+      79
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      79      MISSING(-7)   11472
+ 
+Min:              1        Max:              6        Mean:                4.13
+ 
+Lead In: C57468.00[Default]
+Default Next Question: C57470.00
+--------------------------------------------------------------------------------
+C57475.00    [MS-HOME-C04]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): IS THERE A MUSICAL INSTRUMENT CHILD CAN USE 
+             AT HOME?
+ 
+Is there a musical instrument (for example, piano, drum, guitar, etc.) that 
+[Child First Name] can use here at home?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      57       1 Yes
+      22       0 No
+  -------
+      79
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      79      MISSING(-7)   11472
+ 
+Min:              0        Max:              1        Mean:                 .72
+ 
+Lead In: C57474.00[Default]
+Default Next Question: C57476.00
+--------------------------------------------------------------------------------
+C57476.00    [MS-HOME-C05]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DOES FAMILY GET A DAILY NEWSPAPER?
+ 
+Does your family get a daily newspaper?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      19       1 Yes
+      56       0 No
+       2       2 (IF VOLUNTEERED:) READ NEWSPAPER ONLINE
+       2       3 (IF VOLUNTEERED:) SUNDAY PAPER ONLY
+  -------
+      79
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      79      MISSING(-7)   11472
+ 
+Min:              0        Max:              3        Mean:                 .37
+ 
+Lead In: C57475.00[Default]
+Default Next Question: C57477.00
+--------------------------------------------------------------------------------
+C57480.00    [MS-HOME-C09]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN THE
+             PAST YEAR
+ 
+How often has a family member taken, or arranged to take [Child First Name] to 
+any type of museum (children's, scientific, art, historical, etc.) within the 
+past year?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      22       1 Never
+      30       2 Once or twice
+      19       3 Several times
+       7       4 About once a month
+       1       5 About once a week or more often
+  -------
+      79
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      79      MISSING(-7)   11472
+ 
+Min:              1        Max:              5        Mean:                2.18
+ 
+Lead In: C57479.00[Default]
+Default Next Question: C57481.00
+--------------------------------------------------------------------------------
+C57481.00    [MS-HOME-C10]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD TAKEN TO MUSIC/THEATER 
+             PERFORMANCE IN PAST YEAR
+ 
+How often has a family member taken, or arranged to take [Child First Name] to 
+any type of musical or theatrical performance within the past year?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      29       1 Never
+      34       2 Once or twice
+      13       3 Several times
+       0       4 About once a month
+       3       5 About once a week or more often
+  -------
+      79
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      79      MISSING(-7)   11472
+ 
+Min:              1        Max:              5        Mean:                1.91
+ 
+Lead In: C57480.00[Default]
+Default Next Question: C57482.00
+--------------------------------------------------------------------------------
+C57482.00    [MS-HOME-C11]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN FAMILY GETS TOGETHER WITH FRIENDS 
+             OR RELATIVES
+ 
+About how often does your whole family get together with relatives or friends?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       4       1 Once a year or less
+      22       2 A few times a year
+      24       3 About once a month
+      15       4 Two or three times a month
+      14       5 About once a week or more
+  -------
+      79
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      79      MISSING(-7)   11472
+ 
+Min:              1        Max:              5        Mean:                3.16
+ 
+Lead In: C57481.00[Default]
+Default Next Question: C57483.00
+--------------------------------------------------------------------------------
+C57489.00    [MS-HOME-C17]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE)
+ 
+About how often does [Child First Name] spend time with [his/her] 
+[father/stepfather/father-figure]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      53       1 Once a day or more often
+       9       2 At least 4 times a week
+       8       3 About once a week
+       1       4 About once a month
+       2       5 A few times a year or less
+       2       6 Never
+       0       7 No father, stepfather, or father-figure
+  -------
+      75
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      75      MISSING(-7)   11476
+ 
+Min:              1        Max:              6        Mean:                1.61
+ 
+Lead In: C57488.00[Default]  C57485.00[1:1]
+Default Next Question: C57490.00
+--------------------------------------------------------------------------------
+C57490.00    [MS-HOME-C18]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE) OUTDOORS
+ 
+About how often does [Child First Name] spend time with [his/her] 
+[father/stepfather/father-figure] in outdoor activities?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      12       1 Once a day or more often
+      20       2 At least 4 times a week
+      25       3 About once a week
+       2       4 About once a month
+       6       5 A few times a year or less
+       7       6 Never
+       0       7 No father, stepfather, or father-figure
+  -------
+      72
+ 
+Refusal(-1)            0
+Don't Know(-2)         3
+TOTAL =========>      75      MISSING(-7)   11476
+ 
+Min:              1        Max:              6        Mean:                2.88
+ 
+Lead In: C57489.00[Default]
+Default Next Question: C57491.00
+--------------------------------------------------------------------------------
+C57492.00    [MS-HOME-C20]                                  Survey Year: 2012
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DO PARENTS DISCUSS TV PROGRAMS WITH CHILD?
+ 
+When your family watches TV together, do you [or child's 
+father/stepfather/father-figure] discuss TV programs with [him/her]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      65       1 Yes
+      14       0 No
+       0       2 Do not have a TV
+  -------
+      79
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      79      MISSING(-7)   11472
+ 
+Min:              0        Max:              1        Mean:                 .82
+ 
+Lead In: C57486.00[Default] C57491.00[Default]
+Default Next Question: C57493.00
+--------------------------------------------------------------------------------
+C60167.00    [MS-HOME-C01]                                  Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW MANY BOOKS CHILD HAS
+ 
+About how many books does [Child First Name] have?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       0       1 None
+       0       2 1 or 2 books
+       0       3 3 to 9 books
+      29       4 10 or more books
+  -------
+      29
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      29      MISSING(-7)   11522
+ 
+Min:              4        Max:              4        Mean:                   4
+ 
+Lead In: C60137.01[3:3]
+Default Next Question: C60168.00
+--------------------------------------------------------------------------------
+C60168.00    [MS-HOME-C02]                                  Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+About how often do you read aloud to [Child First Name]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       2       1 Never
+       2       2 Several times a year
+       3       3 Several times a month
+       4       4 Once a week
+       6       5 At least 3 times a week
+      12       6 Everyday
+  -------
+      29
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      29      MISSING(-7)   11522
+ 
+Min:              1        Max:              6        Mean:                4.59
+ 
+Lead In: C60167.00[Default]
+Default Next Question: C60169.00
+--------------------------------------------------------------------------------
+C60174.00    [MS-HOME-C04]                                  Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): IS THERE A MUSICAL INSTRUMENT CHILD CAN USE 
+             AT HOME?
+ 
+Is there a musical instrument (for example, piano, drum, guitar, etc.) that 
+[Child First Name] can use here at home?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      20       1 Yes
+       9       0 No
+  -------
+      29
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      29      MISSING(-7)   11522
+ 
+Min:              0        Max:              1        Mean:                 .69
+ 
+Lead In: C60173.00[Default]
+Default Next Question: C60175.00
+--------------------------------------------------------------------------------
+C60175.00    [MS-HOME-C05]                                  Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DOES FAMILY GET A DAILY NEWSPAPER?
+ 
+Does your family get a daily newspaper?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       5       1 Yes
+      23       0 No
+       0       2 (IF VOLUNTEERED:) READ NEWSPAPER ONLINE
+       1       3 (IF VOLUNTEERED:) SUNDAY PAPER ONLY
+  -------
+      29
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      29      MISSING(-7)   11522
+ 
+Min:              0        Max:              3        Mean:                 .28
+ 
+Lead In: C60174.00[Default]
+Default Next Question: C60176.00
+--------------------------------------------------------------------------------
+C60179.00    [MS-HOME-C09]                                  Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN THE
+             PAST YEAR
+ 
+How often has a family member taken, or arranged to take [Child First Name] to 
+any type of museum (children's, scientific, art, historical, etc.) within the 
+past year?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       7       1 Never
+      12       2 Once or twice
+       5       3 Several times
+       5       4 About once a month
+       0       5 About once a week or more often
+  -------
+      29
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      29      MISSING(-7)   11522
+ 
+Min:              1        Max:              4        Mean:                2.28
+ 
+Lead In: C60178.00[Default]
+Default Next Question: C60180.00
+--------------------------------------------------------------------------------
+C60180.00    [MS-HOME-C10]                                  Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD TAKEN TO MUSIC/THEATER 
+             PERFORMANCE IN PAST YEAR
+ 
+How often has a family member taken, or arranged to take [Child First Name] to 
+any type of musical or theatrical performance within the past year?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       8       1 Never
+      13       2 Once or twice
+       7       3 Several times
+       1       4 About once a month
+       0       5 About once a week or more often
+  -------
+      29
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      29      MISSING(-7)   11522
+ 
+Min:              1        Max:              4        Mean:                2.03
+ 
+Lead In: C60179.00[Default]
+Default Next Question: C60181.00
+--------------------------------------------------------------------------------
+C60181.00    [MS-HOME-C11]                                  Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN FAMILY GETS TOGETHER WITH FRIENDS 
+             OR RELATIVES
+ 
+About how often does your whole family get together with relatives or friends?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       3       1 Once a year or less
+       7       2 A few times a year
+       6       3 About once a month
+       8       4 Two or three times a month
+       5       5 About once a week or more
+  -------
+      29
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      29      MISSING(-7)   11522
+ 
+Min:              1        Max:              5        Mean:                3.17
+ 
+Lead In: C60180.00[Default]
+Default Next Question: C60182.00
+--------------------------------------------------------------------------------
+C60188.00    [MS-HOME-C17]                                  Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE)
+ 
+About how often does [Child First Name] spend time with [his/her] 
+[father/stepfather/father-figure]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      20       1 Once a day or more often
+       4       2 At least 4 times a week
+       1       3 About once a week
+       2       4 About once a month
+       0       5 A few times a year or less
+       0       6 Never
+       0       7 No father, stepfather, or father-figure
+  -------
+      27
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      27      MISSING(-7)   11524
+ 
+Min:              1        Max:              4        Mean:                1.44
+ 
+Lead In: C60187.00[Default]  C60184.00[1:1]
+Default Next Question: C60189.00
+--------------------------------------------------------------------------------
+C60189.00    [MS-HOME-C18]                                  Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE) OUTDOORS
+ 
+About how often does [Child First Name] spend time with [his/her] 
+[father/stepfather/father-figure] in outdoor activities?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+       5       1 Once a day or more often
+       2       2 At least 4 times a week
+      12       3 About once a week
+       3       4 About once a month
+       3       5 A few times a year or less
+       1       6 Never
+       0       7 No father, stepfather, or father-figure
+  -------
+      26
+ 
+Refusal(-1)            0
+Don't Know(-2)         1
+TOTAL =========>      27      MISSING(-7)   11524
+ 
+Min:              1        Max:              6        Mean:                   3
+ 
+Lead In: C60188.00[Default]
+Default Next Question: C60190.00
+--------------------------------------------------------------------------------
+C60191.00    [MS-HOME-C20]                                  Survey Year: 2014
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DO PARENTS DISCUSS TV PROGRAMS WITH CHILD?
+ 
+When your family watches TV together, do you [or child's 
+father/stepfather/father-figure] discuss TV programs with [him/her]?
+ 
+NOTE: In R22-2006, the Mother Supplement was fully integrated into the main 
+Youth questionnaire. Mothers completed an MS for each age-eligible child.  MS 
+assessment items in the Child db are child-based versions of the direct pick-ups
+from the mothers' record. A cross-walk that contains the Main Youth MS reference
+numbers and question names corresponding to the Child db items is available from
+NLS user services.
+ 
+      25       1 Yes
+       2       0 No
+       2       2 Do not have a TV
+  -------
+      29
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>      29      MISSING(-7)   11522
+ 
+Min:              0        Max:              2        Mean:                   1
+ 
+Lead In: C60185.00[Default] C60190.00[Default]
+Default Next Question: C60192.00
+--------------------------------------------------------------------------------
+C60854.00    [MS-HOME-C01]                                  Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW MANY BOOKS CHILD HAS
+ 
+About how many books does [Child First Name] have?
+ 
+       0       1 None
+       0       2 1 or 2 books
+       0       3 3 to 9 books
+       9       4 10 or more books
+  -------
+       9
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       9      MISSING(-7)   11542
+ 
+Min:              4        Max:              4        Mean:                   4
+ 
+Lead In: C60807.00[3:3]
+Default Next Question: C60855.00
+--------------------------------------------------------------------------------
+C60855.00    [MS-HOME-C02]                                  Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN MOTHER READS TO CHILD
+ 
+About how often do you read aloud to [Child First Name]?
+ 
+       0       1 Never
+       0       2 Several times a year
+       0       3 Several times a month
+       4       4 Once a week
+       3       5 At least 3 times a week
+       2       6 Everyday
+  -------
+       9
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       9      MISSING(-7)   11542
+ 
+Min:              4        Max:              6        Mean:                4.78
+ 
+Lead In: C60854.00[Default]
+Default Next Question: C60856.00
+--------------------------------------------------------------------------------
+C60861.00    [MS-HOME-C04]                                  Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): IS THERE A MUSICAL INSTRUMENT CHILD CAN USE 
+             AT HOME?
+ 
+Is there a musical instrument (for example, piano, drum, guitar, etc.) that 
+[Child First Name] can use here at home?
+ 
+       7       1 Yes
+       2       0 No
+  -------
+       9
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       9      MISSING(-7)   11542
+ 
+Min:              0        Max:              1        Mean:                 .78
+ 
+Lead In: C60860.00[Default]
+Default Next Question: C60862.00
+--------------------------------------------------------------------------------
+C60862.00    [MS-HOME-C05]                                  Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DOES FAMILY GET A DAILY NEWSPAPER?
+ 
+Does your family get a daily newspaper?
+ 
+       3       1 Yes
+       6       0 No
+       0       2 (IF VOLUNTEERED:) READ NEWSPAPER ONLINE
+       0       3 (IF VOLUNTEERED:) SUNDAY PAPER ONLY
+  -------
+       9
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       9      MISSING(-7)   11542
+ 
+Min:              0        Max:              1        Mean:                 .33
+ 
+Lead In: C60861.00[Default]
+Default Next Question: C60863.00
+--------------------------------------------------------------------------------
+C60866.00    [MS-HOME-C09]                                  Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD WAS TAKEN TO A MUSEUM IN THE
+             PAST YEAR
+ 
+How often has a family member taken, or arranged to take [Child First Name] to 
+any type of museum (children's, scientific, art, historical, etc.) within the 
+past year?
+ 
+       2       1 Never
+       4       2 Once or twice
+       3       3 Several times
+       0       4 About once a month
+       0       5 About once a week or more often
+  -------
+       9
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       9      MISSING(-7)   11542
+ 
+Min:              1        Max:              3        Mean:                2.11
+ 
+Lead In: C60865.00[Default]
+Default Next Question: C60867.00
+--------------------------------------------------------------------------------
+C60867.00    [MS-HOME-C10]                                  Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD TAKEN TO MUSIC/THEATER 
+             PERFORMANCE IN PAST YEAR
+ 
+How often has a family member taken, or arranged to take [Child First Name] to 
+any type of musical or theatrical performance within the past year?
+ 
+       1       1 Never
+       5       2 Once or twice
+       3       3 Several times
+       0       4 About once a month
+       0       5 About once a week or more often
+  -------
+       9
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       9      MISSING(-7)   11542
+ 
+Min:              1        Max:              3        Mean:                2.22
+ 
+Lead In: C60866.00[Default]
+Default Next Question: C60868.00
+--------------------------------------------------------------------------------
+C60868.00    [MS-HOME-C11]                                  Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN FAMILY GETS TOGETHER WITH FRIENDS 
+             OR RELATIVES
+ 
+About how often does your whole family get together with relatives or friends?
+ 
+       1       1 Once a year or less
+       5       2 A few times a year
+       2       3 About once a month
+       0       4 Two or three times a month
+       1       5 About once a week or more
+  -------
+       9
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       9      MISSING(-7)   11542
+ 
+Min:              1        Max:              5        Mean:                2.44
+ 
+Lead In: C60867.00[Default]
+Default Next Question: C60869.00
+--------------------------------------------------------------------------------
+C60875.00    [MS-HOME-C17]                                  Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE)
+ 
+About how often does [Child First Name] spend time with [his/her] 
+[father/stepfather/father-figure]?
+ 
+       7       1 Once a day or more often
+       0       2 At least 4 times a week
+       0       3 About once a week
+       0       4 About once a month
+       0       5 A few times a year or less
+       0       6 Never
+       0       7 No father, stepfather, or father-figure
+  -------
+       7
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>       8      MISSING(-7)   11543
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: C60874.00[Default]  C60871.00[1:1]
+Default Next Question: C60876.00
+--------------------------------------------------------------------------------
+C60876.00    [MS-HOME-C18]                                  Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): HOW OFTEN CHILD SPENDS TIME WITH FATHER 
+             (-FIGURE) OUTDOORS
+ 
+About how often does [Child First Name] spend time with [his/her] 
+[father/stepfather/father-figure] in outdoor activities?
+ 
+       0       1 Once a day or more often
+       0       2 At least 4 times a week
+       4       3 About once a week
+       0       4 About once a month
+       2       5 A few times a year or less
+       1       6 Never
+       0       7 No father, stepfather, or father-figure
+  -------
+       7
+ 
+Refusal(-1)            1
+Don't Know(-2)         0
+TOTAL =========>       8      MISSING(-7)   11543
+ 
+Min:              3        Max:              6        Mean:                   4
+ 
+Lead In: C60875.00[Default]
+Default Next Question: C60877.00
+--------------------------------------------------------------------------------
+C60878.00    [MS-HOME-C20]                                  Survey Year: 2016
+  PRIMARY VARIABLE
+
+ 
+             HOME PART C (6-9 YRS): DO PARENTS DISCUSS TV PROGRAMS WITH CHILD?
+ 
+When your family watches TV together, do you [or child's 
+father/stepfather/father-figure] discuss TV programs with [him/her]?
+ 
+       9       1 Yes
+       0       0 No
+       0       2 Do not have a TV
+  -------
+       9
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>       9      MISSING(-7)   11542
+ 
+Min:              1        Max:              1        Mean:                   1
+ 
+Lead In: C60872.00[Default] C60877.00[Default]
+Default Next Question: C60879.00
+--------------------------------------------------------------------------------
+Y22670.00    [VERSION_R29]                                  Survey Year: XRND
+  PRIMARY VARIABLE
+
+ 
+             VERSION_R29 CHILD/YOUNG ADULT
+ 
+This variable identifies the release version of the current NLSY79 Child/Young 
+Adult data set, This information allows User Services to identify the release 
+version used by a researcher who is asking a question and to access past 
+versions of the data if necessary.
+ 
+   11551         532
+  -------
+   11551
+ 
+Refusal(-1)            0
+Don't Know(-2)         0
+TOTAL =========>   11551      MISSING(-7)       0
+ 
+Min:            532        Max:            532        Mean:                 532
+ 
+Lead In: Y12053.00[Default]
+Default Next Question: Y12054.00

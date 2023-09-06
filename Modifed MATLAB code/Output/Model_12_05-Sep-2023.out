@@ -1,0 +1,316 @@
+Model 12
+Error at iteration 1 = 9.39e-01
+05-Sep-2023 20:13:16
+                                       estimate          t-stat            step 
+Constant                                 -2.138          -4.136        0.002489 
+Black                                    -0.082          -2.426        0.000131 
+Hispanic                                 -0.112          -2.895       -0.000245 
+Female                                    0.296          10.292        0.000169 
+High school                               0.108           3.080        0.000087 
+College                                  -0.172          -3.721       -0.000023 
+Age                                       0.196           3.603       -0.000210 
+Log income                                0.630           4.340        0.000125 
+Zero income                               0.636           4.227       -0.000301 
+# weeks worked last year                  0.027           4.257        0.000300 
+# weeks spouse worked last year           0.011           2.021       -0.000340 
+Unemployment rate                        -0.033          -1.087       -0.000572 
+ICS                                       0.069           2.736        0.000736 
+Status Quo Bias                           0.081           0.450       -0.001324 
+Std Dev                                   0.820          31.506       -0.000713 
+Original Persistent Std Dev               0.348           5.030       -0.000156 
+SQB-Free Persistent Std Dev               0.470           0.513        0.938942 
+Original Transitory Std Dev               1.463          90.292       -0.000685 
+SQB-Free Transitory Std Dev               2.160          10.687       -0.000036 
+
+Log-likelihood   -37558.7
+Error at iteration 2 = 1.82e-03
+05-Sep-2023 20:14:09
+                                       estimate          t-stat            step 
+Constant                                 -2.140          -4.146       -0.002973 
+Black                                    -0.082          -2.429       -0.000032 
+Hispanic                                 -0.112          -2.898       -0.000022 
+Female                                    0.296          10.295       -0.000204 
+High school                               0.108           3.086        0.000092 
+College                                  -0.172          -3.729       -0.000215 
+Age                                       0.196           3.619        0.000688 
+Log income                                0.630           4.344        0.000088 
+Zero income                               0.636           4.232        0.000230 
+# weeks worked last year                  0.027           4.263        0.000019 
+# weeks spouse worked last year           0.011           2.021       -0.000009 
+Unemployment rate                        -0.032          -1.084        0.000117 
+ICS                                       0.068           2.728       -0.000265 
+Status Quo Bias                           0.082           0.461        0.001823 
+Std Dev                                   0.821          31.537        0.000404 
+Original Persistent Std Dev               0.347           5.029       -0.000389 
+SQB-Free Persistent Std Dev              -0.468          -0.511       -0.938195 
+Original Transitory Std Dev               1.464          90.375        0.000284 
+SQB-Free Transitory Std Dev               2.160          10.668       -0.000439 
+
+Log-likelihood   -37558.6
+Error at iteration 3 = 9.38e-01
+05-Sep-2023 20:15:02
+                                       estimate          t-stat            step 
+Constant                                 -2.140          -4.144        0.000457 
+Black                                    -0.082          -2.428        0.000030 
+Hispanic                                 -0.112          -2.897        0.000016 
+Female                                    0.296          10.293        0.000023 
+High school                               0.108           3.084       -0.000027 
+College                                  -0.172          -3.728       -0.000011 
+Age                                       0.196           3.618       -0.000041 
+Log income                                0.630           4.342       -0.000148 
+Zero income                               0.636           4.230       -0.000167 
+# weeks worked last year                  0.027           4.262       -0.000001 
+# weeks spouse worked last year           0.011           2.021        0.000002 
+Unemployment rate                        -0.032          -1.085       -0.000023 
+ICS                                       0.068           2.729        0.000021 
+Status Quo Bias                           0.082           0.460       -0.000142 
+Std Dev                                   0.821          31.544       -0.000074 
+Original Persistent Std Dev               0.348           5.024        0.000090 
+SQB-Free Persistent Std Dev               0.469           0.512        0.937616 
+Original Transitory Std Dev               1.464          90.351       -0.000010 
+SQB-Free Transitory Std Dev               2.159          10.691       -0.000303 
+
+Log-likelihood   -37558.5
+Error at iteration 4 = 4.40e-04
+05-Sep-2023 20:16:09
+                                       estimate          t-stat            step 
+Constant                                 -2.140          -4.144       -0.000071 
+Black                                    -0.082          -2.428       -0.000001 
+Hispanic                                 -0.112          -2.897        0.000006 
+Female                                    0.296          10.293       -0.000008 
+High school                               0.108           3.084        0.000003 
+College                                  -0.172          -3.728       -0.000002 
+Age                                       0.196           3.618        0.000013 
+Log income                                0.630           4.342       -0.000014 
+Zero income                               0.636           4.230       -0.000016 
+# weeks worked last year                  0.027           4.262       -0.000000 
+# weeks spouse worked last year           0.011           2.021       -0.000000 
+Unemployment rate                        -0.032          -1.085        0.000003 
+ICS                                       0.068           2.728       -0.000004 
+Status Quo Bias                           0.082           0.460        0.000053 
+Std Dev                                   0.821          31.544        0.000009 
+Original Persistent Std Dev               0.348           5.026       -0.000014 
+SQB-Free Persistent Std Dev              -0.469          -0.512       -0.938569 
+Original Transitory Std Dev               1.464          90.352        0.000004 
+SQB-Free Transitory Std Dev               2.160          10.671        0.000440 
+
+Log-likelihood   -37558.5
+Error at iteration 5 = 9.38e-01
+05-Sep-2023 20:17:04
+                                       estimate          t-stat            step 
+Constant                                 -2.140          -4.144       -0.000088 
+Black                                    -0.082          -2.428       -0.000005 
+Hispanic                                 -0.112          -2.897       -0.000009 
+Female                                    0.296          10.293        0.000012 
+High school                               0.108           3.084        0.000004 
+College                                  -0.172          -3.728        0.000001 
+Age                                       0.196           3.618        0.000007 
+Log income                                0.630           4.342        0.000049 
+Zero income                               0.636           4.230        0.000056 
+# weeks worked last year                  0.027           4.263        0.000003 
+# weeks spouse worked last year           0.011           2.021        0.000000 
+Unemployment rate                        -0.032          -1.085        0.000005 
+ICS                                       0.068           2.728       -0.000002 
+Status Quo Bias                           0.082           0.460       -0.000025 
+Std Dev                                   0.821          31.540        0.000017 
+Original Persistent Std Dev               0.348           5.025       -0.000019 
+SQB-Free Persistent Std Dev               0.469           0.512        0.938431 
+Original Transitory Std Dev               1.464          90.352        0.000008 
+SQB-Free Transitory Std Dev               2.160          10.673       -0.000121 
+
+Log-likelihood   -37558.6
+Error at iteration 6 = 4.85e-05
+05-Sep-2023 20:18:10
+                                       estimate          t-stat            step 
+Constant                                 -2.140          -4.144        0.000031 
+Black                                    -0.082          -2.428        0.000001 
+Hispanic                                 -0.112          -2.897        0.000001 
+Female                                    0.296          10.293       -0.000004 
+High school                               0.108           3.084       -0.000001 
+College                                  -0.172          -3.728        0.000002 
+Age                                       0.196           3.618       -0.000005 
+Log income                                0.630           4.342       -0.000007 
+Zero income                               0.636           4.230       -0.000009 
+# weeks worked last year                  0.027           4.263       -0.000001 
+# weeks spouse worked last year           0.011           2.021       -0.000000 
+Unemployment rate                        -0.032          -1.085       -0.000003 
+ICS                                       0.068           2.728        0.000001 
+Status Quo Bias                           0.082           0.460        0.000005 
+Std Dev                                   0.821          31.541       -0.000006 
+Original Persistent Std Dev               0.348           5.024        0.000008 
+SQB-Free Persistent Std Dev              -0.469          -0.512       -0.938528 
+Original Transitory Std Dev               1.464          90.351       -0.000001 
+SQB-Free Transitory Std Dev               2.160          10.672        0.000049 
+
+Log-likelihood   -37558.6
+Error at iteration 7 = 9.39e-01
+05-Sep-2023 20:19:03
+                                       estimate          t-stat            step 
+Constant                                 -2.140          -4.144       -0.000019 
+Black                                    -0.082          -2.428       -0.000001 
+Hispanic                                 -0.112          -2.897       -0.000001 
+Female                                    0.296          10.293        0.000002 
+High school                               0.108           3.084        0.000000 
+College                                  -0.172          -3.728       -0.000001 
+Age                                       0.196           3.618        0.000002 
+Log income                                0.630           4.342        0.000006 
+Zero income                               0.636           4.230        0.000008 
+# weeks worked last year                  0.027           4.263        0.000000 
+# weeks spouse worked last year           0.011           2.021        0.000000 
+Unemployment rate                        -0.032          -1.085        0.000001 
+ICS                                       0.068           2.728       -0.000001 
+Status Quo Bias                           0.082           0.460       -0.000003 
+Std Dev                                   0.821          31.541        0.000004 
+Original Persistent Std Dev               0.348           5.024       -0.000005 
+SQB-Free Persistent Std Dev               0.469           0.512        0.938582 
+Original Transitory Std Dev               1.464          90.351        0.000001 
+SQB-Free Transitory Std Dev               2.160          10.671        0.000018 
+
+Log-likelihood   -37558.6
+Error at iteration 8 = 3.54e-06
+05-Sep-2023 20:19:54
+                                       estimate          t-stat            step 
+Constant                                 -2.140          -4.144       -0.000002 
+Black                                    -0.082          -2.428       -0.000000 
+Hispanic                                 -0.112          -2.897       -0.000001 
+Female                                    0.296          10.293        0.000000 
+High school                               0.108           3.084        0.000000 
+College                                  -0.172          -3.728        0.000001 
+Age                                       0.196           3.618       -0.000000 
+Log income                                0.630           4.342        0.000003 
+Zero income                               0.636           4.230        0.000004 
+# weeks worked last year                  0.027           4.263        0.000000 
+# weeks spouse worked last year           0.011           2.021       -0.000000 
+Unemployment rate                        -0.032          -1.085       -0.000000 
+ICS                                       0.068           2.728        0.000000 
+Status Quo Bias                           0.082           0.460       -0.000001 
+Std Dev                                   0.821          31.541        0.000000 
+Original Persistent Std Dev               0.348           5.024        0.000000 
+SQB-Free Persistent Std Dev              -0.469          -0.512       -0.938574 
+Original Transitory Std Dev               1.464          90.351        0.000001 
+SQB-Free Transitory Std Dev               2.160          10.671       -0.000008 
+
+Log-likelihood   -37558.6
+Error at iteration 9 = 9.39e-01
+05-Sep-2023 20:21:00
+                                       estimate          t-stat            step 
+Constant                                 -2.140          -4.144        0.000001 
+Black                                    -0.082          -2.428        0.000000 
+Hispanic                                 -0.112          -2.897        0.000000 
+Female                                    0.296          10.293       -0.000000 
+High school                               0.108           3.084       -0.000000 
+College                                  -0.172          -3.728       -0.000000 
+Age                                       0.196           3.618       -0.000000 
+Log income                                0.630           4.342       -0.000000 
+Zero income                               0.636           4.230       -0.000000 
+# weeks worked last year                  0.027           4.263       -0.000000 
+# weeks spouse worked last year           0.011           2.021       -0.000000 
+Unemployment rate                        -0.032          -1.085       -0.000000 
+ICS                                       0.068           2.728        0.000000 
+Status Quo Bias                           0.082           0.460        0.000000 
+Std Dev                                   0.821          31.541       -0.000000 
+Original Persistent Std Dev               0.348           5.024        0.000000 
+SQB-Free Persistent Std Dev               0.469           0.512        0.938592 
+Original Transitory Std Dev               1.464          90.351       -0.000000 
+SQB-Free Transitory Std Dev               2.160          10.671        0.000008 
+
+Log-likelihood   -37558.6
+Error at iteration 10 = 1.29e-06
+05-Sep-2023 20:22:06
+                                       estimate          t-stat            step 
+Constant                                 -2.140          -4.144       -0.000002 
+Black                                    -0.082          -2.428       -0.000000 
+Hispanic                                 -0.112          -2.897       -0.000000 
+Female                                    0.296          10.293        0.000000 
+High school                               0.108           3.084        0.000000 
+College                                  -0.172          -3.728        0.000000 
+Age                                       0.196           3.618        0.000000 
+Log income                                0.630           4.342        0.000001 
+Zero income                               0.636           4.230        0.000001 
+# weeks worked last year                  0.027           4.263        0.000000 
+# weeks spouse worked last year           0.011           2.021        0.000000 
+Unemployment rate                        -0.032          -1.085        0.000000 
+ICS                                       0.068           2.728       -0.000000 
+Status Quo Bias                           0.082           0.460       -0.000000 
+Std Dev                                   0.821          31.541        0.000000 
+Original Persistent Std Dev               0.348           5.024       -0.000000 
+SQB-Free Persistent Std Dev              -0.469          -0.512       -0.938593 
+Original Transitory Std Dev               1.464          90.351        0.000000 
+SQB-Free Transitory Std Dev               2.160          10.671       -0.000001 
+
+Log-likelihood   -37558.6
+Error at iteration 11 = 9.39e-01
+05-Sep-2023 20:23:13
+                                       estimate          t-stat            step 
+Constant                                 -2.140          -4.144        0.000000 
+Black                                    -0.082          -2.428        0.000000 
+Hispanic                                 -0.112          -2.897       -0.000000 
+Female                                    0.296          10.293       -0.000000 
+High school                               0.108           3.084        0.000000 
+College                                  -0.172          -3.728        0.000000 
+Age                                       0.196           3.618       -0.000000 
+Log income                                0.630           4.342        0.000000 
+Zero income                               0.636           4.230        0.000000 
+# weeks worked last year                  0.027           4.263       -0.000000 
+# weeks spouse worked last year           0.011           2.021       -0.000000 
+Unemployment rate                        -0.032          -1.085       -0.000000 
+ICS                                       0.068           2.728        0.000000 
+Status Quo Bias                           0.082           0.460        0.000000 
+Std Dev                                   0.821          31.541       -0.000000 
+Original Persistent Std Dev               0.348           5.024        0.000000 
+SQB-Free Persistent Std Dev               0.469           0.512        0.938595 
+Original Transitory Std Dev               1.464          90.351        0.000000 
+SQB-Free Transitory Std Dev               2.160          10.671        0.000001 
+
+Log-likelihood   -37558.6
+Error at iteration 12 = 6.07e-07
+05-Sep-2023 20:24:20
+                                       estimate          t-stat            step 
+Constant                                 -2.140          -4.144       -0.000000 
+Black                                    -0.082          -2.428       -0.000000 
+Hispanic                                 -0.112          -2.897       -0.000000 
+Female                                    0.296          10.293        0.000000 
+High school                               0.108           3.084        0.000000 
+College                                  -0.172          -3.728       -0.000000 
+Age                                       0.196           3.618        0.000000 
+Log income                                0.630           4.342        0.000000 
+Zero income                               0.636           4.230        0.000000 
+# weeks worked last year                  0.027           4.263        0.000000 
+# weeks spouse worked last year           0.011           2.021        0.000000 
+Unemployment rate                        -0.032          -1.085        0.000000 
+ICS                                       0.068           2.728       -0.000000 
+Status Quo Bias                           0.082           0.460       -0.000000 
+Std Dev                                   0.821          31.541        0.000000 
+Original Persistent Std Dev               0.348           5.024       -0.000000 
+SQB-Free Persistent Std Dev              -0.469          -0.512       -0.938597 
+Original Transitory Std Dev               1.464          90.351        0.000000 
+SQB-Free Transitory Std Dev               2.160          10.671        0.000001 
+
+Log-likelihood   -37558.6
+Estimates of Model 12.0
+05-Sep-2023 20:24:20
+Sample size 9279
+Number of iterations = 12
+Error at last iteration = 6.07e-07
+                                       estimate      std. error          t-stat 
+Constant                                 -2.140           0.516          -4.144 
+Black                                    -0.082           0.034          -2.428 
+Hispanic                                 -0.112           0.039          -2.897 
+Female                                    0.296           0.029          10.293 
+High school                               0.108           0.035           3.084 
+College                                  -0.172           0.046          -3.728 
+Age                                       0.196           0.054           3.618 
+Log income                                0.630           0.145           4.342 
+Zero income                               0.636           0.150           4.230 
+# weeks worked last year                  0.027           0.006           4.263 
+# weeks spouse worked last year           0.011           0.005           2.021 
+Unemployment rate                        -0.032           0.030          -1.085 
+ICS                                       0.068           0.025           2.728 
+Status Quo Bias                           0.082           0.179           0.460 
+Std Dev                                   0.821           0.026          31.541 
+Original Persistent Std Dev               0.348           0.069           5.024 
+SQB-Free Persistent Std Dev              -0.469           0.917          -0.512 
+Original Transitory Std Dev               1.464           0.016          90.351 
+SQB-Free Transitory Std Dev               2.160           0.202          10.671 
+
+Log-likelihood   -37558.6
