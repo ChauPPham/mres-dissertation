@@ -76,3 +76,16 @@ Original Transitory Std Dev                          1.465          88.504      
 SQB-Free Transitory Std Dev                          2.085          18.259       -0.033941 
 
 Log-likelihood   -37571.2
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('likelihood')" style="font-weight:bold">likelihood</a>
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fdjac', 'C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code - redo\Codes\fdjac.m', 32)" style="font-weight:bold">fdjac</a> (<a href="matlab: opentoline('C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code - redo\Codes\fdjac.m',32,0)">line 32</a>)
+   xx(j) = xh0(j); f0=feval(f,xx,varargin{:});
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('EstimateRisk', 'C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code - redo\Codes\EstimateRisk.m', 199)" style="font-weight:bold">EstimateRisk</a> (<a href="matlab: opentoline('C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code - redo\Codes\EstimateRisk.m',199,0)">line 199</a>)
+
+
+In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('LiveEditorEvaluationHelperE691689362', 'C:\Users\uctpcpp\AppData\Local\Temp\Editor_trxxw\LiveEditorEvaluationHelperE691689362.m', 297)" style="font-weight:bold">LiveEditorEvaluationHelperE691689362</a> (<a href="matlab: opentoline('C:\Users\uctpcpp\AppData\Local\Temp\Editor_trxxw\LiveEditorEvaluationHelperE691689362.m',297,0)">line 297</a>)
+EstimateRisk(RISK_1993, RISK_2002, RISK_2004, RISK_2006, RISK_2010, RISK_2012, RISK_2014,[W93 ,ones(N,1)],[W02 ,ones(N,1)], [W04 ,ones(N,1)],[W06, ones(N,1)], ...
+} 
+06-Sep-2023 16:01:22

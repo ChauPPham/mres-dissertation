@@ -13,3 +13,12 @@ RISK_2012, RISK_2014,[XW93 ,ones(N,1)],[XW02 ,ones(N,1)], [XW04
 ,ones(N,1)],[XW06, ones(N,1)], ...
 
 06-Sep-2023 15:58:09
+Model 14
+<a href="matlab: opentoline('C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code - redo\Codes\EstimateRisk.m',113,1)">File: EstimateRisk.m Line: 113 Column: 1</a>
+Invalid use of operator.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('ImputeRisk', 'C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code - redo\Codes\ImputeRisk.m', 311)" style="font-weight:bold">ImputeRisk</a> (<a href="matlab: opentoline('C:\Users\uctpcpp\Desktop\mres-dissertation\Modifed MATLAB code - redo\Codes\ImputeRisk.m',311,0)">line 311</a>)
+EstimateRisk(RISK_1993, RISK_2002, RISK_2004, RISK_2006, RISK_2010, RISK_2012,
+RISK_2014,[XW93 ,ones(N,1)],[XW02 ,ones(N,1)], [XW04 ,ones(N,1)],[XW06, ones(N,1)],
+...
+
