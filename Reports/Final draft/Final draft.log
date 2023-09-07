@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.8)  6 SEP 2023 22:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.8)  7 SEP 2023 16:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1335,19 +1335,24 @@ or `english'. on input line 66.
 
 {C:/Users/hoang/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/hoan
 g/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-rm.enc}]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 95.
+<Signature.png, id=12, 202.95825pt x 151.16475pt>
+File: Signature.png Graphic file (type png)
+<use Signature.png>
+Package pdftex.def Info: Signature.png  used on input line 94.
+(pdftex.def)             Requested size: 85.35826pt x 63.5764pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 96.
 
 
 (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 95.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 96.
 
 
 (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 95
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 96
 .
 
 (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
@@ -1357,19 +1362,19 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.111 \end{titlingpage}
+l.112 \end{titlingpage}
+                        [1 <./Signature.png>]
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.134 \end{titlingpage}
                         [1]
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.133 \end{titlingpage}
-                        [1]
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.146 S
+l.147 S
        ince past investments likely correlate with future investment, especi...
 [1] [2] [3] (Tables/risk-category.tex) [4] (Tables/HOME.tex) [5] [6]
 (Tables/summary.tex
@@ -1380,7 +1385,7 @@ LaTeX Font Info:    Trying to load font information for TS1+qpl on input line 3
 File: ts1qpl.fd 2009/09/25 v1.2 font definition file for TS1/qpl
 ))
 (Tables/correlation-matrix.tex)
-Overfull \hbox (35.4pt too wide) in paragraph at lines 248--256
+Overfull \hbox (35.4pt too wide) in paragraph at lines 249--257
 [] 
  []
 
@@ -1389,7 +1394,7 @@ ts1.enc}] [9] [10]
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 282.
+(amsmath)                 on input line 283.
 
 (Tables/risk-coefficient.tex
 Overfull \vbox (1.99994pt too high) detected at line 5
@@ -1397,7 +1402,7 @@ Overfull \vbox (1.99994pt too high) detected at line 5
 
 ) [11] (Tables/CRRA-summary.tex) [12] [13]
 LaTeX Font Info:    Trying to load font information for U+bbold on input line 3
-25.
+26.
 
 (C:\Users\hoang\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ubbold.fd
 File: ubbold.fd 1996/01/01 Blackboard Bold Font Definition File (jk)
@@ -1405,7 +1410,7 @@ File: ubbold.fd 1996/01/01 Blackboard Bold Font Definition File (jk)
 [14] (Tables/main-result.tex) [15] (Tables/result-age.tex)
 (Tables/result-entrepreneur.tex)
 
-LaTeX Warning: Float too large for page by 10.15555pt on input line 385.
+LaTeX Warning: Float too large for page by 10.15555pt on input line 386.
 
 [16]
 
@@ -1416,13 +1421,13 @@ Overfull \vbox (0.65555pt too high) has occurred while \output is active []
 
 
 [17] [18]
-Overfull \hbox (0.37363pt too wide) in paragraph at lines 400--401
+Overfull \hbox (0.37363pt too wide) in paragraph at lines 401--402
 \OT1/qpl/m/n/10 In this sec-tion, we per-form var-i-ous checks to en-sure the r
 o-bust-ness of our model. These in-clude re-estimating
  []
 
-[19] [20] [21] [22] (Final draft.bbl [23] [24] [25]) [26] [27]
-(Tables/appendix-mle.tex) [28] (Tables/robust-1.tex
+[19] [20] [21] (Final draft.bbl [22] [23] [24]) [25] [26]
+(Tables/appendix-mle.tex) [27] (Tables/robust-1.tex
 Overfull \vbox (8.0pt too high) detected at line 7
  []
 
@@ -1439,12 +1444,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--153
 
  []
 
-[29] [30]) [31] (Tables/robust-2.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 521--522
+[28] [29]) [30] (Tables/robust-2.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 522--523
 
  []
 
-[32] (Final draft.aux)
+[31] (Final draft.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1453,10 +1458,10 @@ Package rerunfilecheck Info: File `"Final draft".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 36441 strings out of 475551
- 775301 string characters out of 5762555
+ 36449 strings out of 475551
+ 775472 string characters out of 5762555
  1961238 words of memory out of 5000000
- 56862 multiletter control sequences out of 15000+600000
+ 56871 multiletter control sequences out of 15000+600000
  614303 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  118i,25n,120p,10910b,1137s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1545,9 +1550,9 @@ rams/MiKTeX/fonts/type1/public/tex-gyre/qplb.pfb><C:/Users/hoang/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb><C:/Users/hoang/AppData/Lo
 cal/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplri.pfb><C:/Users/hoang/AppDa
 ta/Local/Programs/MiKTeX/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on "Final draft.pdf" (35 pages, 515972 bytes).
+Output written on "Final draft.pdf" (34 pages, 518556 bytes).
 PDF statistics:
- 760 PDF objects out of 1000 (max. 8388607)
- 175 named destinations out of 1000 (max. 500000)
- 181 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 755 PDF objects out of 1000 (max. 8388607)
+ 174 named destinations out of 1000 (max. 500000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
 
